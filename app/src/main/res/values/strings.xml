@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Rucky</string>
-    <string name="baseURI">rucky</string>
+    <string name="baseURI">github.com/mayankmetha/rucky</string>
 </resources>
