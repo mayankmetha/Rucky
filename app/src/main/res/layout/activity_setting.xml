@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mayank.rucky.MainActivity">
+    tools:context="com.mayank.rucky.SettingActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/appBarLayout"
@@ -13,13 +13,15 @@
         android:theme="@style/AppThemeBase.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarMain"
+            android:id="@+id/toolbarSettings"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/setting_name"
+            app:navigationIcon="?attr/homeAsUpIndicator"
             app:popupTheme="@style/AppThemeBase.PopupOverlay" />
 
     </android.support.constraint.ConstraintLayout>

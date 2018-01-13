@@ -4,32 +4,38 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:fullBackupContent="false">
+        android:theme="@style/AppThemeBase.NoActionBar">
         <receiver android:name=".SecretCodeReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
-                <data android:scheme="android_secret_code" android:host="78259" />
+
+                <data
+                    android:host="78259"
+                    android:scheme="android_secret_code" />
             </intent-filter>
         </receiver>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- URI -->
-                <data android:host="@string/baseURI"
-                    android:scheme="https"
-                    android:pathPrefix="/"/>
+                <data
+                    android:host="@string/baseURI"
+                    android:pathPrefix="/"
+                    android:scheme="https" />
             </intent-filter>
             <!-- adb -->
             <intent-filter>
@@ -39,11 +45,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- URI -->
-                <data android:host="@string/baseURI"
-                    android:scheme="https"
-                    android:pathPrefix="/"/>
+                <data
+                    android:host="@string/baseURI"
+                    android:pathPrefix="/"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
+        <activity android:name=".SettingActivity" />
     </application>
 
 </manifest>
