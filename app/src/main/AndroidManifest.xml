@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeBase.NoActionBar">
+        android:theme="@style/AppThemeLight">
         <receiver android:name=".SecretCodeReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
@@ -51,7 +51,7 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingActivity" />
+        <activity android:name=".SettingsActivity" />
     </application>
 
 </manifest>

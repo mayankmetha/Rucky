@@ -2,4 +2,7 @@
     <string name="app_name">Rucky</string>
     <string name="baseURI">github.com/mayankmetha/rucky</string>
     <string name="setting_name">Settings</string>
+    <string name="setting_general">General</string>
+    <string name="dark_theme_key">AppThemeDark</string>
+    <string name="dark_theme_title">Dark Theme</string>
 </resources>

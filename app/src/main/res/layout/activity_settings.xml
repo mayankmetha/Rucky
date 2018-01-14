@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mayank.rucky.SettingActivity">
+    android:orientation="vertical"
+    tools:context="com.mayank.rucky.SettingsActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/appBarLayout"
@@ -21,9 +23,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:title="@string/setting_name"
-            app:navigationIcon="?attr/homeAsUpIndicator"
             app:popupTheme="@style/AppThemeBase.PopupOverlay" />
 
     </android.support.constraint.ConstraintLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

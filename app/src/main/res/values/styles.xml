@@ -1,19 +1,33 @@
 <resources>
 
-    <!-- Light application theme. -->
+    <!-- Base application theme. -->
     <style name="AppThemeBase" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primary_light</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
-    </style>
-
-    <style name="AppThemeBase.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
     </style>
 
     <style name="AppThemeBase.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppThemeBase.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Light -->
+    <style name="AppThemeLight" parent="AppThemeBase">
+        <item name="android:colorBackground">@color/pri_light</item>
+        <item name="android:colorForeground">@color/sec_light</item>
+        <item name="android:textColorPrimary">@color/sec_dark</item>
+        <item name="android:textColorSecondary">@color/pri_dark</item>
+    </style>
+
+    <!-- Dark -->
+    <style name="AppThemeDark" parent="AppThemeBase">
+        <item name="android:colorBackground">@color/pri_dark</item>
+        <item name="android:colorForeground">@color/sec_dark</item>
+        <item name="android:textColorPrimary">@color/sec_light</item>
+        <item name="android:textColorSecondary">@color/pri_light</item>
+    </style>
+
 </resources>
