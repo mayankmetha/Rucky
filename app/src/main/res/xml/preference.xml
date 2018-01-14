@@ -3,7 +3,7 @@
 
     <PreferenceCategory android:title="@string/setting_general">
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="false"
             android:key="@string/dark_theme_key"
             android:title="@string/dark_theme_title" />
