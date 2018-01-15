@@ -1,18 +1,31 @@
 package com.mayank.rucky;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class MainActivity extends AppCompatActivity {
 
     public static Boolean didThemeChange = false;
+    public static double currentVersion;
+    public static double newVersion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +79,52 @@ public class MainActivity extends AppCompatActivity {
             setTheme(R.style.AppThemeDark);
         } else {
             setTheme(R.style.AppThemeLight);
+        }
+    }
+
+    void checkUpdate() {
+        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+        if(activeNetwork != null && activeNetwork.isConnected()) {
+            try {
+                URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/blob/master/release/version");
+                new fetchVersion().execute(url);
+            } catch(MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static class fetchVersion extends AsyncTask<URL, Void, String> {
+        @Override
+        protected String doInBackground(URL... urls) {
+            String str = "";
+            try {
+                BufferedReader in = new BufferedReader(new InputStreamReader(urls[0].openStream()));
+                str = in.readLine();
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+        @Override
+        protected void onPostExecute(String result) {
+            newVersion = Double.parseDouble(result);
+        }
+    }
+
+    void updater() {
+        try {
+            PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(),0);
+            currentVersion = Double.parseDouble(pInfo.versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        if(currentVersion<newVersion) {
+            //TODO:update
+        } else {
+            //TODO:no update
         }
     }
 }
