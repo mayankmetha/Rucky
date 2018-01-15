@@ -28,6 +28,89 @@
 
     </android.support.constraint.ConstraintLayout>
 
+    <LinearLayout
+        android:id="@+id/generalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:showDividers="end">
 
+        <TextView
+            android:id="@+id/General"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_general"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primary_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/darkTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dark_theme_title"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/darkThemeSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/primary_light" />
+
+    <LinearLayout
+        android:id="@+id/aboutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:showDividers="end">
+
+        <TextView
+            android:id="@+id/About"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_about"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primary_light" />
+
+        <TextView
+            android:id="@+id/Developer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/setting_developer"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/Version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

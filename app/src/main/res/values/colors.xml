@@ -2,10 +2,10 @@
 <resources>
     <color name="primary">#009688</color>
     <color name="primary_dark">#00796b</color>
-    <color name="primary_light">#B2DFDB</color>
-    <color name="accent">#FF5722</color>
+    <color name="primary_light">#b2dfdb</color>
+    <color name="accent">#ff5722</color>
     <color name="pri_dark">#212121</color>
     <color name="sec_dark">#757575</color>
-    <color name="pri_light">#FFFFFF</color>
-    <color name="sec_light">#BDBDBD</color>
+    <color name="pri_light">#ffffff</color>
+    <color name="sec_light">#bdbdbd</color>
 </resources>

@@ -3,6 +3,7 @@
     <string name="baseURI">github.com/mayankmetha/rucky</string>
     <string name="setting_name">Settings</string>
     <string name="setting_general">General</string>
-    <string name="dark_theme_key">AppThemeDark</string>
     <string name="dark_theme_title">Dark Theme</string>
+    <string name="setting_developer">Developer: Mayank Metha D</string>
+    <string name="setting_about">About</string>
 </resources>
