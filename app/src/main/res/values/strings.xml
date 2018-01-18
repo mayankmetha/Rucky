@@ -7,4 +7,8 @@
     <string name="setting_developer">Developer: Mayank Metha D</string>
     <string name="setting_about">About</string>
     <string name="update_name">Update</string>
+    <string name="loadBtn">Load</string>
+    <string name="saveBtn">Save</string>
+    <string name="runBtn">Run</string>
+    <string name="codeHint">Type or load rubber ducky scripts here…</string>
 </resources>

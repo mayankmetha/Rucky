@@ -1,5 +1,6 @@
 package com.mayank.rucky;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
@@ -18,6 +19,9 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -39,9 +43,12 @@ public class MainActivity extends AppCompatActivity {
     public static long downloadRef;
     public DownloadManager downloadManager;
     public static int dlStatus;
+    private static ProgressDialog mProgressDialog;
+    final static private int STORAGE_PERM = 0;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
         super.onCreate(savedInstanceState);
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, false);
@@ -50,13 +57,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarMain);
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
-            try {
-                Runtime.getRuntime().exec("su");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            permission();
         }
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
@@ -92,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onResume() {
+    public void onResume()throws NullPointerException {
         super.onResume();
         theme();
         if (didThemeChange) {
@@ -104,13 +108,24 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
         registerReceiver(downloadBR, filter);
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
+                mProgressDialog = ProgressDialog.show(this, "Checking for update", "Please Wait...", true);
                 URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
-                final ProgressDialog dialog = ProgressDialog.show(this, "Checking for update", "Please Wait...", true);
                 new fetchVersion().execute(url);
-                dialog.dismiss();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        mProgressDialog.dismiss();
+                    }
+                }).start();
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -130,15 +145,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void checkUpdate() {
+    void checkUpdate()throws NullPointerException {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
                 URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
-                final ProgressDialog dialog = ProgressDialog.show(this, "Checking for update", "Please Wait...", true);
+                mProgressDialog = ProgressDialog.show(this, "Checking for update", "Please Wait...", true);
                 new fetchVersion().execute(url);
-                dialog.dismiss();
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -157,6 +172,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private static class fetchVersion extends AsyncTask<URL, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        }
+
         @Override
         protected String doInBackground(URL... urls) {
             String str = "";
@@ -173,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             newVersion = Double.parseDouble(result);
+            mProgressDialog.dismiss();
         }
     }
 
@@ -184,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             checkUpdate();
@@ -193,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("Download & Install", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                Uri dl = Uri.parse("");
+                                Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/blob/master/release/rucky-" + newVersion + ".apk?raw=true");
                                 download(dl);
                             }
                         })
@@ -241,8 +273,8 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog alert = alertBuilder.create();
         alert.show();
-        File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/rucky.apk");
-        if(fDel.exists()) {
+        File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
+        if (fDel.exists()) {
             fDel.delete();
         }
         downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
@@ -250,11 +282,11 @@ public class MainActivity extends AppCompatActivity {
         req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         req.setAllowedOverRoaming(true);
         req.setTitle("Downloading rucky update...");
-        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"rucky.apk");
+        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "rucky.apk");
         DownloadManager.Query q = new DownloadManager.Query();
-        q.setFilterById(DownloadManager.STATUS_FAILED|DownloadManager.STATUS_SUCCESSFUL|DownloadManager.STATUS_PAUSED|DownloadManager.STATUS_PENDING|DownloadManager.STATUS_RUNNING);
+        q.setFilterById(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL | DownloadManager.STATUS_PAUSED | DownloadManager.STATUS_PENDING | DownloadManager.STATUS_RUNNING);
         Cursor c = downloadManager.query(q);
-        while(c.moveToNext()) {
+        while (c.moveToNext()) {
             downloadManager.remove(c.getLong(c.getColumnIndex(DownloadManager.COLUMN_ID)));
         }
         downloadRef = downloadManager.enqueue(req);
@@ -268,7 +300,7 @@ public class MainActivity extends AppCompatActivity {
             DownloadManager.Query q = new DownloadManager.Query();
             q.setFilterById(downloadRef);
             Cursor c = downloadManager.query(q);
-            if(c != null && c.moveToFirst()) {
+            if (c != null && c.moveToFirst()) {
                 dlStatus = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
                 long refId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
                 if (refId == downloadRef && dlStatus == DownloadManager.STATUS_SUCCESSFUL) {
@@ -279,12 +311,40 @@ public class MainActivity extends AppCompatActivity {
     };
 
     void installUpdate() {
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/rucky.apk");
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
         Intent installer = new Intent(Intent.ACTION_VIEW);
-        installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
-        Uri apkUri = FileProvider.getUriForFile(this,getApplicationContext().getPackageName()+".provider",file);
-        installer.setDataAndType(apkUri,"application/vnd.android.package-archive");
+        installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        Uri apkUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
+        installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
         installer.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         this.startActivity(installer);
+    }
+
+    private void permission() {
+        //SU
+        try {
+            Runtime.getRuntime().exec("su");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //STORAGE
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERM);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case STORAGE_PERM:
+                if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //do nothing
+                    break;
+                } else {
+                    permission();
+                }
+                break;
+        }
     }
 }
