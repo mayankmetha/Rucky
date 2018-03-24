@@ -27,13 +27,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     public static int dlStatus;
     private static ProgressDialog mProgressDialog;
     final static private int STORAGE_PERM = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -72,7 +80,85 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
+        Button SaveBtn = (Button) findViewById(R.id.svBtb);
+        Button LoadBtn = (Button) findViewById(R.id.ldBtn);
+        Button ExeBtn = (Button) findViewById(R.id.exBtn);
+        SaveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("File Name");
+                final EditText fileName = new EditText(MainActivity.this);
+                builder.setView(fileName);
+                builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        EditText scripts = (EditText) findViewById(R.id.code);
+                        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString());
+                        String content = scripts.getText().toString();
+                        FileOutputStream outputStream;
+                        OutputStreamWriter outputStreamWriter;
+                        try {
+                            outputStream = new FileOutputStream(file);
+                            outputStreamWriter = new OutputStreamWriter(outputStream);
+                            outputStreamWriter.write(content);
+                            outputStreamWriter.close();
+                            outputStream.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                builder.show();
+            }
+        });
+        LoadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final File[] files = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).listFiles();
+                CharSequence[] fileName = new CharSequence[files.length];
+                for (int i = 0; i < files.length; i++) {
+                    fileName[i] = files[i].getName();
+                }
+                AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Select File");
+                builder.setItems(fileName, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        EditText scripts = (EditText) findViewById(R.id.code);
+                        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files[i].getName());
+                        FileInputStream inputStream;
+                        InputStreamReader inputStreamReader;
+                        BufferedReader bufferedReader;
+                        StringBuilder stringBuilder;
+                        String str;
+                        try {
+                            inputStream = new FileInputStream(file);
+                            inputStreamReader = new InputStreamReader(inputStream);
+                            bufferedReader = new BufferedReader(inputStreamReader);
+                            stringBuilder = new StringBuilder();
+                            while((str = bufferedReader.readLine()) != null) {
+                                stringBuilder.append(str);
+                            }
+                            str = stringBuilder.toString();
+                            scripts.setText(str);
+                            bufferedReader.close();
+                            inputStreamReader.close();
+                            inputStream.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                builder.show();
+            }
+        });
     }
 
     @Override
