@@ -30,9 +30,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -41,8 +41,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
     public static int dlStatus;
     private static ProgressDialog mProgressDialog;
     final static private int STORAGE_PERM = 0;
+    Process p;
+    DataOutputStream dos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -144,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                             bufferedReader = new BufferedReader(inputStreamReader);
                             stringBuilder = new StringBuilder();
                             while((str = bufferedReader.readLine()) != null) {
-                                stringBuilder.append(str);
+                                stringBuilder.append(str+"\n");
                             }
                             str = stringBuilder.toString();
                             scripts.setText(str);
@@ -159,6 +162,166 @@ public class MainActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+        ExeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText scripts = (EditText) findViewById(R.id.code);
+                try {
+                    genScript(scripts.getText().toString());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    void genScript(String str)throws Exception {
+
+        String[] lines = str.split("\\r?\\n");
+        String con;
+        int defdelay = 0;
+        for(int a = 0; a < lines.length; a++) {
+            //DEFAULTDELAY or DEFAULT_DELAY
+            if(a == 0 && (lines[a].startsWith("DEFAULTDELAY ") || lines[a].startsWith("DEFAULT_DELAY "))) {
+                con = lines[a];
+                con = con.replace("DEFAULTDELAY ","");
+                con = con.replace("DEFAULT_DELAY ","");
+                defdelay = parseInt(con);
+            }
+            //DELAY
+            if(lines[a].startsWith("DELAY ")) {
+                con = lines[a].replace("DELAY ","");
+                int delay = parseInt(con);
+                p.waitFor(delay, TimeUnit.MILLISECONDS);
+            }
+            //REM
+            if(lines[a].startsWith("REM")) {
+                continue;
+            }
+            //STRING
+            if(lines[a].startsWith("STRING ")) {
+               con = lines[a].replace("STRING ","");
+               con = con.replace("\n","");
+               char[] ch = con.toCharArray();
+               String cha;
+               for(int b = 0; b < ch.length; b++) {
+                    cha = convert(ch[b]);
+                   dos.writeBytes("echo "+cha+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                   dos.flush();
+               }
+            }
+            p.waitFor(defdelay, TimeUnit.MILLISECONDS);
+        }
+    }
+
+    String convert(char ch) {
+        if(ch == ' ') {
+            return "space";
+        }
+        else if(ch == '!') {
+            return "left-shift 1";
+        }
+        else if(ch == '.') {
+            return "period";
+        }
+        else if(ch == '`') {
+            return "backquote";
+        }
+        else if(ch == '~') {
+            return "left-shift tilde";
+        }
+        else if(ch == '+') {
+            return "kp-plus";
+        }
+        else if(ch == '=') {
+            return "equal";
+        }
+        else if(ch == '_') {
+            return "left-shift minus";
+        }
+        else if(ch == '-') {
+            return "minus";
+        }
+        else if(ch == '"') {
+            return "left-shift quote";
+        }
+        else if(ch == '\'') {
+            return "quote";
+        }
+        else if(ch == ':') {
+            return "left-shift semicolon";
+        }
+        else if(ch == ';') {
+            return "semicolon";
+        }
+        else if(ch == '<') {
+            return "left-shift comma";
+        }
+        else if(ch == ',') {
+            return "comma";
+        }
+        else if(ch == '>') {
+            return "left-shift period";
+        }
+        else if(ch == '?') {
+            return "left-shift slash";
+        }
+        else if(ch == '\\') {
+            return "backslash";
+        }
+        else if(ch == '|') {
+            return "left-shift backslash";
+        }
+        else if(ch == '/') {
+            return "slash";
+        }
+        else if(ch == '{') {
+            return "left-shift lbracket";
+        }
+        else if(ch == '}') {
+            return "left-shift rbracket";
+        }
+        else if(ch == '(') {
+            return "left-shift 9";
+        }
+        else if(ch == ')') {
+            return "left-shift 0";
+        }
+        else if(ch == '[') {
+            return "lbracket";
+        }
+        else if(ch == ']') {
+            return "rbracket";
+        }
+        else if(ch == '#') {
+            return "left-shift 3";
+        }
+        else if(ch == '@') {
+            return "left-shift 2";
+        }
+        else if(ch == '$') {
+            return "left-shift 4";
+        }
+        else if(ch == '%') {
+            return "left-shift 5";
+        }
+        else if(ch == '^') {
+            return "left-shift 6";
+        }
+        else if(ch == '&') {
+            return "left-shift 7";
+        }
+        else if(ch == '*') {
+            return "kp-multiply";
+        }
+        else if(ch >= 'A' && ch <= 'Z') {
+            String temp = ""+ch+"";
+            temp = temp.toLowerCase();
+            temp = "left-shift "+temp;
+            return temp;
+
+        }
+        else return ""+ch+"";
     }
 
     @Override
@@ -222,6 +385,17 @@ public class MainActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();
         unregisterReceiver(downloadBR);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        try {
+            dos.flush();
+            dos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     void theme() {
@@ -409,7 +583,8 @@ public class MainActivity extends AppCompatActivity {
     private void permission() {
         //SU
         try {
-            Runtime.getRuntime().exec("su");
+            p = Runtime.getRuntime().exec("su");
+            dos = new DataOutputStream(p.getOutputStream());
         } catch (Exception e) {
             e.printStackTrace();
         }

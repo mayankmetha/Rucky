@@ -31,7 +31,6 @@ public class SettingsActivity extends AppCompatActivity {
         themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-
                 darkTheme = isChecked;
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putBoolean(PREF_SETTINGS_DARK_THEME, darkTheme).apply();
