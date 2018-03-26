@@ -180,38 +180,58 @@ public class MainActivity extends AppCompatActivity {
         String[] lines = str.split("\\r?\\n");
         String con;
         int defdelay = 0;
-        for(int a = 0; a < lines.length; a++) {
-            //DEFAULTDELAY or DEFAULT_DELAY
-            if(a == 0 && (lines[a].startsWith("DEFAULTDELAY ") || lines[a].startsWith("DEFAULT_DELAY "))) {
-                con = lines[a];
-                con = con.replace("DEFAULTDELAY ","");
-                con = con.replace("DEFAULT_DELAY ","");
-                defdelay = parseInt(con);
+            for (int a = 0; a < lines.length; a++) {
+                //DEFAULTDELAY or DEFAULT_DELAY
+                if (a == 0 && (lines[a].startsWith("DEFAULTDELAY ") || lines[a].startsWith("DEFAULT_DELAY "))) {
+                    con = lines[a];
+                    con = con.replace("DEFAULTDELAY ", "");
+                    con = con.replace("DEFAULT_DELAY ", "");
+                    defdelay = parseInt(con);
+                }
+                //DELAY
+                if (lines[a].startsWith("DELAY ")) {
+                    con = lines[a].replace("DELAY ", "");
+                    int delay = parseInt(con);
+                    p.waitFor(delay, TimeUnit.MILLISECONDS);
+                }
+                //REM
+                if (lines[a].startsWith("REM")) {
+                    continue;
+                }
+                //STRING
+                if (lines[a].startsWith("STRING ")) {
+                    con = lines[a].replace("STRING ", "");
+                    con = con.replace("\n", "");
+                    char[] ch = con.toCharArray();
+                    String cha;
+                    for (int b = 0; b < ch.length; b++) {
+                        cha = convert(ch[b]);
+                        dos.writeBytes("echo " + cha + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                        dos.flush();
+                    }
+                }
+                //GUI or WINDOWS
+                if (lines[a].startsWith("GUI ") || lines[a].startsWith("WINDOWS ")) {
+                    con = lines[a];
+                    con = con.replace("WINDOWS ", "");
+                    con = con.replace("GUI ", "");
+                    char ch = con.charAt(0);
+                    dos.writeBytes("echo left-meta " + ch + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                    dos.flush();
+                }
+                //MENU or APP
+                if (lines[a].equals("APP") || lines[a].equals("MENU")) {
+                    dos.writeBytes("echo left-shift f10 | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                    dos.flush();
+                }
+                //TODO:REPEAT
+                //TODO:SHIFT
+                //TODO:ALT
+                //TODO:CONTROL or CTRL
+                //TODO:Arrow Key
+                //TODO:Extended cmd
+                p.waitFor(defdelay, TimeUnit.MILLISECONDS);
             }
-            //DELAY
-            if(lines[a].startsWith("DELAY ")) {
-                con = lines[a].replace("DELAY ","");
-                int delay = parseInt(con);
-                p.waitFor(delay, TimeUnit.MILLISECONDS);
-            }
-            //REM
-            if(lines[a].startsWith("REM")) {
-                continue;
-            }
-            //STRING
-            if(lines[a].startsWith("STRING ")) {
-               con = lines[a].replace("STRING ","");
-               con = con.replace("\n","");
-               char[] ch = con.toCharArray();
-               String cha;
-               for(int b = 0; b < ch.length; b++) {
-                    cha = convert(ch[b]);
-                   dos.writeBytes("echo "+cha+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                   dos.flush();
-               }
-            }
-            p.waitFor(defdelay, TimeUnit.MILLISECONDS);
-        }
     }
 
     String convert(char ch) {
