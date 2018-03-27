@@ -3,7 +3,9 @@ package com.mayank.rucky;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
-import android.app.ProgressDialog;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -53,8 +55,10 @@ public class MainActivity extends AppCompatActivity {
     public static long downloadRef;
     public DownloadManager downloadManager;
     public static int dlStatus;
-    private static ProgressDialog mProgressDialog;
     final static private int STORAGE_PERM = 0;
+    public static final String CHANNEL_ID = "com.mayank.rucky";
+    public static final String CHANNEL_NAME = "Update";
+    private NotificationManager notificationManager;
     Process p;
     DataOutputStream dos;
 
@@ -70,22 +74,31 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             permission();
         }
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+        notificationChannel.enableLights(true);
+        notificationChannel.setShowBadge(true);
+        notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
+        getManager().createNotificationChannel(notificationChannel);
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
                 URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
-                final ProgressDialog dialog = ProgressDialog.show(this, "Checking for update", "Please Wait...", true);
+                Notification.Builder updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                updateNotify.setContentTitle("Checking for update")
+                        .setContentText("Please Wait...")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true);
+                getManager().notify(1,updateNotify.build());
                 new fetchVersion().execute(url);
-                dialog.dismiss();
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
         }
-        Button SaveBtn = (Button) findViewById(R.id.svBtb);
-        Button LoadBtn = (Button) findViewById(R.id.ldBtn);
-        Button ExeBtn = (Button) findViewById(R.id.exBtn);
+        Button SaveBtn = findViewById(R.id.svBtb);
+        Button LoadBtn = findViewById(R.id.ldBtn);
+        Button ExeBtn = findViewById(R.id.exBtn);
         SaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        EditText scripts = (EditText) findViewById(R.id.code);
+                        EditText scripts = findViewById(R.id.code);
                         File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString());
                         String content = scripts.getText().toString();
                         FileOutputStream outputStream;
@@ -134,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.setItems(fileName, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
-                        EditText scripts = (EditText) findViewById(R.id.code);
+                        EditText scripts = findViewById(R.id.code);
                         File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files[i].getName());
                         FileInputStream inputStream;
                         InputStreamReader inputStreamReader;
@@ -147,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                             bufferedReader = new BufferedReader(inputStreamReader);
                             stringBuilder = new StringBuilder();
                             while((str = bufferedReader.readLine()) != null) {
-                                stringBuilder.append(str+"\n");
+                                stringBuilder.append(str).append("\n");
                             }
                             str = stringBuilder.toString();
                             scripts.setText(str);
@@ -165,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
         ExeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText scripts = (EditText) findViewById(R.id.code);
+                EditText scripts = findViewById(R.id.code);
                 try {
                     genScript(scripts.getText().toString());
                 } catch (Exception e) {
@@ -175,6 +188,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private NotificationManager getManager() {
+        if (notificationManager == null) {
+            notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        }
+        return notificationManager;
+    }
+
     void genScript(String str)throws Exception {
 
         String[] lines = str.split("\\r?\\n");
@@ -182,36 +202,24 @@ public class MainActivity extends AppCompatActivity {
         int defdelay = 0;
             for (int a = 0; a < lines.length; a++) {
                 //DEFAULTDELAY or DEFAULT_DELAY
-                if (a == 0 && (lines[a].startsWith("DEFAULTDELAY ") || lines[a].startsWith("DEFAULT_DELAY "))) {
+                if (a == 0 && (lines[a].startsWith("DEFAULTDELAY") || lines[a].startsWith("DEFAULT_DELAY"))) {
                     con = lines[a];
                     con = con.replace("DEFAULTDELAY ", "");
                     con = con.replace("DEFAULT_DELAY ", "");
                     defdelay = parseInt(con);
                 }
                 //DELAY
-                if (lines[a].startsWith("DELAY ")) {
+                else if (lines[a].startsWith("DELAY")) {
                     con = lines[a].replace("DELAY ", "");
                     int delay = parseInt(con);
                     p.waitFor(delay, TimeUnit.MILLISECONDS);
                 }
                 //REM
-                if (lines[a].startsWith("REM")) {
+                else if (lines[a].startsWith("REM")) {
                     continue;
                 }
-                //STRING
-                if (lines[a].startsWith("STRING ")) {
-                    con = lines[a].replace("STRING ", "");
-                    con = con.replace("\n", "");
-                    char[] ch = con.toCharArray();
-                    String cha;
-                    for (int b = 0; b < ch.length; b++) {
-                        cha = convert(ch[b]);
-                        dos.writeBytes("echo " + cha + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                        dos.flush();
-                    }
-                }
                 //GUI or WINDOWS
-                if (lines[a].startsWith("GUI ") || lines[a].startsWith("WINDOWS ")) {
+                else if (lines[a].startsWith("GUI") || lines[a].startsWith("WINDOWS")) {
                     con = lines[a];
                     con = con.replace("WINDOWS ", "");
                     con = con.replace("GUI ", "");
@@ -220,16 +228,176 @@ public class MainActivity extends AppCompatActivity {
                     dos.flush();
                 }
                 //MENU or APP
-                if (lines[a].equals("APP") || lines[a].equals("MENU")) {
+                else if (lines[a].equals("APP") || lines[a].equals("MENU")) {
                     dos.writeBytes("echo left-shift f10 | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
                     dos.flush();
                 }
-                //TODO:REPEAT
-                //TODO:SHIFT
-                //TODO:ALT
-                //TODO:CONTROL or CTRL
+                //SHIFT
+                else if (lines[a].startsWith("SHIFT")) {
+                    con = lines[a].replace("SHIFT ","");
+                    String shseq = "";
+                    switch (con) {
+                        case "DELETE":
+                            shseq = "delete";
+                            break;
+                        case "HOME":
+                            shseq = "home";
+                            break;
+                        case "INSERT":
+                            shseq = "insert";
+                            break;
+                        case "PAGEUP":
+                            shseq = "pageup";
+                            break;
+                        case "PAGEDOWN":
+                            shseq = "pagedown";
+                            break;
+                        case "WINDOWS":
+                        case "GUI":
+                            shseq = "left-meta";
+                            break;
+                        case "DOWNARROW":
+                        case "DOWN":
+                            shseq = "down";
+                            break;
+                        case "UPARROW":
+                        case "UP":
+                            shseq = "up";
+                            break;
+                        case "LEFTARROW":
+                        case "LEFT":
+                            shseq = "left";
+                            break;
+                        case "RIGHTARROW":
+                        case "RIGHT":
+                            shseq = "right";
+                            break;
+                        case "TAB":
+                            shseq = "tab";
+                            break;
+                    }
+                    dos.writeBytes("echo left-shift "+shseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                    dos.flush();
+                }
+                //ALT
+                else if(lines[a].startsWith("ALT")) {
+                    con = lines[a].replace("ALT ","");
+                    String altseq;
+                    switch (con) {
+                        case "END":
+                            altseq = "end";
+                            break;
+                        case "ESC":
+                            altseq = "esc";
+                            break;
+                        case "ESCAPE":
+                            altseq = "escape";
+                            break;
+                        case "SPACE":
+                            altseq = "space";
+                            break;
+                        case "TAB":
+                            altseq = "tab";
+                            break;
+                        case "F1":
+                            altseq = "f1";
+                            break;
+                        case "F2":
+                            altseq = "f2";
+                            break;
+                        case "F3":
+                            altseq = "f3";
+                            break;
+                        case "F4":
+                            altseq = "f4";
+                            break;
+                        case "F5":
+                            altseq = "f5";
+                            break;
+                        case "F6":
+                            altseq = "f6";
+                            break;
+                        case "F7":
+                            altseq = "f7";
+                            break;
+                        case "F8":
+                            altseq = "f8";
+                            break;
+                        case "F9":
+                            altseq = "f9";
+                            break;
+                        case "F10":
+                            altseq = "f10";
+                            break;
+                        case "F11":
+                            altseq = "f11";
+                            break;
+                        case "F12":
+                            altseq = "f12";
+                            break;
+                        default:
+                            altseq = "" + con.charAt(0) + "";
+                            break;
+                    }
+                    dos.writeBytes("echo left-alt "+altseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                    dos.flush();
+                }
+                //CONTROL or CTRL
+                else if (lines[a].startsWith("CONTROL") || lines[a].startsWith("CTRL")) {
+                    con = lines[a];
+                    con = con.replace("CONTROL ", "");
+                    con = con.replace("CTRL ", "");
+                    String ctrlseq;
+                    if(con.equals("PAUSE") || con.startsWith("BREAK")) {
+                        ctrlseq = "pause";
+                    }else if(con.equals("F1")) {
+                        ctrlseq = "f1";
+                    } else if(con.equals("F2")) {
+                        ctrlseq = "f2";
+                    } else if(con.equals("F3")) {
+                        ctrlseq = "f3";
+                    } else if(con.equals("F4")) {
+                        ctrlseq = "f4";
+                    } else if(con.equals("F5")) {
+                        ctrlseq = "f5";
+                    } else if(con.equals("F6")) {
+                        ctrlseq = "f6";
+                    } else if(con.equals("F7")) {
+                        ctrlseq = "f7";
+                    } else if(con.equals("F8")) {
+                        ctrlseq = "f8";
+                    } else if(con.equals("F9")) {
+                        ctrlseq = "f9";
+                    } else if(con.equals("F10")) {
+                        ctrlseq = "f10";
+                    } else if(con.equals("F11")) {
+                        ctrlseq = "f11";
+                    } else if(con.equals("F12")) {
+                        ctrlseq = "f12";
+                    } else if(con.equals("ESC")) {
+                        ctrlseq = "esc";
+                    } else if(con.equals("ESCAPE")) {
+                        ctrlseq = "escape";
+                    } else {
+                        ctrlseq = ""+con.charAt(0)+"";
+                    }
+                    dos.writeBytes("echo left-ctrl "+ctrlseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                    dos.flush();
+                }
                 //TODO:Arrow Key
+                //TODO:REPEAT
                 //TODO:Extended cmd
+                //STRING
+                else if (lines[a].startsWith("STRING")) {
+                    con = lines[a].replace("STRING ", "");
+                    char[] ch = con.toCharArray();
+                    String cha;
+                    for (char aCh : ch) {
+                        cha = convert(aCh);
+                        dos.writeBytes("echo " + cha + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                        dos.flush();
+                    }
+                }
                 p.waitFor(defdelay, TimeUnit.MILLISECONDS);
             }
     }
@@ -381,20 +549,14 @@ public class MainActivity extends AppCompatActivity {
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
-                mProgressDialog = ProgressDialog.show(this, "Checking for update", "Please Wait...", true);
+                final Notification.Builder mNotification = new Notification.Builder(this, CHANNEL_ID);
+                mNotification.setContentTitle("Checking for update")
+                        .setContentText("Please Wait...")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true);
+                getManager().notify(1,mNotification.build());
                 URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
                 new fetchVersion().execute(url);
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            Thread.sleep(5000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                        mProgressDialog.dismiss();
-                    }
-                }).start();
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -431,8 +593,13 @@ public class MainActivity extends AppCompatActivity {
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
+                Notification.Builder updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                updateNotify.setContentTitle("Checking for update")
+                        .setContentText("Please Wait...")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true);
+                getManager().notify(1,updateNotify.build());
                 URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
-                mProgressDialog = ProgressDialog.show(this, "Checking for update", "Please Wait...", true);
                 new fetchVersion().execute(url);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -483,7 +650,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             newVersion = Double.parseDouble(result);
-            mProgressDialog.dismiss();
         }
     }
 
