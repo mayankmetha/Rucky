@@ -81,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
             permission();
             supportedFiles();
         }
+        try {
+            PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            currentVersion = Double.parseDouble(pInfo.versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
         NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
         notificationChannel.enableLights(true);
         notificationChannel.setShowBadge(true);
@@ -89,24 +95,7 @@ public class MainActivity extends AppCompatActivity {
         notificationChannel.setSound(null,null);
         notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
         getManager().createNotificationChannel(notificationChannel);
-        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        assert conMgr != null;
-        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
-        if (activeNetwork != null && activeNetwork.isConnected()) {
-            try {
-                URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
-                Notification.Builder updateNotify = new Notification.Builder(this, CHANNEL_ID);
-                updateNotify.setContentTitle("Checking for update")
-                        .setContentText("Please Wait...")
-                        .setSmallIcon(R.drawable.ic_notification)
-                        .setAutoCancel(true);
-                getManager().notify(1,updateNotify.build());
-                new fetchVersion().execute(url);
-                getManager().cancel(1);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-        }
+        updater(0);
         Button SaveBtn = findViewById(R.id.svBtb);
         Button LoadBtn = findViewById(R.id.ldBtn);
         Button ExeBtn = findViewById(R.id.exBtn);
@@ -662,7 +651,7 @@ public class MainActivity extends AppCompatActivity {
                 this.startActivity(intent);
                 break;
             case R.id.Update:
-                updater();
+                updater(1);
                 break;
         }
         return true;
@@ -680,24 +669,7 @@ public class MainActivity extends AppCompatActivity {
         }
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
         registerReceiver(downloadBR, filter);
-        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        assert conMgr != null;
-        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
-        if (activeNetwork != null && activeNetwork.isConnected()) {
-            try {
-                final Notification.Builder mNotification = new Notification.Builder(this, CHANNEL_ID);
-                mNotification.setContentTitle("Checking for update")
-                        .setContentText("Please Wait...")
-                        .setSmallIcon(R.drawable.ic_notification)
-                        .setAutoCancel(true);
-                getManager().notify(2,mNotification.build());
-                URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
-                new fetchVersion().execute(url);
-                getManager().cancel(2);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-        }
+        updater(0);
     }
 
     @Override
@@ -785,13 +757,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void updater() {
-        try {
-            PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
-            currentVersion = Double.parseDouble(pInfo.versionName);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
+    void updater(int mode) {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
@@ -814,29 +780,33 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alert = builder.create();
                 alert.show();
             } else {
+                if (mode == 1) {
+                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+                    alertBuilder.setMessage("No update found")
+                            .setCancelable(false)
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                }
+                            });
+                    AlertDialog alert = alertBuilder.create();
+                    alert.show();
+                }
+            }
+        } else {
+            if (mode == 1) {
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-                alertBuilder.setMessage("No update found")
+                alertBuilder.setMessage("Please check the network connection")
                         .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+
                             }
                         });
                 AlertDialog alert = alertBuilder.create();
                 alert.show();
             }
-        } else {
-            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-            alertBuilder.setMessage("Please check the network connection")
-                    .setCancelable(false)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-
-                        }
-                    });
-            AlertDialog alert = alertBuilder.create();
-            alert.show();
         }
     }
 
@@ -860,7 +830,7 @@ public class MainActivity extends AppCompatActivity {
         req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         req.setAllowedOverRoaming(true);
         req.setTitle("rucky.apk");
-        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"");
+        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"/rucky.apk");
         req.setVisibleInDownloadsUi(true);
         DownloadManager.Query q = new DownloadManager.Query();
         q.setFilterById(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL | DownloadManager.STATUS_PAUSED | DownloadManager.STATUS_PENDING | DownloadManager.STATUS_RUNNING);
