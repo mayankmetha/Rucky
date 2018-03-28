@@ -6,3 +6,4 @@ A simple rubber ducky attack apk
 ## Requirements
 1) Android Oreo onwards
 2) [Custom kernel](https://github.com/pelya/android-keyboard-gadget)
+3) Root/SU
