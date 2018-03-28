@@ -21,6 +21,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -39,10 +40,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -74,10 +78,14 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
             permission();
+            supportedFiles();
         }
         NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
         notificationChannel.enableLights(true);
         notificationChannel.setShowBadge(true);
+        notificationChannel.enableVibration(false);
+        notificationChannel.canBypassDnd();
+        notificationChannel.setSound(null,null);
         notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
         getManager().createNotificationChannel(notificationChannel);
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -93,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAutoCancel(true);
                 getManager().notify(1,updateNotify.build());
                 new fetchVersion().execute(url);
+                getManager().cancel(1);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -680,9 +689,10 @@ public class MainActivity extends AppCompatActivity {
                         .setContentText("Please Wait...")
                         .setSmallIcon(R.drawable.ic_notification)
                         .setAutoCancel(true);
-                getManager().notify(1,mNotification.build());
+                getManager().notify(2,mNotification.build());
                 URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
                 new fetchVersion().execute(url);
+                getManager().cancel(2);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -698,12 +708,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        try {
-            dos.flush();
-            dos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     void theme() {
@@ -724,9 +728,10 @@ public class MainActivity extends AppCompatActivity {
                         .setContentText("Please Wait...")
                         .setSmallIcon(R.drawable.ic_notification)
                         .setAutoCancel(true);
-                getManager().notify(1,updateNotify.build());
+                getManager().notify(3,updateNotify.build());
                 URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
                 new fetchVersion().execute(url);
+                getManager().cancel(3);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -904,6 +909,112 @@ public class MainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
                 || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERM);
+        }
+    }
+
+    private void supportedFiles() {
+        String pathDev = "/dev";
+        String pathTmp = "/data/local/tmp";
+        File file1 = new File(pathDev,"hidg0");
+        File file2 = new File(pathDev,"hidg1");
+        File file3 = new File(pathTmp,"hid-gadget-test");
+        if(!file1.exists() && !file2.exists()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Kernel Not Supported!");
+            builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    moveTaskToBack(true);
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                    System.exit(1);
+                }
+            });
+            AlertDialog kernelExit = builder.create();
+            kernelExit.show();
+        } else {
+            try {
+                dos.writeBytes("chmod 666 /dev/hidg0\n");
+                dos.writeBytes("chmod 666 /dev/hidg1\n");
+                dos.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(!file3.exists()) {
+            final Notification.Builder uNotification = new Notification.Builder(this, CHANNEL_ID);
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Download missing file?");
+            builder.setPositiveButton("Download", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                    StrictMode.setThreadPolicy(policy);
+                    final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                    assert conMgr != null;
+                    final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+                    if (activeNetwork != null && activeNetwork.isConnected()) {
+                        try {
+                            uNotification.setContentTitle("Downloading necessary files")
+                                    .setContentText("Please Wait...")
+                                    .setSmallIcon(R.drawable.ic_notification)
+                                    .setAutoCancel(true);
+                            getManager().notify(4,uNotification.build());
+                            File file = new File("/sdcard","hid-gadget-test");
+                            InputStream is;
+                            OutputStream os = new FileOutputStream(file);
+                            URL url = new URL("https://github.com/mayankmetha/Rucky/blob/master/release/hid-gadget-test?raw=true");
+                            URLConnection urlConnection = url.openConnection();
+                            is = urlConnection.getInputStream();
+                            byte[] data = new byte[is.available()];
+                            is.read(data);
+                            os.write(data);
+                            is.close();
+                            os.close();
+                            dos.writeBytes("mv /sdcard/hid-gadget-test /data/local/tmp/\n");
+                            dos.writeBytes("chmod 755 /data/local/tmp/hid-gadget-test\n");
+                            dos.flush();
+                            getManager().cancel(4);
+                            uNotification.setContentTitle("Downloaded necessary files")
+                                    .setContentText("Enjoy...")
+                                    .setSmallIcon(R.drawable.ic_notification)
+                                    .setAutoCancel(true);
+                            getManager().notify(5,uNotification.build());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle("Network Error!");
+                        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                moveTaskToBack(true);
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                                System.exit(1);
+                            }
+                        });
+                        AlertDialog fileDowload = builder.create();
+                        fileDowload.show();
+                    }
+                }
+            });
+            builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    moveTaskToBack(true);
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                    System.exit(1);
+                }
+            });
+            AlertDialog fileMissing = builder.create();
+            fileMissing.show();
+        } else {
+            try {
+                dos.writeBytes("chmod 755 /data/local/tmp/hid-gadget-test\n");
+                dos.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
