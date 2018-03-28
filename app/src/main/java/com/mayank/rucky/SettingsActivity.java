@@ -37,7 +37,7 @@ public class SettingsActivity extends AppCompatActivity {
                 MainActivity.didThemeChange = true;
             }
         });
-        String version = "Version: ";
+        String version = "Version    : ";
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(),0);
             version = version+pInfo.versionName;
@@ -63,7 +63,7 @@ public class SettingsActivity extends AppCompatActivity {
         theme();
     }
 
-    void theme() {
+    private void theme() {
         if(darkTheme) {
             setTheme(R.style.AppThemeDark);
         } else {

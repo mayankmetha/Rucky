@@ -43,7 +43,8 @@
             android:text="@string/setting_general"
             android:textAllCaps="false"
             android:textColor="@color/accent"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
@@ -88,7 +89,8 @@
             android:text="@string/setting_about"
             android:textAllCaps="false"
             android:textColor="@color/accent"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"

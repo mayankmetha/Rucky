@@ -1,6 +1,7 @@
 package com.mayank.rucky;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.Notification;
@@ -871,7 +872,7 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(downloadBR, filter);
     }
 
-    private BroadcastReceiver downloadBR = new BroadcastReceiver() {
+    private final BroadcastReceiver downloadBR = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             DownloadManager.Query q = new DownloadManager.Query();
@@ -959,7 +960,7 @@ public class MainActivity extends AppCompatActivity {
                                     .setSmallIcon(R.drawable.ic_notification)
                                     .setAutoCancel(true);
                             getManager().notify(4,uNotification.build());
-                            File file = new File("/sdcard","hid-gadget-test");
+                            @SuppressLint("SdCardPath") File file = new File("/sdcard","hid-gadget-test");
                             InputStream is;
                             OutputStream os = new FileOutputStream(file);
                             URL url = new URL("https://github.com/mayankmetha/Rucky/blob/master/release/hid-gadget-test?raw=true");
