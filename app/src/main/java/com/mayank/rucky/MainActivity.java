@@ -43,6 +43,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Integer.parseInt;
@@ -137,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         LoadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final File[] files = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).listFiles();
+                final File[] files = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
                 CharSequence[] fileName = new CharSequence[files.length];
                 for (int i = 0; i < files.length; i++) {
                     fileName[i] = files[i].getName();
