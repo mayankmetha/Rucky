@@ -859,8 +859,9 @@ public class MainActivity extends AppCompatActivity {
         DownloadManager.Request req = new DownloadManager.Request(uri);
         req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         req.setAllowedOverRoaming(true);
-        req.setTitle("Downloading rucky update...");
-        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "rucky.apk");
+        req.setTitle("rucky.apk");
+        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"");
+        req.setVisibleInDownloadsUi(true);
         DownloadManager.Query q = new DownloadManager.Query();
         q.setFilterById(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL | DownloadManager.STATUS_PAUSED | DownloadManager.STATUS_PENDING | DownloadManager.STATUS_RUNNING);
         Cursor c = downloadManager.query(q);

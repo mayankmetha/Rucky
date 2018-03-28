@@ -6,8 +6,8 @@ android {
         applicationId "com.mayank.rucky"
         minSdkVersion 26
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
     }
     buildTypes {
         release {
@@ -19,6 +19,11 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "rucky-${variant.versionName}.apk"
+                }
+            }
         }
     }
 }
