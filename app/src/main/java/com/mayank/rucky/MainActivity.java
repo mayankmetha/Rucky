@@ -196,210 +196,335 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void genScript(String str)throws Exception {
-
         String[] lines = str.split("\\r?\\n");
         String con;
         int defdelay = 0;
-            for (int a = 0; a < lines.length; a++) {
-                //DEFAULTDELAY or DEFAULT_DELAY
-                if (a == 0 && (lines[a].startsWith("DEFAULTDELAY") || lines[a].startsWith("DEFAULT_DELAY"))) {
-                    con = lines[a];
-                    con = con.replace("DEFAULTDELAY ", "");
-                    con = con.replace("DEFAULT_DELAY ", "");
-                    defdelay = parseInt(con);
-                }
-                //DELAY
-                else if (lines[a].startsWith("DELAY")) {
-                    con = lines[a].replace("DELAY ", "");
-                    int delay = parseInt(con);
-                    p.waitFor(delay, TimeUnit.MILLISECONDS);
-                }
-                //REM
-                else if (lines[a].startsWith("REM")) {
-                    continue;
-                }
-                //GUI or WINDOWS
-                else if (lines[a].startsWith("GUI") || lines[a].startsWith("WINDOWS")) {
-                    con = lines[a];
-                    con = con.replace("WINDOWS ", "");
-                    con = con.replace("GUI ", "");
-                    char ch = con.charAt(0);
-                    dos.writeBytes("echo left-meta " + ch + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                    dos.flush();
-                }
-                //MENU or APP
-                else if (lines[a].equals("APP") || lines[a].equals("MENU")) {
-                    dos.writeBytes("echo left-shift f10 | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                    dos.flush();
-                }
-                //SHIFT
-                else if (lines[a].startsWith("SHIFT")) {
-                    con = lines[a].replace("SHIFT ","");
-                    String shseq = "";
-                    switch (con) {
-                        case "DELETE":
-                            shseq = "delete";
-                            break;
-                        case "HOME":
-                            shseq = "home";
-                            break;
-                        case "INSERT":
-                            shseq = "insert";
-                            break;
-                        case "PAGEUP":
-                            shseq = "pageup";
-                            break;
-                        case "PAGEDOWN":
-                            shseq = "pagedown";
-                            break;
-                        case "WINDOWS":
-                        case "GUI":
-                            shseq = "left-meta";
-                            break;
-                        case "DOWNARROW":
-                        case "DOWN":
-                            shseq = "down";
-                            break;
-                        case "UPARROW":
-                        case "UP":
-                            shseq = "up";
-                            break;
-                        case "LEFTARROW":
-                        case "LEFT":
-                            shseq = "left";
-                            break;
-                        case "RIGHTARROW":
-                        case "RIGHT":
-                            shseq = "right";
-                            break;
-                        case "TAB":
-                            shseq = "tab";
-                            break;
-                    }
-                    dos.writeBytes("echo left-shift "+shseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                    dos.flush();
-                }
-                //ALT
-                else if(lines[a].startsWith("ALT")) {
-                    con = lines[a].replace("ALT ","");
-                    String altseq;
-                    switch (con) {
-                        case "END":
-                            altseq = "end";
-                            break;
-                        case "ESC":
-                            altseq = "esc";
-                            break;
-                        case "ESCAPE":
-                            altseq = "escape";
-                            break;
-                        case "SPACE":
-                            altseq = "space";
-                            break;
-                        case "TAB":
-                            altseq = "tab";
-                            break;
-                        case "F1":
-                            altseq = "f1";
-                            break;
-                        case "F2":
-                            altseq = "f2";
-                            break;
-                        case "F3":
-                            altseq = "f3";
-                            break;
-                        case "F4":
-                            altseq = "f4";
-                            break;
-                        case "F5":
-                            altseq = "f5";
-                            break;
-                        case "F6":
-                            altseq = "f6";
-                            break;
-                        case "F7":
-                            altseq = "f7";
-                            break;
-                        case "F8":
-                            altseq = "f8";
-                            break;
-                        case "F9":
-                            altseq = "f9";
-                            break;
-                        case "F10":
-                            altseq = "f10";
-                            break;
-                        case "F11":
-                            altseq = "f11";
-                            break;
-                        case "F12":
-                            altseq = "f12";
-                            break;
-                        default:
-                            altseq = "" + con.charAt(0) + "";
-                            break;
-                    }
-                    dos.writeBytes("echo left-alt "+altseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                    dos.flush();
-                }
-                //CONTROL or CTRL
-                else if (lines[a].startsWith("CONTROL") || lines[a].startsWith("CTRL")) {
-                    con = lines[a];
-                    con = con.replace("CONTROL ", "");
-                    con = con.replace("CTRL ", "");
-                    String ctrlseq;
-                    if(con.equals("PAUSE") || con.startsWith("BREAK")) {
-                        ctrlseq = "pause";
-                    }else if(con.equals("F1")) {
-                        ctrlseq = "f1";
-                    } else if(con.equals("F2")) {
-                        ctrlseq = "f2";
-                    } else if(con.equals("F3")) {
-                        ctrlseq = "f3";
-                    } else if(con.equals("F4")) {
-                        ctrlseq = "f4";
-                    } else if(con.equals("F5")) {
-                        ctrlseq = "f5";
-                    } else if(con.equals("F6")) {
-                        ctrlseq = "f6";
-                    } else if(con.equals("F7")) {
-                        ctrlseq = "f7";
-                    } else if(con.equals("F8")) {
-                        ctrlseq = "f8";
-                    } else if(con.equals("F9")) {
-                        ctrlseq = "f9";
-                    } else if(con.equals("F10")) {
-                        ctrlseq = "f10";
-                    } else if(con.equals("F11")) {
-                        ctrlseq = "f11";
-                    } else if(con.equals("F12")) {
-                        ctrlseq = "f12";
-                    } else if(con.equals("ESC")) {
-                        ctrlseq = "esc";
-                    } else if(con.equals("ESCAPE")) {
-                        ctrlseq = "escape";
-                    } else {
-                        ctrlseq = ""+con.charAt(0)+"";
-                    }
-                    dos.writeBytes("echo left-ctrl "+ctrlseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                    dos.flush();
-                }
-                //TODO:Arrow Key
-                //TODO:REPEAT
-                //TODO:Extended cmd
-                //STRING
-                else if (lines[a].startsWith("STRING")) {
-                    con = lines[a].replace("STRING ", "");
-                    char[] ch = con.toCharArray();
-                    String cha;
-                    for (char aCh : ch) {
-                        cha = convert(aCh);
-                        dos.writeBytes("echo " + cha + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
-                        dos.flush();
-                    }
-                }
-                p.waitFor(defdelay, TimeUnit.MILLISECONDS);
+        for (int a = 0; a < lines.length; a++) {
+            //DEFAULTDELAY or DEFAULT_DELAY
+            if (a == 0 && (lines[a].startsWith("DEFAULTDELAY") || lines[a].startsWith("DEFAULT_DELAY"))) {
+                con = lines[a];
+                con = con.replace("DEFAULTDELAY ", "");
+                con = con.replace("DEFAULT_DELAY ", "");
+                defdelay = parseInt(con);
             }
+            //DELAY
+            else if (lines[a].startsWith("DELAY")) {
+                con = lines[a].replace("DELAY ", "");
+                int delay = parseInt(con);
+                p.waitFor(delay, TimeUnit.MILLISECONDS);
+            }
+            //REM
+            else if (lines[a].startsWith("REM")) {
+                continue;
+            }
+            //GUI or WINDOWS
+            else if (lines[a].startsWith("GUI") || lines[a].startsWith("WINDOWS")) {
+                con = lines[a];
+                con = con.replace("WINDOWS ", "");
+                con = con.replace("GUI ", "");
+                char ch = con.charAt(0);
+                dos.writeBytes("echo left-meta " + ch + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //MENU or APP
+            else if (lines[a].equals("APP") || lines[a].equals("MENU")) {
+                dos.writeBytes("echo left-shift f10 | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //SHIFT
+            else if (lines[a].startsWith("SHIFT")) {
+                con = lines[a].replace("SHIFT ","");
+                String shseq = "";
+                switch (con) {
+                    case "DELETE":
+                        shseq = "delete";
+                        break;
+                    case "HOME":
+                        shseq = "home";
+                        break;
+                    case "INSERT":
+                        shseq = "insert";
+                        break;
+                    case "PAGEUP":
+                        shseq = "pgup";
+                        break;
+                    case "PAGEDOWN":
+                        shseq = "pgdown";
+                        break;
+                    case "WINDOWS":
+                    case "GUI":
+                        shseq = "left-meta";
+                        break;
+                    case "DOWNARROW":
+                    case "DOWN":
+                        shseq = "down";
+                        break;
+                    case "UPARROW":
+                    case "UP":
+                        shseq = "up";
+                        break;
+                    case "LEFTARROW":
+                    case "LEFT":
+                        shseq = "left";
+                        break;
+                    case "RIGHTARROW":
+                    case "RIGHT":
+                        shseq = "right";
+                        break;
+                    case "TAB":
+                        shseq = "tab";
+                        break;
+                }
+                dos.writeBytes("echo left-shift "+shseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //ALT
+            else if(lines[a].startsWith("ALT")) {
+                con = lines[a].replace("ALT ","");
+                String altseq;
+                switch (con) {
+                    case "END":
+                        altseq = "end";
+                        break;
+                    case "ESC":
+                        altseq = "esc";
+                        break;
+                    case "ESCAPE":
+                        altseq = "escape";
+                        break;
+                    case "SPACE":
+                        altseq = "space";
+                        break;
+                    case "TAB":
+                        altseq = "tab";
+                        break;
+                    case "F1":
+                        altseq = "f1";
+                        break;
+                    case "F2":
+                        altseq = "f2";
+                        break;
+                    case "F3":
+                        altseq = "f3";
+                        break;
+                    case "F4":
+                        altseq = "f4";
+                        break;
+                    case "F5":
+                        altseq = "f5";
+                        break;
+                    case "F6":
+                        altseq = "f6";
+                        break;
+                    case "F7":
+                        altseq = "f7";
+                        break;
+                    case "F8":
+                        altseq = "f8";
+                        break;
+                    case "F9":
+                        altseq = "f9";
+                        break;
+                    case "F10":
+                        altseq = "f10";
+                        break;
+                    case "F11":
+                        altseq = "f11";
+                        break;
+                    case "F12":
+                        altseq = "f12";
+                        break;
+                    default:
+                        altseq = "" + con.charAt(0) + "";
+                        break;
+                }
+                dos.writeBytes("echo left-alt "+altseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //CONTROL or CTRL
+            else if (lines[a].startsWith("CONTROL") || lines[a].startsWith("CTRL")) {
+                con = lines[a];
+                con = con.replace("CONTROL ", "");
+                con = con.replace("CTRL ", "");
+                String ctrlseq;
+                switch (con) {
+                    case "PAUSE":
+                    case "BREAK":
+                        ctrlseq = "pause";
+                        break;
+                    case "F1":
+                        ctrlseq = "f1";
+                        break;
+                    case "F2":
+                        ctrlseq = "f2";
+                        break;
+                    case "F3":
+                        ctrlseq = "f3";
+                        break;
+                    case "F4":
+                        ctrlseq = "f4";
+                        break;
+                    case "F5":
+                        ctrlseq = "f5";
+                        break;
+                    case "F6":
+                        ctrlseq = "f6";
+                        break;
+                    case "F7":
+                        ctrlseq = "f7";
+                        break;
+                    case "F8":
+                        ctrlseq = "f8";
+                        break;
+                    case "F9":
+                        ctrlseq = "f9";
+                        break;
+                    case "F10":
+                        ctrlseq = "f10";
+                        break;
+                    case "F11":
+                        ctrlseq = "f11";
+                        break;
+                    case "F12":
+                        ctrlseq = "f12";
+                        break;
+                    case "ESC":
+                        ctrlseq = "esc";
+                        break;
+                    case "ESCAPE":
+                        ctrlseq = "escape";
+                        break;
+                    default:
+                        ctrlseq = "" + con.charAt(0) + "";
+                        break;
+                }
+                dos.writeBytes("echo left-ctrl "+ctrlseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //DOWNARROW or DOWN
+            else if (lines[a].startsWith("DOWNARROW") || lines[a].startsWith("DOWN")) {
+                dos.writeBytes("echo down | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //UPARROW or UP
+            else if (lines[a].startsWith("UPARROW") || lines[a].startsWith("UP")) {
+                dos.writeBytes("echo up | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //LEFTARROW or LEFT
+            else if (lines[a].startsWith("LEFTARROW") || lines[a].startsWith("LEFT")) {
+                dos.writeBytes("echo left | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //RIGHTARROW or RIGHT
+            else if (lines[a].startsWith("RIGHTARROW") || lines[a].startsWith("RIGHT")) {
+                dos.writeBytes("echo right | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //BREAK or PAUSE
+            else if (lines[a].startsWith("BREAK") || lines[a].startsWith("PAUSE")) {
+                dos.writeBytes("echo pause | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //CAPSLOCK
+            else if (lines[a].startsWith("CAPSLOCK")) {
+                dos.writeBytes("echo capslock | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //DELETE
+            else if (lines[a].startsWith("DELETE")) {
+                dos.writeBytes("echo delete | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //END
+            else if (lines[a].startsWith("END")) {
+                dos.writeBytes("echo end | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //ESC
+            else if (lines[a].startsWith("ESC")) {
+                dos.writeBytes("echo esc | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //ESCAPE
+            else if (lines[a].startsWith("ESCAPE")) {
+                dos.writeBytes("echo escape | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //HOME
+            else if (lines[a].startsWith("HOME")) {
+                dos.writeBytes("echo home | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //INSERT
+            else if (lines[a].startsWith("INSERT")) {
+                dos.writeBytes("echo insert | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //NUMLOCK
+            else if (lines[a].startsWith("NUMLOCK")) {
+                dos.writeBytes("echo numlock | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //PAGEUP
+            else if (lines[a].startsWith("PAGEUP")) {
+                dos.writeBytes("echo pgup | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //PAGEDOWN
+            else if (lines[a].startsWith("PAGEDOWN")) {
+                dos.writeBytes("echo pgdown | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //PRINTSCREEN or PRINTSCRN or PRNTSCRN or PRTSCN or PRSC or PRTSCR
+            else if (lines[a].startsWith("PRINTSCREEN") || lines[a].startsWith("PRINTSCRN") ||
+                    lines[a].startsWith("PRNTSCRN") || lines[a].startsWith("PRTSCN") ||
+                    lines[a].startsWith("PRSC") || lines[a].startsWith("PRTSCR")) {
+                dos.writeBytes("echo print | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //SCROLLLOCK
+            else if (lines[a].startsWith("SCROLLLOCK")) {
+                dos.writeBytes("echo scrolllock | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //SPACE
+            else if (lines[a].startsWith("SPACE")) {
+                dos.writeBytes("echo space | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //TAB
+            else if (lines[a].startsWith("TAB")) {
+                dos.writeBytes("echo tab | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //BACKSPACE or BKSP
+            else if (lines[a].startsWith("BACKSPACE") || lines[a].startsWith("BKSP")) {
+                dos.writeBytes("echo backspace | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
+            //REPEAT
+            else if (lines[a].startsWith("REPEAT")) {
+                con = lines[a].replace("REPEAT ","");
+                int x = parseInt(con);
+                String last = lines[a-1];
+                for(int i = 0; i < x; i++) {
+                    genScript(last);
+                }
+            }
+            //STRING
+            else if (lines[a].startsWith("STRING")) {
+                con = lines[a].replace("STRING ", "");
+                char[] ch = con.toCharArray();
+                String cha;
+                for (char aCh : ch) {
+                    cha = convert(aCh);
+                    dos.writeBytes("echo " + cha + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                    dos.flush();
+                }
+            }
+            p.waitFor(defdelay, TimeUnit.MILLISECONDS);
+        }
     }
 
     String convert(char ch) {
