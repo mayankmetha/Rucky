@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">Rucky</string>
-    <string name="baseURI" translatable="false">github.com/mayankmetha/rucky</string>
     <string name="setting_name">Settings</string>
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Dark Theme</string>
@@ -11,4 +9,6 @@
     <string name="saveBtn">Save</string>
     <string name="runBtn">Run</string>
     <string name="codeHint">Type or load rubber ducky scripts here…</string>
+    <string name="app_name">Rucky</string>
+    <string name="baseURI">github.com/mayankmetha/rucky</string>
 </resources>
