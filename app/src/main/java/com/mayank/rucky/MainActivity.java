@@ -503,6 +503,11 @@ public class MainActivity extends AppCompatActivity {
                 dos.writeBytes("echo backspace | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
                 dos.flush();
             }
+            //ENTER
+            else if (lines[a].startsWith("ENTER")) {
+                dos.writeBytes("echo enter | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.flush();
+            }
             //REPEAT
             else if (lines[a].startsWith("REPEAT")) {
                 con = lines[a].replace("REPEAT ","");
@@ -515,6 +520,7 @@ public class MainActivity extends AppCompatActivity {
             //STRING
             else if (lines[a].startsWith("STRING")) {
                 con = lines[a].replace("STRING ", "");
+                con = con.replace("\n","");
                 char[] ch = con.toCharArray();
                 String cha;
                 for (char aCh : ch) {
@@ -870,7 +876,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void permission() {
-        //SU
         try {
             p = Runtime.getRuntime().exec("su");
             dos = new DataOutputStream(p.getOutputStream());
@@ -913,66 +918,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if(!file3.exists()) {
-            final Notification.Builder uNotification = new Notification.Builder(this, CHANNEL_ID);
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Download missing file?");
-            builder.setPositiveButton("Download", new DialogInterface.OnClickListener() {
+            builder.setTitle("Dependency file missing");
+            builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                    StrictMode.setThreadPolicy(policy);
-                    final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-                    assert conMgr != null;
-                    final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
-                    if (activeNetwork != null && activeNetwork.isConnected()) {
-                        try {
-                            uNotification.setContentTitle("Downloading necessary files")
-                                    .setContentText("Please Wait...")
-                                    .setSmallIcon(R.drawable.ic_notification)
-                                    .setAutoCancel(true);
-                            getManager().notify(4,uNotification.build());
-                            @SuppressLint("SdCardPath") File file = new File("/sdcard","hid-gadget-test");
-                            InputStream is;
-                            OutputStream os = new FileOutputStream(file);
-                            URL url = new URL("https://github.com/mayankmetha/Rucky/blob/master/release/hid-gadget-test?raw=true");
-                            URLConnection urlConnection = url.openConnection();
-                            is = urlConnection.getInputStream();
-                            byte[] data = new byte[is.available()];
-                            is.read(data);
-                            os.write(data);
-                            is.close();
-                            os.close();
-                            dos.writeBytes("mv /sdcard/hid-gadget-test /data/local/tmp/\n");
-                            dos.writeBytes("chmod 755 /data/local/tmp/hid-gadget-test\n");
-                            dos.flush();
-                            getManager().cancel(4);
-                            uNotification.setContentTitle("Downloaded necessary files")
-                                    .setContentText("Enjoy...")
-                                    .setSmallIcon(R.drawable.ic_notification)
-                                    .setAutoCancel(true);
-                            getManager().notify(5,uNotification.build());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle("Network Error!");
-                        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                moveTaskToBack(true);
-                                android.os.Process.killProcess(android.os.Process.myPid());
-                                System.exit(1);
-                            }
-                        });
-                        AlertDialog fileDowload = builder.create();
-                        fileDowload.show();
-                    }
-                }
-            });
-            builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
                     moveTaskToBack(true);
                     android.os.Process.killProcess(android.os.Process.myPid());
                     System.exit(1);
