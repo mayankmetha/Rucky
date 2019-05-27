@@ -781,7 +781,7 @@ public class MainActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("Download & Install", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/blob/master/release/rucky-" + newVersion + ".apk?raw=true");
+                                Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
                                 download(dl);
                             }
                         })
