@@ -1,6 +1,8 @@
 package com.mayank.rucky;
 
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
@@ -15,6 +17,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
 
     private static final String PREF_SETTINGS = "settings";
     private static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
+    private static double currentVersion;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -31,5 +34,13 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 return true;
             }
         });
+        try {
+            PackageInfo pInfo = Objects.requireNonNull(this.getActivity()).getPackageManager().getPackageInfo(Objects.requireNonNull(this.getActivity()).getPackageName(), 0);
+            currentVersion = Double.parseDouble(pInfo.versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        Preference versionPreference = findPreference("version");
+        versionPreference.setSummary(Double.toString(currentVersion));
     }
 }

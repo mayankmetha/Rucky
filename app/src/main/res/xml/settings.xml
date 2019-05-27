@@ -24,8 +24,7 @@
         <Preference
             app:key="version"
             app:icon="@drawable/ic_version"
-            app:title="@string/settings_version_title"
-            app:summary="@string/setting_version" />
+            app:title="@string/settings_version_title" />
 
     </PreferenceCategory>
 
