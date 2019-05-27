@@ -1,7 +1,6 @@
 package com.mayank.rucky;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.Notification;
@@ -20,9 +19,10 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.StrictMode;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -41,13 +41,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -87,14 +84,17 @@ public class MainActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
-        notificationChannel.enableLights(true);
-        notificationChannel.setShowBadge(true);
-        notificationChannel.enableVibration(false);
-        notificationChannel.canBypassDnd();
-        notificationChannel.setSound(null,null);
-        notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
-        getManager().createNotificationChannel(notificationChannel);
+        NotificationChannel notificationChannel;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+            notificationChannel.enableLights(true);
+            notificationChannel.setShowBadge(true);
+            notificationChannel.enableVibration(false);
+            notificationChannel.canBypassDnd();
+            notificationChannel.setSound(null,null);
+            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
+            getManager().createNotificationChannel(notificationChannel);
+        }
         updater(0);
         Button SaveBtn = findViewById(R.id.svBtb);
         Button LoadBtn = findViewById(R.id.ldBtn);
@@ -198,20 +198,21 @@ public class MainActivity extends AppCompatActivity {
     void genScript(String str)throws Exception {
         String[] lines = str.split("\\r?\\n");
         String con;
-        int defdelay = 0;
+        float defdelay = 0;
         for (int a = 0; a < lines.length; a++) {
             //DEFAULTDELAY or DEFAULT_DELAY
             if (a == 0 && (lines[a].startsWith("DEFAULTDELAY") || lines[a].startsWith("DEFAULT_DELAY"))) {
                 con = lines[a];
                 con = con.replace("DEFAULTDELAY ", "");
                 con = con.replace("DEFAULT_DELAY ", "");
-                defdelay = parseInt(con);
+                defdelay = parseInt(con)/1000;
             }
             //DELAY
             else if (lines[a].startsWith("DELAY")) {
                 con = lines[a].replace("DELAY ", "");
-                int delay = parseInt(con);
-                p.waitFor(delay, TimeUnit.MILLISECONDS);
+                float delay = parseInt(con)/1000;
+                dos.writeBytes("sleep "+delay+"\n");
+                dos.flush();
             }
             //REM
             else if (lines[a].startsWith("REM")) {
@@ -223,12 +224,12 @@ public class MainActivity extends AppCompatActivity {
                 con = con.replace("WINDOWS ", "");
                 con = con.replace("GUI ", "");
                 char ch = con.charAt(0);
-                dos.writeBytes("echo left-meta " + ch + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo left-meta " + ch + " | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //MENU or APP
             else if (lines[a].equals("APP") || lines[a].equals("MENU")) {
-                dos.writeBytes("echo left-shift f10 | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo left-shift f10 | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //SHIFT
@@ -275,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
                         shseq = "tab";
                         break;
                 }
-                dos.writeBytes("echo left-shift "+shseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo left-shift "+shseq+" | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ALT
@@ -338,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
                         altseq = "" + con.charAt(0) + "";
                         break;
                 }
-                dos.writeBytes("echo left-alt "+altseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo left-alt "+altseq+" | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //CONTROL or CTRL
@@ -398,114 +399,114 @@ public class MainActivity extends AppCompatActivity {
                         ctrlseq = "" + con.charAt(0) + "";
                         break;
                 }
-                dos.writeBytes("echo left-ctrl "+ctrlseq+" | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo left-ctrl "+ctrlseq+" | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //DOWNARROW or DOWN
             else if (lines[a].startsWith("DOWNARROW") || lines[a].startsWith("DOWN")) {
-                dos.writeBytes("echo down | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo down | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //UPARROW or UP
             else if (lines[a].startsWith("UPARROW") || lines[a].startsWith("UP")) {
-                dos.writeBytes("echo up | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo up | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //LEFTARROW or LEFT
             else if (lines[a].startsWith("LEFTARROW") || lines[a].startsWith("LEFT")) {
-                dos.writeBytes("echo left | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo left | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //RIGHTARROW or RIGHT
             else if (lines[a].startsWith("RIGHTARROW") || lines[a].startsWith("RIGHT")) {
-                dos.writeBytes("echo right | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo right | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //BREAK or PAUSE
             else if (lines[a].startsWith("BREAK") || lines[a].startsWith("PAUSE")) {
-                dos.writeBytes("echo pause | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo pause | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //CAPSLOCK
             else if (lines[a].startsWith("CAPSLOCK")) {
-                dos.writeBytes("echo capslock | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo capslock | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //DELETE
             else if (lines[a].startsWith("DELETE")) {
-                dos.writeBytes("echo delete | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo delete | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //END
             else if (lines[a].startsWith("END")) {
-                dos.writeBytes("echo end | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo end | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ESC
             else if (lines[a].startsWith("ESC")) {
-                dos.writeBytes("echo esc | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo esc | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ESCAPE
             else if (lines[a].startsWith("ESCAPE")) {
-                dos.writeBytes("echo escape | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo escape | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //HOME
             else if (lines[a].startsWith("HOME")) {
-                dos.writeBytes("echo home | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo home | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //INSERT
             else if (lines[a].startsWith("INSERT")) {
-                dos.writeBytes("echo insert | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo insert | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //NUMLOCK
             else if (lines[a].startsWith("NUMLOCK")) {
-                dos.writeBytes("echo numlock | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo numlock | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //PAGEUP
             else if (lines[a].startsWith("PAGEUP")) {
-                dos.writeBytes("echo pgup | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo pgup | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //PAGEDOWN
             else if (lines[a].startsWith("PAGEDOWN")) {
-                dos.writeBytes("echo pgdown | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo pgdown | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //PRINTSCREEN or PRINTSCRN or PRNTSCRN or PRTSCN or PRSC or PRTSCR
             else if (lines[a].startsWith("PRINTSCREEN") || lines[a].startsWith("PRINTSCRN") ||
                     lines[a].startsWith("PRNTSCRN") || lines[a].startsWith("PRTSCN") ||
                     lines[a].startsWith("PRSC") || lines[a].startsWith("PRTSCR")) {
-                dos.writeBytes("echo print | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo print | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //SCROLLLOCK
             else if (lines[a].startsWith("SCROLLLOCK")) {
-                dos.writeBytes("echo scrolllock | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo scrolllock | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //SPACE
             else if (lines[a].startsWith("SPACE")) {
-                dos.writeBytes("echo space | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo space | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //TAB
             else if (lines[a].startsWith("TAB")) {
-                dos.writeBytes("echo tab | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo tab | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //BACKSPACE or BKSP
             else if (lines[a].startsWith("BACKSPACE") || lines[a].startsWith("BKSP")) {
-                dos.writeBytes("echo backspace | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo backspace | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ENTER
             else if (lines[a].startsWith("ENTER")) {
-                dos.writeBytes("echo enter | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                dos.writeBytes("echo enter | hid-keyboard /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //REPEAT
@@ -520,16 +521,17 @@ public class MainActivity extends AppCompatActivity {
             //STRING
             else if (lines[a].startsWith("STRING")) {
                 con = lines[a].replace("STRING ", "");
-                con = con.replace("\n","");
+                con = con.replace("\n", "");
                 char[] ch = con.toCharArray();
                 String cha;
                 for (char aCh : ch) {
                     cha = convert(aCh);
-                    dos.writeBytes("echo " + cha + " | /data/local/tmp/hid-gadget-test /dev/hidg0 keyboard > /dev/null\n");
+                    dos.writeBytes("echo " + cha + " | hid-keyboard /dev/hidg0 keyboard\n");
                     dos.flush();
                 }
             }
-            p.waitFor(defdelay, TimeUnit.MILLISECONDS);
+            dos.writeBytes("sleep "+defdelay+"\n");
+            dos.flush();
         }
     }
 
@@ -702,7 +704,12 @@ public class MainActivity extends AppCompatActivity {
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
-                Notification.Builder updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                Notification.Builder updateNotify;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                } else {
+                    updateNotify = new Notification.Builder(this);
+                }
                 updateNotify.setContentTitle("Checking for update")
                         .setContentText("Please Wait...")
                         .setSmallIcon(R.drawable.ic_notification)
@@ -891,10 +898,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void supportedFiles() {
         String pathDev = "/dev";
-        String pathTmp = "/data/local/tmp";
+        String pathTmp = "/system/xbin";
         File file1 = new File(pathDev,"hidg0");
         File file2 = new File(pathDev,"hidg1");
-        File file3 = new File(pathTmp,"hid-gadget-test");
+        File file3 = new File(pathTmp,"hid-keyboard");
         if(!file1.exists() && !file2.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Kernel Not Supported!");
@@ -932,7 +939,6 @@ public class MainActivity extends AppCompatActivity {
             fileMissing.show();
         } else {
             try {
-                dos.writeBytes("chmod 755 /data/local/tmp/hid-gadget-test\n");
                 dos.flush();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -942,15 +948,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case STORAGE_PERM:
-                if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //do nothing
-                    break;
-                } else {
-                    permission();
-                }
-                break;
+        if (requestCode == STORAGE_PERM) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //do nothing
+            } else {
+                permission();
+            }
         }
     }
 }

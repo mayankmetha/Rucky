@@ -37,9 +37,10 @@
             android:layout_above="@id/BtnGrp"
             android:layout_alignParentTop="true"
             android:ems="10"
+            android:gravity="start"
+            android:hint="@string/codeHint"
             android:inputType="textMultiLine"
             android:lines="25"
-            android:hint="@string/codeHint"
             android:padding="5dp" />
 
         <LinearLayout
