@@ -22,18 +22,18 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -46,7 +46,6 @@ import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 
 import static java.lang.Integer.parseInt;
 
@@ -96,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
             getManager().createNotificationChannel(notificationChannel);
         }
         updater(0);
-        Button SaveBtn = findViewById(R.id.svBtb);
-        Button LoadBtn = findViewById(R.id.ldBtn);
-        Button ExeBtn = findViewById(R.id.exBtn);
+        ImageButton SaveBtn = findViewById(R.id.svBtb);
+        ImageButton LoadBtn = findViewById(R.id.ldBtn);
+        ImageButton ExeBtn = findViewById(R.id.exBtn);
         SaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -205,12 +204,12 @@ public class MainActivity extends AppCompatActivity {
                 con = lines[a];
                 con = con.replace("DEFAULTDELAY ", "");
                 con = con.replace("DEFAULT_DELAY ", "");
-                defdelay = parseInt(con)/1000;
+                defdelay = Float.parseFloat(con)/1000;
             }
             //DELAY
             else if (lines[a].startsWith("DELAY")) {
                 con = lines[a].replace("DELAY ", "");
-                float delay = parseInt(con)/1000;
+                float delay = Float.parseFloat(con)/1000;
                 dos.writeBytes("sleep "+delay+"\n");
                 dos.flush();
             }
@@ -947,11 +946,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == STORAGE_PERM) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                //do nothing
-            } else {
+            if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                 permission();
             }
         }

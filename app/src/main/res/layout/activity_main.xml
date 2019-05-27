@@ -8,13 +8,13 @@
     android:orientation="vertical"
     tools:context="com.mayank.rucky.MainActivity">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppThemeBase.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarMain"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/AppThemeBase.PopupOverlay" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -36,44 +36,73 @@
             android:layout_height="match_parent"
             android:layout_above="@id/BtnGrp"
             android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:ems="10"
             android:gravity="start"
             android:hint="@string/codeHint"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:lines="25"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            tools:targetApi="o" />
 
         <LinearLayout
             android:id="@+id/BtnGrp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:gravity="bottom|end"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
 
-            <Button
+            <ImageButton
                 android:id="@+id/ldBtn"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                style="?android:attr/buttonBarButtonStyle"
-                android:text="@string/loadBtn" />
+                app:srcCompat="@drawable/ic_load"
+                android:text="@string/loadBtn"
+                android:contentDescription="@string/loadBtn" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/svBtb"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                style="?android:attr/buttonBarButtonStyle"
-                android:text="@string/saveBtn" />
+                app:srcCompat="@drawable/ic_save"
+                android:text="@string/saveBtn"
+                android:contentDescription="@string/saveBtn" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/exBtn"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                style="?android:attr/buttonBarButtonStyle"
-                android:text="@string/runBtn" />
+                app:srcCompat="@drawable/ic_run"
+                android:text="@string/runBtn"
+                android:contentDescription="@string/runBtn" />
 
         </LinearLayout>
 

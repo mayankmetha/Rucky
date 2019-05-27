@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:key="settings"
+        app:title="@string/setting_general">
+
+        <SwitchPreferenceCompat
+            app:key="theme"
+            app:icon="@drawable/ic_dark"
+            app:title="@string/dark_theme_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="summary"
+        app:title="@string/setting_about">
+
+        <Preference
+            app:key="developer"
+            app:icon="@drawable/ic_developer"
+            app:title="@string/setting_developer_title"
+            app:summary="@string/setting_developer" />
+
+        <Preference
+            app:key="version"
+            app:icon="@drawable/ic_version"
+            app:title="@string/settings_version_title"
+            app:summary="@string/setting_version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
