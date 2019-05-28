@@ -8,7 +8,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
-        versionName "1.1"
+        versionName "1.2"
     }
     buildTypes {
         release {
@@ -22,7 +22,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             android.applicationVariants.all { variant ->
                 variant.outputs.all {
-                    outputFileName = "rucky-${variant.versionName}.apk"
+                    outputFileName = "rucky.apk"
                 }
             }
         }
@@ -37,4 +37,5 @@ dependencies {
     implementation 'androidx.preference:preference:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.android.support:preference-v7'
+    api 'com.google.guava:guava:27.1-android'
 }

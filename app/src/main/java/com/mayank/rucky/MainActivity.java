@@ -22,18 +22,21 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+
+import com.google.common.hash.Hashing;
+import com.google.common.io.Files;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -46,6 +49,8 @@ import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Objects;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import static java.lang.Integer.parseInt;
 
@@ -63,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager notificationManager;
     Process p;
     DataOutputStream dos;
+    public static String getSHA512;
+    public static String genSHA512;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -714,7 +721,7 @@ public class MainActivity extends AppCompatActivity {
                         .setSmallIcon(R.drawable.ic_notification)
                         .setAutoCancel(true);
                 getManager().notify(3,updateNotify.build());
-                URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/version");
+                URL url = new URL("https://github.com/mayankmetha/Rucky/releases/latest");
                 new fetchVersion().execute(url);
                 getManager().cancel(3);
             } catch (MalformedURLException e) {
@@ -738,34 +745,28 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        Thread.sleep(5000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
         }
 
         @Override
         protected String doInBackground(URL... urls) {
             String str = "";
             try {
-                BufferedReader in = new BufferedReader(new InputStreamReader(urls[0].openStream()));
-                str = in.readLine();
-                in.close();
+                HttpsURLConnection conn = (HttpsURLConnection) urls[0].openConnection();
+                conn.getInputStream();
+                str = ""+conn.getURL()+"";
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return str;
+            return str.substring(str.lastIndexOf('/')+1);
         }
 
         @Override
         protected void onPostExecute(String result) {
-            newVersion = Double.parseDouble(result);
+            if(result.isEmpty()){
+                newVersion = currentVersion;
+            } else {
+                newVersion = Double.parseDouble(result);
+            }
         }
     }
 
@@ -820,6 +821,7 @@ public class MainActivity extends AppCompatActivity {
                 alert.show();
             }
         }
+        getDownloadHash();
     }
 
     void download(Uri uri) {
@@ -865,11 +867,103 @@ public class MainActivity extends AppCompatActivity {
                 dlStatus = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
                 long refId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
                 if (refId == downloadRef && dlStatus == DownloadManager.STATUS_SUCCESSFUL) {
-                    installUpdate();
+                    generateHash();
                 }
             }
         }
     };
+
+    void getDownloadHash() {
+        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert conMgr != null;
+        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnected()) {
+            try {
+                Notification.Builder updateNotify;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                } else {
+                    updateNotify = new Notification.Builder(this);
+                }
+                updateNotify.setContentTitle("Verifying update")
+                        .setContentText("Please Wait...")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true);
+                getManager().notify(3,updateNotify.build());
+                URL url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
+                new fetchHash().execute(url);
+                getManager().cancel(3);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        } else {
+            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+            alertBuilder.setMessage("Please check the network connection")
+                    .setCancelable(false)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                        }
+                    });
+            AlertDialog alert = alertBuilder.create();
+            alert.show();
+        }
+    }
+
+    private static class fetchHash extends AsyncTask<URL, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+        }
+
+        @Override
+        protected String doInBackground(URL... urls) {
+            String str = "";
+            try {
+                BufferedReader in = new BufferedReader(new InputStreamReader(urls[0].openStream()));
+                str = in.readLine();
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            getSHA512 = result;
+        }
+    }
+
+    void generateHash() {
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
+        try {
+            genSHA512 = Files.asByteSource(file).hash(Hashing.sha512()).toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(getSHA512.equals(genSHA512)) {
+            installUpdate();
+        } else {
+            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+            alertBuilder.setMessage("Update file corrupted!")
+                    .setCancelable(false)
+                    .setPositiveButton("RETRY AGAIN", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
+                            download(dl);
+                        }
+                    })
+                    .setNegativeButton("TRY LATER", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    });
+            AlertDialog alert = alertBuilder.create();
+            alert.show();
+        }
+    }
 
     void installUpdate() {
         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");

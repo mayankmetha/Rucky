@@ -1,17 +1,11 @@
 package com.mayank.rucky;
 
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import android.preference.SwitchPreference;
-import android.view.MenuItem;
-import android.widget.CompoundButton;
-import android.widget.Switch;
-import android.widget.TextView;
 
 public class SettingsActivity extends AppCompatActivity {
 
