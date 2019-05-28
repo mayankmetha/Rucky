@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
             notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
             getManager().createNotificationChannel(notificationChannel);
         }
-        updater(0);
         ImageButton SaveBtn = findViewById(R.id.svBtb);
         ImageButton LoadBtn = findViewById(R.id.ldBtn);
         ImageButton ExeBtn = findViewById(R.id.exBtn);
