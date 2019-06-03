@@ -3,7 +3,7 @@
     <string name="baseURI" translatable="false">github.com/mayankmetha/rucky</string>
 
     <string name="setting_general">General</string>
-    <string name="dark_theme_title">Dark Theme</string>
+    <string name="dark_theme_title">Dark Mode</string>
 
     <string name="setting_about">About</string>
     <string name="setting_developer_title">Developer</string>
@@ -23,7 +23,7 @@
     <string name="skip">SKIP</string>
     <string name="start">HACK</string>
 
-    <string name="slideTitle1">Rucky</string>
+    <string name="slideTitle1" translatable="false">Rucky</string>
     <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
 
     <string name="slideTitle2">Executor</string>
@@ -35,7 +35,7 @@
     <string name="slideTitle4">Dumper</string>
     <string name="slideDesc4">Load the Rubber Ducky Scripts you saved!</string>
 
-    <string name="icon">icon</string>
+    <string name="icon" translatable="false">icon</string>
 
     <string name="splashScreen" translatable="false">RUCKY</string>
 </resources>
