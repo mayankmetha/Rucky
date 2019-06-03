@@ -24,15 +24,12 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         final SharedPreferences settings = Objects.requireNonNull(this.getActivity()).getSharedPreferences(PREF_SETTINGS,MODE_PRIVATE);
         setPreferencesFromResource(R.xml.settings, rootKey);
         final SwitchPreferenceCompat darkThemeSwitch = (SwitchPreferenceCompat) findPreference("theme");
-        darkThemeSwitch.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putBoolean(PREF_SETTINGS_DARK_THEME,switched).apply();
-                MainActivity.didThemeChange = true;
-                return true;
-            }
+        darkThemeSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(PREF_SETTINGS_DARK_THEME,switched).apply();
+            MainActivity.didThemeChange = true;
+            return true;
         });
         try {
             PackageInfo pInfo = Objects.requireNonNull(this.getActivity()).getPackageManager().getPackageInfo(Objects.requireNonNull(this.getActivity()).getPackageName(), 0);

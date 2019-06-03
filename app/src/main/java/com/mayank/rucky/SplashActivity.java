@@ -30,12 +30,7 @@ public class SplashActivity extends AppCompatActivity {
         TextView l2= findViewById(R.id.splashTextView);
         l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                launchNext();
-            }
-        }, 5000);
+        new Handler().postDelayed(this::launchNext, 5000);
     }
 
     void theme() {

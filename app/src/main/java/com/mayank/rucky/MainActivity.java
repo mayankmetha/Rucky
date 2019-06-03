@@ -8,7 +8,6 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -24,7 +23,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -104,93 +102,74 @@ public class MainActivity extends AppCompatActivity {
         ImageButton SaveBtn = findViewById(R.id.svBtb);
         ImageButton LoadBtn = findViewById(R.id.ldBtn);
         ImageButton ExeBtn = findViewById(R.id.exBtn);
-        SaveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("File Name");
-                final EditText fileName = new EditText(MainActivity.this);
-                builder.setView(fileName);
-                builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        EditText scripts = findViewById(R.id.code);
-                        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString());
-                        String content = scripts.getText().toString();
-                        FileOutputStream outputStream;
-                        OutputStreamWriter outputStreamWriter;
-                        try {
-                            outputStream = new FileOutputStream(file);
-                            outputStreamWriter = new OutputStreamWriter(outputStream);
-                            outputStreamWriter.write(content);
-                            outputStreamWriter.close();
-                            outputStream.close();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                builder.show();
-            }
-        });
-        LoadBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final File[] files = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
-                CharSequence[] fileName = new CharSequence[files.length];
-                for (int i = 0; i < files.length; i++) {
-                    fileName[i] = files[i].getName();
-                }
-                AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Select File");
-                builder.setItems(fileName, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int i) {
-                        EditText scripts = findViewById(R.id.code);
-                        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files[i].getName());
-                        FileInputStream inputStream;
-                        InputStreamReader inputStreamReader;
-                        BufferedReader bufferedReader;
-                        StringBuilder stringBuilder;
-                        String str;
-                        try {
-                            inputStream = new FileInputStream(file);
-                            inputStreamReader = new InputStreamReader(inputStream);
-                            bufferedReader = new BufferedReader(inputStreamReader);
-                            stringBuilder = new StringBuilder();
-                            while((str = bufferedReader.readLine()) != null) {
-                                stringBuilder.append(str).append("\n");
-                            }
-                            str = stringBuilder.toString();
-                            scripts.setText(str);
-                            bufferedReader.close();
-                            inputStreamReader.close();
-                            inputStream.close();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-                builder.show();
-            }
-        });
-        ExeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        SaveBtn.setOnClickListener(view -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("File Name");
+            final EditText fileName = new EditText(MainActivity.this);
+            builder.setView(fileName);
+            builder.setPositiveButton("Save", (dialog, which) -> {
                 EditText scripts = findViewById(R.id.code);
+                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString());
+                String content = scripts.getText().toString();
+                FileOutputStream outputStream;
+                OutputStreamWriter outputStreamWriter;
                 try {
-                    genScript(scripts.getText().toString());
+                    outputStream = new FileOutputStream(file);
+                    outputStreamWriter = new OutputStreamWriter(outputStream);
+                    outputStreamWriter.write(content);
+                    outputStreamWriter.close();
+                    outputStream.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            });
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
+            builder.show();
+        });
+        LoadBtn.setOnClickListener(view -> {
+            final File[] files = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
+            CharSequence[] fileName = new CharSequence[files.length];
+            for (int i = 0; i < files.length; i++) {
+                fileName[i] = files[i].getName();
+            }
+            AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Select File");
+            builder.setItems(fileName, (dialog, i) -> {
+                EditText scripts = findViewById(R.id.code);
+                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files[i].getName());
+                FileInputStream inputStream;
+                InputStreamReader inputStreamReader;
+                BufferedReader bufferedReader;
+                StringBuilder stringBuilder;
+                String str;
+                try {
+                    inputStream = new FileInputStream(file);
+                    inputStreamReader = new InputStreamReader(inputStream);
+                    bufferedReader = new BufferedReader(inputStreamReader);
+                    stringBuilder = new StringBuilder();
+                    while((str = bufferedReader.readLine()) != null) {
+                        stringBuilder.append(str).append("\n");
+                    }
+                    str = stringBuilder.toString();
+                    scripts.setText(str);
+                    bufferedReader.close();
+                    inputStreamReader.close();
+                    inputStream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            builder.show();
+        });
+        ExeBtn.setOnClickListener(view -> {
+            EditText scripts = findViewById(R.id.code);
+            try {
+                genScript(scripts.getText().toString());
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
+        updater(0);
     }
 
     private NotificationManager getManager() {
@@ -730,10 +709,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setMessage("Please check the network connection")
                     .setCancelable(false)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                        }
+                    .setPositiveButton("OK", (dialogInterface, i) -> {
                     });
             AlertDialog alert = alertBuilder.create();
             alert.show();
@@ -779,15 +755,12 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage("New update available. Want do update now?")
                         .setCancelable(false)
-                        .setPositiveButton("Download & Install", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
-                                download(dl);
-                            }
+                        .setPositiveButton("Download & Install", (dialog, id) -> {
+                            getDownloadHash();
+                            Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
+                            download(dl);
                         })
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                            }
+                        .setNegativeButton("Cancel", (dialog, id) -> {
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
@@ -796,10 +769,7 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                     alertBuilder.setMessage("No update found")
                             .setCancelable(false)
-                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                }
+                            .setPositiveButton("OK", (dialogInterface, i) -> {
                             });
                     AlertDialog alert = alertBuilder.create();
                     alert.show();
@@ -810,27 +780,20 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                 alertBuilder.setMessage("Please check the network connection")
                         .setCancelable(false)
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
+                        .setPositiveButton("OK", (dialogInterface, i) -> {
 
-                            }
                         });
                 AlertDialog alert = alertBuilder.create();
                 alert.show();
             }
         }
-        getDownloadHash();
     }
 
     void download(Uri uri) {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setMessage("Please leave the app open till install screen starts")
                 .setCancelable(false)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                    }
+                .setPositiveButton("OK", (dialogInterface, i) -> {
                 });
         AlertDialog alert = alertBuilder.create();
         alert.show();
@@ -899,10 +862,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setMessage("Please check the network connection")
                     .setCancelable(false)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                        }
+                    .setPositiveButton("OK", (dialogInterface, i) -> {
                     });
             AlertDialog alert = alertBuilder.create();
             alert.show();
@@ -947,17 +907,11 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setMessage("Update file corrupted!")
                     .setCancelable(false)
-                    .setPositiveButton("RETRY AGAIN", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
-                            download(dl);
-                        }
+                    .setPositiveButton("RETRY AGAIN", (dialogInterface, i) -> {
+                        Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
+                        download(dl);
                     })
-                    .setNegativeButton("TRY LATER", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                        }
+                    .setNegativeButton("TRY LATER", (dialog, which) -> {
                     });
             AlertDialog alert = alertBuilder.create();
             alert.show();
@@ -997,13 +951,10 @@ public class MainActivity extends AppCompatActivity {
         if(!file1.exists() && !file2.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Kernel Not Supported!");
-            builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    moveTaskToBack(true);
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                    System.exit(1);
-                }
+            builder.setPositiveButton("Exit", (dialog, which) -> {
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
             });
             AlertDialog kernelExit = builder.create();
             kernelExit.show();
@@ -1019,13 +970,10 @@ public class MainActivity extends AppCompatActivity {
         if(!file3.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Dependency file missing");
-            builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    moveTaskToBack(true);
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                    System.exit(1);
-                }
+            builder.setPositiveButton("Exit", (dialog, which) -> {
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
             });
             AlertDialog fileMissing = builder.create();
             fileMissing.show();
