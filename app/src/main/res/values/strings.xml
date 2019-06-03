@@ -1,16 +1,41 @@
 <resources>
     <string name="app_name" translatable="false">Rucky</string>
     <string name="baseURI" translatable="false">github.com/mayankmetha/rucky</string>
-    <string name="setting_name">Settings</string>
+
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Dark Theme</string>
-    <string name="setting_developer_title">Developer</string>
-    <string name="setting_developer">Mayank Metha D</string>
-    <string name="settings_version_title">Version</string>
+
     <string name="setting_about">About</string>
+    <string name="setting_developer_title">Developer</string>
+    <string name="setting_developer" translatable="false">Mayank Metha D</string>
+    <string name="settings_version_title">Version</string>
+
+    <string name="setting_name">Settings</string>
     <string name="update_name">Update</string>
+
     <string name="loadBtn">Load</string>
     <string name="saveBtn">Save</string>
     <string name="runBtn">Run</string>
+
     <string name="codeHint">Type or load rubber ducky scripts here…</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">HACK</string>
+
+    <string name="slideTitle1">Rucky</string>
+    <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
+
+    <string name="slideTitle2">Executor</string>
+    <string name="slideDesc2">This will execute the Rubber Ducky Script!</string>
+
+    <string name="slideTitle3">Floppy</string>
+    <string name="slideDesc3">Save your Rubber Ducky Scripts for later!</string>
+
+    <string name="slideTitle4">Dumper</string>
+    <string name="slideDesc4">Load the Rubber Ducky Scripts you saved!</string>
+
+    <string name="icon">icon</string>
+
+    <string name="splashScreen" translatable="false">RUCKY</string>
 </resources>

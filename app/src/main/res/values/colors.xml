@@ -4,8 +4,29 @@
     <color name="primary_dark">#00796b</color>
     <color name="primary_light">#b2dfdb</color>
     <color name="accent">#ff5722</color>
-    <color name="pri_dark">#212121</color>
-    <color name="sec_dark">#757575</color>
+    <color name="pri_dark">#000000</color>
+    <color name="sec_dark">#212121</color>
     <color name="pri_light">#ffffff</color>
     <color name="sec_light">#bdbdbd</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen">@color/primary</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen">@color/accent</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+    </array>
+
 </resources>

@@ -4,10 +4,11 @@
     package="com.mayank.rucky">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.FACTORY_TEST"
+    <uses-permission
+        android:name="android.permission.FACTORY_TEST"
         tools:ignore="ProtectedPermissions" />
 
     <application
@@ -17,6 +18,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
+
         <receiver android:name=".SecretCodeReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
@@ -34,10 +36,12 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,6 +52,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="@string/baseURI"
                     android:pathPrefix="/"
@@ -66,6 +71,11 @@
                     android:pathPrefix="/"
                     android:scheme="https" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".InitActivity">
+        </activity>
+        <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".SettingsActivity" />
     </application>
