@@ -22,7 +22,7 @@
             android:scaleY="1.0"
             android:scrollbarAlwaysDrawHorizontalTrack="false"
             android:scrollbarAlwaysDrawVerticalTrack="false"
-            app:srcCompat="@drawable/ic_launcher_background_round" />
+            app:srcCompat="@drawable/splash_background" />
 
         <ImageView
             android:id="@+id/imageViewFG"
@@ -34,7 +34,7 @@
             android:scaleY="1.5"
             android:scrollbarAlwaysDrawHorizontalTrack="false"
             android:scrollbarAlwaysDrawVerticalTrack="false"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            app:srcCompat="@drawable/splash_foreground" />
     </FrameLayout>
 
     <TextView

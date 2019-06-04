@@ -20,9 +20,9 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
-        SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, false);
+        SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
         init = settings.getBoolean(PREF_SETTINGS_INIT,true);
-        theme();
+        setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         setContentView(R.layout.activity_splash);
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
@@ -31,13 +31,6 @@ public class SplashActivity extends AppCompatActivity {
         l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
         new Handler().postDelayed(this::launchNext, 5000);
-    }
-
-    void theme() {
-        if (SettingsActivity.darkTheme) setTheme(R.style.FullscreenThemeDark);
-        else {
-            setTheme(R.style.FullscreenThemeLight);
-        }
     }
 
     void launchNext() {

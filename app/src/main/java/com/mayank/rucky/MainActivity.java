@@ -73,10 +73,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
         super.onCreate(savedInstanceState);
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
-        SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, false);
-        theme();
+        SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
+        setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbarMain);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.accent));
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
             permission();
@@ -652,12 +653,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume()throws NullPointerException {
         super.onResume();
-        theme();
         if (didThemeChange) {
             didThemeChange = false;
-            Intent intent = getIntent();
             finish();
-            startActivity(intent);
+            startActivity(getIntent());
         }
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
         registerReceiver(downloadBR, filter);
@@ -673,13 +672,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-    }
-
-    void theme() {
-        if (SettingsActivity.darkTheme) setTheme(R.style.AppThemeDark);
-        else {
-            setTheme(R.style.AppThemeLight);
-        }
     }
 
     void checkUpdate()throws NullPointerException {

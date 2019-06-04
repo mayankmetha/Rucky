@@ -7,6 +7,7 @@
         <SwitchPreferenceCompat
             app:key="theme"
             app:icon="@drawable/ic_dark"
+            app:defaultValue="true"
             app:title="@string/dark_theme_title" />
 
     </PreferenceCategory>

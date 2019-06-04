@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#009688</color>
-    <color name="primary_dark">#00796b</color>
-    <color name="primary_light">#b2dfdb</color>
     <color name="accent">#ff5722</color>
     <color name="pri_dark">#000000</color>
     <color name="sec_dark">#212121</color>
@@ -10,7 +7,7 @@
     <color name="sec_light">#bdbdbd</color>
 
     <!-- dots inactive colors -->
-    <color name="dot_dark_screen">@color/primary</color>
+    <color name="dot_dark_screen">@color/pri_light</color>
 
     <!-- dots active colors -->
     <color name="dot_light_screen">@color/accent</color>

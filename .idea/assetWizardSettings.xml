@@ -64,9 +64,12 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="00796b" />
+                                      <entry key="backgroundColor" value="ff5722" />
+                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
                                       <entry key="foregroundImage" value="$PROJECT_DIR$/app/src/main/animal.svg" />
+                                      <entry key="foregroundLayerName" value="ic_launcher_foreground_dark" />
                                       <entry key="legacyIconShape" value="CIRCLE" />
+                                      <entry key="outputName" value="ic_launcher_dark" />
                                       <entry key="webIconShape" value="CIRCLE" />
                                     </map>
                                   </option>

@@ -29,6 +29,8 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean(PREF_SETTINGS_DARK_THEME,switched).apply();
             MainActivity.didThemeChange = true;
+            getActivity().finish();
+            startActivity(getActivity().getIntent());
             return true;
         });
         try {

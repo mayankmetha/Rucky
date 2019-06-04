@@ -1,71 +1,46 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Base application theme -->
-    <style name="AppThemeBase" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primary_dark</item>
-        <item name="colorAccent">@color/accent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="AppThemeBase.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppThemeBase.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
     <!-- Light Theme -->
-    <style name="AppThemeLight" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:colorBackground">@color/pri_light</item>
         <item name="android:colorForeground">@color/sec_light</item>
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primary_dark</item>
-        <item name="colorAccent">@color/accent</item>
-        <item name="android:navigationBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/primary_dark
-        </item>
-        <item name="android:statusBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/primary_dark
-        </item>
+        <item name="colorPrimary">@color/pri_light</item>
+        <item name="colorPrimaryDark">@color/sec_light</item>
         <item name="android:textColorPrimary">@color/pri_dark</item>
         <item name="android:textColorPrimaryInverse">@color/sec_light</item>
         <item name="android:textColorSecondary">@color/sec_dark</item>
         <item name="android:textColorSecondaryInverse">@color/pri_light</item>
         <item name="android:windowBackground">@color/pri_light</item>
+        <item name="android:navigationBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
+            @color/pri_dark
+        </item>
+        <item name="android:statusBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
+            @color/pri_dark
+        </item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <!-- Dark Theme -->
-    <style name="AppThemeDark" parent="Theme.AppCompat">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
         <item name="android:colorBackground">@color/pri_dark</item>
         <item name="android:colorForeground">@color/sec_dark</item>
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primary_dark</item>
-        <item name="colorAccent">@color/accent</item>
-        <item name="android:navigationBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/primary_dark
-        </item>
+        <item name="colorPrimary">@color/pri_dark</item>
+        <item name="colorPrimaryDark">@color/sec_dark</item>
         <item name="android:textColorPrimary">@color/pri_light</item>
         <item name="android:textColorPrimaryInverse">@color/sec_dark</item>
         <item name="android:textColorSecondary">@color/sec_light</item>
         <item name="android:textColorSecondaryInverse">@color/pri_dark</item>
-        <item name="android:statusBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/primary_dark
+        <item name="android:windowBackground">@color/pri_dark</item>
+        <item name="android:navigationBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
+            @color/pri_dark
         </item>
-        <item name="android:windowBackground">@color/pri_dark</item>
-    </style>
-
-    <!-- Splash screen theme -->
-    <style name="FullscreenThemeBase" parent="Theme.AppCompat.Light.NoActionBar" />
-
-    <style name="FullscreenThemeDark" parent="FullscreenThemeBase">
-        <item name="android:windowBackground">@color/pri_dark</item>
-    </style>
-
-    <style name="FullscreenThemeLight" parent="FullscreenThemeBase">
-        <item name="android:windowBackground">@color/pri_light</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
+            @color/pri_dark
+        </item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>
