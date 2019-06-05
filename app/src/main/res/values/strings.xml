@@ -4,6 +4,9 @@
 
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Dark Mode</string>
+    <string name="dark_theme_summary">Will not preserve home screen shortcut.</string>
+    <string name="hide_icon_title">Hide Launcher Icon</string>
+    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch.</string>
 
     <string name="setting_about">About</string>
     <string name="setting_developer_title">Developer</string>

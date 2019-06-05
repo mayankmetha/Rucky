@@ -8,7 +8,15 @@
             app:key="theme"
             app:icon="@drawable/ic_dark"
             app:defaultValue="true"
-            app:title="@string/dark_theme_title" />
+            app:title="@string/dark_theme_title"
+            app:summary="@string/dark_theme_summary" />
+
+        <SwitchPreferenceCompat
+            app:key="icon"
+            app:icon="@drawable/ic_launch"
+            app:defaultValue="false"
+            app:title="@string/hide_icon_title"
+            app:summary="@string/hide_icon_summary" />
 
     </PreferenceCategory>
 
