@@ -66,8 +66,10 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager notificationManager;
     Process p;
     DataOutputStream dos;
+    BufferedReader dis;
     public static String getSHA512;
     public static String genSHA512;
+    static private Boolean root = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -108,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setTitle("File Name");
             final EditText fileName = new EditText(MainActivity.this);
             builder.setView(fileName);
+            builder.setCancelable(false);
             builder.setPositiveButton("Save", (dialog, which) -> {
                 EditText scripts = findViewById(R.id.code);
                 File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString());
@@ -135,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
             }
             AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Select File");
+            builder.setCancelable(false);
             builder.setItems(fileName, (dialog, i) -> {
                 EditText scripts = findViewById(R.id.code);
                 File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files[i].getName());
@@ -160,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             });
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
             builder.show();
         });
         ExeBtn.setOnClickListener(view -> {
@@ -921,16 +926,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void permission() {
-        try {
-            p = Runtime.getRuntime().exec("su");
-            dos = new DataOutputStream(p.getOutputStream());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         //STORAGE
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
                 || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERM);
+        }
+        //ROOT
+        try {
+            p = Runtime.getRuntime().exec("su");
+            dos = new DataOutputStream(p.getOutputStream());
+            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            if(dos != null) {
+                dos.writeBytes("id\n");
+                dos.flush();
+                String rootCheck = dis.readLine();
+                if(rootCheck.contains("uid=0")) root = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if(!root) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Root Access Required!");
+            builder.setCancelable(false);
+            builder.setPositiveButton("Exit", (dialog, which) -> {
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
+            });
+            AlertDialog rootExit = builder.create();
+            rootExit.show();
         }
     }
 
@@ -943,6 +968,7 @@ public class MainActivity extends AppCompatActivity {
         if(!file1.exists() && !file2.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Kernel Not Supported!");
+            builder.setCancelable(false);
             builder.setPositiveButton("Exit", (dialog, which) -> {
                 moveTaskToBack(true);
                 android.os.Process.killProcess(android.os.Process.myPid());
@@ -962,6 +988,7 @@ public class MainActivity extends AppCompatActivity {
         if(!file3.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Dependency file missing");
+            builder.setCancelable(false);
             builder.setPositiveButton("Exit", (dialog, which) -> {
                 moveTaskToBack(true);
                 android.os.Process.killProcess(android.os.Process.myPid());
