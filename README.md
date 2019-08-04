@@ -5,4 +5,10 @@ A simple rubber ducky attack apk
 
 ## REQUIREMENTS
 1) Android KitKat onwards
-2) Kali Nethunter Support
+2) Supported Architecture
+
+## ARCHITECTURE
+- armeabi-v7a
+- arm64-v8a
+- x86
+- x86_64
