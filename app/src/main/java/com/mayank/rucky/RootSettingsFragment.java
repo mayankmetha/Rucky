@@ -86,10 +86,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference versionPreference = findPreference("version");
         assert versionPreference != null;
         versionPreference.setSummary(Double.toString(currentVersion));
-        String currentArch;
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
-            currentArch = Build.SUPPORTED_ABIS[0];
-        else currentArch = Build.CPU_ABI;
+        String currentArch = Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP?Build.SUPPORTED_ABIS[0]:Build.CPU_ABI;
         Preference archPreference = findPreference("arch");
         assert archPreference != null;
         archPreference.setSummary(currentArch);

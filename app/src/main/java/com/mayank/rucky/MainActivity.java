@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
     BufferedReader dis;
     public static String getSHA512;
     public static String genSHA512;
-    static private Boolean root = false;
-    static private String libPath = null;
+    private Boolean root = false;
+    static private int downloadId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -84,7 +84,20 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
             permission();
-            supportedFiles();
+            if(root) {
+                supportedFiles();
+            } else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Root Access Required!");
+                builder.setCancelable(false);
+                builder.setNegativeButton("Exit", ((dialog, which) -> {
+                    moveTaskToBack(true);
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                    System.exit(1);
+                }));
+                AlertDialog rootMissing = builder.create();
+                rootMissing.show();
+            }
         }
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
@@ -757,6 +770,7 @@ public class MainActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("Download & Install", (dialog, id) -> {
                             getDownloadHash();
+                            downloadId = 1;
                             Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
                             download(dl);
                         })
@@ -829,7 +843,8 @@ public class MainActivity extends AppCompatActivity {
                 dlStatus = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
                 long refId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
                 if (refId == downloadRef && dlStatus == DownloadManager.STATUS_SUCCESSFUL) {
-                    generateHash();
+                    if(downloadId == 1) generateHash();
+                    else if(downloadId == 2) generateDependencyHash();
                 }
             }
         }
@@ -907,11 +922,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setMessage("Update file corrupted!")
                     .setCancelable(false)
-                    .setPositiveButton("RETRY AGAIN", (dialogInterface, i) -> {
-                        Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
-                        download(dl);
-                    })
-                    .setNegativeButton("TRY LATER", (dialog, which) -> {
+                    .setNegativeButton("TRY AGAIN LATER", (dialog, which) -> {
                     });
             AlertDialog alert = alertBuilder.create();
             alert.show();
@@ -945,20 +956,8 @@ public class MainActivity extends AppCompatActivity {
                 String rootCheck = dis.readLine();
                 if(rootCheck.contains("uid=0")) root = true;
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
-        }
-        if(!root) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Root Access Required!");
-            builder.setCancelable(false);
-            builder.setPositiveButton("Exit", (dialog, which) -> {
-                moveTaskToBack(true);
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(1);
-            });
-            AlertDialog rootExit = builder.create();
-            rootExit.show();
         }
     }
 
@@ -992,11 +991,18 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Dependency file missing");
             builder.setCancelable(false);
-            builder.setPositiveButton("Exit", (dialog, which) -> {
+            builder.setPositiveButton("Download & Install", (dialog, which) -> {
+                String arch = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ? Build.SUPPORTED_ABIS[0] : Build.CPU_ABI;
+                downloadDependenciesHash(arch);
+                downloadId = 2;
+                Uri dl = Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/" + arch + "/rucky-hid");
+                downloadDependencies(dl);
+            });
+            builder.setNegativeButton("Exit", ((dialog, which) -> {
                 moveTaskToBack(true);
                 android.os.Process.killProcess(android.os.Process.myPid());
                 System.exit(1);
-            });
+            }));
             AlertDialog fileMissing = builder.create();
             fileMissing.show();
         } else {
@@ -1014,6 +1020,101 @@ public class MainActivity extends AppCompatActivity {
             if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                 permission();
             }
+        }
+    }
+
+    private void downloadDependenciesHash(String arch) {
+        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert conMgr != null;
+        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnected()) {
+            try {
+                Notification.Builder updateNotify;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                } else {
+                    updateNotify = new Notification.Builder(this);
+                }
+                updateNotify.setContentTitle("Verifying dependencies")
+                        .setContentText("Please Wait...")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true);
+                getManager().notify(4,updateNotify.build());
+                URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/"+arch+"/rucky-hid.sha512");
+                new fetchHash().execute(url);
+                getManager().cancel(4);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        } else {
+            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+            alertBuilder.setMessage("Please check the network connection")
+                    .setCancelable(false)
+                    .setPositiveButton("OK", (dialogInterface, i) -> {
+                    });
+            AlertDialog alert = alertBuilder.create();
+            alert.show();
+        }
+    }
+
+    private void downloadDependencies(Uri uri) {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+        alertBuilder.setMessage("Please leave the app open")
+                .setCancelable(false)
+                .setPositiveButton("OK", (dialogInterface, i) -> {
+                });
+        AlertDialog alert = alertBuilder.create();
+        alert.show();
+        File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
+        if (fDel.exists()) {
+            fDel.delete();
+        }
+        downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+        DownloadManager.Request req = new DownloadManager.Request(uri);
+        req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
+        req.setAllowedOverRoaming(true);
+        req.setTitle("rucky-hid");
+        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"/rucky-hid");
+        req.setVisibleInDownloadsUi(true);
+        DownloadManager.Query q = new DownloadManager.Query();
+        q.setFilterById(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL | DownloadManager.STATUS_PAUSED | DownloadManager.STATUS_PENDING | DownloadManager.STATUS_RUNNING);
+        Cursor c = downloadManager.query(q);
+        while (c.moveToNext()) {
+            downloadManager.remove(c.getLong(c.getColumnIndex(DownloadManager.COLUMN_ID)));
+        }
+        downloadRef = downloadManager.enqueue(req);
+        IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+        registerReceiver(downloadBR, filter);
+    }
+
+    void generateDependencyHash() {
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
+        try {
+            genSHA512 = Files.asByteSource(file).hash(Hashing.sha512()).toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(getSHA512.equals(genSHA512)) {
+            installDependency();
+        } else {
+            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+            alertBuilder.setMessage("Dependency file corrupted!")
+                    .setCancelable(false)
+                    .setNegativeButton("TRY AGAIN LATER", (dialog, which) -> {
+                    });
+            AlertDialog alert = alertBuilder.create();
+            alert.show();
+        }
+    }
+
+    private void installDependency() {
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
+        String path = file.getAbsolutePath();
+        try {
+            dos.writeBytes("mv "+path+" /data/local/tmp/rucky-hid;chmod 755 /data/local/tmp/rucky-hid\n");
+            dos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
