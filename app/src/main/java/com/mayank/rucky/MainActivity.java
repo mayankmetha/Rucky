@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     public static String getSHA512;
     public static String genSHA512;
     static private Boolean root = false;
+    static private String libPath = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -178,6 +179,8 @@ public class MainActivity extends AppCompatActivity {
         updater(0);
     }
 
+
+
     private NotificationManager getManager() {
         if (notificationManager == null) {
             notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -214,12 +217,12 @@ public class MainActivity extends AppCompatActivity {
                 con = con.replace("WINDOWS ", "");
                 con = con.replace("GUI ", "");
                 char ch = con.charAt(0);
-                dos.writeBytes("echo left-meta " + ch + " | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo left-meta " + ch + " | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //MENU or APP
             else if (lines[a].equals("APP") || lines[a].equals("MENU")) {
-                dos.writeBytes("echo left-shift f10 | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo left-shift f10 | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //SHIFT
@@ -266,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
                         shseq = "tab";
                         break;
                 }
-                dos.writeBytes("echo left-shift "+shseq+" | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo left-shift "+shseq+" | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ALT
@@ -329,7 +332,7 @@ public class MainActivity extends AppCompatActivity {
                         altseq = "" + con.charAt(0) + "";
                         break;
                 }
-                dos.writeBytes("echo left-alt "+altseq+" | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo left-alt "+altseq+" | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //CONTROL or CTRL
@@ -389,114 +392,114 @@ public class MainActivity extends AppCompatActivity {
                         ctrlseq = "" + con.charAt(0) + "";
                         break;
                 }
-                dos.writeBytes("echo left-ctrl "+ctrlseq+" | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo left-ctrl "+ctrlseq+" | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //DOWNARROW or DOWN
             else if (lines[a].startsWith("DOWNARROW") || lines[a].startsWith("DOWN")) {
-                dos.writeBytes("echo down | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo down | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //UPARROW or UP
             else if (lines[a].startsWith("UPARROW") || lines[a].startsWith("UP")) {
-                dos.writeBytes("echo up | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo up | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //LEFTARROW or LEFT
             else if (lines[a].startsWith("LEFTARROW") || lines[a].startsWith("LEFT")) {
-                dos.writeBytes("echo left | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo left | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //RIGHTARROW or RIGHT
             else if (lines[a].startsWith("RIGHTARROW") || lines[a].startsWith("RIGHT")) {
-                dos.writeBytes("echo right | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo right | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //BREAK or PAUSE
             else if (lines[a].startsWith("BREAK") || lines[a].startsWith("PAUSE")) {
-                dos.writeBytes("echo pause | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo pause | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //CAPSLOCK
             else if (lines[a].startsWith("CAPSLOCK")) {
-                dos.writeBytes("echo capslock | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo capslock | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //DELETE
             else if (lines[a].startsWith("DELETE")) {
-                dos.writeBytes("echo delete | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo delete | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //END
             else if (lines[a].startsWith("END")) {
-                dos.writeBytes("echo end | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo end | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ESC
             else if (lines[a].startsWith("ESC")) {
-                dos.writeBytes("echo esc | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo esc | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ESCAPE
             else if (lines[a].startsWith("ESCAPE")) {
-                dos.writeBytes("echo escape | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo escape | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //HOME
             else if (lines[a].startsWith("HOME")) {
-                dos.writeBytes("echo home | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo home | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //INSERT
             else if (lines[a].startsWith("INSERT")) {
-                dos.writeBytes("echo insert | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo insert | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //NUMLOCK
             else if (lines[a].startsWith("NUMLOCK")) {
-                dos.writeBytes("echo numlock | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo numlock | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //PAGEUP
             else if (lines[a].startsWith("PAGEUP")) {
-                dos.writeBytes("echo pgup | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo pgup | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //PAGEDOWN
             else if (lines[a].startsWith("PAGEDOWN")) {
-                dos.writeBytes("echo pgdown | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo pgdown | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //PRINTSCREEN or PRINTSCRN or PRNTSCRN or PRTSCN or PRSC or PRTSCR
             else if (lines[a].startsWith("PRINTSCREEN") || lines[a].startsWith("PRINTSCRN") ||
                     lines[a].startsWith("PRNTSCRN") || lines[a].startsWith("PRTSCN") ||
                     lines[a].startsWith("PRSC") || lines[a].startsWith("PRTSCR")) {
-                dos.writeBytes("echo print | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo print | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //SCROLLLOCK
             else if (lines[a].startsWith("SCROLLLOCK")) {
-                dos.writeBytes("echo scrolllock | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo scrolllock | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //SPACE
             else if (lines[a].startsWith("SPACE")) {
-                dos.writeBytes("echo space | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo space | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //TAB
             else if (lines[a].startsWith("TAB")) {
-                dos.writeBytes("echo tab | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo tab | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //BACKSPACE or BKSP
             else if (lines[a].startsWith("BACKSPACE") || lines[a].startsWith("BKSP")) {
-                dos.writeBytes("echo backspace | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo backspace | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //ENTER
             else if (lines[a].startsWith("ENTER")) {
-                dos.writeBytes("echo enter | hid-keyboard /dev/hidg0 keyboard\n");
+                dos.writeBytes("echo enter | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                 dos.flush();
             }
             //REPEAT
@@ -516,7 +519,7 @@ public class MainActivity extends AppCompatActivity {
                 String cha;
                 for (char aCh : ch) {
                     cha = convert(aCh);
-                    dos.writeBytes("echo " + cha + " | hid-keyboard /dev/hidg0 keyboard\n");
+                    dos.writeBytes("echo " + cha + " | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
                     dos.flush();
                 }
             }
@@ -961,10 +964,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void supportedFiles() {
         String pathDev = "/dev";
-        String pathTmp = "/system/xbin";
+        String pathTmp = "/data/local/tmp";
         File file1 = new File(pathDev,"hidg0");
         File file2 = new File(pathDev,"hidg1");
-        File file3 = new File(pathTmp,"hid-keyboard");
+        File file3 = new File(pathTmp,"rucky-hid");
         if(!file1.exists() && !file2.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Kernel Not Supported!");

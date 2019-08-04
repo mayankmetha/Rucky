@@ -21,13 +21,13 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
     private static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
     private static final String PREF_SETTINGS_LAUNCH_ICON = "launchIcon";
     private static double currentVersion;
-    private static String currentArch;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         final SharedPreferences settings = Objects.requireNonNull(this.getActivity()).getSharedPreferences(PREF_SETTINGS,MODE_PRIVATE);
         setPreferencesFromResource(R.xml.settings, rootKey);
-        final SwitchPreferenceCompat darkThemeSwitch = (SwitchPreferenceCompat) findPreference("theme");
+        final SwitchPreferenceCompat darkThemeSwitch = findPreference("theme");
+        assert darkThemeSwitch != null;
         darkThemeSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
             SharedPreferences.Editor editor = settings.edit();
@@ -50,7 +50,8 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(getActivity().getIntent());
             return true;
         });
-        final SwitchPreferenceCompat launchIconSwitch = (SwitchPreferenceCompat) findPreference("icon");
+        final SwitchPreferenceCompat launchIconSwitch = findPreference("icon");
+        assert launchIconSwitch != null;
         launchIconSwitch.setOnPreferenceChangeListener(((preference, newValue) -> {
             boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
             SharedPreferences.Editor editor = settings.edit();
@@ -83,13 +84,14 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             e.printStackTrace();
         }
         Preference versionPreference = findPreference("version");
+        assert versionPreference != null;
         versionPreference.setSummary(Double.toString(currentVersion));
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+        String currentArch;
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
             currentArch = Build.SUPPORTED_ABIS[0];
-        } else {
-            currentArch = Build.CPU_ABI;
-        }
+        else currentArch = Build.CPU_ABI;
         Preference archPreference = findPreference("arch");
+        assert archPreference != null;
         archPreference.setSummary(currentArch);
     }
 }
