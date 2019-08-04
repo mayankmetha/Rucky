@@ -29,11 +29,22 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="clipartAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="url" value="jar:file:/private/var/folders/8m/1g490d9d7_93vpfbyv3s5jw40000gn/T/AppTranslocation/930DB815-0937-401B-8A32-AB40166F1C04/d/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/hardware/ic_developer_board_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                     </map>
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_action_load" />
+                                      <entry key="outputName" value="ic_arch" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="ff5722" />
                                     </map>
@@ -76,8 +87,6 @@
                                     <map>
                                       <entry key="backgroundLayerName" value="ic_launcher_dummy" />
                                       <entry key="foregroundImage" value="$PROJECT_DIR$/app/src/main/animal.svg" />
-                                      <entry key="legacyIconShape" value="NONE" />
-                                      <entry key="webIconShape" value="NONE" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -164,6 +173,11 @@
                                 </PersistentState>
                               </value>
                             </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>

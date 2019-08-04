@@ -35,6 +35,11 @@
             app:icon="@drawable/ic_version"
             app:title="@string/settings_version_title" />
 
+        <Preference
+            app:key="arch"
+            app:icon="@drawable/ic_arch"
+            app:title="@string/settings_arch_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

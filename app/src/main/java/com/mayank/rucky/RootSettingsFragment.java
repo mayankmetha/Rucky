@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
@@ -20,6 +21,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
     private static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
     private static final String PREF_SETTINGS_LAUNCH_ICON = "launchIcon";
     private static double currentVersion;
+    private static String currentArch;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -82,5 +84,12 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         }
         Preference versionPreference = findPreference("version");
         versionPreference.setSummary(Double.toString(currentVersion));
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+            currentArch = Build.SUPPORTED_ABIS[0];
+        } else {
+            currentArch = Build.CPU_ABI;
+        }
+        Preference archPreference = findPreference("arch");
+        archPreference.setSummary(currentArch);
     }
 }

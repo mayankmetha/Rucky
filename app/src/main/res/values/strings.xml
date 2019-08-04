@@ -8,10 +8,11 @@
     <string name="hide_icon_title">Hide Launcher Icon</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* to launch.</string>
 
-    <string name="setting_about">About</string>
+    <string name="setting_about">Info</string>
     <string name="setting_developer_title">Developer</string>
     <string name="setting_developer" translatable="false">Mayank Metha D</string>
     <string name="settings_version_title">Version</string>
+    <string name="settings_arch_title">Architecture</string>
 
     <string name="setting_name">Settings</string>
     <string name="update_name">Update</string>
