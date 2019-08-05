@@ -13,6 +13,8 @@
     <string name="setting_developer" translatable="false">Mayank Metha D</string>
     <string name="settings_version_title">Version</string>
     <string name="settings_arch_title">Architecture</string>
+    <string name="settings_lic_title">License</string>
+    <string name="setting_lic_desc">MIT License</string>
 
     <string name="setting_name">Settings</string>
     <string name="update_name">Update</string>

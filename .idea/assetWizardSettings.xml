@@ -203,7 +203,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/private/var/folders/8m/1g490d9d7_93vpfbyv3s5jw40000gn/T/AppTranslocation/41C75965-B8A2-42AD-A8AD-03731120CF26/d/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_launch_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/private/var/folders/8m/1g490d9d7_93vpfbyv3s5jw40000gn/T/AppTranslocation/4B22C026-F30F-4946-A669-8015E75F7C39/d/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/hardware/ic_security_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -214,7 +214,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ff5722" />
-                            <entry key="outputName" value="ic_launch" />
+                            <entry key="outputName" value="ic_licence" />
                             <entry key="sourceFile" value="$PROJECT_DIR$/app/src/main/animal.svg" />
                           </map>
                         </option>

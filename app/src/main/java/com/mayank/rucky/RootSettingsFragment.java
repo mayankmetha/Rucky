@@ -1,9 +1,11 @@
 package com.mayank.rucky;
 
 import android.content.ComponentName;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -83,6 +85,14 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+        Preference developerPreference = findPreference("developer");
+        assert developerPreference != null;
+        developerPreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://mayankmetha.github.io"));
+            startActivity(intent);
+            return true;
+        });
         Preference versionPreference = findPreference("version");
         assert versionPreference != null;
         versionPreference.setSummary(Double.toString(currentVersion));
@@ -90,5 +100,13 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference archPreference = findPreference("arch");
         assert archPreference != null;
         archPreference.setSummary(currentArch);
+        Preference licencePreference = findPreference("lic");
+        assert licencePreference != null;
+        licencePreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/LICENSE"));
+            startActivity(intent);
+            return true;
+        });
     }
 }

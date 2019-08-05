@@ -40,6 +40,12 @@
             app:icon="@drawable/ic_arch"
             app:title="@string/settings_arch_title" />
 
+        <Preference
+            app:key="lic"
+            app:icon="@drawable/ic_license"
+            app:title="@string/settings_lic_title"
+            app:summary="@string/setting_lic_desc" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
