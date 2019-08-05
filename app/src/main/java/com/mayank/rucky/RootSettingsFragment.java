@@ -100,6 +100,15 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference archPreference = findPreference("arch");
         assert archPreference != null;
         archPreference.setSummary(currentArch);
+        Preference distributionPreference = findPreference("source");
+        assert distributionPreference != null;
+        distributionPreference.setSummary("GitHub Release");
+        distributionPreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://github.com/mayankmetha/Rucky/releases/latest"));
+            startActivity(intent);
+            return true;
+        });
         Preference licencePreference = findPreference("lic");
         assert licencePreference != null;
         licencePreference.setOnPreferenceClickListener(preference -> {
