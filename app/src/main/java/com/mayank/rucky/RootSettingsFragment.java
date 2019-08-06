@@ -26,6 +26,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+
         final SharedPreferences settings = Objects.requireNonNull(this.getActivity()).getSharedPreferences(PREF_SETTINGS,MODE_PRIVATE);
         setPreferencesFromResource(R.xml.settings, rootKey);
         final SwitchPreferenceCompat darkThemeSwitch = findPreference("theme");
@@ -52,6 +53,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(getActivity().getIntent());
             return true;
         });
+
         final SwitchPreferenceCompat launchIconSwitch = findPreference("icon");
         assert launchIconSwitch != null;
         launchIconSwitch.setOnPreferenceChangeListener(((preference, newValue) -> {
@@ -79,12 +81,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(getActivity().getIntent());
             return true;
         }));
-        try {
-            PackageInfo pInfo = Objects.requireNonNull(this.getActivity()).getPackageManager().getPackageInfo(Objects.requireNonNull(this.getActivity()).getPackageName(), 0);
-            currentVersion = Double.parseDouble(pInfo.versionName);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
+
         Preference developerPreference = findPreference("developer");
         assert developerPreference != null;
         developerPreference.setOnPreferenceClickListener(preference -> {
@@ -93,22 +90,34 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(intent);
             return true;
         });
+
         Preference versionPreference = findPreference("version");
         assert versionPreference != null;
+        try {
+            PackageInfo pInfo = Objects.requireNonNull(this.getActivity()).getPackageManager().getPackageInfo(Objects.requireNonNull(this.getActivity()).getPackageName(), 0);
+            currentVersion = Double.parseDouble(pInfo.versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
         versionPreference.setSummary(Double.toString(currentVersion));
+
         String currentArch = Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP?Build.SUPPORTED_ABIS[0]:Build.CPU_ABI;
         Preference archPreference = findPreference("arch");
         assert archPreference != null;
         archPreference.setSummary(currentArch);
+
         Preference distributionPreference = findPreference("source");
         assert distributionPreference != null;
-        distributionPreference.setSummary("GitHub Release");
-        distributionPreference.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://github.com/mayankmetha/Rucky/releases/latest"));
-            startActivity(intent);
-            return true;
-        });
+        distributionPreference.setSummary(MainActivity.distro);
+        if(MainActivity.distro == R.string.releaseGitHub || MainActivity.distro == R.string.releaseTest) {
+            distributionPreference.setOnPreferenceClickListener(preference -> {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://github.com/mayankmetha/Rucky/releases/latest"));
+                startActivity(intent);
+                return true;
+            });
+        }
+
         Preference licencePreference = findPreference("lic");
         assert licencePreference != null;
         licencePreference.setOnPreferenceClickListener(preference -> {

@@ -44,4 +44,9 @@
     <string name="icon" translatable="false">icon</string>
 
     <string name="splashScreen" translatable="false">RUCKY</string>
+
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Non Supported Release</string>
 </resources>

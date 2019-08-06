@@ -1,9 +1,14 @@
 package com.mayank.rucky;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Base64;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -11,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.security.MessageDigest;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -34,6 +41,7 @@ public class SplashActivity extends AppCompatActivity {
         l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
         new Handler().postDelayed(this::launchNext, 5000);
+        getSignature();
     }
 
     void launchNext() {
@@ -43,6 +51,36 @@ public class SplashActivity extends AppCompatActivity {
         } else {
             startActivity(new Intent(SplashActivity.this, InitActivity.class));
             finish();
+        }
+    }
+
+    void getSignature() {
+        String NetHunter = "Fr3kIMwYhByAjtQM2hi+Zb8QJnzdvVej+P6j7o01PbY=";
+        String GitHub = "0Xv/I6xP6Q1wKbIqCgXi4CafhKZtOZLOR575TiqN93s=";
+        String debug = "zb2SIJ2H4C4ZUV6zGrGHgJiOnGzJBdxeA3rZomYZfcY=";
+        String hash = "";
+        try {
+            @SuppressLint("PackageManagerGetSignatures") PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA256");
+                md.update(signature.toByteArray());
+                hash = new String(Base64.encode(md.digest(), 0));
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+        if(hash.trim().equals(NetHunter)) {
+            MainActivity.distro = R.string.releaseNetHunter;
+            MainActivity.updateEnable = false;
+        } else if(hash.trim().equals(GitHub)) {
+            MainActivity.distro = R.string.releaseGitHub;
+            MainActivity.updateEnable = true;
+        } else if(hash.trim().equals(debug)) {
+            MainActivity.distro = R.string.releaseTest;
+            MainActivity.updateEnable = true;
+        } else {
+            MainActivity.distro = R.string.releaseOthers;
+            MainActivity.updateEnable = false;
         }
     }
 }

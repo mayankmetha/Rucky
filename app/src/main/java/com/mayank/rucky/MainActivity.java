@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
     public static String genSHA512;
     private Boolean root = false;
     static private int downloadId = 0;
+    public static int distro = 0;
+    public static boolean updateEnable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+
         NotificationChannel notificationChannel;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
@@ -189,7 +192,8 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         });
-        updater(0);
+        if (updateEnable)
+            updater(0);
     }
 
 
@@ -653,20 +657,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        if(updateEnable)
+            getMenuInflater().inflate(R.menu.menu_main, menu);
+        else
+            getMenuInflater().inflate(R.menu.menu_noupdate,menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.Setting:
-                Intent intent = new Intent(this, SettingsActivity.class);
-                this.startActivity(intent);
-                break;
-            case R.id.Update:
-                updater(1);
-                break;
+        if (item.getItemId() == R.id.Setting) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            this.startActivity(intent);
+        } else if (item.getItemId() == R.id.Update && updateEnable) {
+            updater(1);
         }
         return true;
     }
@@ -681,7 +685,8 @@ public class MainActivity extends AppCompatActivity {
         }
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
         registerReceiver(downloadBR, filter);
-        updater(0);
+        if(updateEnable)
+            updater(0);
     }
 
     @Override
