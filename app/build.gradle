@@ -7,7 +7,7 @@ android {
         applicationId "com.mayank.rucky"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 1
+        versionCode 15
         versionName "1.5"
     }
     buildTypes {
