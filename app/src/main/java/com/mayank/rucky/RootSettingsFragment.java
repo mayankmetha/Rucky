@@ -126,5 +126,15 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(intent);
             return true;
         });
+
+        Preference localePreference = findPreference("locale");
+        assert localePreference != null;
+        localePreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://mayankmetha.github.io/Rucky/"));
+            startActivity(intent);
+            return true;
+        });
+
     }
 }
