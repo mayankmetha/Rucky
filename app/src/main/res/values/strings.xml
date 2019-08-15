@@ -14,7 +14,9 @@
     <string name="settings_version_title">Version</string>
     <string name="settings_arch_title">Architecture</string>
     <string name="settings_lic_title">License</string>
-    <string name="setting_lic_desc" translatable="false">MIT</string>
+    <string name="settings_lic_desc" translatable="false">MIT</string>
+    <string name="settings_locale_title">Localization</string>
+    <string name="settings_locale_desc">Click to view localization contributors</string>
 
     <string name="setting_name">Settings</string>
     <string name="update_name">Update</string>
@@ -32,13 +34,13 @@
     <string name="slideTitle1" translatable="false">Rucky</string>
     <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
 
-    <string name="slideTitle2">Executor</string>
+    <string name="slideTitle2" translatable="false">Executor</string>
     <string name="slideDesc2">This will execute the Rubber Ducky Script!</string>
 
-    <string name="slideTitle3">Floppy</string>
+    <string name="slideTitle3" translatable="false">Floppy</string>
     <string name="slideDesc3">Save your Rubber Ducky Scripts for later!</string>
 
-    <string name="slideTitle4">Dumper</string>
+    <string name="slideTitle4" translatable="false">Dumper</string>
     <string name="slideDesc4">Load the Rubber Ducky Scripts you saved!</string>
 
     <string name="icon" translatable="false">icon</string>
