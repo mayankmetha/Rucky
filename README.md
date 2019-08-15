@@ -12,3 +12,11 @@ A simple rubber ducky attack apk
 - arm64-v8a
 - x86
 - x86_64
+
+## LOCALIZATION
+
+|--LANGUAGE--|--TRANSLATOR--|
+|--en--|--Mayank Metha D--|
+|--en-rGB--|--Mayank Metha D--|
+|--en-rIN--|--Mayank Metha D--|
+|--en-rUS--|--Mayank Metha D--|
