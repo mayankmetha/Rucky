@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -23,6 +22,8 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
     private static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
     private static final String PREF_SETTINGS_LAUNCH_ICON = "launchIcon";
     private static double currentVersion;
+    private static String webViewID = "WEBVIEW_URL";
+    private static String activityTitle = "WEBVIEW_TITLE";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -85,8 +86,9 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference developerPreference = findPreference("developer");
         assert developerPreference != null;
         developerPreference.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("http://mayankmetha.github.io"));
+            Intent intent = new Intent(getActivity(), BrowserActivity.class);
+            intent.putExtra(activityTitle, "Developer");
+            intent.putExtra(webViewID, "http://mayankmetha.github.io");
             startActivity(intent);
             return true;
         });
@@ -111,8 +113,9 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         distributionPreference.setSummary(MainActivity.distro);
         if(MainActivity.distro == R.string.releaseGitHub || MainActivity.distro == R.string.releaseTest) {
             distributionPreference.setOnPreferenceClickListener(preference -> {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://github.com/mayankmetha/Rucky/releases/latest"));
+                Intent intent = new Intent(getActivity(), BrowserActivity.class);
+                intent.putExtra(activityTitle, "GitHub Release");
+                intent.putExtra(webViewID, "https://github.com/mayankmetha/Rucky/releases/latest");
                 startActivity(intent);
                 return true;
             });
@@ -121,8 +124,9 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference licencePreference = findPreference("lic");
         assert licencePreference != null;
         licencePreference.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/LICENSE"));
+            Intent intent = new Intent(getActivity(), BrowserActivity.class);
+            intent.putExtra(activityTitle, "License");
+            intent.putExtra(webViewID, "https://raw.githubusercontent.com/mayankmetha/Rucky/master/LICENSE");
             startActivity(intent);
             return true;
         });
@@ -130,8 +134,9 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference localePreference = findPreference("locale");
         assert localePreference != null;
         localePreference.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://mayankmetha.github.io/Rucky/"));
+            Intent intent = new Intent(getActivity(), BrowserActivity.class);
+            intent.putExtra(activityTitle, "Localization");
+            intent.putExtra(webViewID, "https://mayankmetha.github.io/Rucky/");
             startActivity(intent);
             return true;
         });
