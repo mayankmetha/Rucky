@@ -1,6 +1,6 @@
 ---
 name: issue template
-about: Describe this issue here.
+about: Describe issue.
 title: ''
 labels: ''
 assignees: mayankmetha
