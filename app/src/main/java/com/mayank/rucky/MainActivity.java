@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String CHANNEL_NAME = "Update";
     private NotificationManager notificationManager;
     Process p;
-    DataOutputStream dos;
-    BufferedReader dis;
+    public static DataOutputStream dos;
+    public static BufferedReader dis;
     public static String getSHA512;
     public static String genSHA512;
     private Boolean root = false;
@@ -936,7 +936,7 @@ public class MainActivity extends AppCompatActivity {
 
     void installUpdate() {
         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
-        Intent installer = new Intent(Intent.ACTION_VIEW);
+        Intent installer = new Intent(Intent.ACTION_INSTALL_PACKAGE);
         installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         Uri apkUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
         installer.setDataAndType(apkUri, "application/vnd.android.package-archive");

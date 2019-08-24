@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -12,6 +13,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
+import java.io.IOException;
 import java.util.Objects;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -82,6 +84,24 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(getActivity().getIntent());
             return true;
         }));
+
+        Preference depPreference = findPreference("uninstall");
+        assert depPreference != null;
+        depPreference.setOnPreferenceClickListener(preference -> {
+            try {
+                MainActivity.dos.writeBytes("rm -rf /data/local/tmp/rucky-hid\n");
+                MainActivity.dos.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Intent intent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setData(Uri.parse("package:com.mayank.rucky"));
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            getActivity().finish();
+            startActivity(intent);
+            return true;
+        });
 
         Preference developerPreference = findPreference("developer");
         assert developerPreference != null;

@@ -203,7 +203,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/private/var/folders/8m/1g490d9d7_93vpfbyv3s5jw40000gn/T/AppTranslocation/22820E41-CA80-4D60-94BD-73A52C50A8B7/d/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_g_translate_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/private/var/folders/8m/1g490d9d7_93vpfbyv3s5jw40000gn/T/AppTranslocation/FC4BCD5B-BB4D-496F-A54C-0AFD89595C2C/d/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_delete_sweep_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -214,7 +214,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ff5722" />
-                            <entry key="outputName" value="ic_localize" />
+                            <entry key="outputName" value="ic_delete" />
                             <entry key="sourceFile" value="$PROJECT_DIR$/app/src/main/animal.svg" />
                           </map>
                         </option>
