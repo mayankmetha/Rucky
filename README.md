@@ -1,9 +1,9 @@
-# Rucky
+# Rucky 
+[![GitHub](https://img.shields.io/github/license/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/blob/master/LICENSE) 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest) 
+[![Crowdin](https://badges.crowdin.net/rucky/localized.svg)](https://mayankmetha.github.io/Rucky/)
+
 A simple rubber ducky attack apk
-
-[Download](https://github.com/mayankmetha/Rucky/releases/latest)
-
-[Localization Contributors](https://mayankmetha.github.io/Rucky/)
 
 ## REQUIREMENTS
 1) Android KitKat onwards
