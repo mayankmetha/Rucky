@@ -1070,7 +1070,14 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog alert = alertBuilder.create();
         alert.show();
-        File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
+        String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid";
+        try {
+            dos.writeChars("rm -rf "+path+"\n");
+            dos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File fDel = new File(path);
         if (fDel.exists()) {
             fDel.delete();
         }
