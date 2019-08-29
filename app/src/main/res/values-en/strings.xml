@@ -6,6 +6,8 @@
     <string name="dark_theme_summary">Will not preserve home screen shortcut.</string>
     <string name="hide_icon_title">Hide Launcher Icon</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* to launch.</string>
+    <string name="delete_dep_title">Uninstall App</string>
+    <string name="delete_dep_summary">Clean up and uninstall app.</string>
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">Developer</string>
     <string name="settings_version_title">Version</string>
