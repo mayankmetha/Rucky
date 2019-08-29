@@ -21,6 +21,8 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.SystemClock;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     static private int downloadId = 0;
     public static int distro = 0;
     public static boolean updateEnable = false;
+    private static AlertDialog waitDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -149,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
         });
         LoadBtn.setOnClickListener(view -> {
             final File[] files = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
+            assert files != null;
             CharSequence[] fileName = new CharSequence[files.length];
             for (int i = 0; i < files.length; i++) {
                 fileName[i] = files[i].getName();
@@ -775,7 +779,6 @@ public class MainActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("Download & Install", (dialog, id) -> {
                             getDownloadHash();
-                            downloadId = 1;
                             Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
                             download(dl);
                         })
@@ -811,11 +814,9 @@ public class MainActivity extends AppCompatActivity {
     void download(Uri uri) {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setMessage("Please leave the app open till install screen starts")
-                .setCancelable(false)
-                .setPositiveButton("OK", (dialogInterface, i) -> {
-                });
-        AlertDialog alert = alertBuilder.create();
-        alert.show();
+                .setCancelable(false);
+        waitDialog = alertBuilder.create();
+        waitDialog.show();
         File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
         if (fDel.exists()) {
             fDel.delete();
@@ -835,6 +836,7 @@ public class MainActivity extends AppCompatActivity {
         }
         downloadRef = downloadManager.enqueue(req);
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+        downloadId = 1;
         registerReceiver(downloadBR, filter);
     }
 
@@ -848,6 +850,8 @@ public class MainActivity extends AppCompatActivity {
                 dlStatus = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
                 long refId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
                 if (refId == downloadRef && dlStatus == DownloadManager.STATUS_SUCCESSFUL) {
+                    SystemClock.sleep(5000);
+                    waitDialog.dismiss();
                     if(downloadId == 1) generateHash();
                     else if(downloadId == 2) generateDependencyHash();
                 }
@@ -905,12 +909,12 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            getSHA512 = str;
             return str;
         }
 
         @Override
         protected void onPostExecute(String result) {
-            getSHA512 = result;
         }
     }
 
@@ -999,7 +1003,6 @@ public class MainActivity extends AppCompatActivity {
             builder.setPositiveButton("Download & Install", (dialog, which) -> {
                 String arch = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ? Build.SUPPORTED_ABIS[0] : Build.CPU_ABI;
                 downloadDependenciesHash(arch);
-                downloadId = 2;
                 Uri dl = Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/" + arch + "/rucky-hid");
                 downloadDependencies(dl);
             });
@@ -1064,20 +1067,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void downloadDependencies(Uri uri) {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-        alertBuilder.setMessage("Please leave the app open")
-                .setCancelable(false)
-                .setPositiveButton("OK", (dialogInterface, i) -> {
-                });
-        AlertDialog alert = alertBuilder.create();
-        alert.show();
-        String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid";
-        try {
-            dos.writeChars("rm -rf "+path+"\n");
-            dos.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        File fDel = new File(path);
+        alertBuilder.setMessage("Please leave the app open while dependencies are getting installed!")
+                .setCancelable(false);
+        waitDialog = alertBuilder.create();
+        waitDialog.show();
+        File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
         if (fDel.exists()) {
             fDel.delete();
         }
@@ -1096,6 +1090,7 @@ public class MainActivity extends AppCompatActivity {
         }
         downloadRef = downloadManager.enqueue(req);
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+        downloadId = 2;
         registerReceiver(downloadBR, filter);
     }
 
