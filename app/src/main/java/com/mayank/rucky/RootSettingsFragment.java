@@ -23,6 +23,8 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
     private static final String PREF_SETTINGS = "settings";
     private static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
     private static final String PREF_SETTINGS_LAUNCH_ICON = "launchIcon";
+    private static final String PREF_SETTING_ADV_SECURITY = "advSecurity";
+    private static final String PREF_GEN_KEY = "genKeyDone";
     private static double currentVersion;
     private static String webViewID = "WEBVIEW_URL";
     private static String activityTitle = "WEBVIEW_TITLE";
@@ -84,6 +86,19 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(getActivity().getIntent());
             return true;
         }));
+
+        final SwitchPreferenceCompat securitySwitch = findPreference("sec");
+        assert  securitySwitch != null;
+        securitySwitch.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(PREF_SETTING_ADV_SECURITY,switched).apply();
+            Intent intent = new Intent(getActivity(), SplashActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
+            getActivity().finishAffinity();
+            startActivity(intent);
+            return true;
+        });
 
         Preference depPreference = findPreference("uninstall");
         assert depPreference != null;

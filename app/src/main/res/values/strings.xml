@@ -9,6 +9,8 @@
     <string name="hide_icon_summary">Dial *#*#78259#*#* to launch.</string>
     <string name="delete_dep_title">Uninstall App</string>
     <string name="delete_dep_summary">Clean up and uninstall app.</string>
+    <string name="settings_sec_title">Advance Security</string>
+    <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
 
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">Developer</string>
@@ -27,7 +29,7 @@
     <string name="saveBtn">Save</string>
     <string name="runBtn">Run</string>
 
-    <string name="codeHint">Type or load rubber ducky scripts here…</string>
+    <string name="codeHint">Type or load rubber ducky scripts here</string>
 
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>

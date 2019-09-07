@@ -18,6 +18,13 @@
             app:title="@string/hide_icon_title"
             app:summary="@string/hide_icon_summary" />
 
+        <SwitchPreferenceCompat
+            app:key="sec"
+            app:icon="@drawable/ic_security"
+            app:defaultValue="false"
+            app:title="@string/settings_sec_title"
+            app:summary="@string/settings_sec_desc" />
+
         <Preference
             app:key="uninstall"
             app:icon="@drawable/ic_delete"
