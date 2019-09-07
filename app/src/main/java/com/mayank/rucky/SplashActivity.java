@@ -39,6 +39,7 @@ public class SplashActivity extends AppCompatActivity {
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         SettingsActivity.advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY,true);
         if(SettingsActivity.advSecurity) authenticate();
+        else splash();
     }
 
     void launchNext() {
@@ -105,17 +106,7 @@ public class SplashActivity extends AppCompatActivity {
         switch (reqCode) {
             case LOCK_REQUEST_CODE:
                 if (resCode == RESULT_OK) {
-                    setContentView(R.layout.activity_splash);
-                    View view = getWindow().getDecorView();
-                    view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
-                    ImageView i = findViewById(R.id.imageViewFG);
-                    i.setColorFilter(getResources().getColor((SettingsActivity.darkTheme?R.color.pri_dark:R.color.pri_light)));
-                    FrameLayout l1 = findViewById(R.id.splashIcon);
-                    TextView l2= findViewById(R.id.splashTextView);
-                    l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
-                    l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
-                    new Handler().postDelayed(this::launchNext, 5000);
-                    getSignature();
+                    splash();
                 } else {
                     finishAffinity();
                     System.exit(0);
@@ -133,5 +124,19 @@ public class SplashActivity extends AppCompatActivity {
         KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
         assert keyguardManager != null;
         return keyguardManager.isKeyguardSecure();
+    }
+
+    private void splash() {
+        setContentView(R.layout.activity_splash);
+        View view = getWindow().getDecorView();
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        ImageView i = findViewById(R.id.imageViewFG);
+        i.setColorFilter(getResources().getColor((SettingsActivity.darkTheme?R.color.pri_dark:R.color.pri_light)));
+        FrameLayout l1 = findViewById(R.id.splashIcon);
+        TextView l2= findViewById(R.id.splashTextView);
+        l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
+        l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
+        new Handler().postDelayed(this::launchNext, 5000);
+        getSignature();
     }
 }
