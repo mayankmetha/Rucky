@@ -38,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
         init = settings.getBoolean(PREF_SETTINGS_INIT,true);
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         SettingsActivity.advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY,true);
-        if(SettingsActivity.advSecurity) authenticate();
+        if(!init && SettingsActivity.advSecurity) authenticate();
         else splash();
     }
 
