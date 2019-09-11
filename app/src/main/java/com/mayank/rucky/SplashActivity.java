@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -20,12 +21,24 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.nio.charset.StandardCharsets;
+import java.security.KeyStore;
 import java.security.MessageDigest;
+import java.security.PrivateKey;
+import java.util.Objects;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
+
+import static android.util.Base64.encodeToString;
 
 public class SplashActivity extends AppCompatActivity {
 
     public static final int LOCK_REQUEST_CODE = 221;
     public static final int SECURITY_SETTING_REQUEST_CODE = 233;
+
+    private static final String KEYSTORE_PROVIDER_ANDROID_KEYSTORE = "AndroidKeyStore";
+    private static final String RUCKY_KEYSTORE = "RuckyKeystore";
 
     public static final String PREF_SETTINGS_INIT = "init";
     private static Boolean init;
@@ -37,7 +50,7 @@ public class SplashActivity extends AppCompatActivity {
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
         init = settings.getBoolean(PREF_SETTINGS_INIT,true);
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
-        SettingsActivity.advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY,true);
+        SettingsActivity.advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY,false);
         if(!init && SettingsActivity.advSecurity) authenticate();
         else splash();
     }

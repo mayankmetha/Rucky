@@ -12,8 +12,6 @@ public class SettingsActivity extends AppCompatActivity {
     public static final int LOCK_REQUEST_CODE = 221;
     public static final int SECURITY_SETTING_REQUEST_CODE = 233;
 
-    public static final String ANDROID_KEY_STORE = "AndroidKeyStore";
-
     public static final String PREF_SETTINGS = "settings";
     public static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
     public static final String PREF_SETTINGS_LAUNCH_ICON = "launchIcon";
