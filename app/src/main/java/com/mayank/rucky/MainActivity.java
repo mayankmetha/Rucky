@@ -49,6 +49,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Objects;
 
+import javax.crypto.SecretKey;
 import javax.net.ssl.HttpsURLConnection;
 
 import static java.lang.Integer.parseInt;
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
     public static int distro = 0;
     public static boolean updateEnable = false;
     private static AlertDialog waitDialog;
+    public static SecretKey key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {

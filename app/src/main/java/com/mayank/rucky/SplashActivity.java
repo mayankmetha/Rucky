@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -21,7 +20,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.nio.charset.StandardCharsets;
 import java.security.KeyStore;
 import java.security.MessageDigest;
 import java.security.PrivateKey;
@@ -30,7 +28,7 @@ import java.util.Objects;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-import static android.util.Base64.encodeToString;
+import static android.util.Base64.decode;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -95,6 +93,23 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
+    void getKey() {
+        try{
+            final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
+            KeyStore keyStore = KeyStore.getInstance(KEYSTORE_PROVIDER_ANDROID_KEYSTORE);
+            keyStore.load(null);
+            KeyStore.Entry entry = keyStore.getEntry(KEYSTORE_PROVIDER_ANDROID_KEYSTORE,null);
+            PrivateKey privateKey = ((KeyStore.PrivateKeyEntry) entry).getPrivateKey();
+            Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+            cipher.init(Cipher.DECRYPT_MODE, privateKey);
+            String k64 = Objects.requireNonNull(settings.getString(RUCKY_KEYSTORE, null));
+            byte[] tmp = decode(k64, Base64.DEFAULT);
+            MainActivity.key = new SecretKeySpec(cipher.doFinal(tmp),"AES");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void authenticate() {
         KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -120,6 +135,7 @@ public class SplashActivity extends AppCompatActivity {
             case LOCK_REQUEST_CODE:
                 if (resCode == RESULT_OK) {
                     splash();
+                    getKey();
                 } else {
                     finishAffinity();
                     System.exit(0);

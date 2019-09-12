@@ -8,17 +8,33 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.security.KeyPairGeneratorSpec;
+import android.util.Base64;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
 import java.io.IOException;
+import java.math.BigInteger;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Objects;
 
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.security.auth.x500.X500Principal;
+
 import static android.content.Context.MODE_PRIVATE;
+import static android.util.Base64.encodeToString;
 
 public class RootSettingsFragment extends PreferenceFragmentCompat {
+
+    private static final String KEYSTORE_PROVIDER_ANDROID_KEYSTORE = "AndroidKeyStore";
+    private static final String RUCKY_KEYSTORE = "RuckyKeystore";
 
     private static final String PREF_SETTINGS = "settings";
     private static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
@@ -92,6 +108,33 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         securitySwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
             SharedPreferences.Editor editor = settings.edit();
+            if(!settings.getBoolean(PREF_GEN_KEY,false)) {
+                try {
+                    KeyGenerator keygen = KeyGenerator.getInstance("AES");
+                    keygen.init(128);
+                    SecretKey key = keygen.generateKey();
+                    Calendar start = new GregorianCalendar();
+                    Calendar stop = new GregorianCalendar();
+                    stop.add(Calendar.YEAR,25);
+                    KeyPairGeneratorSpec spec = new KeyPairGeneratorSpec.Builder(Objects.requireNonNull(getContext()))
+                            .setKeySize(2048)
+                            .setAlias(KEYSTORE_PROVIDER_ANDROID_KEYSTORE)
+                            .setSubject(new X500Principal("CN="+KEYSTORE_PROVIDER_ANDROID_KEYSTORE))
+                            .setSerialNumber(BigInteger.ZERO)
+                            .setStartDate(start.getTime()).setEndDate(stop.getTime()).build();
+                    KeyPairGenerator keyPairGenerator;
+                    KeyPair kp;
+                    keyPairGenerator = KeyPairGenerator.getInstance("RSA", KEYSTORE_PROVIDER_ANDROID_KEYSTORE);
+                    keyPairGenerator.initialize(spec);
+                    kp = keyPairGenerator.generateKeyPair();
+                    Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+                    cipher.init(Cipher.ENCRYPT_MODE, kp.getPublic());
+                    editor.putString(RUCKY_KEYSTORE,encodeToString(cipher.doFinal(key.getEncoded()), Base64.DEFAULT)).apply();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            editor.putBoolean(PREF_GEN_KEY,true).apply();
             editor.putBoolean(PREF_SETTING_ADV_SECURITY,switched).apply();
             Intent intent = new Intent(getActivity(), SplashActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
