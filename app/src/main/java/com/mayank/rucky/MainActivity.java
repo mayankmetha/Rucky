@@ -299,6 +299,9 @@ public class MainActivity extends AppCompatActivity {
                 con = lines[a].replace("ALT ","");
                 String altseq;
                 switch (con) {
+                    case "SHIFT":
+                        altseq = "left-shift";
+                        break;
                     case "END":
                         altseq = "end";
                         break;
