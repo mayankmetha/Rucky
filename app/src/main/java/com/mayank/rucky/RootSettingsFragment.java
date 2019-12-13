@@ -166,7 +166,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         developerPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
             intent.putExtra(activityTitle, "Developer");
-            intent.putExtra(webViewID, "http://mayankmetha.github.io");
+            intent.putExtra(webViewID, "https://mayankmetha.github.io");
             startActivity(intent);
             return true;
         });
