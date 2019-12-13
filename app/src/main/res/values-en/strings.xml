@@ -20,7 +20,7 @@
     <string name="loadBtn">Load</string>
     <string name="saveBtn">Save</string>
     <string name="runBtn">Run</string>
-    <string name="codeHint">Type or load rubber ducky scripts here…</string>
+    <string name="codeHint">Type or load rubber ducky scripts here</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="start">HACK</string>
@@ -32,4 +32,6 @@
     <string name="releaseGitHub">GitHub Release</string>
     <string name="releaseTest">Debug Release</string>
     <string name="releaseOthers">Non Supported Release</string>
+    <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
+    <string name="settings_sec_title">Advance Security</string>
 </resources>
