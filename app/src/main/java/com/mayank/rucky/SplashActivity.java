@@ -66,7 +66,7 @@ public class SplashActivity extends AppCompatActivity {
     void getSignature() {
         String NetHunter = "Fr3kIMwYhByAjtQM2hi+Zb8QJnzdvVej+P6j7o01PbY=";
         String GitHub = "0Xv/I6xP6Q1wKbIqCgXi4CafhKZtOZLOR575TiqN93s=";
-        String debug = "zb2SIJ2H4C4ZUV6zGrGHgJiOnGzJBdxeA3rZomYZfcY=";
+        String debug = "im5KgLli2rx4iEvMVXotXGpfiR1/eqXEwBO2YQ6uP70=";
         String hash = "";
         try {
             @SuppressLint("PackageManagerGetSignatures") PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);

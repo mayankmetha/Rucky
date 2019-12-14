@@ -42,5 +42,8 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.android.support:preference-v7'
-    api 'com.google.guava:guava:28.0-jre'
+    implementation 'com.google.guava:guava:28.1-jre'
+    api 'com.google.guava:guava:28.1-jre'
+    implementation 'com.google.guava:guava:28.1-android'
+    api 'com.google.guava:guava:28.1-android'
 }
