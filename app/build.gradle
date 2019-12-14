@@ -46,4 +46,5 @@ dependencies {
     api 'com.google.guava:guava:28.1-jre'
     implementation 'com.google.guava:guava:28.1-android'
     api 'com.google.guava:guava:28.1-android'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
 }

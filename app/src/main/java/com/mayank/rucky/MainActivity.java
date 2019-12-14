@@ -1,6 +1,7 @@
 package com.mayank.rucky;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.Notification;
@@ -37,18 +38,30 @@ import androidx.core.content.FileProvider;
 import com.google.common.hash.Hashing;
 import com.google.common.io.Files;
 
+import org.apache.commons.io.IOUtils;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.OutputStream;
+import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
+import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
+import javax.crypto.CipherOutputStream;
 import javax.crypto.SecretKey;
 import javax.net.ssl.HttpsURLConnection;
 
@@ -57,6 +70,7 @@ import static java.lang.Integer.parseInt;
 public class MainActivity extends AppCompatActivity {
 
     public static Boolean didThemeChange = false;
+    public static Boolean advSecurity = false;
     public static double currentVersion;
     public static double newVersion;
     public static long downloadRef;
@@ -83,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
+        advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY, false);
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbarMain);
@@ -134,16 +149,31 @@ public class MainActivity extends AppCompatActivity {
             builder.setCancelable(false);
             builder.setPositiveButton("Save", (dialog, which) -> {
                 EditText scripts = findViewById(R.id.code);
-                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString());
+                File file;
+                if (advSecurity) {
+                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString()+".enc");
+                } else {
+                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString()+".txt");
+                }
                 String content = scripts.getText().toString();
-                FileOutputStream outputStream;
-                OutputStreamWriter outputStreamWriter;
+                FileOutputStream fOutputStream;
+                OutputStream outputStream;
                 try {
-                    outputStream = new FileOutputStream(file);
-                    outputStreamWriter = new OutputStreamWriter(outputStream);
-                    outputStreamWriter.write(content);
-                    outputStreamWriter.close();
-                    outputStream.close();
+                    if (advSecurity) {
+                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/ECB/PKCS5Padding");
+                        c.init(Cipher.ENCRYPT_MODE, key);
+                        fOutputStream = new FileOutputStream(file);
+                        outputStream = new BufferedOutputStream(new CipherOutputStream(fOutputStream, c));
+                        outputStream.write(content.getBytes(Charset.forName("UTF-8")));
+                        outputStream.close();
+                        fOutputStream.close();
+                    } else {
+                        fOutputStream = new FileOutputStream(file);
+                        outputStream = new BufferedOutputStream(fOutputStream);
+                        outputStream.write(content.getBytes(Charset.forName("UTF-8")));
+                        outputStream.close();
+                        fOutputStream.close();
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -152,36 +182,51 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
         });
         LoadBtn.setOnClickListener(view -> {
-            final File[] files = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
-            assert files != null;
-            CharSequence[] fileName = new CharSequence[files.length];
-            for (int i = 0; i < files.length; i++) {
-                fileName[i] = files[i].getName();
+            final File[] tmp = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
+            assert tmp != null;
+            ArrayList<File> files = new ArrayList<>();
+            if (!advSecurity) {
+                for (File file : tmp) {
+                    if (file.getPath().endsWith(".txt")) {
+                        files.add(file);
+                    }
+                }
+            } else {
+                files.addAll(Arrays.asList(tmp));
+            }
+            CharSequence[] fileName = new CharSequence[files.size()];
+            for (int i = 0; i < files.size(); i++) {
+                fileName[i] = files.get(i).getName();
             }
             AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Select File");
             builder.setCancelable(false);
             builder.setItems(fileName, (dialog, i) -> {
                 EditText scripts = findViewById(R.id.code);
-                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files[i].getName());
-                FileInputStream inputStream;
-                InputStreamReader inputStreamReader;
-                BufferedReader bufferedReader;
-                StringBuilder stringBuilder;
-                String str;
+                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
+                FileInputStream fInputStream;
+                InputStream inputStream;
+                StringWriter writer;
                 try {
-                    inputStream = new FileInputStream(file);
-                    inputStreamReader = new InputStreamReader(inputStream);
-                    bufferedReader = new BufferedReader(inputStreamReader);
-                    stringBuilder = new StringBuilder();
-                    while((str = bufferedReader.readLine()) != null) {
-                        stringBuilder.append(str).append("\n");
+                    if (advSecurity) {
+                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/ECB/PKCS5Padding");
+                        c.init(Cipher.DECRYPT_MODE, key);
+                        fInputStream = new FileInputStream(file);
+                        inputStream = new BufferedInputStream(new CipherInputStream(fInputStream,c));
+                        writer = new StringWriter();
+                        IOUtils.copy(inputStream, writer, "UTF-8");
+                        scripts.setText(writer.toString());
+                        inputStream.close();
+                        fInputStream.close();
+                    } else {
+                        fInputStream = new FileInputStream(file);
+                        inputStream = new BufferedInputStream(fInputStream);
+                        writer = new StringWriter();
+                        IOUtils.copy(inputStream, writer, "UTF-8");
+                        scripts.setText(writer.toString());
+                        inputStream.close();
+                        fInputStream.close();
                     }
-                    str = stringBuilder.toString();
-                    scripts.setText(str);
-                    bufferedReader.close();
-                    inputStreamReader.close();
-                    inputStream.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
