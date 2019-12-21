@@ -25,8 +25,10 @@ import android.os.Environment;
 import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,8 +67,6 @@ import javax.crypto.CipherOutputStream;
 import javax.crypto.SecretKey;
 import javax.net.ssl.HttpsURLConnection;
 
-import static java.lang.Integer.parseInt;
-
 public class MainActivity extends AppCompatActivity {
 
     public static Boolean didThemeChange = false;
@@ -91,9 +91,11 @@ public class MainActivity extends AppCompatActivity {
     public static boolean updateEnable = false;
     private static AlertDialog waitDialog;
     public static SecretKey key;
+    ArrayList<String> languages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
+        languages = new ArrayList<>();
         super.onCreate(savedInstanceState);
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
@@ -138,6 +140,30 @@ public class MainActivity extends AppCompatActivity {
             notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
             getManager().createNotificationChannel(notificationChannel);
         }
+
+        Spinner language = findViewById(R.id.langMenu);
+        languages.add("American English");
+        languages.add("Turkish");
+        languages.add("Swedish");
+        languages.add("Slovenian");
+        languages.add("Russian");
+        languages.add("Portuguese");
+        languages.add("Norwegian");
+        languages.add("Italian");
+        languages.add("Croatian");
+        languages.add("United Kingdom English");
+        languages.add("French");
+        languages.add("Finnish");
+        languages.add("Spanish");
+        languages.add("Danish");
+        languages.add("German");
+        languages.add("Canadian French");
+        languages.add("Brazilian Portuguese");
+        languages.add("Belarusian");
+        languages.add("Hungarian");
+        ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, languages);
+        langAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        language.setAdapter(langAdapter);
         ImageButton SaveBtn = findViewById(R.id.svBtb);
         ImageButton LoadBtn = findViewById(R.id.ldBtn);
         ImageButton ExeBtn = findViewById(R.id.exBtn);
@@ -237,7 +263,13 @@ public class MainActivity extends AppCompatActivity {
         ExeBtn.setOnClickListener(view -> {
             EditText scripts = findViewById(R.id.code);
             try {
-                genScript(scripts.getText().toString());
+                hid exeScript = new hid(languages.indexOf(language.getSelectedItem().toString()));
+                exeScript.parse(scripts.getText().toString());
+                ArrayList<String> cmds = exeScript.getCmd();
+                for(int i = 0; i < cmds.size(); i++) {
+                    dos.writeBytes(cmds.get(i));
+                    dos.flush();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -253,459 +285,6 @@ public class MainActivity extends AppCompatActivity {
             notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         }
         return notificationManager;
-    }
-
-    void genScript(String str)throws Exception {
-        String[] lines = str.split("\\r?\\n");
-        String con;
-        float defdelay = 0;
-        for (int a = 0; a < lines.length; a++) {
-            //DEFAULTDELAY or DEFAULT_DELAY
-            if (a == 0 && (lines[a].startsWith("DEFAULTDELAY") || lines[a].startsWith("DEFAULT_DELAY"))) {
-                con = lines[a];
-                con = con.replace("DEFAULTDELAY ", "");
-                con = con.replace("DEFAULT_DELAY ", "");
-                defdelay = Float.parseFloat(con)/1000;
-            }
-            //DELAY
-            else if (lines[a].startsWith("DELAY")) {
-                con = lines[a].replace("DELAY ", "");
-                float delay = Float.parseFloat(con)/1000;
-                dos.writeBytes("sleep "+delay+"\n");
-                dos.flush();
-            }
-            //REM
-            else if (lines[a].startsWith("REM")) {
-                continue;
-            }
-            //GUI or WINDOWS
-            else if (lines[a].startsWith("GUI") || lines[a].startsWith("WINDOWS")) {
-                con = lines[a];
-                con = con.replace("WINDOWS ", "");
-                con = con.replace("GUI ", "");
-                char ch = con.charAt(0);
-                dos.writeBytes("echo left-meta " + ch + " | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //MENU or APP
-            else if (lines[a].equals("APP") || lines[a].equals("MENU")) {
-                dos.writeBytes("echo left-shift f10 | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //SHIFT
-            else if (lines[a].startsWith("SHIFT")) {
-                con = lines[a].replace("SHIFT ","");
-                String shseq = "";
-                switch (con) {
-                    case "DELETE":
-                        shseq = "delete";
-                        break;
-                    case "HOME":
-                        shseq = "home";
-                        break;
-                    case "INSERT":
-                        shseq = "insert";
-                        break;
-                    case "PAGEUP":
-                        shseq = "pgup";
-                        break;
-                    case "PAGEDOWN":
-                        shseq = "pgdown";
-                        break;
-                    case "WINDOWS":
-                    case "GUI":
-                        shseq = "left-meta";
-                        break;
-                    case "DOWNARROW":
-                    case "DOWN":
-                        shseq = "down";
-                        break;
-                    case "UPARROW":
-                    case "UP":
-                        shseq = "up";
-                        break;
-                    case "LEFTARROW":
-                    case "LEFT":
-                        shseq = "left";
-                        break;
-                    case "RIGHTARROW":
-                    case "RIGHT":
-                        shseq = "right";
-                        break;
-                    case "TAB":
-                        shseq = "tab";
-                        break;
-                }
-                dos.writeBytes("echo left-shift "+shseq+" | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //ALT
-            else if(lines[a].startsWith("ALT")) {
-                con = lines[a].replace("ALT ","");
-                String altseq;
-                switch (con) {
-                    case "SHIFT":
-                        altseq = "left-shift";
-                        break;
-                    case "END":
-                        altseq = "end";
-                        break;
-                    case "ESC":
-                        altseq = "esc";
-                        break;
-                    case "ESCAPE":
-                        altseq = "escape";
-                        break;
-                    case "SPACE":
-                        altseq = "space";
-                        break;
-                    case "TAB":
-                        altseq = "tab";
-                        break;
-                    case "F1":
-                        altseq = "f1";
-                        break;
-                    case "F2":
-                        altseq = "f2";
-                        break;
-                    case "F3":
-                        altseq = "f3";
-                        break;
-                    case "F4":
-                        altseq = "f4";
-                        break;
-                    case "F5":
-                        altseq = "f5";
-                        break;
-                    case "F6":
-                        altseq = "f6";
-                        break;
-                    case "F7":
-                        altseq = "f7";
-                        break;
-                    case "F8":
-                        altseq = "f8";
-                        break;
-                    case "F9":
-                        altseq = "f9";
-                        break;
-                    case "F10":
-                        altseq = "f10";
-                        break;
-                    case "F11":
-                        altseq = "f11";
-                        break;
-                    case "F12":
-                        altseq = "f12";
-                        break;
-                    default:
-                        altseq = "" + con.charAt(0) + "";
-                        break;
-                }
-                dos.writeBytes("echo left-alt "+altseq+" | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //CONTROL or CTRL
-            else if (lines[a].startsWith("CONTROL") || lines[a].startsWith("CTRL")) {
-                con = lines[a];
-                con = con.replace("CONTROL ", "");
-                con = con.replace("CTRL ", "");
-                String ctrlseq;
-                switch (con) {
-                    case "PAUSE":
-                    case "BREAK":
-                        ctrlseq = "pause";
-                        break;
-                    case "F1":
-                        ctrlseq = "f1";
-                        break;
-                    case "F2":
-                        ctrlseq = "f2";
-                        break;
-                    case "F3":
-                        ctrlseq = "f3";
-                        break;
-                    case "F4":
-                        ctrlseq = "f4";
-                        break;
-                    case "F5":
-                        ctrlseq = "f5";
-                        break;
-                    case "F6":
-                        ctrlseq = "f6";
-                        break;
-                    case "F7":
-                        ctrlseq = "f7";
-                        break;
-                    case "F8":
-                        ctrlseq = "f8";
-                        break;
-                    case "F9":
-                        ctrlseq = "f9";
-                        break;
-                    case "F10":
-                        ctrlseq = "f10";
-                        break;
-                    case "F11":
-                        ctrlseq = "f11";
-                        break;
-                    case "F12":
-                        ctrlseq = "f12";
-                        break;
-                    case "ESC":
-                        ctrlseq = "esc";
-                        break;
-                    case "ESCAPE":
-                        ctrlseq = "escape";
-                        break;
-                    default:
-                        ctrlseq = "" + con.charAt(0) + "";
-                        break;
-                }
-                dos.writeBytes("echo left-ctrl "+ctrlseq+" | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //DOWNARROW or DOWN
-            else if (lines[a].startsWith("DOWNARROW") || lines[a].startsWith("DOWN")) {
-                dos.writeBytes("echo down | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //UPARROW or UP
-            else if (lines[a].startsWith("UPARROW") || lines[a].startsWith("UP")) {
-                dos.writeBytes("echo up | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //LEFTARROW or LEFT
-            else if (lines[a].startsWith("LEFTARROW") || lines[a].startsWith("LEFT")) {
-                dos.writeBytes("echo left | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //RIGHTARROW or RIGHT
-            else if (lines[a].startsWith("RIGHTARROW") || lines[a].startsWith("RIGHT")) {
-                dos.writeBytes("echo right | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //BREAK or PAUSE
-            else if (lines[a].startsWith("BREAK") || lines[a].startsWith("PAUSE")) {
-                dos.writeBytes("echo pause | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //CAPSLOCK
-            else if (lines[a].startsWith("CAPSLOCK")) {
-                dos.writeBytes("echo capslock | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //DELETE
-            else if (lines[a].startsWith("DELETE")) {
-                dos.writeBytes("echo delete | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //END
-            else if (lines[a].startsWith("END")) {
-                dos.writeBytes("echo end | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //ESC
-            else if (lines[a].startsWith("ESC")) {
-                dos.writeBytes("echo esc | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //ESCAPE
-            else if (lines[a].startsWith("ESCAPE")) {
-                dos.writeBytes("echo escape | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //HOME
-            else if (lines[a].startsWith("HOME")) {
-                dos.writeBytes("echo home | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //INSERT
-            else if (lines[a].startsWith("INSERT")) {
-                dos.writeBytes("echo insert | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //NUMLOCK
-            else if (lines[a].startsWith("NUMLOCK")) {
-                dos.writeBytes("echo numlock | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //PAGEUP
-            else if (lines[a].startsWith("PAGEUP")) {
-                dos.writeBytes("echo pgup | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //PAGEDOWN
-            else if (lines[a].startsWith("PAGEDOWN")) {
-                dos.writeBytes("echo pgdown | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //PRINTSCREEN or PRINTSCRN or PRNTSCRN or PRTSCN or PRSC or PRTSCR
-            else if (lines[a].startsWith("PRINTSCREEN") || lines[a].startsWith("PRINTSCRN") ||
-                    lines[a].startsWith("PRNTSCRN") || lines[a].startsWith("PRTSCN") ||
-                    lines[a].startsWith("PRSC") || lines[a].startsWith("PRTSCR")) {
-                dos.writeBytes("echo print | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //SCROLLLOCK
-            else if (lines[a].startsWith("SCROLLLOCK")) {
-                dos.writeBytes("echo scrolllock | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //SPACE
-            else if (lines[a].startsWith("SPACE")) {
-                dos.writeBytes("echo space | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //TAB
-            else if (lines[a].startsWith("TAB")) {
-                dos.writeBytes("echo tab | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //BACKSPACE or BKSP
-            else if (lines[a].startsWith("BACKSPACE") || lines[a].startsWith("BKSP")) {
-                dos.writeBytes("echo backspace | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //ENTER
-            else if (lines[a].startsWith("ENTER")) {
-                dos.writeBytes("echo enter | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                dos.flush();
-            }
-            //REPEAT
-            else if (lines[a].startsWith("REPEAT")) {
-                con = lines[a].replace("REPEAT ","");
-                int x = parseInt(con);
-                String last = lines[a-1];
-                for(int i = 0; i < x; i++) {
-                    genScript(last);
-                }
-            }
-            //STRING
-            else if (lines[a].startsWith("STRING")) {
-                con = lines[a].replace("STRING ", "");
-                con = con.replace("\n", "");
-                char[] ch = con.toCharArray();
-                String cha;
-                for (char aCh : ch) {
-                    cha = convert(aCh);
-                    dos.writeBytes("echo " + cha + " | /data/local/tmp/rucky-hid /dev/hidg0 keyboard\n");
-                    dos.flush();
-                }
-            }
-            dos.writeBytes("sleep "+defdelay+"\n");
-            dos.flush();
-        }
-    }
-
-    String convert(char ch) {
-        if(ch == ' ') {
-            return "space";
-        }
-        else if(ch == '!') {
-            return "left-shift 1";
-        }
-        else if(ch == '.') {
-            return "period";
-        }
-        else if(ch == '`') {
-            return "backquote";
-        }
-        else if(ch == '~') {
-            return "left-shift tilde";
-        }
-        else if(ch == '+') {
-            return "kp-plus";
-        }
-        else if(ch == '=') {
-            return "equal";
-        }
-        else if(ch == '_') {
-            return "left-shift minus";
-        }
-        else if(ch == '-') {
-            return "minus";
-        }
-        else if(ch == '"') {
-            return "left-shift quote";
-        }
-        else if(ch == '\'') {
-            return "quote";
-        }
-        else if(ch == ':') {
-            return "left-shift semicolon";
-        }
-        else if(ch == ';') {
-            return "semicolon";
-        }
-        else if(ch == '<') {
-            return "left-shift comma";
-        }
-        else if(ch == ',') {
-            return "comma";
-        }
-        else if(ch == '>') {
-            return "left-shift period";
-        }
-        else if(ch == '?') {
-            return "left-shift slash";
-        }
-        else if(ch == '\\') {
-            return "backslash";
-        }
-        else if(ch == '|') {
-            return "left-shift backslash";
-        }
-        else if(ch == '/') {
-            return "slash";
-        }
-        else if(ch == '{') {
-            return "left-shift lbracket";
-        }
-        else if(ch == '}') {
-            return "left-shift rbracket";
-        }
-        else if(ch == '(') {
-            return "left-shift 9";
-        }
-        else if(ch == ')') {
-            return "left-shift 0";
-        }
-        else if(ch == '[') {
-            return "lbracket";
-        }
-        else if(ch == ']') {
-            return "rbracket";
-        }
-        else if(ch == '#') {
-            return "left-shift 3";
-        }
-        else if(ch == '@') {
-            return "left-shift 2";
-        }
-        else if(ch == '$') {
-            return "left-shift 4";
-        }
-        else if(ch == '%') {
-            return "left-shift 5";
-        }
-        else if(ch == '^') {
-            return "left-shift 6";
-        }
-        else if(ch == '&') {
-            return "left-shift 7";
-        }
-        else if(ch == '*') {
-            return "kp-multiply";
-        }
-        else if(ch >= 'A' && ch <= 'Z') {
-            String temp = ""+ch+"";
-            temp = temp.toLowerCase();
-            temp = "left-shift "+temp;
-            return temp;
-
-        }
-        else return ""+ch+"";
     }
 
     @Override
