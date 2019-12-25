@@ -277,8 +277,6 @@ public class MainActivity extends AppCompatActivity {
             updater(0);
     }
 
-
-
     private NotificationManager getManager() {
         if (notificationManager == null) {
             notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
