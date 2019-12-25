@@ -15,7 +15,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
-import java.io.IOException;
 import java.math.BigInteger;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -146,12 +145,6 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference depPreference = findPreference("uninstall");
         assert depPreference != null;
         depPreference.setOnPreferenceClickListener(preference -> {
-            try {
-                MainActivity.dos.writeBytes("rm -rf /data/local/tmp/rucky-hid\n");
-                MainActivity.dos.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             Intent intent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.setData(Uri.parse("package:com.mayank.rucky"));

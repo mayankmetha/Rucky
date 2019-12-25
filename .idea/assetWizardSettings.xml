@@ -203,7 +203,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/private/var/folders/8m/1g490d9d7_93vpfbyv3s5jw40000gn/T/AppTranslocation/D9F69C77-202A-431C-9412-13D5E150E41F/d/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_phonelink_lock_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/hardware/ic_keyboard_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -214,7 +214,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ff5722" />
-                            <entry key="outputName" value="ic_security" />
+                            <entry key="outputName" value="ic_keyboard" />
                             <entry key="sourceFile" value="$PROJECT_DIR$/app/src/main/animal.svg" />
                           </map>
                         </option>

@@ -81,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String CHANNEL_NAME = "Update";
     private NotificationManager notificationManager;
     Process p;
-    public static DataOutputStream dos;
-    public static BufferedReader dis;
+    private static DataOutputStream dos;
     public static String getSHA512;
     public static String genSHA512;
     private Boolean root = false;
@@ -112,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Root Access Required!");
                 builder.setCancelable(false);
+                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.dismiss()));
                 builder.setNegativeButton("Exit", ((dialog, which) -> {
                     moveTaskToBack(true);
                     android.os.Process.killProcess(android.os.Process.myPid());
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
             notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
             getManager().createNotificationChannel(notificationChannel);
         }
-
+        cleanup();
         Spinner language = findViewById(R.id.langMenu);
         languages.add("American English");
         //languages.add("Turkish");
@@ -416,8 +416,7 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                     alertBuilder.setMessage("No update found")
                             .setCancelable(false)
-                            .setPositiveButton("OK", (dialogInterface, i) -> {
-                            });
+                            .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.dismiss());
                     AlertDialog alert = alertBuilder.create();
                     alert.show();
                 }
@@ -427,9 +426,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                 alertBuilder.setMessage("Please check the network connection")
                         .setCancelable(false)
-                        .setPositiveButton("OK", (dialogInterface, i) -> {
-
-                        });
+                        .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.dismiss());
                 AlertDialog alert = alertBuilder.create();
                 alert.show();
             }
@@ -581,7 +578,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             p = Runtime.getRuntime().exec("su");
             dos = new DataOutputStream(p.getOutputStream());
-            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            BufferedReader dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
             if(dos != null) {
                 dos.writeBytes("id\n");
                 dos.flush();
@@ -601,7 +598,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Kernel Not Supported!");
             builder.setCancelable(false);
-            builder.setPositiveButton("Exit", (dialog, which) -> {
+            builder.setPositiveButton("Continue", ((dialog, which) -> dialog.dismiss()));
+            builder.setNegativeButton("Exit", (dialog, which) -> {
                 moveTaskToBack(true);
                 android.os.Process.killProcess(android.os.Process.myPid());
                 System.exit(1);
@@ -624,6 +622,17 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == STORAGE_PERM) {
             if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                 permission();
+            }
+        }
+    }
+
+    void cleanup() {
+        if(root) {
+            try {
+                dos.writeBytes("rm -rf /data/local/tmp/rucky-hid\n");
+                dos.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }

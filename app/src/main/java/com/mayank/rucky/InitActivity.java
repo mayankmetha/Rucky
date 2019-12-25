@@ -140,7 +140,7 @@ public class InitActivity extends AppCompatActivity {
 
 
     public class MyViewPagerAdapter extends PagerAdapter {
-        private LayoutInflater layoutInflater;
+        private LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         MyViewPagerAdapter() {
         }
@@ -148,7 +148,7 @@ public class InitActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Object instantiateItem(@NonNull ViewGroup container, int position) {
-            layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            assert layoutInflater != null;
             View view = layoutInflater.inflate(layouts[position], container, false);
             container.addView(view);
 

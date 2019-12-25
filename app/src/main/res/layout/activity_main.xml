@@ -26,42 +26,35 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/langCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            app:cardBackgroundColor="@color/ic_launcher_background"
-            app:cardCornerRadius="5dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:id="@+id/LangLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/ic_keyboard" />
 
             <Spinner
                 android:id="@+id/langMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"/>
-        </androidx.cardview.widget.CardView>
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/icon" />
+        </RelativeLayout>
 
         <EditText
             android:id="@+id/code"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/BtnGrp"
-            android:layout_below="@id/langCard"
-            android:layout_margin="5dp"
+            android:layout_below="@id/LangLayout"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
@@ -108,9 +101,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_load"
+                android:contentDescription="@string/loadBtn"
                 android:text="@string/loadBtn"
-                android:contentDescription="@string/loadBtn" />
+                app:srcCompat="@drawable/ic_load" />
 
             <ImageButton
                 android:id="@+id/svBtb"
@@ -118,9 +111,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_save"
+                android:contentDescription="@string/saveBtn"
                 android:text="@string/saveBtn"
-                android:contentDescription="@string/saveBtn" />
+                app:srcCompat="@drawable/ic_save" />
 
             <ImageButton
                 android:id="@+id/exBtn"
@@ -128,9 +121,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_run"
+                android:contentDescription="@string/runBtn"
                 android:text="@string/runBtn"
-                android:contentDescription="@string/runBtn" />
+                app:srcCompat="@drawable/ic_run" />
 
         </LinearLayout>
 
