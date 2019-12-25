@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Root Access Required!");
                 builder.setCancelable(false);
-                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.dismiss()));
+                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                 builder.setNegativeButton("Exit", ((dialog, which) -> {
                     moveTaskToBack(true);
                     android.os.Process.killProcess(android.os.Process.myPid());
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             });
-            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
             builder.show();
         });
         LoadBtn.setOnClickListener(view -> {
@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             });
-            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
             builder.show();
         });
         ExeBtn.setOnClickListener(view -> {
@@ -416,7 +416,7 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                     alertBuilder.setMessage("No update found")
                             .setCancelable(false)
-                            .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.dismiss());
+                            .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.cancel());
                     AlertDialog alert = alertBuilder.create();
                     alert.show();
                 }
@@ -426,7 +426,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
                 alertBuilder.setMessage("Please check the network connection")
                         .setCancelable(false)
-                        .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.dismiss());
+                        .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.cancel());
                 AlertDialog alert = alertBuilder.create();
                 alert.show();
             }
@@ -598,7 +598,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Kernel Not Supported!");
             builder.setCancelable(false);
-            builder.setPositiveButton("Continue", ((dialog, which) -> dialog.dismiss()));
+            builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
             builder.setNegativeButton("Exit", (dialog, which) -> {
                 moveTaskToBack(true);
                 android.os.Process.killProcess(android.os.Process.myPid());
