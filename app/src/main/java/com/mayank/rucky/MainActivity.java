@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
     public static String getSHA512;
     public static String genSHA512;
     private Boolean root = false;
-    static private int downloadId = 0;
     public static int distro = 0;
     public static boolean updateEnable = false;
     private static AlertDialog waitDialog;
@@ -464,7 +463,6 @@ public class MainActivity extends AppCompatActivity {
         }
         downloadRef = downloadManager.enqueue(req);
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
-        downloadId = 1;
         registerReceiver(downloadBR, filter);
     }
 
@@ -480,8 +478,7 @@ public class MainActivity extends AppCompatActivity {
                 if (refId == downloadRef && dlStatus == DownloadManager.STATUS_SUCCESSFUL) {
                     SystemClock.sleep(5000);
                     waitDialog.dismiss();
-                    if(downloadId == 1) generateHash();
-                    else if(downloadId == 2) generateDependencyHash();
+                    generateHash();
                 }
             }
         }
@@ -600,10 +597,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void supportedFiles() {
         String pathDev = "/dev";
-        String pathTmp = "/data/local/tmp";
         File file1 = new File(pathDev,"hidg0");
         File file2 = new File(pathDev,"hidg1");
-        File file3 = new File(pathTmp,"rucky-hid");
         if(!file1.exists() && !file2.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Kernel Not Supported!");
@@ -624,30 +619,6 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        if(!file3.exists()) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Dependency file missing");
-            builder.setCancelable(false);
-            builder.setPositiveButton("Download & Install", (dialog, which) -> {
-                String arch = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ? Build.SUPPORTED_ABIS[0] : Build.CPU_ABI;
-                downloadDependenciesHash(arch);
-                Uri dl = Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/" + arch + "/rucky-hid");
-                downloadDependencies(dl);
-            });
-            builder.setNegativeButton("Exit", ((dialog, which) -> {
-                moveTaskToBack(true);
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(1);
-            }));
-            AlertDialog fileMissing = builder.create();
-            fileMissing.show();
-        } else {
-            try {
-                dos.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     @Override
@@ -656,100 +627,6 @@ public class MainActivity extends AppCompatActivity {
             if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                 permission();
             }
-        }
-    }
-
-    private void downloadDependenciesHash(String arch) {
-        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        assert conMgr != null;
-        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
-        if (activeNetwork != null && activeNetwork.isConnected()) {
-            try {
-                Notification.Builder updateNotify;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    updateNotify = new Notification.Builder(this, CHANNEL_ID);
-                } else {
-                    updateNotify = new Notification.Builder(this);
-                }
-                updateNotify.setContentTitle("Verifying dependencies")
-                        .setContentText("Please Wait...")
-                        .setSmallIcon(R.drawable.ic_notification)
-                        .setAutoCancel(true);
-                getManager().notify(4,updateNotify.build());
-                URL url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/release/"+arch+"/rucky-hid.sha512");
-                new fetchHash().execute(url);
-                getManager().cancel(4);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-        } else {
-            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-            alertBuilder.setMessage("Please check the network connection")
-                    .setCancelable(false)
-                    .setPositiveButton("OK", (dialogInterface, i) -> {
-                    });
-            AlertDialog alert = alertBuilder.create();
-            alert.show();
-        }
-    }
-
-    private void downloadDependencies(Uri uri) {
-        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-        alertBuilder.setMessage("Please leave the app open while dependencies are getting installed!")
-                .setCancelable(false);
-        waitDialog = alertBuilder.create();
-        waitDialog.show();
-        File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
-        if (fDel.exists()) {
-            fDel.delete();
-        }
-        downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
-        DownloadManager.Request req = new DownloadManager.Request(uri);
-        req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
-        req.setAllowedOverRoaming(true);
-        req.setTitle("rucky-hid");
-        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"/rucky-hid");
-        req.setVisibleInDownloadsUi(true);
-        DownloadManager.Query q = new DownloadManager.Query();
-        q.setFilterById(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL | DownloadManager.STATUS_PAUSED | DownloadManager.STATUS_PENDING | DownloadManager.STATUS_RUNNING);
-        Cursor c = downloadManager.query(q);
-        while (c.moveToNext()) {
-            downloadManager.remove(c.getLong(c.getColumnIndex(DownloadManager.COLUMN_ID)));
-        }
-        downloadRef = downloadManager.enqueue(req);
-        IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
-        downloadId = 2;
-        registerReceiver(downloadBR, filter);
-    }
-
-    void generateDependencyHash() {
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
-        try {
-            genSHA512 = Files.asByteSource(file).hash(Hashing.sha512()).toString();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if(getSHA512.equals(genSHA512)) {
-            installDependency();
-        } else {
-            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-            alertBuilder.setMessage("Dependency file corrupted!")
-                    .setCancelable(false)
-                    .setNegativeButton("TRY AGAIN LATER", (dialog, which) -> {
-                    });
-            AlertDialog alert = alertBuilder.create();
-            alert.show();
-        }
-    }
-
-    private void installDependency() {
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky-hid");
-        String path = file.getAbsolutePath();
-        try {
-            dos.writeBytes("mv "+path+" /data/local/tmp/rucky-hid;chmod 755 /data/local/tmp/rucky-hid\n");
-            dos.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }
