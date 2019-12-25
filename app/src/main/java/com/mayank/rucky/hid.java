@@ -997,560 +997,558 @@ class hid {
                 case '\u007F':
                     if (keycodes.containsKey("ASCII_7F")) kbstrokes.add(keycodes.get("ASCII_7F"));
                     break;
-                /*
+
                 //ISO_8859_1 characters
-                case 0xc2a0:
+                case '\u00A0':
                     if (keycodes.containsKey("ISO_8859_1_A0"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_A0"));
                     break;
-                case 0xc2a2:
+                case '\u00A2':
                     if (keycodes.containsKey("ISO_8859_1_A2"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_A2"));
                     break;
-                case 0xc2a3:
+                case '\u00A3':
                     if (keycodes.containsKey("ISO_8859_1_A3"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_A3"));
                     else if (keycodes.containsKey("ISO_8859_5_23"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_23"));
                     break;
-                case 0xc2a4:
+                case '\u00A4':
                     if (keycodes.containsKey("ISO_8859_1_A4"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_A4"));
                     else if (keycodes.containsKey("UNICODE_2D9"))
                         kbstrokes.add(keycodes.get("UNICODE_2D9"));
                     break;
-                case 0xc2a6:
+                case '\u00A6':
                     if (keycodes.containsKey("ISO_8859_1_A6"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_A6"));
                     break;
-                case 0xc2a7:
+                case '\u00A7':
                     if (keycodes.containsKey("ISO_8859_1_A7"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_A7"));
                     else if (keycodes.containsKey("UNICODE_2DD"))
                         kbstrokes.add(keycodes.get("UNICODE_2DD"));
                     break;
-                case 0xc2a8:
+                case '\u00A8':
                     if (keycodes.containsKey("ISO_8859_1_A8"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_A8"));
                     break;
-                case 0xc2aa:
+                case '\u00AA':
                     if (keycodes.containsKey("ISO_8859_1_AA"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_AA"));
                     break;
-                case 0xc2ab:
+                case '\u00AB':
                     if (keycodes.containsKey("ISO_8859_1_AB"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_AB"));
                     else if (keycodes.containsKey("ISO_8859_5_26"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_26"));
                     break;
-                case 0xc2ac:
+                case '\u00AC':
                     if (keycodes.containsKey("ISO_8859_1_AC"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_AC"));
                     break;
-                case 0xc2ad:
+                case '\u00AD':
                     if (keycodes.containsKey("ISO_8859_1_AD"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_AD"));
                     break;
-                case 0xc2af:
+                case '\u00AF':
                     if (keycodes.containsKey("ISO_8859_1_AF"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_AF"));
                     break;
-                case 0xc2b0:
+                case '\u00B0':
                     if (keycodes.containsKey("ISO_8859_1_B0"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B0"));
                     break;
-                case 0xc2b1:
+                case '\u00B1':
                     if (keycodes.containsKey("ISO_8859_1_B1"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B1"));
                     break;
-                case 0xc2b2:
+                case '\u00B2':
                     if (keycodes.containsKey("ISO_8859_1_B2"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B2"));
                     break;
-                case 0xc2b3:
+                case '\u00B3':
                     if (keycodes.containsKey("ISO_8859_1_B3"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B3"));
                     break;
-                case 0xc2b4:
+                case '\u00B4':
                     if (keycodes.containsKey("ISO_8859_1_B4"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B4"));
                     break;
-                case 0xc2b5:
+                case '\u00B5':
                     if (keycodes.containsKey("ISO_8859_1_B5"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B5"));
                     break;
-                case 0xc2b6:
+                case '\u00B6':
                     if (keycodes.containsKey("ISO_8859_1_B6"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B6"));
                     break;
-                case 0xc2b8:
+                case '\u00B8':
                     if (keycodes.containsKey("ISO_8859_1_B8"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_B8"));
                     break;
-                case 0xc2ba:
+                case '\u00BA':
                     if (keycodes.containsKey("ISO_8859_1_BA"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_BA"));
                     break;
-                case 0xc2bb:
+                case '\u00BB':
                     if (keycodes.containsKey("ISO_8859_1_BB"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_BB"));
                     else if (keycodes.containsKey("ISO_8859_5_27"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_27"));
                     break;
-                case 0xc2bc:
+                case '\u00BC':
                     if (keycodes.containsKey("ISO_8859_1_BC"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_BC"));
                     break;
-                case 0xc2bd:
+                case '\u00BD':
                     if (keycodes.containsKey("ISO_8859_1_BD"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_BD"));
                     break;
-                case 0xc2be:
+                case '\u00BE':
                     if (keycodes.containsKey("ISO_8859_1_BE"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_BE"));
                     break;
-                case 0xc384:
+                case '\u00C4':
                     if (keycodes.containsKey("ISO_8859_1_C4"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_C4"));
                     break;
-                case 0xc385:
+                case '\u00C5':
                     if (keycodes.containsKey("ISO_8859_1_C5"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_C5"));
                     break;
-                case 0xc386:
+                case '\u00C6':
                     if (keycodes.containsKey("ISO_8859_1_C6"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_C6"));
                     break;
-                case 0xc387:
+                case '\u00C7':
                     if (keycodes.containsKey("ISO_8859_1_C7"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_C7"));
                     break;
-                case 0xc389:
+                case '\u00C9':
                     if (keycodes.containsKey("ISO_8859_1_C9"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_C9"));
                     break;
-                case 0xc396:
+                case '\u00D6':
                     if (keycodes.containsKey("ISO_8859_1_D6"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_D6"));
                     break;
-                case 0xc397:
+                case '\u00D7':
                     if (keycodes.containsKey("ISO_8859_1_D7"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_D7"));
                     else if (keycodes.containsKey("UNICODE_141"))
                         kbstrokes.add(keycodes.get("UNICODE_141"));
                     break;
-                case 0xc398:
+                case '\u00D8':
                     if (keycodes.containsKey("ISO_8859_1_D8"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_D8"));
                     break;
-                case 0xc39c:
+                case '\u00DC':
                     if (keycodes.containsKey("ISO_8859_1_DC"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_DC"));
                     break;
-                case 0xc39f:
+                case '\u00DF':
                     if (keycodes.containsKey("ISO_8859_1_DF"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_DF"));
                     else if (keycodes.containsKey("UNICODE_2DB"))
                         kbstrokes.add(keycodes.get("UNICODE_2DB"));
                     break;
-                case 0xc3a0:
+                case '\u00E0':
                     if (keycodes.containsKey("ISO_8859_1_E0"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_E0"));
                     break;
-                case 0xc3a4:
+                case '\u00E4':
                     if (keycodes.containsKey("ISO_8859_1_E4"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_E4"));
                     break;
-                case 0xc3a5:
+                case '\u00E5':
                     if (keycodes.containsKey("ISO_8859_1_E5"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_E5"));
                     break;
-                case 0xc3a6:
+                case '\u00E6':
                     if (keycodes.containsKey("ISO_8859_1_E6"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_E6"));
                     break;
-                case 0xc3a7:
+                case '\u00E7':
                     if (keycodes.containsKey("ISO_8859_1_E7"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_E7"));
                     break;
-                case 0xc3a8:
+                case '\u00E8':
                     if (keycodes.containsKey("ISO_8859_1_E8"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_E8"));
                     break;
-                case 0xc3a9:
+                case '\u00E9':
                     if (keycodes.containsKey("ISO_8859_1_E9"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_E9"));
                     break;
-                case 0xc3ac:
+                case '\u00EC':
                     if (keycodes.containsKey("ISO_8859_1_EC"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_EC"));
                     break;
-                case 0xc3ad:
+                case '\u00ED':
                     if (keycodes.containsKey("ISO_8859_1_ED"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_ED"));
                     break;
-                case 0xc3b0:
+                case '\u00F0':
                     if (keycodes.containsKey("ISO_8859_1_F0"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_F0"));
                     break;
-                case 0xc3b2:
+                case '\u00F2':
                     if (keycodes.containsKey("ISO_8859_1_F2"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_F2"));
                     break;
-                case 0xc3b3:
+                case '\u00F3':
                     if (keycodes.containsKey("ISO_8859_1_F3"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_F3"));
                     break;
-                case 0xc3b6:
+                case '\u00F6':
                     if (keycodes.containsKey("ISO_8859_1_F6"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_F6"));
                     break;
-                case 0xc3b7:
+                case '\u00F7':
                     if (keycodes.containsKey("ISO_8859_1_F7"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_F7"));
                     else if (keycodes.containsKey("UNICODE_142"))
                         kbstrokes.add(keycodes.get("UNICODE_142"));
                     break;
-                case 0xc3b8:
+                case '\u00F8':
                     if (keycodes.containsKey("ISO_8859_1_F8"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_F8"));
                     break;
-                case 0xc3b9:
+                case '\u00F9':
                     if (keycodes.containsKey("ISO_8859_1_F9"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_F9"));
                     break;
-                case 0xc3ba:
+                case '\u00FA':
                     if (keycodes.containsKey("ISO_8859_1_FA"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_FA"));
                     break;
-                case 0xc3bc:
+                case '\u00FC':
                     if (keycodes.containsKey("ISO_8859_1_FC"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_FC"));
                     break;
-                case 0xc3be:
+                case '\u00FE':
                     if (keycodes.containsKey("ISO_8859_1_FE"))
                         kbstrokes.add(keycodes.get("ISO_8859_1_FE"));
                     //ISO_8859_5 characters
                     break;
-                case 0xd191:
+                case '\u0451':
                     if (keycodes.containsKey("ISO_8859_5_F1"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_F1"));
                     break;
-                case 0xd081:
+                case '\u0401':
                     if (keycodes.containsKey("ISO_8859_5_A1"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_A1"));
                     break;
-                case 0xe2809c:
+                case '\u201C':
                     if (keycodes.containsKey("ISO_8859_5_22"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_22"));
                     break;
-                case 0xd18a:
+                case '\u044A':
                     if (keycodes.containsKey("ISO_8859_5_CA"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_CA"));
                     break;
-                case 0xd0aa:
+                case '\u042A':
                     if (keycodes.containsKey("ISO_8859_5_EA"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_EA"));
                     break;
-                case 0xd0af:
+                case '\u04AF':
                     if (keycodes.containsKey("ISO_8859_5_CF"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_CF"));
                     break;
-                case 0xd18f:
+                case '\u044F':
                     if (keycodes.containsKey("ISO_8859_5_EF"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_EF"));
                     break;
-                case 0xd0a8:
+                case '\u0428':
                     if (keycodes.containsKey("ISO_8859_5_C8"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C8"));
                     break;
-                case 0xd188:
+                case '\u0448':
                     if (keycodes.containsKey("ISO_8859_5_E8"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E8"));
                     break;
-                case 0xd095:
+                case '\u0415':
                     if (keycodes.containsKey("ISO_8859_5_B5"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B5"));
                     break;
-                case 0xd0b5:
+                case '\u0435':
                     if (keycodes.containsKey("ISO_8859_5_D5"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D5"));
                     break;
-                case 0xd0a0:
+                case '\u0420':
                     if (keycodes.containsKey("ISO_8859_5_C0"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C0"));
                     break;
-                case 0xd180:
+                case '\u0440':
                     if (keycodes.containsKey("ISO_8859_5_E0"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E0"));
                     break;
-                case 0xd0a2:
+                case '\u0422':
                     if (keycodes.containsKey("ISO_8859_5_C2"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C2"));
                     break;
-                case 0xd182:
+                case '\u0442':
                     if (keycodes.containsKey("ISO_8859_5_E2"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E2"));
                     break;
-                case 0xd0ab:
+                case '\u042B':
                     if (keycodes.containsKey("ISO_8859_5_CB"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_CB"));
                     break;
-                case 0xd18b:
+                case '\u044B':
                     if (keycodes.containsKey("ISO_8859_5_EB"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_EB"));
                     break;
-                case 0xd0a3:
+                case '\u0423':
                     if (keycodes.containsKey("ISO_8859_5_C3"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C3"));
                     break;
-                case 0xd183:
+                case '\u0443':
                     if (keycodes.containsKey("ISO_8859_5_E3"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E3"));
                     break;
-                case 0xd098:
+                case '\u0418':
                     if (keycodes.containsKey("ISO_8859_5_B8"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B8"));
                     break;
-                case 0xd0b8:
+                case '\u0438':
                     if (keycodes.containsKey("ISO_8859_5_D8"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D8"));
                     break;
-                case 0xd09e:
+                case '\u041E':
                     if (keycodes.containsKey("ISO_8859_5_BE"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_BE"));
                     break;
-                case 0xd0be:
+                case '\u043E':
                     if (keycodes.containsKey("ISO_8859_5_DE"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_DE"));
                     break;
-                case 0xd09f:
+                case '\u041F':
                     if (keycodes.containsKey("ISO_8859_5_BF"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_BF"));
                     break;
-                case 0xd0bf:
+                case '\u043F':
                     if (keycodes.containsKey("ISO_8859_5_DF"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_DF"));
                     break;
-                case 0xd0ae:
+                case '\u042E':
                     if (keycodes.containsKey("ISO_8859_5_CE"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_CE"));
                     break;
-                case 0xd18e:
+                case '\u044E':
                     if (keycodes.containsKey("ISO_8859_5_EE"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_EE"));
                     break;
-                case 0xd0a9:
+                case '\u0429':
                     if (keycodes.containsKey("ISO_8859_5_C9"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C9"));
                     break;
-                case 0xd189:
+                case '\u0449':
                     if (keycodes.containsKey("ISO_8859_5_E9"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E9"));
                     break;
-                case 0xd090:
+                case '\u0410':
                     if (keycodes.containsKey("ISO_8859_5_B0"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B0"));
                     break;
-                case 0xd0b0:
+                case '\u0430':
                     if (keycodes.containsKey("ISO_8859_5_D0"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D0"));
                     break;
-                case 0xd0a1:
+                case '\u0421':
                     if (keycodes.containsKey("ISO_8859_5_C1"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C1"));
                     break;
-                case 0xd181:
+                case '\u0441':
                     if (keycodes.containsKey("ISO_8859_5_E1"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E1"));
                     break;
-                case 0xd094:
+                case '\u0414':
                     if (keycodes.containsKey("ISO_8859_5_B4"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B4"));
                     break;
-                case 0xd0b4:
+                case '\u0434':
                     if (keycodes.containsKey("ISO_8859_5_D4"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D4"));
                     break;
-                case 0xd0a4:
+                case '\u0424':
                     if (keycodes.containsKey("ISO_8859_5_C0"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C0"));
                     break;
-                case 0xd184:
+                case '\u0444':
                     if (keycodes.containsKey("ISO_8859_5_D0"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D0"));
                     break;
-                case 0xd093:
+                case '\u0413':
                     if (keycodes.containsKey("ISO_8859_5_B3"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B3"));
                     break;
-                case 0xd0b3:
+                case '\u0433':
                     if (keycodes.containsKey("ISO_8859_5_D3"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D3"));
                     break;
-                case 0xd0a7:
+                case '\u0427':
                     if (keycodes.containsKey("ISO_8859_5_C3"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C3"));
                     break;
-                case 0xd187:
+                case '\u0447':
                     if (keycodes.containsKey("ISO_8859_5_E3"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E3"));
                     break;
-                case 0xd099:
+                case '\u0419':
                     if (keycodes.containsKey("ISO_8859_5_B9"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B9"));
                     break;
-                case 0xd0b9:
+                case '\u0439':
                     if (keycodes.containsKey("ISO_8859_5_D9"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D9"));
                     break;
-                case 0xd09a:
+                case '\u041A':
                     if (keycodes.containsKey("ISO_8859_5_BA"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_BA"));
                     break;
-                case 0xd0ba:
+                case '\u043A':
                     if (keycodes.containsKey("ISO_8859_5_DA"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_DA"));
                     break;
-                case 0xd09b:
+                case '\u041B':
                     if (keycodes.containsKey("ISO_8859_5_BB"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_BB"));
                     break;
-                case 0xd0bb:
+                case '\u043B':
                     if (keycodes.containsKey("ISO_8859_5_DB"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_DB"));
                     break;
-                case 0xd0ac:
+                case '\u042C':
                     if (keycodes.containsKey("ISO_8859_5_CC"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_CC"));
                     break;
-                case 0xd18c:
+                case '\u044C':
                     if (keycodes.containsKey("ISO_8859_5_EC"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_EC"));
                     break;
-                case 0xd096:
+                case '\u0416':
                     if (keycodes.containsKey("ISO_8859_5_B6"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B6"));
                     break;
-                case 0xd0b6:
+                case '\u0436':
                     if (keycodes.containsKey("ISO_8859_5_D6"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D6"));
                     break;
-                case 0xe28496:
+                case '\u2116':
                     if (keycodes.containsKey("ISO_8859_5_F0"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_F0"));
                     break;
-                case 0xd097:
+                case '\u0417':
                     if (keycodes.containsKey("ISO_8859_5_B7"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B7"));
                     break;
-                case 0xd0b7:
+                case '\u0437':
                     if (keycodes.containsKey("ISO_8859_5_D7"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D7"));
                     break;
-                case 0xd0a5:
+                case '\u0425':
                     if (keycodes.containsKey("ISO_8859_5_C5"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C5"));
                     break;
-                case 0xd185:
+                case '\u0445':
                     if (keycodes.containsKey("ISO_8859_5_E5"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E5"));
                     break;
-                case 0xd0a6:
+                case '\u0426':
                     if (keycodes.containsKey("ISO_8859_5_C6"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_C6"));
                     break;
-                case 0xd186:
+                case '\u0446':
                     if (keycodes.containsKey("ISO_8859_5_E6"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_E6"));
                     break;
-                case 0xd092:
+                case '\u0412':
                     if (keycodes.containsKey("ISO_8859_5_B2"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B2"));
                     break;
-                case 0xd0b2:
+                case '\u0432':
                     if (keycodes.containsKey("ISO_8859_5_D2"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D2"));
                     break;
-                case 0xd091:
+                case '\u0411':
                     if (keycodes.containsKey("ISO_8859_5_B1"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_B1"));
                     break;
-                case 0xd0b1:
+                case '\u0431':
                     if (keycodes.containsKey("ISO_8859_5_D1"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_D1"));
                     break;
-                case 0xd09d:
+                case '\u041D':
                     if (keycodes.containsKey("ISO_8859_5_BD"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_BD"));
                     break;
-                case 0xd0bd:
+                case '\u043D':
                     if (keycodes.containsKey("ISO_8859_5_DD"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_DD"));
                     break;
-                case 0xd09c:
+                case '\u041C':
                     if (keycodes.containsKey("ISO_8859_5_BC"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_BC"));
                     break;
-                case 0xd0bc:
+                case '\u043C':
                     if (keycodes.containsKey("ISO_8859_5_DC"))
                         kbstrokes.add(keycodes.get("ISO_8859_5_DC"));
                     //UNICODE characters
                     break;
-                case 0xc48d:
+                case '\u010D':
                     if (keycodes.containsKey("UNICODE_10D"))
                         kbstrokes.add(keycodes.get("UNICODE_10D"));
                     break;
-                case 0xc5a1:
+                case '\u0161':
                     if (keycodes.containsKey("UNICODE_161"))
                         kbstrokes.add(keycodes.get("UNICODE_161"));
                     break;
-                case 0xc5be:
+                case '\u017E':
                     if (keycodes.containsKey("UNICODE_17E"))
                         kbstrokes.add(keycodes.get("UNICODE_17E"));
                     break;
-                case 0xc487:
+                case '\u0107':
                     if (keycodes.containsKey("UNICODE_107"))
                         kbstrokes.add(keycodes.get("UNICODE_107"));
                     break;
-                case 0xc491:
+                case '\u0111':
                     if (keycodes.containsKey("UNICODE_111"))
                         kbstrokes.add(keycodes.get("UNICODE_111"));
                     break;
-                case 0xc48c:
+                case '\u010C':
                     if (keycodes.containsKey("UNICODE_10C"))
                         kbstrokes.add(keycodes.get("UNICODE_10C"));
                     break;
-                case 0xc5a0:
+                case '\u0160':
                     if (keycodes.containsKey("UNICODE_160"))
                         kbstrokes.add(keycodes.get("UNICODE_160"));
                     break;
-                case 0xc5bd:
+                case '\u017D':
                     if (keycodes.containsKey("UNICODE_17D"))
                         kbstrokes.add(keycodes.get("UNICODE_17D"));
                     break;
-                case 0xc486:
+                case '\u0106':
                     if (keycodes.containsKey("UNICODE_106"))
                         kbstrokes.add(keycodes.get("UNICODE_106"));
                     break;
-                case 0xc490:
+                case '\u0110':
                     if (keycodes.containsKey("UNICODE_110"))
                         kbstrokes.add(keycodes.get("UNICODE_110"));
                     break;
-                case 0xc582:
+                case '\u02C7':
                     if (keycodes.containsKey("UNICODE_2C7"))
                         kbstrokes.add(keycodes.get("UNICODE_2C7"));
                     break;
-                case 0xc581:
+                case '\u02D8':
                     if (keycodes.containsKey("UNICODE_2D8"))
                         kbstrokes.add(keycodes.get("UNICODE_2D8"));
                     break;
-                case 0xe282ac:
+                case '\u20AC':
                     if (keycodes.containsKey("UNICODE_20AC"))
                         kbstrokes.add(keycodes.get("UNICODE_20AC"));
                     break;
-
-                 */
             }
         }
         return kbstrokes;
