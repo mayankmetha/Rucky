@@ -8,21 +8,28 @@
     android:orientation="vertical"
     tools:context="com.mayank.rucky.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarMain"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/accent" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -38,7 +45,9 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="false"
                 android:contentDescription="@string/app_name"
+                android:longClickable="false"
                 app:srcCompat="@drawable/ic_keyboard" />
 
             <Spinner
@@ -47,7 +56,15 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_toEndOf="@id/icon" />
+
         </RelativeLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/code"
+            android:background="@color/accent" />
 
         <EditText
             android:id="@+id/code"
@@ -75,6 +92,13 @@
             android:paddingRight="5dp"
             android:paddingBottom="5dp"
             tools:targetApi="o" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/code"
+            android:background="@color/accent" />
 
         <LinearLayout
             android:id="@+id/BtnGrp"

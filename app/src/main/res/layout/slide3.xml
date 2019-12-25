@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/slideTitle3"
-            android:textColor="@android:color/white"
+            android:textColor="@color/accent"
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
 
