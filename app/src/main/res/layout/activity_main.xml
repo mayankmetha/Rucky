@@ -27,7 +27,7 @@
             android:id="@+id/view_toolbar"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/accent" />
+            android:background="@drawable/divider" />
 
     </LinearLayout>
 
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_above="@id/code"
-            android:background="@color/accent" />
+            android:background="@drawable/divider" />
 
         <EditText
             android:id="@+id/code"
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/code"
-            android:background="@color/accent" />
+            android:background="@drawable/divider" />
 
         <LinearLayout
             android:id="@+id/BtnGrp"
