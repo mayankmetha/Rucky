@@ -69,6 +69,8 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 }
             }
             MainActivity.didThemeChange = true;
+            getActivity().finish();
+            startActivity(getActivity().getIntent());
             return true;
         });
 
@@ -95,6 +97,8 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
                 }
             }
+            getActivity().finish();
+            startActivity(getActivity().getIntent());
             return true;
         }));
 
