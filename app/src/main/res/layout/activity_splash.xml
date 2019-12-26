@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/border"
     tools:context=".SplashActivity">
 
 
@@ -42,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_margin="32sp"
+        android:layout_margin="64sp"
         android:text="@string/splashScreen"
         android:textColor="@color/accent"
         android:textSize="32sp"
