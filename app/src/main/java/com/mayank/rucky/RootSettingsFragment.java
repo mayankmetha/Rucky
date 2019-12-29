@@ -202,12 +202,42 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
 
+        Preference gitPreference = findPreference("git");
+        assert gitPreference != null;
+        gitPreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity(), BrowserActivity.class);
+            intent.putExtra(activityTitle, "GitHub Issues");
+            intent.putExtra(webViewID, "https://github.com/mayankmetha/Rucky/issues");
+            startActivity(intent);
+            return true;
+        });
+
         Preference localePreference = findPreference("locale");
         assert localePreference != null;
         localePreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
             intent.putExtra(activityTitle, "Localization");
             intent.putExtra(webViewID, "https://mayankmetha.github.io/Rucky/");
+            startActivity(intent);
+            return true;
+        });
+
+        Preference patreonPreference = findPreference("patreon");
+        assert patreonPreference != null;
+        patreonPreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity(), BrowserActivity.class);
+            intent.putExtra(activityTitle, "Patreon");
+            intent.putExtra(webViewID, "https://www.patreon.com/mayankmethad");
+            startActivity(intent);
+            return true;
+        });
+
+        Preference paypalPreference = findPreference("paypal");
+        assert paypalPreference != null;
+        paypalPreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity(), BrowserActivity.class);
+            intent.putExtra(activityTitle, "PayPal");
+            intent.putExtra(webViewID, "https://www.paypal.me/mayankmetha");
             startActivity(intent);
             return true;
         });

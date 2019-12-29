@@ -38,37 +38,61 @@
         app:title="@string/setting_about">
 
         <Preference
-            app:key="developer"
             app:icon="@drawable/ic_developer"
-            app:title="@string/setting_developer_title"
-            app:summary="@string/setting_developer" />
+            app:key="developer"
+            app:summary="@string/setting_developer"
+            app:title="@string/setting_developer_title" />
 
         <Preference
-            app:key="version"
             app:icon="@drawable/ic_version"
+            app:key="version"
             app:title="@string/settings_version_title" />
 
         <Preference
-            app:key="arch"
             app:icon="@drawable/ic_arch"
+            app:key="arch"
             app:title="@string/settings_arch_title" />
 
         <Preference
-            app:key="source"
             app:icon="@drawable/ic_store"
+            app:key="source"
             app:title="Distribution" />
 
         <Preference
-            app:key="lic"
             app:icon="@drawable/ic_license"
-            app:title="@string/settings_lic_title"
-            app:summary="@string/settings_lic_desc" />
+            app:key="lic"
+            app:summary="@string/settings_lic_desc"
+            app:title="@string/settings_lic_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="support"
+        app:title="@string/settings_support">
+
+        <Preference
+            app:key="git"
+            app:icon="@drawable/ic_github"
+            app:title="@string/settings_git_title"
+            app:summary="@string/settings_git_desc"/>
 
         <Preference
             app:key="locale"
             app:icon="@drawable/ic_localize"
             app:title="@string/settings_locale_title"
             app:summary="@string/settings_locale_desc"/>
+
+        <Preference
+            app:key="patreon"
+            app:icon="@drawable/ic_patreon"
+            app:title="@string/setting_patreon_title"
+            app:summary="@string/setting_patreon_desc"/>
+
+        <Preference
+            app:key="paypal"
+            app:icon="@drawable/ic_paypal"
+            app:title="@string/setting_paypal_title"
+            app:summary="@string/setting_paypal_desc"/>
 
     </PreferenceCategory>
 
