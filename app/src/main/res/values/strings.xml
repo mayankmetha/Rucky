@@ -35,6 +35,7 @@
 
     <string name="loadBtn">Load</string>
     <string name="saveBtn">Save</string>
+    <string name="delBtn">Delete</string>
     <string name="runBtn">Run</string>
 
     <string name="codeHint">Type or load rubber ducky scripts here</string>

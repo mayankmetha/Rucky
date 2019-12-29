@@ -130,6 +130,16 @@
                 app:srcCompat="@drawable/ic_load" />
 
             <ImageButton
+                android:id="@+id/delBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/delBtn"
+                android:text="@string/delBtn"
+                app:srcCompat="@drawable/ic_delete" />
+
+            <ImageButton
                 android:id="@+id/svBtb"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"

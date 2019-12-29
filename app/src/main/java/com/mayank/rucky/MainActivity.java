@@ -163,9 +163,47 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, languages);
         langAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         language.setAdapter(langAdapter);
+        ImageButton DelBtn = findViewById(R.id.delBtn);
         ImageButton SaveBtn = findViewById(R.id.svBtb);
         ImageButton LoadBtn = findViewById(R.id.ldBtn);
         ImageButton ExeBtn = findViewById(R.id.exBtn);
+        DelBtn.setOnClickListener(view -> {
+            final File[] tmp = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
+            assert tmp != null;
+            ArrayList<File> files = new ArrayList<>();
+            if (!advSecurity) {
+                for (File file : tmp) {
+                    if (file.getPath().endsWith(".txt")) {
+                        files.add(file);
+                    }
+                }
+            } else {
+                files.addAll(Arrays.asList(tmp));
+            }
+            CharSequence[] fileName = new CharSequence[files.size()];
+            for (int i = 0; i < files.size(); i++) {
+                fileName[i] = files.get(i).getName();
+            }
+            AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Select File");
+            builder.setCancelable(false);
+            builder.setItems(fileName, (dialog, i) -> {
+                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
+                file.delete();
+                if(file.exists()){
+                    try {
+                        file.getCanonicalFile().delete();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    if(file.exists()){
+                        getApplicationContext().deleteFile(file.getName());
+                    }
+                }
+            });
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            builder.show();
+        });
         SaveBtn.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("File Name");
@@ -442,6 +480,16 @@ public class MainActivity extends AppCompatActivity {
         File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
         if (fDel.exists()) {
             fDel.delete();
+            if(fDel.exists()){
+                try {
+                    fDel.getCanonicalFile().delete();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if(fDel.exists()){
+                    getApplicationContext().deleteFile(fDel.getName());
+                }
+            }
         }
         downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
         DownloadManager.Request req = new DownloadManager.Request(uri);
