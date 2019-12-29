@@ -27,7 +27,7 @@
 
         <Preference
             app:key="uninstall"
-            app:icon="@drawable/ic_delete"
+            app:icon="@drawable/ic_uninstall"
             app:title="@string/delete_dep_title"
             app:summary="@string/delete_dep_summary" />
 

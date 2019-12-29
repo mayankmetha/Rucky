@@ -203,7 +203,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_perm_device_information_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/notification/ic_folder_special_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -213,9 +213,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ff5722" />
-                            <entry key="outputName" value="ic_paypal" />
+                            <entry key="outputName" value="ic_folder" />
                             <entry key="sourceFile" value="$USER_HOME$/Desktop/paypal.svg" />
                           </map>
                         </option>
