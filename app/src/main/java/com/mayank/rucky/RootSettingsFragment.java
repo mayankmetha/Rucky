@@ -69,8 +69,16 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 }
             }
             MainActivity.didThemeChange = true;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                Intent i = new Intent(getActivity(), TransparentActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            } else {
+                Intent i = new Intent(getActivity(), SplashActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            }
             getActivity().finish();
-            startActivity(getActivity().getIntent());
             return true;
         });
 
@@ -97,8 +105,16 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
                 }
             }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                Intent i = new Intent(getActivity(), TransparentActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            } else {
+                Intent i = new Intent(getActivity(), SplashActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            }
             getActivity().finish();
-            startActivity(getActivity().getIntent());
             return true;
         }));
 

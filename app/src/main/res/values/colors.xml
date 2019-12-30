@@ -26,4 +26,6 @@
         <item>@color/dot_dark_screen</item>
     </array>
 
+    <color name="transparent_black">#00000000</color>
+
 </resources>

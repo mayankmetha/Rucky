@@ -105,6 +105,7 @@
         <activity android:name=".InitActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SettingsActivity" />
+        <activity android:name=".TransparentActivity" android:theme="@style/Transparent"/>
     </application>
 
 </manifest>
