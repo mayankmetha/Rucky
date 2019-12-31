@@ -17,9 +17,11 @@
         <item>@color/dot_light_screen</item>
         <item>@color/dot_light_screen</item>
         <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
     </array>
 
     <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen</item>
         <item>@color/dot_dark_screen</item>
         <item>@color/dot_dark_screen</item>
         <item>@color/dot_dark_screen</item>

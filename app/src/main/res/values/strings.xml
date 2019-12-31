@@ -56,6 +56,9 @@
     <string name="slideTitle4" translatable="false">Dumper</string>
     <string name="slideDesc4">Load the Rubber Ducky Scripts you saved!</string>
 
+    <string name="slideTitle5" translatable="false">Disposer</string>
+    <string name="slideDesc5">Delete the Rubber Ducky Scripts you saved!</string>
+
     <string name="icon" translatable="false">icon</string>
 
     <string name="splashScreen" translatable="false">RUCKY</string>
