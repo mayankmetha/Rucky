@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
         cleanup();
         Spinner language = findViewById(R.id.langMenu);
         languages.add("American English");
-        //languages.add("Turkish");
-        //languages.add("Swedish");
-        //languages.add("Slovenian");
+        languages.add("Turkish");
+        languages.add("Swedish");
+        languages.add("Slovenian");
         //languages.add("Russian");
         //languages.add("Portuguese");
         //languages.add("Norwegian");
