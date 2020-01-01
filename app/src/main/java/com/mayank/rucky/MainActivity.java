@@ -89,11 +89,10 @@ public class MainActivity extends AppCompatActivity {
     public static boolean updateEnable = false;
     private static AlertDialog waitDialog;
     public static SecretKey key;
-    ArrayList<String> languages;
+    ArrayList<String> languages = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
-        languages = new ArrayList<>();
         super.onCreate(savedInstanceState);
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
