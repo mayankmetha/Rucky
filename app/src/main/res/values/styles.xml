@@ -73,13 +73,19 @@
     </style>
 
     <style name="IconButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textSize">0dp</item>
+        <item name="android:textSize">0sp</item>
         <item name="backgroundTint">@color/transparent_black</item>
         <item name="android:textColor">@color/accent</item>
         <item name="android:background">@color/transparent_black</item>
         <item name="iconTint">@color/accent</item>
         <item name="iconPadding">0dp</item>
         <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="InitButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent_black</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:background">@color/transparent_black</item>
     </style>
 
     <style name="PreferenceFragment.Material" tools:override="true">
