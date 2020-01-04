@@ -2,7 +2,6 @@ package com.mayank.rucky;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -26,11 +25,12 @@ import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
@@ -162,10 +162,10 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, languages);
         langAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         language.setAdapter(langAdapter);
-        ImageButton DelBtn = findViewById(R.id.delBtn);
-        ImageButton SaveBtn = findViewById(R.id.svBtb);
-        ImageButton LoadBtn = findViewById(R.id.ldBtn);
-        ImageButton ExeBtn = findViewById(R.id.exBtn);
+        Button DelBtn = findViewById(R.id.delBtn);
+        Button SaveBtn = findViewById(R.id.svBtb);
+        Button LoadBtn = findViewById(R.id.ldBtn);
+        Button ExeBtn = findViewById(R.id.exBtn);
         DelBtn.setOnClickListener(view -> {
             final File[] tmp = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
             assert tmp != null;

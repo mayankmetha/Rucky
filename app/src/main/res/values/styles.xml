@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Light Theme -->
-    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeLight" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:colorBackground">@color/pri_light</item>
         <item name="android:colorForeground">@color/sec_light</item>
         <item name="colorPrimary">@color/pri_light</item>
@@ -19,10 +19,12 @@
         <item name="colorAccent">@color/accent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="alertDialogTheme">@style/AlertLight</item>
+        <item name="alertDialogStyle">@style/AlertLight</item>
     </style>
 
     <!-- Dark Theme -->
-    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppThemeDark" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:colorBackground">@color/pri_dark</item>
         <item name="android:colorForeground">@color/sec_dark</item>
         <item name="colorPrimary">@color/pri_dark</item>
@@ -41,10 +43,48 @@
         <item name="colorAccent">@color/accent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="alertDialogTheme">@style/AlertDark</item>
+        <item name="alertDialogStyle">@style/AlertDark</item>
     </style>
 
-    <style name="Transparent" parent="Theme.AppCompat.NoActionBar">
+    <style name="AlertLight" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/Alert.Button</item>
+        <item name="android:background">@color/pri_light</item>
+    </style>
+
+    <style name="AlertDark" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/Alert.Button</item>
+        <item name="android:background">@color/pri_dark</item>
+    </style>
+
+    <style name="Alert.Button" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent_black</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="rippleColor">@color/accent</item>
+    </style>
+
+    <style name="Transparent" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowBackground">@color/transparent_black</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/accent</item>
+        <item name="hintTextColor">@color/accent</item>
+    </style>
+
+    <style name="IconButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textSize">0dp</item>
+        <item name="backgroundTint">@color/transparent_black</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:background">@color/transparent_black</item>
+        <item name="iconTint">@color/accent</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="PreferenceFragment.Material" tools:override="true">
+        <item name="android:divider">@drawable/divider</item>
+        <item name="android:dividerHeight">1dp</item>
     </style>
 
 </resources>

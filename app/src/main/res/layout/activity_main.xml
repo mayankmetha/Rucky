@@ -63,13 +63,14 @@
             android:id="@+id/divider2"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_above="@id/code"
+            android:layout_above="@id/codeLayout"
             android:background="@drawable/divider" />
 
-        <EditText
-            android:id="@+id/code"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/codeLayout"
+            style="@style/EditTextStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@id/BtnGrp"
             android:layout_below="@id/LangLayout"
             android:layout_marginStart="5dp"
@@ -77,27 +78,32 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
-            android:gravity="start"
-            android:hint="@string/codeHint"
-            android:importantForAutofill="no"
-            android:inputType="textMultiLine"
-            android:lines="25"
-            android:padding="5dp"
-            android:paddingStart="5dp"
-            android:paddingLeft="5dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="5dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="5dp"
-            tools:targetApi="o" />
+            android:layout_marginBottom="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="@string/codeHint"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:lines="25"
+                android:padding="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:id="@+id/divider3"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@id/code"
+            android:layout_below="@id/codeLayout"
             android:background="@drawable/divider" />
 
         <LinearLayout
@@ -119,45 +125,49 @@
             android:paddingRight="5dp"
             android:paddingBottom="5dp">
 
-            <ImageButton
+            <com.google.android.material.button.MaterialButton
+                style="@style/IconButton"
                 android:id="@+id/ldBtn"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/loadBtn"
                 android:text="@string/loadBtn"
-                app:srcCompat="@drawable/ic_load" />
+                app:icon="@drawable/ic_load"
+                app:rippleColor="@color/accent"/>
 
-            <ImageButton
+            <com.google.android.material.button.MaterialButton
+                style="@style/IconButton"
                 android:id="@+id/delBtn"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/delBtn"
                 android:text="@string/delBtn"
-                app:srcCompat="@drawable/ic_delete" />
+                app:icon="@drawable/ic_delete"
+                app:rippleColor="@color/accent"/>
 
-            <ImageButton
+            <com.google.android.material.button.MaterialButton
+                style="@style/IconButton"
                 android:id="@+id/svBtb"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/saveBtn"
                 android:text="@string/saveBtn"
-                app:srcCompat="@drawable/ic_save" />
+                app:icon="@drawable/ic_save"
+                app:rippleColor="@color/accent"/>
 
-            <ImageButton
+            <com.google.android.material.button.MaterialButton
+                style="@style/IconButton"
                 android:id="@+id/exBtn"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/runBtn"
                 android:text="@string/runBtn"
-                app:srcCompat="@drawable/ic_run" />
+                app:icon="@drawable/ic_run"
+                app:rippleColor="@color/accent"/>
 
         </LinearLayout>
 
