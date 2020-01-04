@@ -5,7 +5,7 @@
     <string name="dark_theme_title">暗色模式</string>
     <string name="dark_theme_summary">不会保留主屏幕快捷方式。</string>
     <string name="hide_icon_title">隐藏启动器图标</string>
-    <string name="hide_icon_summary">拨打*#78259#*#*#*来启动.</string>
+    <string name="hide_icon_summary">拨打*#*#78259#*#*来启动.</string>
     <string name="delete_dep_title">卸载应用</string>
     <string name="delete_dep_summary">清理并卸载应用。</string>
     <string name="settings_sec_title">B. 预先安全</string>

@@ -5,7 +5,7 @@
     <string name="dark_theme_title">Synkkä tila</string>
     <string name="dark_theme_summary">Älä säilytä näytönoikotietä.</string>
     <string name="hide_icon_title">Piilota aloitustoiminto Icon</string>
-    <string name="hide_icon_summary">Kaiva * ##78259#* laukaisua varten.</string>
+    <string name="hide_icon_summary">Kaiva *#*#78259#*#* laukaisua varten.</string>
     <string name="delete_dep_title">Poista App-asennus</string>
     <string name="delete_dep_summary">Puhdista ja poista sovellus.</string>
     <string name="settings_sec_title">Ennakkosuojaus</string>

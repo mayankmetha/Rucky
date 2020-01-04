@@ -5,7 +5,7 @@
     <string name="dark_theme_title">Mørk tilstand</string>
     <string name="dark_theme_summary">Vil ikke bevare genvej til hjemmeskærm.</string>
     <string name="hide_icon_title">Skjul launcher-ikon</string>
-    <string name="hide_icon_summary">Dial * #*#78259#*#* til start.</string>
+    <string name="hide_icon_summary">Dial *#*#78259#*#* til start.</string>
     <string name="delete_dep_title">Fjern installation af program</string>
     <string name="delete_dep_summary">Ryd op og afinstallation af app.</string>
     <string name="settings_sec_title">Forhåndssikkerhed</string>
