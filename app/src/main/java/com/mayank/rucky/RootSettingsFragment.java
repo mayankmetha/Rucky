@@ -151,10 +151,16 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             }
             editor.putBoolean(PREF_GEN_KEY,true).apply();
             editor.putBoolean(PREF_SETTING_ADV_SECURITY,switched).apply();
-            Intent intent = new Intent(getActivity(), SplashActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
-            getActivity().finishAffinity();
-            startActivity(intent);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                Intent i = new Intent(getActivity(), TransparentActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            } else {
+                Intent i = new Intent(getActivity(), SplashActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            }
+            getActivity().finish();
             return true;
         });
 
