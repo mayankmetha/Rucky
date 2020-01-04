@@ -2,7 +2,7 @@
 name: Missing/Error keyboard key
 about: Missing/Wrong keyboard character inclusion/correction.
 title: ''
-labels: ''
+labels: key
 assignees: mayankmetha
 
 ---
