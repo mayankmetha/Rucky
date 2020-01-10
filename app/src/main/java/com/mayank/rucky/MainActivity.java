@@ -607,12 +607,20 @@ public class MainActivity extends AppCompatActivity {
 
     void installUpdate() {
         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
-        Intent installer = new Intent(Intent.ACTION_INSTALL_PACKAGE);
-        installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        Uri apkUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
-        installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
-        installer.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        this.startActivity(installer);
+        Intent installer;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Uri apkUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
+            installer = new Intent(Intent.ACTION_INSTALL_PACKAGE);
+            installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
+            installer.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        } else {
+            Uri apkUri = Uri.fromFile(file);
+            installer = new Intent(Intent.ACTION_VIEW);
+            installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
+        }
+        startActivity(installer);
     }
 
     private void permission() {
