@@ -49,12 +49,26 @@
 
     <style name="AlertLight" parent="Theme.MaterialComponents.Light.Dialog.Alert">
         <item name="buttonBarButtonStyle">@style/Alert.Button</item>
-        <item name="android:background">@color/pri_light</item>
+        <item name="android:windowBackground">@drawable/dialog_light</item>
+        <item name="android:shadowColor">@null</item>
+        <item name="android:shadowDx">@null</item>
+        <item name="android:shadowDy">@null</item>
+        <item name="android:ambientShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
+        <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
     </style>
 
     <style name="AlertDark" parent="Theme.MaterialComponents.Dialog.Alert">
         <item name="buttonBarButtonStyle">@style/Alert.Button</item>
-        <item name="android:background">@color/pri_dark</item>
+        <item name="android:windowBackground">@drawable/dialog_dark</item>
+        <item name="android:shadowColor">@null</item>
+        <item name="android:shadowDx">@null</item>
+        <item name="android:shadowDy">@null</item>
+        <item name="android:ambientShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
+        <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
     </style>
 
     <style name="Alert.Button" parent="Widget.MaterialComponents.Button.TextButton">
