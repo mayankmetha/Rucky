@@ -11,7 +11,7 @@ public class SecretCodeReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if(Objects.equals(intent.getAction(), "android.provider.Telephony.SECRET_CODE")) {
-            Intent i = new Intent(context, MainActivity.class);
+            Intent i = new Intent(context, SplashActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
         }
