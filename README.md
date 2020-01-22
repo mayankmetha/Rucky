@@ -12,4 +12,4 @@ A USB HID Rubber Ducky Script All-In-One tool.
 
 [![HID](https://img.shields.io/badge/Legacy%20HID-Support%20Ended-lightgreen)](https://github.com/mayankmetha/Rucky-Legacy-HID)
 
-[![RPi](https://img.shields.io/badge/Extension-Raspberry%20Pi-red)](https://github.com/mayankmetha/Rucky-Ext-RPi)
+[![RPi](https://img.shields.io/badge/Extension-Raspberry%20Pi-maroon)](https://github.com/mayankmetha/Rucky-Ext-RPi)
