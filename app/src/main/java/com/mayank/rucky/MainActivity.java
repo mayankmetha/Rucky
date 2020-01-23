@@ -17,6 +17,8 @@ import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -106,18 +108,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
             permission();
-            if(root) {
-                supportedFiles();
-            } else {
+            if(!root) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Root Access Required For USB Cable Attack!");
                 builder.setCancelable(false);
                 builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
-                builder.setNegativeButton("Exit", ((dialog, which) -> {
-                    moveTaskToBack(true);
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                    System.exit(1);
-                }));
                 AlertDialog rootMissing = builder.create();
                 rootMissing.show();
             }
@@ -306,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
         });
         ExeBtn.setOnClickListener(view -> {
             EditText scripts = findViewById(R.id.code);
-            launchAttack(languages.indexOf(mode.getSelectedItem().toString()),languages.indexOf(language.getSelectedItem().toString()),scripts.getText().toString());
+            launchAttack(modes.indexOf(mode.getSelectedItem().toString()),languages.indexOf(language.getSelectedItem().toString()),scripts.getText().toString());
         });
         if (updateEnable)
             updater(0);
@@ -314,18 +309,64 @@ public class MainActivity extends AppCompatActivity {
 
     void launchAttack(int mode, int language, String scripts) {
         if(mode == 0) {
-            try {
-                hid exeScript = new hid(language);
-                exeScript.parse(scripts);
-                ArrayList<String> cmds = exeScript.getCmd();
-                for(int i = 0; i < cmds.size(); i++) {
-                    dos.writeBytes(cmds.get(i));
-                    dos.flush();
+            if(root) {
+                supportedFiles();
+                try {
+                    hid exeScript = new hid(language);
+                    exeScript.parse(scripts);
+                    ArrayList<String> cmds = exeScript.getCmd();
+                    for(int i = 0; i < cmds.size(); i++) {
+                        dos.writeBytes(cmds.get(i));
+                        dos.flush();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Root Access Required For USB Cable Attack!");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                builder.setNegativeButton("Exit", ((dialog, which) -> {
+                    moveTaskToBack(true);
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                    System.exit(1);
+                }));
+                AlertDialog rootMissing = builder.create();
+                rootMissing.show();
             }
         }
+        if(mode == 1) {
+
+            if(getPi()) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Pi Connected!");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                AlertDialog pi = builder.create();
+                pi.show();
+            } else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Pi Disconnected!");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                AlertDialog pi = builder.create();
+                pi.show();
+            }
+        }
+    }
+
+    private boolean getPi() {
+        boolean support = false;
+        WifiManager wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        assert wifi != null;
+        if(wifi.isWifiEnabled()) {
+            WifiInfo info = wifi.getConnectionInfo();
+            if(info.getSSID().equals("RUCKY")) {
+                support = true;
+            }
+        }
+        return support;
     }
 
     private NotificationManager getManager() {
@@ -673,11 +714,6 @@ public class MainActivity extends AppCompatActivity {
             builder.setTitle("Kernel Not Supported For USB Cable Attack!");
             builder.setCancelable(false);
             builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
-            builder.setNegativeButton("Exit", (dialog, which) -> {
-                moveTaskToBack(true);
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(1);
-            });
             AlertDialog kernelExit = builder.create();
             kernelExit.show();
         } else {

@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_margin="128sp"
+        android:layout_margin="72sp"
         android:text="@string/splashScreen"
         android:textColor="@color/accent"
         android:textSize="32sp"
