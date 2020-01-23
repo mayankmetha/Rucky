@@ -35,29 +35,86 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/LangLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/settingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
 
-            <ImageView
-                android:id="@+id/icon"
-                style="?android:attr/buttonBarButtonStyle"
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="false"
-                android:contentDescription="@string/app_name"
-                android:longClickable="false"
-                app:srcCompat="@drawable/ic_keyboard" />
+                android:layout_weight="1">
 
-            <Spinner
-                android:id="@+id/langMenu"
-                android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/iconLang"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    android:longClickable="false"
+                    app:srcCompat="@drawable/ic_keyboard" />
+
+                <Spinner
+                    android:id="@+id/langMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/iconLang" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toEndOf="@id/icon" />
+                android:layout_weight="1">
 
-        </RelativeLayout>
+                <ImageView
+                    android:id="@+id/iconMode"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    android:longClickable="false"
+                    app:srcCompat="@drawable/ic_device" />
+
+                <Spinner
+                    android:id="@+id/modeMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/iconMode" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
+
+        </LinearLayout>
 
         <View
             android:id="@+id/divider2"
@@ -72,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/BtnGrp"
-            android:layout_below="@id/LangLayout"
+            android:layout_below="@id/settingLayout"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
@@ -125,6 +182,11 @@
             android:paddingRight="5dp"
             android:paddingBottom="5dp">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
+
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/ldBtn"
@@ -135,6 +197,11 @@
                 android:text="@string/loadBtn"
                 app:icon="@drawable/ic_load"
                 app:rippleColor="@color/accent"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
@@ -147,6 +214,11 @@
                 app:icon="@drawable/ic_delete"
                 app:rippleColor="@color/accent"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
+
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/svBtb"
@@ -158,6 +230,11 @@
                 app:icon="@drawable/ic_save"
                 app:rippleColor="@color/accent"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
+
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/exBtn"
@@ -168,6 +245,11 @@
                 android:text="@string/runBtn"
                 app:icon="@drawable/ic_run"
                 app:rippleColor="@color/accent"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/stick" />
 
         </LinearLayout>
 

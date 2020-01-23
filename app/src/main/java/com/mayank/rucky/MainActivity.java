@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     public DownloadManager downloadManager;
     public static int dlStatus;
     final static private int STORAGE_PERM = 0;
+    final static private int LOC_PERM = 1;
     public static final String CHANNEL_ID = "com.mayank.rucky";
     public static final String CHANNEL_NAME = "Update";
     private NotificationManager notificationManager;
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     private static AlertDialog waitDialog;
     public static SecretKey key;
     ArrayList<String> languages = new ArrayList<>();
+    ArrayList<String> modes = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -108,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 supportedFiles();
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Root Access Required!");
+                builder.setTitle("Root Access Required For USB Cable Attack!");
                 builder.setCancelable(false);
                 builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                 builder.setNegativeButton("Exit", ((dialog, which) -> {
@@ -162,6 +164,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, languages);
         langAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         language.setAdapter(langAdapter);
+        Spinner mode = findViewById(R.id.modeMenu);
+        modes.add("USB Cable (Root)");
+        modes.add("Raspberry Pi (Wi-Fi)");
+        ArrayAdapter<String> modeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, modes);
+        modeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mode.setAdapter(modeAdapter);
         Button DelBtn = findViewById(R.id.delBtn);
         Button SaveBtn = findViewById(R.id.svBtb);
         Button LoadBtn = findViewById(R.id.ldBtn);
@@ -298,9 +306,17 @@ public class MainActivity extends AppCompatActivity {
         });
         ExeBtn.setOnClickListener(view -> {
             EditText scripts = findViewById(R.id.code);
+            launchAttack(languages.indexOf(mode.getSelectedItem().toString()),languages.indexOf(language.getSelectedItem().toString()),scripts.getText().toString());
+        });
+        if (updateEnable)
+            updater(0);
+    }
+
+    void launchAttack(int mode, int language, String scripts) {
+        if(mode == 0) {
             try {
-                hid exeScript = new hid(languages.indexOf(language.getSelectedItem().toString()));
-                exeScript.parse(scripts.getText().toString());
+                hid exeScript = new hid(language);
+                exeScript.parse(scripts);
                 ArrayList<String> cmds = exeScript.getCmd();
                 for(int i = 0; i < cmds.size(); i++) {
                     dos.writeBytes(cmds.get(i));
@@ -309,9 +325,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        });
-        if (updateEnable)
-            updater(0);
+        }
     }
 
     private NotificationManager getManager() {
@@ -629,6 +643,11 @@ public class MainActivity extends AppCompatActivity {
                 || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERM);
         }
+        //LOCATION
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, LOC_PERM);
+        }
         //ROOT
         try {
             p = Runtime.getRuntime().exec("su");
@@ -651,7 +670,7 @@ public class MainActivity extends AppCompatActivity {
         File file2 = new File(pathDev,"hidg1");
         if(!file1.exists() && !file2.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Kernel Not Supported!");
+            builder.setTitle("Kernel Not Supported For USB Cable Attack!");
             builder.setCancelable(false);
             builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
             builder.setNegativeButton("Exit", (dialog, which) -> {
@@ -675,6 +694,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == STORAGE_PERM) {
+            if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                permission();
+            }
+        }
+        if (requestCode == LOC_PERM) {
             if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                 permission();
             }
