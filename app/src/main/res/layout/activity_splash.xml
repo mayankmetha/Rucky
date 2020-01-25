@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,16 +38,21 @@
             app:srcCompat="@drawable/splash_foreground" />
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/splashTextView"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_margin="72sp"
-        android:text="@string/splashScreen"
-        android:textColor="@color/accent"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        android:layout_centerInParent="true">
 
+        <TextView
+            android:id="@+id/splashTextView"
+            android:paddingTop="256sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splashScreen"
+            android:textColor="@color/accent"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
-</FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -51,9 +51,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0-alpha04'
     implementation 'androidx.preference:preference:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.guava:guava:28.1-jre'
-    api 'com.google.guava:guava:28.1-jre'
-    implementation 'com.google.guava:guava:28.1-android'
-    api 'com.google.guava:guava:28.1-android'
+    implementation 'com.google.guava:guava:28.2-jre'
+    api 'com.google.guava:guava:28.2-jre'
+    implementation 'com.google.guava:guava:28.2-android'
+    api 'com.google.guava:guava:28.2-android'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
 }
