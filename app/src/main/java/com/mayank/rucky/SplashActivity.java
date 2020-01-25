@@ -18,7 +18,6 @@ import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -172,7 +171,7 @@ public class SplashActivity extends AppCompatActivity {
         ImageView i = findViewById(R.id.imageViewFG);
         i.setColorFilter(getResources().getColor((SettingsActivity.darkTheme?R.color.pri_dark:R.color.pri_light)));
         FrameLayout l1 = findViewById(R.id.splashIcon);
-        TextView l2= findViewById(R.id.splashTextView);
+        FrameLayout l2= findViewById(R.id.splashTextView);
         l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
         new Handler().postDelayed(this::launchNext, 5000);

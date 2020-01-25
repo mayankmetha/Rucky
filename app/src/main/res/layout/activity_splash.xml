@@ -39,12 +39,12 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/splashTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
         <TextView
-            android:id="@+id/splashTextView"
             android:paddingTop="256sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
