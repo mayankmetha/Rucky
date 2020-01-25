@@ -78,8 +78,7 @@ public class MainActivity extends AppCompatActivity {
     public static long downloadRef;
     public DownloadManager downloadManager;
     public static int dlStatus;
-    final static private int STORAGE_PERM = 0;
-    final static private int LOC_PERM = 1;
+    final static private int PERM = 0;
     public static final String CHANNEL_ID = "com.mayank.rucky";
     public static final String CHANNEL_NAME = "Update";
     private NotificationManager notificationManager;
@@ -108,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
             permission();
+            getRoot();
             if(!root) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Root Access Required For USB Cable Attack!");
@@ -309,6 +309,7 @@ public class MainActivity extends AppCompatActivity {
 
     void launchAttack(int mode, int language, String scripts) {
         if(mode == 0) {
+            getRoot();
             if(root) {
                 supportedFiles();
                 try {
@@ -337,7 +338,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if(mode == 1) {
-
             if(getPi()) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Pi Connected!");
@@ -362,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
         assert wifi != null;
         if(wifi.isWifiEnabled()) {
             WifiInfo info = wifi.getConnectionInfo();
-            if(info.getSSID().equals("RUCKY")) {
+            if(info.getSSID().equals("\"RUCKY\"")) {
                 support = true;
             }
         }
@@ -408,6 +408,7 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(downloadBR, filter);
         if(updateEnable)
             updater(0);
+        permission();
     }
 
     @Override
@@ -679,17 +680,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void permission() {
-        //STORAGE
+        //Android permission
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-                || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERM);
-        }
-        //LOCATION
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 || ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, LOC_PERM);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, PERM);
         }
-        //ROOT
+    }
+
+    private void getRoot() {
         try {
             p = Runtime.getRuntime().exec("su");
             dos = new DataOutputStream(p.getOutputStream());
@@ -698,7 +698,9 @@ public class MainActivity extends AppCompatActivity {
                 dos.writeBytes("id\n");
                 dos.flush();
                 String rootCheck = dis.readLine();
-                if(rootCheck.contains("uid=0")) root = true;
+                if(rootCheck.contains("uid=0")) {
+                    root = true;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -729,12 +731,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == STORAGE_PERM) {
-            if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                permission();
-            }
-        }
-        if (requestCode == LOC_PERM) {
+        if (requestCode == PERM) {
             if (grantResults.length <= 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                 permission();
             }
