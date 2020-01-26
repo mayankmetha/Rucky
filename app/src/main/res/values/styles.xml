@@ -57,6 +57,8 @@
         <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
         <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
     </style>
 
     <style name="AlertDark" parent="Theme.MaterialComponents.Dialog.Alert">
@@ -69,6 +71,8 @@
         <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
         <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
     </style>
 
     <style name="Alert.Button" parent="Widget.MaterialComponents.Button.TextButton">

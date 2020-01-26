@@ -56,8 +56,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.StringWriter;
+import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownHostException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -93,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
     public static SecretKey key;
     ArrayList<String> languages = new ArrayList<>();
     ArrayList<String> modes = new ArrayList<>();
+    public static String piIp = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -347,7 +352,7 @@ public class MainActivity extends AppCompatActivity {
                 pi.show();
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Pi Disconnected!");
+                builder.setTitle("Raspberry Pi Not Found!");
                 builder.setCancelable(false);
                 builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                 AlertDialog pi = builder.create();
@@ -363,6 +368,13 @@ public class MainActivity extends AppCompatActivity {
         if(wifi.isWifiEnabled()) {
             WifiInfo info = wifi.getConnectionInfo();
             if(info.getSSID().equals("\"RUCKY\"")) {
+                try {
+                    piIp = InetAddress.getByAddress(
+                            ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(info.getIpAddress()).array())
+                            .getHostAddress();
+                } catch (UnknownHostException e) {
+                    e.printStackTrace();
+                }
                 support = true;
             }
         }
