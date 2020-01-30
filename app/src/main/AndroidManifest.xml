@@ -31,8 +31,6 @@
         android:requestLegacyExternalStorage="true"
         tools:targetApi="q">
 
-        <uses-library android:name="java.lang.ClassValue" android:required="false" />
-
         <receiver android:name=".SecretCodeReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
