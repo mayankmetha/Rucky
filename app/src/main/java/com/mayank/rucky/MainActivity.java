@@ -97,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
     public static SecretKey key;
     ArrayList<String> languages = new ArrayList<>();
     ArrayList<String> modes = new ArrayList<>();
-    public static String piIp = null;
+    private static String piIp = null;
+    public static boolean piConnected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -344,12 +345,22 @@ public class MainActivity extends AppCompatActivity {
         }
         if(mode == 1) {
             if(getPi()) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Pi Connected!");
-                builder.setCancelable(false);
-                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
-                AlertDialog pi = builder.create();
-                pi.show();
+                if(!piConnected) {
+                    if(!piIp.equals("")) {
+                        hid exeScript = new hid(language);
+                        exeScript.parse(scripts);
+                        ArrayList<String> cmds = exeScript.getCmd();
+                        Thread piThread = new Thread(new wifiSocket(cmds));
+                        piThread.start();
+                    }
+                } else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("Raspberry Pi connection failed!");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                    AlertDialog pi = builder.create();
+                    pi.show();
+                }
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Raspberry Pi Not Found!");
