@@ -10,13 +10,13 @@
     <string name="delete_dep_summary">Limpia y desinstala la aplicación.</string>
     <string name="settings_sec_title">Seguridad Avanzada</string>
     <string name="settings_sec_desc">Habilitar cifrado de archivos de script y bloqueo de pantalla.</string>
-    <string name="setting_about">Info</string>
+    <string name="setting_about">Información</string>
     <string name="setting_developer_title">Desarrollador</string>
     <string name="settings_version_title">Versión</string>
     <string name="settings_arch_title">Arquitectura</string>
     <string name="settings_lic_title">Licencia</string>
     <string name="settings_support">Soporte</string>
-    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_title">Problemas de GitHub</string>
     <string name="settings_git_desc">Haga clic para añadir problemas o solicitud de características.</string>
     <string name="settings_locale_title">Localización</string>
     <string name="settings_locale_desc">Haga clic para ver los colaboradores de la localización.</string>

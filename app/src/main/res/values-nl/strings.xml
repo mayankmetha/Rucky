@@ -16,7 +16,7 @@
     <string name="settings_arch_title">Architectuur</string>
     <string name="settings_lic_title">Licentie</string>
     <string name="settings_support">Ondersteuning</string>
-    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_title">GitHub problemen</string>
     <string name="settings_git_desc">Klik om issues of verzoek toe te voegen.</string>
     <string name="settings_locale_title">Lokalisatie</string>
     <string name="settings_locale_desc">Klik om de lokalisatie bijdragers te bekijken.</string>

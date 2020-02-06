@@ -16,7 +16,7 @@
     <string name="settings_arch_title">Arkitektur</string>
     <string name="settings_lic_title">Licens</string>
     <string name="settings_support">Stöd</string>
-    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_title">GitHub-problem</string>
     <string name="settings_git_desc">Klicka för att lägga till problem eller funktionsförfrågan.</string>
     <string name="settings_locale_title">Lokalisering</string>
     <string name="settings_locale_desc">Klicka för att visa lokaliseringsbidragsgivare.</string>
@@ -39,7 +39,7 @@
     <string name="slideDesc3">Spara din Rubber Ducky skript för senare!</string>
     <string name="slideDesc4">Ladda Rubber Ducky skript du sparat!</string>
     <string name="slideDesc5">Ta bort Rubber Ducky skript du sparat!</string>
-    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseNetHunter">NetHunters App Store</string>
     <string name="releaseGitHub">GitHub-släpp</string>
     <string name="releaseTest">Felsök Släpp</string>
     <string name="releaseOthers">Utgåva stöds ej</string>

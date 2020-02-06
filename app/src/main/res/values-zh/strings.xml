@@ -16,7 +16,7 @@
     <string name="settings_arch_title">结构</string>
     <string name="settings_lic_title">许可协议</string>
     <string name="settings_support">支持</string>
-    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_title">GitHub 问题</string>
     <string name="settings_git_desc">点击以添加问题或功能请求。</string>
     <string name="settings_locale_title">本地化</string>
     <string name="settings_locale_desc">点击查看本地化贡献者。</string>
@@ -32,14 +32,14 @@
     <string name="runBtn">运行</string>
     <string name="codeHint">在此处键入或加载橡胶管道脚本</string>
     <string name="next">下一个</string>
-    <string name="skip">SKIP</string>
+    <string name="skip">跳过</string>
     <string name="start">哈克文</string>
     <string name="slideDesc1">把你的设备变成橡胶园！</string>
     <string name="slideDesc2">这将执行橡胶Ducky 脚本！</string>
     <string name="slideDesc3">稍后保存你的橡皮图案脚本！</string>
     <string name="slideDesc4">加载你保存的橡皮牙脚本！</string>
     <string name="slideDesc5">删除你保存的橡皮Ducky脚本！</string>
-    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseNetHunter">NetHunter 应用商店</string>
     <string name="releaseGitHub">GitHub 发布</string>
     <string name="releaseTest">调试发布</string>
     <string name="releaseOthers">非支持的版本</string>

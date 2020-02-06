@@ -16,7 +16,7 @@
     <string name="settings_arch_title">Architektura</string>
     <string name="settings_lic_title">Licencja</string>
     <string name="settings_support">Wsparcie</string>
-    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_title">Problemy z gitHub</string>
     <string name="settings_git_desc">Kliknij, aby dodać zgłoszenia lub prośbę o funkcję.</string>
     <string name="settings_locale_title">Lokalizacja</string>
     <string name="settings_locale_desc">Kliknij, aby wyświetlić tłumaczy lokalizacji.</string>

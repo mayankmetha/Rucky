@@ -16,7 +16,7 @@
     <string name="settings_arch_title">Arquitetura</string>
     <string name="settings_lic_title">Licença</string>
     <string name="settings_support">Suporte</string>
-    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_title">Questões GitHub</string>
     <string name="settings_git_desc">Clique para adicionar tickets ou requisição de recurso.</string>
     <string name="settings_locale_title">Localização</string>
     <string name="settings_locale_desc">Clique para ver os colaboradores de localização.</string>
