@@ -36,6 +36,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
@@ -85,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
     final static private int PERM = 0;
     public static final String CHANNEL_ID = "com.mayank.rucky";
     public static final String CHANNEL_NAME = "Update";
-    private NotificationManager notificationManager;
     Process p;
     private static DataOutputStream dos;
     public static String getSHA512;
@@ -99,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> modes = new ArrayList<>();
     private static String piIp = null;
     public static boolean piConnected = false;
+    Notification updateNotify;
+    private static NotificationManager notificationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -138,9 +140,14 @@ public class MainActivity extends AppCompatActivity {
             notificationChannel.enableVibration(false);
             notificationChannel.canBypassDnd();
             notificationChannel.setSound(null,null);
-            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
-            getManager().createNotificationChannel(notificationChannel);
+            notificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PUBLIC);
+            notificationManager = getSystemService(NotificationManager.class);
+            assert notificationManager != null;
+            notificationManager.createNotificationChannel(notificationChannel);
+        } else {
+            notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
+
         cleanup();
         Spinner language = findViewById(R.id.langMenu);
         languages.add("American English");
@@ -392,13 +399,6 @@ public class MainActivity extends AppCompatActivity {
         return support;
     }
 
-    private NotificationManager getManager() {
-        if (notificationManager == null) {
-            notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        }
-        return notificationManager;
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if(updateEnable)
@@ -451,20 +451,23 @@ public class MainActivity extends AppCompatActivity {
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
-                Notification.Builder updateNotify;
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                    updateNotify = new Notification.Builder(this, CHANNEL_ID)
+                            .setContentTitle("Checking for app update")
+                            .setSmallIcon(R.drawable.ic_notification)
+                            .setAutoCancel(true)
+                            .build();
                 } else {
-                    updateNotify = new Notification.Builder(this);
+                    updateNotify = new Notification.Builder(this)
+                            .setContentTitle("Checking for update")
+                            .setSmallIcon(R.drawable.ic_notification)
+                            .setAutoCancel(true)
+                            .build();
                 }
-                updateNotify.setContentTitle("Checking for update")
-                        .setContentText("Please Wait...")
-                        .setSmallIcon(R.drawable.ic_notification)
-                        .setAutoCancel(true);
-                getManager().notify(3,updateNotify.build());
+                notificationManager.notify(0,updateNotify);
                 URL url = new URL("https://github.com/mayankmetha/Rucky/releases/latest");
                 new fetchVersion().execute(url);
-                getManager().cancel(3);
+                notificationManager.cancel(0);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -585,6 +588,22 @@ public class MainActivity extends AppCompatActivity {
         downloadRef = downloadManager.enqueue(req);
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
         registerReceiver(downloadBR, filter);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            updateNotify = new Notification.Builder(this, CHANNEL_ID)
+                    .setContentTitle("Updating app")
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setAutoCancel(false)
+                    .setOngoing(true)
+                    .build();
+        } else {
+            updateNotify = new Notification.Builder(this)
+                    .setContentTitle("Updating app")
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setAutoCancel(false)
+                    .setOngoing(true)
+                    .build();
+        }
+        notificationManager.notify(2,updateNotify);
     }
 
     private final BroadcastReceiver downloadBR = new BroadcastReceiver() {
@@ -611,20 +630,23 @@ public class MainActivity extends AppCompatActivity {
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
-                Notification.Builder updateNotify;
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    updateNotify = new Notification.Builder(this, CHANNEL_ID);
+                    updateNotify = new Notification.Builder(this, CHANNEL_ID)
+                            .setContentTitle("Verifying app update")
+                            .setSmallIcon(R.drawable.ic_notification)
+                            .setAutoCancel(true)
+                            .build();
                 } else {
-                    updateNotify = new Notification.Builder(this);
+                    updateNotify = new Notification.Builder(this)
+                            .setContentTitle("Verifying app update")
+                            .setSmallIcon(R.drawable.ic_notification)
+                            .setAutoCancel(true)
+                            .build();
                 }
-                updateNotify.setContentTitle("Verifying update")
-                        .setContentText("Please Wait...")
-                        .setSmallIcon(R.drawable.ic_notification)
-                        .setAutoCancel(true);
-                getManager().notify(3,updateNotify.build());
+                notificationManager.notify(1,updateNotify);
                 URL url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
                 new fetchHash().execute(url);
-                getManager().cancel(3);
+                notificationManager.cancel(1);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -685,6 +707,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void installUpdate() {
+        notificationManager.cancel(2);
         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
         Intent installer;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
