@@ -104,10 +104,12 @@ public class MainActivity extends AppCompatActivity {
     private static NotificationManager notificationManager;
     public static boolean usbConnected = false;
     public static boolean usbState;
+    public static ArrayList<String> cmds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
         super.onCreate(savedInstanceState);
+        cmds = new ArrayList<>();
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
         advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY, false);
@@ -136,16 +138,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            Intent intent = registerReceiver(null, new IntentFilter("android.hardware.usb.action.USB_STATE"));
-            assert intent != null;
-            usbConnected = Objects.requireNonNull(intent.getExtras()).getBoolean("connected");
-        } else {
-            Intent batteryStatus = registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-            assert batteryStatus != null;
-            int chargePlug = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
-            usbConnected = chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
-        }
+        usbConnectCheck();
 
         NotificationChannel notificationChannel;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -340,18 +333,25 @@ public class MainActivity extends AppCompatActivity {
             getRoot();
             if(root) {
                 supportedFiles();
-                if(usbState) {
-                    // TODO
+                if(usbState && !usbConnected) {
+                    hid exeScript = new hid(language);
+                    exeScript.parse(scripts);
+                    cmds.clear();
+                    cmds.addAll(exeScript.getCmd());
+                    Intent i = new Intent("asyncUSBWrite");
+                    sendBroadcast(i);
                 } else {
                     if(usbConnected) {
                         try {
                             hid exeScript = new hid(language);
                             exeScript.parse(scripts);
-                            ArrayList<String> cmds = exeScript.getCmd();
+                            cmds.clear();
+                            cmds.addAll(exeScript.getCmd());
                             for(int i = 0; i < cmds.size(); i++) {
                                 dos.writeBytes(cmds.get(i));
                                 dos.flush();
                             }
+                            cmds.clear();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -384,9 +384,11 @@ public class MainActivity extends AppCompatActivity {
                     if(!piIp.equals("")) {
                         hid exeScript = new hid(language);
                         exeScript.parse(scripts);
-                        ArrayList<String> cmds = exeScript.getCmd();
+                        cmds.clear();
+                        cmds.addAll(exeScript.getCmd());
                         Thread piThread = new Thread(new wifiSocket(cmds));
                         piThread.start();
+                        cmds.clear();
                     }
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -815,6 +817,19 @@ public class MainActivity extends AppCompatActivity {
                     permission();
                 }
             }
+        }
+    }
+
+    public void usbConnectCheck() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            Intent intent = registerReceiver(null, new IntentFilter("android.hardware.usb.action.USB_STATE"));
+            assert intent != null;
+            usbConnected = Objects.requireNonNull(intent.getExtras()).getBoolean("connected");
+        } else {
+            Intent batteryStatus = registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+            assert batteryStatus != null;
+            int chargePlug = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+            usbConnected = chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
         }
     }
 

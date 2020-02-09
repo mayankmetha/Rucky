@@ -33,8 +33,7 @@
         android:requestLegacyExternalStorage="true"
         tools:targetApi="q">
 
-        <receiver android:name=".USBReceiver"
-            android:enabled="true">
+        <receiver android:name=".USBReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
