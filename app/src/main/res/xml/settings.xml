@@ -43,6 +43,13 @@
             app:title="@string/settings_usb_title"
             app:summary="@string/settings_usb_desc" />
 
+        <SwitchPreferenceCompat
+            app:key="rpi"
+            app:icon="@drawable/ic_rpi"
+            app:defaultValue="false"
+            app:title="@string/settings_rpi_title"
+            app:summary="@string/settings_rpi_desc" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

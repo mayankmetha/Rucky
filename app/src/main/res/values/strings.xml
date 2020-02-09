@@ -13,8 +13,10 @@
     <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
 
     <string name="setting_device">Attack Mode Settings</string>
-    <string name="settings_usb_title">Launch Attack on USB Connect</string>
-    <string name="settings_usb_desc">Run button will not launch attack if USB is disconnected.</string>
+    <string name="settings_usb_title">USB Connect Launch</string>
+    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
+    <string name="settings_rpi_title">Raspberry Pi Connect Launch</string>
+    <string name="settings_rpi_desc">Run button will launch attack when Raspberry Pi is connected.</string>
 
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">Developer</string>

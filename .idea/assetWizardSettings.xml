@@ -213,9 +213,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ff5722" />
-                            <entry key="outputName" value="ic_usb" />
-                            <entry key="sourceFile" value="$USER_HOME$/Desktop/paypal.svg" />
+                            <entry key="outputName" value="ic_rpi" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/Raspberry pi.svg" />
                           </map>
                         </option>
                       </PersistentState>
