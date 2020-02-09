@@ -20,6 +20,7 @@ import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
+import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -101,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
     public static boolean piConnected = false;
     Notification updateNotify;
     private static NotificationManager notificationManager;
+    public static boolean usbConnected = false;
+    public static boolean usbState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences settings = getSharedPreferences(SettingsActivity.PREF_SETTINGS, MODE_PRIVATE);
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
         advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY, false);
+        usbState = settings.getBoolean(SettingsActivity.PREF_DEV_USB, false);
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbarMain);
@@ -130,6 +134,17 @@ public class MainActivity extends AppCompatActivity {
             currentVersion = Double.parseDouble(pInfo.versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
+        }
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            Intent intent = registerReceiver(null, new IntentFilter("android.hardware.usb.action.USB_STATE"));
+            assert intent != null;
+            usbConnected = Objects.requireNonNull(intent.getExtras()).getBoolean("connected");
+        } else {
+            Intent batteryStatus = registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+            assert batteryStatus != null;
+            int chargePlug = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+            usbConnected = chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
         }
 
         NotificationChannel notificationChannel;
@@ -325,16 +340,29 @@ public class MainActivity extends AppCompatActivity {
             getRoot();
             if(root) {
                 supportedFiles();
-                try {
-                    hid exeScript = new hid(language);
-                    exeScript.parse(scripts);
-                    ArrayList<String> cmds = exeScript.getCmd();
-                    for(int i = 0; i < cmds.size(); i++) {
-                        dos.writeBytes(cmds.get(i));
-                        dos.flush();
+                if(usbState) {
+                    // TODO
+                } else {
+                    if(usbConnected) {
+                        try {
+                            hid exeScript = new hid(language);
+                            exeScript.parse(scripts);
+                            ArrayList<String> cmds = exeScript.getCmd();
+                            for(int i = 0; i < cmds.size(); i++) {
+                                dos.writeBytes(cmds.get(i));
+                                dos.flush();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle("USB Cable Not Connected!");
+                        builder.setCancelable(false);
+                        builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                        AlertDialog pi = builder.create();
+                        pi.show();
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);

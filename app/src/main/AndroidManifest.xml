@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mayank.rucky">
+
+    <uses-feature android:name="android.hardware.usb.host" />
     
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -30,6 +32,15 @@
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true"
         tools:targetApi="q">
+
+        <receiver android:name=".USBReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+            </intent-filter>
+        </receiver>
 
         <receiver android:name=".SecretCodeReceiver">
             <intent-filter>

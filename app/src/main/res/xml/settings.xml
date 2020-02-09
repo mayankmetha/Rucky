@@ -30,6 +30,18 @@
             app:icon="@drawable/ic_uninstall"
             app:title="@string/delete_dep_title"
             app:summary="@string/delete_dep_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="device"
+        app:title="@string/setting_device">
+
+        <SwitchPreferenceCompat
+            app:key="usb"
+            app:icon="@drawable/ic_usb"
+            app:defaultValue="false"
+            app:title="@string/settings_usb_title"
+            app:summary="@string/settings_usb_desc" />
 
     </PreferenceCategory>
 

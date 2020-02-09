@@ -40,6 +40,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
     private static final String PREF_SETTINGS_LAUNCH_ICON = "launchIcon";
     private static final String PREF_SETTING_ADV_SECURITY = "advSecurity";
     private static final String PREF_GEN_KEY = "genKeyDone";
+    private static final String PREF_DEV_USB = "usbConnectionState";
     private static double currentVersion;
     private static String webViewID = "WEBVIEW_URL";
     private static String activityTitle = "WEBVIEW_TITLE";
@@ -84,7 +85,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
 
         final SwitchPreferenceCompat launchIconSwitch = findPreference("icon");
         assert launchIconSwitch != null;
-        launchIconSwitch.setOnPreferenceChangeListener(((preference, newValue) -> {
+        launchIconSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean(PREF_SETTINGS_LAUNCH_ICON,switched).apply();
@@ -116,10 +117,10 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             }
             getActivity().finish();
             return true;
-        }));
+        });
 
         final SwitchPreferenceCompat securitySwitch = findPreference("sec");
-        assert  securitySwitch != null;
+        assert securitySwitch != null;
         securitySwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
             SharedPreferences.Editor editor = settings.edit();
@@ -173,6 +174,26 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             getActivity().finish();
             startActivity(intent);
+            return true;
+        });
+
+        final SwitchPreferenceCompat usb = findPreference("usb");
+        assert usb != null;
+        usb.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(PREF_DEV_USB, switched).apply();
+            MainActivity.usbConnected = switched;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                Intent i = new Intent(getActivity(), TransparentActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            } else {
+                Intent i = new Intent(getActivity(), SplashActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            }
+            getActivity().finish();
             return true;
         });
 
