@@ -33,6 +33,7 @@ public class USBReceiver extends BroadcastReceiver {
                 MainActivity.usbConnected = false;
             }
         }
+        MainActivity.connectionNotify(context);
         if(MainActivity.usbConnected && getRoot() && !MainActivity.cmds.isEmpty()) {
             try {
                 for (int i = 0; i < MainActivity.cmds.size(); i++) {

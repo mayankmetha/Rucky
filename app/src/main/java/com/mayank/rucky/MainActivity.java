@@ -85,8 +85,10 @@ public class MainActivity extends AppCompatActivity {
     public DownloadManager downloadManager;
     public static int dlStatus;
     final static private int PERM = 0;
-    public static final String CHANNEL_ID = "com.mayank.rucky";
+    public static final String CHANNEL_ID = "com.mayank.rucky.update";
     public static final String CHANNEL_NAME = "Update";
+    public static final String PCHANNEL_ID = "com.mayank.rucky.mode";
+    public static final String PCHANNEL_NAME = "Mode";
     Process p;
     private static DataOutputStream dos;
     public static String getSHA512;
@@ -102,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
     public static boolean piConnected = false;
     Notification updateNotify;
     private static NotificationManager notificationManager;
+    public static Notification modeNotify;
+    public static NotificationManager pnotificationManager;
     public static boolean usbConnected = false;
     public static boolean usbState;
     public static ArrayList<String> cmds;
@@ -119,6 +123,26 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarMain);
         toolbar.setTitleTextColor(getResources().getColor(R.color.accent));
         setSupportActionBar(toolbar);
+
+        NotificationChannel pnotificationChannel;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            pnotificationChannel = new NotificationChannel(PCHANNEL_ID, PCHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH);
+            pnotificationChannel.enableLights(false);
+            pnotificationChannel.setShowBadge(false);
+            pnotificationChannel.enableVibration(false);
+            pnotificationChannel.canBypassDnd();
+            pnotificationChannel.setSound(null,null);
+            pnotificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PUBLIC);
+            pnotificationManager = getSystemService(NotificationManager.class);
+            assert pnotificationManager != null;
+            pnotificationManager.createNotificationChannel(pnotificationChannel);
+        } else {
+            pnotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        }
+
+        usbConnectCheck();
+        connectionNotify(this);
+
         if (savedInstanceState == null) {
             permission();
             getRoot();
@@ -137,8 +161,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-
-        usbConnectCheck();
 
         NotificationChannel notificationChannel;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -843,4 +865,38 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    public static void connectionNotify(Context context) {
+        String smallText = "";
+        if (usbConnected) smallText += "USB Connected!";
+        else if (piConnected) smallText += "Raspberry Pi Connected!";
+        else smallText += "Disconnected!";
+        String usbText = !usbConnected ? " Disconnected" : " Connected";
+        String piText = !piConnected ?   " Disconnected" : " Connected";
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            modeNotify = new Notification.Builder(context, CHANNEL_ID)
+                    .setContentTitle("Rucky Interface")
+                    .setContentText(smallText)
+                    .setStyle(new Notification.InboxStyle()
+                        .addLine("USB:"+usbText+"!")
+                        .addLine("Raspberry Pi:"+piText+"!"))
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setAutoCancel(true)
+                    .setOngoing(true)
+                    .build();
+        } else {
+            modeNotify = new Notification.Builder(context)
+                    .setContentTitle("Rucky Interface")
+                    .setContentText(smallText)
+                    .setStyle(new Notification.InboxStyle()
+                            .addLine("USB:"+usbText+"!")
+                            .addLine("Raspberry Pi:"+piText+"!"))
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setAutoCancel(true)
+                    .setOngoing(true)
+                    .build();
+        }
+        pnotificationManager.notify(10,modeNotify);
+    }
+
 }
