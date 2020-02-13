@@ -33,6 +33,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     public static boolean usbState;
     public static ArrayList<String> cmds;
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
         super.onCreate(savedInstanceState);
@@ -126,11 +128,14 @@ public class MainActivity extends AppCompatActivity {
 
         NotificationChannel pnotificationChannel;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            pnotificationChannel = new NotificationChannel(PCHANNEL_ID, PCHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH);
+            pnotificationChannel = new NotificationChannel(PCHANNEL_ID, PCHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
             pnotificationChannel.enableLights(false);
             pnotificationChannel.setShowBadge(false);
             pnotificationChannel.enableVibration(false);
             pnotificationChannel.canBypassDnd();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                pnotificationChannel.setAllowBubbles(false);
+            }
             pnotificationChannel.setSound(null,null);
             pnotificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PUBLIC);
             pnotificationManager = getSystemService(NotificationManager.class);
@@ -874,7 +879,7 @@ public class MainActivity extends AppCompatActivity {
         String usbText = !usbConnected ? " Disconnected" : " Connected";
         String piText = !piConnected ?   " Disconnected" : " Connected";
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            modeNotify = new Notification.Builder(context, CHANNEL_ID)
+            modeNotify = new Notification.Builder(context, PCHANNEL_ID)
                     .setContentTitle("Rucky Interface")
                     .setContentText(smallText)
                     .setStyle(new Notification.InboxStyle()
@@ -896,7 +901,7 @@ public class MainActivity extends AppCompatActivity {
                     .setOngoing(true)
                     .build();
         }
-        pnotificationManager.notify(10,modeNotify);
+        pnotificationManager.notify(0,modeNotify);
     }
 
 }
