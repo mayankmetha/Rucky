@@ -17,8 +17,8 @@ import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
+import android.net.nsd.NsdManager;
+import android.net.nsd.NsdServiceInfo;
 import android.os.AsyncTask;
 import android.os.BatteryManager;
 import android.os.Build;
@@ -59,13 +59,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.StringWriter;
-import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.UnknownHostException;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
@@ -101,14 +97,21 @@ public class MainActivity extends AppCompatActivity {
     public static SecretKey key;
     ArrayList<String> languages = new ArrayList<>();
     ArrayList<String> modes = new ArrayList<>();
-    private static String piIp = null;
-    public static boolean piConnected = false;
+    public static String piIp = null;
+    public static boolean piSocketConnected = false;
+    private NsdManager mNsdManager;
+    private NsdManager.DiscoveryListener piDiscoveryListener;
+    private NsdManager.ResolveListener piResolveListener;
+    private NsdServiceInfo mServiceInfo;
+    private static final String SERVICE_TYPE = "_rucky._tcp.";
     Notification updateNotify;
     private static NotificationManager notificationManager;
     public static Notification modeNotify;
     public static NotificationManager pnotificationManager;
     public static boolean usbConnected = false;
     public static boolean usbState;
+    public static boolean piConnected = false;
+    public static boolean piState;
     public static ArrayList<String> cmds;
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
         SettingsActivity.darkTheme = settings.getBoolean(SettingsActivity.PREF_SETTINGS_DARK_THEME, true);
         advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY, false);
         usbState = settings.getBoolean(SettingsActivity.PREF_DEV_USB, false);
+        piState = settings.getBoolean(SettingsActivity.PREF_DEV_RPI, false);
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbarMain);
@@ -144,6 +148,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             pnotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
+
+        piIp = "";
+        mNsdManager = (NsdManager)(getApplicationContext().getSystemService(Context.NSD_SERVICE));
 
         usbConnectCheck();
         connectionNotify(this);
@@ -277,13 +284,13 @@ public class MainActivity extends AppCompatActivity {
                         c.init(Cipher.ENCRYPT_MODE, key);
                         fOutputStream = new FileOutputStream(file);
                         outputStream = new BufferedOutputStream(new CipherOutputStream(fOutputStream, c));
-                        outputStream.write(content.getBytes(Charset.forName("UTF-8")));
+                        outputStream.write(content.getBytes(StandardCharsets.UTF_8));
                         outputStream.close();
                         fOutputStream.close();
                     } else {
                         fOutputStream = new FileOutputStream(file);
                         outputStream = new BufferedOutputStream(fOutputStream);
-                        outputStream.write(content.getBytes(Charset.forName("UTF-8")));
+                        outputStream.write(content.getBytes(StandardCharsets.UTF_8));
                         outputStream.close();
                         fOutputStream.close();
                     }
@@ -351,6 +358,16 @@ public class MainActivity extends AppCompatActivity {
             EditText scripts = findViewById(R.id.code);
             launchAttack(modes.indexOf(mode.getSelectedItem().toString()),languages.indexOf(language.getSelectedItem().toString()),scripts.getText().toString());
         });
+        initPiResolveListener();
+        initPiDiscoveryListener();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            this.startForegroundService(new Intent(this, PingService.class));
+        } else {
+            this.startService(new Intent(this, PingService.class));
+        }
+
+        mNsdManager.discoverServices(SERVICE_TYPE,NsdManager.PROTOCOL_DNS_SD, piDiscoveryListener);
         if (updateEnable)
             updater(0);
     }
@@ -406,54 +423,41 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if(mode == 1) {
-            if(getPi()) {
-                if(!piConnected) {
-                    if(!piIp.equals("")) {
+            if(piState && !piConnected) {
+                hid exeScript = new hid(language);
+                exeScript.parse(scripts);
+                cmds.clear();
+                cmds.addAll(exeScript.getCmd());
+                Intent i = new Intent("asyncPiWrite");
+                sendBroadcast(i);
+            } else {
+                if (piConnected && !piSocketConnected) {
+                    if (!piIp.equals("")) {
                         hid exeScript = new hid(language);
                         exeScript.parse(scripts);
                         cmds.clear();
                         cmds.addAll(exeScript.getCmd());
-                        Thread piThread = new Thread(new wifiSocket(cmds));
+                        Thread piThread = new Thread(new wifiSocket(cmds, piIp));
                         piThread.start();
                         cmds.clear();
+                    } else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle("Raspberry Pi connection failed!");
+                        builder.setCancelable(false);
+                        builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                        AlertDialog pi = builder.create();
+                        pi.show();
                     }
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("Raspberry Pi connection failed!");
+                    builder.setTitle("Raspberry Pi Not Found!");
                     builder.setCancelable(false);
                     builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                     AlertDialog pi = builder.create();
                     pi.show();
                 }
-            } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Raspberry Pi Not Found!");
-                builder.setCancelable(false);
-                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
-                AlertDialog pi = builder.create();
-                pi.show();
             }
         }
-    }
-
-    private boolean getPi() {
-        boolean support = false;
-        WifiManager wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-        assert wifi != null;
-        if(wifi.isWifiEnabled()) {
-            WifiInfo info = wifi.getConnectionInfo();
-            if(info.getSSID().equals("\"RUCKY\"")) {
-                try {
-                    piIp = InetAddress.getByAddress(
-                            ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(info.getIpAddress()).array())
-                            .getHostAddress();
-                } catch (UnknownHostException e) {
-                    e.printStackTrace();
-                }
-                support = true;
-            }
-        }
-        return support;
     }
 
     @Override
@@ -871,7 +875,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public static void connectionNotify(Context context) {
+    public static Notification cNotify(Context context) {
         String smallText = "";
         if (usbConnected) smallText += "USB Connected!";
         else if (piConnected) smallText += "Raspberry Pi Connected!";
@@ -889,6 +893,7 @@ public class MainActivity extends AppCompatActivity {
                     .setAutoCancel(true)
                     .setOngoing(true)
                     .build();
+            return modeNotify;
         } else {
             modeNotify = new Notification.Builder(context)
                     .setContentTitle("Rucky Interface")
@@ -900,8 +905,65 @@ public class MainActivity extends AppCompatActivity {
                     .setAutoCancel(true)
                     .setOngoing(true)
                     .build();
+            return modeNotify;
         }
-        pnotificationManager.notify(0,modeNotify);
+    }
+
+    public static void connectionNotify(Context context) {
+        pnotificationManager.notify(0,cNotify(context));
+    }
+
+    private void initPiDiscoveryListener() {
+        piDiscoveryListener = new NsdManager.DiscoveryListener() {
+            @Override
+            public void onStartDiscoveryFailed(String serviceType, int errorCode) {
+                mNsdManager.stopServiceDiscovery(this);
+            }
+
+            @Override
+            public void onStopDiscoveryFailed(String serviceType, int errorCode) {
+                mNsdManager.stopServiceDiscovery(this);
+            }
+
+            @Override
+            public void onDiscoveryStarted(String serviceType) {
+            }
+
+            @Override
+            public void onDiscoveryStopped(String serviceType) {
+            }
+
+            @Override
+            public void onServiceFound(NsdServiceInfo serviceInfo) {
+                String name = serviceInfo.getServiceName();
+                String type = serviceInfo.getServiceType();
+                if (type.equals(SERVICE_TYPE) && name.contains("Rucky")) {
+                    mNsdManager.resolveService(serviceInfo, piResolveListener);
+                }
+            }
+
+            @Override
+            public void onServiceLost(NsdServiceInfo serviceInfo) {
+            }
+        };
+    }
+
+    private void initPiResolveListener() {
+        piResolveListener = new NsdManager.ResolveListener() {
+            @Override
+            public void onResolveFailed(NsdServiceInfo serviceInfo, int errorCode) {
+                piSocketConnected = false;
+                piConnected = false;
+            }
+
+            @Override
+            public void onServiceResolved(NsdServiceInfo serviceInfo) {
+                mServiceInfo = serviceInfo;
+                piIp = mServiceInfo.getHost().getHostAddress();
+                piSocketConnected = false;
+                piConnected = true;
+            }
+        };
     }
 
 }

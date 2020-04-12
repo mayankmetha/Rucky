@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission
         android:name="android.permission.FACTORY_TEST"
         tools:ignore="ProtectedPermissions" />
@@ -38,6 +39,7 @@
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
                 <action android:name="android.hardware.usb.action.USB_STATE" />
+                <action android:name="asyncUSBWrite" />
             </intent-filter>
         </receiver>
 
@@ -50,6 +52,10 @@
                     android:scheme="android_secret_code" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name=".PingService"
+            android:enabled="true"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
