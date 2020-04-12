@@ -42,6 +42,15 @@
                 <action android:name="asyncUSBWrite" />
             </intent-filter>
         </receiver>
+        
+        <receiver android:name=".PiReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="piConnected" />
+                <action android:name="piDisconnected" />
+                <action android:name="asyncPiWrite" />
+            </intent-filter>
+        </receiver>
 
         <receiver android:name=".SecretCodeReceiver">
             <intent-filter>
@@ -53,9 +62,8 @@
             </intent-filter>
         </receiver>
 
-        <service
-            android:name=".PingService"
-            android:enabled="true"/>
+        <service android:name=".PingService"
+            android:enabled="true" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
