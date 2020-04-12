@@ -8,8 +8,10 @@
 
 A USB HID Rubber Ducky Script All-In-One tool.
 
-## Additional Repo
+## Extensions Repo
 
-[![HID](https://img.shields.io/badge/Legacy%20HID-Support%20Ended-lightgreen)](https://github.com/mayankmetha/Rucky-Legacy-HID)
+[![RPi](https://img.shields.io/badge/Raspberry%20Pi-0%20W-maroon)](https://github.com/mayankmetha/Rucky-Ext-RPi)
 
-[![RPi](https://img.shields.io/badge/Extension-Raspberry%20Pi-maroon)](https://github.com/mayankmetha/Rucky-Ext-RPi)
+## Unsupported/Legacy Repo
+
+[![HID](https://img.shields.io/badge/1-Legacy%20HID-lightgreen)](https://github.com/mayankmetha/Rucky-Legacy-HID)
