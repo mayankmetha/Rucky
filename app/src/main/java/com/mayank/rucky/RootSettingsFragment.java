@@ -41,6 +41,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
     private static final String PREF_SETTING_ADV_SECURITY = "advSecurity";
     private static final String PREF_GEN_KEY = "genKeyDone";
     private static final String PREF_DEV_USB = "usbConnectionState";
+    private static final String PREF_DEV_RPI = "rpiConnectionState";
     private static double currentVersion;
     private static String webViewID = "WEBVIEW_URL";
     private static String activityTitle = "WEBVIEW_TITLE";
@@ -184,6 +185,26 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean(PREF_DEV_USB, switched).apply();
             MainActivity.usbConnected = switched;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                Intent i = new Intent(getActivity(), TransparentActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            } else {
+                Intent i = new Intent(getActivity(), SplashActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            }
+            getActivity().finish();
+            return true;
+        });
+
+        final SwitchPreferenceCompat rpi = findPreference("rpi");
+        assert rpi != null;
+        rpi.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean switched = !((SwitchPreferenceCompat) preference).isChecked();
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(PREF_DEV_RPI, switched).apply();
+            MainActivity.piConnected = switched;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 Intent i = new Intent(getActivity(), TransparentActivity.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

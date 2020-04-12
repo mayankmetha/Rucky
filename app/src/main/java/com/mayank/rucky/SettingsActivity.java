@@ -16,6 +16,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String PREF_SETTINGS_LAUNCH_ICON = "launchIcon";
     public static final String PREF_SETTING_ADV_SECURITY = "advSecurity";
     public static final String PREF_DEV_USB = "usbConnectionState";
+    public static final String PREF_DEV_RPI = "rpiConnectionState";
     public static Boolean darkTheme;
     public static Boolean launchIcon;
     public static Boolean advSecurity;
