@@ -19,7 +19,7 @@
             android:layout_height="@dimen/img_width_height"
             android:contentDescription="@string/icon"
             android:tint="#FFFFFF"
-            app:srcCompat="@drawable/ic_save" />
+            app:srcCompat="@drawable/init_mobile_pi" />
 
         <TextView
             android:layout_width="wrap_content"
