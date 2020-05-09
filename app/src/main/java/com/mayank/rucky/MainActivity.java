@@ -799,7 +799,7 @@ public class MainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
             permission.add(Manifest.permission.ACCESS_COARSE_LOCATION);
         if (!permission.isEmpty())
-            ActivityCompat.requestPermissions(this,permission.toArray(new String[permission.size()]),PERM);
+            ActivityCompat.requestPermissions(this, permission.toArray(new String[permission.size()]),PERM);
     }
 
     private void getRoot() {
