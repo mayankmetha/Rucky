@@ -2,6 +2,7 @@ package com.mayank.rucky;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -24,6 +25,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         final SharedPreferences settings = getSharedPreferences(PREF_SETTINGS, MODE_PRIVATE);
         darkTheme = settings.getBoolean(PREF_SETTINGS_DARK_THEME,true);
         launchIcon = settings.getBoolean(PREF_SETTINGS_LAUNCH_ICON,false);
