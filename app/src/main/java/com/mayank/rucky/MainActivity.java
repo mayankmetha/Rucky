@@ -63,6 +63,7 @@ import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.security.spec.AlgorithmParameterSpec;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
@@ -95,7 +96,8 @@ public class MainActivity extends AppCompatActivity {
     public static int distro = 0;
     public static boolean updateEnable = false;
     private static AlertDialog waitDialog;
-    public static SecretKey key;
+    static SecretKey key;
+    static AlgorithmParameterSpec iv;
     ArrayList<String> languages = new ArrayList<>();
     ArrayList<String> modes = new ArrayList<>();
     public static String piIp = null;
@@ -273,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
                 EditText scripts = findViewById(R.id.code);
                 File file;
                 if (advSecurity) {
-                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString()+".enc");
+                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString() +".enc");
                 } else {
                     file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString()+".txt");
                 }
@@ -282,8 +284,8 @@ public class MainActivity extends AppCompatActivity {
                 OutputStream outputStream;
                 try {
                     if (advSecurity) {
-                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/ECB/PKCS5Padding");
-                        c.init(Cipher.ENCRYPT_MODE, key);
+                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
+                        c.init(Cipher.ENCRYPT_MODE, key, iv);
                         fOutputStream = new FileOutputStream(file);
                         outputStream = new BufferedOutputStream(new CipherOutputStream(fOutputStream, c));
                         outputStream.write(content.getBytes(StandardCharsets.UTF_8));
@@ -331,8 +333,8 @@ public class MainActivity extends AppCompatActivity {
                 StringWriter writer;
                 try {
                     if (advSecurity) {
-                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/ECB/PKCS5Padding");
-                        c.init(Cipher.DECRYPT_MODE, key);
+                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
+                        c.init(Cipher.DECRYPT_MODE, key, iv);
                         fInputStream = new FileInputStream(file);
                         inputStream = new BufferedInputStream(new CipherInputStream(fInputStream,c));
                         writer = new StringWriter();

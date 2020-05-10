@@ -18,6 +18,7 @@ import androidx.preference.SwitchPreferenceCompat;
 import java.math.BigInteger;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
+import java.security.SecureRandom;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Objects;
@@ -25,6 +26,7 @@ import java.util.Objects;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
+import javax.crypto.spec.IvParameterSpec;
 import javax.security.auth.x500.X500Principal;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -34,6 +36,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
 
     private static final String KEYSTORE_PROVIDER_ANDROID_KEYSTORE = "AndroidKeyStore";
     private static final String RUCKY_KEYSTORE = "RuckyKeystore";
+    private static final String RUCKY_KEYSTORE2 = "RuckyKeystore2";
 
     private static final String PREF_SETTINGS = "settings";
     private static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
@@ -127,8 +130,10 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             SharedPreferences.Editor editor = settings.edit();
             if(!settings.getBoolean(PREF_GEN_KEY,false)) {
                 try {
+                    SecureRandom secRnd = new SecureRandom();
+                    IvParameterSpec iv = new IvParameterSpec(secRnd.generateSeed(16));
                     KeyGenerator keygen = KeyGenerator.getInstance("AES");
-                    keygen.init(128);
+                    keygen.init(256);
                     SecretKey key = keygen.generateKey();
                     Calendar start = new GregorianCalendar();
                     Calendar stop = new GregorianCalendar();
@@ -146,6 +151,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                     kp = keyPairGenerator.generateKeyPair();
                     Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
                     cipher.init(Cipher.ENCRYPT_MODE, kp.getPublic());
+                    editor.putString(RUCKY_KEYSTORE2,encodeToString(cipher.doFinal(iv.getIV()), Base64.DEFAULT)).apply();
                     editor.putString(RUCKY_KEYSTORE,encodeToString(cipher.doFinal(key.getEncoded()), Base64.DEFAULT)).apply();
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -27,6 +27,7 @@ import java.security.PrivateKey;
 import java.util.Objects;
 
 import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 import static android.util.Base64.decode;
@@ -38,6 +39,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private static final String KEYSTORE_PROVIDER_ANDROID_KEYSTORE = "AndroidKeyStore";
     private static final String RUCKY_KEYSTORE = "RuckyKeystore";
+    private static final String RUCKY_KEYSTORE2 = "RuckyKeystore2";
 
     public static final String PREF_SETTINGS_INIT = "init";
     private static Boolean init;
@@ -108,6 +110,9 @@ public class SplashActivity extends AppCompatActivity {
             String k64 = Objects.requireNonNull(settings.getString(RUCKY_KEYSTORE, null));
             byte[] tmp = decode(k64, Base64.DEFAULT);
             MainActivity.key = new SecretKeySpec(cipher.doFinal(tmp),"AES");
+            String k642 = Objects.requireNonNull(settings.getString(RUCKY_KEYSTORE2, null));
+            byte[] tmp2 = decode(k642,Base64.DEFAULT);
+            MainActivity.iv = new IvParameterSpec(cipher.doFinal(tmp2));
         } catch (Exception e) {
             e.printStackTrace();
         }
