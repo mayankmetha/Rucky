@@ -131,7 +131,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             if(!settings.getBoolean(PREF_GEN_KEY,false)) {
                 try {
                     SecureRandom secRnd = new SecureRandom();
-                    IvParameterSpec iv = new IvParameterSpec(secRnd.generateSeed(32));
+                    IvParameterSpec iv = new IvParameterSpec(secRnd.generateSeed(16));
                     KeyGenerator keygen = KeyGenerator.getInstance("AES");
                     keygen.init(256);
                     SecretKey key = keygen.generateKey();

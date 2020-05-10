@@ -43,6 +43,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.common.hash.Hashing;
 import com.google.common.io.Files;
 
@@ -66,6 +67,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Objects;
 
 import javax.crypto.Cipher;
@@ -261,9 +263,11 @@ public class MainActivity extends AppCompatActivity {
                         getApplicationContext().deleteFile(file.getName());
                     }
                 }
+                Snackbar.make(view, fileName[i] + " deleted!",Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
             });
             builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
             builder.show();
+
         });
         SaveBtn.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -274,10 +278,14 @@ public class MainActivity extends AppCompatActivity {
             builder.setPositiveButton("Save", (dialog, which) -> {
                 EditText scripts = findViewById(R.id.code);
                 File file;
+                String fileNameString = fileName.getText().toString().replaceAll("[^A-Za-z0-9]+","");
+                if (fileNameString.isEmpty()) {
+                    fileNameString = String.valueOf(new Date().getTime());
+                }
                 if (advSecurity) {
-                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString() +".enc");
+                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileNameString+".enc");
                 } else {
-                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileName.getText().toString()+".txt");
+                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileNameString+".txt");
                 }
                 String content = scripts.getText().toString();
                 FileOutputStream fOutputStream;
@@ -301,6 +309,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                Snackbar.make(view, file.getName() + " saved!",Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
             });
             builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
             builder.show();
