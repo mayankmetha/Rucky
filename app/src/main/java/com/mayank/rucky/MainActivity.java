@@ -28,10 +28,8 @@ import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -116,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
     public static boolean piConnected = false;
     public static boolean piState;
     public static ArrayList<String> cmds;
+    static int mode;
+    static int language;
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -196,16 +196,40 @@ public class MainActivity extends AppCompatActivity {
         }
 
         cleanup();
-        Spinner language = findViewById(R.id.langMenu);
         ArrayList<String> languages = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.hidLanguages)));
-        ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, languages);
-        langAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        language.setAdapter(langAdapter);
-        Spinner mode = findViewById(R.id.modeMenu);
+        Button langBtn = findViewById(R.id.hidBtn);
+        language = 0;
+        langBtn.setText(languages.get(language));
+        langBtn.setOnClickListener(view -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setCancelable(false);
+            builder.setSingleChoiceItems(getResources().getStringArray(R.array.hidLanguages), language, (dialog, i) -> {
+                language = i;
+                dialog.dismiss();
+                langBtn.setText(languages.get(language));
+            });
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            AlertDialog hidDialog = builder.create();
+            Objects.requireNonNull(hidDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            hidDialog.show();
+        });
         ArrayList<String> modes = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.modes)));
-        ArrayAdapter<String> modeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, modes);
-        modeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mode.setAdapter(modeAdapter);
+        Button modeBtn = findViewById(R.id.modeBtn);
+        mode = 0;
+        modeBtn.setText(modes.get(mode));
+        modeBtn.setOnClickListener(view -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setCancelable(false);
+            builder.setSingleChoiceItems(getResources().getStringArray(R.array.modes), mode, (dialog, i) -> {
+                mode = i;
+                dialog.dismiss();
+                modeBtn.setText(modes.get(mode));
+            });
+            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            AlertDialog modeDialog = builder.create();
+            Objects.requireNonNull(modeDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            modeDialog.show();
+        });
         Button DelBtn = findViewById(R.id.delBtn);
         Button SaveBtn = findViewById(R.id.svBtb);
         Button LoadBtn = findViewById(R.id.ldBtn);
@@ -355,7 +379,7 @@ public class MainActivity extends AppCompatActivity {
         });
         ExeBtn.setOnClickListener(view -> {
             EditText scripts = findViewById(R.id.code);
-            launchAttack(modes.indexOf(mode.getSelectedItem().toString()),languages.indexOf(language.getSelectedItem().toString()),scripts.getText().toString());
+            launchAttack(mode,language,scripts.getText().toString());
         });
         initPiResolveListener();
         initPiDiscoveryListener();
@@ -413,11 +437,6 @@ public class MainActivity extends AppCompatActivity {
                 builder.setTitle("Root Access Required For USB Cable Attack!");
                 builder.setCancelable(false);
                 builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
-                builder.setNegativeButton("Exit", ((dialog, which) -> {
-                    moveTaskToBack(true);
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                    System.exit(1);
-                }));
                 AlertDialog rootMissing = builder.create();
                 Objects.requireNonNull(rootMissing.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 rootMissing.show();

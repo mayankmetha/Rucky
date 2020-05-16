@@ -21,6 +21,7 @@
         <item name="windowNoTitle">true</item>
         <item name="alertDialogTheme">@style/AlertLight</item>
         <item name="alertDialogStyle">@style/AlertLight</item>
+        <item name="materialButtonStyle">@style/IconTextButtonLight</item>
     </style>
 
     <!-- Dark Theme -->
@@ -45,9 +46,13 @@
         <item name="windowNoTitle">true</item>
         <item name="alertDialogTheme">@style/AlertDark</item>
         <item name="alertDialogStyle">@style/AlertDark</item>
+        <item name="materialButtonStyle">@style/IconTextButtonDark</item>
     </style>
 
     <style name="AlertLight" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlNormal">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
         <item name="buttonBarButtonStyle">@style/Alert.Button</item>
         <item name="android:windowBackground">@drawable/dialog_light</item>
         <item name="android:shadowColor">@null</item>
@@ -57,11 +62,17 @@
         <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
         <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
-        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
-        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="android:windowMinWidthMajor">70%p</item>
+        <item name="android:windowMinWidthMinor">70%p</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">false</item>
     </style>
 
     <style name="AlertDark" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlNormal">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
         <item name="buttonBarButtonStyle">@style/Alert.Button</item>
         <item name="android:windowBackground">@drawable/dialog_dark</item>
         <item name="android:shadowColor">@null</item>
@@ -71,8 +82,11 @@
         <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
         <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
-        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
-        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="android:windowMinWidthMajor">70%p</item>
+        <item name="android:windowMinWidthMinor">70%p</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">false</item>
     </style>
 
     <style name="Alert.Button" parent="Widget.MaterialComponents.Button.TextButton">
@@ -100,6 +114,20 @@
         <item name="iconGravity">textStart</item>
     </style>
 
+    <style name="IconTextButtonDark" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent_black</item>
+        <item name="android:background">@color/transparent_black</item>
+        <item name="iconTint">@color/accent</item>
+        <item name="android:textColor">@color/pri_light</item>
+    </style>
+
+    <style name="IconTextButtonLight" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent_black</item>
+        <item name="android:background">@color/transparent_black</item>
+        <item name="iconTint">@color/accent</item>
+        <item name="android:textColor">@color/pri_dark</item>
+    </style>
+
     <style name="InitButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="backgroundTint">@color/transparent_black</item>
         <item name="android:textColor">@color/accent</item>
@@ -109,6 +137,10 @@
     <style name="PreferenceFragment.Material" tools:override="true">
         <item name="android:divider">@drawable/divider</item>
         <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="MyAppBarLayoutTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlHighlight">@color/accent</item>
     </style>
 
 </resources>
