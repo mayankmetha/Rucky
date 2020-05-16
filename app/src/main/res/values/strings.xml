@@ -67,4 +67,32 @@
     <string name="releaseGitHub">GitHub Release</string>
     <string name="releaseTest">Debug Release</string>
     <string name="releaseOthers">Non Supported Release</string>
+
+    <string-array name="modes">
+        <item>USB Cable (Root)</item>
+        <item>Raspberry Pi (Wi-Fi)</item>
+    </string-array>
+    
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turkish</item>
+        <item>Swedish</item>
+        <item>Slovenian</item>
+        <item>Russian</item>
+        <item>Portuguese</item>
+        <item>Norwegian</item>
+        <item>Italian</item>
+        <item>Croatian</item>
+        <item>United Kingdom English</item>
+        <item>French</item>
+        <item>Finnish</item>
+        <item>Spanish</item>
+        <item>Danish</item>
+        <item>German</item>
+        <item>Canadian French</item>
+        <item>Brazilian Portuguese</item>
+        <item>Belarusian</item>
+        <item>Hungarian</item>
+    </string-array>
+
 </resources>

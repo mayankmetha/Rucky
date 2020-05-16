@@ -100,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
     private static AlertDialog waitDialog;
     static SecretKey key;
     static AlgorithmParameterSpec iv;
-    ArrayList<String> languages = new ArrayList<>();
-    ArrayList<String> modes = new ArrayList<>();
     public static String piIp = null;
     public static boolean piSocketConnected = false;
     private NsdManager mNsdManager;
@@ -170,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.setCancelable(false);
                 builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                 AlertDialog rootMissing = builder.create();
+                Objects.requireNonNull(rootMissing.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 rootMissing.show();
             }
         }
@@ -198,31 +197,12 @@ public class MainActivity extends AppCompatActivity {
 
         cleanup();
         Spinner language = findViewById(R.id.langMenu);
-        languages.add("American English");
-        languages.add("Turkish");
-        languages.add("Swedish");
-        languages.add("Slovenian");
-        languages.add("Russian");
-        languages.add("Portuguese");
-        languages.add("Norwegian");
-        languages.add("Italian");
-        languages.add("Croatian");
-        languages.add("United Kingdom English");
-        languages.add("French");
-        languages.add("Finnish");
-        languages.add("Spanish");
-        languages.add("Danish");
-        languages.add("German");
-        languages.add("Canadian French");
-        languages.add("Brazilian Portuguese");
-        languages.add("Belarusian");
-        languages.add("Hungarian");
+        ArrayList<String> languages = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.hidLanguages)));
         ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, languages);
         langAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         language.setAdapter(langAdapter);
         Spinner mode = findViewById(R.id.modeMenu);
-        modes.add("USB Cable (Root)");
-        modes.add("Raspberry Pi (Wi-Fi)");
+        ArrayList<String> modes = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.modes)));
         ArrayAdapter<String> modeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, modes);
         modeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mode.setAdapter(modeAdapter);
@@ -266,7 +246,9 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, fileName[i] + " deleted!",Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
             });
             builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
-            builder.show();
+            AlertDialog delDialog = builder.create();
+            Objects.requireNonNull(delDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            delDialog.show();
 
         });
         SaveBtn.setOnClickListener(view -> {
@@ -312,7 +294,9 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, file.getName() + " saved!",Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
             });
             builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
-            builder.show();
+            AlertDialog saveDialog = builder.create();
+            Objects.requireNonNull(saveDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            saveDialog.show();
         });
         LoadBtn.setOnClickListener(view -> {
             final File[] tmp = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
@@ -365,7 +349,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
-            builder.show();
+            AlertDialog loadDialog = builder.create();
+            Objects.requireNonNull(loadDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            loadDialog.show();
         });
         ExeBtn.setOnClickListener(view -> {
             EditText scripts = findViewById(R.id.code);
@@ -418,6 +404,7 @@ public class MainActivity extends AppCompatActivity {
                         builder.setCancelable(false);
                         builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                         AlertDialog pi = builder.create();
+                        Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                         pi.show();
                     }
                 }
@@ -432,6 +419,7 @@ public class MainActivity extends AppCompatActivity {
                     System.exit(1);
                 }));
                 AlertDialog rootMissing = builder.create();
+                Objects.requireNonNull(rootMissing.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 rootMissing.show();
             }
         }
@@ -459,6 +447,7 @@ public class MainActivity extends AppCompatActivity {
                         builder.setCancelable(false);
                         builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                         AlertDialog pi = builder.create();
+                        Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                         pi.show();
                     }
                 } else {
@@ -467,6 +456,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.setCancelable(false);
                     builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
                     AlertDialog pi = builder.create();
+                    Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                     pi.show();
                 }
             }
@@ -552,6 +542,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("OK", (dialogInterface, i) -> {
                     });
             AlertDialog alert = alertBuilder.create();
+            Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             alert.show();
         }
     }
@@ -603,6 +594,7 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton("Cancel", (dialog, id) -> {
                         });
                 AlertDialog alert = builder.create();
+                Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 alert.show();
             } else {
                 if (mode == 1) {
@@ -611,6 +603,7 @@ public class MainActivity extends AppCompatActivity {
                             .setCancelable(false)
                             .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.cancel());
                     AlertDialog alert = alertBuilder.create();
+                    Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                     alert.show();
                 }
             }
@@ -621,6 +614,7 @@ public class MainActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.cancel());
                 AlertDialog alert = alertBuilder.create();
+                Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 alert.show();
             }
         }
@@ -631,6 +625,7 @@ public class MainActivity extends AppCompatActivity {
         alertBuilder.setMessage("Please leave the app open till install screen starts")
                 .setCancelable(false);
         waitDialog = alertBuilder.create();
+        Objects.requireNonNull(waitDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         waitDialog.show();
         File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
         if (fDel.exists()) {
@@ -731,6 +726,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("OK", (dialogInterface, i) -> {
                     });
             AlertDialog alert = alertBuilder.create();
+            Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             alert.show();
         }
     }
@@ -776,6 +772,7 @@ public class MainActivity extends AppCompatActivity {
                     .setNegativeButton("TRY AGAIN LATER", (dialog, which) -> {
                     });
             AlertDialog alert = alertBuilder.create();
+            Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             alert.show();
         }
     }
@@ -841,6 +838,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setCancelable(false);
             builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
             AlertDialog kernelExit = builder.create();
+            Objects.requireNonNull(kernelExit.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             kernelExit.show();
         } else {
             try {
