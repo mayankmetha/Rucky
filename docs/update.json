@@ -1,0 +1,13 @@
+{
+  "latestVersion": "2.0",
+  "latestVersionCode": "20",
+  "url": "https://github.com/mayankmetha/Rucky/releases",
+  "releaseNotes": [
+    "- UI Changes",
+    "- USB Auto Attack Launch on Connect",
+    "- Raspberry Pi as Add-On",
+    "- Block Screenshot and Screen Recording",
+    "- App Screenshot on Recent App View is hidden",
+    "- Fix some bugs"
+  ]
+}
