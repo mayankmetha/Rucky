@@ -38,7 +38,8 @@ public class PingService extends Service {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                boolean piConnected = ping();
+                boolean piConnected;
+                piConnected = ping();
                 Intent i = new Intent();
                 if (MainActivity.piConnected != piConnected) {
                     if(piConnected)

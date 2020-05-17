@@ -21,7 +21,6 @@ import java.security.KeyPairGenerator;
 import java.security.SecureRandom;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Objects;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -52,7 +51,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
 
-        final SharedPreferences settings = Objects.requireNonNull(this.getActivity()).getSharedPreferences(PREF_SETTINGS,MODE_PRIVATE);
+        final SharedPreferences settings = this.requireActivity().getSharedPreferences(PREF_SETTINGS,MODE_PRIVATE);
         setPreferencesFromResource(R.xml.settings, rootKey);
         final SwitchPreferenceCompat darkThemeSwitch = findPreference("theme");
         assert darkThemeSwitch != null;
@@ -62,14 +61,14 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             editor.putBoolean(PREF_SETTINGS_DARK_THEME,switched).apply();
             if(!SettingsActivity.launchIcon) {
                 if(switched) {
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
                             PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
                 } else {
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
                             PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
                 }
             }
@@ -83,7 +82,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }
-            getActivity().finish();
+            requireActivity().finish();
             return true;
         });
 
@@ -95,18 +94,18 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             editor.putBoolean(PREF_SETTINGS_LAUNCH_ICON,switched).apply();
             if(SettingsActivity.darkTheme) {
                 if(switched) {
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
                             PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
                 } else {
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Dark"),
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
                 }
             } else {
                 if(switched) {
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
                             PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
                 } else {
-                    getActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
+                    requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky","com.mayank.rucky.Light"),
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
                 }
             }
@@ -119,7 +118,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }
-            getActivity().finish();
+            requireActivity().finish();
             return true;
         });
 
@@ -138,7 +137,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                     Calendar start = new GregorianCalendar();
                     Calendar stop = new GregorianCalendar();
                     stop.add(Calendar.YEAR,25);
-                    KeyPairGeneratorSpec spec = new KeyPairGeneratorSpec.Builder(Objects.requireNonNull(getContext()))
+                    KeyPairGeneratorSpec spec = new KeyPairGeneratorSpec.Builder(requireContext())
                             .setKeySize(2048)
                             .setAlias(KEYSTORE_PROVIDER_ANDROID_KEYSTORE)
                             .setSubject(new X500Principal("CN="+KEYSTORE_PROVIDER_ANDROID_KEYSTORE))
@@ -168,7 +167,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }
-            getActivity().finish();
+            requireActivity().finish();
             return true;
         });
 
@@ -179,7 +178,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.setData(Uri.parse("package:com.mayank.rucky"));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            getActivity().finish();
+            requireActivity().finish();
             startActivity(intent);
             return true;
         });
@@ -200,7 +199,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }
-            getActivity().finish();
+            requireActivity().finish();
             return true;
         });
 
@@ -220,7 +219,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }
-            getActivity().finish();
+            requireActivity().finish();
             return true;
         });
 
@@ -237,7 +236,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference versionPreference = findPreference("version");
         assert versionPreference != null;
         try {
-            PackageInfo pInfo = Objects.requireNonNull(this.getActivity()).getPackageManager().getPackageInfo(Objects.requireNonNull(this.getActivity()).getPackageName(), 0);
+            PackageInfo pInfo = this.requireActivity().getPackageManager().getPackageInfo(this.requireActivity().getPackageName(), 0);
             currentVersion = Double.parseDouble(pInfo.versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
