@@ -7,8 +7,8 @@ android {
         applicationId "com.mayank.rucky"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 01
-        versionName "0.0"
+        versionCode 20
+        versionName "2.0"
     }
     buildTypes {
         debug {
