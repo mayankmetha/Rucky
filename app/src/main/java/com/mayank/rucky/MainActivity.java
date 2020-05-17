@@ -1,7 +1,6 @@
 package com.mayank.rucky;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -298,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
                 OutputStream outputStream;
                 try {
                     if (advSecurity) {
-                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
+                        Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
                         c.init(Cipher.ENCRYPT_MODE, key, iv);
                         fOutputStream = new FileOutputStream(file);
                         outputStream = new BufferedOutputStream(new CipherOutputStream(fOutputStream, c));
@@ -350,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
                 StringWriter writer;
                 try {
                     if (advSecurity) {
-                        @SuppressLint("GetInstance") Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
+                        Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
                         c.init(Cipher.DECRYPT_MODE, key, iv);
                         fInputStream = new FileInputStream(file);
                         inputStream = new BufferedInputStream(new CipherInputStream(fInputStream,c));
