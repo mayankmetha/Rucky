@@ -7,8 +7,8 @@ android {
         applicationId "com.mayank.rucky"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 20
-        versionName "2.0"
+        versionCode 01
+        versionName "0.0"
     }
     buildTypes {
         debug {
@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0-alpha06'
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.javiersantos:AppUpdater:2.7'
     implementation 'com.google.guava:guava:28.2-jre'
     api 'com.google.guava:guava:28.2-jre'
     implementation 'com.google.guava:guava:28.2-android'

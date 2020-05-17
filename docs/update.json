@@ -3,6 +3,8 @@
   "latestVersionCode": 20,
   "url": "https://github.com/mayankmetha/Rucky/releases",
   "releaseNotes": [
+    "Rucky 2.0",
+    "ChangeLogs:",
     "- UI Changes",
     "- USB Auto Attack Launch on Connect",
     "- Raspberry Pi as Add-On",
