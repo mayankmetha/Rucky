@@ -18,7 +18,6 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
-import android.os.AsyncTask;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -58,7 +57,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.StringWriter;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.spec.AlgorithmParameterSpec;
@@ -72,6 +70,8 @@ import javax.crypto.CipherInputStream;
 import javax.crypto.CipherOutputStream;
 import javax.crypto.SecretKey;
 import javax.net.ssl.HttpsURLConnection;
+
+import static java.lang.Thread.sleep;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -532,27 +532,37 @@ public class MainActivity extends AppCompatActivity {
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
-            try {
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    updateNotify = new Notification.Builder(this, CHANNEL_ID)
-                            .setContentTitle("Checking for app update")
-                            .setSmallIcon(R.drawable.ic_notification)
-                            .setAutoCancel(true)
-                            .build();
-                } else {
-                    updateNotify = new Notification.Builder(this)
-                            .setContentTitle("Checking for update")
-                            .setSmallIcon(R.drawable.ic_notification)
-                            .setAutoCancel(true)
-                            .build();
-                }
-                notificationManager.notify(0,updateNotify);
-                URL url = new URL("https://github.com/mayankmetha/Rucky/releases/latest");
-                new fetchVersion().execute(url);
-                notificationManager.cancel(0);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                updateNotify = new Notification.Builder(this, CHANNEL_ID)
+                        .setContentTitle("Checking for app update")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true)
+                        .build();
+            } else {
+                updateNotify = new Notification.Builder(this)
+                        .setContentTitle("Checking for update")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true)
+                        .build();
             }
+            notificationManager.notify(0,updateNotify);
+            Runnable runnable = () -> {
+                try {
+                    URL url = new URL("https://github.com/mayankmetha/Rucky/releases/latest");
+                    HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+                    conn.getInputStream();
+                    String str = ""+conn.getURL()+"";
+                    if(str.isEmpty()){
+                        MainActivity.newVersion = MainActivity.currentVersion;
+                    } else {
+                        MainActivity.newVersion = Double.parseDouble(str.substring(str.lastIndexOf('/')+1));
+                    }
+                    notificationManager.cancel(0);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            };
+            new Thread(runnable).start();
         } else {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setMessage("Please check the network connection")
@@ -562,35 +572,6 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alert = alertBuilder.create();
             Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             alert.show();
-        }
-    }
-
-    private static class fetchVersion extends AsyncTask<URL, Void, String> {
-
-        @Override
-        protected void onPreExecute() {
-        }
-
-        @Override
-        protected String doInBackground(URL... urls) {
-            String str = "";
-            try {
-                HttpsURLConnection conn = (HttpsURLConnection) urls[0].openConnection();
-                conn.getInputStream();
-                str = ""+conn.getURL()+"";
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return str.substring(str.lastIndexOf('/')+1);
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            if(result.isEmpty()){
-                newVersion = currentVersion;
-            } else {
-                newVersion = Double.parseDouble(result);
-            }
         }
     }
 
@@ -675,7 +656,7 @@ public class MainActivity extends AppCompatActivity {
         downloadRef = downloadManager.enqueue(req);
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
         registerReceiver(downloadBR, filter);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             updateNotify = new Notification.Builder(this, CHANNEL_ID)
                     .setContentTitle("Updating app")
                     .setSmallIcon(R.drawable.ic_notification)
@@ -716,27 +697,37 @@ public class MainActivity extends AppCompatActivity {
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
-            try {
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    updateNotify = new Notification.Builder(this, CHANNEL_ID)
-                            .setContentTitle("Verifying app update")
-                            .setSmallIcon(R.drawable.ic_notification)
-                            .setAutoCancel(true)
-                            .build();
-                } else {
-                    updateNotify = new Notification.Builder(this)
-                            .setContentTitle("Verifying app update")
-                            .setSmallIcon(R.drawable.ic_notification)
-                            .setAutoCancel(true)
-                            .build();
-                }
-                notificationManager.notify(1,updateNotify);
-                URL url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
-                new fetchHash().execute(url);
-                notificationManager.cancel(1);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                updateNotify = new Notification.Builder(this, CHANNEL_ID)
+                        .setContentTitle("Verifying app update")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true)
+                        .build();
+            } else {
+                updateNotify = new Notification.Builder(this)
+                        .setContentTitle("Verifying app update")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setAutoCancel(true)
+                        .build();
             }
+            notificationManager.notify(1,updateNotify);
+            Runnable runnable = () -> {
+                try {
+                    URL url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
+                    BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+                    MainActivity.getSHA512 = in.readLine();
+                    in.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                notificationManager.cancel(1);
+            };
+            new Thread(runnable).start();
         } else {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setMessage("Please check the network connection")
@@ -746,31 +737,6 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alert = alertBuilder.create();
             Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             alert.show();
-        }
-    }
-
-    private static class fetchHash extends AsyncTask<URL, Void, String> {
-
-        @Override
-        protected void onPreExecute() {
-        }
-
-        @Override
-        protected String doInBackground(URL... urls) {
-            String str = "";
-            try {
-                BufferedReader in = new BufferedReader(new InputStreamReader(urls[0].openStream()));
-                str = in.readLine();
-                in.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            getSHA512 = str;
-            return str;
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
         }
     }
 
