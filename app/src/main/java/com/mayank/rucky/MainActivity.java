@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
+        //TODO: Localization
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         cmds = new ArrayList<>();
@@ -395,6 +396,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void launchAttack(int mode, int language, String scripts) {
+        //TODO: Localization
         if(mode == 0) {
             getRoot();
             if(root) {
@@ -525,9 +527,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        unregisterReceiver(downloadBR);
     }
 
     void checkUpdate()throws NullPointerException {
+        //TODO: Localization
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
@@ -576,6 +580,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void updater(int mode) {
+        //TODO: Localization
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
@@ -620,6 +625,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void download(Uri uri) {
+        //TODO: Localization
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setMessage("Please leave the app open till install screen starts")
                 .setCancelable(false);
@@ -693,6 +699,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     void getDownloadHash() {
+        //TODO: Localization
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
@@ -741,6 +748,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void generateHash() {
+        //TODO: Localization
         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
         try {
             genSHA512 = Files.asByteSource(file).hash(Hashing.sha512()).toString();
@@ -815,6 +823,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void supportedFiles() {
+        //TODO: Localization
         String pathDev = "/dev";
         File file1 = new File(pathDev,"hidg0");
         File file2 = new File(pathDev,"hidg1");
@@ -873,6 +882,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static Notification cNotify(Context context) {
+        //TODO: Localization
         String smallText = "";
         if (usbConnected) smallText += "USB Connected!";
         else if (piConnected) smallText += "Raspberry Pi Connected!";
