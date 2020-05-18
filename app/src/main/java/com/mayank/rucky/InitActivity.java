@@ -137,10 +137,10 @@ public class InitActivity extends AppCompatActivity {
 
             if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
-                btnNext.setText(getString(R.string.start));
+                btnNext.setText(getString(R.string.init_start));
                 btnSkip.setVisibility(View.GONE);
             } else {
-                btnNext.setText(getString(R.string.next));
+                btnNext.setText(getString(R.string.init_next));
                 btnSkip.setVisibility(View.VISIBLE);
             }
         }
