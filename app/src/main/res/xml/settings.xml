@@ -75,7 +75,7 @@
         <Preference
             app:icon="@drawable/ic_store"
             app:key="source"
-            app:title="Distribution" />
+            app:title="@string/release" />
 
         <Preference
             app:icon="@drawable/ic_license"

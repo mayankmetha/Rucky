@@ -1,6 +1,21 @@
 <resources>
     <string name="app_name" translatable="false">Rucky</string>
     <string name="baseURI" translatable="false">github.com/mayankmetha/rucky</string>
+    <string name="icon" translatable="false">icon</string>
+
+    <string name="unlock">Unlock App</string>
+    <string name="auth">Confirm authentication</string>
+    <string name="splashScreen" translatable="false">RUCKY</string>
+
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_start">HACK</string>
+    <string name="slideTitle1" translatable="false">Rucky</string>
+    <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
+    <string name="slideTitle2">USB Cable</string>
+    <string name="slideDesc2">USB wired interface for launching attack!</string>
+    <string name="slideTitle3">Raspberry Pi</string>
+    <string name="slideDesc3">Wi-Fi based interface for launching attack!</string>
 
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Dark Mode</string>
@@ -11,13 +26,11 @@
     <string name="delete_dep_summary">Clean up and uninstall app.</string>
     <string name="settings_sec_title">Advance Security</string>
     <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
-
     <string name="setting_device">Attack Mode Settings</string>
     <string name="settings_usb_title">USB Connect Launch</string>
     <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
     <string name="settings_rpi_title">Raspberry Pi Connect Launch</string>
     <string name="settings_rpi_desc">Run button will launch attack when Raspberry Pi is connected.</string>
-
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">Developer</string>
     <string name="setting_developer" translatable="false">Mayank Metha D</string>
@@ -25,7 +38,6 @@
     <string name="settings_arch_title">Architecture</string>
     <string name="settings_lic_title">License</string>
     <string name="settings_lic_desc" translatable="false">MIT</string>
-
     <string name="settings_support">Support</string>
     <string name="settings_git_title">GitHub Issues</string>
     <string name="settings_git_desc">Click to add issues or feature request.</string>
@@ -35,38 +47,19 @@
     <string name="setting_patreon_desc">Fund the project development.</string>
     <string name="setting_paypal_title">PayPal</string>
     <string name="setting_paypal_desc">Fund the project development.</string>
-
-    <string name="setting_name">Settings</string>
-    <string name="update_name">Update</string>
-
-    <string name="loadBtn">Load</string>
-    <string name="saveBtn">Save</string>
-    <string name="delBtn">Delete</string>
-    <string name="runBtn">Run</string>
-
-    <string name="codeHint">Type or load rubber ducky scripts here</string>
-
-    <string name="next">NEXT</string>
-    <string name="skip">SKIP</string>
-    <string name="start">HACK</string>
-
-    <string name="slideTitle1" translatable="false">Rucky</string>
-    <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
-
-    <string name="slideTitle2">USB Cable</string>
-    <string name="slideDesc2">USB wired interface for launching attack!</string>
-
-    <string name="slideTitle3">Raspberry Pi</string>
-    <string name="slideDesc3">Wi-Fi based interface for launching attack!</string>
-
-    <string name="icon" translatable="false">icon</string>
-
-    <string name="splashScreen" translatable="false">RUCKY</string>
-
+    <string name="release">Distribution</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub Release</string>
     <string name="releaseTest">Debug Release</string>
     <string name="releaseOthers">Non Supported Release</string>
+
+    <string name="setting_name">Settings</string>
+    <string name="update_name">Update</string>
+    <string name="loadBtn">Load</string>
+    <string name="saveBtn">Save</string>
+    <string name="delBtn">Delete</string>
+    <string name="runBtn">Run</string>
+    <string name="codeHint">Type or load rubber ducky scripts here</string>
 
     <string-array name="modes">
         <item>USB Cable (Root)</item>

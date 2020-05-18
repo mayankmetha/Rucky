@@ -122,7 +122,7 @@ public class SplashActivity extends AppCompatActivity {
         KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             assert keyguardManager != null;
-            Intent i = keyguardManager.createConfirmDeviceCredentialIntent("Unlock","Comfirm authentication");
+            Intent i = keyguardManager.createConfirmDeviceCredentialIntent(getResources().getString(R.string.unlock), getResources().getString(R.string.auth));
             try {
                 startActivityForResult(i, SettingsActivity.LOCK_REQUEST_CODE);
             } catch (Exception e) {

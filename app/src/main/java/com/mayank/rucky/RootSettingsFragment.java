@@ -227,7 +227,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         assert developerPreference != null;
         developerPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, "Developer");
+            intent.putExtra(activityTitle, getResources().getString(R.string.setting_developer));
             intent.putExtra(webViewID, "https://mayankmetha.github.io");
             startActivity(intent);
             return true;
@@ -254,7 +254,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         if(MainActivity.distro == R.string.releaseGitHub || MainActivity.distro == R.string.releaseTest) {
             distributionPreference.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(getActivity(), BrowserActivity.class);
-                intent.putExtra(activityTitle, "GitHub Release");
+                intent.putExtra(activityTitle, getResources().getString(R.string.releaseGitHub));
                 intent.putExtra(webViewID, "https://github.com/mayankmetha/Rucky/releases/latest");
                 startActivity(intent);
                 return true;
@@ -265,7 +265,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         assert licencePreference != null;
         licencePreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, "License");
+            intent.putExtra(activityTitle, getResources().getString(R.string.settings_lic_title));
             intent.putExtra(webViewID, "https://raw.githubusercontent.com/mayankmetha/Rucky/master/LICENSE");
             startActivity(intent);
             return true;
@@ -275,7 +275,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         assert gitPreference != null;
         gitPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, "GitHub Issues");
+            intent.putExtra(activityTitle, getResources().getString(R.string.settings_git_title));
             intent.putExtra(webViewID, "https://github.com/mayankmetha/Rucky/issues");
             startActivity(intent);
             return true;
@@ -285,7 +285,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         assert localePreference != null;
         localePreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, "Localization");
+            intent.putExtra(activityTitle, getResources().getString(R.string.settings_locale_title));
             intent.putExtra(webViewID, "https://mayankmetha.github.io/Rucky/");
             startActivity(intent);
             return true;
@@ -295,7 +295,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         assert patreonPreference != null;
         patreonPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, "Patreon");
+            intent.putExtra(activityTitle, getResources().getString(R.string.setting_patreon_title));
             intent.putExtra(webViewID, "https://www.patreon.com/mayankmethad");
             startActivity(intent);
             return true;
@@ -305,7 +305,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         assert paypalPreference != null;
         paypalPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, "PayPal");
+            intent.putExtra(activityTitle, getResources().getString(R.string.setting_paypal_title));
             intent.putExtra(webViewID, "https://www.paypal.me/mayankmetha");
             startActivity(intent);
             return true;
