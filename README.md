@@ -1,5 +1,5 @@
 # Rucky 
-[![GitHub](https://img.shields.io/github/license/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/badge/license-GPL--3.0-orange)](https://github.com/mayankmetha/Rucky/blob/master/LICENSE)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
 [![Crowdin](https://badges.crowdin.net/rucky/localized.svg)](https://mayankmetha.github.io/Rucky/)
 [![Android](https://img.shields.io/badge/android-4.4%2B-lightgrey)](https://github.com/mayankmetha/Rucky)
