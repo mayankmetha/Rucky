@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState)throws NullPointerException {
-        //TODO: Localization
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         cmds = new ArrayList<>();
@@ -164,9 +163,9 @@ public class MainActivity extends AppCompatActivity {
             getRoot();
             if(!root) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Root Access Required For USB Cable Attack!");
+                builder.setTitle(getResources().getString(R.string.root_err));
                 builder.setCancelable(false);
-                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
                 AlertDialog rootMissing = builder.create();
                 Objects.requireNonNull(rootMissing.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 rootMissing.show();
@@ -208,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.dismiss();
                 langBtn.setText(languages.get(language));
             });
-            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog hidDialog = builder.create();
             Objects.requireNonNull(hidDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             hidDialog.show();
@@ -225,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.dismiss();
                 modeBtn.setText(modes.get(mode));
             });
-            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog modeDialog = builder.create();
             Objects.requireNonNull(modeDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             modeDialog.show();
@@ -252,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
                 fileName[i] = files.get(i).getName();
             }
             AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Select File");
+            builder.setTitle(getResources().getString(R.string.file_select));
             builder.setCancelable(false);
             builder.setItems(fileName, (dialog, i) -> {
                 File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
@@ -267,9 +266,9 @@ public class MainActivity extends AppCompatActivity {
                         getApplicationContext().deleteFile(file.getName());
                     }
                 }
-                Snackbar.make(view, fileName[i] + " deleted!",Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
+                Snackbar.make(view, fileName[i] + " "+getResources().getString(R.string.file_deleted),Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
             });
-            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog delDialog = builder.create();
             Objects.requireNonNull(delDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             delDialog.show();
@@ -277,11 +276,11 @@ public class MainActivity extends AppCompatActivity {
         });
         SaveBtn.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("File Name");
+            builder.setTitle(getResources().getString(R.string.file_name));
             final EditText fileName = new EditText(MainActivity.this);
             builder.setView(fileName);
             builder.setCancelable(false);
-            builder.setPositiveButton("Save", (dialog, which) -> {
+            builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
                 EditText scripts = findViewById(R.id.code);
                 File file;
                 String fileNameString = fileName.getText().toString().replaceAll("[^A-Za-z0-9]+","");
@@ -315,9 +314,9 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                Snackbar.make(view, file.getName() + " saved!",Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
+                Snackbar.make(view, file.getName() + " "+getResources().getString(R.string.file_saved),Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
             });
-            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog saveDialog = builder.create();
             Objects.requireNonNull(saveDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             saveDialog.show();
@@ -340,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
                 fileName[i] = files.get(i).getName();
             }
             AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Select File");
+            builder.setTitle(getResources().getString(R.string.file_select));
             builder.setCancelable(false);
             builder.setItems(fileName, (dialog, i) -> {
                 EditText scripts = findViewById(R.id.code);
@@ -372,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             });
-            builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog loadDialog = builder.create();
             Objects.requireNonNull(loadDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             loadDialog.show();
@@ -396,7 +395,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void launchAttack(int mode, int language, String scripts) {
-        //TODO: Localization
         if(mode == 0) {
             getRoot();
             if(root) {
@@ -425,9 +423,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                     } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle("USB Cable Not Connected!");
+                        builder.setTitle(getResources().getString(R.string.usb_err));
                         builder.setCancelable(false);
-                        builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                        builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
                         AlertDialog pi = builder.create();
                         Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                         pi.show();
@@ -435,9 +433,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Root Access Required For USB Cable Attack!");
+                builder.setTitle(getResources().getString(R.string.root_err));
                 builder.setCancelable(false);
-                builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
                 AlertDialog rootMissing = builder.create();
                 Objects.requireNonNull(rootMissing.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 rootMissing.show();
@@ -463,18 +461,18 @@ public class MainActivity extends AppCompatActivity {
                         cmds.clear();
                     } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle("Raspberry Pi connection failed!");
+                        builder.setTitle(getResources().getString(R.string.pi_net_err));
                         builder.setCancelable(false);
-                        builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                        builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
                         AlertDialog pi = builder.create();
                         Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                         pi.show();
                     }
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("Raspberry Pi Not Found!");
+                    builder.setTitle(getResources().getString(R.string.pi_err));
                     builder.setCancelable(false);
-                    builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+                    builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
                     AlertDialog pi = builder.create();
                     Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                     pi.show();
@@ -530,20 +528,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void checkUpdate()throws NullPointerException {
-        //TODO: Localization
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 updateNotify = new Notification.Builder(this, CHANNEL_ID)
-                        .setContentTitle("Checking for app update")
+                        .setContentTitle(getResources().getString(R.string.update_check))
                         .setSmallIcon(R.drawable.ic_notification)
                         .setAutoCancel(true)
                         .build();
             } else {
                 updateNotify = new Notification.Builder(this)
-                        .setContentTitle("Checking for update")
+                        .setContentTitle(getResources().getString(R.string.update_check))
                         .setSmallIcon(R.drawable.ic_notification)
                         .setAutoCancel(true)
                         .build();
@@ -568,9 +565,9 @@ public class MainActivity extends AppCompatActivity {
             new Thread(runnable).start();
         } else {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-            alertBuilder.setMessage("Please check the network connection")
+            alertBuilder.setMessage(getResources().getString(R.string.network_err))
                     .setCancelable(false)
-                    .setPositiveButton("OK", (dialogInterface, i) -> {
+                    .setPositiveButton(getResources().getString(R.string.btn_ok), (dialogInterface, i) -> {
                     });
             AlertDialog alert = alertBuilder.create();
             Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -579,7 +576,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void updater(int mode) {
-        //TODO: Localization
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
@@ -587,14 +583,14 @@ public class MainActivity extends AppCompatActivity {
             checkUpdate();
             if (currentVersion < newVersion) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setMessage("New update available. Want do update now?")
+                builder.setMessage(getResources().getString(R.string.update_available))
                         .setCancelable(false)
-                        .setPositiveButton("Download & Install", (dialog, id) -> {
+                        .setPositiveButton(getResources().getString(R.string.btn_update), (dialog, id) -> {
                             getDownloadHash();
                             Uri dl = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.apk");
                             download(dl);
                         })
-                        .setNegativeButton("Cancel", (dialog, id) -> {
+                        .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, id) -> {
                         });
                 AlertDialog alert = builder.create();
                 Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -602,9 +598,9 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 if (mode == 1) {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-                    alertBuilder.setMessage("No update found")
+                    alertBuilder.setMessage(getResources().getString(R.string.update_no))
                             .setCancelable(false)
-                            .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.cancel());
+                            .setPositiveButton(getResources().getString(R.string.btn_ok), (dialogInterface, i) -> dialogInterface.cancel());
                     AlertDialog alert = alertBuilder.create();
                     Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                     alert.show();
@@ -613,9 +609,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if (mode == 1) {
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-                alertBuilder.setMessage("Please check the network connection")
+                alertBuilder.setMessage(getResources().getString(R.string.network_err))
                         .setCancelable(false)
-                        .setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.cancel());
+                        .setPositiveButton(getResources().getString(R.string.btn_ok), (dialogInterface, i) -> dialogInterface.cancel());
                 AlertDialog alert = alertBuilder.create();
                 Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
                 alert.show();

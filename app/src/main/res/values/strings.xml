@@ -101,8 +101,22 @@
     <string name="network_err">Please check the network connection</string>
     <string name="screen_on">Please leave the app open till install screen starts</string>
     <string name="update_exec">Updating app</string>
+    <string name="update_no">No update found</string>
+    <string name="update_check">Checking for update</string>
+    <string name="update_available">New update available. Want do update now?</string>
+    <string name="pi_err">Raspberry Pi Not Found!</string>
+    <string name="pi_net_err">Raspberry Pi connection failed!</string>
+    <string name="root_err">Root Access Required For USB Cable Attack!</string>
+    <string name="usb_err">USB Cable Not Connected!</string>
+    <string name="file_select">Select File</string>
+    <string name="file_saved">saved</string>
+    <string name="file_deleted">deleted</string>
+    <string name="file_name">File Name</string>
 
+    <string name="btn_save">Save</string>
     <string name="btn_continue">Continue</string>
-    <string name="btn_later">Try again later</string>
-    <string name="btn_ok">Ok</string>
+    <string name="btn_later">Try Again Later</string>
+    <string name="btn_ok">Okay</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_update">Download and Install</string>
 </resources>
