@@ -174,11 +174,10 @@ public class SplashActivity extends AppCompatActivity {
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(flags);
         setContentView(R.layout.activity_splash);
-        ImageView i = findViewById(R.id.imageViewFG);
-        i.setColorFilter(getResources().getColor((SettingsActivity.darkTheme?R.color.pri_dark:R.color.pri_light)));
-        FrameLayout l1 = findViewById(R.id.splashIcon);
+        ImageView i1 = findViewById(R.id.imageViewBG);
+        i1.setImageDrawable(getResources().getDrawable(SettingsActivity.darkTheme?R.drawable.splash_background_dark:R.drawable.splash_background_light));
         FrameLayout l2= findViewById(R.id.splashTextView);
-        l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
+        i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
         new Handler().postDelayed(this::launchNext, 5000);
         getSignature();

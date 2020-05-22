@@ -22,8 +22,7 @@
             android:scaleX="1.0"
             android:scaleY="1.0"
             android:scrollbarAlwaysDrawHorizontalTrack="false"
-            android:scrollbarAlwaysDrawVerticalTrack="false"
-            app:srcCompat="@drawable/splash_background" />
+            android:scrollbarAlwaysDrawVerticalTrack="false" />
 
         <ImageView
             android:id="@+id/imageViewFG"
