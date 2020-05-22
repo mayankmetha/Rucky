@@ -624,9 +624,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void download(Uri uri) {
-        //TODO: Localization
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-        alertBuilder.setMessage("Please leave the app open till install screen starts")
+        alertBuilder.setMessage(getResources().getString(R.string.screen_on))
                 .setCancelable(false);
         waitDialog = alertBuilder.create();
         Objects.requireNonNull(waitDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -663,14 +662,14 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(downloadBR, filter);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             updateNotify = new Notification.Builder(this, CHANNEL_ID)
-                    .setContentTitle("Updating app")
+                    .setContentTitle(getResources().getString(R.string.update_exec))
                     .setSmallIcon(R.drawable.ic_notification)
                     .setAutoCancel(false)
                     .setOngoing(true)
                     .build();
         } else {
             updateNotify = new Notification.Builder(this)
-                    .setContentTitle("Updating app")
+                    .setContentTitle(getResources().getString(R.string.update_exec))
                     .setSmallIcon(R.drawable.ic_notification)
                     .setAutoCancel(false)
                     .setOngoing(true)
@@ -698,20 +697,19 @@ public class MainActivity extends AppCompatActivity {
     };
 
     void getDownloadHash() {
-        //TODO: Localization
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 updateNotify = new Notification.Builder(this, CHANNEL_ID)
-                        .setContentTitle("Verifying app update")
+                        .setContentTitle(getResources().getString(R.string.update_verify))
                         .setSmallIcon(R.drawable.ic_notification)
                         .setAutoCancel(true)
                         .build();
             } else {
                 updateNotify = new Notification.Builder(this)
-                        .setContentTitle("Verifying app update")
+                        .setContentTitle(getResources().getString(R.string.update_verify))
                         .setSmallIcon(R.drawable.ic_notification)
                         .setAutoCancel(true)
                         .build();
@@ -736,9 +734,9 @@ public class MainActivity extends AppCompatActivity {
             new Thread(runnable).start();
         } else {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-            alertBuilder.setMessage("Please check the network connection")
+            alertBuilder.setMessage(getResources().getString(R.string.network_err))
                     .setCancelable(false)
-                    .setPositiveButton("OK", (dialogInterface, i) -> {
+                    .setPositiveButton(getResources().getString(R.string.btn_ok), (dialogInterface, i) -> {
                     });
             AlertDialog alert = alertBuilder.create();
             Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -747,7 +745,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void generateHash() {
-        //TODO: Localization
         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
         try {
             genSHA512 = Files.asByteSource(file).hash(Hashing.sha512()).toString();
@@ -758,9 +755,9 @@ public class MainActivity extends AppCompatActivity {
             installUpdate();
         } else {
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-            alertBuilder.setMessage("Update file corrupted!")
+            alertBuilder.setMessage(getResources().getString(R.string.update_corrupted))
                     .setCancelable(false)
-                    .setNegativeButton("TRY AGAIN LATER", (dialog, which) -> {
+                    .setNegativeButton(getResources().getString(R.string.btn_later), (dialog, which) -> {
                     });
             AlertDialog alert = alertBuilder.create();
             Objects.requireNonNull(alert.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -822,15 +819,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void supportedFiles() {
-        //TODO: Localization
         String pathDev = "/dev";
         File file1 = new File(pathDev,"hidg0");
         File file2 = new File(pathDev,"hidg1");
         if(!file1.exists() && !file2.exists()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Kernel Not Supported For USB Cable Attack!");
+            builder.setTitle(getResources().getString(R.string.kernel_err));
             builder.setCancelable(false);
-            builder.setPositiveButton("Continue", ((dialog, which) -> dialog.cancel()));
+            builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
             AlertDialog kernelExit = builder.create();
             Objects.requireNonNull(kernelExit.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             kernelExit.show();
@@ -881,16 +877,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static Notification cNotify(Context context) {
-        //TODO: Localization
         String smallText = "";
-        if (usbConnected) smallText += "USB Connected!";
-        else if (piConnected) smallText += "Raspberry Pi Connected!";
-        else smallText += "Disconnected!";
-        String usbText = !usbConnected ? " Disconnected" : " Connected";
-        String piText = !piConnected ?   " Disconnected" : " Connected";
+        if (usbConnected) smallText += context.getResources().getString(R.string.conn_usb_small)+"!";
+        else if (piConnected) smallText += context.getResources().getString(R.string.conn_pi_small)+"!";
+        else smallText += context.getResources().getString(R.string.conn_none)+"!";
+        String usbText = " " + context.getResources().getString(!usbConnected?R.string.conn_0:R.string.conn_1);
+        String piText = " " + context.getResources().getString(!piConnected?R.string.conn_0:R.string.conn_1);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             modeNotify = new Notification.Builder(context, PCHANNEL_ID)
-                    .setContentTitle("Rucky Interface")
+                    .setContentTitle("Rucky "+context.getResources().getString(R.string.conn_title))
                     .setContentText(smallText)
                     .setStyle(new Notification.InboxStyle()
                         .addLine("USB:"+usbText+"!")
@@ -902,7 +897,7 @@ public class MainActivity extends AppCompatActivity {
             return modeNotify;
         } else {
             modeNotify = new Notification.Builder(context)
-                    .setContentTitle("Rucky Interface")
+                    .setContentTitle("Rucky "+context.getResources().getString(R.string.conn_title))
                     .setContentText(smallText)
                     .setStyle(new Notification.InboxStyle()
                             .addLine("USB:"+usbText+"!")

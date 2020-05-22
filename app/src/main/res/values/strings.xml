@@ -88,4 +88,21 @@
         <item>Hungarian</item>
     </string-array>
 
+    <string name="conn_title">Interface</string>
+    <string name="conn_usb_small">USB Connected</string>
+    <string name="conn_pi_small">Raspberry Pi Connected</string>
+    <string name="conn_none">Disconnected</string>
+    <string name="conn_1">Connected</string>
+    <string name="conn_0">Disconnected</string>
+
+    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="update_corrupted">Update file corrupted!</string>
+    <string name="update_verify">Verifying app update</string>
+    <string name="network_err">Please check the network connection</string>
+    <string name="screen_on">Please leave the app open till install screen starts</string>
+    <string name="update_exec">Updating app</string>
+
+    <string name="btn_continue">Continue</string>
+    <string name="btn_later">Try again later</string>
+    <string name="btn_ok">Ok</string>
 </resources>
