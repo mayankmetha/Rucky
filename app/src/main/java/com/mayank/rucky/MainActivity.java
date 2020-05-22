@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
                 EditText scripts = findViewById(R.id.code);
                 File file;
-                String fileNameString = fileName.getText().toString().replaceAll("[^A-Za-z0-9]+","");
+                String fileNameString = fileName.getText().toString().replaceAll("[\\\\/.]+","");
                 if (fileNameString.isEmpty()) {
                     fileNameString = String.valueOf(new Date().getTime());
                 }
