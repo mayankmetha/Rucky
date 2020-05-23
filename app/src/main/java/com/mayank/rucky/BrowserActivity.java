@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import android.view.KeyEvent;
 import android.view.WindowManager;
@@ -27,7 +28,7 @@ public class BrowserActivity extends AppCompatActivity {
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         setContentView(R.layout.activity_browser);
         Toolbar toolbar = findViewById(R.id.toolbarMain);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.accent));
+        toolbar.setTitleTextColor(ContextCompat.getColor(this,R.color.accent));
         String activityTitle = "WEBVIEW_TITLE";
         String title = getIntent().getStringExtra(activityTitle);
         toolbar.setTitle(title);

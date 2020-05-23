@@ -1,16 +1,13 @@
 package com.mayank.rucky;
 
 import android.annotation.SuppressLint;
-import android.app.KeyguardManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.Settings;
 import android.util.Base64;
 import android.view.View;
 import android.view.Window;
@@ -19,12 +16,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 
 import java.security.KeyStore;
 import java.security.MessageDigest;
 import java.security.PrivateKey;
 import java.util.Objects;
+import java.util.concurrent.Executor;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -33,9 +34,6 @@ import javax.crypto.spec.SecretKeySpec;
 import static android.util.Base64.decode;
 
 public class SplashActivity extends AppCompatActivity {
-
-    public static final int LOCK_REQUEST_CODE = 221;
-    public static final int SECURITY_SETTING_REQUEST_CODE = 233;
 
     private static final String KEYSTORE_PROVIDER_ANDROID_KEYSTORE = "AndroidKeyStore";
     private static final String RUCKY_KEYSTORE = "RuckyKeystore";
@@ -54,7 +52,7 @@ public class SplashActivity extends AppCompatActivity {
         init = settings.getBoolean(PREF_SETTINGS_INIT,true);
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         SettingsActivity.advSecurity = settings.getBoolean(SettingsActivity.PREF_SETTING_ADV_SECURITY,false);
-        if(!init && SettingsActivity.advSecurity) authenticate();
+        if(!init && SettingsActivity.advSecurity) biometric();
         else splash();
     }
 
@@ -118,49 +116,40 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-    public void authenticate() {
-        KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            assert keyguardManager != null;
-            Intent i = keyguardManager.createConfirmDeviceCredentialIntent(getResources().getString(R.string.unlock), getResources().getString(R.string.auth));
-            try {
-                startActivityForResult(i, SettingsActivity.LOCK_REQUEST_CODE);
-            } catch (Exception e) {
-                Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS);
-                try {
-                    startActivityForResult(intent, SettingsActivity.SECURITY_SETTING_REQUEST_CODE);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+    public void biometric() {
+        Executor executor = ContextCompat.getMainExecutor(this);
+        BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                finishAffinity();
+                System.exit(0);
             }
-        }
-    }
 
-    @Override
-    protected void onActivityResult(int reqCode, int resCode, Intent data) {
-        super.onActivityResult(reqCode,resCode,data);
-        switch (reqCode) {
-            case LOCK_REQUEST_CODE:
-                if (resCode == RESULT_OK) {
-                    splash();
-                    getKey();
-                } else {
-                    finishAffinity();
-                    System.exit(0);
-                }
-                break;
-            case SECURITY_SETTING_REQUEST_CODE:
-                if(isDeviceSecure()) {
-                    authenticate();
-                }
-                break;
-        }
-    }
+            @Override
+            public void onAuthenticationSucceeded(
+                    @NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                splash();
+                getKey();
+            }
 
-    private Boolean isDeviceSecure() {
-        KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
-        assert keyguardManager != null;
-        return keyguardManager.isKeyguardSecure();
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                finishAffinity();
+                System.exit(0);
+            }
+        });
+
+        BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle(getResources().getString(R.string.unlock))
+                .setSubtitle(getResources().getString(R.string.auth))
+                .setConfirmationRequired(false)
+                .setDeviceCredentialAllowed(true)
+                .build();
+        biometricPrompt.authenticate(promptInfo);
+
     }
 
     private void splash() {
@@ -175,7 +164,7 @@ public class SplashActivity extends AppCompatActivity {
         view.setSystemUiVisibility(flags);
         setContentView(R.layout.activity_splash);
         ImageView i1 = findViewById(R.id.imageViewBG);
-        i1.setImageDrawable(getResources().getDrawable(SettingsActivity.darkTheme?R.drawable.splash_background_dark:R.drawable.splash_background_light));
+        i1.setImageDrawable(ContextCompat.getDrawable(this,SettingsActivity.darkTheme ? R.drawable.splash_background_dark : R.drawable.splash_background_light));
         FrameLayout l2= findViewById(R.id.splashTextView);
         i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
