@@ -5,6 +5,7 @@ import android.app.DownloadManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +15,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.net.Uri;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
@@ -130,14 +132,14 @@ public class MainActivity extends AppCompatActivity {
         setTheme(SettingsActivity.darkTheme?R.style.AppThemeDark:R.style.AppThemeLight);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbarMain);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.accent));
+        toolbar.setTitleTextColor(ContextCompat.getColor(this,R.color.accent));
         setSupportActionBar(toolbar);
 
         NotificationChannel pnotificationChannel;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             pnotificationChannel = new NotificationChannel(PCHANNEL_ID, PCHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
             pnotificationChannel.enableLights(false);
-            pnotificationChannel.setShowBadge(false);
+            pnotificationChannel.setShowBadge(true);
             pnotificationChannel.enableVibration(false);
             pnotificationChannel.canBypassDnd();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -266,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                         getApplicationContext().deleteFile(file.getName());
                     }
                 }
-                Snackbar.make(view, fileName[i] + " "+getResources().getString(R.string.file_deleted),Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
+                Snackbar.make(view, fileName[i] + " "+getResources().getString(R.string.file_deleted),Snackbar.LENGTH_SHORT).setBackgroundTint(ContextCompat.getColor(this,R.color.accent)).show();
             });
             builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog delDialog = builder.create();
@@ -314,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                Snackbar.make(view, file.getName() + " "+getResources().getString(R.string.file_saved),Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.accent)).show();
+                Snackbar.make(view, file.getName() + " "+getResources().getString(R.string.file_saved),Snackbar.LENGTH_SHORT).setBackgroundTint(ContextCompat.getColor(this,R.color.accent)).show();
             });
             builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog saveDialog = builder.create();
@@ -530,8 +532,11 @@ public class MainActivity extends AppCompatActivity {
     void checkUpdate()throws NullPointerException {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
-        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
-        if (activeNetwork != null && activeNetwork.isConnected()) {
+        final Network activeNetwork = conMgr.getActiveNetwork();
+        assert activeNetwork != null;
+        final NetworkCapabilities nc = conMgr.getNetworkCapabilities(activeNetwork);
+        assert nc != null;
+        if (nc.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)||nc.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 updateNotify = new Notification.Builder(this, CHANNEL_ID)
                         .setContentTitle(getResources().getString(R.string.update_check))
@@ -578,8 +583,11 @@ public class MainActivity extends AppCompatActivity {
     void updater(int mode) {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
-        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
-        if (activeNetwork != null && activeNetwork.isConnected()) {
+        final Network activeNetwork = conMgr.getActiveNetwork();
+        assert activeNetwork != null;
+        final NetworkCapabilities nc = conMgr.getNetworkCapabilities(activeNetwork);
+        assert nc != null;
+        if (nc.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)||nc.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
             checkUpdate();
             if (currentVersion < newVersion) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -626,7 +634,7 @@ public class MainActivity extends AppCompatActivity {
         waitDialog = alertBuilder.create();
         Objects.requireNonNull(waitDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         waitDialog.show();
-        File fDel = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
+        File fDel = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),"rucky.apk");
         if (fDel.exists()) {
             fDel.delete();
             if(fDel.exists()){
@@ -645,8 +653,8 @@ public class MainActivity extends AppCompatActivity {
         req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         req.setAllowedOverRoaming(true);
         req.setTitle("rucky.apk");
-        req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"/rucky.apk");
-        req.setVisibleInDownloadsUi(true);
+        req.setDestinationInExternalFilesDir(this,Environment.DIRECTORY_DOWNLOADS,"rucky.apk");
+        req.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
         DownloadManager.Query q = new DownloadManager.Query();
         q.setFilterById(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL | DownloadManager.STATUS_PAUSED | DownloadManager.STATUS_PENDING | DownloadManager.STATUS_RUNNING);
         Cursor c = downloadManager.query(q);
@@ -695,8 +703,11 @@ public class MainActivity extends AppCompatActivity {
     void getDownloadHash() {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert conMgr != null;
-        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
-        if (activeNetwork != null && activeNetwork.isConnected()) {
+        final Network activeNetwork = conMgr.getActiveNetwork();
+        assert activeNetwork != null;
+        final NetworkCapabilities nc = conMgr.getNetworkCapabilities(activeNetwork);
+        assert nc != null;
+        if (nc.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)||nc.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 updateNotify = new Notification.Builder(this, CHANNEL_ID)
                         .setContentTitle(getResources().getString(R.string.update_verify))
@@ -741,7 +752,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void generateHash() {
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
+        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),"rucky.apk");
         try {
             genSHA512 = Files.asByteSource(file).hash(Hashing.sha512()).toString();
         } catch (IOException e) {
@@ -763,10 +774,11 @@ public class MainActivity extends AppCompatActivity {
 
     void installUpdate() {
         notificationManager.cancel(2);
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/rucky.apk");
+        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),"rucky.apk");
         Intent installer;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             Uri apkUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
+            //TODO:
             installer = new Intent(Intent.ACTION_INSTALL_PACKAGE);
             installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
@@ -879,6 +891,9 @@ public class MainActivity extends AppCompatActivity {
         else smallText += context.getResources().getString(R.string.conn_none)+"!";
         String usbText = " " + context.getResources().getString(!usbConnected?R.string.conn_0:R.string.conn_1);
         String piText = " " + context.getResources().getString(!piConnected?R.string.conn_0:R.string.conn_1);
+        Intent notificationIntent = new Intent(context, SplashActivity.class);
+        notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        PendingIntent intent = PendingIntent.getActivity(context, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             modeNotify = new Notification.Builder(context, PCHANNEL_ID)
                     .setContentTitle("Rucky "+context.getResources().getString(R.string.conn_title))
@@ -889,6 +904,7 @@ public class MainActivity extends AppCompatActivity {
                     .setSmallIcon(R.drawable.ic_notification)
                     .setAutoCancel(true)
                     .setOngoing(true)
+                    .setContentIntent(intent)
                     .build();
             return modeNotify;
         } else {
@@ -901,6 +917,7 @@ public class MainActivity extends AppCompatActivity {
                     .setSmallIcon(R.drawable.ic_notification)
                     .setAutoCancel(true)
                     .setOngoing(true)
+                    .setContentIntent(intent)
                     .build();
             return modeNotify;
         }
