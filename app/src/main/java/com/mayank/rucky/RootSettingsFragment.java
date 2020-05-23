@@ -8,25 +8,22 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.security.KeyPairGeneratorSpec;
+import android.security.keystore.KeyGenParameterSpec;
+import android.security.keystore.KeyProperties;
 import android.util.Base64;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
-import java.math.BigInteger;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.SecureRandom;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
-import javax.security.auth.x500.X500Principal;
 
 import static android.content.Context.MODE_PRIVATE;
 import static android.util.Base64.encodeToString;
@@ -134,20 +131,12 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
                     KeyGenerator keygen = KeyGenerator.getInstance("AES");
                     keygen.init(256);
                     SecretKey key = keygen.generateKey();
-                    Calendar start = new GregorianCalendar();
-                    Calendar stop = new GregorianCalendar();
-                    stop.add(Calendar.YEAR,25);
-                    KeyPairGeneratorSpec spec = new KeyPairGeneratorSpec.Builder(requireContext())
-                            .setKeySize(2048)
-                            .setAlias(KEYSTORE_PROVIDER_ANDROID_KEYSTORE)
-                            .setSubject(new X500Principal("CN="+KEYSTORE_PROVIDER_ANDROID_KEYSTORE))
-                            .setSerialNumber(BigInteger.ZERO)
-                            .setStartDate(start.getTime()).setEndDate(stop.getTime()).build();
-                    KeyPairGenerator keyPairGenerator;
+                    KeyPairGenerator kpg = KeyPairGenerator.getInstance(KeyProperties.KEY_ALGORITHM_RSA,KEYSTORE_PROVIDER_ANDROID_KEYSTORE);
+                    kpg.initialize(new KeyGenParameterSpec.Builder(KEYSTORE_PROVIDER_ANDROID_KEYSTORE, KeyProperties.PURPOSE_DECRYPT|KeyProperties.PURPOSE_ENCRYPT)
+                    .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_RSA_PKCS1)
+                    .setBlockModes(KeyProperties.BLOCK_MODE_ECB).build());
                     KeyPair kp;
-                    keyPairGenerator = KeyPairGenerator.getInstance("RSA", KEYSTORE_PROVIDER_ANDROID_KEYSTORE);
-                    keyPairGenerator.initialize(spec);
-                    kp = keyPairGenerator.generateKeyPair();
+                    kp = kpg.generateKeyPair();
                     Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
                     cipher.init(Cipher.ENCRYPT_MODE, kp.getPublic());
                     editor.putString(RUCKY_KEYSTORE2,encodeToString(cipher.doFinal(iv.getIV()), Base64.DEFAULT)).apply();
@@ -243,7 +232,7 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         }
         versionPreference.setSummary(Double.toString(currentVersion));
 
-        String currentArch = Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP?Build.SUPPORTED_ABIS[0]:Build.CPU_ABI;
+        String currentArch = Build.SUPPORTED_ABIS[0];
         Preference archPreference = findPreference("arch");
         assert archPreference != null;
         archPreference.setSummary(currentArch);
