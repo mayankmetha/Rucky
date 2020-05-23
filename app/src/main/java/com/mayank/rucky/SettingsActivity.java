@@ -6,11 +6,9 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 public class SettingsActivity extends AppCompatActivity {
-
-    public static final int LOCK_REQUEST_CODE = 221;
-    public static final int SECURITY_SETTING_REQUEST_CODE = 233;
 
     public static final String PREF_SETTINGS = "settings";
     public static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
@@ -35,6 +33,6 @@ public class SettingsActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarSettings);
         setSupportActionBar(toolbar);
         getSupportFragmentManager().beginTransaction().replace(R.id.setting_container, new RootSettingsFragment()).commit();
-        toolbar.setTitleTextColor(getResources().getColor(R.color.accent));
+        toolbar.setTitleTextColor(ContextCompat.getColor(this,R.color.accent));
     }
 }
