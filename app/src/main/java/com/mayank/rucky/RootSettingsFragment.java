@@ -163,9 +163,8 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
         Preference depPreference = findPreference("uninstall");
         assert depPreference != null;
         depPreference.setOnPreferenceClickListener(preference -> {
-            //TODO:
-            Intent intent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            Intent intent = new Intent(Intent.ACTION_DELETE);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.setData(Uri.parse("package:com.mayank.rucky"));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             requireActivity().finish();
@@ -300,6 +299,6 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(intent);
             return true;
         });
-
     }
+
 }

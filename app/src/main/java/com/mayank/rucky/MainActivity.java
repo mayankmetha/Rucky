@@ -350,7 +350,7 @@ public class MainActivity extends AppCompatActivity {
                 InputStream inputStream;
                 StringWriter writer;
                 try {
-                    if (advSecurity) {
+                    if (advSecurity && file.getPath().endsWith(".enc")) {
                         Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
                         c.init(Cipher.DECRYPT_MODE, key, iv);
                         fInputStream = new FileInputStream(file);
@@ -775,20 +775,16 @@ public class MainActivity extends AppCompatActivity {
     void installUpdate() {
         notificationManager.cancel(2);
         File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),"rucky.apk");
-        Intent installer;
+        Uri apkUri;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            Uri apkUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
-            //TODO:
-            installer = new Intent(Intent.ACTION_INSTALL_PACKAGE);
-            installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
-            installer.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            apkUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
         } else {
-            Uri apkUri = Uri.fromFile(file);
-            installer = new Intent(Intent.ACTION_VIEW);
-            installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
+            apkUri = Uri.fromFile(file);
         }
+        Intent installer = new Intent(Intent.ACTION_VIEW);
+        installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
+        installer.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         startActivity(installer);
     }
 
