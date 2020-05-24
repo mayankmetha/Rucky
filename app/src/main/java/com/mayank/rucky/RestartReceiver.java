@@ -7,8 +7,12 @@ import android.content.Intent;
 public class RestartReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Intent i = new Intent(context, SplashActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        context.startActivity(i);
+        String action = intent.getAction();
+        assert action != null;
+        if (action.equals("android.intent.action.MY_PACKAGE_REPLACED")) {
+            Intent i = new Intent(context, SplashActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(i);
+        }
     }
 }

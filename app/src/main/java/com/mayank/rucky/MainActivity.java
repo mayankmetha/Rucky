@@ -920,7 +920,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void connectionNotify(Context context) {
-        pnotificationManager.notify(0,cNotify(context));
+        pnotificationManager.notify(99,cNotify(context));
     }
 
     private void initPiDiscoveryListener() {

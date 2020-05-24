@@ -10,18 +10,15 @@
         <item name="android:textColorSecondary">@color/sec_dark</item>
         <item name="android:textColorSecondaryInverse">@color/pri_light</item>
         <item name="android:windowBackground">@color/pri_light</item>
-        <item name="android:navigationBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/pri_dark
-        </item>
-        <item name="android:statusBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/pri_dark
-        </item>
+        <item name="android:navigationBarColor">@color/pri_light</item>
+        <item name="android:statusBarColor">@color/pri_light</item>
         <item name="colorAccent">@color/accent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="alertDialogTheme">@style/AlertLight</item>
         <item name="alertDialogStyle">@style/AlertLight</item>
         <item name="materialButtonStyle">@style/IconTextButtonLight</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <!-- Dark Theme -->
@@ -35,18 +32,15 @@
         <item name="android:textColorSecondary">@color/sec_light</item>
         <item name="android:textColorSecondaryInverse">@color/pri_dark</item>
         <item name="android:windowBackground">@color/pri_dark</item>
-        <item name="android:navigationBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/pri_dark
-        </item>
-        <item name="android:statusBarColor" tools:ignore="NewApi" tools:targetApi="lollipop">
-            @color/pri_dark
-        </item>
+        <item name="android:navigationBarColor">@color/pri_dark</item>
+        <item name="android:statusBarColor">@color/pri_dark</item>
         <item name="colorAccent">@color/accent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="alertDialogTheme">@style/AlertDark</item>
         <item name="alertDialogStyle">@style/AlertDark</item>
         <item name="materialButtonStyle">@style/IconTextButtonDark</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
     <style name="AlertLight" parent="Theme.MaterialComponents.Light.Dialog.Alert">
@@ -58,10 +52,10 @@
         <item name="android:shadowColor">@null</item>
         <item name="android:shadowDx">@null</item>
         <item name="android:shadowDy">@null</item>
-        <item name="android:ambientShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:ambientShadowAlpha">@null</item>
         <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
-        <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:spotShadowAlpha">@null</item>
         <item name="android:windowMinWidthMajor">70%p</item>
         <item name="android:windowMinWidthMinor">70%p</item>
         <item name="android:windowIsFloating">true</item>
@@ -78,10 +72,10 @@
         <item name="android:shadowColor">@null</item>
         <item name="android:shadowDx">@null</item>
         <item name="android:shadowDy">@null</item>
-        <item name="android:ambientShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:ambientShadowAlpha">@null</item>
         <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@null</item>
         <item name="android:outlineSpotShadowColor" tools:targetApi="p">@null</item>
-        <item name="android:spotShadowAlpha" tools:targetApi="lollipop">@null</item>
+        <item name="android:spotShadowAlpha">@null</item>
         <item name="android:windowMinWidthMajor">70%p</item>
         <item name="android:windowMinWidthMinor">70%p</item>
         <item name="android:windowIsFloating">true</item>

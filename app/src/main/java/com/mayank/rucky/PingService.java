@@ -17,7 +17,7 @@ public class PingService extends Service {
     public void onCreate() {
         super.onCreate();
         checkPiStatus();
-        startForeground(3,MainActivity.cNotify(this));
+        startForeground(99,MainActivity.cNotify(this));
     }
 
     public boolean ping() {
