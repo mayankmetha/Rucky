@@ -6,7 +6,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         applicationId "com.mayank.rucky"
         minSdkVersion 23
-        targetSdkVersion 'R'
+        targetSdkVersion 30
         versionCode 20
         versionName "2.0"
     }
