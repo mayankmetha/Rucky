@@ -303,16 +303,13 @@ public class MainActivity extends AppCompatActivity {
                         c.init(Cipher.ENCRYPT_MODE, key, iv);
                         fOutputStream = new FileOutputStream(file);
                         outputStream = new BufferedOutputStream(new CipherOutputStream(fOutputStream, c));
-                        outputStream.write(content.getBytes(StandardCharsets.UTF_8));
-                        outputStream.close();
-                        fOutputStream.close();
                     } else {
                         fOutputStream = new FileOutputStream(file);
                         outputStream = new BufferedOutputStream(fOutputStream);
-                        outputStream.write(content.getBytes(StandardCharsets.UTF_8));
-                        outputStream.close();
-                        fOutputStream.close();
                     }
+                    outputStream.write(content.getBytes(StandardCharsets.UTF_8));
+                    outputStream.close();
+                    fOutputStream.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -355,20 +352,15 @@ public class MainActivity extends AppCompatActivity {
                         c.init(Cipher.DECRYPT_MODE, key, iv);
                         fInputStream = new FileInputStream(file);
                         inputStream = new BufferedInputStream(new CipherInputStream(fInputStream,c));
-                        writer = new StringWriter();
-                        IOUtils.copy(inputStream, writer, "UTF-8");
-                        scripts.setText(writer.toString());
-                        inputStream.close();
-                        fInputStream.close();
                     } else {
                         fInputStream = new FileInputStream(file);
                         inputStream = new BufferedInputStream(fInputStream);
-                        writer = new StringWriter();
-                        IOUtils.copy(inputStream, writer, "UTF-8");
-                        scripts.setText(writer.toString());
-                        inputStream.close();
-                        fInputStream.close();
                     }
+                    writer = new StringWriter();
+                    IOUtils.copy(inputStream, writer, "UTF-8");
+                    scripts.setText(writer.toString());
+                    inputStream.close();
+                    fInputStream.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -902,7 +894,6 @@ public class MainActivity extends AppCompatActivity {
                     .setOngoing(true)
                     .setContentIntent(intent)
                     .build();
-            return modeNotify;
         } else {
             modeNotify = new Notification.Builder(context)
                     .setContentTitle("Rucky "+context.getResources().getString(R.string.conn_title))
@@ -915,8 +906,8 @@ public class MainActivity extends AppCompatActivity {
                     .setOngoing(true)
                     .setContentIntent(intent)
                     .build();
-            return modeNotify;
         }
+        return modeNotify;
     }
 
     public static void connectionNotify(Context context) {

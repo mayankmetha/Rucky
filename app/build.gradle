@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 'android-R'
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
         applicationId "com.mayank.rucky"
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 'R'
         versionCode 20
         versionName "2.0"
     }

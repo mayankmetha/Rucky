@@ -59,11 +59,10 @@ public class SplashActivity extends AppCompatActivity {
     void launchNext() {
         if(!init) {
             startActivity(new Intent(SplashActivity.this, MainActivity.class));
-            finish();
         } else {
             startActivity(new Intent(SplashActivity.this, InitActivity.class));
-            finish();
         }
+        finish();
     }
 
     void getSignature() {

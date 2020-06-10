@@ -49,6 +49,7 @@ public class BrowserActivity extends AppCompatActivity {
             webView.getSettings().setSafeBrowsingEnabled(true);
         }
 
+        assert url != null;
         webView.loadUrl(url);
 
         webView.setWebViewClient(new WebViewClient() {
