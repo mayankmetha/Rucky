@@ -279,26 +279,6 @@ public class RootSettingsFragment extends PreferenceFragmentCompat {
             startActivity(intent);
             return true;
         });
-
-        Preference patreonPreference = findPreference("patreon");
-        assert patreonPreference != null;
-        patreonPreference.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, getResources().getString(R.string.setting_patreon_title));
-            intent.putExtra(webViewID, "https://www.patreon.com/mayankmethad");
-            startActivity(intent);
-            return true;
-        });
-
-        Preference paypalPreference = findPreference("paypal");
-        assert paypalPreference != null;
-        paypalPreference.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity(), BrowserActivity.class);
-            intent.putExtra(activityTitle, getResources().getString(R.string.setting_paypal_title));
-            intent.putExtra(webViewID, "https://www.paypal.me/mayankmetha");
-            startActivity(intent);
-            return true;
-        });
     }
 
 }
