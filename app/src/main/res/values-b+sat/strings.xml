@@ -1,4 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rucky</string>
+    <string name="unlock">ᱮᱯ ᱚᱱᱞᱚᱠ ᱢᱮ</string>
+    <string name="auth">ᱚᱛᱷᱮᱱᱴᱤᱠᱮᱥᱚᱱ ᱠᱚᱱᱯᱷᱟᱨᱢ</string>
+    <string name="init_next">ᱤᱱᱟᱹ ᱛᱟᱭᱚᱢ</string>
+    <string name="init_skip">ᱵᱟᱹᱫ</string>
+    <string name="init_start">ᱦᱮᱠ</string>
+    <string name="slideDesc1">ᱟᱢᱟᱜ ᱰᱤᱵᱷᱟᱤᱭᱥ Rubber Ducky ᱛᱮ ᱵᱚᱫᱚᱞ ᱢᱮ!</string>
+    <string name="slideTitle2">USB ᱠᱮᱵᱩᱞ</string>
+    <string name="slideTitle3">Raspberry Pi</string>
+    <string name="setting_general">ᱡᱮᱱᱨᱟᱞ</string>
+    <string name="dark_theme_title">ᱦᱮᱸᱫᱮ ᱢᱚᱰ</string>
+    <string name="hide_icon_summary">ᱞᱚᱱᱪ ᱞᱟᱹᱜᱤᱫ *#*#78259#*#* ᱰᱟᱭᱞ ᱯᱮ ᱾.</string>
+    <string name="settings_sec_title">ᱮᱰᱵᱷᱟᱱᱥ ᱥᱮᱠᱭᱚᱨᱴᱤ</string>
+    <string name="setting_about">ᱤᱱᱯᱷᱚ</string>
+    <string name="update_name">ᱟ. ᱯᱰᱮᱴ</string>
+    <string name="loadBtn">ᱞᱚᱰ</string>
+    <string name="delBtn">ᱜᱮᱫ ᱜᱤᱰᱤ</string>
+    <string-array name="modes">
+        <item>USB Cable (Root)</item>
+        <item>Raspberry Pi (Wi-Fi)</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>ᱟᱢᱮᱨᱤᱠᱟᱱ ᱤᱝᱨᱟᱡᱤ</item>
+        <item>ᱛᱩᱨᱠᱤᱥᱷ</item>
+        <item>ᱥᱣᱮᱫᱤᱥᱷ</item>
+        <item>ᱥᱞᱚᱵᱷᱮᱱᱤᱭᱟᱱ</item>
+        <item>ᱨᱟᱹᱥᱤᱭᱟᱱ</item>
+        <item>ᱯᱚᱨᱛᱩᱜᱤᱡ</item>
+        <item>ᱱᱚᱨᱣᱮᱜᱤᱭᱟᱱ</item>
+        <item>ᱤᱴᱟᱞᱤᱭᱟᱱ</item>
+        <item>ᱠᱨᱚᱮᱥᱤᱭᱟᱱ</item>
+        <item>ᱭᱩᱱᱭᱴᱮᱰ ᱠᱤᱧᱰᱚᱢ ᱤᱝᱟᱡᱤ</item>
+        <item>ᱯᱷᱨᱮᱱᱪ</item>
+        <item>ᱯᱷᱤᱱᱱᱤᱥ</item>
+        <item>ᱥᱯᱮᱱᱤᱥ</item>
+        <item>ᱰᱮᱱᱤᱥ</item>
+        <item>ᱡᱟᱹᱨᱢᱟᱱ</item>
+        <item>ᱠᱟᱱᱟᱰᱤᱭᱟᱱ ᱯᱷᱨᱮᱸᱪ</item>
+        <item>ᱵᱨᱟᱡᱤᱞᱤᱭᱟᱱ ᱯᱚᱨᱛᱩᱜᱤᱡ</item>
+        <item>ᱵᱮᱞᱟᱨᱩᱥᱤᱭᱟᱱ</item>
+        <item>ᱦᱟᱹᱝᱜᱮᱨᱤᱭᱟᱱ</item>
+    </string-array>
+    <string name="conn_title">ᱤᱱᱴᱚᱨᱯᱷᱮᱥ</string>
+    <string name="conn_usb_small">USB Connected</string>
+    <string name="conn_pi_small">Raspberry Pi Connected</string>
+    <string name="conn_none">Disconnected</string>
+    <string name="conn_1">Connected</string>
+    <string name="conn_0">ᱰᱤᱥᱠᱚᱱᱮᱠᱼᱴ</string>
+    <string name="update_no">ᱟᱹᱯᱰᱮᱴ ᱵᱟᱱᱩᱜᱟ</string>
+    <string name="file_deleted">ᱜᱮᱫ ᱜᱤᱰᱤ ᱠᱮᱟᱢ</string>
+    <string name="btn_later">ᱯᱚᱨᱮ ᱪᱮᱥᱴᱟᱭ ᱢᱮ</string>
+    <string name="btn_ok">ᱴᱷᱤᱠ</string>
+    <string name="btn_cancel">ᱵᱚᱫᱽ</string>
+    <string name="btn_update">ᱟᱹᱛᱩᱨ ᱟᱬᱜᱚ ᱟᱨ ᱤᱱᱥᱴᱚᱞ ᱢᱮ</string>
 </resources>

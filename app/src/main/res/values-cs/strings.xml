@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="unlock">Odemknout aplikaci</string>
+    <string name="auth">Potvrdit ověření</string>
+    <string name="init_next">DALŠÍ</string>
+    <string name="init_skip">PŘESKOČIT</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Proměňte své zařízení v Rubber Ducky!</string>
+    <string name="slideTitle2">Kabel USB</string>
+    <string name="slideDesc2">Drátové USB rozhraní pro spuštění útoku!</string>
+    <string name="slideTitle3">Raspberry Pi</string>
+    <string name="slideDesc3">Rozhraní pro spuštění útoku založené na Wi-Fi!</string>
     <string name="setting_general">Obecné</string>
     <string name="dark_theme_title">Tmavý režim</string>
     <string name="dark_theme_summary">Odstraní zástupce z domovské obrazovky.</string>
@@ -24,6 +34,11 @@
     <string name="settings_git_desc">Kliknutím přidáte chyby nebo požadavky na funkce.</string>
     <string name="settings_locale_title">Lokalizace</string>
     <string name="settings_locale_desc">Kliknutím zobrazíte přispěvatele lokalizací.</string>
+    <string name="release">Distribuce</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub vydání</string>
+    <string name="releaseTest">Debug vydání</string>
+    <string name="releaseOthers">Nepodporované vydání</string>
     <string name="setting_name">Nastavení</string>
     <string name="update_name">Aktualizovat</string>
     <string name="loadBtn">Načíst</string>
@@ -31,16 +46,58 @@
     <string name="delBtn">Smazat</string>
     <string name="runBtn">Spustit</string>
     <string name="codeHint">Zde napište nebo načtěte skripty Rubber Ducky</string>
-    <string name="next">DALŠÍ</string>
-    <string name="skip">PŘESKOČIT</string>
-    <string name="start">HACK</string>
-    <string name="slideDesc1">Proměňte své zařízení v Rubber Ducky!</string>
-    <string name="slideTitle2">Kabel USB</string>
-    <string name="slideDesc2">Drátové USB rozhraní pro spuštění útoku!</string>
-    <string name="slideTitle3">Raspberry Pi</string>
-    <string name="slideDesc3">Rozhraní pro spuštění útoku založené na Wi-Fi!</string>
-    <string name="releaseNetHunter">NetHunter App Store</string>
-    <string name="releaseGitHub">GitHub vydání</string>
-    <string name="releaseTest">Debug vydání</string>
-    <string name="releaseOthers">Nepodporované vydání</string>
+    <string-array name="modes">
+        <item>Kabel USB (root)</item>
+        <item>Raspberry Pi (Wi-Fi)</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Americká angličtina</item>
+        <item>Turečtina</item>
+        <item>Švédština</item>
+        <item>Slovinština</item>
+        <item>Ruština</item>
+        <item>Portugalština</item>
+        <item>Norština</item>
+        <item>Italština</item>
+        <item>Chorvatština</item>
+        <item>Britská angličtina</item>
+        <item>Francouzština</item>
+        <item>Finština</item>
+        <item>Španělština</item>
+        <item>Dánština</item>
+        <item>Němčina</item>
+        <item>Kanadská francouzština</item>
+        <item>Brazilská portugalština</item>
+        <item>Běloruština</item>
+        <item>Maďarština</item>
+    </string-array>
+    <string name="conn_title">Rozhraní</string>
+    <string name="conn_usb_small">USB připojeno</string>
+    <string name="conn_pi_small">Raspberry Pi připojeno</string>
+    <string name="conn_none">Odpojeno</string>
+    <string name="conn_1">Připojeno</string>
+    <string name="conn_0">Odpojeno</string>
+    <string name="kernel_err">"Kernel nepodporuje útok přes USB kabel!"</string>
+    <string name="update_corrupted">Aktualizační soubor je poškozen!</string>
+    <string name="update_verify">Ověření aktualizace aplikace</string>
+    <string name="network_err">Zkontrolujte připojení k síti</string>
+    <string name="screen_on">Ponechte aplikaci otevřenou, dokud se nespustí obrazovka instalace</string>
+    <string name="update_exec">Aktualizace aplikace</string>
+    <string name="update_no">Nebyla nalezena žádná aktualizace</string>
+    <string name="update_check">Kontrola aktualizací</string>
+    <string name="update_available">Je dostupná nová aktualizace. Chcete nyní aktualizovat?</string>
+    <string name="pi_err">Raspberry Pi nebylo nalezeno!</string>
+    <string name="pi_net_err">Připojení k Raspberry Pi selhalo!</string>
+    <string name="root_err">Pro útok přes USB kabel je vyžadován přístup root!</string>
+    <string name="usb_err">USB kabel není připojen!</string>
+    <string name="file_select">Vybrat soubor</string>
+    <string name="file_saved">uloženo</string>
+    <string name="file_deleted">smazáno</string>
+    <string name="file_name">Název souboru</string>
+    <string name="btn_save">Uložit</string>
+    <string name="btn_continue">Pokračovat</string>
+    <string name="btn_later">Zkuste to znovu později</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Zrušit</string>
+    <string name="btn_update">Stáhnout a nainstalovat</string>
 </resources>

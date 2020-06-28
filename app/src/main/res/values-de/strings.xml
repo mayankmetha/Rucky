@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="unlock">App entsperren</string>
+    <string name="auth">Authentifizierung bestätigen</string>
+    <string name="init_next">Weiter</string>
+    <string name="init_skip">Überspringen</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Verwandle dein Gerät zu einem Rubber Ducky!</string>
+    <string name="slideTitle2">USB Kabel</string>
+    <string name="slideDesc2">USB-Schnittstelle zum Starten des Angriffs!</string>
+    <string name="slideTitle3">Raspberry Pi</string>
+    <string name="slideDesc3">Wi-Fi basierte Benutzeroberfläche zum Starten des Angriff!</string>
     <string name="setting_general">Allgemein</string>
     <string name="dark_theme_title">Dunkler Modus</string>
     <string name="dark_theme_summary">Die Verknüpfung vom Homescreen wird hierbei entfernt.</string>
@@ -24,6 +34,11 @@
     <string name="settings_git_desc">Hier klicken, für Fehlermeldungen oder Verbesserungsvorschläge.</string>
     <string name="settings_locale_title">Lokalisierung</string>
     <string name="settings_locale_desc">Klicke um Übersetzter zu sehen</string>
+    <string name="release">Distribution</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub-Veröffentlichung</string>
+    <string name="releaseTest">Debug-Veröffentlichung</string>
+    <string name="releaseOthers">Nicht unterstützte Version</string>
     <string name="setting_name">Einstellungen</string>
     <string name="update_name">Aktualisieren</string>
     <string name="loadBtn">Laden</string>
@@ -31,16 +46,58 @@
     <string name="delBtn">Löschen</string>
     <string name="runBtn">Ausführen</string>
     <string name="codeHint">Schreibe oder lade Rubber Ducky Skripte hier</string>
-    <string name="next">Weiter</string>
-    <string name="skip">Überspringen</string>
-    <string name="start">HACK</string>
-    <string name="slideDesc1">Verwandle dein Gerät zu einem Rubber Ducky!</string>
-    <string name="slideTitle2">USB-Kabel</string>
-    <string name="slideDesc2">USB-Schnittstelle zum Starten des Angriff!</string>
-    <string name="slideTitle3">Raspberry Pi</string>
-    <string name="slideDesc3">Wi-Fi basierte Benutzeroberfläche zum Starten des Angriff!</string>
-    <string name="releaseNetHunter">NetHunter App Store</string>
-    <string name="releaseGitHub">GitHub-Veröffentlichung</string>
-    <string name="releaseTest">Debug-Veröffentlichung</string>
-    <string name="releaseOthers">Nicht unterstützte Version</string>
+    <string-array name="modes">
+        <item>USB Kabel (root)</item>
+        <item>Raspberry Pi (Wi-Fi)</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikanisches Englisch</item>
+        <item>Türkisch</item>
+        <item>Schwedisch</item>
+        <item>Slowenisch</item>
+        <item>Russisch</item>
+        <item>Portugiesisch</item>
+        <item>Norwegisch</item>
+        <item>Italienisch</item>
+        <item>Kroatisch</item>
+        <item>Englisch (Großbritannien)</item>
+        <item>Französisch</item>
+        <item>Finnisch</item>
+        <item>Spanisch</item>
+        <item>Dänisch</item>
+        <item>Deutsch</item>
+        <item>Kanadisches Französisch</item>
+        <item>Portugiesisch (Brasilien)</item>
+        <item>Weißrussisch</item>
+        <item>Ungarisch</item>
+    </string-array>
+    <string name="conn_title">Benutzeroberfläche</string>
+    <string name="conn_usb_small">USB verbunden</string>
+    <string name="conn_pi_small">Raspberry Pi verbunden</string>
+    <string name="conn_none">Verbindung getrennt</string>
+    <string name="conn_1">Verbunden</string>
+    <string name="conn_0">Verbindung getrennt</string>
+    <string name="kernel_err">"Der Kernel wird nicht für USB Attacken unterstützt!"</string>
+    <string name="update_corrupted">Aktualisierte Datei ist beschädigt!</string>
+    <string name="update_verify">Update wird geprüft</string>
+    <string name="network_err">Bitte überprüfen Sie die Netzwerkverbindung</string>
+    <string name="screen_on">Bitte lassen Sie die App offen, bis die Installationsanzeige gestartet wird</string>
+    <string name="update_exec">App aktualisieren</string>
+    <string name="update_no">Keine Aktualisierung gefunden</string>
+    <string name="update_check">Updates werden gesucht</string>
+    <string name="update_available">Ein neues Update ist verfügbar. Möchsten Sie jetzt aktualisieren?</string>
+    <string name="pi_err">Raspberry Pi kann nicht gefunden werden!</string>
+    <string name="pi_net_err">Die Verbindung zu dem Raspberry Pi ist fehlgeschlagen!</string>
+    <string name="root_err">Root-Rechte werden für USB Attacken benötigt!</string>
+    <string name="usb_err">USB-Kabel nicht verbunden!</string>
+    <string name="file_select">Datei auswählen</string>
+    <string name="file_saved">Gespeichert</string>
+    <string name="file_deleted">Gelöscht</string>
+    <string name="file_name">Dateiname</string>
+    <string name="btn_save">Speichern</string>
+    <string name="btn_continue">Weiter</string>
+    <string name="btn_later">Versuchen Sie es später noch einmal</string>
+    <string name="btn_ok">Okay</string>
+    <string name="btn_cancel">Abbrechen</string>
+    <string name="btn_update">Downloaden und installieren</string>
 </resources>
