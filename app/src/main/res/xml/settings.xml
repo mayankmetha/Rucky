@@ -101,18 +101,6 @@
             app:title="@string/settings_locale_title"
             app:summary="@string/settings_locale_desc"/>
 
-        <Preference
-            app:key="patreon"
-            app:icon="@drawable/ic_patreon"
-            app:title="@string/setting_patreon_title"
-            app:summary="@string/setting_patreon_desc"/>
-
-        <Preference
-            app:key="paypal"
-            app:icon="@drawable/ic_paypal"
-            app:title="@string/setting_paypal_title"
-            app:summary="@string/setting_paypal_desc"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
