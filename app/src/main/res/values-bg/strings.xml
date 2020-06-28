@@ -19,9 +19,6 @@
     <string name="settings_git_desc">Нажмите, чтобы добавить задачи или запрос функции.</string>
     <string name="settings_locale_title">Локализация</string>
     <string name="settings_locale_desc">Нажмите, чтобы просмотреть участников локализации.</string>
-    <string name="setting_patreon_title">Покровитель</string>
-    <string name="setting_patreon_desc">Пополнить проект.</string>
-    <string name="setting_paypal_desc">Пополнить проект.</string>
     <string name="setting_name">Настройки</string>
     <string name="update_name">Обновить</string>
     <string name="loadBtn">Нагрузка</string>

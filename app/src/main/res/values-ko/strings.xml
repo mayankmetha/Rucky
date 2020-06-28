@@ -20,10 +20,6 @@
     <string name="settings_git_desc">클릭하면 문제 또는 기능 요청을 추가할 수 있습니다.</string>
     <string name="settings_locale_title">로컬화 시작</string>
     <string name="settings_locale_desc">현지화 기여자를 보려면 이 버튼을 누르십시오.</string>
-    <string name="setting_patreon_title">패리온</string>
-    <string name="setting_patreon_desc">프로젝트 개발을 지원한다.</string>
-    <string name="setting_paypal_title">페이팔 페이팔</string>
-    <string name="setting_paypal_desc">프로젝트 개발을 지원한다.</string>
     <string name="setting_name">설정하기</string>
     <string name="update_name">업데이트하는 경우</string>
     <string name="loadBtn">적재</string>

@@ -20,10 +20,6 @@
     <string name="settings_git_desc">点击以添加问题或功能请求。</string>
     <string name="settings_locale_title">本地化</string>
     <string name="settings_locale_desc">点击查看本地化贡献者。</string>
-    <string name="setting_patreon_title">帕特里昂州</string>
-    <string name="setting_patreon_desc">为项目开发提供资金。</string>
-    <string name="setting_paypal_title">Paypal</string>
-    <string name="setting_paypal_desc">为项目开发提供资金。</string>
     <string name="setting_name">设置</string>
     <string name="update_name">更新</string>
     <string name="loadBtn">负载</string>

@@ -20,10 +20,6 @@
     <string name="settings_git_desc">按一下以新增問題或特性要求。</string>
     <string name="settings_locale_title">本地化</string>
     <string name="settings_locale_desc">按一下以檢視本地化貢獻者。</string>
-    <string name="setting_patreon_title">帕特雷翁</string>
-    <string name="setting_patreon_desc">為專案開發提供資金。</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">為專案開發提供資金。</string>
     <string name="setting_name">設定</string>
     <string name="update_name">更新</string>
     <string name="loadBtn">裝載</string>

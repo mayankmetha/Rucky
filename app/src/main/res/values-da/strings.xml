@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Klik for at tilføje spørgsmål eller funktionsanmodning.</string>
     <string name="settings_locale_title">Lokalisering</string>
     <string name="settings_locale_desc">Klik for at få vist lokaliseringsbidragsydere.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Fonden projektets udvikling.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Fonden projektets udvikling.</string>
     <string name="setting_name">Indstillinger</string>
     <string name="update_name">Opdatering</string>
     <string name="loadBtn">Indlæs</string>

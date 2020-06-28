@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Sorun ya da özellik isteği eklemek için tıklatın.</string>
     <string name="settings_locale_title">Yerelleştirme</string>
     <string name="settings_locale_desc">Yerelleştirme katkıda bulunanları görüntülemek için tıklatın.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Proje geliştirmesini finanse edin.</string>
-    <string name="setting_paypal_title">Ödeme</string>
-    <string name="setting_paypal_desc">Proje geliştirmesini finanse edin.</string>
     <string name="setting_name">Ayarlar</string>
     <string name="update_name">Güncelleştir</string>
     <string name="loadBtn">Yükle</string>

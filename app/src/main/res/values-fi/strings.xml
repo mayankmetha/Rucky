@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Valitse Lisää kysymyksiä tai ominaisuuspyyntö.</string>
     <string name="settings_locale_title">Localisointi</string>
     <string name="settings_locale_desc">Näkyviin tulee lokalisointitoiminto.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Rahoitusta hankkeen kehittämiseen.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Rahoitusta hankkeen kehittämiseen.</string>
     <string name="setting_name">Asetukset</string>
     <string name="update_name">Päivitä</string>
     <string name="loadBtn">Lataa</string>

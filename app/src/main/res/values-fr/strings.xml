@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Cliquez pour ajouter des tickets ou une demande de fonctionnalité.</string>
     <string name="settings_locale_title">Traduction</string>
     <string name="settings_locale_desc">Cliquez pour afficher les contributeurs de traduction.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Financer le développement du projet.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Financer le développement du projet.</string>
     <string name="setting_name">Réglages</string>
     <string name="update_name">Mise à jour</string>
     <string name="loadBtn">Charger</string>

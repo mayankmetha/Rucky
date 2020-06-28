@@ -20,10 +20,6 @@
     <string name="settings_git_desc">मुद्दों या फीचर अनुरोध जोड़ने के लिए क्लिक करें</string>
     <string name="settings_locale_title">स्थानीकरण</string>
     <string name="settings_locale_desc">स्थानीकरण सहयोगियों को देखने के लिए क्लिक करें.</string>
-    <string name="setting_patreon_title">पैरीपर</string>
-    <string name="setting_patreon_desc">परियोजना विकास.</string>
-    <string name="setting_paypal_title">पेपैल</string>
-    <string name="setting_paypal_desc">परियोजना विकास.</string>
     <string name="setting_name">सेटिंग्स</string>
     <string name="update_name">अपडेट</string>
     <string name="loadBtn">लोड</string>

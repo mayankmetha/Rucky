@@ -24,10 +24,6 @@
     <string name="settings_git_desc">Hier klicken, für Fehlermeldungen oder Verbesserungsvorschläge.</string>
     <string name="settings_locale_title">Lokalisierung</string>
     <string name="settings_locale_desc">Klicke um Übersetzter zu sehen</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Unterstützen Sie die Projektentwicklung.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Unterstützen Sie die Projektentwicklung.</string>
     <string name="setting_name">Einstellungen</string>
     <string name="update_name">Aktualisieren</string>
     <string name="loadBtn">Laden</string>

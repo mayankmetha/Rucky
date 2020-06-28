@@ -43,10 +43,6 @@
     <string name="settings_git_desc">Click to add issues or feature request.</string>
     <string name="settings_locale_title">Localization</string>
     <string name="settings_locale_desc">Click to view localization contributors.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Fund the project development.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Fund the project development.</string>
     <string name="release">Distribution</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub Release</string>

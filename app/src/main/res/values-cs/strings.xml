@@ -24,10 +24,6 @@
     <string name="settings_git_desc">Kliknutím přidáte chyby nebo požadavky na funkce.</string>
     <string name="settings_locale_title">Lokalizace</string>
     <string name="settings_locale_desc">Kliknutím zobrazíte přispěvatele lokalizací.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Financování vývoje projektu.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Financování vývoje projektu.</string>
     <string name="setting_name">Nastavení</string>
     <string name="update_name">Aktualizovat</string>
     <string name="loadBtn">Načíst</string>

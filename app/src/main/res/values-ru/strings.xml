@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Щелкните здесь, чтобы добавить неполадки или запрос на функцию.</string>
     <string name="settings_locale_title">Локализация</string>
     <string name="settings_locale_desc">Щелкните для просмотра участников локализации.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Финансирование разработки проекта.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Финансирование разработки проекта.</string>
     <string name="setting_name">Параметры</string>
     <string name="update_name">Обновить</string>
     <string name="loadBtn">Загрузить</string>

@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Kattintson ide kérdés vagy szolgáltatás kérés hozzáadásához.</string>
     <string name="settings_locale_title">Honosítás</string>
     <string name="settings_locale_desc">Kattintson ide a honosítási közreműködők megjelenítéséhez.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">A projekt fejlesztése.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">A projekt fejlesztése.</string>
     <string name="setting_name">Beállítások</string>
     <string name="update_name">Frissítés</string>
     <string name="loadBtn">Betöltés</string>

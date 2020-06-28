@@ -20,10 +20,6 @@
     <string name="settings_git_desc">クリックして不具合または機能リクエストを追加します。</string>
     <string name="settings_locale_title">ローカライズ</string>
     <string name="settings_locale_desc">クリックすると、ローカライズの貢献者が表示されます。</string>
-    <string name="setting_patreon_title">パトロン</string>
-    <string name="setting_patreon_desc">プロジェクト開発に資金を提供します。</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">プロジェクト開発に資金を提供します。</string>
     <string name="setting_name">設定</string>
     <string name="update_name">アップデート</string>
     <string name="loadBtn">読込</string>

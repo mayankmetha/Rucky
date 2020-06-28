@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Натисніть, щоб додати задачі або зробити запит про функцію.</string>
     <string name="settings_locale_title">Локалізація</string>
     <string name="settings_locale_desc">Натисніть, щоб переглянути учасників локалізації.</string>
-    <string name="setting_patreon_title">Патреон</string>
-    <string name="setting_patreon_desc">Поповнити розвиток проекту.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Поповнити розвиток проекту.</string>
     <string name="setting_name">Налаштування</string>
     <string name="update_name">Оновити</string>
     <string name="loadBtn">Загрузити</string>

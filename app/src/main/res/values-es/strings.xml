@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Haga clic para añadir problemas o solicitud de características.</string>
     <string name="settings_locale_title">Localización</string>
     <string name="settings_locale_desc">Haga clic para ver los colaboradores de la localización.</string>
-    <string name="setting_patreon_title">Patrón</string>
-    <string name="setting_patreon_desc">Financiar el desarrollo del proyecto.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Financiar el desarrollo del proyecto.</string>
     <string name="setting_name">Ajustes</string>
     <string name="update_name">Actualizar</string>
     <string name="loadBtn">Cargar</string>

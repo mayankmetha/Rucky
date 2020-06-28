@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Clique para adicionar tickets ou requisição de recurso.</string>
     <string name="settings_locale_title">Localização</string>
     <string name="settings_locale_desc">Clique para ver os colaboradores de localização.</string>
-    <string name="setting_patreon_title">Patrulha</string>
-    <string name="setting_patreon_desc">Financie o desenvolvimento do projeto.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Financie o desenvolvimento do projeto.</string>
     <string name="setting_name">Configurações</string>
     <string name="update_name">Atualizar</string>
     <string name="loadBtn">Carregar</string>

@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Kliknij, aby dodać zgłoszenia lub prośbę o funkcję.</string>
     <string name="settings_locale_title">Lokalizacja</string>
     <string name="settings_locale_desc">Kliknij, aby wyświetlić tłumaczy lokalizacji.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Finansowanie rozwoju projektu.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">Finansowanie rozwoju projektu.</string>
     <string name="setting_name">Ustawienia</string>
     <string name="update_name">Aktualizuj</string>
     <string name="loadBtn">Załaduj</string>

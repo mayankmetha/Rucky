@@ -20,10 +20,6 @@
     <string name="settings_git_desc">اضغط لاضافة اصدارات أو طلب خاصية.</string>
     <string name="settings_locale_title">تحديد مكان</string>
     <string name="settings_locale_desc">اضغط لمشاهدة المشاركين في الترجمة.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">(و) الصندوق الإنمائي للمشاريع.</string>
-    <string name="setting_paypal_title">PayPal</string>
-    <string name="setting_paypal_desc">(و) الصندوق الإنمائي للمشاريع.</string>
     <string name="setting_name">المحددات</string>
     <string name="update_name">تعديل</string>
     <string name="loadBtn">تحميل</string>

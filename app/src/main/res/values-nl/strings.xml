@@ -20,10 +20,6 @@
     <string name="settings_git_desc">Klik om issues of verzoek toe te voegen.</string>
     <string name="settings_locale_title">Lokalisatie</string>
     <string name="settings_locale_desc">Klik om de lokalisatie bijdragers te bekijken.</string>
-    <string name="setting_patreon_title">Patreon</string>
-    <string name="setting_patreon_desc">Fonds voor de projectontwikkeling.</string>
-    <string name="setting_paypal_title">Paypal</string>
-    <string name="setting_paypal_desc">Fonds voor de projectontwikkeling.</string>
     <string name="setting_name">Instellingen</string>
     <string name="update_name">Vernieuwen</string>
     <string name="loadBtn">Belasting</string>
