@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,35 +7,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/SettingsPage"
-    tools:context="com.mayank.rucky.SettingsActivity">
+    tools:context=".activity.SettingsActivity">
 
-    <LinearLayout
-        android:id="@+id/appBarLayout"
+    <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingStart="24sp"
+        android:paddingEnd="24sp"
+        android:layout_margin="8sp"
+        android:text="@string/setting"
+        android:textColor="?attr/appColorAccent"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarSettings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="@string/setting_name" />
-
-        <View
-            android:id="@+id/view_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@drawable/divider" />
-
-    </LinearLayout>
+    <View
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:background="@drawable/divider" />
 
     <FrameLayout
+        android:layout_below="@id/view_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/setting_container" />
 
-</LinearLayout>
+</RelativeLayout>

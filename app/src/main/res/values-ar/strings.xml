@@ -1,15 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">فتح التطبيق</string>
+    <string name="auth">تأكيد المصادقة</string>
+    <string name="update_check">التحقق من وجود تحديث</string>
+    <string name="update_new">تحديث جديد متوفر</string>
+    <!-- Init Screen -->
+    <string name="init_next">التالي</string>
+    <string name="init_skip">سكي بي</string>
+    <string name="init_agree">الاتفاق</string>
+    <string name="init_start">HACK</string>
     <string name="slideDesc1">بدوره الجهاز الخاص بك إلى بطة مطاطية !</string>
+    <string name="slideTitle2">كابل USB</string>
+    <string name="slideDesc2">واجهة USB سلكية لشن الهجوم!</string>
+    <string name="slideTitle3">مقبس الشبكة</string>
+    <string name="slideDesc3">واجهة مقبس تعتمد على Wi-Fi لإطلاق الهجوم عبر أدوات خارجية معتمدة!</string>
+    <string name="slideTitle4">إخلاء المسؤولية</string>
+    <string name="slideDesc4">المستخدم في التطبيق مسؤول فقط عن الأضرار التي تسببت فيها. لا يمكن تحميل أي كيان آخر المسؤولية عن الأضرار التي حدثت باستخدام هذا التطبيق! مارس الحذر عند استخدام التطبيق ولا تستخدم هذا للتسبب في ضرر للآخرين!</string>
+    <string name="slideTitle5">سياسة الخصوصية</string>
+    <string name="slideDesc5">لا توجد بيانات من أي شكل يتم جمعها واستخدامها وبيعها! بعض الأذونات التي يمكن أن تثير شواغل الخصوصية مطلوبة فقط لتشغيل بعض الميزات في التطبيق وهي ليست لجمع البيانات! خصوصيتك محترمة!</string>
+    <string name="slideTitle6">إذن التطبيق</string>
+    <string name="slideDesc6">الرجاء منح التطبيق الإذن المطلوب للعمل!</string>
+    <!-- Update screen -->
+    <string name="update_activity">تحديث الحظ</string>
+    <string name="update_version">النسخة</string>
+    <string name="update_changelog">تغيير</string>
+    <string name="update_status">حالة التحديث</string>
+    <string name="update_action">تحميل &amp; تثبيت التحديث</string>
+    <string name="update_downloading">تنزيل التحديث</string>
+    <string name="install_update">تطبيق التحديث</string>
+    <!-- Editor screen -->
+    <string name="update">تحديث</string>
+    <string name="setting">الإعدادات</string>
+    <string name="codeHint">اكتب أو قم بتحميل البرامج النصية للمطاط هنا</string>
+    <string name="loadBtn">تحميل</string>
+    <string name="saveBtn">حفظ</string>
+    <string name="delBtn">حذف</string>
+    <string name="runBtn">اركض</string>
+    <string name="confBtn">الإعدادات</string>
+    <string name="btn_continue">متابعة</string>
+    <string name="root_err">مطلوب وصول الجذر لهجوم كابل USB!</string>
+    <string name="kernel_err">"قناة غير مدعومة لهجوم كابل USB!"</string>
+    <string name="usb_err">كابل USB غير متصل!</string>
+    <string name="net_err">مقبس الشبكة غير متصل!</string>
+    <!-- Config screen -->
+    <string name="config_activity">التعديلات</string>
+    <string name="config_status_usb_on">USB متصل</string>
+    <string name="config_status_usb_off">USB غير متصل</string>
+    <string name="config_status_net_on">مقبس الشبكة متصل</string>
+    <string name="config_status_net_off">مقبس الشبكة غير متصل</string>
+    <string name="config_status_net_disabled">مقبس الشبكة معطل</string>
+    <string name="socket_address">أدخل عنوان IP والمنفذ</string>
+    <!-- Setting screen -->
     <string name="setting_general">عام</string>
-    <string name="dark_theme_title">نمط داكن</string>
-    <string name="dark_theme_summary">لن يتم الحفاظ على المسار المختصر للشاشة الرئيسية.</string>
-    <string name="hide_icon_title">اخفاء شارة برنامج البدء</string>
-    <string name="hide_icon_summary">قم بالاتصال * #*#78259#*#* لبدء التشغيل.</string>
+    <string name="dark_theme_title">الوضع الليلي</string>
+    <string name="dark_theme_summary">تعيين السمة المظلمة</string>
+    <string name="accent_theme_title">السمة</string>
+    <string name="accent_theme_summary">تغيير لون اللكنة</string>
+    <string name="hide_icon_title">إخفاء/تعطيل أيقونة المشغل</string>
+    <string name="hide_icon_summary">اطلب *#*#78259#*#* للتشغيل. عند اندرويد 10 فصاعدا، سيتم تعطيل أيقونة ، ولكن ليس مخفيا.</string>
     <string name="delete_dep_title">تطبيق الغاء التركيب</string>
     <string name="delete_dep_summary">اعادة تنظيم والغاء تركيب التطبيق.</string>
     <string name="settings_sec_title">مستوى السرية المتقدم</string>
     <string name="settings_sec_desc">اتاحة تشفير ملف النص المنسق واقفال الشاشة.</string>
+    <string name="setting_device">إعدادات وضع الهجوم</string>
+    <string name="settings_usb_title">تشغيل اتصال USB</string>
+    <string name="settings_usb_desc">سيبدأ زر التشغيل الهجوم عند توصيل USB.</string>
+    <string name="settings_net_title">إطلاق مقبس الشبكة</string>
+    <string name="settings_net_desc">زر التشغيل سيبدأ الهجوم عند توصيل مقبس الشبكة.</string>
     <string name="setting_about">المعلومات</string>
     <string name="setting_developer_title">مطور</string>
     <string name="settings_version_title">النسخة</string>
@@ -19,17 +77,42 @@
     <string name="settings_git_title">مشاكل GitHub</string>
     <string name="settings_git_desc">اضغط لاضافة اصدارات أو طلب خاصية.</string>
     <string name="settings_locale_title">تحديد مكان</string>
-    <string name="settings_locale_desc">اضغط لمشاهدة المشاركين في الترجمة.</string>
+    <string name="settings_locale_desc">المساهمة في توطين التطبيق.</string>
+    <string name="release">التوزيع</string>
     <string name="releaseNetHunter">مخزن Netصياد App</string>
     <string name="releaseGitHub">اصدار GitHub</string>
     <string name="releaseTest">اصدار تصحيح الأخطاء</string>
     <string name="releaseOthers">اصدار غير مدعم</string>
-    <string name="setting_name">المحددات</string>
-    <string name="update_name">تعديل</string>
-    <string name="loadBtn">تحميل</string>
-    <string name="saveBtn">حفظ</string>
-    <string name="delBtn">حذف</string>
-    <string name="runBtn">اركض</string>
-    <string name="codeHint">اكتب أو قم بتحميل البرامج النصية للمطاط هنا</string>
+    <string name="btn_select">حدد</string>
+    <string name="btn_cancel">إلغاء</string>
     <string name="btn_save">حفظ</string>
+    <string name="file_select">حدد ملف</string>
+    <string name="file_saved">محفوظة</string>
+    <string name="file_deleted">تم الحذف</string>
+    <string name="file_name">اسم الملف</string>
+    <string-array name="modes">
+        <item>كابل USB</item>
+        <item>مقبس الشبكة</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>الإنجليزية الأمريكية</item>
+        <item>تركية</item>
+        <item>السويدية</item>
+        <item>Slovenian</item>
+        <item>الروسية</item>
+        <item>البرتغالية</item>
+        <item>النرويجية</item>
+        <item>الإيطالية</item>
+        <item>الكرواتية</item>
+        <item>المملكة المتحدة الإنجليزية</item>
+        <item>الفرنسية</item>
+        <item>الفنلندية</item>
+        <item>الإسبانية</item>
+        <item>الدانماركية</item>
+        <item>الألمانية</item>
+        <item>الفرنسية الكندية</item>
+        <item>البرتغالية البرازيلية</item>
+        <item>البيلاروسية</item>
+        <item>الهنغارية</item>
+    </string-array>
 </resources>

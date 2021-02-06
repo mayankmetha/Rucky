@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <PreferenceCategory
         app:key="settings"
         app:title="@string/setting_general">
 
-        <SwitchPreferenceCompat
-            app:key="theme"
-            app:icon="@drawable/ic_dark"
+        <SwitchPreference
             app:defaultValue="true"
-            app:title="@string/dark_theme_title"
-            app:summary="@string/dark_theme_summary" />
+            app:icon="@drawable/ic_dark"
+            app:key="theme"
+            app:summary="@string/dark_theme_summary"
+            app:title="@string/dark_theme_title" />
 
-        <SwitchPreferenceCompat
+        <Preference
+            app:icon="@drawable/ic_color"
+            app:key="accent"
+            app:title="@string/accent_theme_title"
+            app:summary="@string/accent_theme_summary" />
+
+        <SwitchPreference
             app:key="icon"
             app:icon="@drawable/ic_launch"
             app:defaultValue="false"
             app:title="@string/hide_icon_title"
             app:summary="@string/hide_icon_summary" />
 
-        <SwitchPreferenceCompat
+        <SwitchPreference
             app:key="sec"
             app:icon="@drawable/ic_security"
             app:defaultValue="false"
@@ -30,25 +37,26 @@
             app:icon="@drawable/ic_uninstall"
             app:title="@string/delete_dep_title"
             app:summary="@string/delete_dep_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
         app:key="device"
         app:title="@string/setting_device">
 
-        <SwitchPreferenceCompat
+        <SwitchPreference
             app:key="usb"
             app:icon="@drawable/ic_usb"
             app:defaultValue="false"
             app:title="@string/settings_usb_title"
             app:summary="@string/settings_usb_desc" />
 
-        <SwitchPreferenceCompat
-            app:key="rpi"
-            app:icon="@drawable/ic_rpi"
+        <SwitchPreference
+            app:key="net"
+            app:icon="@drawable/ic_net"
             app:defaultValue="false"
-            app:title="@string/settings_rpi_title"
-            app:summary="@string/settings_rpi_desc" />
+            app:title="@string/settings_net_title"
+            app:summary="@string/settings_net_desc" />
 
     </PreferenceCategory>
 

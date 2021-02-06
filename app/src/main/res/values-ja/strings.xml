@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
     <string name="unlock">アプリのアンロック</string>
     <string name="auth">認証を確認</string>
+    <string name="update_check">アップデートを確認中</string>
+    <string name="update_new">新しいアップデートが利用可能です</string>
+    <!-- Init Screen -->
     <string name="init_next">次</string>
     <string name="init_skip">スキップ</string>
+    <string name="init_agree">同意する</string>
     <string name="init_start">ハック</string>
     <string name="slideDesc1">デバイスをRubber Duckyに変えましょう！</string>
     <string name="slideTitle2">USBケーブル</string>
     <string name="slideDesc2">攻撃開始のためのUSB有線インターフェイス</string>
-    <string name="slideTitle3">Raspberry Pi</string>
-    <string name="slideDesc3">攻撃開始のためのWi-Fiベースインターフェイス</string>
+    <string name="slideTitle3">ネットワークソケット</string>
+    <string name="slideDesc3">サポートされている外部ツールを介して攻撃を開始するためのWi-Fiベースのソケットインターフェイス!</string>
+    <string name="slideTitle4">免責事項</string>
+    <string name="slideDesc4">原因となった損害については、アプリのユーザーのみが責任を負います。 このアプリを使用した損害については、他のエンティティに責任を負うことはできません! アプリを使用するときは注意してください。他の人に害を与えるためにこれを使用しないでください!</string>
+    <string name="slideTitle5">プライバシーポリシー</string>
+    <string name="slideDesc5">いかなるフォームのデータも収集、使用、販売されることはありません！ プライバシーの懸念を引き起こす可能性のある権限は、アプリ内の特定の機能の動作のためにのみ要求され、データを収集することではありません! あなたのプライバシーは尊重されています！</string>
+    <string name="slideTitle6">アプリの権限</string>
+    <string name="slideDesc6">動作するために必要な権限をアプリに付与してください！</string>
+    <!-- Update screen -->
+    <string name="update_activity">ラッキーなアップデート</string>
+    <string name="update_version">バージョン</string>
+    <string name="update_changelog">更新履歴</string>
+    <string name="update_status">ステータスを更新</string>
+    <string name="update_action">ダウンロード &amp; アップデートのインストール</string>
+    <string name="update_downloading">アップデートをダウンロード中</string>
+    <string name="install_update">アップデートを適用中</string>
+    <!-- Editor screen -->
+    <string name="update">更新</string>
+    <string name="setting">設定</string>
+    <string name="codeHint">Rubber Duckyのスクリプトを入力または読込みます</string>
+    <string name="loadBtn">読込</string>
+    <string name="saveBtn">保存</string>
+    <string name="delBtn">削除</string>
+    <string name="runBtn">実行</string>
+    <string name="confBtn">設定</string>
+    <string name="btn_continue">続行</string>
+    <string name="root_err">USBケーブル攻撃にはRootアクセスが必要です</string>
+    <string name="kernel_err">"カーネルがUSBケーブル攻撃をサポートしていません"</string>
+    <string name="usb_err">USB ケーブルが接続されていません</string>
+    <string name="net_err">ネットワークソケットが接続されていません！</string>
+    <!-- Config screen -->
+    <string name="config_activity">微調整</string>
+    <string name="config_status_usb_on">USB接続</string>
+    <string name="config_status_usb_off">USB 接続が切断されました</string>
+    <string name="config_status_net_on">ネットワークソケットが接続されました</string>
+    <string name="config_status_net_off">ネットワークソケットが切断されました</string>
+    <string name="config_status_net_disabled">ネットワークソケットが無効です</string>
+    <string name="socket_address">ソケットIPとポートアドレスを入力してください</string>
+    <!-- Setting screen -->
     <string name="setting_general">一般</string>
-    <string name="dark_theme_title">ダークモード</string>
-    <string name="dark_theme_summary">ホーム画面のショートカットは保持されません。</string>
-    <string name="hide_icon_title">ランチャーアイコンを隠す</string>
-    <string name="hide_icon_summary">*#*#78259#*#*をダイヤルして起動します。</string>
+    <string name="dark_theme_title">夜間モード</string>
+    <string name="dark_theme_summary">ダークテーマを設定</string>
+    <string name="accent_theme_title">テーマ</string>
+    <string name="accent_theme_summary">アクセントカラーの変更</string>
+    <string name="hide_icon_title">ランチャーアイコンの非表示/無効化</string>
+    <string name="hide_icon_summary">起動するには*#*#78259#*#*をダイヤルしてください。Android 10以降ではアイコンは無効になりますが、非表示にはなりません。</string>
     <string name="delete_dep_title">アプリをアンインストール</string>
     <string name="delete_dep_summary">アプリを完全にアンインストールします。</string>
     <string name="settings_sec_title">高度なセキュリティ</string>
@@ -22,8 +66,8 @@
     <string name="setting_device">攻撃モードの設定</string>
     <string name="settings_usb_title">USB接続で起動</string>
     <string name="settings_usb_desc">USB接続時に攻撃を開始します。</string>
-    <string name="settings_rpi_title">Raspberry Piに接続で起動</string>
-    <string name="settings_rpi_desc">Raspberry Pi接続時に攻撃を開始します。</string>
+    <string name="settings_net_title">ネットワークソケット接続の起動</string>
+    <string name="settings_net_desc">ネットワークソケットが接続されると、実行ボタンが攻撃を開始します。</string>
     <string name="setting_about">情報</string>
     <string name="setting_developer_title">デベロッパー</string>
     <string name="settings_version_title">バージョン</string>
@@ -33,22 +77,22 @@
     <string name="settings_git_title">GitHub Issues</string>
     <string name="settings_git_desc">クリックして不具合または機能リクエストを追加します。</string>
     <string name="settings_locale_title">ローカライズ</string>
-    <string name="settings_locale_desc">クリックすると、ローカライズの貢献者が表示されます。</string>
+    <string name="settings_locale_desc">アプリのローカライズに貢献します。</string>
     <string name="release">配布</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub配信</string>
     <string name="releaseTest">デバッグ配信</string>
     <string name="releaseOthers">サポートされていない配信</string>
-    <string name="setting_name">設定</string>
-    <string name="update_name">アップデート</string>
-    <string name="loadBtn">読込</string>
-    <string name="saveBtn">保存</string>
-    <string name="delBtn">削除</string>
-    <string name="runBtn">実行</string>
-    <string name="codeHint">Rubber Duckyのスクリプトを入力または読込みます</string>
+    <string name="btn_select">選択</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_save">保存</string>
+    <string name="file_select">ファイルの選択</string>
+    <string name="file_saved">保存しました</string>
+    <string name="file_deleted">削除しました</string>
+    <string name="file_name">ファイル名</string>
     <string-array name="modes">
-        <item>USBケーブル(Root)</item>
-        <item>Raspberry Pi (Wi-Fi)</item>
+        <item>USBケーブル</item>
+        <item>ネットワークソケット</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>アメリカ英語</item>
@@ -71,33 +115,4 @@
         <item>ベラルーシ語</item>
         <item>ハンガリー語</item>
     </string-array>
-    <string name="conn_title">インターフェイス</string>
-    <string name="conn_usb_small">USB 接続済み</string>
-    <string name="conn_pi_small">Raspberry Pi 接続済み</string>
-    <string name="conn_none">切断済み</string>
-    <string name="conn_1">接続済み</string>
-    <string name="conn_0">切断済み</string>
-    <string name="kernel_err">"カーネルがUSBケーブル攻撃をサポートしていません"</string>
-    <string name="update_corrupted">アップデートファイルが破損しています</string>
-    <string name="update_verify">アップデートを確認する</string>
-    <string name="network_err">ネットワーク接続を確認してください</string>
-    <string name="screen_on">インストール画面が開始するまでアプリを開いたままにしてください</string>
-    <string name="update_exec">アプリをアップデート中</string>
-    <string name="update_no">アップデートはありません</string>
-    <string name="update_check">アップデートを確認中</string>
-    <string name="update_available">新しいアップデートが利用可能です。今すぐアップデートしますか？</string>
-    <string name="pi_err">Raspberry Pi が見つかりません</string>
-    <string name="pi_net_err">Raspberry Piの接続に失敗しました</string>
-    <string name="root_err">USBケーブル攻撃にはRootアクセスが必要です</string>
-    <string name="usb_err">USB ケーブルが接続されていません</string>
-    <string name="file_select">ファイルの選択</string>
-    <string name="file_saved">保存しました</string>
-    <string name="file_deleted">削除しました</string>
-    <string name="file_name">ファイル名</string>
-    <string name="btn_save">保存</string>
-    <string name="btn_continue">続行</string>
-    <string name="btn_later">あとで再試行</string>
-    <string name="btn_ok">了解</string>
-    <string name="btn_cancel">取消</string>
-    <string name="btn_update">ダウンロードしてインストールする</string>
 </resources>

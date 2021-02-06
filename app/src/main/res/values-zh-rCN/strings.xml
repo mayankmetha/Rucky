@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <string name="unlock">解锁应用</string>
+    <string name="auth">确认身份验证</string>
+    <string name="update_check">正在检查更新</string>
+    <string name="update_new">有新的更新可用</string>
+    <!-- Init Screen -->
+    <string name="init_next">下一个</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">同意</string>
+    <string name="init_start">哈克文</string>
+    <string name="slideDesc1">把你的设备变成橡胶园！</string>
+    <string name="slideTitle2">USB 电线</string>
+    <string name="slideDesc2">USB 有线接口用于发起攻击！</string>
+    <string name="slideTitle3">网络套接字</string>
+    <string name="slideDesc3">基于Wi-Fi的套接字接口，用于通过支持的外部工具发起攻击！</string>
+    <string name="slideTitle4">免责声明</string>
+    <string name="slideDesc4">应用程序的用户对造成的损害负有全部责任。 没有任何其他实体可以对使用此应用所造成的损害承担赔偿责任！ 在使用应用时谨慎行事，不要用它来伤害他人！</string>
+    <string name="slideTitle5">隐私政策</string>
+    <string name="slideDesc5">没有任何表格的数据被收集、使用和出售！ 某些可能引起隐私问题的权限只需要在应用程序中运行某些功能，而不需要收集数据！ 您的隐私受到尊重！</string>
+    <string name="slideTitle6">应用权限</string>
+    <string name="slideDesc6">请授予应用程序所需的工作权限！</string>
+    <!-- Update screen -->
+    <string name="update_activity">Rucky 更新</string>
+    <string name="update_version">版本</string>
+    <string name="update_changelog">更新日志</string>
+    <string name="update_status">更新状态</string>
+    <string name="update_action">下载 &amp; 安装更新</string>
+    <string name="update_downloading">下载更新</string>
+    <string name="install_update">正在应用更新</string>
+    <!-- Editor screen -->
+    <string name="update">更新</string>
+    <string name="setting">设置</string>
+    <string name="codeHint">在此处键入或加载橡胶管道脚本</string>
+    <string name="loadBtn">负载</string>
+    <string name="saveBtn">保存</string>
+    <string name="delBtn">删除</string>
+    <string name="runBtn">运行</string>
+    <string name="confBtn">配置</string>
+    <string name="btn_continue">继续</string>
+    <string name="root_err">USB 电缆攻击需要超级用户权限！</string>
+    <string name="kernel_err">"内核不支持USB电缆攻击！"</string>
+    <string name="usb_err">USB 电缆未连接！</string>
+    <string name="net_err">网络套接字未连接！</string>
+    <!-- Config screen -->
+    <string name="config_activity">调整</string>
+    <string name="config_status_usb_on">USB 已连接</string>
+    <string name="config_status_usb_off">USB 断开连接</string>
+    <string name="config_status_net_on">网络套接字已连接</string>
+    <string name="config_status_net_off">网络套接字断开连接</string>
+    <string name="config_status_net_disabled">网络套接字已禁用</string>
+    <string name="socket_address">输入套接字IP和端口地址</string>
+    <!-- Setting screen -->
+    <string name="setting_general">A. 概况</string>
+    <string name="dark_theme_title">夜间模式</string>
+    <string name="dark_theme_summary">设置暗色主题</string>
+    <string name="accent_theme_title">主题</string>
+    <string name="accent_theme_summary">更改音量颜色</string>
+    <string name="hide_icon_title">隐藏/禁用启动器图标</string>
+    <string name="hide_icon_summary">拨打*#78259#*#*#*来启动。在 Android 10 后，图标将被禁用，但不会隐藏。</string>
+    <string name="delete_dep_title">卸载应用</string>
+    <string name="delete_dep_summary">清理并卸载应用。</string>
+    <string name="settings_sec_title">B. 预先安全</string>
+    <string name="settings_sec_desc">启用脚本文件加密和屏幕锁定。</string>
+    <string name="setting_device">攻击模式设置</string>
+    <string name="settings_usb_title">USB 连接启动</string>
+    <string name="settings_usb_desc">当USB连接时，运行按钮会启动攻击。</string>
+    <string name="settings_net_title">网络套接字连接启动</string>
+    <string name="settings_net_desc">当网络套接字连接时，运行按钮会启动攻击。</string>
+    <string name="setting_about">信息</string>
+    <string name="setting_developer_title">开发者</string>
+    <string name="settings_version_title">版本</string>
+    <string name="settings_arch_title">结构</string>
+    <string name="settings_lic_title">许可协议</string>
+    <string name="settings_support">支持</string>
+    <string name="settings_git_title">GitHub 问题</string>
+    <string name="settings_git_desc">点击以添加问题或功能请求。</string>
+    <string name="settings_locale_title">本地化</string>
+    <string name="settings_locale_desc">帮助应用本地化。</string>
+    <string name="release">分布</string>
+    <string name="releaseNetHunter">NetHunter 应用商店</string>
+    <string name="releaseGitHub">GitHub 发布</string>
+    <string name="releaseTest">调试发布</string>
+    <string name="releaseOthers">非支持的版本</string>
+    <string name="btn_select">选择</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_save">保存</string>
+    <string name="file_select">选择文件</string>
+    <string name="file_saved">已保存</string>
+    <string name="file_deleted">已删除</string>
+    <string name="file_name">文件名称</string>
+    <string-array name="modes">
+        <item>USB 电线</item>
+        <item>网络套接字</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>美国英文</item>
+        <item>土耳其语</item>
+        <item>瑞典语</item>
+        <item>Slovenian</item>
+        <item>俄文</item>
+        <item>葡萄牙文</item>
+        <item>挪威语</item>
+        <item>意大利语</item>
+        <item>克罗地亚语</item>
+        <item>联合王国英文</item>
+        <item>法文</item>
+        <item>芬兰语</item>
+        <item>西班牙语</item>
+        <item>丹麦语</item>
+        <item>德文</item>
+        <item>加拿大法文</item>
+        <item>巴西葡萄牙文</item>
+        <item>白俄罗斯语</item>
+        <item>匈牙利</item>
+    </string-array>
+</resources>

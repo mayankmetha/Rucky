@@ -3,71 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mayank.rucky">
 
-    <uses-feature android:name="android.hardware.usb.host" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
-    <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
-    <uses-permission android:name="android.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.FACTORY_TEST"
-        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.mayank.rucky.net" />
 
     <application
-        android:hardwareAccelerated="true"
-        android:largeHeap="true"
         android:allowBackup="false"
         android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
-        tools:targetApi="q">
+        android:theme="@style/Theme.Rucky"
+        tools:ignore="AllowBackup">
 
-        <receiver android:name=".RestartReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name=".USBReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-                <action android:name="android.hardware.usb.action.USB_STATE" />
-                <action android:name="asyncUSBWrite" />
-            </intent-filter>
-        </receiver>
-        
-        <receiver android:name=".PiReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="piConnected" />
-                <action android:name="piDisconnected" />
-                <action android:name="asyncPiWrite" />
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name=".SecretCodeReceiver">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SECRET_CODE" />
-
-                <data
-                    android:host="78259"
-                    android:scheme="android_secret_code" />
-            </intent-filter>
-        </receiver>
-
-        <service android:name=".PingService"
+        <service
+            android:name=".service.SocketHeartbeatService"
             android:enabled="true" />
 
         <provider
@@ -80,39 +43,48 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
+        <receiver android:name=".receiver.SecretCodeReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+                <data
+                    android:host="78259"
+                    android:scheme="android_secret_code" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.USBReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.NetSocketReceiver"
+            android:permission="com.mayank.rucky.net">
+            <intent-filter android:priority="999">
+                <action android:name="com.mayank.rucky.netSocketConnected" />
+                <action android:name="com.mayank.rucky.netSocketDisconnected" />
+            </intent-filter>
+        </receiver>
+
         <activity
-            android:name=".SplashActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name=".activity.SplashActivity"
             android:clearTaskOnLaunch="true"
+            android:configChanges="uiMode|locale"
             android:launchMode="singleTask">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
         <activity-alias
-            android:name=".Dark"
+            android:name=".Main"
             android:enabled="true"
-            android:icon="@mipmap/ic_launcher_dark"
-            android:roundIcon="@mipmap/ic_launcher_dark_round"
-            android:targetActivity=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
-        <activity-alias
-            android:name=".Light"
-            android:enabled="false"
-            android:icon="@mipmap/ic_launcher_light"
-            android:roundIcon="@mipmap/ic_launcher_light_round"
-            android:targetActivity=".SplashActivity">
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:targetActivity=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -120,11 +92,24 @@
             </intent-filter>
         </activity-alias>
 
-        <activity android:name=".BrowserActivity" />
-        <activity android:name=".InitActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".TransparentActivity" android:theme="@style/Transparent"/>
+        <activity
+            android:name=".activity.InitActivity"
+            android:configChanges="uiMode|locale" />
+        <activity
+            android:name=".activity.EditorActivity"
+            android:configChanges="uiMode|locale" />
+        <activity
+            android:name=".activity.UpdateActivity"
+            android:configChanges="uiMode|locale" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:configChanges="uiMode|locale" />
+        <activity
+            android:name=".activity.BrowserActivity"
+            android:configChanges="uiMode|locale" />
+        <activity
+            android:name=".activity.ConfigActivity"
+            android:configChanges="uiMode|locale" />
     </application>
 
 </manifest>

@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">Sblocca App</string>
+    <string name="auth">Conferma autenticazione</string>
+    <string name="update_check">Controllo aggiornamento</string>
+    <string name="update_new">Nuovo aggiornamento disponibile</string>
+    <!-- Init Screen -->
+    <string name="init_next">PROSSIMO</string>
+    <string name="init_skip">SALTA</string>
+    <string name="init_agree">CONVENUTO</string>
+    <string name="init_start">HACK</string>
     <string name="slideDesc1">Trasforma il tuo dispositivo in un ciucchio di gomma!</string>
+    <string name="slideTitle2">Cavo USB</string>
+    <string name="slideDesc2">Interfaccia USB cablata per lanciare attacco!</string>
+    <string name="slideTitle3">Socket Di Rete</string>
+    <string name="slideDesc3">Interfacce di socket Wi-Fi per lanciare attacchi tramite strumenti esterni supportati!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">L\'utente dell\'app è l\'unico responsabile per i danni causati. Nessuna altra entità può essere ritenuta responsabile per i danni fatti utilizzando questa app! Fai attenzione quando usi l\'app e non usi questo per causare danni agli altri!</string>
+    <string name="slideTitle5">Politica Sulla Privacy</string>
+    <string name="slideDesc5">Nessun dato di alcun modulo viene raccolto, utilizzato e venduto! Alcuni permessi che potrebbero sollevare problemi di privacy sono richiesti solo per il funzionamento di alcune funzionalità nell\'app e non è quello di raccogliere dati! La tua privacy è rispettata!</string>
+    <string name="slideTitle6">Permesso App</string>
+    <string name="slideDesc6">Si prega di concedere l\'app l\'autorizzazione necessaria per funzionare!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Aggiornamento Rucky</string>
+    <string name="update_version">Versione</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Aggiorna Stato</string>
+    <string name="update_action">Scarica &amp; Installa l\'aggiornamento</string>
+    <string name="update_downloading">Scaricamento Aggiornamento</string>
+    <string name="install_update">Applicazione Dell\'Aggiornamento</string>
+    <!-- Editor screen -->
+    <string name="update">Aggiorna</string>
+    <string name="setting">Impostazioni</string>
+    <string name="codeHint">Scrivi o carica qui gli script ducky della gomma</string>
+    <string name="loadBtn">Carica</string>
+    <string name="saveBtn">Salvare</string>
+    <string name="delBtn">Cancellare</string>
+    <string name="runBtn">Esegui</string>
+    <string name="confBtn">Configurazione</string>
+    <string name="btn_continue">Continua</string>
+    <string name="root_err">Accesso Root Richiesto Per Attacco Cavo Usb!</string>
+    <string name="kernel_err">"Kernel Non Supportato Per Attacco Cavo Usb!"</string>
+    <string name="usb_err">Cavo USB non connesso!</string>
+    <string name="net_err">Socket Di Rete Non Connesso!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Connesso</string>
+    <string name="config_status_usb_off">USB Disconnesso</string>
+    <string name="config_status_net_on">Rete Socket Connessa</string>
+    <string name="config_status_net_off">Rete Socket Disconnesso</string>
+    <string name="config_status_net_disabled">Rete Socket Disabilitata</string>
+    <string name="socket_address">Inserisci indirizzo IP e porta Socket</string>
+    <!-- Setting screen -->
     <string name="setting_general">Generale</string>
-    <string name="dark_theme_title">Modalità scura</string>
-    <string name="dark_theme_summary">Non manterrà le scorciatoie della schermata home.</string>
-    <string name="hide_icon_title">Nascondi icona Launcher</string>
-    <string name="hide_icon_summary">Digita *#*#78259#*#* per lanciare.</string>
+    <string name="dark_theme_title">Modalità Notturna</string>
+    <string name="dark_theme_summary">Imposta tema scuro</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Cambia colore accento</string>
+    <string name="hide_icon_title">Nascondi/Disabilita Icona Di Lancio</string>
+    <string name="hide_icon_summary">Componi *#*#78259#*#* per lanciare. Su Android 10 in poi, l\'icona sarà disabilitata, ma non nascosta.</string>
     <string name="delete_dep_title">Disinstalla app</string>
     <string name="delete_dep_summary">Pulisci e disinstalla l\'app.</string>
     <string name="settings_sec_title">Protezione Avanzata</string>
@@ -13,8 +66,8 @@
     <string name="setting_device">Impostazioni modalità attacco</string>
     <string name="settings_usb_title">Avvio connessione USB</string>
     <string name="settings_usb_desc">Il pulsante Esegui attacco quando viene collegato il USB.</string>
-    <string name="settings_rpi_title">Avvio Connessione Raspberry Pi</string>
-    <string name="settings_rpi_desc">Il pulsante Esegui attacco quando il Raspberry Pi è connesso.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Il pulsante Esegui lancerà l\'attacco quando il Network Socket è connesso.</string>
     <string name="setting_about">Informazioni</string>
     <string name="setting_developer_title">Sviluppatore</string>
     <string name="settings_version_title">Versione</string>
@@ -24,17 +77,42 @@
     <string name="settings_git_title">Problematiche GitHub</string>
     <string name="settings_git_desc">Fare clic per aggiungere problemi o richieste di funzionalità.</string>
     <string name="settings_locale_title">Localizzazione</string>
-    <string name="settings_locale_desc">Clicca per visualizzare i contributori di localizzazione.</string>
+    <string name="settings_locale_desc">Contribuisci alla localizzazione delle app.</string>
+    <string name="release">Distribuzione</string>
     <string name="releaseNetHunter">App Store NetHunter</string>
     <string name="releaseGitHub">Rilascio GitHub</string>
     <string name="releaseTest">Rilascio di debug</string>
     <string name="releaseOthers">Rilascio non supportato</string>
-    <string name="setting_name">Impostazioni</string>
-    <string name="update_name">Aggiornamento</string>
-    <string name="loadBtn">Carica</string>
-    <string name="saveBtn">Salvare</string>
-    <string name="delBtn">Cancellare</string>
-    <string name="runBtn">Esegui</string>
-    <string name="codeHint">Scrivi o carica qui gli script ducky della gomma</string>
+    <string name="btn_select">Seleziona</string>
+    <string name="btn_cancel">Annulla</string>
     <string name="btn_save">Salvare</string>
+    <string name="file_select">Seleziona File</string>
+    <string name="file_saved">salvato</string>
+    <string name="file_deleted">eliminato</string>
+    <string name="file_name">Nome File</string>
+    <string-array name="modes">
+        <item>Cavo USB</item>
+        <item>Socket Di Rete</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Inglese Americano</item>
+        <item>Turco</item>
+        <item>Svedese</item>
+        <item>Slovenian</item>
+        <item>Russo</item>
+        <item>Portoghese</item>
+        <item>Norvegese</item>
+        <item>Italiano</item>
+        <item>Croato</item>
+        <item>Regno Unito Inglese</item>
+        <item>Francese</item>
+        <item>Finlandese</item>
+        <item>Spagnolo</item>
+        <item>Danese</item>
+        <item>Tedesco</item>
+        <item>Francese Canadese</item>
+        <item>Portoghese Brasiliano</item>
+        <item>Bielorusso</item>
+        <item>Ungherese</item>
+    </string-array>
 </resources>

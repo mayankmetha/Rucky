@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
     <string name="unlock">Desbloquear Aplicativo</string>
     <string name="auth">Confirmar autenticação</string>
+    <string name="update_check">Verificando atualizações</string>
+    <string name="update_new">Nova atualização disponível</string>
+    <!-- Init Screen -->
     <string name="init_next">PRÓXIMO</string>
     <string name="init_skip">PULAR</string>
+    <string name="init_agree">CONCORDA</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Mude seu dispositivo para um Rubber Ducky!</string>
+    <string name="slideTitle2">Cabo USB</string>
+    <string name="slideDesc2">Interface com fios USB para lançar ataque!</string>
+    <string name="slideTitle3">Socket de Rede</string>
+    <string name="slideDesc3">Interfaces de soquete baseadas em Wi-Fi para lançar ataque através de ferramentas externas suportadas!</string>
+    <string name="slideTitle4">Renúncia</string>
+    <string name="slideDesc4">O usuário do aplicativo é o único responsável pelos danos causados. Nenhuma outra entidade pode ser responsabilizada pelos danos causados usando este aplicativo! Pratique cuidado ao usar o aplicativo e não use isso para causar danos aos outros!</string>
+    <string name="slideTitle5">Política de Privacidade</string>
+    <string name="slideDesc5">Nenhum dado de qualquer formulário é coletado, usado e vendido! Algumas permissões que podem gerar preocupações de privacidade só são solicitadas pelo funcionamento de certos recursos no app e não coletam dados! Sua privacidade é respeitada!</string>
+    <string name="slideTitle6">Permissão do aplicativo</string>
+    <string name="slideDesc6">Por favor, conceda ao aplicativo a permissão necessária para trabalhar!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Atualização Rucky</string>
+    <string name="update_version">Versão</string>
+    <string name="update_changelog">Mudanças</string>
+    <string name="update_status">Status de atualização</string>
+    <string name="update_action">Baixar &amp; Instalar Atualização</string>
+    <string name="update_downloading">Baixando atualização</string>
+    <string name="install_update">Aplicando Atualização</string>
+    <!-- Editor screen -->
+    <string name="update">Atualização</string>
+    <string name="setting">Confirgurações</string>
+    <string name="codeHint">Digite ou carregue scripts do ducky borracha aqui</string>
+    <string name="loadBtn">Carregar</string>
+    <string name="saveBtn">Salvar</string>
+    <string name="delBtn">Excluir</string>
+    <string name="runBtn">Rodar</string>
+    <string name="confBtn">Configuração</string>
+    <string name="btn_continue">Continuar</string>
+    <string name="root_err">Acesso Root Necessário Para Ataque a Cabo USB!</string>
+    <string name="kernel_err">"Kernel Não Suportado Para Ataque a Cabo USB!"</string>
+    <string name="usb_err">Cabo USB Não Conectado!</string>
+    <string name="net_err">Socket de rede não conectado!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Modificações</string>
+    <string name="config_status_usb_on">USB conectado</string>
+    <string name="config_status_usb_off">USB desconectado</string>
+    <string name="config_status_net_on">Socket de Rede Conectado</string>
+    <string name="config_status_net_off">Socket de Rede Desconectado</string>
+    <string name="config_status_net_disabled">Socket de rede desativado</string>
+    <string name="socket_address">Digite o IP do Socket e endereço da porta</string>
+    <!-- Setting screen -->
     <string name="setting_general">Geral</string>
-    <string name="dark_theme_title">Modo escuro</string>
-    <string name="dark_theme_summary">Não preservará o atalho da tela inicial.</string>
-    <string name="hide_icon_title">Ocultar ícone do Launcher</string>
-    <string name="hide_icon_summary">Disque *#*#78259#*#* para iniciar.</string>
+    <string name="dark_theme_title">Modo Noturno</string>
+    <string name="dark_theme_summary">Definir tema escuro</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Mudar cor do acento</string>
+    <string name="hide_icon_title">Esconder/Desabilitar ícone do Launcher</string>
+    <string name="hide_icon_summary">Discar *#*#78259#*#* para iniciar. No Android 10, o ícone será desativado, mas não ocultado.</string>
     <string name="delete_dep_title">Desinstalar App</string>
     <string name="delete_dep_summary">Limpar e desinstalar app.</string>
     <string name="settings_sec_title">Segurança Avançada</string>
@@ -18,8 +66,8 @@
     <string name="setting_device">Configurações do Modo Ataque</string>
     <string name="settings_usb_title">Iniciação de conexão USB</string>
     <string name="settings_usb_desc">Executar botão irá iniciar o ataque quando o USB estiver conectado.</string>
-    <string name="settings_rpi_title">Lançamento do Raspberry Pi Connect</string>
-    <string name="settings_rpi_desc">Executar botão irá iniciar o ataque quando o Raspberry Pi estiver conectado.</string>
+    <string name="settings_net_title">Lançamento do Socket de Rede Connect</string>
+    <string name="settings_net_desc">Executar botão irá iniciar o ataque quando o Socket de Rede for conectado.</string>
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">Desenvolvedor</string>
     <string name="settings_version_title">Versão</string>
@@ -29,22 +77,22 @@
     <string name="settings_git_title">Questões GitHub</string>
     <string name="settings_git_desc">Clique para adicionar tickets ou requisição de recurso.</string>
     <string name="settings_locale_title">Localização</string>
-    <string name="settings_locale_desc">Clique para ver os colaboradores de localização.</string>
+    <string name="settings_locale_desc">Contribuir para a localização do aplicativo.</string>
     <string name="release">Distribuição</string>
     <string name="releaseNetHunter">Loja de Apps NetHunter</string>
     <string name="releaseGitHub">Versão do GitHub</string>
     <string name="releaseTest">Depurar Versão</string>
     <string name="releaseOthers">Versão não suportada</string>
-    <string name="setting_name">Configurações</string>
-    <string name="update_name">Atualizar</string>
-    <string name="loadBtn">Carregar</string>
-    <string name="saveBtn">Salvar</string>
-    <string name="delBtn">Excluir</string>
-    <string name="runBtn">Rodar</string>
-    <string name="codeHint">Digite ou carregue scripts do ducky borracha aqui</string>
+    <string name="btn_select">Selecionar</string>
+    <string name="btn_cancel">cancelar</string>
+    <string name="btn_save">Salvar</string>
+    <string name="file_select">Selecionar Arquivo</string>
+    <string name="file_saved">salvo</string>
+    <string name="file_deleted">excluído</string>
+    <string name="file_name">Nome do Arquivo</string>
     <string-array name="modes">
-        <item>Cabo USB (Root)</item>
-        <item>Raspberry Pi (Wi-Fi)</item>
+        <item>Cabo USB</item>
+        <item>Socket de Rede</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Inglês Americano</item>
@@ -67,29 +115,4 @@
         <item>Bielo-russo</item>
         <item>Húngaro</item>
     </string-array>
-    <string name="conn_title">Interface</string>
-    <string name="conn_usb_small">USB Conectado</string>
-    <string name="conn_pi_small">Raspberry Pi Conectado</string>
-    <string name="conn_none">Desconectado</string>
-    <string name="conn_1">Conectado</string>
-    <string name="conn_0">Desconectado</string>
-    <string name="kernel_err">"Kernel Não Suportado Para Ataque a Cabo USB!"</string>
-    <string name="update_corrupted">Arquivo de atualização corrompido!</string>
-    <string name="update_verify">Verificando atualização do aplicativo</string>
-    <string name="network_err">Por favor, verifique a conexão de rede</string>
-    <string name="screen_on">Por favor, deixe o aplicativo aberto até a tela de instalação aparecer</string>
-    <string name="update_exec">Atualizando aplicativo</string>
-    <string name="update_no">Nenhuma atualização encontrada</string>
-    <string name="update_check">Verificando atualizações</string>
-    <string name="update_available">Nova atualização disponível. Deseja atualizar agora?</string>
-    <string name="pi_err">Raspberry Pi Não Encontrado!</string>
-    <string name="pi_net_err">Falha na conexão do Raspberry Pi!</string>
-    <string name="root_err">Acesso Root Necessário Para Ataque a Cabo USB!</string>
-    <string name="usb_err">Cabo USB Não Conectado!</string>
-    <string name="file_select">Selecionar Arquivo</string>
-    <string name="file_saved">salvo</string>
-    <string name="file_deleted">excluído</string>
-    <string name="file_name">Nome do Arquivo</string>
-    <string name="btn_save">Salvar</string>
-    <string name="btn_continue">Continuar</string>
 </resources>

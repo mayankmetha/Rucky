@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <string name="unlock">Ξεκλείδωμα Εφαρμογής</string>
+    <string name="auth">Επιβεβαίωση ταυτοποίησης</string>
+    <string name="update_check">Έλεγχος για ενημέρωση</string>
+    <string name="update_new">Διαθέσιμη νέα ενημέρωση</string>
+    <!-- Init Screen -->
+    <string name="init_next">ΕΠΟΜΕΝΟ</string>
+    <string name="init_skip">ΠΑΡΑΛΕΙΨΗ</string>
+    <string name="init_agree">ΣΥΜΦΩΝΗΣΤΕ</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Γυρίστε τη συσκευή σας σε ένα Rubber Ducky!</string>
+    <string name="slideTitle2">Καλώδιο USB</string>
+    <string name="slideDesc2">Ενσύρματη διεπαφή USB για την έναρξη επίθεσης!</string>
+    <string name="slideTitle3">Υποδοχή Δικτύου</string>
+    <string name="slideDesc3">Διεπαφές υποδοχών βασισμένες σε Wi-Fi για εκτόξευση επίθεσης μέσω υποστηριζόμενων εξωτερικών εργαλείων!</string>
+    <string name="slideTitle4">Αποποίηση</string>
+    <string name="slideDesc4">Ο χρήστης της εφαρμογής ευθύνεται αποκλειστικά για τις ζημιές που προκλήθηκαν. Καμία άλλη οντότητα δεν μπορεί να θεωρηθεί υπεύθυνη για τις ζημιές που γίνονται με τη χρήση αυτής της εφαρμογής! Εφαρμόστε προσοχή όταν χρησιμοποιείτε την εφαρμογή και μην το χρησιμοποιείτε για να προκαλέσετε βλάβη σε άλλους!</string>
+    <string name="slideTitle5">Πολιτική Απορρήτου</string>
+    <string name="slideDesc5">Δεν συλλέγονται δεδομένα οποιασδήποτε φόρμας, χρησιμοποιούνται και πωλούνται! Μερικά δικαιώματα που θα μπορούσαν να προκαλέσουν ανησυχίες περί απορρήτου ζητούνται μόνο για την εργασία ορισμένων λειτουργιών στην εφαρμογή και δεν είναι να συλλέγουν δεδομένα! Η ιδιωτικότητά σας γίνεται σεβαστή!</string>
+    <string name="slideTitle6">Άδεια Εφαρμογής</string>
+    <string name="slideDesc6">Παρακαλούμε εκχωρήστε στην εφαρμογή την απαιτούμενη άδεια για να λειτουργήσει!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Αναβάθμιση Rucky</string>
+    <string name="update_version">Έκδοση</string>
+    <string name="update_changelog">Αρχείο Αλλαγών</string>
+    <string name="update_status">Ενημέρωση Κατάστασης</string>
+    <string name="update_action">Λήψη &amp; Εγκατάσταση Ενημέρωσης</string>
+    <string name="update_downloading">Λήψη Ενημέρωσης</string>
+    <string name="install_update">Εφαρμογή Ενημέρωσης</string>
+    <!-- Editor screen -->
+    <string name="update">Ενημέρωση</string>
+    <string name="setting">Ρυθμίσεις</string>
+    <string name="codeHint">Πληκτρολογήστε ή φορτώστε δέσμες ενεργειών από καουτσούκ εδώ</string>
+    <string name="loadBtn">Φόρτωση</string>
+    <string name="saveBtn">Αποθήκευση</string>
+    <string name="delBtn">Διαγραφή</string>
+    <string name="runBtn">Εκτέλεση</string>
+    <string name="confBtn">Ρύθμιση</string>
+    <string name="btn_continue">Συνέχεια</string>
+    <string name="root_err">Root Πρόσβαση Απαιτείται Για Επίθεση Καλώδιο Usb!</string>
+    <string name="kernel_err">"Πυρήνας Δεν Υποστηρίζεται Για Επίθεση Καλώδιο Usb!"</string>
+    <string name="usb_err">Το Καλώδιο Usb Δεν Συνδέθηκε!</string>
+    <string name="net_err">Η Υποδοχή Δικτύου Δεν Συνδέθηκε!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Βελτιώσεις</string>
+    <string name="config_status_usb_on">USB Συνδεδεμένο</string>
+    <string name="config_status_usb_off">Το USB Αποσυνδέθηκε</string>
+    <string name="config_status_net_on">Συνδέθηκε Δικτυακή Υποδοχή</string>
+    <string name="config_status_net_off">Αποσύνδεση Υποδοχής Δικτύου</string>
+    <string name="config_status_net_disabled">Απενεργοποίηση Υποδοχής Δικτύου</string>
+    <string name="socket_address">Εισαγωγή διεύθυνσης IP και θύρας υποδοχής</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Γενικά</string>
+    <string name="dark_theme_title">Νυχτερινή Λειτουργία</string>
+    <string name="dark_theme_summary">Ορισμός σκοτεινού θέματος</string>
+    <string name="accent_theme_title">Θέμα</string>
+    <string name="accent_theme_summary">Αλλαγή χρώματος έμφασης</string>
+    <string name="hide_icon_title">Απόκρυψη/Απενεργοποίηση Εικονιδίου Εκκινητή</string>
+    <string name="hide_icon_summary">Κλήση *#*#78259#*#* για εκκίνηση. Στο Android 10 και μετά, το εικονίδιο θα απενεργοποιηθεί, αλλά δεν θα κρυφτεί.</string>
+    <string name="delete_dep_title">Απεγκατάσταση Εφαρμογής</string>
+    <string name="delete_dep_summary">Εκκαθάριση και απεγκατάσταση εφαρμογής.</string>
+    <string name="settings_sec_title">Προκαταβολική Ασφάλεια</string>
+    <string name="settings_sec_desc">Ενεργοποίηση κρυπτογράφησης αρχείων σεναρίου και κλειδώματος οθόνης.</string>
+    <string name="setting_device">Ρυθμίσεις Λειτουργίας Επίθεσης</string>
+    <string name="settings_usb_title">Εκκίνηση Σύνδεσης Usb</string>
+    <string name="settings_usb_desc">Εκτέλεση κουμπιού θα ξεκινήσει επίθεση όταν είναι συνδεδεμένο το USB.</string>
+    <string name="settings_net_title">Έναρξη Σύνδεσης Δικτύου</string>
+    <string name="settings_net_desc">Το κουμπί Εκτέλεση θα ξεκινήσει επίθεση όταν συνδεθεί η Υποδοχή δικτύου.</string>
+    <string name="setting_about">Πληροφορίες</string>
+    <string name="setting_developer_title">Προγραμματιστής</string>
+    <string name="settings_version_title">Έκδοση</string>
+    <string name="settings_arch_title">Αρχιτεκτονική</string>
+    <string name="settings_lic_title">Άδεια</string>
+    <string name="settings_support">Υποστήριξη</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">Κάντε κλικ για να προσθέσετε θέματα ή αίτηση δυνατότητας.</string>
+    <string name="settings_locale_title">Τοπικοποίηση</string>
+    <string name="settings_locale_desc">Συνεισφέρετε στην τοπικοποίηση εφαρμογών.</string>
+    <string name="release">Κατανομή</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Έκδοση GitHub</string>
+    <string name="releaseTest">Απελευθέρωση Σφαλμάτων</string>
+    <string name="releaseOthers">Μη Υποστηριζόμενη Έκδοση</string>
+    <string name="btn_select">Επιλογή</string>
+    <string name="btn_cancel">Ακύρωση</string>
+    <string name="btn_save">Αποθήκευση</string>
+    <string name="file_select">Επιλογή Αρχείου</string>
+    <string name="file_saved">αποθηκεύτηκε</string>
+    <string name="file_deleted">διαγράφηκε</string>
+    <string name="file_name">Όνομα Αρχείου</string>
+    <string-array name="modes">
+        <item>Καλώδιο USB</item>
+        <item>Υποδοχή Δικτύου</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Αμερικανικά Αγγλικά</item>
+        <item>Τουρκικά</item>
+        <item>Σουηδικά</item>
+        <item>Slovenian</item>
+        <item>Ρωσικά</item>
+        <item>Πορτογαλικά</item>
+        <item>Νορβηγικά</item>
+        <item>Ιταλικά</item>
+        <item>Κροατικά</item>
+        <item>Ηνωμένο Βασίλειο Αγγλικά</item>
+        <item>Γαλλικά</item>
+        <item>Φινλανδικά</item>
+        <item>Ισπανικά</item>
+        <item>Δανέζικα</item>
+        <item>Γερμανικά</item>
+        <item>Γαλλικά Καναδά</item>
+        <item>Πορτογαλικά Βραζιλίας</item>
+        <item>Λευκορωσικά</item>
+        <item>Ουγγρικά</item>
+    </string-array>
+</resources>

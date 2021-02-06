@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">Desbloquear App</string>
+    <string name="auth">Confirmar autenticación</string>
+    <string name="update_check">Comprobando actualizaciones</string>
+    <string name="update_new">Nueva actualización disponible</string>
+    <!-- Init Screen -->
+    <string name="init_next">SIGUIENTE</string>
+    <string name="init_skip">RECOGER</string>
+    <string name="init_agree">AGAI</string>
+    <string name="init_start">HACK</string>
     <string name="slideDesc1">¡Convierte tu dispositivo en un Rubber Ducky!</string>
+    <string name="slideTitle2">Cable USB</string>
+    <string name="slideDesc2">¡Interfaz USB por cable para lanzar el ataque!</string>
+    <string name="slideTitle3">Conector de red</string>
+    <string name="slideDesc3">¡Interfaces de socket basados en Wi-Fi para lanzar ataque a través de herramientas externas soportadas!</string>
+    <string name="slideTitle4">Descargo de responsabilidad</string>
+    <string name="slideDesc4">El usuario de la aplicación es el único responsable de los daños causados. Ninguna otra entidad puede ser considerada responsable por los daños causados usando esta aplicación! ¡Practica precaución al usar la aplicación y no utilices esto para causar daño a los demás!</string>
+    <string name="slideTitle5">Política de privacidad</string>
+    <string name="slideDesc5">Ningún dato de ninguna forma es recogido, utilizado y vendido! Algunos permisos que podrían plantear problemas de privacidad sólo se solicitan para el funcionamiento de ciertas características en la aplicación y no es recolectar datos! ¡Se respeta tu privacidad!</string>
+    <string name="slideTitle6">Permiso de aplicación</string>
+    <string name="slideDesc6">¡Por favor, concede a la aplicación el permiso necesario para trabajar!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Actualización de suerte</string>
+    <string name="update_version">Versión</string>
+    <string name="update_changelog">Cambios</string>
+    <string name="update_status">Actualizar estado</string>
+    <string name="update_action">Descargar &amp; Instalar actualización</string>
+    <string name="update_downloading">Descargando actualización</string>
+    <string name="install_update">Aplicando actualización</string>
+    <!-- Editor screen -->
+    <string name="update">Actualizar</string>
+    <string name="setting">Ajustes</string>
+    <string name="codeHint">Escriba o cargue guiones de rubber ducky aquí</string>
+    <string name="loadBtn">Cargar</string>
+    <string name="saveBtn">Guardar</string>
+    <string name="delBtn">Eliminar</string>
+    <string name="runBtn">Ejecutar</string>
+    <string name="confBtn">Configuración</string>
+    <string name="btn_continue">Continuar</string>
+    <string name="root_err">¡Acceso root requerido para el ataque por cable USB!</string>
+    <string name="kernel_err">"Kernel no soportado para el ataque por cable USB!"</string>
+    <string name="usb_err">Cable USB no conectado!</string>
+    <string name="net_err">¡Conector de red no conectado!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Ajustes</string>
+    <string name="config_status_usb_on">USB conectado</string>
+    <string name="config_status_usb_off">USB desconectado</string>
+    <string name="config_status_net_on">Conexión de red conectada</string>
+    <string name="config_status_net_off">Socket de red desconectado</string>
+    <string name="config_status_net_disabled">Socket de red desactivado</string>
+    <string name="socket_address">Introduzca IP y dirección del puerto</string>
+    <!-- Setting screen -->
     <string name="setting_general">General</string>
-    <string name="dark_theme_title">Modo Oscuro</string>
-    <string name="dark_theme_summary">No se conservará el acceso directo a la pantalla de inicio.</string>
-    <string name="hide_icon_title">Ocultar icono de Launcher</string>
-    <string name="hide_icon_summary">Marcar *#*#78259#*#* para lanzar.</string>
+    <string name="dark_theme_title">Modo nocturno</string>
+    <string name="dark_theme_summary">Establecer tema oscuro</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Cambiar color de acento</string>
+    <string name="hide_icon_title">Ocultar/Desactivar icono del lanzador</string>
+    <string name="hide_icon_summary">Marcar *#*#78259#*#* para lanzar. En Android 10 en adelante, el icono será deshabilitado, pero no oculto.</string>
     <string name="delete_dep_title">Desinstalar App</string>
     <string name="delete_dep_summary">Limpia y desinstala la aplicación.</string>
     <string name="settings_sec_title">Seguridad Avanzada</string>
@@ -13,8 +66,8 @@
     <string name="setting_device">Ajustes del modo Ataque</string>
     <string name="settings_usb_title">Conectar USB</string>
     <string name="settings_usb_desc">El botón Ejecutar lanzará un ataque cuando el USB esté conectado.</string>
-    <string name="settings_rpi_title">Conectar Raspberry Pi</string>
-    <string name="settings_rpi_desc">El botón Ejecutar lanzará un ataque cuando Raspberry Pi esté conectado.</string>
+    <string name="settings_net_title">Inicio de Socket de Red</string>
+    <string name="settings_net_desc">El botón Ejecutar lanzará un ataque cuando el conector de red esté conectado.</string>
     <string name="setting_about">Información</string>
     <string name="setting_developer_title">Desarrollador</string>
     <string name="settings_version_title">Versión</string>
@@ -24,17 +77,42 @@
     <string name="settings_git_title">Problemas de GitHub</string>
     <string name="settings_git_desc">Haga clic para añadir problemas o solicitud de características.</string>
     <string name="settings_locale_title">Localización</string>
-    <string name="settings_locale_desc">Haga clic para ver los colaboradores de la localización.</string>
+    <string name="settings_locale_desc">Contribuye a la localización de aplicaciones.</string>
+    <string name="release">Distribución</string>
     <string name="releaseNetHunter">Tienda de aplicaciones NetHunter</string>
     <string name="releaseGitHub">Versión de GitHub</string>
     <string name="releaseTest">Depurar versión</string>
     <string name="releaseOthers">Versión no soportada</string>
-    <string name="setting_name">Ajustes</string>
-    <string name="update_name">Actualizar</string>
-    <string name="loadBtn">Cargar</string>
-    <string name="saveBtn">Guardar</string>
-    <string name="delBtn">Eliminar</string>
-    <string name="runBtn">Ejecutar</string>
-    <string name="codeHint">Escriba o cargue guiones de rubber ducky aquí</string>
+    <string name="btn_select">Seleccionar</string>
+    <string name="btn_cancel">Cancelar</string>
     <string name="btn_save">Guardar</string>
+    <string name="file_select">Seleccionar archivo</string>
+    <string name="file_saved">guardado</string>
+    <string name="file_deleted">borrado</string>
+    <string name="file_name">Nombre del archivo</string>
+    <string-array name="modes">
+        <item>Cable USB</item>
+        <item>Conector de red</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Inglés Americano</item>
+        <item>Turco</item>
+        <item>Sueco</item>
+        <item>Slovenian</item>
+        <item>Ruso</item>
+        <item>Portugués</item>
+        <item>Noruego</item>
+        <item>Italiano</item>
+        <item>Croata</item>
+        <item>Inglés del Reino Unido</item>
+        <item>Francés</item>
+        <item>Finlandés</item>
+        <item>Español</item>
+        <item>Danés</item>
+        <item>Alemán</item>
+        <item>Francés canadiense</item>
+        <item>Portugués Brasileño</item>
+        <item>Bielorruso</item>
+        <item>Húngaro</item>
+    </string-array>
 </resources>

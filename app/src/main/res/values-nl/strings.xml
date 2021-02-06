@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">App ontgrendelen</string>
+    <string name="auth">Verificatie bevestigen</string>
+    <string name="update_check">Controleren op updates</string>
+    <string name="update_new">Nieuwe update beschikbaar</string>
+    <!-- Init Screen -->
+    <string name="init_next">VOLGENDE</string>
+    <string name="init_skip">OVERSLAAN</string>
+    <string name="init_agree">LEEFTIJD</string>
+    <string name="init_start">HACK</string>
     <string name="slideDesc1">Draai je apparaat naar een Rubber Ducky!</string>
+    <string name="slideTitle2">USB kabel</string>
+    <string name="slideDesc2">USB-bedrade interface om de aanval te starten!</string>
+    <string name="slideTitle3">Netwerk soep</string>
+    <string name="slideDesc3">Op wifi gebaseerde socket interfaces om aanval te starten via ondersteunde externe hulpmiddelen!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">De gebruiker van de app is exclusief verantwoordelijk voor de geleden schade. Geen enkele andere entiteit kan aansprakelijk worden gesteld voor de schade die met deze app is aangericht! Oefen voorzichtig bij het gebruik van de app en gebruik dit niet om anderen schade toe te brengen!</string>
+    <string name="slideTitle5">Privacy Beleid</string>
+    <string name="slideDesc5">Er worden geen gegevens van een formulier verzameld, gebruikt en verkocht! Sommige machtigingen die privacyproblemen zouden kunnen veroorzaken, worden alleen gevraagd om het functioneren van bepaalde functies in de app en zijn niet om gegevens te verzamelen! Uw privacy wordt geëerbiedigd!</string>
+    <string name="slideTitle6">App Toestemming</string>
+    <string name="slideDesc6">Verleen de app de toestemming om te werken!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Versie</string>
+    <string name="update_changelog">Wijzigingslogboek</string>
+    <string name="update_status">Status bijwerken</string>
+    <string name="update_action">Download &amp; Installeren Update</string>
+    <string name="update_downloading">Update downloaden</string>
+    <string name="install_update">Update toepassen</string>
+    <!-- Editor screen -->
+    <string name="update">Vernieuwen</string>
+    <string name="setting">Instellingen</string>
+    <string name="codeHint">Typ of laad rubberen ducky scripts hier</string>
+    <string name="loadBtn">Belasting</string>
+    <string name="saveBtn">Opslaan</string>
+    <string name="delBtn">Verwijderen</string>
+    <string name="runBtn">Uitvoeren</string>
+    <string name="confBtn">Configuratie</string>
+    <string name="btn_continue">Doorgaan</string>
+    <string name="root_err">Roottoegang vereist voor USB-kabelaanval!</string>
+    <string name="kernel_err">"Kernel niet ondersteund voor USB-kabelaanval!"</string>
+    <string name="usb_err">USB-kabel niet aangesloten!</string>
+    <string name="net_err">Netwerksokken niet verbonden!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Aanpassingen</string>
+    <string name="config_status_usb_on">USB aangesloten</string>
+    <string name="config_status_usb_off">USB verbinding verbroken</string>
+    <string name="config_status_net_on">Netwerk Socket verbonden</string>
+    <string name="config_status_net_off">Netwerk socket verbinding verbroken</string>
+    <string name="config_status_net_disabled">Netwerk Socket uitgeschakeld</string>
+    <string name="socket_address">Voer Socket IP en Poort Adres in</string>
+    <!-- Setting screen -->
     <string name="setting_general">Algemeen</string>
-    <string name="dark_theme_title">Donkere modus</string>
-    <string name="dark_theme_summary">De snelkoppeling op het startscherm wordt niet behouden.</string>
-    <string name="hide_icon_title">Launcher-pictogram verbergen</string>
-    <string name="hide_icon_summary">Kies *#*#78259#*#* om te lanceren.</string>
+    <string name="dark_theme_title">Nacht modus</string>
+    <string name="dark_theme_summary">Donker thema instellen</string>
+    <string name="accent_theme_title">Thema</string>
+    <string name="accent_theme_summary">Wijzig accentkleur</string>
+    <string name="hide_icon_title">Verberg/Uitschakelen Launcher-pictogram</string>
+    <string name="hide_icon_summary">Dial *#*#78259#* om te starten. Op Android 10 wordt het pictogram uitgeschakeld, maar niet verborgen.</string>
     <string name="delete_dep_title">App verwijderen</string>
     <string name="delete_dep_summary">Opschonen en verwijderen app</string>
     <string name="settings_sec_title">Verbetering van beveiliging</string>
@@ -13,8 +66,8 @@
     <string name="setting_device">Aanvalmodus Instellingen</string>
     <string name="settings_usb_title">USB verbinding starten</string>
     <string name="settings_usb_desc">Uitvoerknop zal aanvallen lanceren wanneer USB is aangesloten.</string>
-    <string name="settings_rpi_title">Raspberry Pi verbinding maken met starten</string>
-    <string name="settings_rpi_desc">Uitvoerknop zal aanvallen lanceren wanneer de Raspberry Pi is aangesloten.</string>
+    <string name="settings_net_title">Netwerk Socket Connect lancering</string>
+    <string name="settings_net_desc">Uitvoerknop zal aanval lanceren wanneer Netwerk Socket is aangesloten.</string>
     <string name="setting_about">Informatie</string>
     <string name="setting_developer_title">Ontwikkelaar</string>
     <string name="settings_version_title">Versie</string>
@@ -24,17 +77,42 @@
     <string name="settings_git_title">GitHub problemen</string>
     <string name="settings_git_desc">Klik om issues of verzoek toe te voegen.</string>
     <string name="settings_locale_title">Lokalisatie</string>
-    <string name="settings_locale_desc">Klik om de lokalisatie bijdragers te bekijken.</string>
+    <string name="settings_locale_desc">Draag bij aan app lokalisatie.</string>
+    <string name="release">Distributie</string>
     <string name="releaseNetHunter">NetHunter App Winkel</string>
     <string name="releaseGitHub">GitHub release</string>
     <string name="releaseTest">Debug release</string>
     <string name="releaseOthers">Niet-ondersteunde release</string>
-    <string name="setting_name">Instellingen</string>
-    <string name="update_name">Vernieuwen</string>
-    <string name="loadBtn">Belasting</string>
-    <string name="saveBtn">Opslaan</string>
-    <string name="delBtn">Verwijderen</string>
-    <string name="runBtn">Uitvoeren</string>
-    <string name="codeHint">Typ of laad rubberen ducky scripts hier</string>
+    <string name="btn_select">Selecteren</string>
+    <string name="btn_cancel">annuleren</string>
     <string name="btn_save">Opslaan</string>
+    <string name="file_select">Bestand selecteren</string>
+    <string name="file_saved">opgeslagen</string>
+    <string name="file_deleted">verwijderd</string>
+    <string name="file_name">File Name</string>
+    <string-array name="modes">
+        <item>USB kabel</item>
+        <item>Netwerk soep</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikaans Engels</item>
+        <item>Turks</item>
+        <item>Zweeds</item>
+        <item>Slovenian</item>
+        <item>Russisch</item>
+        <item>Portugees</item>
+        <item>Noors</item>
+        <item>Italiaans</item>
+        <item>Kroatisch</item>
+        <item>Verenigd Koninkrijk Engels</item>
+        <item>Frans</item>
+        <item>Fins</item>
+        <item>Spaans</item>
+        <item>Deens</item>
+        <item>Duits</item>
+        <item>Canadees Frans</item>
+        <item>Braziliaans Portugees</item>
+        <item>Wit-Russisch</item>
+        <item>Hongaars</item>
+    </string-array>
 </resources>

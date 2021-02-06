@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">Odblokuj aplikację</string>
+    <string name="auth">Potwierdź uwierzytelnianie</string>
+    <string name="update_check">Sprawdzanie aktualizacji</string>
+    <string name="update_new">Dostępna jest nowa aktualizacja</string>
+    <!-- Init Screen -->
+    <string name="init_next">NASTĘPNY</string>
+    <string name="init_skip">POKAŻ</string>
+    <string name="init_agree">ZGADZA SIĘ</string>
+    <string name="init_start">HACK</string>
     <string name="slideDesc1">Zamień swoje urządzenie w gumowy Duck!</string>
+    <string name="slideTitle2">Kabel USB</string>
+    <string name="slideDesc2">Interfejs przewodowy USB do uruchomienia ataku!</string>
+    <string name="slideTitle3">Skieszonka sieci</string>
+    <string name="slideDesc3">Interfejsy gniazda Wi-Fi do uruchamiania ataku za pomocą wspieranych narzędzi zewnętrznych!</string>
+    <string name="slideTitle4">Zastrzeżenie</string>
+    <string name="slideDesc4">Użytkownik aplikacji ponosi wyłączną odpowiedzialność za spowodowane szkody. Żaden inny podmiot nie może zostać pociągnięty do odpowiedzialności za szkody poniesione przy użyciu tej aplikacji! Poćwicz ostrożność podczas korzystania z aplikacji i nie używaj tego do zadawania obrażeń innym!</string>
+    <string name="slideTitle5">Polityka prywatności</string>
+    <string name="slideDesc5">Żadne dane z żadnego formularza nie są zbierane, używane i sprzedawane! Niektóre uprawnienia, które mogą budzić obawy o prywatność, są proszone tylko o działanie niektórych funkcji w aplikacji i nie są zbierane dane! Twoja prywatność jest szanowana!</string>
+    <string name="slideTitle6">Uprawnienia aplikacji</string>
+    <string name="slideDesc6">Proszę przyznać aplikacji wymagane uprawnienia do pracy!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Aktualizacja Rucky</string>
+    <string name="update_version">Wersja</string>
+    <string name="update_changelog">Lista zmian</string>
+    <string name="update_status">Aktualizuj status</string>
+    <string name="update_action">Pobierz &amp; Zainstaluj aktualizację</string>
+    <string name="update_downloading">Pobieranie aktualizacji</string>
+    <string name="install_update">Stosowanie aktualizacji</string>
+    <!-- Editor screen -->
+    <string name="update">Aktualizuj</string>
+    <string name="setting">Ustawienia</string>
+    <string name="codeHint">Skrypty typu lub załadowcze z gumy</string>
+    <string name="loadBtn">Załaduj</string>
+    <string name="saveBtn">Zapisz</string>
+    <string name="delBtn">Usuń</string>
+    <string name="runBtn">Uruchom</string>
+    <string name="confBtn">Konfiguracja</string>
+    <string name="btn_continue">Kontynuuj</string>
+    <string name="root_err">Wymagany dostęp do roota do ataku kabla USB!</string>
+    <string name="kernel_err">"Kernel nie jest obsługiwany do ataku kabla USB!"</string>
+    <string name="usb_err">Kabel USB nie podłączony!</string>
+    <string name="net_err">Nie połączono gniazda sieciowego!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Ulepszenia</string>
+    <string name="config_status_usb_on">Podłączono USB</string>
+    <string name="config_status_usb_off">USB odłączony</string>
+    <string name="config_status_net_on">Skieszonka sieciowa połączona</string>
+    <string name="config_status_net_off">Skieszonka sieciowa odłączona</string>
+    <string name="config_status_net_disabled">Skieszonka sieci wyłączona</string>
+    <string name="socket_address">Wprowadź adres IP gniazda i port</string>
+    <!-- Setting screen -->
     <string name="setting_general">Ogólny</string>
-    <string name="dark_theme_title">Tryb ciemny</string>
-    <string name="dark_theme_summary">Nie zachowa skrótu na ekranie głównym.</string>
-    <string name="hide_icon_title">Ukryj ikonę Launcher</string>
-    <string name="hide_icon_summary">Wybieraj *#*#78259#*#* aby uruchomić.</string>
+    <string name="dark_theme_title">Tryb nocny</string>
+    <string name="dark_theme_summary">Ustaw ciemny motyw</string>
+    <string name="accent_theme_title">Motyw</string>
+    <string name="accent_theme_summary">Zmień kolor akcentu</string>
+    <string name="hide_icon_title">Ukryj/Wyłącz ikonę Launcher</string>
+    <string name="hide_icon_summary">Wybieraj *#*#78259#*#* aby uruchomić. Na Androidzie 10 ikona zostanie wyłączona, ale nie ukryta.</string>
     <string name="delete_dep_title">Odinstaluj aplikację</string>
     <string name="delete_dep_summary">Wyczyść i odinstaluj aplikację.</string>
     <string name="settings_sec_title">Zabezpieczenie zaliczkowe</string>
@@ -13,8 +66,8 @@
     <string name="setting_device">Ustawienia trybu ataku</string>
     <string name="settings_usb_title">Uruchom połączenie USB</string>
     <string name="settings_usb_desc">Przycisk uruchamia atak po podłączeniu USB.</string>
-    <string name="settings_rpi_title">Uruchamianie Raspberry Pi Connect</string>
-    <string name="settings_rpi_desc">Przycisk uruchomienia uruchomi atak, gdy Raspberry Pi jest podłączony.</string>
+    <string name="settings_net_title">Uruchamianie gniazda sieciowego</string>
+    <string name="settings_net_desc">Przycisk uruchamia atak po podłączeniu gniazda sieciowego.</string>
     <string name="setting_about">Informacje</string>
     <string name="setting_developer_title">Programista</string>
     <string name="settings_version_title">Wersja</string>
@@ -24,17 +77,42 @@
     <string name="settings_git_title">Problemy z gitHub</string>
     <string name="settings_git_desc">Kliknij, aby dodać zgłoszenia lub prośbę o funkcję.</string>
     <string name="settings_locale_title">Lokalizacja</string>
-    <string name="settings_locale_desc">Kliknij, aby wyświetlić tłumaczy lokalizacji.</string>
+    <string name="settings_locale_desc">Przyczyń się do lokalizacji aplikacji.</string>
+    <string name="release">Rozkład</string>
     <string name="releaseNetHunter">Sklep z aplikacjami NetHunter</string>
     <string name="releaseGitHub">Wydanie GitHub</string>
     <string name="releaseTest">Wydanie debugowania</string>
     <string name="releaseOthers">Nieobsługiwane wydanie</string>
-    <string name="setting_name">Ustawienia</string>
-    <string name="update_name">Aktualizuj</string>
-    <string name="loadBtn">Załaduj</string>
-    <string name="saveBtn">Zapisz</string>
-    <string name="delBtn">Usuń</string>
-    <string name="runBtn">Uruchom</string>
-    <string name="codeHint">Skrypty typu lub załadowcze z gumy</string>
+    <string name="btn_select">Wybierz</string>
+    <string name="btn_cancel">Anuluj</string>
     <string name="btn_save">Zapisz</string>
+    <string name="file_select">Wybierz plik</string>
+    <string name="file_saved">zapisano</string>
+    <string name="file_deleted">usunięto</string>
+    <string name="file_name">Nazwa pliku</string>
+    <string-array name="modes">
+        <item>Kabel USB</item>
+        <item>Skieszonka sieci</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerykański angielski</item>
+        <item>turecki</item>
+        <item>Szwedzki</item>
+        <item>Slovenian</item>
+        <item>rosyjski</item>
+        <item>Portugalski</item>
+        <item>norweski</item>
+        <item>włoski</item>
+        <item>chorwacki</item>
+        <item>Angielski</item>
+        <item>Francuski</item>
+        <item>fiński</item>
+        <item>hiszpański</item>
+        <item>duński</item>
+        <item>niemiecki</item>
+        <item>kanadyjski francuski</item>
+        <item>Portugalski brazylijski</item>
+        <item>białoruski</item>
+        <item>węgierski</item>
+    </string-array>
 </resources>

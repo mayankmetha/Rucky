@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">Разблокировать приложение</string>
+    <string name="auth">Подтвердить аутентификацию</string>
+    <string name="update_check">Проверка обновлений</string>
+    <string name="update_new">Доступно новое обновление</string>
+    <!-- Init Screen -->
+    <string name="init_next">СЛЕДУЮЩИЙ</string>
+    <string name="init_skip">ПРОПУСК</string>
+    <string name="init_agree">СОГЛАСИТЬ</string>
+    <string name="init_start">ПОДСКАЗАТЬ</string>
     <string name="slideDesc1">Поверни свое устройство резиновой Дуки!</string>
     <string name="slideTitle2">Кабель USB</string>
+    <string name="slideDesc2">Проводной интерфейс USB для запуска атаки!</string>
+    <string name="slideTitle3">Сетевое сокет</string>
+    <string name="slideDesc3">Интерфейсы сокета Wi-Fi для запуска атак с помощью поддерживаемых внешних инструментов!</string>
+    <string name="slideTitle4">Оговорка</string>
+    <string name="slideDesc4">Пользователь приложения несет ответственность за причиненный ущерб. Никакие другие субъекты не могут нести ответственность за ущерб, причиненный с помощью этого приложения! Примите меры предосторожности при использовании приложения и не используйте это для причинения вреда другим!</string>
+    <string name="slideTitle5">Политика конфиденциальности</string>
+    <string name="slideDesc5">Данные любой формы не собираются, используются и продаются! Некоторые разрешения, которые могут вызвать проблемы конфиденциальности, запрашиваются только для работы определенных функций в приложении и не собирают данные! Ваша конфиденциальность уважается!</string>
+    <string name="slideTitle6">Разрешение приложения</string>
+    <string name="slideDesc6">Пожалуйста, предоставьте приложению необходимое разрешение для работы!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Хакерское обновление</string>
+    <string name="update_version">Версия</string>
+    <string name="update_changelog">Список изменений</string>
+    <string name="update_status">Обновить статус</string>
+    <string name="update_action">Скачать &amp; Установить обновление</string>
+    <string name="update_downloading">Загрузка обновления</string>
+    <string name="install_update">Применение обновления</string>
+    <!-- Editor screen -->
+    <string name="update">Обновить</string>
+    <string name="setting">Настройки</string>
+    <string name="codeHint">Введите или загрузите здесь сценарии резиновых уток</string>
+    <string name="loadBtn">Загрузить</string>
+    <string name="saveBtn">Сохранить</string>
+    <string name="delBtn">Удалить</string>
+    <string name="runBtn">Выполнить</string>
+    <string name="confBtn">Настройка</string>
+    <string name="btn_continue">Продолжить</string>
+    <string name="root_err">Требуется Root доступ для атаки USB-кабелей!</string>
+    <string name="kernel_err">"Ядро не поддерживается для атаки USB-кабеля!"</string>
+    <string name="usb_err">USB-кабель не подключен!</string>
+    <string name="net_err">Сетевой сокет не подключен!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Настройки</string>
+    <string name="config_status_usb_on">USB подключен</string>
+    <string name="config_status_usb_off">USB отключен</string>
+    <string name="config_status_net_on">Сетевое сокет подключено</string>
+    <string name="config_status_net_off">Сетевое сокет отключено</string>
+    <string name="config_status_net_disabled">Сетевое сокет отключено</string>
+    <string name="socket_address">Введите IP-адрес сокета и порт</string>
+    <!-- Setting screen -->
     <string name="setting_general">Общие сведения</string>
-    <string name="dark_theme_title">Темный режим</string>
-    <string name="dark_theme_summary">Не будет сохранять ярлык домашнего экрана.</string>
-    <string name="hide_icon_title">Скрыть значок панели запуска</string>
-    <string name="hide_icon_summary">Набрать * #*#78259#*#* для запуска.</string>
+    <string name="dark_theme_title">Ночной режим</string>
+    <string name="dark_theme_summary">Установить темную тему</string>
+    <string name="accent_theme_title">Тема</string>
+    <string name="accent_theme_summary">Изменить цвет акцента</string>
+    <string name="hide_icon_title">Скрыть/отключить значок лаунчера</string>
+    <string name="hide_icon_summary">Наберите *#*#78259#*#* для запуска. После Android 10 значок будет отключен, но не скрыт.</string>
     <string name="delete_dep_title">Удалить приложение</string>
     <string name="delete_dep_summary">Очистить и деинсталлировать приложение.</string>
     <string name="settings_sec_title">Предварительная защита</string>
@@ -14,8 +66,8 @@
     <string name="setting_device">Настройки режима атаки</string>
     <string name="settings_usb_title">Запуск USB-подключения</string>
     <string name="settings_usb_desc">Кнопка \"Выполнить\" запустит атаку при подключении USB.</string>
-    <string name="settings_rpi_title">Запуск Raspberry Pi Connect</string>
-    <string name="settings_rpi_desc">Кнопка «Выполнить» запустит атаку при подключении Raspberry Pi.</string>
+    <string name="settings_net_title">Запуск сетевого сокета</string>
+    <string name="settings_net_desc">Кнопка \"Выполнить\" запустит атаку при подключении сетевого сокета.</string>
     <string name="setting_about">Информация</string>
     <string name="setting_developer_title">Разработчик</string>
     <string name="settings_version_title">Версия</string>
@@ -25,24 +77,42 @@
     <string name="settings_git_title">Проблемы GitHub</string>
     <string name="settings_git_desc">Щелкните здесь, чтобы добавить неполадки или запрос на функцию.</string>
     <string name="settings_locale_title">Локализация</string>
-    <string name="settings_locale_desc">Щелкните для просмотра участников локализации.</string>
+    <string name="settings_locale_desc">Внести вклад в локализацию приложений.</string>
+    <string name="release">Распределение</string>
     <string name="releaseNetHunter">Магазин приложений NetHunter</string>
     <string name="releaseGitHub">Выпуск GitHub</string>
     <string name="releaseTest">Отладочный выпуск</string>
     <string name="releaseOthers">Неподдерживаемый выпуск</string>
-    <string name="setting_name">Параметры</string>
-    <string name="update_name">Обновить</string>
-    <string name="loadBtn">Загрузить</string>
-    <string name="saveBtn">Сохранить</string>
-    <string name="delBtn">Удалить</string>
-    <string name="runBtn">Выполнить</string>
-    <string name="codeHint">Введите или загрузите здесь сценарии резиновых уток</string>
-    <string name="update_no">Обновлений не найдено</string>
-    <string name="update_check">Проверка обновлений</string>
-    <string name="usb_err">USB-кабель не подключен!</string>
+    <string name="btn_select">Выбрать</string>
+    <string name="btn_cancel">Отменить</string>
+    <string name="btn_save">Сохранить</string>
     <string name="file_select">Выберите файл</string>
     <string name="file_saved">сохранено</string>
-    <string name="btn_save">Сохранить</string>
-    <string name="btn_cancel">Отменить</string>
-    <string name="btn_update">Загрузить и установить</string>
+    <string name="file_deleted">удалено</string>
+    <string name="file_name">Имя файла</string>
+    <string-array name="modes">
+        <item>Кабель USB</item>
+        <item>Сетевое сокет</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Американский английский</item>
+        <item>Турецкий</item>
+        <item>Шведский</item>
+        <item>Slovenian</item>
+        <item>Русский</item>
+        <item>Португальский</item>
+        <item>Норвежский</item>
+        <item>Итальянский</item>
+        <item>Хорватский</item>
+        <item>United Kingdom English</item>
+        <item>Французский</item>
+        <item>Финский</item>
+        <item>Испанский</item>
+        <item>Датский</item>
+        <item>Немецкий</item>
+        <item>Канадский французский</item>
+        <item>Бразильский португальский</item>
+        <item>Белорусский</item>
+        <item>Венгерский</item>
+    </string-array>
 </resources>

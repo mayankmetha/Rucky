@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <string name="unlock">Deblochează aplicația</string>
+    <string name="auth">Confirmă autentificarea</string>
+    <string name="update_check">Se caută actualizări</string>
+    <string name="update_new">Actualizare nouă disponibilă</string>
+    <!-- Init Screen -->
+    <string name="init_next">URMĂTORUL</string>
+    <string name="init_skip">ÎNCHIDE</string>
+    <string name="init_agree">ACORD</string>
+    <string name="init_start">ACK</string>
+    <string name="slideDesc1">Transformă dispozitivul tău într-un ucis de cauciuc!</string>
+    <string name="slideTitle2">Cablu USB</string>
+    <string name="slideDesc2">Interfaţă cu cablu USB pentru lansarea atacului!</string>
+    <string name="slideTitle3">Socket de rețea</string>
+    <string name="slideDesc3">Interfețe Wi-Fi de socket pentru lansarea atacului prin intermediul instrumentelor externe suportate!</string>
+    <string name="slideTitle4">Notificare</string>
+    <string name="slideDesc4">Utilizatorul aplicației este singurul responsabil pentru daunele cauzate. Nicio altă entitate nu poate fi considerată răspunzătoare pentru daunele făcute folosind această aplicație! Antrenează-te atunci când folosești aplicația și nu o folosești pentru a face rău altora!</string>
+    <string name="slideTitle5">Politica de confidenţialitate</string>
+    <string name="slideDesc5">Nici un fel de date nu sunt colectate, utilizate şi vândute! Unele permisiuni care ar putea ridica probleme de confidențialitate sunt solicitate doar pentru funcționarea anumitor caracteristici din aplicație și nu sunt de a colecta date! Confidențialitatea ta este respectată!</string>
+    <string name="slideTitle6">Permisiune aplicație</string>
+    <string name="slideDesc6">Vă rugăm să acordați aplicației permisiunea necesară pentru a lucra!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Actualizare Rucky</string>
+    <string name="update_version">Versiune</string>
+    <string name="update_changelog">Jurnal modificări</string>
+    <string name="update_status">Actualizare status</string>
+    <string name="update_action">Descarcă &amp; Instalează Actualizarea</string>
+    <string name="update_downloading">Descărcare actualizare</string>
+    <string name="install_update">Aplicare actualizare</string>
+    <!-- Editor screen -->
+    <string name="update">Actualizare</string>
+    <string name="setting">Setări</string>
+    <string name="codeHint">Tastați sau încărcați aici scripturi rațe de cauciuc</string>
+    <string name="loadBtn">Încărcare</string>
+    <string name="saveBtn">Salvează</string>
+    <string name="delBtn">Ștergere</string>
+    <string name="runBtn">Rulează</string>
+    <string name="confBtn">Configurare</string>
+    <string name="btn_continue">Continuă</string>
+    <string name="root_err">Acces Root necesar pentru atac prin cablu USB!</string>
+    <string name="kernel_err">"Kernel-ul nu este acceptat pentru atacul prin cablu USB!"</string>
+    <string name="usb_err">USB Cablu nu este conectat!</string>
+    <string name="net_err">Soclul de rețea nu este conectat!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Țesături</string>
+    <string name="config_status_usb_on">Conectat USB</string>
+    <string name="config_status_usb_off">USB deconectat</string>
+    <string name="config_status_net_on">Socket de rețea conectat</string>
+    <string name="config_status_net_off">Socket rețea deconectat</string>
+    <string name="config_status_net_disabled">Socket de rețea dezactivat</string>
+    <string name="socket_address">Introdu Socket IP și Port Adresa</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Generalități</string>
+    <string name="dark_theme_title">Mod Noapte</string>
+    <string name="dark_theme_summary">Setare temă întunecată</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Schimbă culoarea de accent</string>
+    <string name="hide_icon_title">Ascunde/Dezactivează pictograma Launcher</string>
+    <string name="hide_icon_summary">Apelează *#*78259#*#* de lansat. Începând cu Android 10, pictograma va fi dezactivată, dar nu ascunsă.</string>
+    <string name="delete_dep_title">Dezinstalează aplicația</string>
+    <string name="delete_dep_summary">Curăță și dezinstalează aplicația.</string>
+    <string name="settings_sec_title">Securitate avansată</string>
+    <string name="settings_sec_desc">Activează criptarea fișierului script și blocarea ecranului.</string>
+    <string name="setting_device">Setări Mod Atac</string>
+    <string name="settings_usb_title">Lansare conectare USB</string>
+    <string name="settings_usb_desc">Butonul rulează va lansa atacul atunci când USB este conectat.</string>
+    <string name="settings_net_title">Lansare Socket Connect</string>
+    <string name="settings_net_desc">Butonul Rulează va lansa atacul atunci când Socket-ul rețelei este conectat.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Dezvoltator</string>
+    <string name="settings_version_title">Versiune</string>
+    <string name="settings_arch_title">Arhitectură</string>
+    <string name="settings_lic_title">Licenta</string>
+    <string name="settings_support">Suport</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">Faceți clic pentru a adăuga probleme sau cereri de caracteristici.</string>
+    <string name="settings_locale_title">Localizare</string>
+    <string name="settings_locale_desc">Contribuie la localizarea aplicației.</string>
+    <string name="release">Distribuție</string>
+    <string name="releaseNetHunter">Magazin NetHunter</string>
+    <string name="releaseGitHub">Lansare GitHub</string>
+    <string name="releaseTest">Lansare depanare</string>
+    <string name="releaseOthers">Lansare neacceptată</string>
+    <string name="btn_select">Selectare</string>
+    <string name="btn_cancel">Anulează</string>
+    <string name="btn_save">Salvează</string>
+    <string name="file_select">Selectaţi fişierul</string>
+    <string name="file_saved">salvat</string>
+    <string name="file_deleted">șterse</string>
+    <string name="file_name">Numele fișierului</string>
+    <string-array name="modes">
+        <item>Cablu USB</item>
+        <item>Socket de rețea</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Engleză americană</item>
+        <item>Turcă</item>
+        <item>Suedeză</item>
+        <item>Slovenian</item>
+        <item>Rusă</item>
+        <item>Portugheză</item>
+        <item>Norvegiană</item>
+        <item>Italiană</item>
+        <item>Croată</item>
+        <item>Marea Britanie engleză</item>
+        <item>Franceză</item>
+        <item>Finlandeză</item>
+        <item>Spaniolă</item>
+        <item>Daneză</item>
+        <item>Germană</item>
+        <item>Canadiană Franceză</item>
+        <item>Portugheză braziliană</item>
+        <item>Bielorusă</item>
+        <item>Maghiară</item>
+    </string-array>
+</resources>

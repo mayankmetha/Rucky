@@ -1,0 +1,22 @@
+<resources>
+    <array name="colors">
+        <item>@color/blue_grey_1</item>
+        <item>@color/brown_1</item>
+        <item>@color/deep_orange_1</item>
+        <item>@color/orange_1</item>
+        <item>@color/amber_1</item>
+        <item>@color/yellow_1</item>
+        <item>@color/lime_1</item>
+        <item>@color/light_green_1</item>
+        <item>@color/green_1</item>
+        <item>@color/teal_1</item>
+        <item>@color/cyan_1</item>
+        <item>@color/light_blue_1</item>
+        <item>@color/blue_1</item>
+        <item>@color/indigo_1</item>
+        <item>@color/deep_purple_1</item>
+        <item>@color/purple_1</item>
+        <item>@color/pink_1</item>
+        <item>@color/red_1</item>
+    </array>
+</resources>

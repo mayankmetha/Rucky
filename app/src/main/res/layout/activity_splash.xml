@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.Rucky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/border"
-    tools:context=".SplashActivity">
-
+    android:id="@+id/splashParentLayout"
+    tools:context=".activity.SplashActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/splashIcon">
+        android:id="@+id/splashIcon" >
 
         <ImageView
-            android:id="@+id/imageViewBG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/imageViewBG"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:contentDescription="@string/splashScreen"
             android:scaleX="1.0"
             android:scaleY="1.0"
             android:scrollbarAlwaysDrawHorizontalTrack="false"
-            android:scrollbarAlwaysDrawVerticalTrack="false" />
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:src="@drawable/splash_background" />
 
         <ImageView
-            android:id="@+id/imageViewFG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/imageViewFG"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:contentDescription="@string/splashScreen"
             android:scaleX="1.5"
@@ -35,20 +37,22 @@
             android:scrollbarAlwaysDrawHorizontalTrack="false"
             android:scrollbarAlwaysDrawVerticalTrack="false"
             app:srcCompat="@drawable/splash_foreground" />
+
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/splashTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/splashTextView"
         android:layout_centerInParent="true">
 
         <TextView
-            android:paddingTop="256sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/splashText"
+            android:paddingTop="256sp"
             android:text="@string/splashScreen"
-            android:textColor="@color/accent"
+            android:textColor="?attr/appColorAccent"
             android:textSize="32sp"
             android:textStyle="bold" />
 

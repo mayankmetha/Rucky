@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="unlock">Déverrouiller l\'app</string>
-    <string name="auth">Confirmer l\'authentification</string>
+    <!-- Splash screen -->
+    <string name="unlock">Déverrouiller l\'application</string>
+    <string name="auth">Confirm authentication</string>
+    <string name="update_check">Vérifier les mises à jour</string>
+    <string name="update_new">Nouvelle mise à jour disponible</string>
+    <!-- Init Screen -->
     <string name="init_next">SUIVANT</string>
     <string name="init_skip">PASSER</string>
+    <string name="init_agree">ACCEPTER</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Transformez votre appareil en caoutchouc !</string>
     <string name="slideTitle2">Câble USB</string>
     <string name="slideDesc2">Interface USB câblée pour lancer une attaque !</string>
-    <string name="slideTitle3">Raspberry Pi</string>
-    <string name="slideDesc3">Interface Wi-Fi pour lancer une attaque !</string>
+    <string name="slideTitle3">Socket réseau</string>
+    <string name="slideDesc3">Des interfaces de socket basées sur le Wi-Fi pour lancer des attaques via des outils externes pris en charge !</string>
+    <string name="slideTitle4">Clause de non-responsabilité</string>
+    <string name="slideDesc4">L\'utilisateur de l\'application est seul responsable des dommages causés. Aucune autre entité ne peut être tenue responsable des dommages causés par cette application ! Pratiquez de la prudence lors de l\'utilisation de l\'application et ne l\'utilisez pas pour causer des dommages aux autres !</string>
+    <string name="slideTitle5">Politique de confidentialité</string>
+    <string name="slideDesc5">Aucune donnée d\'aucune forme n\'est collectée, utilisée et vendue! Certaines autorisations qui pourraient soulever des problèmes de confidentialité ne sont demandées que pour le fonctionnement de certaines fonctionnalités de l\'application et ne sont pas destinées à collecter des données ! Votre vie privée est respectée !</string>
+    <string name="slideTitle6">Autorisation de l\'application</string>
+    <string name="slideDesc6">Veuillez accorder à l\'application l\'autorisation requise pour travailler!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Mise à jour ruqueuse</string>
+    <string name="update_version">Version </string>
+    <string name="update_changelog">Historique des modifications</string>
+    <string name="update_status">Mettre à jour le statut</string>
+    <string name="update_action">Télécharger &amp; Installer la mise à jour</string>
+    <string name="update_downloading">Téléchargement de la mise à jour</string>
+    <string name="install_update">Application de la mise à jour</string>
+    <!-- Editor screen -->
+    <string name="update">Mise à jour</string>
+    <string name="setting">Réglages</string>
+    <string name="codeHint">Tapez ou chargez les scripts de caoutchouc ici</string>
+    <string name="loadBtn">Charger</string>
+    <string name="saveBtn">Enregistrer</string>
+    <string name="delBtn">Supprimez</string>
+    <string name="runBtn">Executer</string>
+    <string name="confBtn">Configuration</string>
+    <string name="btn_continue">Continuer</string>
+    <string name="root_err">Accès Root requis pour une attaque par câble USB !</string>
+    <string name="kernel_err">"L'attaque par câble USB ne prend pas ce kernel en charge !"</string>
+    <string name="usb_err">Câble USB non connecté !</string>
+    <string name="net_err">Socket réseau non connecté !</string>
+    <!-- Config screen -->
+    <string name="config_activity">Réglages</string>
+    <string name="config_status_usb_on">USB connecté</string>
+    <string name="config_status_usb_off">USB déconnecté</string>
+    <string name="config_status_net_on">Socket réseau connecté</string>
+    <string name="config_status_net_off">Socket réseau déconnecté</string>
+    <string name="config_status_net_disabled">Socket réseau désactivé</string>
+    <string name="socket_address">Entrez l\'adresse IP et le port de la socket</string>
+    <!-- Setting screen -->
     <string name="setting_general">Généraux</string>
-    <string name="dark_theme_title">Mode Sombre</string>
-    <string name="dark_theme_summary">Ne conservera pas le raccourci de l\'écran d\'accueil.</string>
-    <string name="hide_icon_title">Masquer l\'icône du lanceur</string>
-    <string name="hide_icon_summary">Composez *#*#78259#*#* pour lancer.</string>
+    <string name="dark_theme_title">Mode Nuit</string>
+    <string name="dark_theme_summary">Définir le thème sombre</string>
+    <string name="accent_theme_title">Thème</string>
+    <string name="accent_theme_summary">Changer la couleur d\'accentuation</string>
+    <string name="hide_icon_title">Cacher/Désactiver l\'icône du lanceur</string>
+    <string name="hide_icon_summary">Composer *#*#78259#*#* pour démarrer. Sur Android 10, l\'icône sera désactivée, mais non cachée.</string>
     <string name="delete_dep_title">Désinstaller l\'application</string>
     <string name="delete_dep_summary">Nettoyer et désinstaller l\'application.</string>
     <string name="settings_sec_title">Sécurité Avancée</string>
@@ -22,8 +66,8 @@
     <string name="setting_device">Réglages du Mode Attaque</string>
     <string name="settings_usb_title">Lancement de la connexion USB</string>
     <string name="settings_usb_desc">Le bouton Exécuter lance une attaque lorsque l\'USB est connecté.</string>
-    <string name="settings_rpi_title">Lancement du Raspberry Pi Connect</string>
-    <string name="settings_rpi_desc">Le bouton Exécuter lancera une attaque lorsque le Raspberry Pi est connecté.</string>
+    <string name="settings_net_title">Lancement de Network Socket Connect</string>
+    <string name="settings_net_desc">Le bouton Exécuter lance une attaque lorsque la prise réseau est connectée.</string>
     <string name="setting_about">Infos</string>
     <string name="setting_developer_title">Développeur</string>
     <string name="settings_version_title">Version </string>
@@ -33,22 +77,22 @@
     <string name="settings_git_title">Problèmes GitHub</string>
     <string name="settings_git_desc">Cliquez pour ajouter des tickets ou une demande de fonctionnalité.</string>
     <string name="settings_locale_title">Traduction</string>
-    <string name="settings_locale_desc">Cliquez pour afficher les contributeurs de traduction.</string>
+    <string name="settings_locale_desc">Contribuer à la localisation de l\'application.</string>
     <string name="release">Distribution</string>
     <string name="releaseNetHunter">Boutique NetHunter</string>
     <string name="releaseGitHub">Version GitHub</string>
     <string name="releaseTest">Version de débogage</string>
     <string name="releaseOthers">Version non prise en charge</string>
-    <string name="setting_name">Réglages</string>
-    <string name="update_name">Mise à jour</string>
-    <string name="loadBtn">Charger</string>
-    <string name="saveBtn">Enregistrer</string>
-    <string name="delBtn">Supprimez</string>
-    <string name="runBtn">Executer</string>
-    <string name="codeHint">Tapez ou chargez les scripts de caoutchouc ici</string>
+    <string name="btn_select">Sélectionner</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_save">Enregistrer</string>
+    <string name="file_select">Choisir un fichier</string>
+    <string name="file_saved">enregistré</string>
+    <string name="file_deleted">supprimé</string>
+    <string name="file_name">Nom du fichier</string>
     <string-array name="modes">
-        <item>Câble USB (Root)</item>
-        <item>Raspberry Pi (Wi-Fi)</item>
+        <item>Câble USB</item>
+        <item>Socket réseau</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Anglais américain</item>
@@ -71,33 +115,4 @@
         <item>Biélorusse</item>
         <item>Hongrois</item>
     </string-array>
-    <string name="conn_title">Interface</string>
-    <string name="conn_usb_small">Connecté par USB</string>
-    <string name="conn_pi_small">Raspberry Pi Connecté</string>
-    <string name="conn_none">Déconnecté</string>
-    <string name="conn_1">Connecté</string>
-    <string name="conn_0">Déconnecté</string>
-    <string name="kernel_err">"L'attaque par câble USB ne prend pas ce kernel en charge !"</string>
-    <string name="update_corrupted">Fichier de mise à jour corrompu !</string>
-    <string name="update_verify">Vérification de mise à jour</string>
-    <string name="network_err">Veuillez vérifier votre connexion au réseau</string>
-    <string name="screen_on">Veuillez laisser l\'application ouverte jusqu\'au démarrage de l\'écran d\'installation</string>
-    <string name="update_exec">Mise à jour de l\'app</string>
-    <string name="update_no">Aucune mise à jour trouvée</string>
-    <string name="update_check">Vérifier les mises à jour</string>
-    <string name="update_available">Nouvelle mise à jour disponible. Voulez-vous mettre à jour maintenant ?</string>
-    <string name="pi_err">Raspberry Pi introuvable!</string>
-    <string name="pi_net_err">Échec de la connexion au Raspberry Pi !</string>
-    <string name="root_err">Accès Root requis pour une attaque par câble USB !</string>
-    <string name="usb_err">Câble USB non connecté !</string>
-    <string name="file_select">Choisir un fichier</string>
-    <string name="file_saved">enregistré</string>
-    <string name="file_deleted">supprimé</string>
-    <string name="file_name">Nom du fichier</string>
-    <string name="btn_save">Enregistrer</string>
-    <string name="btn_continue">Continuer</string>
-    <string name="btn_later">Réessayer plus tard</string>
-    <string name="btn_ok">Ok</string>
-    <string name="btn_cancel">Annuler</string>
-    <string name="btn_update">Télécharger et installer</string>
 </resources>

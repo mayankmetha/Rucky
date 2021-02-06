@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <string name="unlock">نرم‌افزارهای قفل شده</string>
+    <string name="auth">Confirm authentication</string>
+    <string name="update_check">Checking for update</string>
+    <string name="update_new">New update available</string>
+    <!-- Init Screen -->
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">AGREE</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
+    <string name="slideTitle2">USB Cable</string>
+    <string name="slideDesc2">USB wired interface for launching attack!</string>
+    <string name="slideTitle3">Network Socket</string>
+    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
+    <string name="slideTitle5">Privacy Policy</string>
+    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
+    <string name="slideTitle6">App Permission</string>
+    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Version</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Update Status</string>
+    <string name="update_action">Download &amp; Install Update</string>
+    <string name="update_downloading">Downloading Update</string>
+    <string name="install_update">Applying Update</string>
+    <!-- Editor screen -->
+    <string name="update">Update</string>
+    <string name="setting">Settings</string>
+    <string name="codeHint">Type or load rubber ducky scripts here</string>
+    <string name="loadBtn">Load</string>
+    <string name="saveBtn">Save</string>
+    <string name="delBtn">Delete</string>
+    <string name="runBtn">Run</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Continue</string>
+    <string name="root_err">Root Access Required For USB Cable Attack!</string>
+    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="usb_err">USB Cable Not Connected!</string>
+    <string name="net_err">Network Socket Not Connected!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Connected</string>
+    <string name="config_status_usb_off">USB Disconnected</string>
+    <string name="config_status_net_on">Network Socket Connected</string>
+    <string name="config_status_net_off">Network Socket Disconnected</string>
+    <string name="config_status_net_disabled">Network Socket Disabled</string>
+    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <!-- Setting screen -->
+    <string name="setting_general">General</string>
+    <string name="dark_theme_title">Night Mode</string>
+    <string name="dark_theme_summary">Set dark theme</string>
+    <string name="accent_theme_title">Theme</string>
+    <string name="accent_theme_summary">Change accent color</string>
+    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
+    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="delete_dep_title">Uninstall App</string>
+    <string name="delete_dep_summary">Clean up and uninstall app.</string>
+    <string name="settings_sec_title">Advance Security</string>
+    <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
+    <string name="setting_device">Attack Mode Settings</string>
+    <string name="settings_usb_title">USB Connect Launch</string>
+    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Developer</string>
+    <string name="settings_version_title">Version</string>
+    <string name="settings_arch_title">Architecture</string>
+    <string name="settings_lic_title">License</string>
+    <string name="settings_support">Support</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">Click to add issues or feature request.</string>
+    <string name="settings_locale_title">Localization</string>
+    <string name="settings_locale_desc">Contribute to app localization.</string>
+    <string name="release">Distribution</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Non Supported Release</string>
+    <string name="btn_select">Select</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_save">Save</string>
+    <string name="file_select">Select File</string>
+    <string name="file_saved">saved</string>
+    <string name="file_deleted">deleted</string>
+    <string name="file_name">File Name</string>
+    <string-array name="modes">
+        <item>USB Cable</item>
+        <item>Network Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turkish</item>
+        <item>Swedish</item>
+        <item>Slovenian</item>
+        <item>Russian</item>
+        <item>Portuguese</item>
+        <item>Norwegian</item>
+        <item>Italian</item>
+        <item>Croatian</item>
+        <item>United Kingdom English</item>
+        <item>French</item>
+        <item>Finnish</item>
+        <item>Spanish</item>
+        <item>Danish</item>
+        <item>German</item>
+        <item>Canadian French</item>
+        <item>Brazilian Portuguese</item>
+        <item>Belarusian</item>
+        <item>Hungarian</item>
+    </string-array>
+</resources>

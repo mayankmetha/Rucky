@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".InitActivity">
+    tools:context=".activity.InitActivity">
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutDots"/>
 
     <LinearLayout
         android:id="@+id/layoutDots"
@@ -36,9 +36,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:text="@string/init_next"
-        android:textColor="@color/accent"
-        tools:ignore="RelativeOverlap"
-        app:rippleColor="@color/accent" />
+        android:textColor="?attr/appColorAccent"
+        tools:ignore="RelativeOverlap" />
 
     <com.google.android.material.button.MaterialButton
         style="@style/InitButton"
@@ -48,8 +47,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:text="@string/init_skip"
-        android:textColor="@color/accent"
-        tools:ignore="RelativeOverlap"
-        app:rippleColor="@color/accent"/>
+        android:textColor="?attr/appColorAccent"
+        tools:ignore="RelativeOverlap" />
 
 </RelativeLayout>

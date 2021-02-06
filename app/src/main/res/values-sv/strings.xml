@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">Lås upp app</string>
+    <string name="auth">Bekräfta autentisering</string>
+    <string name="update_check">Söker efter uppdatering</string>
+    <string name="update_new">Ny uppdatering tillgänglig</string>
+    <!-- Init Screen -->
+    <string name="init_next">NÄSTA</string>
+    <string name="init_skip">SKICKA</string>
+    <string name="init_agree">AGREE</string>
+    <string name="init_start">HACK</string>
     <string name="slideDesc1">Förvandla enheten till en Rubber Ducky!</string>
+    <string name="slideTitle2">USB-kabel</string>
+    <string name="slideDesc2">USB-kabel gränssnitt för att starta attack!</string>
+    <string name="slideTitle3">Nätverksutgång</string>
+    <string name="slideDesc3">Wi-Fi-baserade uttag gränssnitt för att starta attack via externa verktyg som stöds!</string>
+    <string name="slideTitle4">Ansvarsfriskrivning</string>
+    <string name="slideDesc4">Användaren av appen är ensam ansvarig för de skador som orsakats. Ingen annan enhet kan hållas ansvarig för de skador som gjorts med hjälp av denna app! Öva på försiktighet när du använder appen och använd inte detta för att skada andra!</string>
+    <string name="slideTitle5">Integritetspolicy</string>
+    <string name="slideDesc5">Inga data i någon form samlas in, används och säljs! Vissa behörigheter som kan väcka integritetsproblem är bara ombedda att arbeta med vissa funktioner i appen och är inte att samla in data! Din integritet respekteras!</string>
+    <string name="slideTitle6">Behörighet för app</string>
+    <string name="slideDesc6">Vänligen ge appen behörighet att fungera!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Rucky Uppdatering</string>
+    <string name="update_version">Version</string>
+    <string name="update_changelog">Ändringslogg</string>
+    <string name="update_status">Uppdatera status</string>
+    <string name="update_action">Ladda ner &amp; Installera Uppdatering</string>
+    <string name="update_downloading">Laddar ner uppdatering</string>
+    <string name="install_update">Tillämpar uppdatering</string>
+    <!-- Editor screen -->
+    <string name="update">Uppdatera</string>
+    <string name="setting">Inställningar</string>
+    <string name="codeHint">Skriv eller ladda gummi anka skript här</string>
+    <string name="loadBtn">Ladda</string>
+    <string name="saveBtn">Spara</string>
+    <string name="delBtn">Radera</string>
+    <string name="runBtn">Kör</string>
+    <string name="confBtn">Konfiguration</string>
+    <string name="btn_continue">Fortsätt</string>
+    <string name="root_err">Rootåtkomst krävs för USB-kabelattack!</string>
+    <string name="kernel_err">"Kernel stöds inte för USB-kabelattack!"</string>
+    <string name="usb_err">USB-kabel ej ansluten!</string>
+    <string name="net_err">Nätverksutkoppling är ej ansluten!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaker</string>
+    <string name="config_status_usb_on">USB ansluten</string>
+    <string name="config_status_usb_off">USB frånkopplad</string>
+    <string name="config_status_net_on">Nätverksutgång ansluten</string>
+    <string name="config_status_net_off">Nätverksutgång frånkopplad</string>
+    <string name="config_status_net_disabled">Nätverksutgång inaktiverad</string>
+    <string name="socket_address">Ange Socket IP och Port Adress</string>
+    <!-- Setting screen -->
     <string name="setting_general">Allmänt</string>
-    <string name="dark_theme_title">Mörkt läge</string>
-    <string name="dark_theme_summary">Kommer inte att bevara startskärmen genväg.</string>
-    <string name="hide_icon_title">Dölj Launcher ikon</string>
-    <string name="hide_icon_summary">Slå *#*#78259#*#* för att starta.</string>
+    <string name="dark_theme_title">Natt läge</string>
+    <string name="dark_theme_summary">Ange mörkt tema</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Ändra accentfärg</string>
+    <string name="hide_icon_title">Dölj/inaktivera Launcher ikon</string>
+    <string name="hide_icon_summary">Slå *#*#78259#*#* för att starta. På Android 10 kommer ikonen att inaktiveras, men inte döljas.</string>
     <string name="delete_dep_title">Avinstallera appen</string>
     <string name="delete_dep_summary">Rensa och avinstallera appen.</string>
     <string name="settings_sec_title">Förskott Säkerhet</string>
@@ -13,8 +66,8 @@
     <string name="setting_device">Inställningar för Attackläge</string>
     <string name="settings_usb_title">Starta USB-anslutning</string>
     <string name="settings_usb_desc">Kör-knappen startar attacken när USB är ansluten.</string>
-    <string name="settings_rpi_title">Raspberry Pi Connect Launch</string>
-    <string name="settings_rpi_desc">Kör knappen startar attacken när Raspberry Pi är ansluten.</string>
+    <string name="settings_net_title">Starta nätverksutkoppling</string>
+    <string name="settings_net_desc">Kör-knappen startar attacken när Network Socket är anslutet.</string>
     <string name="setting_about">Information</string>
     <string name="setting_developer_title">Utvecklare</string>
     <string name="settings_version_title">Version</string>
@@ -24,17 +77,42 @@
     <string name="settings_git_title">GitHub-problem</string>
     <string name="settings_git_desc">Klicka för att lägga till problem eller funktionsförfrågan.</string>
     <string name="settings_locale_title">Lokalisering</string>
-    <string name="settings_locale_desc">Klicka för att visa lokaliseringsbidragsgivare.</string>
+    <string name="settings_locale_desc">Bidra till app-lokalisering.</string>
+    <string name="release">Fördelning</string>
     <string name="releaseNetHunter">NetHunters App Store</string>
     <string name="releaseGitHub">GitHub-släpp</string>
     <string name="releaseTest">Felsök Släpp</string>
     <string name="releaseOthers">Utgåva stöds ej</string>
-    <string name="setting_name">Inställningar</string>
-    <string name="update_name">Uppdatera</string>
-    <string name="loadBtn">Ladda</string>
-    <string name="saveBtn">Spara</string>
-    <string name="delBtn">Radera</string>
-    <string name="runBtn">Kör</string>
-    <string name="codeHint">Skriv eller ladda gummi anka skript här</string>
+    <string name="btn_select">Välj</string>
+    <string name="btn_cancel">Avbryt</string>
     <string name="btn_save">Spara</string>
+    <string name="file_select">Välj fil</string>
+    <string name="file_saved">sparad</string>
+    <string name="file_deleted">borttagen</string>
+    <string name="file_name">Filnamn</string>
+    <string-array name="modes">
+        <item>USB-kabel</item>
+        <item>Nätverksutgång</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikansk Engelska</item>
+        <item>Turkiska</item>
+        <item>Svenska</item>
+        <item>Slovenian</item>
+        <item>Ryska</item>
+        <item>Portugisiska</item>
+        <item>Norska</item>
+        <item>Italienska</item>
+        <item>Kroatiska</item>
+        <item>Storbritannien Engelska</item>
+        <item>Franska</item>
+        <item>Finska</item>
+        <item>Spanska</item>
+        <item>Danska</item>
+        <item>Tyska</item>
+        <item>Kanadensisk franska</item>
+        <item>Brasiliansk portugisiska</item>
+        <item>Vitryska</item>
+        <item>Ungerska</item>
+    </string-array>
 </resources>

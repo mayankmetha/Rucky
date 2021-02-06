@@ -1,15 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
+    <string name="unlock">Avaa Sovellus</string>
+    <string name="auth">Vahvista todennus</string>
+    <string name="update_check">Tarkistetaan päivitystä</string>
+    <string name="update_new">Uusi päivitys saatavilla</string>
+    <!-- Init Screen -->
+    <string name="init_next">SEURAAVA</string>
+    <string name="init_skip">OHITA</string>
+    <string name="init_agree">HYVÄKSYMINEN</string>
+    <string name="init_start">HACK</string>
     <string name="slideDesc1">Laita laite Rubber Duckylle.</string>
+    <string name="slideTitle2">USB Kaapeli</string>
+    <string name="slideDesc2">USB-langallinen käyttöliittymä hyökkäyksen käynnistämiseen!</string>
+    <string name="slideTitle3">Verkon Socket</string>
+    <string name="slideDesc3">Wi-Fi-pohjaiset pistorasiat hyökkäysten käynnistämiseksi tuettujen ulkoisten työkalujen avulla!</string>
+    <string name="slideTitle4">Vastuuvapauslauseke</string>
+    <string name="slideDesc4">Sovelluksen käyttäjä on yksin vastuussa aiheutuneista vahingoista. Mitään muuta tahoa ei voida pitää vastuussa tällä sovelluksella tehdyistä vahingoista! Noudata varovaisuutta sovellusta käytettäessä ja älä käytä tätä aiheuttaaksesi haittaa muille!</string>
+    <string name="slideTitle5">Yksityisyyden Suoja</string>
+    <string name="slideDesc5">Mitään tietoja mistään lomakkeesta ei kerätä, käytetä ja myydä! Joitakin käyttöoikeuksia, jotka voivat herättää yksityisyyttä koskevia huolenaiheita, pyydetään vain käsittelemään tiettyjä ominaisuuksia sovelluksessa ja ei kerätä tietoja! Yksityisyytesi on kunnioitettu!</string>
+    <string name="slideTitle6">Sovelluksen Käyttöoikeus</string>
+    <string name="slideDesc6">Anna sovellukselle tarvittava käyttöoikeus!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Rucky Päivitys</string>
+    <string name="update_version">Versio</string>
+    <string name="update_changelog">Muutosloki</string>
+    <string name="update_status">Päivitä Tila</string>
+    <string name="update_action">Lataa &amp; Asenna päivitys</string>
+    <string name="update_downloading">Ladataan Päivitystä</string>
+    <string name="install_update">Toteutetaan Päivitystä</string>
+    <!-- Editor screen -->
+    <string name="update">Päivitä</string>
+    <string name="setting">Asetukset</string>
+    <string name="codeHint">Kirjoita tai lataa kumiankkasankit tähän</string>
+    <string name="loadBtn">Lataa</string>
+    <string name="saveBtn">Tallenna</string>
+    <string name="delBtn">Poista</string>
+    <string name="runBtn">Juokse</string>
+    <string name="confBtn">Asetukset</string>
+    <string name="btn_continue">Jatka</string>
+    <string name="root_err">Root Access Vaaditaan USB Kaapeli Attack!</string>
+    <string name="kernel_err">"Kernel Ei Tueta USB Kaapeli Attack!"</string>
+    <string name="usb_err">USB-kaapeli Ei Yhdistetty!</string>
+    <string name="net_err">Verkkopeli Ei Yhdistetty!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tehosteet</string>
+    <string name="config_status_usb_on">Usb Yhdistetty</string>
+    <string name="config_status_usb_off">Usb Yhteys Katkaistu</string>
+    <string name="config_status_net_on">Verkon Socket Yhdistetty</string>
+    <string name="config_status_net_off">Verkkopeli Yhteys Katkaistu</string>
+    <string name="config_status_net_disabled">Network Socket Pois Käytöstä</string>
+    <string name="socket_address">Syötä Socket IP ja satamaosoite</string>
+    <!-- Setting screen -->
     <string name="setting_general">Yleistä</string>
-    <string name="dark_theme_title">Synkkä tila</string>
-    <string name="dark_theme_summary">Älä säilytä näytönoikotietä.</string>
-    <string name="hide_icon_title">Piilota aloitustoiminto Icon</string>
-    <string name="hide_icon_summary">Kaiva *#*#78259#*#* laukaisua varten.</string>
+    <string name="dark_theme_title">Yötila</string>
+    <string name="dark_theme_summary">Aseta tumma teema</string>
+    <string name="accent_theme_title">Teema</string>
+    <string name="accent_theme_summary">Muuta aksenttien väriä</string>
+    <string name="hide_icon_title">Piilota/Poista Käytöstä Käynnistinkuvake</string>
+    <string name="hide_icon_summary">Valitse *#*#78259#*#* käynnistääksesi. Android 10:ssä kuvake poistetaan käytöstä, mutta ei piilotettu.</string>
     <string name="delete_dep_title">Poista App-asennus</string>
     <string name="delete_dep_summary">Puhdista ja poista sovellus.</string>
     <string name="settings_sec_title">Ennakkosuojaus</string>
     <string name="settings_sec_desc">Ota komentotiedoston salaus ja näytön lukitus käyttöön.</string>
+    <string name="setting_device">Hyökkäystilan Asetukset</string>
+    <string name="settings_usb_title">Usb Connect Käynnistys</string>
+    <string name="settings_usb_desc">Suorita painike käynnistää hyökkäyksen, kun USB on kytketty.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Suorita painike käynnistää hyökkäyksen, kun Network Socket on yhdistetty.</string>
     <string name="setting_about">Tietoja</string>
     <string name="setting_developer_title">Kehittäjä</string>
     <string name="settings_version_title">Versio</string>
@@ -19,17 +77,42 @@
     <string name="settings_git_title">GitHub-ongelmat</string>
     <string name="settings_git_desc">Valitse Lisää kysymyksiä tai ominaisuuspyyntö.</string>
     <string name="settings_locale_title">Localisointi</string>
-    <string name="settings_locale_desc">Näkyviin tulee lokalisointitoiminto.</string>
+    <string name="settings_locale_desc">Osallistu sovelluksen lokalisointiin.</string>
+    <string name="release">Jakelu</string>
     <string name="releaseNetHunter">NetHunterin App-kauppa</string>
     <string name="releaseGitHub">GitHubin jakeluversio</string>
     <string name="releaseTest">Debugin vapautus</string>
     <string name="releaseOthers">Tuettu vapautus</string>
-    <string name="setting_name">Asetukset</string>
-    <string name="update_name">Päivitä</string>
-    <string name="loadBtn">Lataa</string>
-    <string name="saveBtn">Tallenna</string>
-    <string name="delBtn">Poista</string>
-    <string name="runBtn">Juokse</string>
-    <string name="codeHint">Kirjoita tai lataa kumiankkasankit tähän</string>
+    <string name="btn_select">Valitse</string>
+    <string name="btn_cancel">Peruuta</string>
     <string name="btn_save">Tallenna</string>
+    <string name="file_select">Valitse Tiedosto</string>
+    <string name="file_saved">tallennettu</string>
+    <string name="file_deleted">poistettu</string>
+    <string name="file_name">Tiedoston Nimi</string>
+    <string-array name="modes">
+        <item>USB Kaapeli</item>
+        <item>Verkon Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikkalainen Englanti</item>
+        <item>Turkki</item>
+        <item>Ruotsi</item>
+        <item>Slovenian</item>
+        <item>Venäjä</item>
+        <item>Portugali</item>
+        <item>Norja</item>
+        <item>Italia</item>
+        <item>Kroatia</item>
+        <item>Yhdistynyt Kuningaskunta Englanti</item>
+        <item>Ranska</item>
+        <item>Suomi</item>
+        <item>Espanja</item>
+        <item>Tanska</item>
+        <item>Saksa</item>
+        <item>Kanadalainen Ranska</item>
+        <item>Brasilian Portugali</item>
+        <item>Valkovenäjä</item>
+        <item>Unkari</item>
+    </string-array>
 </resources>

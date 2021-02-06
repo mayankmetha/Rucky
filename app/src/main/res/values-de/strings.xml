@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Splash screen -->
     <string name="unlock">App entsperren</string>
     <string name="auth">Authentifizierung bestätigen</string>
+    <string name="update_check">Updates werden gesucht</string>
+    <string name="update_new">Neues Update verfügbar</string>
+    <!-- Init Screen -->
     <string name="init_next">Weiter</string>
     <string name="init_skip">Überspringen</string>
+    <string name="init_agree">AGREN</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Verwandle dein Gerät zu einem Rubber Ducky!</string>
     <string name="slideTitle2">USB Kabel</string>
     <string name="slideDesc2">USB-Schnittstelle zum Starten des Angriffs!</string>
-    <string name="slideTitle3">Raspberry Pi</string>
-    <string name="slideDesc3">Wi-Fi basierte Benutzeroberfläche zum Starten des Angriff!</string>
+    <string name="slideTitle3">Netzwerk-Socket</string>
+    <string name="slideDesc3">Wi-Fi-basierte Socket-Schnittstellen zum Starten von Angriff über unterstützte externe Tools!</string>
+    <string name="slideTitle4">Haftungsausschluss</string>
+    <string name="slideDesc4">Der Nutzer der App ist allein für die entstandenen Schäden verantwortlich. Keine andere Person kann für die mit dieser App verursachten Schäden haftbar gemacht werden! Gehen Sie vorsichtig vor, wenn Sie die App verwenden und nutzen Sie dies nicht, um anderen Schaden zuzufügen!</string>
+    <string name="slideTitle5">Datenschutzerklärung</string>
+    <string name="slideDesc5">Es werden keine Daten von irgendeiner Form erhoben, verwendet und verkauft! Einige Berechtigungen, die Bedenken bezüglich des Datenschutzes wecken könnten, werden nur für das Funktionieren bestimmter Funktionen in der App angefordert und sollten keine Daten sammeln! Ihre Privatsphäre wird respektiert!</string>
+    <string name="slideTitle6">App-Berechtigung</string>
+    <string name="slideDesc6">Bitte erteilen Sie der App die erforderliche Berechtigung, um zu funktionieren!</string>
+    <!-- Update screen -->
+    <string name="update_activity">Ruckiges Update</string>
+    <string name="update_version">Version</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Status aktualisieren</string>
+    <string name="update_action">&amp; Installations-Update herunterladen</string>
+    <string name="update_downloading">Update wird heruntergeladen</string>
+    <string name="install_update">Update wird angewendet</string>
+    <!-- Editor screen -->
+    <string name="update">Aktualisieren</string>
+    <string name="setting">Einstellungen</string>
+    <string name="codeHint">Schreibe oder lade Rubber Ducky Skripte hier</string>
+    <string name="loadBtn">Laden</string>
+    <string name="saveBtn">Speichern</string>
+    <string name="delBtn">Löschen</string>
+    <string name="runBtn">Ausführen</string>
+    <string name="confBtn">Konfiguration</string>
+    <string name="btn_continue">Weiter</string>
+    <string name="root_err">Root-Rechte werden für USB Attacken benötigt!</string>
+    <string name="kernel_err">"Der Kernel wird nicht für USB Attacken unterstützt!"</string>
+    <string name="usb_err">USB-Kabel nicht verbunden!</string>
+    <string name="net_err">Netzwerk-Socket nicht verbunden!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB angeschlossen</string>
+    <string name="config_status_usb_off">USB-Verbindung getrennt</string>
+    <string name="config_status_net_on">Netzwerk-Socket verbunden</string>
+    <string name="config_status_net_off">Netzwerk-Socket getrennt</string>
+    <string name="config_status_net_disabled">Netzwerk-Socket deaktiviert</string>
+    <string name="socket_address">Socket-IP und Port eingeben</string>
+    <!-- Setting screen -->
     <string name="setting_general">Allgemein</string>
-    <string name="dark_theme_title">Dunkler Modus</string>
-    <string name="dark_theme_summary">Die Verknüpfung vom Homescreen wird hierbei entfernt.</string>
-    <string name="hide_icon_title">Launcher-Icon verstecken</string>
-    <string name="hide_icon_summary">Wähle *#*#78259#*#* zum starten.</string>
+    <string name="dark_theme_title">Nachtmodus</string>
+    <string name="dark_theme_summary">Dunkles Design setzen</string>
+    <string name="accent_theme_title">Thema</string>
+    <string name="accent_theme_summary">Akzentfarbe ändern</string>
+    <string name="hide_icon_title">Launcher-Icon ausblenden/deaktivieren</string>
+    <string name="hide_icon_summary">Wählen Sie *#*#78259#*#* um zu starten. Auf Android 10 wird das Symbol deaktiviert, aber nicht versteckt.</string>
     <string name="delete_dep_title">App deinstallieren</string>
     <string name="delete_dep_summary">Bereinigung und Deinstallation der App.</string>
     <string name="settings_sec_title">Erweiterte Sicherheit (Root)</string>
@@ -22,8 +66,8 @@
     <string name="setting_device">Angriffsmodus Einstellungen</string>
     <string name="settings_usb_title">USB Connect Start</string>
     <string name="settings_usb_desc">Die Schaltfläche \"Ausführen\" startet den Angriff, sobald USB verbunden ist.</string>
-    <string name="settings_rpi_title">Raspberry Pi Connect Start</string>
-    <string name="settings_rpi_desc">Die Schaltfläche \"Ausführen\" startet den Angriff, wenn ein Raspberry Pi verbunden ist.</string>
+    <string name="settings_net_title">Netzwerk Socket Connect Start</string>
+    <string name="settings_net_desc">Der Knopf \"Ausführen\" startet den Angriff, wenn Netzwerk-Socket verbunden ist.</string>
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">Entwickler</string>
     <string name="settings_version_title">Version</string>
@@ -33,22 +77,22 @@
     <string name="settings_git_title">GitHub Fehlermeldungen</string>
     <string name="settings_git_desc">Hier klicken, für Fehlermeldungen oder Verbesserungsvorschläge.</string>
     <string name="settings_locale_title">Lokalisierung</string>
-    <string name="settings_locale_desc">Klicke um Übersetzter zu sehen</string>
+    <string name="settings_locale_desc">Zur App-Lokalisierung beitragen.</string>
     <string name="release">Distribution</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub-Veröffentlichung</string>
     <string name="releaseTest">Debug-Veröffentlichung</string>
     <string name="releaseOthers">Nicht unterstützte Version</string>
-    <string name="setting_name">Einstellungen</string>
-    <string name="update_name">Aktualisieren</string>
-    <string name="loadBtn">Laden</string>
-    <string name="saveBtn">Speichern</string>
-    <string name="delBtn">Löschen</string>
-    <string name="runBtn">Ausführen</string>
-    <string name="codeHint">Schreibe oder lade Rubber Ducky Skripte hier</string>
+    <string name="btn_select">Auswählen</string>
+    <string name="btn_cancel">Abbrechen</string>
+    <string name="btn_save">Speichern</string>
+    <string name="file_select">Datei auswählen</string>
+    <string name="file_saved">Gespeichert</string>
+    <string name="file_deleted">Gelöscht</string>
+    <string name="file_name">Dateiname</string>
     <string-array name="modes">
-        <item>USB Kabel (root)</item>
-        <item>Raspberry Pi (Wi-Fi)</item>
+        <item>USB Kabel</item>
+        <item>Netzwerk-Socket</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Amerikanisches Englisch</item>
@@ -71,33 +115,4 @@
         <item>Weißrussisch</item>
         <item>Ungarisch</item>
     </string-array>
-    <string name="conn_title">Benutzeroberfläche</string>
-    <string name="conn_usb_small">USB verbunden</string>
-    <string name="conn_pi_small">Raspberry Pi verbunden</string>
-    <string name="conn_none">Verbindung getrennt</string>
-    <string name="conn_1">Verbunden</string>
-    <string name="conn_0">Verbindung getrennt</string>
-    <string name="kernel_err">"Der Kernel wird nicht für USB Attacken unterstützt!"</string>
-    <string name="update_corrupted">Aktualisierte Datei ist beschädigt!</string>
-    <string name="update_verify">Update wird geprüft</string>
-    <string name="network_err">Bitte überprüfen Sie die Netzwerkverbindung</string>
-    <string name="screen_on">Bitte lassen Sie die App offen, bis die Installationsanzeige gestartet wird</string>
-    <string name="update_exec">App aktualisieren</string>
-    <string name="update_no">Keine Aktualisierung gefunden</string>
-    <string name="update_check">Updates werden gesucht</string>
-    <string name="update_available">Ein neues Update ist verfügbar. Möchsten Sie jetzt aktualisieren?</string>
-    <string name="pi_err">Raspberry Pi kann nicht gefunden werden!</string>
-    <string name="pi_net_err">Die Verbindung zu dem Raspberry Pi ist fehlgeschlagen!</string>
-    <string name="root_err">Root-Rechte werden für USB Attacken benötigt!</string>
-    <string name="usb_err">USB-Kabel nicht verbunden!</string>
-    <string name="file_select">Datei auswählen</string>
-    <string name="file_saved">Gespeichert</string>
-    <string name="file_deleted">Gelöscht</string>
-    <string name="file_name">Dateiname</string>
-    <string name="btn_save">Speichern</string>
-    <string name="btn_continue">Weiter</string>
-    <string name="btn_later">Versuchen Sie es später noch einmal</string>
-    <string name="btn_ok">Okay</string>
-    <string name="btn_cancel">Abbrechen</string>
-    <string name="btn_update">Downloaden und installieren</string>
 </resources>
