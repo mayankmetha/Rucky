@@ -96,7 +96,8 @@ public class EditorActivity extends AppCompatActivity {
             getRoot();
         }
         setNotificationChannel();
-        updateInit();
+        if (config.getUpdateFlag())
+            updateInit();
         openSettings();
         ide();
     }
