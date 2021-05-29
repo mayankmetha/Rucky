@@ -18,32 +18,33 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 - [x] USB connection detection
 - [x] Run attack UI button
 - [x] Autolaunch attack on USB connect
-- [x] Autolaunch attack on Network socket connect  
+- [x] Autolaunch attack on network socket connect  
 - [x] Save scripts
 - [x] Load scripts
 - [x] Delete scripts
-- [x] Day/Night Theme
-- [x] Customize Accent Colours
-- [x] Launch app via Dialer
-- [x] Hide launcher app (Till Android 10)
+- [x] Day/Night theme
+- [x] Customize accent colours
+- [x] Launch app via dialer app
+- [x] Hide launcher app (till Android 10)
 - [x] Disable app launch via launcher (Android 11 onwards)
 - [x] Biometric support
-- [x] App lock Support
+- [x] App lock support
 - [x] Encrypt scripts on save
 - [x] Decrypt scripts on load
 - [x] Customize network socket address
 - [x] In-app update service (GitHub release only)
 - [x] Compactabile with Kali Linux NetHunter
 - [ ] ConfigFS auto configuration
-- [x] Multiple HID Languages support
+- [x] Multiple HID languages support
+- [ ] Customizable HID for additional language support
 - [x] Platform independent HID support
 - [x] Can attack virtually any system with USB HID support
-- [ ] USB HID Mouse support (awaiting Hak5 Rubber Duck spec to support)
-- [ ] Disable app level virtualization (Parallel app prevention)
-- [ ] App AntiTamper detection
+- [ ] USB HID mouse support (awaiting Hak5 Rubber Duck spec to support)
+- [ ] Disable app level virtualization (parallel app prevention)
+- [ ] App anti-tamper detection
 - [ ] Runtime process name masking
 - [ ] Memory dump prevention
-- [ ] AntiDebug Protection (Frida probe prevention)
+- [ ] Anti-debug protection (Frida probe prevention)
 - [ ] More feature addition on request
 
 ## Featuring Rucky
