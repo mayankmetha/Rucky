@@ -39,7 +39,12 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 - [x] Platform independent HID support
 - [x] Can attack virtually any system with USB HID support
 - [ ] USB HID Mouse support (awaiting Hak5 Rubber Duck spec to support)
-- [ ] More feature addition on request.
+- [ ] Disable app level virtualization (Parallel app prevention)
+- [ ] App AntiTamper detection
+- [ ] Runtime process name masking
+- [ ] Memory dump prevention
+- [ ] AntiDebug Protection (Frida probe prevention)
+- [ ] More feature addition on request
 
 ## Featuring Rucky
 - [Kali Linux 2019.3 Release](https://www.kali.org/blog/kali-linux-2019-3-release/)
