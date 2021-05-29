@@ -6,7 +6,39 @@
 [![Architecture](https://img.shields.io/badge/architecture-Independent-blueviolet)](https://github.com/mayankmetha/Rucky)
 [![Kernel](https://img.shields.io/badge/kernel-USB%20HID%20Patch%20Required-red)](https://github.com/mayankmetha/Rucky)
 
-A USB HID Rubber Ducky Script All-In-One tool.
+## Readme
+An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
+- Wired Mode: Needs a custom kernel with usb hid feature or a kernel with configfs to be enabled for this mode to be used.
+- Wireless: Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
+
+## Features
+- [x] USB HID (Root & custom kernel required)
+- [x] USB HID over network socket
+- [ ] USB HID over bluetooth
+- [x] USB connection detection
+- [x] Run attack UI button
+- [x] Autolaunch attack on USB connect
+- [x] Autolaunch attack on Network socket connect  
+- [x] Save scripts
+- [x] Load scripts
+- [x] Delete scripts
+- [x] Day/Night Theme
+- [x] Customize Accent Colours
+- [x] Launch app via Dialer
+- [x] Hide launcher app (Till Android 10)
+- [x] Disable app launch via launcher (Android 11 onwards)
+- [x] Biometric support
+- [x] App lock Support
+- [x] Encrypt scripts on save
+- [x] Decrypt scripts on load
+- [x] Customize network socket address
+- [x] In-app update service (GitHub release only)
+- [x] Compactabile with Kali Linux NetHunter
+- [ ] ConfigFS auto configuration
+- [x] Multiple HID Languages support
+- [x] Platform independent HID support
+- [x] Can attack virtually any system with USB HID support
+- [ ] USB HID Mouse support (awaiting Hak5 Rubber Duck spec to support)
 
 ## Legacy Work
 [![RPi](https://img.shields.io/badge/Raspberry%20Pi-0%20W-maroon)](https://github.com/mayankmetha/Rucky-Ext-RPi)
