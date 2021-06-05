@@ -5,6 +5,9 @@
         <item name="appColorAccentLight">@color/blue_grey_0</item>
         <item name="appColorAccent">@color/blue_grey_1</item>
         <item name="appColorAccentDark">@color/blue_grey_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_blue_grey_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_blue_grey_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_blue_grey_2</item>
     </style>
 
     <!-- brown -->
@@ -12,6 +15,9 @@
         <item name="appColorAccentLight">@color/brown_0</item>
         <item name="appColorAccent">@color/brown_1</item>
         <item name="appColorAccentDark">@color/brown_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_brown_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_brown_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_brown_2</item>
     </style>
 
     <!-- deep_orange -->
@@ -19,6 +25,9 @@
         <item name="appColorAccentLight">@color/deep_orange_0</item>
         <item name="appColorAccent">@color/deep_orange_1</item>
         <item name="appColorAccentDark">@color/deep_orange_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_deep_orange_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_deep_orange_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_deep_orange_2</item>
     </style>
 
     <!-- orange -->
@@ -26,6 +35,9 @@
         <item name="appColorAccentLight">@color/orange_0</item>
         <item name="appColorAccent">@color/orange_1</item>
         <item name="appColorAccentDark">@color/orange_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_orange_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_orange_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_orange_2</item>
     </style>
 
     <!-- amber -->
@@ -33,6 +45,9 @@
         <item name="appColorAccentLight">@color/amber_0</item>
         <item name="appColorAccent">@color/amber_1</item>
         <item name="appColorAccentDark">@color/amber_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_amber_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_amber_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_amber_2</item>
     </style>
 
     <!-- yellow -->
@@ -40,6 +55,9 @@
         <item name="appColorAccentLight">@color/yellow_0</item>
         <item name="appColorAccent">@color/yellow_1</item>
         <item name="appColorAccentDark">@color/yellow_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_yellow_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_yellow_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_yellow_2</item>
     </style>
 
     <!-- lime -->
@@ -47,6 +65,9 @@
         <item name="appColorAccentLight">@color/lime_0</item>
         <item name="appColorAccent">@color/lime_1</item>
         <item name="appColorAccentDark">@color/lime_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_lime_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_lime_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_lime_2</item>
     </style>
 
     <!-- light_green -->
@@ -54,6 +75,9 @@
         <item name="appColorAccentLight">@color/light_green_0</item>
         <item name="appColorAccent">@color/light_green_1</item>
         <item name="appColorAccentDark">@color/light_green_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_light_green_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_light_green_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_light_green_2</item>
     </style>
 
     <!-- green -->
@@ -61,6 +85,9 @@
         <item name="appColorAccentLight">@color/green_0</item>
         <item name="appColorAccent">@color/green_1</item>
         <item name="appColorAccentDark">@color/green_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_green_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_green_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_green_2</item>
     </style>
 
     <!-- teal -->
@@ -68,6 +95,9 @@
         <item name="appColorAccentLight">@color/teal_0</item>
         <item name="appColorAccent">@color/teal_1</item>
         <item name="appColorAccentDark">@color/teal_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_teal_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_teal_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_teal_2</item>
     </style>
 
     <!-- cyan -->
@@ -75,6 +105,9 @@
         <item name="appColorAccentLight">@color/cyan_0</item>
         <item name="appColorAccent">@color/cyan_1</item>
         <item name="appColorAccentDark">@color/cyan_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_cyan_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_cyan_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_cyan_2</item>
     </style>
 
     <!-- light_blue -->
@@ -82,6 +115,9 @@
         <item name="appColorAccentLight">@color/light_blue_0</item>
         <item name="appColorAccent">@color/light_blue_1</item>
         <item name="appColorAccentDark">@color/light_blue_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_light_blue_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_light_blue_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_light_blue_2</item>
     </style>
 
     <!-- blue -->
@@ -89,6 +125,9 @@
         <item name="appColorAccentLight">@color/blue_0</item>
         <item name="appColorAccent">@color/blue_1</item>
         <item name="appColorAccentDark">@color/blue_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_blue_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_blue_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_blue_2</item>
     </style>
 
     <!-- indigo -->
@@ -96,6 +135,9 @@
         <item name="appColorAccentLight">@color/indigo_0</item>
         <item name="appColorAccent">@color/indigo_1</item>
         <item name="appColorAccentDark">@color/indigo_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_indigo_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_indigo_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_indigo_2</item>
     </style>
 
     <!-- deep_purple -->
@@ -103,6 +145,9 @@
         <item name="appColorAccentLight">@color/deep_purple_0</item>
         <item name="appColorAccent">@color/deep_purple_1</item>
         <item name="appColorAccentDark">@color/deep_purple_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_deep_purple_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_deep_purple_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_deep_purple_2</item>
     </style>
 
     <!-- purple -->
@@ -110,6 +155,9 @@
         <item name="appColorAccentLight">@color/purple_0</item>
         <item name="appColorAccent">@color/purple_1</item>
         <item name="appColorAccentDark">@color/purple_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_purple_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_purple_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_purple_2</item>
     </style>
 
     <!-- pink -->
@@ -117,6 +165,9 @@
         <item name="appColorAccentLight">@color/pink_0</item>
         <item name="appColorAccent">@color/pink_1</item>
         <item name="appColorAccentDark">@color/pink_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_pink_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_pink_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_pink_2</item>
     </style>
 
     <!-- red -->
@@ -124,6 +175,9 @@
         <item name="appColorAccentLight">@color/red_0</item>
         <item name="appColorAccent">@color/red_1</item>
         <item name="appColorAccentDark">@color/red_2</item>
+        <item name="appColorAccentLightTransparent">@color/transparent_red_0</item>
+        <item name="appColorAccentTransparent">@color/transparent_red_1</item>
+        <item name="appColorAccentDarkTransparent">@color/transparent_red_2</item>
     </style>
 
     <!-- Base application theme. -->
@@ -209,7 +263,6 @@
         <item name="android:divider">@drawable/divider</item>
         <item name="android:dividerHeight">1dp</item>
         <item name="colorControlHighlight">?attr/appColorAccentLight</item>
-        <item name="android:foreground">@drawable/ripple</item>
     </style>
 
     <style name="EditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
@@ -224,5 +277,14 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:foreground">@drawable/ripple</item>
     </style>
+
+    <style name="Theme.Rucky.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Rucky.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Rucky.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

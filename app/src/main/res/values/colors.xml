@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!-- custom -->
     <color name="icon">#FFFF5722</color>
@@ -13,96 +13,153 @@
     <color name="grey_0">#EEEEEE</color>
     <color name="grey_1">#9E9E9E</color>
     <color name="grey_2">#616161</color>
+    <color name="transparent_grey_0">#88EEEEEE</color>
+    <color name="transparent_grey_1">#889E9E9E</color>
+    <color name="transparent_grey_2">#88616161</color>
 
     <!-- blue_grey -->
     <color name="blue_grey_0">#B0BEC5</color>
     <color name="blue_grey_1">#607D8B</color>
     <color name="blue_grey_2">#455A64</color>
+    <color name="transparent_blue_grey_0">#88B0BEC5</color>
+    <color name="transparent_blue_grey_1">#88607D8B</color>
+    <color name="transparent_blue_grey_2">#88455A64</color>
 
     <!-- brown -->
     <color name="brown_0">#BCAAA4</color>
     <color name="brown_1">#795548</color>
     <color name="brown_2">#5D4037</color>
+    <color name="transparent_brown_0">#88BCAAA4</color>
+    <color name="transparent_brown_1">#88795548</color>
+    <color name="transparent_brown_2">#885D4037</color>
 
     <!-- deep_orange -->
     <color name="deep_orange_0">#FFAB91</color>
     <color name="deep_orange_1">#FF5722</color>
     <color name="deep_orange_2">#E64A19</color>
+    <color name="transparent_deep_orange_0">#88FFAB91</color>
+    <color name="transparent_deep_orange_1">#88FF5722</color>
+    <color name="transparent_deep_orange_2">#88E64A19</color>
 
     <!-- orange -->
     <color name="orange_0">#FFCC80</color>
     <color name="orange_1">#FF9800</color>
     <color name="orange_2">#F57C00</color>
+    <color name="transparent_orange_0">#88FFCC80</color>
+    <color name="transparent_orange_1">#88FF9800</color>
+    <color name="transparent_orange_2">#88F57C00</color>
 
     <!-- amber -->
     <color name="amber_0">#FFE082</color>
     <color name="amber_1">#FFC107</color>
     <color name="amber_2">#FFA000</color>
+    <color name="transparent_amber_0">#88FFE082</color>
+    <color name="transparent_amber_1">#88FFC107</color>
+    <color name="transparent_amber_2">#88FFA000</color>
 
     <!-- yellow -->
     <color name="yellow_0">#FFF59D</color>
     <color name="yellow_1">#FFEB3B</color>
     <color name="yellow_2">#FBC02D</color>
+    <color name="transparent_yellow_0">#88FFF59D</color>
+    <color name="transparent_yellow_1">#88FFEB3B</color>
+    <color name="transparent_yellow_2">#88FBC02D</color>
 
     <!-- lime -->
     <color name="lime_0">#EEFF41</color>
     <color name="lime_1">#CDDC39</color>
     <color name="lime_2">#AEEA00</color>
+    <color name="transparent_lime_0">#88EEFF41</color>
+    <color name="transparent_lime_1">#88CDDC39</color>
+    <color name="transparent_lime_2">#88AEEA00</color>
 
     <!-- light_green -->
     <color name="light_green_0">#B2FF59</color>
     <color name="light_green_1">#8BC34A</color>
     <color name="light_green_2">#689F38</color>
+    <color name="transparent_light_green_0">#88B2FF59</color>
+    <color name="transparent_light_green_1">#888BC34A</color>
+    <color name="transparent_light_green_2">#88689F38</color>
 
     <!-- green -->
     <color name="green_0">#A5D6A7</color>
     <color name="green_1">#4CAF50</color>
     <color name="green_2">#388E3C</color>
+    <color name="transparent_green_0">#88A5D6A7</color>
+    <color name="transparent_green_1">#884CAF50</color>
+    <color name="transparent_green_2">#88388E3C</color>
 
     <!-- teal -->
     <color name="teal_0">#80CBC4</color>
     <color name="teal_1">#009688</color>
     <color name="teal_2">#00796B</color>
+    <color name="transparent_teal_0">#8880CBC4</color>
+    <color name="transparent_teal_1">#88009688</color>
+    <color name="transparent_teal_2">#8800796B</color>
 
     <!-- cyan -->
     <color name="cyan_0">#80DEEA</color>
     <color name="cyan_1">#00BCD4</color>
     <color name="cyan_2">#0097A7</color>
+    <color name="transparent_cyan_0">#8880DEEA</color>
+    <color name="transparent_cyan_1">#8800BCD4</color>
+    <color name="transparent_cyan_2">#880097A7</color>
 
     <!-- light_blue -->
     <color name="light_blue_0">#81D4FA</color>
     <color name="light_blue_1">#03A9F4</color>
     <color name="light_blue_2">#0288D1</color>
+    <color name="transparent_light_blue_0">#8881D4FA</color>
+    <color name="transparent_light_blue_1">#8803A9F4</color>
+    <color name="transparent_light_blue_2">#880288D1</color>
 
     <!-- blue -->
     <color name="blue_0">#90CAF9</color>
     <color name="blue_1">#2196F3</color>
     <color name="blue_2">#1976D2</color>
+    <color name="transparent_blue_0">#8890CAF9</color>
+    <color name="transparent_blue_1">#882196F3</color>
+    <color name="transparent_blue_2">#881976D2</color>
 
     <!-- indigo -->
     <color name="indigo_0">#9FA8DA</color>
     <color name="indigo_1">#3F51B5</color>
     <color name="indigo_2">#303F9F</color>
+    <color name="transparent_indigo_0">#889FA8DA</color>
+    <color name="transparent_indigo_1">#883F51B5</color>
+    <color name="transparent_indigo_2">#88303F9F</color>
 
     <!-- deep_purple -->
     <color name="deep_purple_0">#B39DDB</color>
     <color name="deep_purple_1">#673AB7</color>
     <color name="deep_purple_2">#512DA8</color>
+    <color name="transparent_deep_purple_0">#88B39DDB</color>
+    <color name="transparent_deep_purple_1">#88673AB7</color>
+    <color name="transparent_deep_purple_2">#88512DA8</color>
 
     <!-- purple -->
     <color name="purple_0">#CE93D8</color>
     <color name="purple_1">#9C27B0</color>
     <color name="purple_2">#7B1FA2</color>
+    <color name="transparent_purple_0">#88CE93D8</color>
+    <color name="transparent_purple_1">#889C27B0</color>
+    <color name="transparent_purple_2">#887B1FA2</color>
 
     <!-- pink -->
     <color name="pink_0">#F48FB1</color>
     <color name="pink_1">#E91E63</color>
     <color name="pink_2">#C2185B</color>
+    <color name="transparent_pink_0">#88F48FB1</color>
+    <color name="transparent_pink_1">#88E91E63</color>
+    <color name="transparent_pink_2">#88C2185B</color>
 
     <!-- red -->
     <color name="red_0">#EF9A9A</color>
     <color name="red_1">#F44336</color>
     <color name="red_2">#D32F2F</color>
+    <color name="transparent_red_0">#88EF9A9A</color>
+    <color name="transparent_red_1">#88F44336</color>
+    <color name="transparent_red_2">#88D32F2F</color>
 
     <!-- day/night -->
     <color name="background">@color/white</color>

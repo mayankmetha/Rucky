@@ -3,4 +3,7 @@
     <attr name="appColorAccent" format="reference|color" />
     <attr name="appColorAccentLight" format="reference|color" />
     <attr name="appColorAccentDark" format="reference|color" />
+    <attr name="appColorAccentTransparent" format="reference|color" />
+    <attr name="appColorAccentLightTransparent" format="reference|color" />
+    <attr name="appColorAccentDarkTransparent" format="reference|color" />
 </resources>
