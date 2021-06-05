@@ -41,8 +41,6 @@
     <string name="btn_continue">Fortsett</string>
     <string name="root_err">Rottilgang kreves for USB-kabelangrep!</string>
     <string name="kernel_err">"Kjernen er ikke støttet for USB-kabelangrep!"</string>
-    <string name="usb_err">USB-kabelen er ikke tilkoblet!</string>
-    <string name="net_err">Nettverkskontakt ikke tilkoblet!</string>
     <!-- Config screen -->
     <string name="config_activity">Tilpasninger</string>
     <string name="config_status_usb_on">USB tilkoblet</string>

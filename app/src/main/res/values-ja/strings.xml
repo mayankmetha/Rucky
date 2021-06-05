@@ -41,8 +41,6 @@
     <string name="btn_continue">続行</string>
     <string name="root_err">USBケーブル攻撃にはRootアクセスが必要です</string>
     <string name="kernel_err">"カーネルがUSBケーブル攻撃をサポートしていません"</string>
-    <string name="usb_err">USB ケーブルが接続されていません</string>
-    <string name="net_err">ネットワークソケットが接続されていません！</string>
     <!-- Config screen -->
     <string name="config_activity">微調整</string>
     <string name="config_status_usb_on">USB接続</string>

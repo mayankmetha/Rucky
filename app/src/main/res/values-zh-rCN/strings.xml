@@ -41,8 +41,6 @@
     <string name="btn_continue">继续</string>
     <string name="root_err">USB 电缆攻击需要超级用户权限！</string>
     <string name="kernel_err">"内核不支持USB电缆攻击！"</string>
-    <string name="usb_err">USB 电缆未连接！</string>
-    <string name="net_err">网络套接字未连接！</string>
     <!-- Config screen -->
     <string name="config_activity">调整</string>
     <string name="config_status_usb_on">USB 已连接</string>

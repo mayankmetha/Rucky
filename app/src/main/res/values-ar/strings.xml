@@ -41,8 +41,6 @@
     <string name="btn_continue">متابعة</string>
     <string name="root_err">مطلوب وصول الجذر لهجوم كابل USB!</string>
     <string name="kernel_err">"قناة غير مدعومة لهجوم كابل USB!"</string>
-    <string name="usb_err">كابل USB غير متصل!</string>
-    <string name="net_err">مقبس الشبكة غير متصل!</string>
     <!-- Config screen -->
     <string name="config_activity">التعديلات</string>
     <string name="config_status_usb_on">USB متصل</string>

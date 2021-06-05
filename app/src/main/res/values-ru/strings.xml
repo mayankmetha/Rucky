@@ -41,8 +41,6 @@
     <string name="btn_continue">Продолжить</string>
     <string name="root_err">Требуется Root доступ для атаки USB-кабелей!</string>
     <string name="kernel_err">"Ядро не поддерживается для атаки USB-кабеля!"</string>
-    <string name="usb_err">USB-кабель не подключен!</string>
-    <string name="net_err">Сетевой сокет не подключен!</string>
     <!-- Config screen -->
     <string name="config_activity">Настройки</string>
     <string name="config_status_usb_on">USB подключен</string>

@@ -41,8 +41,6 @@
     <string name="btn_continue">Pokračovať</string>
     <string name="root_err">Pre útok cez USB kábel sa vyžaduje prístup roota!</string>
     <string name="kernel_err">"Kernel nepodporuje útok cez USB kábel!"</string>
-    <string name="usb_err">USB kábel nie je pripojený!</string>
-    <string name="net_err">Network Socket Not Connected!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Connected</string>

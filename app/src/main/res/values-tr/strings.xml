@@ -41,8 +41,6 @@
     <string name="btn_continue">Devam</string>
     <string name="root_err">USB Kablo Saldırısı Için Kök Erişim Gerekiyor!</string>
     <string name="kernel_err">"USB Kablosu Saldırısı İçin Çekirdek Desteklenmiyor!"</string>
-    <string name="usb_err">USB Kablosu Bağlı Değil!</string>
-    <string name="net_err">Network Socket Not Connected!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Connected</string>

@@ -41,8 +41,6 @@
     <string name="btn_continue">ᱞᱟᱦᱟ</string>
     <string name="root_err">USB ᱠᱮᱵᱟᱹᱞ ᱟᱠᱨᱚᱢᱚᱬ ᱠᱟᱹᱜᱤᱫ ᱨᱩᱩᱴ ᱚᱫᱮᱨ ᱫᱚᱨᱠᱟᱨ!</string>
     <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
-    <string name="usb_err">USB ᱠᱮᱵᱟᱹᱞ ᱵᱟᱝ ᱡᱩᱲᱟᱹᱣ ᱟᱠᱟᱱᱟ!</string>
-    <string name="net_err">Network Socket Not Connected!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Connected</string>

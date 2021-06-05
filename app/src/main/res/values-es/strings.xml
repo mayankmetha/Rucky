@@ -41,8 +41,6 @@
     <string name="btn_continue">Continuar</string>
     <string name="root_err">¡Acceso root requerido para el ataque por cable USB!</string>
     <string name="kernel_err">"Kernel no soportado para el ataque por cable USB!"</string>
-    <string name="usb_err">Cable USB no conectado!</string>
-    <string name="net_err">¡Conector de red no conectado!</string>
     <!-- Config screen -->
     <string name="config_activity">Ajustes</string>
     <string name="config_status_usb_on">USB conectado</string>

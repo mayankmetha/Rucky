@@ -41,8 +41,6 @@
     <string name="btn_continue">Lanjut</string>
     <string name="root_err">Root Access Required For USB Cable Attack!</string>
     <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
-    <string name="usb_err">USB Cable Not Connected!</string>
-    <string name="net_err">Network Socket Not Connected!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Connected</string>

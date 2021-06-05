@@ -41,8 +41,6 @@
     <string name="btn_continue">Weiter</string>
     <string name="root_err">Root-Rechte werden für USB Attacken benötigt!</string>
     <string name="kernel_err">"Der Kernel wird nicht für USB Attacken unterstützt!"</string>
-    <string name="usb_err">USB-Kabel nicht verbunden!</string>
-    <string name="net_err">Netzwerk-Socket nicht verbunden!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB angeschlossen</string>

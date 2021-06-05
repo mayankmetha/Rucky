@@ -41,8 +41,6 @@
     <string name="btn_continue">Continuă</string>
     <string name="root_err">Acces Root necesar pentru atac prin cablu USB!</string>
     <string name="kernel_err">"Kernel-ul nu este acceptat pentru atacul prin cablu USB!"</string>
-    <string name="usb_err">USB Cablu nu este conectat!</string>
-    <string name="net_err">Soclul de rețea nu este conectat!</string>
     <!-- Config screen -->
     <string name="config_activity">Țesături</string>
     <string name="config_status_usb_on">Conectat USB</string>

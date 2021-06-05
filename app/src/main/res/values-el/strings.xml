@@ -41,8 +41,6 @@
     <string name="btn_continue">Συνέχεια</string>
     <string name="root_err">Root Πρόσβαση Απαιτείται Για Επίθεση Καλώδιο Usb!</string>
     <string name="kernel_err">"Πυρήνας Δεν Υποστηρίζεται Για Επίθεση Καλώδιο Usb!"</string>
-    <string name="usb_err">Το Καλώδιο Usb Δεν Συνδέθηκε!</string>
-    <string name="net_err">Η Υποδοχή Δικτύου Δεν Συνδέθηκε!</string>
     <!-- Config screen -->
     <string name="config_activity">Βελτιώσεις</string>
     <string name="config_status_usb_on">USB Συνδεδεμένο</string>

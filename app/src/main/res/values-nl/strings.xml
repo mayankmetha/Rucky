@@ -41,8 +41,6 @@
     <string name="btn_continue">Doorgaan</string>
     <string name="root_err">Roottoegang vereist voor USB-kabelaanval!</string>
     <string name="kernel_err">"Kernel niet ondersteund voor USB-kabelaanval!"</string>
-    <string name="usb_err">USB-kabel niet aangesloten!</string>
-    <string name="net_err">Netwerksokken niet verbonden!</string>
     <!-- Config screen -->
     <string name="config_activity">Aanpassingen</string>
     <string name="config_status_usb_on">USB aangesloten</string>

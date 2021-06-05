@@ -448,25 +448,15 @@ public class EditorActivity extends AppCompatActivity {
                 if(config.getUSB() && !config.getUSBStatus()) {
                     fetchCommands(language, scripts);
                 } else {
-                    if(config.getUSBStatus()) {
-                        try {
-                            fetchCommands(language, scripts);
-                            for(int i = 0; i < cmds.size(); i++) {
-                                dos.writeBytes(cmds.get(i));
-                                dos.flush();
-                            }
-                            cmds.clear();
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                    try {
+                        fetchCommands(language, scripts);
+                        for(int i = 0; i < cmds.size(); i++) {
+                            dos.writeBytes(cmds.get(i));
+                            dos.flush();
                         }
-                    } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-                        builder.setTitle(getResources().getString(R.string.usb_err));
-                        builder.setCancelable(false);
-                        builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
-                        AlertDialog pi = builder.create();
-                        Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                        pi.show();
+                        cmds.clear();
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 }
             } else {
@@ -484,35 +474,25 @@ public class EditorActivity extends AppCompatActivity {
             if (config.getNet() && !config.getNetworkStatus()) {
                 fetchCommands(language, scripts);
             } else {
-                if (config.getNetworkStatus()) {
-                    fetchCommands(language, scripts);
-                    new Thread(() -> {
-                        String ip = config.getNetworkAddress().substring(0,config.getNetworkAddress().indexOf(":"));
-                        int port = Integer.parseInt(config.getNetworkAddress().substring(config.getNetworkAddress().indexOf(":")+1));
-                        try {
-                            Socket socket = new Socket(ip, port);
-                            PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
-                            for (int i = 0; i < cmds.size(); i++) {
-                                if (socket.isConnected()) {
-                                    out.print(cmds.get(i));
-                                }
+                fetchCommands(language, scripts);
+                new Thread(() -> {
+                    String ip = config.getNetworkAddress().substring(0,config.getNetworkAddress().indexOf(":"));
+                    int port = Integer.parseInt(config.getNetworkAddress().substring(config.getNetworkAddress().indexOf(":")+1));
+                    try {
+                        Socket socket = new Socket(ip, port);
+                        PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
+                        for (int i = 0; i < cmds.size(); i++) {
+                            if (socket.isConnected()) {
+                                out.print(cmds.get(i));
                             }
-                            out.close();
-                            socket.close();
-                        } catch (Exception e) {
-                            e.printStackTrace();
                         }
-                        cmds.clear();
-                    }).start();
-                } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-                    builder.setTitle(getResources().getString(R.string.net_err));
-                    builder.setCancelable(false);
-                    builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
-                    AlertDialog pi = builder.create();
-                    Objects.requireNonNull(pi.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                    pi.show();
-                }
+                        out.close();
+                        socket.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    cmds.clear();
+                }).start();
             }
         }
     }

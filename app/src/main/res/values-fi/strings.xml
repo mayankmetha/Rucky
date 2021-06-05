@@ -41,8 +41,6 @@
     <string name="btn_continue">Jatka</string>
     <string name="root_err">Root Access Vaaditaan USB Kaapeli Attack!</string>
     <string name="kernel_err">"Kernel Ei Tueta USB Kaapeli Attack!"</string>
-    <string name="usb_err">USB-kaapeli Ei Yhdistetty!</string>
-    <string name="net_err">Verkkopeli Ei Yhdistetty!</string>
     <!-- Config screen -->
     <string name="config_activity">Tehosteet</string>
     <string name="config_status_usb_on">Usb Yhdistetty</string>
