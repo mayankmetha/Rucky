@@ -177,7 +177,7 @@ public class SplashActivity extends AppCompatActivity {
         FrameLayout l2= findViewById(R.id.splashTextView);
         i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
-        new Handler().postDelayed(this::launchNext, 5000);
+        new Handler().postDelayed(this::launchNext, 3000);
     }
 
     private void getReleaseSigningHash() {
