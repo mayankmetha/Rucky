@@ -1,5 +1,6 @@
 package com.mayank.rucky.service;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
@@ -31,6 +32,7 @@ public class SocketHeartbeatService extends Service {
         return null;
     }
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     @Override
     public void onCreate() {
         super.onCreate();

@@ -138,6 +138,7 @@ public class EditorActivity extends AppCompatActivity {
         updateNotification(this);
     }
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     public static void buildNotification(Context context, String text) {
         Intent sIntent = new Intent(context, SplashActivity.class);
         sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -195,7 +196,7 @@ public class EditorActivity extends AppCompatActivity {
         if (config.getUpdateFlag() && SplashActivity.newVersion > SplashActivity.currentVersion) {
             Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
             updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
                     .setContentTitle(getResources().getString(R.string.update_new)+" Version: "+ SplashActivity.newVersion)
                     .setSmallIcon(R.drawable.ic_notification)
@@ -252,8 +253,9 @@ public class EditorActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == 0 && grantResults.length > 0 && permissions.length==grantResults.length) {
-            for (int i = 0; i < permissions.length; i++){
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 0 && grantResults.length > 0 && permissions.length == grantResults.length) {
+            for (int i = 0; i < permissions.length; i++) {
                 if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
                     requestPermissions();
                 }

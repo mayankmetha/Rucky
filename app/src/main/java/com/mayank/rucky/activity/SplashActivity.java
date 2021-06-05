@@ -119,6 +119,7 @@ public class SplashActivity extends AppCompatActivity {
         BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
                 .setTitle(getResources().getString(R.string.unlock))
                 .setSubtitle(getResources().getString(R.string.auth))
+                .setNegativeButtonText(getResources().getString(R.string.btn_cancel))
                 .setConfirmationRequired(false)
                 .build();
         biometricPrompt.authenticate(promptInfo);
