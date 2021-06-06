@@ -12,40 +12,42 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 - Wireless: Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
 
 ## Features 
-- [x] USB HID (Root & custom kernel required)
-- [x] USB HID over network socket
-- [ ] USB HID over bluetooth
-- [x] USB connection detection
-- [x] Run attack UI button
-- [x] Autolaunch attack on USB connect
-- [x] Autolaunch attack on network socket connect  
-- [x] Save scripts
-- [x] Load scripts
-- [x] Delete scripts
-- [x] Day/Night theme
-- [x] Customize accent colours
-- [x] Launch app via dialer app
-- [x] Hide launcher app (till Android 10)
-- [x] Disable app launch via launcher (Android 11 onwards)
-- [x] Biometric support
-- [x] App lock support
-- [x] Encrypt scripts on save
-- [x] Decrypt scripts on load
-- [x] Customize network socket address
-- [x] In-app update service (GitHub release only)
-- [x] Compactabile with Kali Linux NetHunter
-- [ ] ConfigFS auto configuration
-- [x] Multiple HID languages support
-- [ ] Customizable HID for additional language support
-- [x] Platform independent HID support
-- [x] Can attack virtually any system with USB HID support
-- [ ] USB HID mouse support (awaiting Hak5 Rubber Duck spec to support)
-- [ ] Disable app level virtualization (parallel app prevention)
-- [ ] App anti-tamper detection
-- [ ] Runtime process name masking
-- [ ] Memory dump prevention
-- [ ] Anti-debug protection (Frida probe prevention)
-- [ ] More feature addition on request
+| Status           | Feature                                                           |
+| :---:            | :---                                                              |
+|:white_check_mark:| USB HID (Root & custom kernel required)                           |
+|:white_check_mark:| USB HID over network socket                                       |
+|:x:               | USB HID over bluetooth                                            |
+|:white_check_mark:| USB connection detection                                          |
+|:white_check_mark:| Run attack UI button                                              |
+|:white_check_mark:| Autolaunch attack on USB connect                                  |
+|:white_check_mark:| Autolaunch attack on network socket connect                       |
+|:white_check_mark:| Save scripts                                                      |
+|:white_check_mark:| Load scripts                                                      |
+|:white_check_mark:| Delete scripts                                                    |
+|:white_check_mark:| Day/Night theme                                                   |
+|:white_check_mark:| Customize accent colours                                          |
+|:white_check_mark:| Launch app via dialer app                                         |
+|:white_check_mark:| Hide launcher app (till Android 10)                               |
+|:white_check_mark:| Disable app launch via launcher (Android 11 onwards)              |
+|:white_check_mark:| Biometric support                                                 |
+|:white_check_mark:| App lock support                                                  |
+|:white_check_mark:| Encrypt scripts on save                                           |
+|:white_check_mark:| Decrypt scripts on load                                           |
+|:white_check_mark:| Customize network socket address                                  |
+|:white_check_mark:| In-app update service (GitHub release only)                       |
+|:white_check_mark:| Compactabile with Kali Linux NetHunter                            |
+|:x:               | ConfigFS auto configuration                                       |
+|:white_check_mark:| Multiple HID languages support                                    |
+|:construction:    | Customizable HID for additional language support                  |
+|:white_check_mark:| Platform independent HID support                                  |
+|:white_check_mark:| Can attack virtually any system with USB HID support              |
+|:x:               | USB HID mouse support (awaiting Hak5 Rubber Duck spec to support) |
+|:x:               | Disable app level virtualization (parallel app prevention)        |
+|:x:               | App anti-tamper detection                                         |
+|:x:               | Runtime process name masking                                      |
+|:x:               | Memory dump prevention                                            |
+|:x:               | Anti-debug protection (Frida probe prevention)                    |
+|:bulb:            | More feature addition on request                                  |
 
 ## Featuring Rucky
 - [Kali Linux 2019.3 Release](https://www.kali.org/blog/kali-linux-2019-3-release/)
