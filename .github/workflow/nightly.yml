@@ -1,0 +1,31 @@
+name: Rucky Nightly
+
+on:
+  push:
+    branches:
+      master
+
+jobs:
+  runs-on: ubuntu-latest
+
+  steps:
+    -uses: actions/checkout@v2
+
+    -name: JDK
+     uses: actions/setup-java@v2
+     with:
+       java-version: '11'
+       distribution: 'adopt'
+
+    - name: Nightly Build
+      run: ./gradlew clean assembleNightly
+
+    - name: Sign APK
+      uses: r0adkll/sign-android-release@v1
+      id: sign_app
+      with:
+        releaseDirectory: app/build/outputs/apk/nightly
+        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+        alias: ${{ secrets.ALIAS }}
+        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.KEY_PASSWORD }}
