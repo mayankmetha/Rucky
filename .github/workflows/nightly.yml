@@ -11,11 +11,11 @@ jobs:
   steps:
     -uses: actions/checkout@v2
 
-    -name: JDK
-     uses: actions/setup-java@v2
-     with:
-       java-version: '11'
-       distribution: 'adopt'
+    #-name: JDK
+    # uses: actions/setup-java@v2
+    # with:
+    #   java-version: '11'
+    #   distribution: 'adopt'
 
     - name: Nightly Build
       run: ./gradlew clean assembleNightly
