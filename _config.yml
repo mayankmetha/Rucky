@@ -1,4 +1,5 @@
 theme: jekyll-theme-hacker
+markdown: kramdown
 relative_links:
   enabled: true
   collections: true
