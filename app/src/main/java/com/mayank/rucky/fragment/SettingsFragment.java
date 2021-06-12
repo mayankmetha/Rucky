@@ -231,13 +231,15 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final Preference versionPreference = findPreference("version");
         assert versionPreference != null;
         double currentVersion = 0.0;
+        int currentVersionCode = 0;
         try {
             PackageInfo pInfo = this.requireActivity().getPackageManager().getPackageInfo(this.requireActivity().getPackageName(), 0);
+            currentVersionCode = pInfo.versionCode;
             currentVersion = Double.parseDouble(pInfo.versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        versionPreference.setSummary(Double.toString(currentVersion));
+        versionPreference.setSummary(Double.toString(currentVersion)+" ("+Integer.toString(currentVersionCode)+")");
     }
 
     private void arch() {

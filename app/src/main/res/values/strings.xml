@@ -31,6 +31,7 @@
     <!-- Update screen -->
     <string name="update_activity">Rucky Update</string>
     <string name="update_version">Version</string>
+    <string name="update_version_nightly">Nightly Version</string>
     <string name="update_changelog">Changelog</string>
     <string name="update_status">Update Status</string>
     <string name="update_action">Download &amp; Install Update</string>
@@ -108,6 +109,7 @@
     <string name="release">Distribution</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug Release</string>
     <string name="releaseOthers">Non Supported Release</string>
 
