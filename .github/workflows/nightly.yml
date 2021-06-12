@@ -1,13 +1,10 @@
 name: Rucky Nightly
-
 on:
   push:
     branches:
       master
-
 jobs:
   runs-on: ubuntu-latest
-
   steps:
     - name: Checkout Code
       uses: actions/checkout@v2
