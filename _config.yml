@@ -1,5 +1,5 @@
 theme: jekyll-theme-hacker
-markdown: kramdown
+markdown: GFM
 relative_links:
   enabled: true
   collections: true
