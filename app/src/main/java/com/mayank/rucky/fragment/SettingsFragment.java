@@ -253,11 +253,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final Preference distributionPreference = findPreference("source");
         assert distributionPreference != null;
         distributionPreference.setSummary(SplashActivity.distro);
-        if(SplashActivity.distro == R.string.releaseGitHub || SplashActivity.distro == R.string.releaseTest) {
+        if(SplashActivity.distro == R.string.releaseGitHub || SplashActivity.distro == R.string.releaseGitHubNightly || SplashActivity.distro == R.string.releaseTest) {
             distributionPreference.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(getActivity(), BrowserActivity.class);
                 intent.putExtra(Constants.activityTitle, getResources().getString(R.string.releaseGitHub));
-                intent.putExtra(Constants.webViewID, "https://github.com/mayankmetha/Rucky/releases/latest");
+                intent.putExtra(Constants.webViewID, "https://mayankmetha.github.io/Rucky/");
+                startActivity(intent);
+                return true;
+            });
+        } else if (SplashActivity.distro == R.string.releaseNetHunter) {
+            distributionPreference.setOnPreferenceClickListener(preference -> {
+                Intent intent = new Intent(getActivity(), BrowserActivity.class);
+                intent.putExtra(Constants.activityTitle, getResources().getString(R.string.releaseGitHub));
+                intent.putExtra(Constants.webViewID, "https://store.nethunter.com/en/packages/com.mayank.rucky/");
                 startActivity(intent);
                 return true;
             });
