@@ -4,9 +4,15 @@ import com.mayank.rucky.R;
 
 public class Constants {
 
+    //HIDModel
+    public static final int HID_OFFLINE = 1;
+    public static final int HID_UPDATE = 2;
+    public static final int HID_DOWNLOAD = 3;
+
     //web view
-    public static final String activityTitle = "WEBVIEW_TITLE";
+    public static final String activityTitle = "ACTIVITY_TITLE";
     public static final String webViewID = "WEBVIEW_URL";
+    public static final String activityFile = "HID_FILENAME";
 
     //shared preferences
     public static final String PREF = "settings";

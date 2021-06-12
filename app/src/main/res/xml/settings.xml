@@ -5,6 +5,12 @@
         app:key="settings"
         app:title="@string/setting_general">
 
+        <Preference
+            app:key="hid"
+            app:icon="@drawable/ic_keyboard"
+            app:title="@string/hid_title"
+            app:summary="@string/hid_summary"/>
+
         <SwitchPreference
             app:defaultValue="true"
             app:icon="@drawable/ic_dark"

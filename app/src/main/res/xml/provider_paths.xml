@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--suppress XmlUnusedNamespaceDeclaration -->
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <external-path name="external_files" path="."/>
     <external-path
         name="files_root"
         path="Android/data/${applicationId}" />
+    <external-path
+        name="keymaps"
+        path="Android/data/${applicationId}/keymaps" />
 </paths>

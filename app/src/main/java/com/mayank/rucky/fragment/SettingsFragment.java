@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.activity.BrowserActivity;
+import com.mayank.rucky.activity.HidActivity;
 import com.mayank.rucky.activity.SplashActivity;
 import com.mayank.rucky.utils.ColorAdapter;
 import com.mayank.rucky.utils.Config;
@@ -57,6 +58,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
         this.requireActivity().setTheme(Constants.themeList[config.getAccentTheme()]);
 
+        hidSettings();
         darkThemeSetting();
         accentColorSetting();
         hideLauncherIcon();
@@ -74,6 +76,16 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         gitIssue();
         translate();
+    }
+
+    private void hidSettings() {
+        final Preference hidPreference = findPreference("hid");
+        assert hidPreference != null;
+        hidPreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity(), HidActivity.class);
+            startActivity(intent);
+            return true;
+        });
     }
 
     private void darkThemeSetting() {

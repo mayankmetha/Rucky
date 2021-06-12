@@ -33,22 +33,16 @@ public class BrowserActivity extends AppCompatActivity {
         }
         setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_browser);
-        String activityTitle = "WEBVIEW_TITLE";
-        String title = getIntent().getStringExtra(activityTitle);
+        String title = getIntent().getStringExtra(Constants.activityTitle);
         TextView browserTitle = findViewById(R.id.browserTitle);
         browserTitle.setText(title);
-
-
-        String webViewID = "WEBVIEW_URL";
-        String url = getIntent().getStringExtra(webViewID);
+        String url = getIntent().getStringExtra(Constants.webViewID);
 
         webView = findViewById(R.id.browserView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
         webView.getSettings().setLoadsImagesAutomatically(true);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            webView.getSettings().setOffscreenPreRaster(true);
-        }
+        webView.getSettings().setOffscreenPreRaster(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             webView.getSettings().setSafeBrowsingEnabled(true);
         }

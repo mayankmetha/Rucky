@@ -19,20 +19,29 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 import com.mayank.rucky.R;
+import com.mayank.rucky.models.HidModel;
 import com.mayank.rucky.service.SocketHeartbeatService;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.HID;
 
 import org.apache.commons.io.IOUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -76,6 +85,8 @@ public class EditorActivity extends AppCompatActivity {
     public static NotificationManager serviceNotificationManager;
     @SuppressLint("StaticFieldLeak")
     public static NotificationCompat.Builder sNotify;
+    private static boolean noHidFile = false;
+    public static ArrayList<HidModel> keymap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +110,10 @@ public class EditorActivity extends AppCompatActivity {
         if (config.getUpdateFlag())
             updateInit();
         openSettings();
+
+        keymap = new ArrayList<>();
+        keymapListRefresh(this);
+
         ide();
     }
 
@@ -504,6 +519,120 @@ public class EditorActivity extends AppCompatActivity {
         exeScript.parse(scripts);
         cmds.clear();
         cmds.addAll(exeScript.getCmd());
+    }
+
+    public static void keymapListRefresh(Context context) {
+        keymap.clear();
+        getOnDeviceRepo(context);
+        getKeymapRepo(context);
+    }
+
+    static String jsonRead(File file) {
+        FileInputStream fInputStream;
+        InputStream inputStream;
+        StringWriter writer = new StringWriter();
+        try {
+            fInputStream = new FileInputStream(file);
+            inputStream = new BufferedInputStream(fInputStream);
+            IOUtils.copy(inputStream, writer, "UTF-8");
+            inputStream.close();
+            fInputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return writer.toString();
+    }
+
+    static int getFileRevision(String jsonStr) {
+        int revision = 0;
+        if (!jsonStr.isEmpty()) {
+            try {
+                JSONObject tmp = new JSONObject(jsonStr);
+                revision = tmp.getInt("version");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return revision;
+    }
+
+    static void getOnDeviceRepo(Context context) {
+        final File[] tmp = Objects.requireNonNull(context.getExternalFilesDir("keymap")).listFiles();
+        if (tmp == null || tmp.length == 0) {
+            noHidFile = true;
+        } else {
+            noHidFile = false;
+            for (File file : tmp) {
+                if (file.getPath().endsWith(".json")) {
+                    try {
+                        keymap.add(new HidModel(
+                                file.getName().replace(".json", ""),
+                                getFileRevision(jsonRead(file)),
+                                file.getName(),
+                                "",
+                                Constants.HID_OFFLINE
+                        ));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
+
+    static void getKeymapRepo(Context context) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        String url = "https://raw.githubusercontent.com/mayankmetha/Rucky-KeyMap/main/keymap.json";
+        JsonArrayRequest req = new JsonArrayRequest(Request.Method.GET, url, null,
+            response -> {
+                for(int i=0; i < response.length(); i++) {
+                    boolean added = false;
+                    try {
+                        HidModel tmpHidModel = new HidModel(
+                            response.getJSONObject(i).getString("name"),
+                            Integer.parseInt(response.getJSONObject(i).getString("revision")),
+                            response.getJSONObject(i).getString("filename"),
+                            response.getJSONObject(i).getString("url"),
+                            Constants.HID_DOWNLOAD
+                        );
+                        for(int j = 0; j < keymap.size(); j++) {
+                            if(keymap.get(j).modelExist(tmpHidModel)) {
+                                added = true;
+                                HidModel updHidModel = keymap.get(j);
+                                if(updHidModel.getHidModelRevision() < tmpHidModel.getHidModelRevision()) {
+                                    updHidModel.setHidModelState(Constants.HID_UPDATE);
+                                }
+                                updHidModel.setHidModelUrl(tmpHidModel.getHidModelUrl());
+                                keymap.set(j, updHidModel);
+                            }
+                        }
+                        if (!added)
+                            keymap.add(tmpHidModel);
+                        if(noHidFile) {
+                            noHidFile = false;
+                            JsonObjectRequest reqDl = new JsonObjectRequest(Request.Method.GET, keymap.get(0).getHidModelUrl(), null,
+                                responseDl -> {
+                                    try {
+                                        File file = new File(context.getExternalFilesDir("keymap"),keymap.get(0).getHidModelFilename());
+                                        FileOutputStream fOutputStream = new FileOutputStream(file);
+                                        OutputStream outputStream = new BufferedOutputStream(fOutputStream);
+                                        outputStream.write(responseDl.toString().getBytes(StandardCharsets.UTF_8));
+                                        outputStream.close();
+                                        fOutputStream.close();
+                                        keymap.get(0).setHidModelState(Constants.HID_OFFLINE);
+                                        keymap.get(0).setHidModelRevision(responseDl.getInt("version"));
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }, Throwable::printStackTrace);
+                            requestQueue.add(reqDl);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, Throwable::printStackTrace);
+        requestQueue.add(req);
     }
 
 }
