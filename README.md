@@ -6,48 +6,54 @@
 [![Architecture](https://img.shields.io/badge/architecture-Independent-blueviolet)](https://github.com/mayankmetha/Rucky)
 [![Kernel](https://img.shields.io/badge/kernel-USB%20HID%20Patch%20Required-red)](https://github.com/mayankmetha/Rucky)
 
+---
+
 ## Readme
 An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 - Wired Mode: Needs a custom kernel with usb hid feature or a kernel with configfs to be enabled for this mode to be used.
 - Wireless: Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
 
+---
+
 ## Features 
-Status           | Feature
-:---:            | :---
-|:white_check_mark:| USB HID (Root & custom kernel required)                           |
-|:white_check_mark:| USB HID over network socket                                       |
-|:x:               | USB HID over bluetooth                                            |
-|:white_check_mark:| USB connection detection                                          |
-|:white_check_mark:| Run attack UI button                                              |
-|:white_check_mark:| Autolaunch attack on USB connect                                  |
-|:white_check_mark:| Autolaunch attack on network socket connect                       |
-|:white_check_mark:| Save scripts                                                      |
-|:white_check_mark:| Load scripts                                                      |
-|:white_check_mark:| Delete scripts                                                    |
-|:white_check_mark:| Day/Night theme                                                   |
-|:white_check_mark:| Customize accent colours                                          |
-|:white_check_mark:| Launch app via dialer app                                         |
-|:white_check_mark:| Hide launcher app (till Android 10)                               |
-|:white_check_mark:| Disable app launch via launcher (Android 11 onwards)              |
-|:white_check_mark:| Biometric support                                                 |
-|:white_check_mark:| App lock support                                                  |
-|:white_check_mark:| Encrypt scripts on save                                           |
-|:white_check_mark:| Decrypt scripts on load                                           |
-|:white_check_mark:| Customize network socket address                                  |
-|:white_check_mark:| In-app update service (GitHub release only)                       |
-|:white_check_mark:| Compactabile with Kali Linux NetHunter                            |
-|:x:               | ConfigFS auto configuration                                       |
-|:white_check_mark:| Multiple HID languages support                                    |
-|:construction:    | Customizable HID for additional language support                  |
-|:white_check_mark:| Platform independent HID support                                  |
-|:white_check_mark:| Can attack virtually any system with USB HID support              |
-|:x:               | USB HID mouse support (awaiting Hak5 Rubber Duck spec to support) |
-|:x:               | Disable app level virtualization (parallel app prevention)        |
-|:x:               | App anti-tamper detection                                         |
-|:x:               | Runtime process name masking                                      |
-|:x:               | Memory dump prevention                                            |
-|:x:               | Anti-debug protection (Frida probe prevention)                    |
-|:bulb:            | More feature addition on request                                  |
+Status| Feature
+:---:| :---
+✅| USB HID (Root & custom kernel required)
+✅| USB HID over network socket
+❌| USB HID over bluetooth
+✅| USB connection detection
+✅| Run attack UI button
+✅| Autolaunch attack on USB connect
+✅| Autolaunch attack on network socket connect
+✅| Save scripts
+✅| Load scripts
+✅| Delete scripts
+✅| Day/Night theme
+✅| Customize accent colours
+✅| Launch app via dialer app
+✅| Hide launcher app (till Android 10)
+✅| Disable app launch via launcher (Android 11 onwards)
+✅| Biometric support
+✅| App lock support
+✅| Encrypt scripts on save
+✅| Decrypt scripts on load
+✅| Customize network socket address
+✅| In-app update service (GitHub release only)
+✅| Compactabile with Kali Linux NetHunter
+❌| ConfigFS auto configuration
+✅| Multiple HID languages support
+🚧| Customizable HID for additional language support
+✅| Platform independent HID support
+✅| Can attack virtually any system with USB HID support
+❌| USB HID mouse support (awaiting Hak5 Rubber Duck spec to support)
+❌| Disable app level virtualization (parallel app prevention)
+❌| App anti-tamper detection
+❌| Runtime process name masking
+❌| Memory dump prevention
+❌| Anti-debug protection (Frida probe prevention)
+💡| More feature addition on request
+
+---
 
 ## Featuring Rucky
 - [Kali Linux 2019.3 Release](https://www.kali.org/blog/kali-linux-2019-3-release/)
@@ -57,6 +63,8 @@ Status           | Feature
 - [AV SHIVA NORO YouTube Channel](https://youtu.be/4clbu41cEQ0)
 - [Android Infosec YouTube Channel](https://www.youtube.com/watch?v=_NDXzGPh_BQ)
 - [Android Infosec Facebook Post](https://www.facebook.com/AndroidInfoSec/posts/4101537619869708)
+
+---
 
 ## Legacy Work
 [![RPi](https://img.shields.io/badge/Raspberry%20Pi-0%20W-maroon)](https://github.com/mayankmetha/Rucky-Ext-RPi)
