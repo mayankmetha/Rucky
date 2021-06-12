@@ -9,12 +9,11 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
-    -uses: actions/checkout@v2
-    -name: JDK
-     uses: actions/setup-java@v2
-     with:
-       java-version: '11'
-       distribution: 'adopt'
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v2
+       with:
+         java-version: '11'
+         distribution: 'adopt'
     - name: Nightly Build
       run: ./gradlew clean assembleNightly
     - name: Sign APK
