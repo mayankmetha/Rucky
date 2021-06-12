@@ -58,9 +58,13 @@ public class SplashActivity extends AppCompatActivity {
 
     public static String getSHA512;
     public static int minAndroidSDK;
+    public static boolean nightly;
 
     static double currentVersion;
     static double newVersion;
+
+    static int currentNightly;
+    static int newNightly;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,10 +160,9 @@ public class SplashActivity extends AppCompatActivity {
     private void splash() {
         getReleaseSigningHash();
         Networks n = new Networks();
-        if (config.getUpdateFlag()) {
-            setUpdateNotificationChannel();
-            if (n.isNetworkPresent(this))
-                preCheckAppUpdate();
+        setUpdateNotificationChannel();
+        if (config.getUpdateFlag() && n.isNetworkPresent(this)) {
+            preCheckAppUpdate();
         }
         final int flags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -182,9 +185,11 @@ public class SplashActivity extends AppCompatActivity {
 
     private void getReleaseSigningHash() {
         String NetHunter = "x2j+O+TND/jjH0ryjO/2ROPpjCvHoHK/XnjrgdAHJfM=";
-        String GitHub = "0Xv/I6xP6Q1wKbIqCgXi4CafhKZtOZLOR575TiqN93s=";
+        String GitHubRelease = "0Xv/I6xP6Q1wKbIqCgXi4CafhKZtOZLOR575TiqN93s=";
+        String GitHubNightly = "eEk+yGxeE5dXukQ4HiGYS4eEyTAcoC6Mfm1OX/1l12c=";
         String debug = "im5KgLli2rx4iEvMVXotXGpfiR1/eqXEwBO2YQ6uP70=";
         ArrayList<String> hashList = new ArrayList<>();
+        nightly = false;
         try {
             if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.P) {
                 PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNING_CERTIFICATES);
@@ -217,11 +222,16 @@ public class SplashActivity extends AppCompatActivity {
             if(hashList.get(i).trim().equals(NetHunter)) {
                 distro = R.string.releaseNetHunter;
                 config.setUpdateFlag(false);
-            } else if(hashList.get(i).trim().equals(GitHub)) {
+            } else if(hashList.get(i).trim().equals(GitHubRelease)) {
                 distro = R.string.releaseGitHub;
+                config.setUpdateFlag(true);
+            } else if(hashList.get(i).trim().equals(GitHubNightly)) {
+                distro = R.string.releaseGitHubNightly;
+                nightly = true;
                 config.setUpdateFlag(true);
             } else if(hashList.get(i).trim().equals(debug)) {
                 distro = R.string.releaseTest;
+                nightly = true;
                 config.setUpdateFlag(true);
             } else {
                 distro = R.string.releaseOthers;
@@ -257,6 +267,7 @@ public class SplashActivity extends AppCompatActivity {
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
             currentVersion = Double.parseDouble(pInfo.versionName);
+            currentNightly = pInfo.versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -285,7 +296,7 @@ public class SplashActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                if (newVersion > currentVersion) {
+                if (nightly || newVersion > currentVersion) {
                     getUpdateMetadata();
                 }
             };
@@ -303,9 +314,18 @@ public class SplashActivity extends AppCompatActivity {
             notificationManager.notify(0, updateNotify.build());
             Runnable runnable = () -> {
                 try {
-                    URL url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.cfg");
+                    URL url;
+                    if(nightly)
+                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/nightly/rucky.cfg");
+                    else
+                        url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.cfg");
                     BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
                     minAndroidSDK = Integer.parseInt(in.readLine());
+                    String line;
+                    if((line = in.readLine()) != null)
+                        newNightly = Integer.parseInt(line);
+                    else
+                        newNightly=currentNightly;
                     in.close();
                     notificationManager.cancel(0);
                 } catch (Exception e) {
@@ -330,7 +350,11 @@ public class SplashActivity extends AppCompatActivity {
             notificationManager.notify(0, updateNotify.build());
             Runnable runnable = () -> {
                 try {
-                    URL url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
+                    URL url;
+                    if(nightly)
+                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/nightly/rucky.sha512");
+                    else
+                        url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
                     BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
                     getSHA512 = in.readLine();
                     in.close();

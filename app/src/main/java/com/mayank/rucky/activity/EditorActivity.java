@@ -19,7 +19,6 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -208,16 +207,30 @@ public class EditorActivity extends AppCompatActivity {
 
     private void updateInit() {
         Button updateBtn = findViewById(R.id.update_button);
-        if (config.getUpdateFlag() && SplashActivity.newVersion > SplashActivity.currentVersion) {
-            Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
-            updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-            updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                    .setContentTitle(getResources().getString(R.string.update_new)+" Version: "+ SplashActivity.newVersion)
-                    .setSmallIcon(R.drawable.ic_notification)
-                    .setContentIntent(notifyPendingIntent)
-                    .setAutoCancel(false);
-            SplashActivity.notificationManager.notify(0, updateNotify.build());
+        if (config.getUpdateFlag()) {
+            if (SplashActivity.nightly && SplashActivity.newNightly > SplashActivity.currentNightly) {
+                Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
+                updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
+                        .setContentTitle(getResources().getString(R.string.update_new)+" Nightly Version: "+ SplashActivity.newVersion+" ("+SplashActivity.newNightly+")")
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setContentIntent(notifyPendingIntent)
+                        .setAutoCancel(false);
+                SplashActivity.notificationManager.notify(0, updateNotify.build());
+            } else if(SplashActivity.newVersion > SplashActivity.currentVersion) {
+                Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
+                updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
+                        .setContentTitle(getResources().getString(R.string.update_new) + " Version: " + SplashActivity.newVersion)
+                        .setSmallIcon(R.drawable.ic_notification)
+                        .setContentIntent(notifyPendingIntent)
+                        .setAutoCancel(false);
+                SplashActivity.notificationManager.notify(0, updateNotify.build());
+            } else {
+                updateBtn.setVisibility(View.GONE);
+            }
         } else {
             updateBtn.setVisibility(View.GONE);
         }
