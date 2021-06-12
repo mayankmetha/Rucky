@@ -12,8 +12,8 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 - Wireless: Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
 
 ## Features 
-| Status           | Feature                                                           |
-| :---:            | :---                                                              |
+Status           | Feature
+:---:            | :---
 |:white_check_mark:| USB HID (Root & custom kernel required)                           |
 |:white_check_mark:| USB HID over network socket                                       |
 |:x:               | USB HID over bluetooth                                            |
