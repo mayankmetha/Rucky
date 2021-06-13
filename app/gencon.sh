@@ -19,8 +19,8 @@ elif [ "$buildType" = "nightly" ]; then
     echo "$(($(git rev-list HEAD --count master)+1))" >> ../nightly/rucky.cfg
     diffCommitCount=$(($(git rev-list HEAD --count master)-$lastBuild))
     git log --oneline -$((diffCommitCount)) -s --format='• %s' | uniq -iu | tail -r > ../nightly/Changelog
-    echo "• $((commitMsg))" >> ../nightly/Changelog
+    echo "• $commitMsg" >> ../nightly/Changelog
     git add ../nightly/rucky-nightly.apk ../nightly/rucky.cfg ../nightly/rucky.cfg ../nightly/Changelog
-    git commit -m "$((commitMsg))"
+    git commit -m "$commitMsg"
     git push
 fi
