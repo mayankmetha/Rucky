@@ -239,7 +239,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        versionPreference.setSummary(Double.toString(currentVersion)+" ("+Integer.toString(currentVersionCode)+")");
+        versionPreference.setSummary(currentVersion +" ("+ currentVersionCode +")");
     }
 
     private void arch() {

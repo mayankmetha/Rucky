@@ -9,7 +9,7 @@
 
 ## Download
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
-[![Github nightly](https://img.shields.io/badge/nightly-v2.1%20(335)-blueviolet)](https://github.com/mayankmetha/Rucky/tree/master/docs/nightly)
+[![Github nightly](https://img.shields.io/badge/nightly-v2.1%20(335)-blueviolet)](https://github.com/mayankmetha/Rucky/tree/master/nightly/rucky-nightly.apk?raw=true)
 
 ---
 

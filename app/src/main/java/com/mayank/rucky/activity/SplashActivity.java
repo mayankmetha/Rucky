@@ -316,7 +316,7 @@ public class SplashActivity extends AppCompatActivity {
                 try {
                     URL url;
                     if(nightly)
-                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/nightly/rucky.cfg");
+                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.cfg");
                     else
                         url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.cfg");
                     BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -352,7 +352,7 @@ public class SplashActivity extends AppCompatActivity {
                 try {
                     URL url;
                     if(nightly)
-                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/nightly/rucky.sha512");
+                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512");
                     else
                         url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
                     BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));

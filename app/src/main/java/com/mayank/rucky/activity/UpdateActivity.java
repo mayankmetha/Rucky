@@ -137,7 +137,7 @@ public class UpdateActivity extends AppCompatActivity {
                 try {
                     URL url;
                     if (SplashActivity.nightly)
-                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/nightly/Changelog");
+                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/Changelog");
                     else
                         url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/Changelog_"+SplashActivity.newVersion+"");
                     BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -206,7 +206,7 @@ public class UpdateActivity extends AppCompatActivity {
     private long downloadUpdate() {
         Uri uri;
         if (SplashActivity.nightly)
-            uri = Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/nightly/rucky-nightly.apk");
+            uri = Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk");
          else
             uri = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+SplashActivity.newVersion+"/rucky.apk");
         DownloadManager.Request req = new DownloadManager.Request(uri);
