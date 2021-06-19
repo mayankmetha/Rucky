@@ -1,5 +1,6 @@
 package com.mayank.rucky.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +48,7 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         views.add(position,holder);
         if (position == config.getAccentTheme()) {
             selectedPosition = position;
@@ -76,7 +77,7 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ViewHolder> 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             button = (ImageView) itemView.findViewById(R.id.color_button);
-            button.setOnClickListener(v -> clickListener.onItemClick(getAdapterPosition(),v));
+            button.setOnClickListener(v -> clickListener.onItemClick(getBindingAdapterPosition(),v));
         }
 
         public ImageView getButton() {

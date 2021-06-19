@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Odemknout aplikaci</string>
     <string name="auth">Potvrdit ověření</string>
-    <string name="update_check">Kontrola aktualizací</string>
     <string name="update_new">K dispozici je nová aktualizace</string>
     <!-- Init Screen -->
     <string name="init_next">DALŠÍ</string>

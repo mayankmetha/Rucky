@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Разблокировать приложение</string>
     <string name="auth">Подтвердить аутентификацию</string>
-    <string name="update_check">Проверка обновлений</string>
     <string name="update_new">Доступно новое обновление</string>
     <!-- Init Screen -->
     <string name="init_next">СЛЕДУЮЩИЙ</string>

@@ -1,8 +1,8 @@
 package com.mayank.rucky.activity;
 
+import static android.util.Base64.decode;
+
 import android.annotation.SuppressLint;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -26,13 +26,16 @@ import androidx.biometric.BiometricPrompt;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.Networks;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.security.KeyStore;
 import java.security.MessageDigest;
@@ -45,16 +48,11 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import javax.net.ssl.HttpsURLConnection;
 
-import static android.util.Base64.decode;
-
 public class SplashActivity extends AppCompatActivity {
 
     private Config config;
 
     public static int distro = 0;
-
-    public NotificationCompat.Builder updateNotify;
-    static NotificationManager notificationManager;
 
     public static String getSHA512;
     public static int minAndroidSDK;
@@ -65,6 +63,8 @@ public class SplashActivity extends AppCompatActivity {
 
     static int currentNightly;
     static int newNightly;
+
+    RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,10 +158,9 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void splash() {
+        queue = Volley.newRequestQueue(this);
         getReleaseSigningHash();
-        Networks n = new Networks();
-        setUpdateNotificationChannel();
-        if (config.getUpdateFlag() && n.isNetworkPresent(this)) {
+        if (config.getUpdateFlag()) {
             preCheckAppUpdate();
         }
         final int flags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -240,24 +239,6 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-    private void setUpdateNotificationChannel() {
-        NotificationChannel notificationChannel;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            notificationChannel = new NotificationChannel(Constants.CHANNEL_ID, Constants.CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
-            notificationChannel.enableLights(false);
-            notificationChannel.setShowBadge(false);
-            notificationChannel.enableVibration(false);
-            notificationChannel.canBypassDnd();
-            notificationChannel.setSound(null,null);
-            notificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PUBLIC);
-            notificationManager = getSystemService(NotificationManager.class);
-            assert notificationManager != null;
-            notificationManager.createNotificationChannel(notificationChannel);
-        } else {
-            notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        }
-    }
-
     private void preCheckAppUpdate() {
         getCurrentAppVersion();
         getNewAppVersion();
@@ -276,94 +257,51 @@ public class SplashActivity extends AppCompatActivity {
     private void getNewAppVersion() {
         Networks n = new Networks();
         if (n.isNetworkPresent(this)) {
-            updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                    .setContentTitle(getResources().getString(R.string.update_check))
-                    .setSmallIcon(R.drawable.ic_notification)
-                    .setAutoCancel(true);
-            notificationManager.notify(0, updateNotify.build());
             Runnable runnable = () -> {
                 try {
                     URL url = new URL("https://github.com/mayankmetha/Rucky/releases/latest");
                     HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+                    conn.setInstanceFollowRedirects(false);
                     conn.getInputStream();
-                    String str = "" + conn.getURL() + "";
+                    String str = conn.getHeaderField( "Location" );
                     if (str.isEmpty()) {
                         newVersion = 0;
                     } else {
                         newVersion = Double.parseDouble(str.substring(str.lastIndexOf('/') + 1));
                     }
-                    notificationManager.cancel(0);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 if (nightly || newVersion > currentVersion) {
-                    getUpdateMetadata();
+                    queue.add(getUpdateMetadata());
                 }
             };
             new Thread(runnable).start();
         }
     }
 
-    private void getUpdateMetadata() {
-        Networks n = new Networks();
-        if (n.isNetworkPresent(this)) {
-            updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                    .setContentTitle(getResources().getString(R.string.update_check))
-                    .setSmallIcon(R.drawable.ic_notification)
-                    .setAutoCancel(true);
-            notificationManager.notify(0, updateNotify.build());
-            Runnable runnable = () -> {
+    private StringRequest getUpdateMetadata() {
+        String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.cfg" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.cfg";
+        return new StringRequest(Request.Method.GET, url,
+            (Response.Listener<String>) response -> {
+                String[] lines = response.split("\\r?\\n");
                 try {
-                    URL url;
-                    if(nightly)
-                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.cfg");
-                    else
-                        url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.cfg");
-                    BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-                    minAndroidSDK = Integer.parseInt(in.readLine());
-                    String line;
-                    if((line = in.readLine()) != null)
-                        newNightly = Integer.parseInt(line);
-                    else
-                        newNightly=currentNightly;
-                    in.close();
-                    notificationManager.cancel(0);
+                    minAndroidSDK = lines[0] != null ? Integer.parseInt(lines[0]) : 0;
+                    newNightly = lines[1] != null ? Integer.parseInt(lines[1]) : currentNightly;
                 } catch (Exception e) {
-                    minAndroidSDK = Build.VERSION.SDK_INT;
-                    e.printStackTrace();
+                    minAndroidSDK = 0;
+                    newNightly = currentNightly;
                 }
-                if (Build.VERSION.SDK_INT >= minAndroidSDK) {
-                    getUpdateSignature();
-                }
-            };
-            new Thread(runnable).start();
-        }
+                if (Build.VERSION.SDK_INT != 0 && Build.VERSION.SDK_INT >= minAndroidSDK) queue.add(getUpdateSignature());
+            }, (Response.ErrorListener) error -> {
+                minAndroidSDK = 0;
+                newNightly = currentNightly;
+            }
+        );
     }
 
-    private void getUpdateSignature() {
-        Networks n = new Networks();
-        if (n.isNetworkPresent(this)) {
-            updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                    .setContentTitle(getResources().getString(R.string.update_check))
-                    .setSmallIcon(R.drawable.ic_notification)
-                    .setAutoCancel(true);
-            notificationManager.notify(0, updateNotify.build());
-            Runnable runnable = () -> {
-                try {
-                    URL url;
-                    if(nightly)
-                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512");
-                    else
-                        url = new URL("https://github.com/mayankmetha/Rucky/releases/download/"+newVersion+"/rucky.sha512");
-                    BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-                    getSHA512 = in.readLine();
-                    in.close();
-                    notificationManager.cancel(0);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            };
-            new Thread(runnable).start();
-        }
+    private StringRequest getUpdateSignature() {
+        String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.sha512";
+        return new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> getSHA512 = response, (Response.ErrorListener) error -> getSHA512 = "");
     }
 }

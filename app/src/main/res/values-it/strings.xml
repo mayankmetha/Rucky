@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Sblocca App</string>
     <string name="auth">Conferma autenticazione</string>
-    <string name="update_check">Controllo aggiornamento</string>
     <string name="update_new">Nuovo aggiornamento disponibile</string>
     <!-- Init Screen -->
     <string name="init_next">PROSSIMO</string>

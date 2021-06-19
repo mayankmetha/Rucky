@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">解锁应用</string>
     <string name="auth">确认身份验证</string>
-    <string name="update_check">正在检查更新</string>
     <string name="update_new">有新的更新可用</string>
     <!-- Init Screen -->
     <string name="init_next">下一个</string>

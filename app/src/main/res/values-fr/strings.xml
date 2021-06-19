@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Déverrouiller l\'application</string>
     <string name="auth">Confirm authentication</string>
-    <string name="update_check">Vérifier les mises à jour</string>
     <string name="update_new">Nouvelle mise à jour disponible</string>
     <!-- Init Screen -->
     <string name="init_next">SUIVANT</string>

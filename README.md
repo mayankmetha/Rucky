@@ -44,7 +44,8 @@ Status| Feature
 ✅| Decrypt scripts on load
 ✅| Customize network socket address
 ✅| In-app update service (GitHub release only)
-✅| Compactabile with Kali Linux NetHunter
+✅| Kali Linux NetHunter Support
+✅| Nightly Builds
 ❌| ConfigFS auto configuration
 ✅| Multiple HID languages support
 🚧| Customizable HID for additional language support

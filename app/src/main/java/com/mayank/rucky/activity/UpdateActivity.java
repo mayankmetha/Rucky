@@ -18,22 +18,25 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.FileProvider;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.common.hash.Hashing;
 import com.google.common.io.Files;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
-import com.mayank.rucky.utils.Networks;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
+import java.util.Objects;
 
 public class UpdateActivity extends AppCompatActivity {
 
@@ -55,7 +58,7 @@ public class UpdateActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
         setTheme(Constants.themeList[config.getAccentTheme()]);
-        SplashActivity.notificationManager.cancel(0);
+        EditorActivity.updateNotificationManager.cancel(0);
         setContentView(R.layout.activity_update);
 
         apkFile = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),"rucky.apk");
@@ -130,32 +133,9 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
     private void getChangelog() {
-        StringBuilder changes = new StringBuilder();
-        Networks n = new Networks();
-        if (n.isNetworkPresent(this)) {
-            Runnable runnable = () -> {
-                try {
-                    URL url;
-                    if (SplashActivity.nightly)
-                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/Changelog");
-                    else
-                        url = new URL("https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/Changelog_"+SplashActivity.newVersion+"");
-                    BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-                    String line = in.readLine();
-                    while (line != null) {
-                        changes.append(line);
-                        changes.append("\n");
-                        line = in.readLine();
-                    }
-                    in.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                changes.deleteCharAt(changes.length() - 1);
-                runOnUiThread(() -> changelog.setText(changes.toString()));
-            };
-            new Thread(runnable).start();
-        }
+        String url = SplashActivity.nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/Changelog" : "https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/Changelog_"+SplashActivity.newVersion+"";
+        RequestQueue queue = Volley.newRequestQueue(this);
+        queue.add(new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> changelog.setText(response.trim()), (Response.ErrorListener) error -> {}));
     }
 
     void deleteOldUpdateFiles() {
@@ -239,8 +219,20 @@ public class UpdateActivity extends AppCompatActivity {
         if (genSHA512.equals(SplashActivity.getSHA512)) {
             installUpdate();
         } else {
-            finish();
+            config.setUpdateFlag(false);
+            AlertDialog.Builder builder = new AlertDialog.Builder(UpdateActivity.this);
+            builder.setTitle(getResources().getString(R.string.update_hash_error));
+            builder.setCancelable(false);
+            builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> goBackToEditorActivity()));
+            AlertDialog updateError = builder.create();
+            Objects.requireNonNull(updateError.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            updateError.show();
         }
+    }
+
+    void goBackToEditorActivity() {
+        deleteOldUpdateFiles();
+        finish();
     }
 
     void installUpdate() {

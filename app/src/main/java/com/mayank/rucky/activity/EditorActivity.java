@@ -82,6 +82,7 @@ public class EditorActivity extends AppCompatActivity {
     private static DataOutputStream dos;
     public static ArrayList<String> cmds;
     public static NotificationManager serviceNotificationManager;
+    public static NotificationManager updateNotificationManager;
     @SuppressLint("StaticFieldLeak")
     public static NotificationCompat.Builder sNotify;
     private static boolean noHidFile = false;
@@ -106,6 +107,7 @@ public class EditorActivity extends AppCompatActivity {
             getRoot();
         }
         setNotificationChannel();
+
         if (config.getUpdateFlag())
             updateInit();
         openSettings();
@@ -125,6 +127,7 @@ public class EditorActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
         setTheme(Constants.themeList[config.getAccentTheme()]);
+        updateScreen();
     }
 
     private void setNotificationChannel() {
@@ -206,6 +209,25 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     private void updateInit() {
+        NotificationChannel notificationChannel;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationChannel = new NotificationChannel(Constants.CHANNEL_ID, Constants.CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+            notificationChannel.enableLights(false);
+            notificationChannel.setShowBadge(false);
+            notificationChannel.enableVibration(false);
+            notificationChannel.canBypassDnd();
+            notificationChannel.setSound(null,null);
+            notificationChannel.setLockscreenVisibility(NotificationCompat.VISIBILITY_PUBLIC);
+            updateNotificationManager = getSystemService(NotificationManager.class);
+            assert updateNotificationManager != null;
+            updateNotificationManager.createNotificationChannel(notificationChannel);
+        } else {
+            updateNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        }
+        updateScreen();
+    }
+
+    private void updateScreen() {
         Button updateBtn = findViewById(R.id.update_button);
         if (config.getUpdateFlag()) {
             if (SplashActivity.nightly && SplashActivity.newNightly > SplashActivity.currentNightly) {
@@ -217,7 +239,7 @@ public class EditorActivity extends AppCompatActivity {
                         .setSmallIcon(R.drawable.ic_notification)
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
-                SplashActivity.notificationManager.notify(0, updateNotify.build());
+                updateNotificationManager.notify(0, updateNotify.build());
             } else if(SplashActivity.newVersion > SplashActivity.currentVersion) {
                 Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
                 updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -227,7 +249,7 @@ public class EditorActivity extends AppCompatActivity {
                         .setSmallIcon(R.drawable.ic_notification)
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
-                SplashActivity.notificationManager.notify(0, updateNotify.build());
+                updateNotificationManager.notify(0, updateNotify.build());
             } else {
                 updateBtn.setVisibility(View.GONE);
             }
@@ -274,8 +296,7 @@ public class EditorActivity extends AppCompatActivity {
                     root = true;
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ignored) {
         }
     }
 

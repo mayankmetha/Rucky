@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">App ontgrendelen</string>
     <string name="auth">Verificatie bevestigen</string>
-    <string name="update_check">Controleren op updates</string>
     <string name="update_new">Nieuwe update beschikbaar</string>
     <!-- Init Screen -->
     <string name="init_next">VOLGENDE</string>

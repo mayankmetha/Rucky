@@ -1,14 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">Rucky</string>
-    <string name="baseURI" translatable="false">github.com/mayankmetha/rucky</string>
     <string name="icon" translatable="false">icon</string>
 
     <!-- Splash screen -->
     <string name="unlock">Unlock App</string>
     <string name="auth">Confirm authentication</string>
     <string name="splashScreen" translatable="false">RUCKY</string>
-    <string name="update_check">Checking for update</string>
-    <string name="update_new">New update available</string>
 
     <!-- Init Screen -->
     <string name="init_next">NEXT</string>
@@ -29,6 +26,8 @@
     <string name="slideDesc6">Please grant app the required permission to work!</string>
 
     <!-- Update screen -->
+    <string name="update_new">New update available</string>
+    <string name="update_hash_error">File Signature Mismatch! Cannot Update.</string>
     <string name="update_activity">Rucky Update</string>
     <string name="update_version">Version</string>
     <string name="update_version_nightly">Nightly Version</string>
@@ -61,7 +60,7 @@
     <string name="socket_address">Enter Socket IP and Port Address</string>
 
     <!-- HID config screen -->
-    <string name="hid_activity">HID Customization</string>
+    <string name="hid_activity">HID Config</string>
     <string name="hid_download">Download</string>
     <string name="hid_update">Update</string>
     <string name="hid_edit">Edit</string>

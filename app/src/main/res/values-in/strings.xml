@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Unlock App</string>
     <string name="auth">Confirm authentication</string>
-    <string name="update_check">Memeriksa pembaruan</string>
     <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">LANJUT</string>

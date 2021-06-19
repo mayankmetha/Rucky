@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">アプリのアンロック</string>
     <string name="auth">認証を確認</string>
-    <string name="update_check">アップデートを確認中</string>
     <string name="update_new">新しいアップデートが利用可能です</string>
     <!-- Init Screen -->
     <string name="init_next">次</string>

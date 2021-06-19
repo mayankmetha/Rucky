@@ -8,10 +8,14 @@
         <entry key="app/src/main/res/drawable/ic_run.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ripple.xml" value="0.303125" />
+        <entry key="app/src/main/res/layout/activity_browser.xml" value="0.23394808743169399" />
         <entry key="app/src/main/res/layout/activity_editor.xml" value="0.17452185792349728" />
         <entry key="app/src/main/res/layout/activity_init.xml" value="0.2421448087431694" />
         <entry key="app/src/main/res/layout/activity_keylist.xml" value="0.23668032786885246" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.159765625" />
+        <entry key="app/src/main/res/layout/color_grid.xml" value="0.16484375" />
         <entry key="app/src/main/res/layout/hid_list_item.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/key_details.xml" value="0.159765625" />
         <entry key="app/src/main/res/layout/key_list_item.xml" value="0.23668032786885246" />
       </map>
     </option>

@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Ξεκλείδωμα Εφαρμογής</string>
     <string name="auth">Επιβεβαίωση ταυτοποίησης</string>
-    <string name="update_check">Έλεγχος για ενημέρωση</string>
     <string name="update_new">Διαθέσιμη νέα ενημέρωση</string>
     <!-- Init Screen -->
     <string name="init_next">ΕΠΟΜΕΝΟ</string>

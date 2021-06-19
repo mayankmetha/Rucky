@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Розблокувати додаток</string>
     <string name="auth">Підтвердити авторизацію</string>
-    <string name="update_check">Перевірка оновлень</string>
     <string name="update_new">Доступне нове оновлення</string>
     <!-- Init Screen -->
     <string name="init_next">ДАЛІ</string>

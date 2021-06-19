@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Avaa Sovellus</string>
     <string name="auth">Vahvista todennus</string>
-    <string name="update_check">Tarkistetaan päivitystä</string>
     <string name="update_new">Uusi päivitys saatavilla</string>
     <!-- Init Screen -->
     <string name="init_next">SEURAAVA</string>

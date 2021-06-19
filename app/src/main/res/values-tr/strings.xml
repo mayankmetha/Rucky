@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Uygulama kilidini aç</string>
     <string name="auth">Kimlik doğrulamasını onayla</string>
-    <string name="update_check">Güncellemeler kontrol ediliyor</string>
     <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">İLERİ</string>

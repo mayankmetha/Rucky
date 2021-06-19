@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">एप्लीकेशन अनलॉक करें</string>
     <string name="auth">Confirm authentication</string>
-    <string name="update_check">Checking for update</string>
     <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">NEXT</string>

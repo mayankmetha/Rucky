@@ -3,7 +3,6 @@
     <!-- Splash screen -->
     <string name="unlock">Lås upp app</string>
     <string name="auth">Bekräfta autentisering</string>
-    <string name="update_check">Söker efter uppdatering</string>
     <string name="update_new">Ny uppdatering tillgänglig</string>
     <!-- Init Screen -->
     <string name="init_next">NÄSTA</string>
