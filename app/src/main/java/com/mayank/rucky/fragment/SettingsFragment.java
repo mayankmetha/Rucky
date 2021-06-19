@@ -12,6 +12,7 @@ import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
 import android.util.Base64;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
@@ -106,8 +107,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         assert accentPreference != null;
         accentPreference.setOnPreferenceClickListener(preference -> {
             int[] colors = getResources().getIntArray(R.array.colors);
-            RecyclerView view = new RecyclerView(this.requireActivity());
-            view.findViewById(R.id.color_list);
+            LayoutInflater colorLI = LayoutInflater.from(this.requireActivity());
+            RecyclerView view = (RecyclerView) colorLI.inflate(R.layout.color_grid, null);
             ColorAdapter adapter = new ColorAdapter(colors, this.requireActivity());
             adapter.onItemClicked((position, v) -> {
                 config.setAccentTheme(position);

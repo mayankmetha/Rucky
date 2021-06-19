@@ -76,6 +76,9 @@
     <string name="key_meta">Meta Key Option</string>
     <string name="keycode">Key Code</string>
     <string name="modcode">Modifier Code</string>
+    <string name="key_no">No</string>
+    <string name="key_left">Left</string>
+    <string name="key_right">Right</string>
 
     <!-- Setting screen -->
     <string name="setting_general">General</string>

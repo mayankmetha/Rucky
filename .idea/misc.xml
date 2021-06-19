@@ -18,6 +18,8 @@
         <entry key="app/src/main/res/layout/hid_list_item.xml" value="0.2421448087431694" />
         <entry key="app/src/main/res/layout/key_details.xml" value="0.159765625" />
         <entry key="app/src/main/res/layout/key_list_item.xml" value="0.23668032786885246" />
+        <entry key="app/src/main/res/menu/key_option.xml" value="0.291015625" />
+        <entry key="app/src/main/res/xml/key_option.xml" value="0.22814207650273224" />
       </map>
     </option>
   </component>
