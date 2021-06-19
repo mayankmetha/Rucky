@@ -68,10 +68,10 @@ public class UpdateActivity extends AppCompatActivity {
         registerReceiver(downloadBR, intentFilter);
 
         TextView versionText = findViewById(R.id.version_text);
-        if(SplashActivity.nightly)
-            versionText.setText(String.format("%s : %s (%s)", getResources().getString(R.string.update_version_nightly), SplashActivity.newVersion, SplashActivity.newNightly));
+        if(EditorActivity.nightly)
+            versionText.setText(String.format("%s : %s (%s)", getResources().getString(R.string.update_version_nightly), EditorActivity.newVersion, EditorActivity.newNightly));
         else
-            versionText.setText(String.format("%s : %s", getResources().getString(R.string.update_version), SplashActivity.newVersion));
+            versionText.setText(String.format("%s : %s", getResources().getString(R.string.update_version), EditorActivity.newVersion));
 
         changelog = findViewById(R.id.changelog);
         getChangelog();
@@ -133,7 +133,7 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
     private void getChangelog() {
-        String url = SplashActivity.nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/Changelog" : "https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/Changelog_"+SplashActivity.newVersion+"";
+        String url = EditorActivity.nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/Changelog" : "https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/Changelog_"+EditorActivity.newVersion+"";
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> changelog.setText(response.trim()), (Response.ErrorListener) error -> {}));
     }
@@ -185,10 +185,10 @@ public class UpdateActivity extends AppCompatActivity {
 
     private long downloadUpdate() {
         Uri uri;
-        if (SplashActivity.nightly)
+        if (EditorActivity.nightly)
             uri = Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk");
          else
-            uri = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+SplashActivity.newVersion+"/rucky.apk");
+            uri = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+EditorActivity.newVersion+"/rucky.apk");
         DownloadManager.Request req = new DownloadManager.Request(uri);
         req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         req.setAllowedOverRoaming(true);
@@ -216,7 +216,7 @@ public class UpdateActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         assert genSHA512 != null;
-        if (genSHA512.equals(SplashActivity.getSHA512)) {
+        if (genSHA512.equals(EditorActivity.getSHA512)) {
             installUpdate();
         } else {
             config.setUpdateFlag(false);

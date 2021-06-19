@@ -1,9 +1,12 @@
 package com.mayank.rucky.activity;
 
+import static android.util.Base64.decode;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.biometric.BiometricPrompt;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
@@ -15,10 +18,13 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Base64;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,8 +33,10 @@ import android.widget.EditText;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 import com.mayank.rucky.R;
@@ -37,6 +45,7 @@ import com.mayank.rucky.service.SocketHeartbeatService;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.HID;
+import com.mayank.rucky.utils.Networks;
 
 import org.apache.commons.io.IOUtils;
 import org.json.JSONException;
@@ -58,17 +67,25 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.Socket;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.security.KeyStore;
+import java.security.MessageDigest;
+import java.security.PrivateKey;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
+import java.util.concurrent.Executor;
 
 import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 import javax.crypto.CipherOutputStream;
 import javax.crypto.SecretKey;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import javax.net.ssl.HttpsURLConnection;
 
 public class EditorActivity extends AppCompatActivity {
 
@@ -88,6 +105,16 @@ public class EditorActivity extends AppCompatActivity {
     private static boolean noHidFile = false;
     public static ArrayList<HidModel> keymap;
 
+    public static int distro = 0;
+    public static String getSHA512;
+    public static boolean nightly;
+    RequestQueue queue;
+    static double currentVersion;
+    static double newVersion;
+    static int currentNightly;
+    static int newNightly;
+    public static int minAndroidSDK;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         cmds = new ArrayList<>();
@@ -102,20 +129,137 @@ public class EditorActivity extends AppCompatActivity {
         }
         setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_editor);
+
+        if (config.getInitState() && config.getSec())
+            biometric();
+
         if (savedInstanceState == null) {
             requestPermissions();
             getRoot();
         }
+
+        getReleaseSigningHash();
         setNotificationChannel();
 
         if (config.getUpdateFlag())
             updateInit();
+
         openSettings();
 
         keymap = new ArrayList<>();
         keymapListRefresh(this);
 
         ide();
+    }
+
+    public void biometric() {
+        Executor executor = ContextCompat.getMainExecutor(this);
+        BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                finishAffinity();
+                System.exit(0);
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(
+                    @NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                getKey();
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                finishAffinity();
+                System.exit(0);
+            }
+        });
+
+        BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle(getResources().getString(R.string.unlock))
+                .setSubtitle(getResources().getString(R.string.auth))
+                .setNegativeButtonText(getResources().getString(R.string.btn_cancel))
+                .setConfirmationRequired(false)
+                .build();
+        biometricPrompt.authenticate(promptInfo);
+    }
+
+    void getKey() {
+        try{
+            KeyStore keyStore = KeyStore.getInstance(Constants.KEYSTORE_PROVIDER_ANDROID_KEYSTORE);
+            keyStore.load(null);
+            KeyStore.Entry entry = keyStore.getEntry(Constants.KEYSTORE_PROVIDER_ANDROID_KEYSTORE,null);
+            PrivateKey privateKey = ((KeyStore.PrivateKeyEntry) entry).getPrivateKey();
+            Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+            cipher.init(Cipher.DECRYPT_MODE, privateKey);
+            String k64 = config.getKeyStore1();
+            byte[] tmp = decode(k64, Base64.DEFAULT);
+            key = new SecretKeySpec(cipher.doFinal(tmp),"AES");
+            String k642 = config.getKeyStore2();
+            byte[] tmp2 = decode(k642,Base64.DEFAULT);
+            iv = new IvParameterSpec(cipher.doFinal(tmp2));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getReleaseSigningHash() {
+        String NetHunter = "x2j+O+TND/jjH0ryjO/2ROPpjCvHoHK/XnjrgdAHJfM=";
+        String GitHubRelease = "0Xv/I6xP6Q1wKbIqCgXi4CafhKZtOZLOR575TiqN93s=";
+        String GitHubNightly = "eEk+yGxeE5dXukQ4HiGYS4eEyTAcoC6Mfm1OX/1l12c=";
+        String debug = "im5KgLli2rx4iEvMVXotXGpfiR1/eqXEwBO2YQ6uP70=";
+        ArrayList<String> hashList = new ArrayList<>();
+        nightly = false;
+        try {
+            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.P) {
+                PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNING_CERTIFICATES);
+                if (info.signingInfo.hasMultipleSigners()) {
+                    for (Signature signature: info.signingInfo.getApkContentsSigners()) {
+                        MessageDigest md = MessageDigest.getInstance("SHA256");
+                        md.update(signature.toByteArray());
+                        hashList.add(new String(Base64.encode(md.digest(), 0)));
+                    }
+                } else {
+                    for (Signature signature: info.signingInfo.getSigningCertificateHistory()) {
+                        MessageDigest md = MessageDigest.getInstance("SHA256");
+                        md.update(signature.toByteArray());
+                        hashList.add(new String(Base64.encode(md.digest(), 0)));
+                    }
+                }
+            } else {
+                @SuppressLint("PackageManagerGetSignatures")
+                PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+                for (Signature signature : info.signatures) {
+                    MessageDigest md = MessageDigest.getInstance("SHA256");
+                    md.update(signature.toByteArray());
+                    hashList.add(new String(Base64.encode(md.digest(), 0)));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < hashList.size(); i++) {
+            if(hashList.get(i).trim().equals(NetHunter)) {
+                distro = R.string.releaseNetHunter;
+                config.setUpdateFlag(false);
+            } else if(hashList.get(i).trim().equals(GitHubRelease)) {
+                distro = R.string.releaseGitHub;
+                config.setUpdateFlag(true);
+            } else if(hashList.get(i).trim().equals(GitHubNightly)) {
+                distro = R.string.releaseGitHubNightly;
+                nightly = true;
+                config.setUpdateFlag(true);
+            } else if(hashList.get(i).trim().equals(debug)) {
+                distro = R.string.releaseTest;
+                nightly = true;
+                config.setUpdateFlag(true);
+            } else {
+                distro = R.string.releaseOthers;
+                config.setUpdateFlag(false);
+            }
+        }
     }
 
     @Override
@@ -224,32 +368,104 @@ public class EditorActivity extends AppCompatActivity {
         } else {
             updateNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
-        updateScreen();
+        queue = Volley.newRequestQueue(this);
+        if (config.getUpdateFlag()) {
+            preCheckAppUpdate();
+        }
+    }
+
+    private void preCheckAppUpdate() {
+        getCurrentAppVersion();
+        getNewAppVersion();
+    }
+
+    private void getCurrentAppVersion() {
+        try {
+            PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            currentVersion = Double.parseDouble(pInfo.versionName);
+            currentNightly = pInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getNewAppVersion() {
+        Networks n = new Networks();
+        if (n.isNetworkPresent(this)) {
+            Runnable runnable = () -> {
+                try {
+                    URL url = new URL("https://github.com/mayankmetha/Rucky/releases/latest");
+                    HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+                    conn.setInstanceFollowRedirects(false);
+                    conn.getInputStream();
+                    String str = conn.getHeaderField( "Location" );
+                    if (str.isEmpty()) {
+                        newVersion = 0;
+                    } else {
+                        newVersion = Double.parseDouble(str.substring(str.lastIndexOf('/') + 1));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                if (nightly || newVersion > currentVersion) {
+                    queue.add(getUpdateMetadata());
+                    updateScreen();
+                }
+            };
+            new Thread(runnable).start();
+        }
+    }
+
+    private StringRequest getUpdateMetadata() {
+        String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.cfg" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.cfg";
+        return new StringRequest(Request.Method.GET, url,
+                (Response.Listener<String>) response -> {
+                    String[] lines = response.split("\\r?\\n");
+                    try {
+                        minAndroidSDK = lines[0] != null ? Integer.parseInt(lines[0]) : 0;
+                        newNightly = lines[1] != null ? Integer.parseInt(lines[1]) : currentNightly;
+                    } catch (Exception e) {
+                        minAndroidSDK = 0;
+                        newNightly = currentNightly;
+                    }
+                    if (Build.VERSION.SDK_INT != 0 && Build.VERSION.SDK_INT >= minAndroidSDK) queue.add(getUpdateSignature());
+                }, (Response.ErrorListener) error -> {
+            minAndroidSDK = 0;
+            newNightly = currentNightly;
+        }
+        );
+    }
+
+    private StringRequest getUpdateSignature() {
+        String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.sha512";
+        return new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> getSHA512 = response, (Response.ErrorListener) error -> getSHA512 = "");
     }
 
     private void updateScreen() {
         Button updateBtn = findViewById(R.id.update_button);
         if (config.getUpdateFlag()) {
-            if (SplashActivity.nightly && SplashActivity.newNightly > SplashActivity.currentNightly) {
+            if (nightly && newNightly > currentNightly) {
                 Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
                 updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                        .setContentTitle(getResources().getString(R.string.update_new)+" Nightly Version: "+ SplashActivity.newVersion+" ("+SplashActivity.newNightly+")")
+                        .setContentTitle(getResources().getString(R.string.update_new)+" Nightly Version: "+ newVersion+" ("+newNightly+")")
                         .setSmallIcon(R.drawable.ic_notification)
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
                 updateNotificationManager.notify(0, updateNotify.build());
-            } else if(SplashActivity.newVersion > SplashActivity.currentVersion) {
+                updateBtn.setVisibility(View.VISIBLE);
+            } else if(newVersion > currentVersion) {
                 Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
                 updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                        .setContentTitle(getResources().getString(R.string.update_new) + " Version: " + SplashActivity.newVersion)
+                        .setContentTitle(getResources().getString(R.string.update_new) + " Version: " + newVersion)
                         .setSmallIcon(R.drawable.ic_notification)
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
                 updateNotificationManager.notify(0, updateNotify.build());
+                updateBtn.setVisibility(View.VISIBLE);
             } else {
                 updateBtn.setVisibility(View.GONE);
             }

@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.activity.BrowserActivity;
+import com.mayank.rucky.activity.EditorActivity;
 import com.mayank.rucky.activity.HidActivity;
 import com.mayank.rucky.activity.SplashActivity;
 import com.mayank.rucky.utils.ColorAdapter;
@@ -252,8 +253,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     private void source() {
         final Preference distributionPreference = findPreference("source");
         assert distributionPreference != null;
-        distributionPreference.setSummary(SplashActivity.distro);
-        if(SplashActivity.distro == R.string.releaseGitHub || SplashActivity.distro == R.string.releaseGitHubNightly || SplashActivity.distro == R.string.releaseTest) {
+        distributionPreference.setSummary(EditorActivity.distro);
+        if(EditorActivity.distro == R.string.releaseGitHub || EditorActivity.distro == R.string.releaseGitHubNightly || EditorActivity.distro == R.string.releaseTest) {
             distributionPreference.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(getActivity(), BrowserActivity.class);
                 intent.putExtra(Constants.activityTitle, getResources().getString(R.string.releaseGitHub));
@@ -261,7 +262,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 startActivity(intent);
                 return true;
             });
-        } else if (SplashActivity.distro == R.string.releaseNetHunter) {
+        } else if (EditorActivity.distro == R.string.releaseNetHunter) {
             distributionPreference.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(getActivity(), BrowserActivity.class);
                 intent.putExtra(Constants.activityTitle, getResources().getString(R.string.releaseGitHub));

@@ -5,7 +5,7 @@ if [ "$1" = "release" ]; then
 elif [ "$1" = "nightly" ]; then
     read -p "Commit Msg:" commitMsg
     cp ./nightly/rucky-nightly.apk ../nightly/rucky-nightly.apk
-    openssl sha512 ./nightly/rucky-nightly.apk | cut -d"=" -f2 | cut -d" " -f2 > ../nightly/rucky.cfg
+    openssl sha512 ../nightly/rucky-nightly.apk | cut -d"=" -f2 | cut -d" " -f2 > ../nightly/rucky.sha512
     echo "$2" > ../nightly/rucky.cfg
     nextCommitCount=$(($(git rev-list HEAD --count master)+1))
     echo "$(($(git rev-list HEAD --count master)+1))" >> ../nightly/rucky.cfg
