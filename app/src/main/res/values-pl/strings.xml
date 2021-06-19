@@ -83,7 +83,6 @@
     <string name="btn_select">Wybierz</string>
     <string name="btn_cancel">Anuluj</string>
     <string name="btn_save">Zapisz</string>
-    <string name="file_select">Wybierz plik</string>
     <string name="file_saved">zapisano</string>
     <string name="file_deleted">usunięto</string>
     <string name="file_name">Nazwa pliku</string>

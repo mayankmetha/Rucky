@@ -83,7 +83,6 @@
     <string name="btn_select">选择</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_save">保存</string>
-    <string name="file_select">选择文件</string>
     <string name="file_saved">已保存</string>
     <string name="file_deleted">已删除</string>
     <string name="file_name">文件名称</string>

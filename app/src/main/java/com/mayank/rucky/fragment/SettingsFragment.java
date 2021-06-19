@@ -1,5 +1,6 @@
 package com.mayank.rucky.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -250,23 +251,41 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         archPreference.setSummary(currentArch);
     }
 
+    @SuppressLint("NonConstantResourceId")
     private void source() {
         final Preference distributionPreference = findPreference("source");
         assert distributionPreference != null;
         distributionPreference.setSummary(EditorActivity.distro);
-        if(EditorActivity.distro == R.string.releaseGitHub || EditorActivity.distro == R.string.releaseGitHubNightly || EditorActivity.distro == R.string.releaseTest) {
+        String title = "";
+        String url = "";
+        boolean canIntent = true;
+        switch (EditorActivity.distro) {
+            case R.string.releaseGitHub:
+                title = getResources().getString(R.string.releaseGitHub);
+                url = "https://mayankmetha.github.io/Rucky/";
+                break;
+            case R.string.releaseGitHubNightly:
+                title = getResources().getString(R.string.releaseGitHubNightly);
+                url = "https://mayankmetha.github.io/Rucky/";
+                break;
+            case R.string.releaseTest:
+                title = getResources().getString(R.string.releaseTest);
+                url = "https://mayankmetha.github.io/Rucky/";
+                break;
+            case R.string.releaseNetHunter:
+                title = getResources().getString(R.string.releaseNetHunter);
+                url = "https://store.nethunter.com/en/packages/com.mayank.rucky/";
+                break;
+            default:
+                canIntent = false;
+        }
+        if(canIntent) {
+            String finalTitle = title;
+            String finalUrl = url;
             distributionPreference.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(getActivity(), BrowserActivity.class);
-                intent.putExtra(Constants.activityTitle, getResources().getString(R.string.releaseGitHub));
-                intent.putExtra(Constants.webViewID, "https://mayankmetha.github.io/Rucky/");
-                startActivity(intent);
-                return true;
-            });
-        } else if (EditorActivity.distro == R.string.releaseNetHunter) {
-            distributionPreference.setOnPreferenceClickListener(preference -> {
-                Intent intent = new Intent(getActivity(), BrowserActivity.class);
-                intent.putExtra(Constants.activityTitle, getResources().getString(R.string.releaseGitHub));
-                intent.putExtra(Constants.webViewID, "https://store.nethunter.com/en/packages/com.mayank.rucky/");
+                intent.putExtra(Constants.activityTitle, finalTitle);
+                intent.putExtra(Constants.webViewID, finalUrl);
                 startActivity(intent);
                 return true;
             });

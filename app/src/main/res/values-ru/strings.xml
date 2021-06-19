@@ -83,7 +83,6 @@
     <string name="btn_select">Выбрать</string>
     <string name="btn_cancel">Отменить</string>
     <string name="btn_save">Сохранить</string>
-    <string name="file_select">Выберите файл</string>
     <string name="file_saved">сохранено</string>
     <string name="file_deleted">удалено</string>
     <string name="file_name">Имя файла</string>

@@ -83,7 +83,6 @@
     <string name="btn_select">Επιλογή</string>
     <string name="btn_cancel">Ακύρωση</string>
     <string name="btn_save">Αποθήκευση</string>
-    <string name="file_select">Επιλογή Αρχείου</string>
     <string name="file_saved">αποθηκεύτηκε</string>
     <string name="file_deleted">διαγράφηκε</string>
     <string name="file_name">Όνομα Αρχείου</string>

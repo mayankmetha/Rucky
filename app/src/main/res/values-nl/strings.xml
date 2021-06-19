@@ -83,7 +83,6 @@
     <string name="btn_select">Selecteren</string>
     <string name="btn_cancel">annuleren</string>
     <string name="btn_save">Opslaan</string>
-    <string name="file_select">Bestand selecteren</string>
     <string name="file_saved">opgeslagen</string>
     <string name="file_deleted">verwijderd</string>
     <string name="file_name">File Name</string>

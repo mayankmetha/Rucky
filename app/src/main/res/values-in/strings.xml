@@ -83,7 +83,6 @@
     <string name="btn_select">Select</string>
     <string name="btn_cancel">Batal</string>
     <string name="btn_save">Simpan</string>
-    <string name="file_select">Select File</string>
     <string name="file_saved">tersimpan</string>
     <string name="file_deleted">terhapus</string>
     <string name="file_name">Nama File</string>

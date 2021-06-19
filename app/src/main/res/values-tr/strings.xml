@@ -83,7 +83,6 @@
     <string name="btn_select">Select</string>
     <string name="btn_cancel">İptal</string>
     <string name="btn_save">Kaydet</string>
-    <string name="file_select">Dosya Seçin</string>
     <string name="file_saved">kaydedildi</string>
     <string name="file_deleted">silindi</string>
     <string name="file_name">Dosya Adı</string>

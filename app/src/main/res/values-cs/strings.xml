@@ -83,7 +83,6 @@
     <string name="btn_select">Vybrat</string>
     <string name="btn_cancel">Zrušit</string>
     <string name="btn_save">Uložit</string>
-    <string name="file_select">Vybrat soubor</string>
     <string name="file_saved">uloženo</string>
     <string name="file_deleted">smazáno</string>
     <string name="file_name">Název souboru</string>

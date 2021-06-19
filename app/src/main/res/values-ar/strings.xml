@@ -83,7 +83,6 @@
     <string name="btn_select">حدد</string>
     <string name="btn_cancel">إلغاء</string>
     <string name="btn_save">حفظ</string>
-    <string name="file_select">حدد ملف</string>
     <string name="file_saved">محفوظة</string>
     <string name="file_deleted">تم الحذف</string>
     <string name="file_name">اسم الملف</string>

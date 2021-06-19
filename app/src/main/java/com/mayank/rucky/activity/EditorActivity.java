@@ -25,6 +25,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Base64;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -577,7 +578,7 @@ public class EditorActivity extends AppCompatActivity {
                 fileName[i] = files.get(i).getName();
             }
             AlertDialog.Builder builder= new AlertDialog.Builder(EditorActivity.this);
-            builder.setTitle(getResources().getString(R.string.file_select));
+            builder.setTitle(getResources().getString(R.string.title_delete_file));
             builder.setCancelable(false);
             builder.setItems(fileName, (dialog, i) -> {
                 File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
@@ -604,9 +605,11 @@ public class EditorActivity extends AppCompatActivity {
 
         SaveBtn.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-            builder.setTitle(getResources().getString(R.string.file_name));
-            final EditText fileName = new EditText(EditorActivity.this);
-            builder.setView(fileName);
+            builder.setTitle(getResources().getString(R.string.title_save_file));
+            LayoutInflater saveLI = LayoutInflater.from(this);
+            final View saveView = saveLI.inflate(R.layout.editor_save, null);
+            builder.setView(saveView);
+            final EditText fileName = saveView.findViewById(R.id.save_filename);
             builder.setCancelable(false);
             builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
                 EditText scripts = findViewById(R.id.code);
@@ -665,7 +668,7 @@ public class EditorActivity extends AppCompatActivity {
                 fileName[i] = files.get(i).getName();
             }
             AlertDialog.Builder builder= new AlertDialog.Builder(EditorActivity.this);
-            builder.setTitle(getResources().getString(R.string.file_select));
+            builder.setTitle(getResources().getString(R.string.title_open_file));
             builder.setCancelable(false);
             builder.setItems(fileName, (dialog, i) -> {
                 EditText scripts = findViewById(R.id.code);

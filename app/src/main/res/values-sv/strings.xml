@@ -83,7 +83,6 @@
     <string name="btn_select">Välj</string>
     <string name="btn_cancel">Avbryt</string>
     <string name="btn_save">Spara</string>
-    <string name="file_select">Välj fil</string>
     <string name="file_saved">sparad</string>
     <string name="file_deleted">borttagen</string>
     <string name="file_name">Filnamn</string>

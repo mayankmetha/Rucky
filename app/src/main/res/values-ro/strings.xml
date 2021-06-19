@@ -83,7 +83,6 @@
     <string name="btn_select">Selectare</string>
     <string name="btn_cancel">Anulează</string>
     <string name="btn_save">Salvează</string>
-    <string name="file_select">Selectaţi fişierul</string>
     <string name="file_saved">salvat</string>
     <string name="file_deleted">șterse</string>
     <string name="file_name">Numele fișierului</string>

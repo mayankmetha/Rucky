@@ -83,7 +83,6 @@
     <string name="btn_select">Velg</string>
     <string name="btn_cancel">Avbryt</string>
     <string name="btn_save">Lagre</string>
-    <string name="file_select">Velg fil</string>
     <string name="file_saved">lagret</string>
     <string name="file_deleted">slettet</string>
     <string name="file_name">Fil Navn</string>

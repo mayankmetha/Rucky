@@ -83,7 +83,6 @@
     <string name="btn_select">Valitse</string>
     <string name="btn_cancel">Peruuta</string>
     <string name="btn_save">Tallenna</string>
-    <string name="file_select">Valitse Tiedosto</string>
     <string name="file_saved">tallennettu</string>
     <string name="file_deleted">poistettu</string>
     <string name="file_name">Tiedoston Nimi</string>

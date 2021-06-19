@@ -83,7 +83,6 @@
     <string name="btn_select">Sélectionner</string>
     <string name="btn_cancel">Annuler</string>
     <string name="btn_save">Enregistrer</string>
-    <string name="file_select">Choisir un fichier</string>
     <string name="file_saved">enregistré</string>
     <string name="file_deleted">supprimé</string>
     <string name="file_name">Nom du fichier</string>

@@ -3,8 +3,6 @@
     <string name="icon" translatable="false">icon</string>
 
     <!-- Splash screen -->
-    <string name="unlock">Unlock App</string>
-    <string name="auth">Confirm authentication</string>
     <string name="splashScreen" translatable="false">RUCKY</string>
 
     <!-- Init Screen -->
@@ -38,6 +36,8 @@
     <string name="install_update">Applying Update</string>
 
     <!-- Editor screen -->
+    <string name="unlock">Unlock App</string>
+    <string name="auth">Confirm authentication</string>
     <string name="update">Update</string>
     <string name="setting">Settings</string>
     <string name="codeHint">Type or load rubber ducky scripts here</string>
@@ -67,6 +67,13 @@
     <string name="hid_delete">Delete</string>
 
     <!-- Keylist screen -->
+    <string name="key_title">Key Name</string>
+    <string name="key_character">Key Character</string>
+    <string name="key_code">Key Code</string>
+    <string name="key_ctrl">Ctrl Key Option</string>
+    <string name="key_alt">Alt Key Option</string>
+    <string name="key_shift">Shift Key Option</string>
+    <string name="key_meta">Meta Key Option</string>
     <string name="keycode">Key Code</string>
     <string name="modcode">Modifier Code</string>
 
@@ -115,10 +122,12 @@
     <string name="btn_select">Select</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_save">Save</string>
-    <string name="file_select">Select File</string>
     <string name="file_saved">saved</string>
+    <string name="title_open_file">Open File</string>
+    <string name="title_delete_file">Delete File</string>
     <string name="file_deleted">deleted</string>
     <string name="file_name">File Name</string>
+    <string name="title_save_file">Save File</string>
 
     <string-array name="modes">
         <item>USB Cable</item>

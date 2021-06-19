@@ -83,7 +83,6 @@
     <string name="btn_select">選択</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_save">保存</string>
-    <string name="file_select">ファイルの選択</string>
     <string name="file_saved">保存しました</string>
     <string name="file_deleted">削除しました</string>
     <string name="file_name">ファイル名</string>

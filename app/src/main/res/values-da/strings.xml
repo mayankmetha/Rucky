@@ -83,7 +83,6 @@
     <string name="btn_select">Vælg</string>
     <string name="btn_cancel">Annuller</string>
     <string name="btn_save">Gem</string>
-    <string name="file_select">Vælg Fil</string>
     <string name="file_saved">gemt</string>
     <string name="file_deleted">slettet</string>
     <string name="file_name">Fil Navn</string>

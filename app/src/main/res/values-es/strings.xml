@@ -83,7 +83,6 @@
     <string name="btn_select">Seleccionar</string>
     <string name="btn_cancel">Cancelar</string>
     <string name="btn_save">Guardar</string>
-    <string name="file_select">Seleccionar archivo</string>
     <string name="file_saved">guardado</string>
     <string name="file_deleted">borrado</string>
     <string name="file_name">Nombre del archivo</string>
