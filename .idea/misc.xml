@@ -4,13 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-night/ripple.xml" value="0.303125" />
+        <entry key="app/src/main/res/drawable/color_button_selected.xml" value="0.16640625" />
         <entry key="app/src/main/res/drawable/hid_offline.xml" value="0.171875" />
+        <entry key="app/src/main/res/drawable/ic_icon.xml" value="0.292578125" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.303125" />
         <entry key="app/src/main/res/drawable/ic_run.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ripple.xml" value="0.303125" />
+        <entry key="app/src/main/res/drawable/splash_foreground.xml" value="0.292578125" />
         <entry key="app/src/main/res/layout/activity_browser.xml" value="0.23394808743169399" />
         <entry key="app/src/main/res/layout/activity_editor.xml" value="0.17452185792349728" />
         <entry key="app/src/main/res/layout/activity_init.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/activity_init_slide1.xml" value="0.16484375" />
         <entry key="app/src/main/res/layout/activity_keylist.xml" value="0.23668032786885246" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.159765625" />
         <entry key="app/src/main/res/layout/color_grid.xml" value="0.16484375" />
@@ -19,6 +24,9 @@
         <entry key="app/src/main/res/layout/key_details.xml" value="0.159765625" />
         <entry key="app/src/main/res/layout/key_list_item.xml" value="0.23668032786885246" />
         <entry key="app/src/main/res/menu/key_option.xml" value="0.291015625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.176953125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_debug.xml" value="0.176953125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.303125" />
         <entry key="app/src/main/res/xml/key_option.xml" value="0.22814207650273224" />
       </map>
     </option>
