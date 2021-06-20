@@ -33,7 +33,7 @@ public class NetSocketReceiver extends BroadcastReceiver {
             status = 0;
         }
         if (oldStatus != status)
-            EditorActivity.updateServiceStatus(context.getApplicationContext());
+            EditorActivity.updateServiceStatus(context);
         if(config.getNetworkStatus() && !EditorActivity.cmds.isEmpty()) {
             new Thread(() -> {
                 String ip = config.getNetworkAddress().substring(0,config.getNetworkAddress().indexOf(":"));

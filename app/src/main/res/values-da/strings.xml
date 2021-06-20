@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB Afbrudt</string>
     <string name="config_status_net_on">Netværksokkel Forbundet</string>
     <string name="config_status_net_off">Netværksokkel Afbrudt</string>
-    <string name="config_status_net_disabled">Netværksokkel Deaktiveret</string>
     <string name="socket_address">Indtast Socket IP og Port Adresse</string>
     <!-- Setting screen -->
     <string name="setting_general">Almindelige bestemmelser</string>

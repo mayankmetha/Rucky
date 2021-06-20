@@ -29,16 +29,16 @@ public class USBReceiver extends BroadcastReceiver {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             if (action.equals("android.hardware.usb.action.USB_STATE")) {
                 config.setUSBStatus(Objects.requireNonNull(intent.getExtras()).getBoolean("connected"));
-                EditorActivity.updateServiceStatus(context.getApplicationContext());
+                EditorActivity.updateServiceStatus(context);
             }
         } else {
             if (action.equals(Intent.ACTION_POWER_CONNECTED)) {
                 config.setUSBStatus(true);
-                EditorActivity.updateServiceStatus(context.getApplicationContext());
+                EditorActivity.updateServiceStatus(context);
             }
             if (action.equals(Intent.ACTION_POWER_DISCONNECTED)) {
                 config.setUSBStatus(false);
-                EditorActivity.updateServiceStatus(context.getApplicationContext());
+                EditorActivity.updateServiceStatus(context);
             }
         }
         if(config.getUSBStatus() && getRoot() && !EditorActivity.cmds.isEmpty()) {

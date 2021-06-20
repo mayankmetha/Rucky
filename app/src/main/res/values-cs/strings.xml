@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB odpojeno</string>
     <string name="config_status_net_on">Síťová raketa připojena</string>
     <string name="config_status_net_off">Síťová raketa odpojena</string>
-    <string name="config_status_net_disabled">Síťová raketa zakázána</string>
     <string name="socket_address">Zadejte IP a adresu portu</string>
     <!-- Setting screen -->
     <string name="setting_general">Obecné</string>

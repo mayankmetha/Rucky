@@ -36,6 +36,9 @@
     <string name="install_update">Applying Update</string>
 
     <!-- Editor screen -->
+    <string name="exit_dialog">Would you like to hide or exit the app?</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_back">Hide</string>
     <string name="unlock">Unlock App</string>
     <string name="auth">Confirm authentication</string>
     <string name="update">Update</string>
@@ -56,8 +59,8 @@
     <string name="config_status_usb_off">USB Disconnected</string>
     <string name="config_status_net_on">Network Socket Connected</string>
     <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="config_status_net_disabled">Network Socket Disabled</string>
     <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="socket_ip_hint">[0&#8211;255].[0&#8211;255].[0&#8211;255].[0&#8211;255]:[1&#8211;65535]</string>
 
     <!-- HID config screen -->
     <string name="hid_activity">HID Config</string>

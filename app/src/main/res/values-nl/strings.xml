@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB verbinding verbroken</string>
     <string name="config_status_net_on">Netwerk Socket verbonden</string>
     <string name="config_status_net_off">Netwerk socket verbinding verbroken</string>
-    <string name="config_status_net_disabled">Netwerk Socket uitgeschakeld</string>
     <string name="socket_address">Voer Socket IP en Poort Adres in</string>
     <!-- Setting screen -->
     <string name="setting_general">Algemeen</string>

@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB koblet fra</string>
     <string name="config_status_net_on">Nettverkskontakt tilkoblet</string>
     <string name="config_status_net_off">Nettverksforbindelsen er frakoblet</string>
-    <string name="config_status_net_disabled">Nettverksforbindelsen er deaktivert</string>
     <string name="socket_address">Skriv inn Socket IP og port adresse</string>
     <!-- Setting screen -->
     <string name="setting_general">Normal</string>

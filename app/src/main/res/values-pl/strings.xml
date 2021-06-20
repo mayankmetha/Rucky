@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB odłączony</string>
     <string name="config_status_net_on">Skieszonka sieciowa połączona</string>
     <string name="config_status_net_off">Skieszonka sieciowa odłączona</string>
-    <string name="config_status_net_disabled">Skieszonka sieci wyłączona</string>
     <string name="socket_address">Wprowadź adres IP gniazda i port</string>
     <!-- Setting screen -->
     <string name="setting_general">Ogólny</string>

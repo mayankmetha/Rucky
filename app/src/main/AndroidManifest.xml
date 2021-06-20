@@ -35,7 +35,8 @@
 
         <service
             android:name=".service.SocketHeartbeatService"
-            android:enabled="true" />
+            android:enabled="true"
+            android:stopWithTask="true" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -80,7 +81,7 @@
             android:clearTaskOnLaunch="true"
             android:configChanges="uiMode|locale"
             android:launchMode="singleTask"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -94,7 +95,7 @@
             android:icon="${appIcon}"
             android:roundIcon="${appIconRound}"
             android:targetActivity=".activity.SplashActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

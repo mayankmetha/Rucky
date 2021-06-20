@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB 接続が切断されました</string>
     <string name="config_status_net_on">ネットワークソケットが接続されました</string>
     <string name="config_status_net_off">ネットワークソケットが切断されました</string>
-    <string name="config_status_net_disabled">ネットワークソケットが無効です</string>
     <string name="socket_address">ソケットIPとポートアドレスを入力してください</string>
     <!-- Setting screen -->
     <string name="setting_general">一般</string>

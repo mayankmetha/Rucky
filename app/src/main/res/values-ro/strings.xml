@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB deconectat</string>
     <string name="config_status_net_on">Socket de rețea conectat</string>
     <string name="config_status_net_off">Socket rețea deconectat</string>
-    <string name="config_status_net_disabled">Socket de rețea dezactivat</string>
     <string name="socket_address">Introdu Socket IP și Port Adresa</string>
     <!-- Setting screen -->
     <string name="setting_general">Generalități</string>

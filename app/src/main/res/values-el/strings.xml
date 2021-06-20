@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">Το USB Αποσυνδέθηκε</string>
     <string name="config_status_net_on">Συνδέθηκε Δικτυακή Υποδοχή</string>
     <string name="config_status_net_off">Αποσύνδεση Υποδοχής Δικτύου</string>
-    <string name="config_status_net_disabled">Απενεργοποίηση Υποδοχής Δικτύου</string>
     <string name="socket_address">Εισαγωγή διεύθυνσης IP και θύρας υποδοχής</string>
     <!-- Setting screen -->
     <string name="setting_general">Γενικά</string>

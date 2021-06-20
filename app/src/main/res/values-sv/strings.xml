@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB frånkopplad</string>
     <string name="config_status_net_on">Nätverksutgång ansluten</string>
     <string name="config_status_net_off">Nätverksutgång frånkopplad</string>
-    <string name="config_status_net_disabled">Nätverksutgång inaktiverad</string>
     <string name="socket_address">Ange Socket IP och Port Adress</string>
     <!-- Setting screen -->
     <string name="setting_general">Allmänt</string>

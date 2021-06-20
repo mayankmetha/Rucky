@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB غير متصل</string>
     <string name="config_status_net_on">مقبس الشبكة متصل</string>
     <string name="config_status_net_off">مقبس الشبكة غير متصل</string>
-    <string name="config_status_net_disabled">مقبس الشبكة معطل</string>
     <string name="socket_address">أدخل عنوان IP والمنفذ</string>
     <!-- Setting screen -->
     <string name="setting_general">عام</string>

@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB отключен</string>
     <string name="config_status_net_on">Сетевое сокет подключено</string>
     <string name="config_status_net_off">Сетевое сокет отключено</string>
-    <string name="config_status_net_disabled">Сетевое сокет отключено</string>
     <string name="socket_address">Введите IP-адрес сокета и порт</string>
     <!-- Setting screen -->
     <string name="setting_general">Общие сведения</string>

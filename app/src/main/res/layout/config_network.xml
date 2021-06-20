@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/EditTextStyle"
+        android:id="@+id/socket_title_box"
+        app:boxBackgroundColor="@color/transparent"
+        android:textColorHint="?attr/appColorAccent"
+        app:boxStrokeColor="@color/text_input_box_stroke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/socket_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:gravity="start"
+            android:hint="@string/socket_ip_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@drawable/cursor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

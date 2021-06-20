@@ -3,6 +3,7 @@ package com.mayank.rucky.activity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -58,7 +59,7 @@ public class ConfigActivity extends AppCompatActivity {
         ipStatusDivider = findViewById(R.id.divider_config3);
 
         ipButton.setText(config.getNetworkAddress());
-        SOCKET_ADDRESS = Pattern.compile(Patterns.IP_ADDRESS+":"+"[1-9][0-9]{0,4}");
+        SOCKET_ADDRESS = Pattern.compile(Patterns.IP_ADDRESS+":"+"([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])");
 
         updateStatus();
         language();
@@ -108,7 +109,7 @@ public class ConfigActivity extends AppCompatActivity {
     private void updateStatus() {
         if (config.getHIDMode() == 0) {
             config.setNetworkStatus(false);
-            EditorActivity.updateNotification(this);
+            EditorActivity.stopNetworkSocketService(this);
             ipButton.setVisibility(View.INVISIBLE);
             ipStatusDivider.setVisibility(View.INVISIBLE);
             if (config.getUSBStatus()) {
@@ -119,6 +120,7 @@ public class ConfigActivity extends AppCompatActivity {
                 statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_usb_off));
             }
         } else if (config.getHIDMode() == 1) {
+            EditorActivity.startNetworkSocketService(this);
             ipButton.setVisibility(View.VISIBLE);
             ipStatusDivider.setVisibility(View.VISIBLE);
             if (config.getNetworkStatus()) {
@@ -136,9 +138,11 @@ public class ConfigActivity extends AppCompatActivity {
         ipButton.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
             builder.setTitle(getResources().getString(R.string.socket_address));
-            final EditText address = new EditText(ConfigActivity.this);
+            LayoutInflater socketLI = LayoutInflater.from(this);
+            final View socketView = socketLI.inflate(R.layout.config_network, null);
+            builder.setView(socketView);
+            EditText address = socketView.findViewById(R.id.socket_title);
             address.setText(config.getNetworkAddress());
-            builder.setView(address);
             builder.setCancelable(false);
             builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
                 Matcher matcher = SOCKET_ADDRESS.matcher(address.getText().toString());

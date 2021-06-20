@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB 断开连接</string>
     <string name="config_status_net_on">网络套接字已连接</string>
     <string name="config_status_net_off">网络套接字断开连接</string>
-    <string name="config_status_net_disabled">网络套接字已禁用</string>
     <string name="socket_address">输入套接字IP和端口地址</string>
     <!-- Setting screen -->
     <string name="setting_general">A. 概况</string>

@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">Usb Yhteys Katkaistu</string>
     <string name="config_status_net_on">Verkon Socket Yhdistetty</string>
     <string name="config_status_net_off">Verkkopeli Yhteys Katkaistu</string>
-    <string name="config_status_net_disabled">Network Socket Pois Käytöstä</string>
     <string name="socket_address">Syötä Socket IP ja satamaosoite</string>
     <!-- Setting screen -->
     <string name="setting_general">Yleistä</string>

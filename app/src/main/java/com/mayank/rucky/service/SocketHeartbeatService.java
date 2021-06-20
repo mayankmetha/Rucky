@@ -1,6 +1,5 @@
 package com.mayank.rucky.service;
 
-import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
@@ -32,18 +31,21 @@ public class SocketHeartbeatService extends Service {
         return null;
     }
 
-    @SuppressLint("UnspecifiedImmutableFlag")
     @Override
     public void onCreate() {
         super.onCreate();
         config = new Config(getApplicationContext());
         i = new Intent();
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
         Intent sIntent = new Intent(getApplicationContext(), SplashActivity.class);
         sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent sPendingIntent;
-        sPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, sIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        sPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, sIntent, PendingIntent.FLAG_IMMUTABLE);
         startForeground(1, new NotificationCompat.Builder(getApplicationContext(), Constants.SCHANNEL_ID)
-                .setContentTitle(config.getHIDLanguage() == 1 ? getApplicationContext().getResources().getString(R.string.config_status_net_off) : getApplicationContext().getResources().getString(R.string.config_status_net_disabled))
+                .setContentTitle(getApplicationContext().getResources().getString(R.string.config_status_net_off))
                 .setSmallIcon(R.drawable.ic_notification)
                 .setOngoing(true)
                 .setContentIntent(sPendingIntent)
@@ -54,12 +56,14 @@ public class SocketHeartbeatService extends Service {
         registerReceiver(receiver, filter);
         heartbeatTask();
         EditorActivity.updateNotification(getApplicationContext());
+        return START_NOT_STICKY;
     }
 
     @Override
     public void onDestroy() {
         unregisterReceiver(receiver);
         stopSelf();
+        stopForeground(true);
         super.onDestroy();
     }
 

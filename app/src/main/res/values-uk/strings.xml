@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB від’єднано</string>
     <string name="config_status_net_on">Мережу Socket підключена</string>
     <string name="config_status_net_off">Мережеву сокет від\'єднано</string>
-    <string name="config_status_net_disabled">Мережевий сокет вимкнено</string>
     <string name="socket_address">Введіть IP та адресу порту Socket</string>
     <!-- Setting screen -->
     <string name="setting_general">Загальні налаштування</string>

@@ -153,6 +153,23 @@ public class EditorActivity extends AppCompatActivity {
         ide();
     }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
+        builder.setTitle(getResources().getString(R.string.exit_dialog));
+        builder.setCancelable(false);
+        builder.setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
+            if(config.getHIDMode() == 1)
+                stopNetworkSocketService(this);
+            finishAndRemoveTask();
+        });
+        builder.setNeutralButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
+        builder.setNegativeButton(getResources().getString(R.string.btn_back), (dialog, which) -> super.onBackPressed());
+        AlertDialog exitDialog = builder.create();
+        Objects.requireNonNull(exitDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        exitDialog.show();
+    }
+
     public void biometric() {
         Executor executor = ContextCompat.getMainExecutor(this);
         BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
@@ -292,20 +309,67 @@ public class EditorActivity extends AppCompatActivity {
             serviceNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(new Intent(this, SocketHeartbeatService.class));
-        } else {
-            startService(new Intent(this, SocketHeartbeatService.class));
-        }
-        updateNotification(this);
+        updateServiceStatus(this);
     }
 
-    @SuppressLint("UnspecifiedImmutableFlag")
+    public static void startNetworkSocketService(Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.startForegroundService(new Intent(context, SocketHeartbeatService.class));
+        } else {
+            context.startService(new Intent(context, SocketHeartbeatService.class));
+        }
+        updateNotification(context);
+    }
+
+    public static void stopNetworkSocketService(Context context) {
+        context.stopService(new Intent(context, SocketHeartbeatService.class));
+    }
+
+    public static boolean configActivityCreated() {
+        return ConfigActivity.statusText != null && ConfigActivity.statusImage != null;
+    }
+
+    public static void updateConfigActivityUSBStatus(Config config, Context context) {
+        if (configActivityCreated()) {
+            if (config.getUSBStatus()) {
+                ConfigActivity.statusText.setText(R.string.config_status_usb_on);
+                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_usb));
+            } else {
+                ConfigActivity.statusText.setText(R.string.config_status_usb_off);
+                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_usb_off));
+            }
+        }
+    }
+
+    public static void updateConfigActivityNetSocketStatus(Config config, Context context) {
+        if (configActivityCreated()) {
+            if (config.getNetworkStatus()) {
+                ConfigActivity.statusText.setText(R.string.config_status_net_on);
+                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_net));
+            } else {
+                ConfigActivity.statusText.setText(R.string.config_status_net_off);
+                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_net_off));
+            }
+        }
+    }
+
+    public static void updateServiceStatus(Context context) {
+        Config config = new Config(context);
+        if (config.getHIDMode() == 0) {
+            stopNetworkSocketService(context);
+            updateConfigActivityUSBStatus(config, context);
+        } else if (config.getHIDMode() == 1) {
+            startNetworkSocketService(context);
+            updateConfigActivityNetSocketStatus(config, context);
+            updateNotification(context);
+        }
+    }
+
     public static void buildNotification(Context context, String text) {
         Intent sIntent = new Intent(context, SplashActivity.class);
         sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent sPendingIntent;
-        sPendingIntent = PendingIntent.getActivity(context, 0, sIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        sPendingIntent = PendingIntent.getActivity(context, 0, sIntent, PendingIntent.FLAG_IMMUTABLE);
         sNotify = new NotificationCompat.Builder(context, Constants.SCHANNEL_ID)
                 .setContentTitle(text)
                 .setSmallIcon(R.drawable.ic_notification)
@@ -317,39 +381,11 @@ public class EditorActivity extends AppCompatActivity {
 
     public static void updateNotification(Context context) {
         Config c = new Config(context);
-        if (c.getHIDMode() == 0)
-            buildNotification(context,context.getString(R.string.config_status_net_disabled));
-        else if (c.getHIDMode() == 1) {
+        if (c.getHIDMode() == 1) {
             if (c.getNetworkStatus())
                 buildNotification(context,context.getString(R.string.config_status_net_on));
             else
                 buildNotification(context,context.getString(R.string.config_status_net_off));
-        }
-    }
-
-    public static void updateServiceStatus(Context context) {
-        Config config = new Config(context);
-        updateNotification(context);
-        if (ConfigActivity.statusText == null)
-            return;
-        if (ConfigActivity.statusImage == null)
-            return;
-        if (config.getHIDMode() == 0) {
-            if (config.getUSBStatus()) {
-                ConfigActivity.statusText.setText(R.string.config_status_usb_on);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_usb));
-            } else {
-                ConfigActivity.statusText.setText(R.string.config_status_usb_off);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_usb_off));
-            }
-        } else if (config.getHIDMode() == 1) {
-            if (config.getNetworkStatus()) {
-                ConfigActivity.statusText.setText(R.string.config_status_net_on);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_net));
-            } else {
-                ConfigActivity.statusText.setText(R.string.config_status_net_off);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_net_off));
-            }
         }
     }
 

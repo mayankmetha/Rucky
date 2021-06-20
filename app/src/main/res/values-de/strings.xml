@@ -46,7 +46,6 @@
     <string name="config_status_usb_off">USB-Verbindung getrennt</string>
     <string name="config_status_net_on">Netzwerk-Socket verbunden</string>
     <string name="config_status_net_off">Netzwerk-Socket getrennt</string>
-    <string name="config_status_net_disabled">Netzwerk-Socket deaktiviert</string>
     <string name="socket_address">Socket-IP und Port eingeben</string>
     <!-- Setting screen -->
     <string name="setting_general">Allgemein</string>
