@@ -475,7 +475,7 @@ public class EditorActivity extends AppCompatActivity {
 
     private StringRequest getUpdateSignature() {
         String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.sha512";
-        return new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> getSHA512 = response, (Response.ErrorListener) error -> getSHA512 = "");
+        return new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> getSHA512 = response.trim(), (Response.ErrorListener) error -> getSHA512 = "");
     }
 
     private void updateScreen() {
