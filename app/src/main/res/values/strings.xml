@@ -73,13 +73,13 @@
     <string name="key_title">Key Name</string>
     <string name="key_character">Key Character</string>
     <string name="key_code">Key Code</string>
-    <string name="key_ctrl">Ctrl Key Option</string>
-    <string name="key_alt">Alt Key Option</string>
-    <string name="key_shift">Shift Key Option</string>
-    <string name="key_meta">Meta Key Option</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
     <string name="keycode">Key Code</string>
     <string name="modcode">Modifier Code</string>
-    <string name="key_no">No</string>
+    <string name="key_no">None</string>
     <string name="key_left">Left</string>
     <string name="key_right">Right</string>
 

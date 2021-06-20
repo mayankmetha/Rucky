@@ -205,6 +205,7 @@
         <item name="alertDialogTheme">@style/Popup</item>
         <item name="dialogPreferenceStyle">@style/Popup</item>
         <item name="colorControlHighlight">?attr/appColorAccentDark</item>
+        <item name="chipStyle">@style/RadioChip</item>
     </style>
 
     <style name="Popup" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
@@ -268,8 +269,13 @@
     <style name="EditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/text_input_box_stroke</item>
         <item name="hintTextColor">?attr/appColorAccent</item>
-        <item name="colorControlHighlight">?attr/appColorAccentDark</item>
-        <item name="android:foreground">@drawable/ripple</item>
+    </style>
+
+    <style name="RadioChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/radio_chip_background</item>
+        <item name="android:textColor">@color/radio_chip_text</item>
+        <item name="chipStrokeColor">?attr/appColorAccent</item>
+        <item name="chipStrokeWidth">1dp</item>
     </style>
 
     <style name="IconTextButton" parent="Widget.MaterialComponents.Button.TextButton">
