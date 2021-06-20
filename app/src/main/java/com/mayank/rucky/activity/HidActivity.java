@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -116,8 +117,10 @@ public class HidActivity extends AppCompatActivity {
         addNewHid.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(HidActivity.this);
             builder.setTitle(getResources().getString(R.string.file_name));
-            final EditText fileName = new EditText(HidActivity.this);
-            builder.setView(fileName);
+            LayoutInflater saveLI = LayoutInflater.from(this);
+            final View saveView = saveLI.inflate(R.layout.editor_save, null);
+            builder.setView(saveView);
+            final EditText fileName = saveView.findViewById(R.id.save_filename);
             builder.setCancelable(false);
             builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
                 File file;
