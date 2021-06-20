@@ -1,13 +1,21 @@
 package com.mayank.rucky.activity;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.PopupMenu;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-
-import android.os.Bundle;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.KeyModel;
@@ -24,6 +32,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Objects;
 
@@ -50,11 +59,6 @@ public class KeylistActivity extends AppCompatActivity {
         TextView toolbarTitle = findViewById(R.id.toolbar_title);
         toolbarTitle.setText(getIntent().getStringExtra(Constants.activityTitle));
 
-        //TODO: toolbar new buttons
-
-        Button refreshBtn = findViewById(R.id.refresh_keymap_btn);
-        refreshBtn.setOnClickListener(v -> refreshList());
-
         keys = new ArrayList<>();
         file = new File(getExternalFilesDir("keymap"), Objects.requireNonNull(getIntent().getStringExtra(Constants.activityFile)));
 
@@ -62,6 +66,12 @@ public class KeylistActivity extends AppCompatActivity {
         adapter = new KeyAdapter(keys, this);
         keylist.setAdapter(adapter);
         refreshList();
+
+        Button refreshBtn = findViewById(R.id.refresh_keymap_btn);
+        refreshBtn.setOnClickListener(v -> refreshList());
+
+        Button newKeyBtn = findViewById(R.id.add_keymap_btn);
+        newKeyBtn.setOnClickListener(v -> keyDetailDialog("New Key"));
 
         //TODO: OnClickListener
 
@@ -98,5 +108,24 @@ public class KeylistActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         adapter.notifyDataSetChanged();
+    }
+
+    void keyDetailDialog(String title) {
+        AlertDialog.Builder keyDialog = new AlertDialog.Builder(KeylistActivity.this);
+        keyDialog.setTitle(title);
+        LayoutInflater keyLI = LayoutInflater.from(this);
+        final View keyDetailView = keyLI.inflate(R.layout.key_details, null);
+        keyDialog.setView(keyDetailView);
+        keyDialog.setCancelable(false);
+        keyDialog.setPositiveButton(R.string.saveBtn, (dialog, which) -> {
+            EditText keyTitle = keyDetailView.findViewById(R.id.key_title_edittext);
+            EditText keyCharacter = keyDetailView.findViewById(R.id.key_character_edittext);
+            EditText keyCode = keyDetailView.findViewById(R.id.key_code_edittext);
+
+        });
+        keyDialog.setNegativeButton(R.string.btn_cancel, (dialog, which) -> dialog.cancel());
+        AlertDialog keyForm = keyDialog.create();
+        Objects.requireNonNull(keyForm.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        keyForm.show();
     }
 }
