@@ -36,7 +36,6 @@ android {
                 checkReleaseBuilds false
                 abortOnError false
             }
-            applicationIdSuffix ".debug"
             manifestPlaceholders = [
                     appIcon: "@mipmap/ic_launcher_debug",
                     appIconRound: "@mipmap/ic_launcher_debug_round"
@@ -51,7 +50,6 @@ android {
                 checkReleaseBuilds false
                 abortOnError false
             }
-            applicationIdSuffix ".nightly"
             manifestPlaceholders = [
                     appIcon: "@mipmap/ic_launcher_nightly",
                     appIconRound: "@mipmap/ic_launcher_nightly_round"
