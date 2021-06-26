@@ -82,6 +82,7 @@
     <string name="key_no">None</string>
     <string name="key_left">Left</string>
     <string name="key_right">Right</string>
+    <string name="key_details">Key Details</string>
 
     <!-- Setting screen -->
     <string name="setting_general">General</string>

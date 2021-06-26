@@ -1,5 +1,7 @@
 package com.mayank.rucky.fragment;
 
+import static android.util.Base64.encodeToString;
+
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -44,8 +46,6 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
-import static android.util.Base64.encodeToString;
-
 public class SettingsFragment extends PreferenceFragmentCompat {
 
     private Config config;
@@ -61,13 +61,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
         this.requireActivity().setTheme(Constants.themeList[config.getAccentTheme()]);
 
-        hidSettings();
         darkThemeSetting();
         accentColorSetting();
         hideLauncherIcon();
         security();
         cleanup();
 
+        hidSettings();
         usb();
         net();
 
@@ -79,16 +79,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         gitIssue();
         translate();
-    }
-
-    private void hidSettings() {
-        final Preference hidPreference = findPreference("hid");
-        assert hidPreference != null;
-        hidPreference.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity(), HidActivity.class);
-            startActivity(intent);
-            return true;
-        });
     }
 
     private void darkThemeSetting() {
@@ -191,6 +181,16 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.setData(Uri.parse("package:com.mayank.rucky"));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            startActivity(intent);
+            return true;
+        });
+    }
+
+    private void hidSettings() {
+        final Preference hidPreference = findPreference("hid");
+        assert hidPreference != null;
+        hidPreference.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity(), HidActivity.class);
             startActivity(intent);
             return true;
         });

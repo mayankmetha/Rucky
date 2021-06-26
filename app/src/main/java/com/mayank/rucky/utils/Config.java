@@ -131,6 +131,23 @@ public class Config extends Application {
         editor.putInt(Constants.PREF_HID_MODE, mode).apply();
     }
 
+    // hid intent
+    public String getHIDIntent() {
+        return sharedPreferences.getString(Constants.PREF_HID_INTENT, "");
+    }
+
+    public void setHIDIntent(String hidIntent) {
+        editor.putString(Constants.PREF_HID_INTENT, hidIntent).apply();
+    }
+
+    public String getHIDFile() {
+        return sharedPreferences.getString(Constants.PREF_HID_FILE, "");
+    }
+
+    public void setHIDFile(String hidFile) {
+        editor.putString(Constants.PREF_HID_FILE, hidFile).apply();
+    }
+
     // usb connection status
     public boolean getUSBStatus() {
         return sharedPreferences.getBoolean(Constants.PREF_DEV_USB_CONNECTION, false);

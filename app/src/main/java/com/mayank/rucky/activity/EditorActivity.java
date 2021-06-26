@@ -34,7 +34,6 @@ import android.widget.EditText;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
@@ -456,7 +455,7 @@ public class EditorActivity extends AppCompatActivity {
     private StringRequest getUpdateMetadata() {
         String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.cfg" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.cfg";
         return new StringRequest(Request.Method.GET, url,
-                (Response.Listener<String>) response -> {
+                response -> {
                     String[] lines = response.split("\\r?\\n");
                     try {
                         minAndroidSDK = lines[0] != null ? Integer.parseInt(lines[0]) : 0;
@@ -466,7 +465,7 @@ public class EditorActivity extends AppCompatActivity {
                         newNightly = currentNightly;
                     }
                     if (Build.VERSION.SDK_INT != 0 && Build.VERSION.SDK_INT >= minAndroidSDK) queue.add(getUpdateSignature());
-                }, (Response.ErrorListener) error -> {
+                }, error -> {
             minAndroidSDK = 0;
             newNightly = currentNightly;
         }
@@ -475,7 +474,7 @@ public class EditorActivity extends AppCompatActivity {
 
     private StringRequest getUpdateSignature() {
         String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.sha512";
-        return new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> getSHA512 = response.trim(), (Response.ErrorListener) error -> getSHA512 = "");
+        return new StringRequest(Request.Method.GET, url, response -> getSHA512 = response.trim(), error -> getSHA512 = "");
     }
 
     private void updateScreen() {

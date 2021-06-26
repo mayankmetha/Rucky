@@ -131,11 +131,11 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="311b92" />
-                                      <entry key="backgroundLayerName" value="ic_launcher_background_debug" />
+                                      <entry key="backgroundColor" value="034a75" />
+                                      <entry key="backgroundLayerName" value="ic_launcher_background_nightly" />
                                       <entry key="foregroundLayerName" value="ic_launcher_foreground" />
                                       <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="ic_launcher_debug" />
+                                      <entry key="outputName" value="ic_launcher_nightly" />
                                     </map>
                                   </option>
                                 </PersistentState>

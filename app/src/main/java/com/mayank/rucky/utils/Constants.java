@@ -12,7 +12,6 @@ public class Constants {
     //web view
     public static final String activityTitle = "ACTIVITY_TITLE";
     public static final String webViewID = "WEBVIEW_URL";
-    public static final String activityFile = "HID_FILENAME";
 
     //shared preferences
     public static final String PREF = "settings";
@@ -31,6 +30,8 @@ public class Constants {
     //hid
     public static final String PREF_HID_LANG = "hidLang";
     public static final String PREF_HID_MODE = "hidMode";
+    public static final String PREF_HID_INTENT = "hidIntent";
+    public static final String PREF_HID_FILE = "hidFile";
 
     //keystore
     public static final String PREF_GEN_KEY = "genKeyDone";

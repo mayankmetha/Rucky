@@ -31,6 +31,8 @@ import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.HidAdapter;
 
+import org.json.JSONObject;
+
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -59,56 +61,55 @@ public class HidActivity extends AppCompatActivity {
         }
         setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_hid);
-
+        config.setHIDIntent("");
+        config.setHIDFile("");
         hidList = findViewById(R.id.hid_list);
         adapter = new HidAdapter(EditorActivity.keymap, this);
         hidList.removeAllViewsInLayout();
-        if (!EditorActivity.keymap.isEmpty()) {
-            hidList.removeAllViewsInLayout();
-            hidList.setAdapter(adapter);
-            hidList.setOnItemClickListener((parent, view, position, id) -> {
-                HidModel model = Objects.requireNonNull(adapter.getItem(position));
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle(model.getHidModelName());
-                builder.setCancelable(true);
+        hidList.removeAllViewsInLayout();
+        hidList.setAdapter(adapter);
+        hidList.setOnItemClickListener((parent, view, position, id) -> {
+            HidModel model = Objects.requireNonNull(adapter.getItem(position));
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(model.getHidModelName());
+            builder.setCancelable(true);
 
-                switch (model.getHidModelState()) {
-                    case Constants.HID_DOWNLOAD:
-                        builder.setPositiveButton(R.string.hid_download, (dialog, which) -> {
-                            hidDownload(this, view, model);
-                            dialog.cancel();
-                        });
-                        break;
-                    case Constants.HID_UPDATE:
-                        builder.setPositiveButton(R.string.hid_update, (dialog, which) -> {
-                            hidDownload(this, view, model);
-                            dialog.cancel();
-                        });
-                        builder.setNegativeButton(R.string.hid_delete, (dialog, which) -> {
-                            hidDelete(view, model);
-                            dialog.cancel();
-                        });
-                        builder.setNeutralButton(R.string.hid_edit, (dialog, which) -> {
-                            keylist(model.getHidModelName(),model.getHidModelFilename());
-                            dialog.cancel();
-                        });
-                    case Constants.HID_OFFLINE:
-                        builder.setNegativeButton(R.string.hid_delete, (dialog, which) -> {
-                            hidDelete(view, model);
-                            dialog.cancel();
-                        });
-                        builder.setNeutralButton(R.string.hid_edit, (dialog, which) -> {
-                            keylist(model.getHidModelName(),model.getHidModelFilename());
-                            dialog.cancel();
-                        });
-                        break;
-                }
+            switch (model.getHidModelState()) {
+                case Constants.HID_DOWNLOAD:
+                    builder.setPositiveButton(R.string.hid_download, (dialog, which) -> {
+                        hidDownload(this, view, model);
+                        dialog.cancel();
+                    });
+                    break;
+                case Constants.HID_UPDATE:
+                    builder.setPositiveButton(R.string.hid_update, (dialog, which) -> {
+                        hidDownload(this, view, model);
+                        dialog.cancel();
+                    });
+                    builder.setNegativeButton(R.string.hid_delete, (dialog, which) -> {
+                        hidDelete(model);
+                        dialog.cancel();
+                    });
+                    builder.setNeutralButton(R.string.hid_edit, (dialog, which) -> {
+                        keylist(model.getHidModelName(), model.getHidModelFilename());
+                        dialog.cancel();
+                    });
+                case Constants.HID_OFFLINE:
+                    builder.setNegativeButton(R.string.hid_delete, (dialog, which) -> {
+                        hidDelete(model);
+                        dialog.cancel();
+                    });
+                    builder.setNeutralButton(R.string.hid_edit, (dialog, which) -> {
+                        keylist(model.getHidModelName(), model.getHidModelFilename());
+                        dialog.cancel();
+                    });
+                    break;
+            }
 
-                AlertDialog listAction = builder.create();
-                Objects.requireNonNull(listAction.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                listAction.show();
-            });
-        }
+            AlertDialog listAction = builder.create();
+            Objects.requireNonNull(listAction.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            listAction.show();
+        });
 
         Button refreshHid = findViewById(R.id.refresh_hid_btn);
         refreshHid.setOnClickListener(view -> updateListView());
@@ -139,9 +140,13 @@ public class HidActivity extends AppCompatActivity {
                 file = new File(getExternalFilesDir("keymap"),fileNameString+".json");
                 FileOutputStream fOutputStream;
                 OutputStream outputStream;
+                JSONObject jsonFile = new JSONObject();
                 try {
+                    jsonFile.put("version","0");
+                    jsonFile.put("mapping", new JSONObject());
                     fOutputStream = new FileOutputStream(file);
                     outputStream = new BufferedOutputStream(fOutputStream);
+                    outputStream.write(jsonFile.toString().getBytes(StandardCharsets.UTF_8));
                     outputStream.close();
                     fOutputStream.close();
                 } catch (Exception e) {
@@ -159,6 +164,8 @@ public class HidActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        config.setHIDFile("");
+        config.setHIDIntent("");
         super.onResume();
     }
 
@@ -166,13 +173,11 @@ public class HidActivity extends AppCompatActivity {
         EditorActivity.keymapListRefresh(getApplicationContext());
         new Handler().postDelayed(() -> {
             hidList.removeAllViewsInLayout();
-            if (!EditorActivity.keymap.isEmpty()) {
-                hidList.setAdapter(adapter);
-            }
+            hidList.setAdapter(adapter);
         }, 500);
     }
 
-    void hidDelete(View view, HidModel model) {
+    void hidDelete(HidModel model) {
         File file = new File(this.getExternalFilesDir("keymap"),model.getHidModelFilename());
         //noinspection ResultOfMethodCallIgnored
         file.delete();
@@ -187,8 +192,7 @@ public class HidActivity extends AppCompatActivity {
                 this.deleteFile(file.getName());
             }
         }
-        hidList.removeViewInLayout(view);
-        adapter.remove(model);
+        hidList.removeAllViewsInLayout();
         adapter.notifyDataSetChanged();
         updateListView();
     }
@@ -218,8 +222,8 @@ public class HidActivity extends AppCompatActivity {
 
     void keylist(String name, String file) {
         Intent intent = new Intent(HidActivity.this, KeylistActivity.class);
-        intent.putExtra(Constants.activityTitle, name);
-        intent.putExtra(Constants.activityFile, file);
+        config.setHIDIntent(name);
+        config.setHIDFile(file);
         startActivity(intent);
     }
 

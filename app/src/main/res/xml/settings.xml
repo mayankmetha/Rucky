@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory
         app:key="settings"
         app:title="@string/setting_general">
-
-        <Preference
-            app:key="hid"
-            app:icon="@drawable/ic_keyboard"
-            app:title="@string/hid_title"
-            app:summary="@string/hid_summary"/>
 
         <SwitchPreference
             app:defaultValue="true"
@@ -49,6 +44,12 @@
     <PreferenceCategory
         app:key="device"
         app:title="@string/setting_device">
+
+        <Preference
+            app:key="hid"
+            app:icon="@drawable/ic_keyboard"
+            app:title="@string/hid_title"
+            app:summary="@string/hid_summary"/>
 
         <SwitchPreference
             app:key="usb"
