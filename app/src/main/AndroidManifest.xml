@@ -22,16 +22,13 @@
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"
         android:icon="${appIcon}"
-        android:roundIcon="${appIconRound}"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
+        android:roundIcon="${appIconRound}"
         android:supportsRtl="true"
         android:theme="@style/Theme.Rucky"
         tools:ignore="AllowBackup">
-        <activity
-            android:name=".activity.KeylistActivity"
-            android:exported="true" />
 
         <service
             android:name=".service.SocketHeartbeatService"
@@ -48,7 +45,8 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <receiver android:name=".receiver.SecretCodeReceiver"
+        <receiver
+            android:name=".receiver.SecretCodeReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
@@ -58,7 +56,8 @@
                     android:scheme="android_secret_code" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.USBReceiver"
+        <receiver
+            android:name=".receiver.USBReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
@@ -68,8 +67,8 @@
         </receiver>
         <receiver
             android:name=".receiver.NetSocketReceiver"
-            android:permission="com.mayank.rucky.net"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.mayank.rucky.net">
             <intent-filter android:priority="999">
                 <action android:name="com.mayank.rucky.netSocketConnected" />
                 <action android:name="com.mayank.rucky.netSocketDisconnected" />
@@ -80,8 +79,8 @@
             android:name=".activity.SplashActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="uiMode|locale"
-            android:launchMode="singleTask"
-            android:exported="true" >
+            android:exported="true"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -92,10 +91,10 @@
         <activity-alias
             android:name=".Main"
             android:enabled="true"
+            android:exported="true"
             android:icon="${appIcon}"
             android:roundIcon="${appIconRound}"
-            android:targetActivity=".activity.SplashActivity"
-            android:exported="true" >
+            android:targetActivity=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -124,6 +123,10 @@
         <activity
             android:name=".activity.HidActivity"
             android:configChanges="uiMode|locale" />
+        <activity
+            android:name=".activity.KeylistActivity"
+            android:configChanges="uiMode|locale" />
+
     </application>
 
 </manifest>

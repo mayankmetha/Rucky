@@ -79,9 +79,9 @@
     <string name="key_meta">Meta Key</string>
     <string name="keycode">Key Code</string>
     <string name="modcode">Modifier Code</string>
-    <string name="key_no">None</string>
-    <string name="key_left">Left</string>
-    <string name="key_right">Right</string>
+    <string name="key_no" translatable="false">None</string>
+    <string name="key_left" translatable="false">Left</string>
+    <string name="key_right" translatable="false">Right</string>
     <string name="key_details">Key Details</string>
 
     <!-- Setting screen -->

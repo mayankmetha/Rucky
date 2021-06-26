@@ -5,18 +5,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.KeyModel;
 import com.mayank.rucky.utils.Config;
@@ -24,17 +23,24 @@ import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.KeyAdapter;
 
 import org.apache.commons.io.IOUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Objects;
+import java.util.UUID;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class KeylistActivity extends AppCompatActivity {
 
@@ -43,6 +49,8 @@ public class KeylistActivity extends AppCompatActivity {
     ArrayList<KeyModel> keys;
     KeyAdapter adapter;
     File file;
+    JSONObject json;
+    JSONObject mapping;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +65,14 @@ public class KeylistActivity extends AppCompatActivity {
         setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_keylist);
         TextView toolbarTitle = findViewById(R.id.toolbar_title);
-        toolbarTitle.setText(getIntent().getStringExtra(Constants.activityTitle));
+        if(config.getHIDIntent().isEmpty() || config.getHIDIntent().equals(""))
+            finish();
+        toolbarTitle.setText(config.getHIDIntent());
 
         keys = new ArrayList<>();
-        file = new File(getExternalFilesDir("keymap"), Objects.requireNonNull(getIntent().getStringExtra(Constants.activityFile)));
+        if(config.getHIDFile().isEmpty() || config.getHIDFile().equals(""))
+            finish();
+        file = new File(getExternalFilesDir("keymap"), config.getHIDFile());
 
         keylist = findViewById(R.id.key_list);
         adapter = new KeyAdapter(keys, this);
@@ -71,35 +83,50 @@ public class KeylistActivity extends AppCompatActivity {
         refreshBtn.setOnClickListener(v -> refreshList());
 
         Button newKeyBtn = findViewById(R.id.add_keymap_btn);
-        newKeyBtn.setOnClickListener(v -> keyDetailDialog("New Key"));
+        newKeyBtn.setOnClickListener(v -> keyDetailDialog(null));
 
-        //TODO: OnClickListener
+        keylist.setOnItemClickListener((parent, view, position, id) -> {
+            KeyModel model = Objects.requireNonNull(adapter.getItem(position));
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.key_details);
+            builder.setCancelable(true);
+            builder.setNegativeButton(R.string.hid_delete, (dialog, which) -> {
+                deleteKeyDetails(model);
+                dialog.cancel();
+            });
+            builder.setNeutralButton(R.string.hid_edit, (dialog, which) -> {
+                keyDetailDialog(model);
+                dialog.cancel();
+            });
+            AlertDialog listAction = builder.create();
+            Objects.requireNonNull(listAction.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+            listAction.show();
+        });
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        refreshList();
     }
 
     void refreshList() {
+        keylist.removeAllViewsInLayout();
         keys.clear();
-        FileInputStream fInputStream;
-        InputStream inputStream;
-        StringWriter writer = new StringWriter();
-        JSONObject keylistFile;
         try {
-            fInputStream = new FileInputStream(file);
-            inputStream = new BufferedInputStream(fInputStream);
-            IOUtils.copy(inputStream, writer, "UTF-8");
-            inputStream.close();
-            fInputStream.close();
-            if(!writer.toString().isEmpty()) {
-                keylistFile = new JSONObject(writer.toString()).getJSONObject("mapping");
-                for (Iterator<String> it = keylistFile.keys(); it.hasNext(); ) {
+            String jsonStr = jsonRead(file);
+            if(!jsonStr.isEmpty()) {
+                json = new JSONObject(jsonStr);
+                mapping = json.getJSONObject("mapping");
+                for (Iterator<String> it = mapping.keys(); it.hasNext(); ) {
                     String key = it.next();
                     KeyModel keymodel = new KeyModel(key.charAt(0),
-                        keylistFile.getJSONObject(key).getString("name"),
-                        Integer.parseInt(keylistFile.getJSONObject(key).getString("keycode"),16),
-                        keylistFile.getJSONObject(key).getJSONObject("modifier").getString("ctrl"),
-                        keylistFile.getJSONObject(key).getJSONObject("modifier").getString("shift"),
-                        keylistFile.getJSONObject(key).getJSONObject("modifier").getString("alt"),
-                        keylistFile.getJSONObject(key).getJSONObject("modifier").getString("meta")
+                        mapping.getJSONObject(key).getString("name"),
+                        Integer.parseInt(mapping.getJSONObject(key).getString("keycode"),16),
+                        mapping.getJSONObject(key).getJSONObject("modifier").getString("ctrl"),
+                        mapping.getJSONObject(key).getJSONObject("modifier").getString("shift"),
+                        mapping.getJSONObject(key).getJSONObject("modifier").getString("alt"),
+                        mapping.getJSONObject(key).getJSONObject("modifier").getString("meta")
                     );
                     keys.add(keymodel);
                 }
@@ -110,22 +137,221 @@ public class KeylistActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
-    void keyDetailDialog(String title) {
+    void deleteKeyDetails(KeyModel model) {
+        mapping.remove(String.valueOf(model.getKey()));
+        json.remove("mapping");
+        try {
+            json.put("mapping",mapping);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        jsonWrite(json.toString());
+        adapter.remove(model);
+        adapter.notifyDataSetChanged();
+        refreshList();
+    }
+
+    void keyDetailDialog(KeyModel model) {
+        AtomicInteger ctrl = new AtomicInteger(0);
+        AtomicInteger alt = new AtomicInteger(0);
+        AtomicInteger shift = new AtomicInteger(0);
+        AtomicInteger meta = new AtomicInteger(0);
+        AtomicInteger keyCode = new AtomicInteger(0);
+        AtomicReference<String> keyString = new AtomicReference<>("");
+        AtomicReference<Character> key = new AtomicReference<>('\0');
         AlertDialog.Builder keyDialog = new AlertDialog.Builder(KeylistActivity.this);
-        keyDialog.setTitle(title);
+        keyDialog.setTitle(R.string.key_details);
         LayoutInflater keyLI = LayoutInflater.from(this);
         final View keyDetailView = keyLI.inflate(R.layout.key_details, null);
         keyDialog.setView(keyDetailView);
         keyDialog.setCancelable(false);
-        keyDialog.setPositiveButton(R.string.saveBtn, (dialog, which) -> {
-            EditText keyTitle = keyDetailView.findViewById(R.id.key_title_edittext);
-            EditText keyCharacter = keyDetailView.findViewById(R.id.key_character_edittext);
-            EditText keyCode = keyDetailView.findViewById(R.id.key_code_edittext);
+        EditText keyTitle = keyDetailView.findViewById(R.id.key_title_edittext);
+        EditText keyCharacter = keyDetailView.findViewById(R.id.key_character_edittext);
+        EditText keyCodeString = keyDetailView.findViewById(R.id.key_code_edittext);
+        ChipGroup ctrlKey = keyDetailView.findViewById(R.id.key_ctrl_options);
+        ChipGroup altKey = keyDetailView.findViewById(R.id.key_alt_options);
+        ChipGroup shiftKey = keyDetailView.findViewById(R.id.key_shift_options);
+        ChipGroup metaKey = keyDetailView.findViewById(R.id.key_meta_options);
 
+        if(model != null)  {
+            keyTitle.setText(model.getKeyName().trim());
+            keyCharacter.setText(String.valueOf(model.getKey()).trim());
+            keyCodeString.setText(String.format("%02X",model.getKeycode()));
+        }
+
+        Chip checked = null;
+        boolean checkedFlag = false;
+        for(int i = ctrlKey.getChildCount()-1; i >=0 ; i--) {
+            checked = (Chip) ctrlKey.getChildAt(i);
+            if(model != null && model.getCtrl(model.getModifier()).equalsIgnoreCase(checked.getText().toString())) {
+                Log.e("Ctrlchecked",checked.getText().toString());
+                checkedFlag = true;
+                checked.setChecked(true);
+                ctrl.set(model.getCtrlInt(model.getModifier()));
+            }
+        }
+        if(!checkedFlag) {
+            assert checked != null;
+            checked.setChecked(true);
+        }
+        checkedFlag = false;
+        for(int i = altKey.getChildCount()-1; i >=0 ; i--) {
+            checked = (Chip) altKey.getChildAt(i);
+            if(model != null && model.getAlt(model.getModifier()).equalsIgnoreCase(checked.getText().toString())) {
+                checkedFlag = true;
+                checked.setChecked(true);
+                alt.set(model.getAltInt(model.getModifier()));
+            }
+        }
+        if(!checkedFlag) {
+            assert checked != null;
+            checked.setChecked(true);
+        }
+        checkedFlag = false;
+        for(int i = shiftKey.getChildCount()-1; i >=0 ; i--) {
+            checked = (Chip) shiftKey.getChildAt(i);
+            if(model != null && model.getShift(model.getModifier()).equalsIgnoreCase(checked.getText().toString())) {
+                checkedFlag = true;
+                checked.setChecked(true);
+                shift.set(model.getShiftInt(model.getModifier()));
+            }
+        }
+        if(!checkedFlag) {
+            assert checked != null;
+            checked.setChecked(true);
+        }
+        checkedFlag = false;
+        for(int i = metaKey.getChildCount()-1; i >=0 ; i--) {
+            checked = (Chip) metaKey.getChildAt(i);
+            if(model != null && model.getMeta(model.getModifier()).equalsIgnoreCase(checked.getText().toString())) {
+                checkedFlag = true;
+                checked.setChecked(true);
+                meta.set(model.getMetaInt(model.getModifier()));
+            }
+        }
+        if(!checkedFlag) {
+            assert checked != null;
+            checked.setChecked(true);
+        }
+
+        ctrlKey.setOnCheckedChangeListener((view, checkedId) -> {
+            Chip chip = view.findViewById(checkedId);
+            if (chip != null) {
+                if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) ctrl.set(0);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) ctrl.set(-1);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_right))) ctrl.set(1);
+            }
+        });
+
+        altKey.setOnCheckedChangeListener((view, checkedId) -> {
+            Chip chip = view.findViewById(checkedId);
+            if (chip != null) {
+                if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) alt.set(0);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) alt.set(-1);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_right))) alt.set(1);
+            }
+        });
+
+        shiftKey.setOnCheckedChangeListener((view, checkedId) -> {
+            Chip chip = view.findViewById(checkedId);
+            if (chip != null) {
+                if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) shift.set(0);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) shift.set(-1);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_right))) shift.set(1);
+            }
+        });
+
+        metaKey.setOnCheckedChangeListener((view, checkedId) -> {
+            Chip chip = view.findViewById(checkedId);
+            if (chip != null) {
+                if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) meta.set(0);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) meta.set(-1);
+                else if(chip.getText().toString().equals(getResources().getString(R.string.key_right))) meta.set(1);
+            }
+        });
+
+        keyDialog.setPositiveButton(R.string.saveBtn, (dialog, which) -> {
+            keyString.set(keyCodeString.getText().toString().isEmpty() ? UUID.randomUUID().toString() : keyTitle.getText().toString().trim());
+            keyCode.set(keyCodeString.getText().toString().isEmpty() ? 0 : Integer.decode("0x"+keyCodeString.getText().toString()));
+            key.set(keyCharacter.getText().toString().isEmpty() ? '\0' : keyCharacter.getText().toString().charAt(0));
+            KeyModel keyModel = new KeyModel(key.get(), keyString.get(), keyCode.get(), ctrl.get(), shift.get(), alt.get(), meta.get());
+
+            if(model != null) {
+                keys.remove(model);
+                mapping.remove(String.valueOf(model.getKey()));
+            }
+
+            if(keys.isEmpty()) {
+                keys.add(keyModel);
+                addToJson(keyModel);
+            }
+            else {
+                boolean exist = false;
+                for (int i = 0; i < keys.size(); i++) {
+                    if (keyModel.exists(keys.get(i))) {
+                        exist = true;
+                    }
+                }
+                if (!exist) {
+                    keys.add(keyModel);
+                    addToJson(keyModel);
+                }
+            }
+            refreshList();
         });
         keyDialog.setNegativeButton(R.string.btn_cancel, (dialog, which) -> dialog.cancel());
         AlertDialog keyForm = keyDialog.create();
         Objects.requireNonNull(keyForm.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         keyForm.show();
     }
+
+    String jsonRead(File file) {
+        FileInputStream fInputStream;
+        InputStream inputStream;
+        StringWriter writer = new StringWriter();
+        try {
+            fInputStream = new FileInputStream(file);
+            inputStream = new BufferedInputStream(fInputStream);
+            IOUtils.copy(inputStream, writer, "UTF-8");
+            inputStream.close();
+            fInputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return writer.toString();
+    }
+
+    void addToJson(KeyModel key) {
+        JSONObject modifier = new JSONObject();
+        JSONObject keymapping = new JSONObject();
+        try {
+            modifier.put("ctrl",key.getCtrl(key.getModifier()));
+            modifier.put("shift",key.getShift(key.getModifier()));
+            modifier.put("alt",key.getAlt(key.getModifier()));
+            modifier.put("meta",key.getMeta(key.getModifier()));
+
+            keymapping.put("name",key.getKeyName());
+            keymapping.put("keycode",String.format("%02X",key.getKeycode()));
+            keymapping.put("modifier",modifier);
+
+            mapping.put(String.valueOf(key.getKey()), keymapping);
+            json.remove("mapping");
+            json.put("mapping",mapping);
+
+            jsonWrite(json.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void jsonWrite(String str) {
+        try {
+            OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(file));
+            outputStream.write(str.getBytes(StandardCharsets.UTF_8));
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
