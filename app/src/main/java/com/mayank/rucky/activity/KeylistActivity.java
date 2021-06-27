@@ -334,7 +334,7 @@ public class KeylistActivity extends AppCompatActivity {
             keymapping.put("keycode",String.format("%02X",key.getKeycode()));
             keymapping.put("modifier",modifier);
 
-            mapping.put(String.valueOf(key.getKey()), keymapping);
+            mapping.put("\\u" + Integer.toHexString(key.getKey() | 0x10000).substring(1), keymapping);
             json.remove("mapping");
             json.put("mapping",mapping);
 
@@ -347,7 +347,9 @@ public class KeylistActivity extends AppCompatActivity {
     void jsonWrite(String str) {
         try {
             OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(file));
-            outputStream.write(str.getBytes(StandardCharsets.UTF_8));
+            String asciiStr = new String(str.getBytes(), StandardCharsets.US_ASCII);
+            asciiStr = asciiStr.replace("\\\\","\\");
+            outputStream.write(asciiStr.getBytes());
             outputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
