@@ -1,5 +1,6 @@
 package com.mayank.rucky.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,7 @@ public class HidAdapter extends ArrayAdapter<HidModel> {
         return false;
     }
 
+    @SuppressLint("SetTextI18n")
     @NonNull
     @Override
     public View getView(int pos, View convertedView, @NonNull ViewGroup parent) {
@@ -49,22 +51,22 @@ public class HidAdapter extends ArrayAdapter<HidModel> {
         if(convertedView == null) {
             LayoutInflater layoutInflater = LayoutInflater.from(context);
             convertedView = layoutInflater.inflate(R.layout.hid_list_item, parent, false);
-            TextView name = convertedView.findViewById(R.id.hid_name);
-            name.setText(hidViewModel.getHidModelName());
-            TextView rev = convertedView.findViewById(R.id.hid_version);
-            rev.setText("Version: "+ hidViewModel.getHidModelRevision());
-            ImageView icon = convertedView.findViewById(R.id.hid_icon);
-            switch (hidViewModel.getHidModelState()) {
-                case Constants.HID_DOWNLOAD:
-                    icon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.hid_download));
-                    break;
-                case Constants.HID_UPDATE:
-                    icon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.hid_update));
-                    break;
-                case Constants.HID_OFFLINE:
-                    icon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.hid_offline));
-                    break;
-            }
+        }
+        TextView name = convertedView.findViewById(R.id.hid_name);
+        name.setText(hidViewModel.getHidModelName());
+        TextView rev = convertedView.findViewById(R.id.hid_version);
+        rev.setText("Version: "+ hidViewModel.getHidModelRevision());
+        ImageView icon = convertedView.findViewById(R.id.hid_icon);
+        switch (hidViewModel.getHidModelState()) {
+            case Constants.HID_DOWNLOAD:
+                icon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.hid_download));
+                break;
+            case Constants.HID_UPDATE:
+                icon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.hid_update));
+                break;
+            case Constants.HID_OFFLINE:
+                icon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.hid_offline));
+                break;
         }
         return convertedView;
     }

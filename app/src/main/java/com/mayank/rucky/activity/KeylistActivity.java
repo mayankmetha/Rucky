@@ -175,7 +175,7 @@ public class KeylistActivity extends AppCompatActivity {
 
         if(model != null)  {
             keyTitle.setText(model.getKeyName().trim());
-            keyCharacter.setText(String.valueOf(model.getKey()).trim());
+            keyCharacter.setText(String.valueOf(model.getKey()));
             keyCodeString.setText(String.format("%02X",model.getKeycode()));
         }
 
