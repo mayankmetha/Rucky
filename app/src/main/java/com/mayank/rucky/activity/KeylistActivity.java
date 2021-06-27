@@ -338,7 +338,7 @@ public class KeylistActivity extends AppCompatActivity {
             json.remove("mapping");
             json.put("mapping",mapping);
 
-            jsonWrite(json.toString());
+            jsonWrite(new String(json.toString().getBytes(), StandardCharsets.US_ASCII).replace("\\\\","\\"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -347,9 +347,7 @@ public class KeylistActivity extends AppCompatActivity {
     void jsonWrite(String str) {
         try {
             OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(file));
-            String asciiStr = new String(str.getBytes(), StandardCharsets.US_ASCII);
-            asciiStr = asciiStr.replace("\\\\","\\");
-            outputStream.write(asciiStr.getBytes());
+            outputStream.write(str.getBytes());
             outputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
