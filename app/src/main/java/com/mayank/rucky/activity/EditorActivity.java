@@ -854,7 +854,7 @@ public class EditorActivity extends AppCompatActivity {
                 if (file.getPath().endsWith(".json")) {
                     try {
                         keymap.add(new HidModel(
-                                file.getName().replace(".json", ""),
+                                file.getName().replace(".json", "").replace("_"," ").toUpperCase(),
                                 getFileRevision(jsonRead(file)),
                                 file.getName(),
                                 "",
