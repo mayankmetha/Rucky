@@ -154,7 +154,9 @@ public class InitActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         config.setInitState(false);
-        startActivity(new Intent(InitActivity.this, EditorActivity.class));
+        Intent i = new Intent(InitActivity.this, EditorActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
         finish();
     }
 
