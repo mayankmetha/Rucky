@@ -446,7 +446,7 @@ public class EditorActivity extends AppCompatActivity {
                 }
                 if (nightly || newVersion > currentVersion) {
                     queue.add(getUpdateMetadata());
-                    updateScreen();
+                    runOnUiThread(this::updateScreen);
                 }
             };
             new Thread(runnable).start();
