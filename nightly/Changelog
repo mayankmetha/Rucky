@@ -1,8 +1,8 @@
-• Fix URL file read
-• Preparing for Android 12 SplashScreen
-• Change id, icon for debug and nightly builds.
-• Fixed service, battery optimisation, Fixed UI/UX
+• Fix update
+• Updated Readme
+• Remove package prefix
 • Fixed UI
-• Added key details form UI
-• Nightly Release 369
-• Nightly Release 370
+• customized HID UI and model added
+• Fixed HID Customization UI
+• Customizable HID added.
+• Nightly Release: Modifiable HID
