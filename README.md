@@ -9,7 +9,7 @@
 
 ## Download
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
-[![Github nightly](https://img.shields.io/badge/nightly-v2.1%20(370)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
+[![Github nightly](https://img.shields.io/badge/nightly-v2.1%20(382)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
 
 ---
 
@@ -48,10 +48,10 @@ Status| Feature
 ✅| Nightly Builds
 ❌| ConfigFS auto configuration
 ✅| Multiple HID languages support
-🚧| Customizable HID for additional language support
+✅| Customizable HID for additional language support
 ✅| Platform independent HID support
 ✅| Can attack virtually any system with USB HID support
-❌| USB HID mouse support (awaiting Hak5 Rubber Duck spec to support)
+🚧| USB HID mouse support (awaiting Hak5 Rubber Duck spec to support)
 ❌| Disable app level virtualization (parallel app prevention)
 ❌| App anti-tamper detection
 ❌| Runtime process name masking
