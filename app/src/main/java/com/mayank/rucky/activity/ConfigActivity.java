@@ -21,6 +21,7 @@ import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
@@ -68,22 +69,51 @@ public class ConfigActivity extends AppCompatActivity {
     }
 
     private void language() {
-        ArrayList<String> languages = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.hidLanguages)));
         Button langBtn = findViewById(R.id.hidBtn);
-        langBtn.setText(languages.get(config.getHIDLanguage()));
-        langBtn.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
-            builder.setCancelable(false);
-            builder.setSingleChoiceItems(getResources().getStringArray(R.array.hidLanguages), config.getHIDLanguage(), (dialog, i) -> {
-                config.setHIDLanguage(i);
-                dialog.dismiss();
-                langBtn.setText(languages.get(config.getHIDLanguage()));
+        ArrayList<String> languages;
+        if(!config.getHIDCustomise()) {
+            languages = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.hidLanguages)));
+            langBtn.setText(languages.get(config.getHIDLanguage()));
+            langBtn.setOnClickListener(view -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
+                builder.setCancelable(false);
+                builder.setSingleChoiceItems(getResources().getStringArray(R.array.hidLanguages), config.getHIDLanguage(), (dialog, i) -> {
+                    config.setHIDLanguage(i);
+                    dialog.dismiss();
+                    langBtn.setText(languages.get(config.getHIDLanguage()));
+                });
+                builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
+                AlertDialog hidDialog = builder.create();
+                Objects.requireNonNull(hidDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+                hidDialog.show();
             });
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog hidDialog = builder.create();
-            Objects.requireNonNull(hidDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            hidDialog.show();
-        });
+        } else {
+            ArrayList<String> filename = new ArrayList<>();
+            languages = new ArrayList<>();
+            final File[] tmp = Objects.requireNonNull(this.getExternalFilesDir("keymap")).listFiles();
+            assert tmp != null;
+            for(File file: tmp) {
+                if(file.getPath().endsWith(".json"))
+                    filename.add(file.getName());
+            }
+            for(int i = 0; i < filename.size(); i++) {
+                languages.add(filename.get(i).replace(".json", "").replace("_"," ").toUpperCase());
+            }
+            langBtn.setText(languages.get(filename.indexOf(config.getHIDFileSelected())));
+            langBtn.setOnClickListener(view -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
+                builder.setCancelable(false);
+                builder.setSingleChoiceItems(languages.toArray(new CharSequence[0]), filename.indexOf(config.getHIDFileSelected()), (dialog, i) -> {
+                    config.setHIDFileSelected(filename.get(i));
+                    dialog.dismiss();
+                    langBtn.setText(languages.get(i));
+                });
+                builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
+                AlertDialog hidDialog = builder.create();
+                Objects.requireNonNull(hidDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+                hidDialog.show();
+            });
+        }
     }
 
     private void mode() {

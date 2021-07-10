@@ -45,9 +45,16 @@
         app:key="device"
         app:title="@string/setting_device">
 
+        <SwitchPreference
+            app:key="hidSelect"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_swap"
+            app:title="@string/hid_choice_title"
+            app:summary="@string/hid_choice_summary" />
+
         <Preference
             app:key="hid"
-            app:icon="@drawable/ic_keyboard"
+            app:icon="@drawable/ic_hid"
             app:title="@string/hid_title"
             app:summary="@string/hid_summary"/>
 

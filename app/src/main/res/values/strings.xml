@@ -86,8 +86,6 @@
 
     <!-- Setting screen -->
     <string name="setting_general">General</string>
-    <string name="hid_title">HID Language</string>
-    <string name="hid_summary">Download additional HID languages or design new HID layouts.</string>
     <string name="dark_theme_title">Night Mode</string>
     <string name="dark_theme_summary">Set dark theme</string>
     <string name="accent_theme_title">Theme</string>
@@ -100,6 +98,10 @@
     <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
 
     <string name="setting_device">Attack Mode Settings</string>
+    <string name="hid_choice_title">Customisable HID</string>
+    <string name="hid_choice_summary">Switch between Legacy HID and Customisable HID</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">Download additional HID languages or design new HID layouts.</string>
     <string name="settings_usb_title">USB Connect Launch</string>
     <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
     <string name="settings_net_title">Network Socket Connect Launch</string>

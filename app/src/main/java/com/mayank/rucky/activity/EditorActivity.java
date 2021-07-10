@@ -45,6 +45,7 @@ import com.mayank.rucky.service.SocketHeartbeatService;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.HID;
+import com.mayank.rucky.utils.HID2;
 import com.mayank.rucky.utils.Networks;
 
 import org.apache.commons.io.IOUtils;
@@ -91,7 +92,7 @@ public class EditorActivity extends AppCompatActivity {
 
     private Boolean root = false;
 
-    private Config config;
+    public static Config config;
     public NotificationCompat.Builder updateNotify;
     static SecretKey key;
     static AlgorithmParameterSpec iv;
@@ -751,10 +752,16 @@ public class EditorActivity extends AppCompatActivity {
             if(root) {
                 supportedFiles();
                 if(config.getUSB() && !config.getUSBStatus()) {
-                    fetchCommands(language, scripts);
+                    if(config.getHIDCustomise())
+                        fetchCommands(jsonRead(new File(this.getExternalFilesDir("keymap"),config.getHIDFileSelected())),scripts);
+                    else
+                        fetchCommands(language, scripts);
                 } else {
                     try {
-                        fetchCommands(language, scripts);
+                        if(config.getHIDCustomise())
+                            fetchCommands(jsonRead(new File(this.getExternalFilesDir("keymap"),config.getHIDFileSelected())),scripts);
+                        else
+                            fetchCommands(language, scripts);
                         for(int i = 0; i < cmds.size(); i++) {
                             dos.writeBytes(cmds.get(i));
                             dos.flush();
@@ -777,9 +784,15 @@ public class EditorActivity extends AppCompatActivity {
         // network socket mode
         if (mode == 1) {
             if (config.getNet() && !config.getNetworkStatus()) {
-                fetchCommands(language, scripts);
+                if(config.getHIDCustomise())
+                    fetchCommands(jsonRead(new File(this.getExternalFilesDir("keymap"),config.getHIDFileSelected())),scripts);
+                else
+                    fetchCommands(language, scripts);
             } else {
-                fetchCommands(language, scripts);
+                if(config.getHIDCustomise())
+                    fetchCommands(jsonRead(new File(this.getExternalFilesDir("keymap"),config.getHIDFileSelected())),scripts);
+                else
+                    fetchCommands(language, scripts);
                 new Thread(() -> {
                     String ip = config.getNetworkAddress().substring(0,config.getNetworkAddress().indexOf(":"));
                     int port = Integer.parseInt(config.getNetworkAddress().substring(config.getNetworkAddress().indexOf(":")+1));
@@ -804,6 +817,13 @@ public class EditorActivity extends AppCompatActivity {
 
     void fetchCommands(int language, String scripts) {
         HID exeScript = new HID(language);
+        exeScript.parse(scripts);
+        cmds.clear();
+        cmds.addAll(exeScript.getCmd());
+    }
+
+    void fetchCommands(String jsonStr, String scripts) {
+        HID2 exeScript = new HID2(jsonStr);
         exeScript.parse(scripts);
         cmds.clear();
         cmds.addAll(exeScript.getCmd());
@@ -914,6 +934,7 @@ public class EditorActivity extends AppCompatActivity {
                                     }
                                 }, Throwable::printStackTrace);
                             requestQueue.add(reqDl);
+                            config.setHIDFileSelected(keymap.get(0).getHidModelFilename());
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

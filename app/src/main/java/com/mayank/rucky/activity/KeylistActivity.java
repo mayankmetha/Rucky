@@ -271,7 +271,7 @@ public class KeylistActivity extends AppCompatActivity {
         });
 
         keyDialog.setPositiveButton(R.string.saveBtn, (dialog, which) -> {
-            keyString.set(keyCodeString.getText().toString().isEmpty() ? UUID.randomUUID().toString() : keyTitle.getText().toString().trim());
+            keyString.set(keyTitle.getText().toString().isEmpty() ? UUID.randomUUID().toString() : keyTitle.getText().toString().trim());
             keyCode.set(keyCodeString.getText().toString().isEmpty() ? 0 : Integer.decode("0x"+keyCodeString.getText().toString()));
             key.set(keyCharacter.getText().toString().isEmpty() ? '\0' : keyCharacter.getText().toString().charAt(0));
             KeyModel keyModel = new KeyModel(key.get(), keyString.get(), keyCode.get(), ctrl.get(), shift.get(), alt.get(), meta.get());

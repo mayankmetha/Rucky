@@ -115,6 +115,12 @@ public class Config extends Application {
     }
 
     // hid
+    public boolean getHIDCustomise() { return sharedPreferences.getBoolean(Constants.PREF_HID_CHOICE, false); }
+
+    public void setHIDCustomise(boolean choice) {
+        editor.putBoolean(Constants.PREF_HID_CHOICE, choice).apply();
+    }
+
     public int getHIDLanguage() {
         return sharedPreferences.getInt(Constants.PREF_HID_LANG, 0);
     }
@@ -146,6 +152,14 @@ public class Config extends Application {
 
     public void setHIDFile(String hidFile) {
         editor.putString(Constants.PREF_HID_FILE, hidFile).apply();
+    }
+
+    public String getHIDFileSelected() {
+        return sharedPreferences.getString(Constants.PREF_HID_FILE_SELECTED, "");
+    }
+
+    public void setHIDFileSelected(String hidFile) {
+        editor.putString(Constants.PREF_HID_FILE_SELECTED, hidFile).apply();
     }
 
     // usb connection status

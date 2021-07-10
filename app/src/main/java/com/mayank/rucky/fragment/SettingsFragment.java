@@ -187,8 +187,23 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void hidSettings() {
+        final SwitchPreference hidCustomise = findPreference("hidSelect");
+        assert hidCustomise != null;
         final Preference hidPreference = findPreference("hid");
         assert hidPreference != null;
+        hidPreference.setEnabled(config.getHIDCustomise());
+        hidPreference.setSelectable(config.getHIDCustomise());
+        hidPreference.setShouldDisableView(config.getHIDCustomise());
+        hidPreference.setVisible(config.getHIDCustomise());
+        hidCustomise.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean switched = !((SwitchPreference) preference).isChecked();
+            config.setHIDCustomise(switched);
+            hidPreference.setEnabled(config.getHIDCustomise());
+            hidPreference.setSelectable(config.getHIDCustomise());
+            hidPreference.setShouldDisableView(config.getHIDCustomise());
+            hidPreference.setVisible(config.getHIDCustomise());
+            return true;
+        });
         hidPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), HidActivity.class);
             startActivity(intent);

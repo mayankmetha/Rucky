@@ -370,7 +370,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/draw/baseline_draw_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/swap_calls/baseline_swap_calls_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -381,7 +381,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="hid_new" />
+                            <entry key="outputName" value="ic_swap" />
                             <entry key="sourceFile" value="$USER_HOME$/Desktop/Mobile-Pi.svg" />
                           </map>
                         </option>
