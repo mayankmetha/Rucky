@@ -19,8 +19,8 @@
 
 ## Readme
 An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
-- Wired Mode: Needs a custom kernel with usb hid feature or a kernel with configfs to be enabled for this mode to be used.
-- Wireless: Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
+- <b><i>Wired Mode:</i></b> Needs a custom kernel with usb hid feature or a kernel with configfs to be enabled for this mode to be used.
+- <b><i>Wireless:</i></b> Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
 
 ---
 
@@ -28,7 +28,7 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 
 Ducky Script syntax is simple. Each command resides on a new line and may have options follow. Commands are written in ALL CAPS, because ducks are loud and like to quack with pride. Most commands invoke keystrokes, key-combos or strings of text, while some offer delays or pauses. Below is a list of commands and their function, followed by some example usage. Some syntax extended from the original [Hak5 Ducky Script Syntax](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript). Mouse ducky scripts are different from those seen online and have been defined to keep the similarity with the keyboard ducky scripts.
 
-<b>Note:</b> In parameters `[num]` represents a number, `[char]` represents characters A-Z, a-z.
+<b>Note:</b> In parameters ```[num]``` represents a number, ```[char]``` represents characters A-Z, a-z.
 
 ### Keyboard
 
@@ -37,6 +37,7 @@ Ducky Script syntax is simple. Each command resides on a new line and may have o
 DEFAULT_DELAY or DEFAULTDELAY is used to define how long (milliseconds) to wait between each subsequent command. DEFAULT_DELAY must be issued at the beginning of the ducky script and is optional. Not specifying the DEFAULT_DELAY will result in faster execution of ducky scripts. This command is mostly useful when debugging.
 
 <b>Syntax:</b> 
+
 Command | Parameter
 :---: | :---:
 DEFAULTDELAY or DEFAULT_DELAY | [num]
@@ -52,6 +53,7 @@ DEFAULT_DELAY 100
 DELAY creates a momentary pause in the ducky script. It is quite handy for creating a moment of pause between sequential commands that may take the target computer some time to process. DELAY time is specified in milliseconds. Multiple DELAY commands can be used to create longer delays.
 
 <b>Syntax:</b> 
+
 Command | Parameter
 :---: | :---:
 DELAY | [num]
@@ -66,6 +68,7 @@ DELAY 500
 Similar to the REM command in Basic and other languages, lines beginning with REM will not be processed. REM is a comment.
 
 <b>Syntax:</b> 
+
 Command | Parameter
 :---: | :---:
 REM | comment string
@@ -80,6 +83,7 @@ REM This is a comment
 Repeats the last command `[num]` times
 
 <b>Syntax:</b> 
+
 Command | Parameter
 :---: | :---:
 REPEAT | [num]
@@ -95,6 +99,7 @@ REPEAT 5
 STRING processes the text following taking special care to auto-shift. STRING can accept a single or multiple characters.
 
 <b>Syntax:</b> 
+
 Command | Parameter
 :---: | :---:
 STRING | all possible printable characters supported on a specific keyboard layout
@@ -109,6 +114,7 @@ STRING hello world
 Emulates the Windows-Key, sometimes referred to as the Super-key.
 
 <b>Syntax:</b> 
+
 Command | Parameter
 :---: | :---:
 GUI or WINDOWS or COMMAND or META | Combo Key
@@ -123,6 +129,7 @@ GUI r
 Unlike CAPSLOCK, cruise control for cool, the SHIFT command can be used when navigating fields to select text, among other functions.
 
 <b>Syntax:</b> 
+
 Command | Optional Parameter | Parameter
 :---: | :---: | :---:
 SHIFT | ALT or GUI or WINDOWS or COMMAND or META or CTRL or CONTROL | Combo Key
@@ -138,6 +145,7 @@ SHIFT ALT 4
 Found to the left of the space key on most keyboards, the ALT key is instrumental in many automation operations.
 
 <b>Syntax:</b> 
+
 Command | Optional Parameter | Parameter
 :---: | :---: | :---:
 ALT | SHIFT or CTRL or CONTROL | Combo Key
@@ -153,6 +161,7 @@ ALT SHIFT e
 The king of key-combos, CONTROL is all mighty.
 
 <b>Syntax:</b> 
+
 Command | Optional Parameter | Parameter
 :---: | :---: | :---:
 CTRL or CONTROL | SHIFT or ALT | Combo Key
@@ -168,6 +177,7 @@ CTRL ALT DELETE
 These keys have no parameters.
 
 <b>Syntax:</b> 
+
 Command | Description
 :---: | :---
 MENU or APP | Emulates the App key, sometimes referred to as the menu key or context menu key. On Windows systems this is similar to the SHIFT F10 key combo, producing the menu similar to a right-click. Has no parameters
@@ -244,6 +254,7 @@ All mouse/pointer commands will start with this command. REPEAT command and DELA
 4. In parameters `[num]` represents a number. This is used to repeat the action. Alternatively, REPEAT command can be used.
 
 <b>Syntax:</b> 
+
 Command | Command Type | Parameter 1 | Parameter 2 | Parameter 3 | Optional Parameter | Description
 :---: | :---: | :---: | :---: | :---: | :---: | :---:
 MOUSE or POINTER | CLICK or TOUCH or PRESS | [button] | [num] | | | Mouse button click. Mouse does not move along `[x]` and `[y]` directions.
