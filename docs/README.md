@@ -28,7 +28,7 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 
 Ducky Script syntax is simple. Each command resides on a new line and may have options follow. Commands are written in ALL CAPS, because ducks are loud and like to quack with pride. Most commands invoke keystrokes, key-combos or strings of text, while some offer delays or pauses. Below is a list of commands and their function, followed by some example usage. Some syntax extended from the original [Hak5 Ducky Script Syntax](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript). Mouse ducky scripts are different from those seen online and have been defined to keep the similarity with the keyboard ducky scripts.
 
-<b>Note:</b> In parameters ```[num]``` represents a number, ```[char]``` represents characters A-Z, a-z.
+<b>Note:</b> In parameters `[num]` represents a number, `[char]` represents characters A-Z, a-z.
 
 ### Keyboard
 
