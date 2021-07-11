@@ -72,11 +72,27 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        nethunter {
+            lintOptions {
+                disable 'MissingTranslation'
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher",
+                    appIconRound: "@mipmap/ic_launcher_round"
+            ]
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            if (variant.getName() == "release") {
+            if (variant.getName() == "nethunter") {
+                outputFileName = "com.mayank.rucky_"+versionCode+".apk"
+            } else if (variant.getName() == "release") {
                 outputFileName = "rucky.apk"
             } else if (variant.getName() == "nightly") {
                 outputFileName = "rucky-nightly.apk"
