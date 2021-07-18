@@ -303,11 +303,18 @@ REPEAT 1
 ---
 
 # App Translation
-Code    | Language    | Translated | Approved
+Code    |Language     |Translated  |Approved
 :---:   |:---:        | :---:      |:---:
-en-rUS  |English (US) |100%    |100%
 en-rGB  |English (UK) |100%    |100%
+en-rUS  |English (US) |100%    |100%
+es      |Spanish      |100%    |100%
 hi      |Hindi        |100%    |100%
+ro      |Romanian     |100%    |100%
+ru      |Russian      |100%    |100%
+sv      |Swedish      |100%    |100%
+uk      |Ukrainian    |100%    |100%
+
+---
 
 # Features
 Status| Feature

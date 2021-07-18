@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Deblochează aplicația</string>
-    <string name="auth">Confirmă autentificarea</string>
-    <string name="update_new">Actualizare nouă disponibilă</string>
     <!-- Init Screen -->
     <string name="init_next">URMĂTORUL</string>
     <string name="init_skip">ÎNCHIDE</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Permisiune aplicație</string>
     <string name="slideDesc6">Vă rugăm să acordați aplicației permisiunea necesară pentru a lucra!</string>
     <!-- Update screen -->
+    <string name="update_new">Actualizare nouă disponibilă</string>
+    <string name="update_hash_error">Nepotrivire semnătură fişier! Nu se poate actualiza.</string>
     <string name="update_activity">Actualizare Rucky</string>
     <string name="update_version">Versiune</string>
+    <string name="update_version_nightly">Versiune de noapte</string>
     <string name="update_changelog">Jurnal modificări</string>
     <string name="update_status">Actualizare status</string>
-    <string name="update_action">Descarcă &amp; Instalează Actualizarea</string>
+    <string name="update_action">Descărcați și instalați actualizarea</string>
     <string name="update_downloading">Descărcare actualizare</string>
     <string name="install_update">Aplicare actualizare</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Doriţi să ascundeţi sau să ieşiţi din aplicaţie?</string>
+    <string name="btn_exit">Ieşire</string>
+    <string name="btn_back">Ascundere</string>
+    <string name="unlock">Deblochează aplicația</string>
+    <string name="auth">Confirmă autentificarea</string>
     <string name="update">Actualizare</string>
     <string name="setting">Setări</string>
     <string name="codeHint">Tastați sau încărcați aici scripturi rațe de cauciuc</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Socket de rețea conectat</string>
     <string name="config_status_net_off">Socket rețea deconectat</string>
     <string name="socket_address">Introdu Socket IP și Port Adresa</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Configurare HID</string>
+    <string name="hid_download">Descărcare</string>
+    <string name="hid_update">Actualizare</string>
+    <string name="hid_edit">Editare</string>
+    <string name="hid_delete">Ștergere</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nume cheie</string>
+    <string name="key_character">Caracter cheie</string>
+    <string name="key_code">Cod cheie</string>
+    <string name="key_ctrl">Cheie Ctrl</string>
+    <string name="key_alt">Cheie alt</string>
+    <string name="key_shift">Tasta Shift</string>
+    <string name="key_meta">Cheie meta</string>
+    <string name="keycode">Cod cheie</string>
+    <string name="modcode">Cod modificator</string>
+    <string name="key_details">Detalii cheie</string>
     <!-- Setting screen -->
     <string name="setting_general">Generalități</string>
     <string name="dark_theme_title">Mod Noapte</string>
@@ -54,12 +76,16 @@
     <string name="accent_theme_title">Tema</string>
     <string name="accent_theme_summary">Schimbă culoarea de accent</string>
     <string name="hide_icon_title">Ascunde/Dezactivează pictograma Launcher</string>
-    <string name="hide_icon_summary">Apelează *#*78259#*#* de lansat. Începând cu Android 10, pictograma va fi dezactivată, dar nu ascunsă.</string>
+    <string name="hide_icon_summary">Apelează *#*#78259#*#* de lansat. Începând cu Android 10, pictograma va fi dezactivată, dar nu ascunsă.</string>
     <string name="delete_dep_title">Dezinstalează aplicația</string>
     <string name="delete_dep_summary">Curăță și dezinstalează aplicația.</string>
     <string name="settings_sec_title">Securitate avansată</string>
     <string name="settings_sec_desc">Activează criptarea fișierului script și blocarea ecranului.</string>
     <string name="setting_device">Setări Mod Atac</string>
+    <string name="hid_choice_title">HID personalizat</string>
+    <string name="hid_choice_summary">Comutare între HID Legacy şi HID personalizat</string>
+    <string name="hid_title">Limbă HID</string>
+    <string name="hid_summary">Descărcaţi limbi HID suplimentare sau proiectaţi dispuneri HID noi.</string>
     <string name="settings_usb_title">Lansare conectare USB</string>
     <string name="settings_usb_desc">Butonul rulează va lansa atacul atunci când USB este conectat.</string>
     <string name="settings_net_title">Lansare Socket Connect</string>
@@ -77,14 +103,18 @@
     <string name="release">Distribuție</string>
     <string name="releaseNetHunter">Magazin NetHunter</string>
     <string name="releaseGitHub">Lansare GitHub</string>
+    <string name="releaseGitHubNightly">IGHub În noapte</string>
     <string name="releaseTest">Lansare depanare</string>
     <string name="releaseOthers">Lansare neacceptată</string>
     <string name="btn_select">Selectare</string>
     <string name="btn_cancel">Anulează</string>
     <string name="btn_save">Salvează</string>
     <string name="file_saved">salvat</string>
+    <string name="title_open_file">Deschidere fişier</string>
+    <string name="title_delete_file">Ştergere fişier</string>
     <string name="file_deleted">șterse</string>
     <string name="file_name">Numele fișierului</string>
+    <string name="title_save_file">Salvare fişier</string>
     <string-array name="modes">
         <item>Cablu USB</item>
         <item>Socket de rețea</item>

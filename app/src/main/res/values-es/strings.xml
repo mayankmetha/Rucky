@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Desbloquear App</string>
-    <string name="auth">Confirmar autenticación</string>
-    <string name="update_new">Nueva actualización disponible</string>
     <!-- Init Screen -->
     <string name="init_next">SIGUIENTE</string>
     <string name="init_skip">RECOGER</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Permiso de aplicación</string>
     <string name="slideDesc6">¡Por favor, concede a la aplicación el permiso necesario para trabajar!</string>
     <!-- Update screen -->
+    <string name="update_new">Nueva actualización disponible</string>
+    <string name="update_hash_error">Discrepancia de firma de archivo No se puede actualizar.</string>
     <string name="update_activity">Actualización de suerte</string>
     <string name="update_version">Versión</string>
+    <string name="update_version_nightly">Versión nocturna</string>
     <string name="update_changelog">Cambios</string>
     <string name="update_status">Actualizar estado</string>
-    <string name="update_action">Descargar &amp; Instalar actualización</string>
+    <string name="update_action">Descargar e instalar actualización</string>
     <string name="update_downloading">Descargando actualización</string>
     <string name="install_update">Aplicando actualización</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">¿Te gustaría ocultar o salir de la aplicación?</string>
+    <string name="btn_exit">Salida</string>
+    <string name="btn_back">Ocultar</string>
+    <string name="unlock">Desbloquear App</string>
+    <string name="auth">Confirmar autenticación</string>
     <string name="update">Actualizar</string>
     <string name="setting">Ajustes</string>
     <string name="codeHint">Escriba o cargue guiones de rubber ducky aquí</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Conexión de red conectada</string>
     <string name="config_status_net_off">Socket de red desconectado</string>
     <string name="socket_address">Introduzca IP y dirección del puerto</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Configuración de HID</string>
+    <string name="hid_download">Descargar</string>
+    <string name="hid_update">Actualizar</string>
+    <string name="hid_edit">Editar</string>
+    <string name="hid_delete">Eliminar</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nombre de clave</string>
+    <string name="key_character">Carácter clave</string>
+    <string name="key_code">Código Clave</string>
+    <string name="key_ctrl">Tecla Ctrl</string>
+    <string name="key_alt">Tecla Alt</string>
+    <string name="key_shift">Tecla Mayús</string>
+    <string name="key_meta">Meta Clave</string>
+    <string name="keycode">Código Clave</string>
+    <string name="modcode">Código modificador</string>
+    <string name="key_details">Detalles clave</string>
     <!-- Setting screen -->
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Modo nocturno</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Seguridad Avanzada</string>
     <string name="settings_sec_desc">Habilitar cifrado de archivos de script y bloqueo de pantalla.</string>
     <string name="setting_device">Ajustes del modo Ataque</string>
+    <string name="hid_choice_title">HID personalizable</string>
+    <string name="hid_choice_summary">Conmutador entre HID heredado y HID personalizable</string>
+    <string name="hid_title">HID Idioma</string>
+    <string name="hid_summary">Descargue idiomas HID adicionales o diseñe nuevos diseños de HID.</string>
     <string name="settings_usb_title">Conectar USB</string>
     <string name="settings_usb_desc">El botón Ejecutar lanzará un ataque cuando el USB esté conectado.</string>
     <string name="settings_net_title">Inicio de Socket de Red</string>
@@ -77,14 +103,18 @@
     <string name="release">Distribución</string>
     <string name="releaseNetHunter">Tienda de aplicaciones NetHunter</string>
     <string name="releaseGitHub">Versión de GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nocturno</string>
     <string name="releaseTest">Depurar versión</string>
     <string name="releaseOthers">Versión no soportada</string>
     <string name="btn_select">Seleccionar</string>
     <string name="btn_cancel">Cancelar</string>
     <string name="btn_save">Guardar</string>
     <string name="file_saved">guardado</string>
+    <string name="title_open_file">Abrir archivo</string>
+    <string name="title_delete_file">Suprimir archivo</string>
     <string name="file_deleted">borrado</string>
     <string name="file_name">Nombre del archivo</string>
+    <string name="title_save_file">Guardar archivo</string>
     <string-array name="modes">
         <item>Cable USB</item>
         <item>Conector de red</item>

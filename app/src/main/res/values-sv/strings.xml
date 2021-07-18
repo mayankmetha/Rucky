@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Lås upp app</string>
-    <string name="auth">Bekräfta autentisering</string>
-    <string name="update_new">Ny uppdatering tillgänglig</string>
     <!-- Init Screen -->
     <string name="init_next">NÄSTA</string>
     <string name="init_skip">SKICKA</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Behörighet för app</string>
     <string name="slideDesc6">Vänligen ge appen behörighet att fungera!</string>
     <!-- Update screen -->
+    <string name="update_new">Ny uppdatering tillgänglig</string>
+    <string name="update_hash_error">Filsignatur-felmatchning! Kan inte uppdatera.</string>
     <string name="update_activity">Rucky Uppdatering</string>
     <string name="update_version">Version</string>
+    <string name="update_version_nightly">Nightly version</string>
     <string name="update_changelog">Ändringslogg</string>
     <string name="update_status">Uppdatera status</string>
-    <string name="update_action">Ladda ner &amp; Installera Uppdatering</string>
+    <string name="update_action">Ladda ner och installera uppdatering</string>
     <string name="update_downloading">Laddar ner uppdatering</string>
     <string name="install_update">Tillämpar uppdatering</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Vill du gömma eller lämna appen?</string>
+    <string name="btn_exit">Avsluta</string>
+    <string name="btn_back">Dölj</string>
+    <string name="unlock">Lås upp app</string>
+    <string name="auth">Bekräfta autentisering</string>
     <string name="update">Uppdatera</string>
     <string name="setting">Inställningar</string>
     <string name="codeHint">Skriv eller ladda gummi anka skript här</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Nätverksutgång ansluten</string>
     <string name="config_status_net_off">Nätverksutgång frånkopplad</string>
     <string name="socket_address">Ange Socket IP och Port Adress</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID-konfiguration</string>
+    <string name="hid_download">Ladda ner</string>
+    <string name="hid_update">Uppdatera</string>
+    <string name="hid_edit">Redigera</string>
+    <string name="hid_delete">Radera</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nyckelnamn</string>
+    <string name="key_character">Tangenttecken</string>
+    <string name="key_code">Nyckelkod</string>
+    <string name="key_ctrl">Ctrl-tangenten</string>
+    <string name="key_alt">Alt-tangenten</string>
+    <string name="key_shift">Skiftnyckel</string>
+    <string name="key_meta">Metadyckel</string>
+    <string name="keycode">Nyckelkod</string>
+    <string name="modcode">Modifieringskod</string>
+    <string name="key_details">Nyckeldetaljer</string>
     <!-- Setting screen -->
     <string name="setting_general">Allmänt</string>
     <string name="dark_theme_title">Natt läge</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Förskott Säkerhet</string>
     <string name="settings_sec_desc">Aktivera kryptering av skriptfiler och skärmlås.</string>
     <string name="setting_device">Inställningar för Attackläge</string>
+    <string name="hid_choice_title">Anpassningsbar HID</string>
+    <string name="hid_choice_summary">Växla mellan Legacy HID och Customisable HID</string>
+    <string name="hid_title">HID-språk</string>
+    <string name="hid_summary">Hämta ytterligare HID-språk eller skapa nya HID-layouter.</string>
     <string name="settings_usb_title">Starta USB-anslutning</string>
     <string name="settings_usb_desc">Kör-knappen startar attacken när USB är ansluten.</string>
     <string name="settings_net_title">Starta nätverksutkoppling</string>
@@ -77,14 +103,18 @@
     <string name="release">Fördelning</string>
     <string name="releaseNetHunter">NetHunters App Store</string>
     <string name="releaseGitHub">GitHub-släpp</string>
+    <string name="releaseGitHubNightly">Github Nightly</string>
     <string name="releaseTest">Felsök Släpp</string>
     <string name="releaseOthers">Utgåva stöds ej</string>
     <string name="btn_select">Välj</string>
     <string name="btn_cancel">Avbryt</string>
     <string name="btn_save">Spara</string>
     <string name="file_saved">sparad</string>
+    <string name="title_open_file">Öppna fil</string>
+    <string name="title_delete_file">Ta bort fil</string>
     <string name="file_deleted">borttagen</string>
     <string name="file_name">Filnamn</string>
+    <string name="title_save_file">Spara fil</string>
     <string-array name="modes">
         <item>USB-kabel</item>
         <item>Nätverksutgång</item>

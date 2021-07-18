@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Розблокувати додаток</string>
-    <string name="auth">Підтвердити авторизацію</string>
-    <string name="update_new">Доступне нове оновлення</string>
     <!-- Init Screen -->
     <string name="init_next">ДАЛІ</string>
     <string name="init_skip">ПРОПУСТИТИ</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Дозвіл додатку</string>
     <string name="slideDesc6">Будь ласка, надайте додатку необхідний дозвіл для роботи!</string>
     <!-- Update screen -->
+    <string name="update_new">Доступне нове оновлення</string>
+    <string name="update_hash_error">Підпис файлу неправильний! Неможливо оновити.</string>
     <string name="update_activity">Оновлення прив’язки</string>
     <string name="update_version">Версія</string>
+    <string name="update_version_nightly">Нічна версія</string>
     <string name="update_changelog">Список змін</string>
     <string name="update_status">Оновити статус</string>
-    <string name="update_action">Завантажити &amp; Встановити оновлення</string>
+    <string name="update_action">Завантажити та встановити оновлення</string>
     <string name="update_downloading">Завантаження оновлення</string>
     <string name="install_update">Застосування оновлення</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ви хотіли б приховати чи вийти з програми?</string>
+    <string name="btn_exit">Вийти</string>
+    <string name="btn_back">Приховати</string>
+    <string name="unlock">Розблокувати додаток</string>
+    <string name="auth">Підтвердити авторизацію</string>
     <string name="update">Оновити</string>
     <string name="setting">Налаштування</string>
     <string name="codeHint">Введіть або завантажте гумові каченята тут</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Мережу Socket підключена</string>
     <string name="config_status_net_off">Мережеву сокет від\'єднано</string>
     <string name="socket_address">Введіть IP та адресу порту Socket</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Конфігурація HID</string>
+    <string name="hid_download">Звантажити</string>
+    <string name="hid_update">Оновити</string>
+    <string name="hid_edit">Редагувати</string>
+    <string name="hid_delete">Видалити</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Назва ключа</string>
+    <string name="key_character">Символ ключа</string>
+    <string name="key_code">Код ключа</string>
+    <string name="key_ctrl">Ctrl ключ</string>
+    <string name="key_alt">Альтернативний Кей</string>
+    <string name="key_shift">Клавіша Shift</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Код ключа</string>
+    <string name="modcode">Modifier Code</string>
+    <string name="key_details">Деталі ключа</string>
     <!-- Setting screen -->
     <string name="setting_general">Загальні налаштування</string>
     <string name="dark_theme_title">Нічний режим</string>
@@ -54,12 +76,16 @@
     <string name="accent_theme_title">Тема</string>
     <string name="accent_theme_summary">Змінити колір акценту</string>
     <string name="hide_icon_title">Приховати/вимкнути іконку лаунчера</string>
-    <string name="hide_icon_summary">Набрати *#*#78259#*#*#* для запуску. На Android 10 onwards буде вимкнуто піктограму, але не приховано.</string>
+    <string name="hide_icon_summary">Набрати *#*#78259#*#* для запуску. На Android 10 onwards буде вимкнуто піктограму, але не приховано.</string>
     <string name="delete_dep_title">Видалити додаток</string>
     <string name="delete_dep_summary">Очистіть та видаліть програму.</string>
     <string name="settings_sec_title">Розширена безпека</string>
     <string name="settings_sec_desc">Увімкнути шифрування і замикання сценарію файлів екрана.</string>
     <string name="setting_device">Налаштування режиму атаки</string>
+    <string name="hid_choice_title">HID з можливістю налаштування</string>
+    <string name="hid_choice_summary">Перемикач між споконвісійним HID та настроюваним HID</string>
+    <string name="hid_title">HID мови</string>
+    <string name="hid_summary">Завантажити додаткові мови HID або спроектувати нові розкладки HID.</string>
     <string name="settings_usb_title">Запуск USB-підключення</string>
     <string name="settings_usb_desc">Запустити кнопку запуску атаки при підключенні USB.</string>
     <string name="settings_net_title">Запуск підключення до мережі Socket</string>
@@ -77,14 +103,18 @@
     <string name="release">Дистрибуція</string>
     <string name="releaseNetHunter">Магазин додатків NetHunter</string>
     <string name="releaseGitHub">GitHub версія</string>
+    <string name="releaseGitHubNightly">GitHub нічно</string>
     <string name="releaseTest">Налагодження релізу</string>
     <string name="releaseOthers">Непідтримуваний реліз</string>
     <string name="btn_select">Вибрати</string>
     <string name="btn_cancel">Скасувати</string>
     <string name="btn_save">Зберегти</string>
     <string name="file_saved">збережено</string>
+    <string name="title_open_file">Відкрити файл</string>
+    <string name="title_delete_file">Видалити файл</string>
     <string name="file_deleted">вилучено</string>
     <string name="file_name">Назва файлу</string>
+    <string name="title_save_file">Зберегти</string>
     <string-array name="modes">
         <item>USB-кабель</item>
         <item>Мережева сокет</item>

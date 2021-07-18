@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Разблокировать приложение</string>
-    <string name="auth">Подтвердить аутентификацию</string>
-    <string name="update_new">Доступно новое обновление</string>
     <!-- Init Screen -->
     <string name="init_next">СЛЕДУЮЩИЙ</string>
     <string name="init_skip">ПРОПУСК</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Разрешение приложения</string>
     <string name="slideDesc6">Пожалуйста, предоставьте приложению необходимое разрешение для работы!</string>
     <!-- Update screen -->
+    <string name="update_new">Доступно новое обновление</string>
+    <string name="update_hash_error">Несоответствие сигнатуры файла! Невозможно обновить.</string>
     <string name="update_activity">Хакерское обновление</string>
     <string name="update_version">Версия</string>
+    <string name="update_version_nightly">Ночная версия</string>
     <string name="update_changelog">Список изменений</string>
     <string name="update_status">Обновить статус</string>
-    <string name="update_action">Скачать &amp; Установить обновление</string>
+    <string name="update_action">Скачать и установить обновление</string>
     <string name="update_downloading">Загрузка обновления</string>
     <string name="install_update">Применение обновления</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Скрыть или закрыть приложение?</string>
+    <string name="btn_exit">Выход</string>
+    <string name="btn_back">Скрыть</string>
+    <string name="unlock">Разблокировать приложение</string>
+    <string name="auth">Подтвердить аутентификацию</string>
     <string name="update">Обновить</string>
     <string name="setting">Настройки</string>
     <string name="codeHint">Введите или загрузите здесь сценарии резиновых уток</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Сетевое сокет подключено</string>
     <string name="config_status_net_off">Сетевое сокет отключено</string>
     <string name="socket_address">Введите IP-адрес сокета и порт</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Конфигурация HID</string>
+    <string name="hid_download">Загрузить</string>
+    <string name="hid_update">Обновить</string>
+    <string name="hid_edit">Изменить</string>
+    <string name="hid_delete">Удалить</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Имя ключа</string>
+    <string name="key_character">Символ ключа</string>
+    <string name="key_code">Код ключа</string>
+    <string name="key_ctrl">Клавиша Ctrl</string>
+    <string name="key_alt">Ключ Alt</string>
+    <string name="key_shift">Клавиша смены</string>
+    <string name="key_meta">Мета-ключ</string>
+    <string name="keycode">Код ключа</string>
+    <string name="modcode">Код автора изменений</string>
+    <string name="key_details">Сведения о ключе</string>
     <!-- Setting screen -->
     <string name="setting_general">Общие сведения</string>
     <string name="dark_theme_title">Ночной режим</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Предварительная защита</string>
     <string name="settings_sec_desc">Включить шифрование файла сценария и блокировку экрана.</string>
     <string name="setting_device">Настройки режима атаки</string>
+    <string name="hid_choice_title">ИД настраиваемых HID</string>
+    <string name="hid_choice_summary">Переключение между Legacy HID и Customisable HID</string>
+    <string name="hid_title">Язык HID</string>
+    <string name="hid_summary">Загрузить дополнительные языки HID или разработать новые макеты HID.</string>
     <string name="settings_usb_title">Запуск USB-подключения</string>
     <string name="settings_usb_desc">Кнопка \"Выполнить\" запустит атаку при подключении USB.</string>
     <string name="settings_net_title">Запуск сетевого сокета</string>
@@ -77,14 +103,18 @@
     <string name="release">Распределение</string>
     <string name="releaseNetHunter">Магазин приложений NetHunter</string>
     <string name="releaseGitHub">Выпуск GitHub</string>
+    <string name="releaseGitHubNightly">HitHub Nightly</string>
     <string name="releaseTest">Отладочный выпуск</string>
     <string name="releaseOthers">Неподдерживаемый выпуск</string>
     <string name="btn_select">Выбрать</string>
     <string name="btn_cancel">Отменить</string>
     <string name="btn_save">Сохранить</string>
     <string name="file_saved">сохранено</string>
+    <string name="title_open_file">Открыть файл</string>
+    <string name="title_delete_file">Удалить файл</string>
     <string name="file_deleted">удалено</string>
     <string name="file_name">Имя файла</string>
+    <string name="title_save_file">Сохранить файл</string>
     <string-array name="modes">
         <item>Кабель USB</item>
         <item>Сетевое сокет</item>
