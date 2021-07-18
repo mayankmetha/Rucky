@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">הבא</string>
+    <string name="init_skip">דילוג</string>
+    <string name="init_agree">מסכים</string>
+    <string name="init_start">האק</string>
+    <string name="slideDesc1">הפעל את המכשיר שלך לדוקי גומי!</string>
+    <string name="slideTitle2">Cable-USB</string>
+    <string name="slideDesc2">ממשק מחובר עם חיבור USB להתקפה!</string>
+    <string name="slideTitle3">סוקט רשת</string>
+    <string name="slideDesc3">ממשקי אינטרנט מבוססי Wi-Fi עבור שיגור התקפה באמצעות כלים חיצוניים נתמכים!</string>
+    <string name="slideTitle4">כתב ויתור</string>
+    <string name="slideDesc4">המשתמש באפליקציה אחראי אך ורק על הנזקים שנגרמו. אף ישות אחרת לא יכולה לשאת באחריות עבור הנזקים שבוצעו באמצעות יישום זה! תתנהגו בזהירות בעת השימוש באפליקציה ואל תשתמשו בזה כדי לגרום נזק לאחרים!</string>
+    <string name="slideTitle5">מדיניות פרטיות</string>
+    <string name="slideDesc5">לא נאסף נתונים של כל טופס, נעשה בו שימוש ומכר! חלק מההרשאות שיכולות להעלות את החששות הפרטיות יתבקשו רק לעבודה של מאפיינים מסוימים באפליקציה ואינו לאסוף נתונים! יש לכבד את הפרטיות שלך!</string>
+    <string name="slideTitle6">הרשאה ליישום</string>
+    <string name="slideDesc6">נא להעניק לאפליקציה את ההרשאה הדרושה לעבודה!</string>
+    <!-- Update screen -->
+    <string name="update_new">עדכון חדש זמין</string>
+    <string name="update_hash_error">התאמה של חתימת קובץ! לא ניתן לעדכן.</string>
+    <string name="update_activity">עדכון ראקי</string>
+    <string name="update_version">גרסה</string>
+    <string name="update_version_nightly">גרסה עדינה</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">מצב עדכון</string>
+    <string name="update_action">הורד והתקן את העדכון</string>
+    <string name="update_downloading">הורדת עדכון</string>
+    <string name="install_update">עדכון עדכון</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">האם ברצונכם להסתיר או לצאת מהאפליקציה?</string>
+    <string name="btn_exit">יציאה</string>
+    <string name="btn_back">הסתרה</string>
+    <string name="unlock">ביטול נעילה של יישום</string>
+    <string name="auth">אישור אימות</string>
+    <string name="update">עדכון</string>
+    <string name="setting">הגדרות</string>
+    <string name="codeHint">הקלידו או טענו קובצי Script של ducky גומי כאן</string>
+    <string name="loadBtn">טעינה</string>
+    <string name="saveBtn">שמירה</string>
+    <string name="delBtn">מחיקה</string>
+    <string name="runBtn">הרצה</string>
+    <string name="confBtn">קביעת תצורה</string>
+    <string name="btn_continue">המשך</string>
+    <string name="root_err">דרושה גישת יסוד עבור התקפת USB Cable!</string>
+    <string name="kernel_err">"לא נתמך עבור Kernel עבור התקפת USB Cable!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">טושים</string>
+    <string name="config_status_usb_on">חיבור USB</string>
+    <string name="config_status_usb_off">חיבור USB</string>
+    <string name="config_status_net_on">Socket מחובר לרשת</string>
+    <string name="config_status_net_off">ערוץ Socket מנותק</string>
+    <string name="socket_address">ציינו כתובת IP ו-פורט של Socket</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">קביעת תצורה של HID</string>
+    <string name="hid_download">הורדה</string>
+    <string name="hid_update">עדכון</string>
+    <string name="hid_edit">עריכה</string>
+    <string name="hid_delete">מחיקה</string>
+    <!-- Keylist screen -->
+    <string name="key_title">שם מפתח</string>
+    <string name="key_character">תו מפתח</string>
+    <string name="key_code">קוד מפתח</string>
+    <string name="key_ctrl">מקש Ctrl</string>
+    <string name="key_alt">מפתח Alt</string>
+    <string name="key_shift">מקש Shift</string>
+    <string name="key_meta">מפתח Meta</string>
+    <string name="keycode">קוד מפתח</string>
+    <string name="modcode">קוד שינוי</string>
+    <string name="key_details">פרטי מפתח</string>
+    <!-- Setting screen -->
+    <string name="setting_general">כללי</string>
+    <string name="dark_theme_title">מצב לילה</string>
+    <string name="dark_theme_summary">הגדרת נושא כהה</string>
+    <string name="accent_theme_title">ערכת נושא</string>
+    <string name="accent_theme_summary">שינוי צבע מבטא</string>
+    <string name="hide_icon_title">הסתר/השבתה של איקון משגר</string>
+    <string name="hide_icon_summary">חייג * #*#78259#*#* כדי להשיק. ב-Android 10 ואילך, האיקון יהיה מושבת, אך לא מוסתר.</string>
+    <string name="delete_dep_title">הסרת התקנה של יישום</string>
+    <string name="delete_dep_summary">נקו את יישום הסרת ההתקנה.</string>
+    <string name="settings_sec_title">אבטחת מידע</string>
+    <string name="settings_sec_desc">הפעלת הצפנת קובצי Script ומנעול מסך.</string>
+    <string name="setting_device">הגדרות מצב התקפה</string>
+    <string name="hid_choice_title">HID ניתן להתאמה</string>
+    <string name="hid_choice_summary">מעבר בין זיהוי הHID של Legacy ו-Customisable</string>
+    <string name="hid_title">שפת HID</string>
+    <string name="hid_summary">הורידו שפות HID נוספות או עיצוב מתכונות HID חדשים.</string>
+    <string name="settings_usb_title">שיגור חיבור USB</string>
+    <string name="settings_usb_desc">הלחצן \'הרצה\' יתחיל לתקוף כאשר USB מחובר.</string>
+    <string name="settings_net_title">שיגור של Socket Connect</string>
+    <string name="settings_net_desc">הלחצן \'הרצה\' יתחיל לתקוף כאשר רשת Socket מחוברת.</string>
+    <string name="setting_about">מידע</string>
+    <string name="setting_developer_title">מפתח</string>
+    <string name="settings_version_title">גרסה</string>
+    <string name="settings_arch_title">ארכיטקטורה</string>
+    <string name="settings_lic_title">רישיון</string>
+    <string name="settings_support">תמיכה</string>
+    <string name="settings_git_title">בעיות של GitHub</string>
+    <string name="settings_git_desc">לחצו כדי להוסיף בעיות או על בקשת מאפיין.</string>
+    <string name="settings_locale_title">התאמה אזורית</string>
+    <string name="settings_locale_desc">תרומה לוקליזציה של יישום.</string>
+    <string name="release">הפצה</string>
+    <string name="releaseNetHunter">מאגר יישומים של Netהאנטר</string>
+    <string name="releaseGitHub">גירסת GitHub</string>
+    <string name="releaseGitHubNightly">GitHub הלילה</string>
+    <string name="releaseTest">שחרור באגים</string>
+    <string name="releaseOthers">גירסה לא נתמכת</string>
+    <string name="btn_select">בחירה</string>
+    <string name="btn_cancel">ביטול</string>
+    <string name="btn_save">שמירה</string>
+    <string name="file_saved">נשמר</string>
+    <string name="title_open_file">פתיחת קובץ</string>
+    <string name="title_delete_file">מחיקת קובץ</string>
+    <string name="file_deleted">נמחק</string>
+    <string name="file_name">שם קובץ</string>
+    <string name="title_save_file">שמירת קובץ</string>
+    <string-array name="modes">
+        <item>Cable-USB</item>
+        <item>סוקט רשת</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>אנגלית אמריקנית</item>
+        <item>טורקית</item>
+        <item>שוודית</item>
+        <item>סלובנית</item>
+        <item>רוסי</item>
+        <item>פורטוגזית</item>
+        <item>נורווגית</item>
+        <item>איטלקית</item>
+        <item>קרואטית</item>
+        <item>אנגלית בריטניה</item>
+        <item>צרפתית</item>
+        <item>פינית</item>
+        <item>ספרדית</item>
+        <item>דנית</item>
+        <item>גרמנית</item>
+        <item>צרפתית קנדית</item>
+        <item>פורטוגזית ברזילאית</item>
+        <item>בלארוס</item>
+        <item>הונגרית</item>
+    </string-array>
+</resources>

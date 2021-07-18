@@ -1,113 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Unlock App</string>
-    <string name="auth">Confirm authentication</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">LANJUT</string>
     <string name="init_skip">LEWATI</string>
-    <string name="init_agree">AGREE</string>
+    <string name="init_agree">SETUJU</string>
     <string name="init_start">HACK</string>
-    <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
+    <string name="slideDesc1">Putar perangkat Anda ke Karet Ducky!</string>
     <string name="slideTitle2">Kabel USB</string>
-    <string name="slideDesc2">USB wired interface for launching attack!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
-    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
-    <string name="slideTitle5">Privacy Policy</string>
-    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideDesc2">USB kabel antarmuka untuk meluncurkan serangan!</string>
+    <string name="slideTitle3">Soket Jaringan</string>
+    <string name="slideDesc3">Antarmuka soket berbasis Wi-Fi untuk meluncurkan serangan melalui alat eksternal yang didukung!</string>
+    <string name="slideTitle4">Sanggat</string>
+    <string name="slideDesc4">Pengguna aplikasi hanya bertanggung jawab atas kerusakan yang disebabkan. Tidak ada entitas lain yang dapat dianggap bertanggung jawab atas kerusakan yang dilakukan dengan menggunakan aplikasi ini! Berlatih hati-hati saat menggunakan aplikasi dan jangan gunakan ini untuk menimbulkan bahaya bagi orang lain!</string>
+    <string name="slideTitle5">Kebijakan Privasi</string>
+    <string name="slideDesc5">Tidak ada Data dari bentuk apa pun yang dikumpulkan, digunakan dan dijual! Beberapa izin yang dapat meningkatkan perhatian privasi hanya diminta untuk mengerjakan fitur tertentu di dalam aplikasi dan tidak untuk mengumpulkan data! Privasimu sangat dihormati!</string>
+    <string name="slideTitle6">Izin Aplikasi</string>
+    <string name="slideDesc6">Mohon berikan aplikasi yang diperlukan untuk bekerja!</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
-    <string name="update_version">Version</string>
+    <string name="update_new">Pembaruan baru tersedia</string>
+    <string name="update_hash_error">Tanda Tangan Berkas Tidak Cocok! Tidak dapat memperbarui.</string>
+    <string name="update_activity">Pemutakhiran Rucky</string>
+    <string name="update_version">Versi</string>
+    <string name="update_version_nightly">Versi nightly</string>
     <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_status">Pembaruan Status</string>
+    <string name="update_action">Unduh dan Instal Pembaruan</string>
+    <string name="update_downloading">Mengunduh Pembaruan</string>
+    <string name="install_update">Menerapkan Pembaruan</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
+    <string name="exit_dialog">Apakah anda ingin menyembunyikan atau keluar dari aplikasi?</string>
+    <string name="btn_exit">Keluar</string>
+    <string name="btn_back">Sembunyikan</string>
+    <string name="unlock">Buka Kunci Aplikasi</string>
+    <string name="auth">Konfirmasi otentikasi</string>
+    <string name="update">Perbarui</string>
+    <string name="setting">Pengaturan</string>
     <string name="codeHint">Ketik atau muat skrip rubber ducky di sini</string>
     <string name="loadBtn">Muat</string>
     <string name="saveBtn">Simpan</string>
     <string name="delBtn">Hapus</string>
     <string name="runBtn">Jalankan</string>
-    <string name="confBtn">Config</string>
+    <string name="confBtn">Konfig</string>
     <string name="btn_continue">Lanjut</string>
-    <string name="root_err">Root Access Required For USB Cable Attack!</string>
-    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="root_err">Akses Root Diperlukan Untuk Serangan Kabel USB!</string>
+    <string name="kernel_err">"Kernel Tidak Didukung Untuk Serangan Kabel USB!"</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="config_status_usb_on">USB Tersambung</string>
+    <string name="config_status_usb_off">USB Terputus</string>
+    <string name="config_status_net_on">Koneksi Soket Jaringan</string>
+    <string name="config_status_net_off">Soket Jaringan Terputus</string>
+    <string name="socket_address">Enter Socket IP dan Alamat Port</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Konfigurasi HID</string>
+    <string name="hid_download">Unduh</string>
+    <string name="hid_update">Perbarui</string>
+    <string name="hid_edit">Sunting</string>
+    <string name="hid_delete">Hapus</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nama Kunci</string>
+    <string name="key_character">Karakter Kunci</string>
+    <string name="key_code">Kode Kunci</string>
+    <string name="key_ctrl">Tombol Ctrl</string>
+    <string name="key_alt">Tombol Alt</string>
+    <string name="key_shift">Tombol Shift</string>
+    <string name="key_meta">Kunci Meta</string>
+    <string name="keycode">Kode Kunci</string>
+    <string name="modcode">Kode Modifier</string>
+    <string name="key_details">Rincian Kunci</string>
     <!-- Setting screen -->
-    <string name="setting_general">General</string>
-    <string name="dark_theme_title">Night Mode</string>
-    <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
-    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
-    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
-    <string name="delete_dep_title">Uninstall App</string>
-    <string name="delete_dep_summary">Clean up and uninstall app.</string>
-    <string name="settings_sec_title">Advance Security</string>
-    <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
-    <string name="setting_device">Attack Mode Settings</string>
-    <string name="settings_usb_title">USB Connect Launch</string>
-    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
-    <string name="settings_net_title">Network Socket Connect Launch</string>
-    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
+    <string name="setting_general">Jeneral</string>
+    <string name="dark_theme_title">Mode Malam</string>
+    <string name="dark_theme_summary">Set tema gelap</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Ubah warna aksen</string>
+    <string name="hide_icon_title">Sembunyikan/Matikan Ikon Peluncur</string>
+    <string name="hide_icon_summary">Dial * #*#78259#*#* untuk diluncurkan. Pada Android 10 dan seterusnya, ikon akan dimatikan, tetapi tidak disembunyikan.</string>
+    <string name="delete_dep_title">Hapus Instalasi Aplikasi</string>
+    <string name="delete_dep_summary">Bersihkan dan hapus aplikasi.</string>
+    <string name="settings_sec_title">Keamanan Muka</string>
+    <string name="settings_sec_desc">Aktifkan enkripsi berkas skrip dan kunci layar.</string>
+    <string name="setting_device">Pengaturan Mode Serangan</string>
+    <string name="hid_choice_title">HID Kustomisabel</string>
+    <string name="hid_choice_summary">Berpindah antara HID Warisan dan HID yang Disesuaikan</string>
+    <string name="hid_title">Bahasa HID</string>
+    <string name="hid_summary">Unduh bahasa HID tambahan atau desain tata letak HID baru.</string>
+    <string name="settings_usb_title">Luncurkan USB Connect</string>
+    <string name="settings_usb_desc">Jalankan tombol akan meluncurkan serangan ketika USB tersambung.</string>
+    <string name="settings_net_title">Peluncuran Koneksi Socket Jaringan</string>
+    <string name="settings_net_desc">Tombol jalankan akan meluncurkan serangan ketika Socket Jaringan terhubung.</string>
     <string name="setting_about">Info</string>
-    <string name="setting_developer_title">Developer</string>
-    <string name="settings_version_title">Version</string>
+    <string name="setting_developer_title">Pengembang</string>
+    <string name="settings_version_title">Versi</string>
     <string name="settings_arch_title">Arsitektur</string>
     <string name="settings_lic_title">Lisensi</string>
-    <string name="settings_support">Support</string>
-    <string name="settings_git_title">GitHub Issues</string>
-    <string name="settings_git_desc">Click to add issues or feature request.</string>
-    <string name="settings_locale_title">Localization</string>
-    <string name="settings_locale_desc">Contribute to app localization.</string>
-    <string name="release">Distribution</string>
-    <string name="releaseNetHunter">NetHunter App Store</string>
-    <string name="releaseGitHub">GitHub Release</string>
-    <string name="releaseTest">Debug Release</string>
-    <string name="releaseOthers">Non Supported Release</string>
-    <string name="btn_select">Select</string>
+    <string name="settings_support">Dukungan</string>
+    <string name="settings_git_title">Masalah GitHub</string>
+    <string name="settings_git_desc">Klik untuk menambah masalah atau permintaan fitur.</string>
+    <string name="settings_locale_title">Lokalisasi</string>
+    <string name="settings_locale_desc">Berkontribusi pada lokalisasi aplikasi.</string>
+    <string name="release">Distribusi</string>
+    <string name="releaseNetHunter">Toko Aplikasi NetHunter</string>
+    <string name="releaseGitHub">Rilis GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Rilis Debug</string>
+    <string name="releaseOthers">Rilis Tidak Didukung</string>
+    <string name="btn_select">Pilih</string>
     <string name="btn_cancel">Batal</string>
     <string name="btn_save">Simpan</string>
     <string name="file_saved">tersimpan</string>
+    <string name="title_open_file">Buka File</string>
+    <string name="title_delete_file">Hapus Berkas</string>
     <string name="file_deleted">terhapus</string>
     <string name="file_name">Nama File</string>
+    <string name="title_save_file">Simpan Berkas</string>
     <string-array name="modes">
         <item>Kabel USB</item>
-        <item>Network Socket</item>
+        <item>Soket Jaringan</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Inggris Amerika</item>
         <item>Bahasa Turki</item>
-        <item>Swedish</item>
-        <item>Slovenian</item>
-        <item>Russian</item>
-        <item>Portuguese</item>
-        <item>Norwegian</item>
-        <item>Italian</item>
-        <item>Croatian</item>
-        <item>United Kingdom English</item>
-        <item>French</item>
-        <item>Finnish</item>
+        <item>Swedia</item>
+        <item>Slovenia</item>
+        <item>Rusia</item>
+        <item>Portugis</item>
+        <item>Norwegia</item>
+        <item>Italia</item>
+        <item>Kroasia</item>
+        <item>Inggris Britania Raya</item>
+        <item>Perancis</item>
+        <item>Finlandia</item>
         <item>Bahasa Spanyol</item>
         <item>Bahasa Denmark</item>
         <item>Bahasa Jerman</item>
         <item>Bahasa Prancis Kanada</item>
         <item>Bahasa Portugis Brazil</item>
-        <item>Belarusian</item>
-        <item>Hungarian</item>
+        <item>Belarusia</item>
+        <item>Hungaria</item>
     </string-array>
 </resources>

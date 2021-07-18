@@ -302,10 +302,11 @@ REPEAT 1
 
 ---
 
-# App Translation
+# Localization
 Code    |Language           |Translated
 :---:   |:---:              | :---:
 ar      |Arabic             |100%
+bg      |Bulgarian          |100%
 cs      |Czech              |100%
 da      |Danish             |100%
 de      |German             |100%
@@ -313,10 +314,14 @@ el      |Greek              |100%
 en-rGB  |English (UK)       |100%
 en-rUS  |English (US)       |100%
 es      |Spanish            |100%
+et      |Estonian           |100%
 fi      |Finnish            |100%
 fr      |French             |100%
 hi      |Hindi              |100%
+hr      |Croatian           |100%
+in      |Indonesian         |100%
 it      |Italian            |100%
+iw      |Hebrew             |100%
 ja      |Japanese           |100%
 nb      |Norwegian Bokmal   |100%
 nl      |Dutch              |100%
@@ -329,6 +334,7 @@ sk      |Slovak             |100%
 sv      |Swedish            |100%
 uk      |Ukrainian          |100%
 zh-rCN  |Chinese Simplified |100%
+zh-rTW  |Chinese Traditional|100%
 
 ---
 

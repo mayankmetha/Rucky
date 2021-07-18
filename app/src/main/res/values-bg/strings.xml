@@ -1,113 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Unlock App</string>
-    <string name="auth">Confirm authentication</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
-    <string name="init_next">NEXT</string>
+    <string name="init_next">Следваща:</string>
     <string name="init_skip">SKIP</string>
-    <string name="init_agree">AGREE</string>
+    <string name="init_agree">СЪГЛАСНА</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Превратите ваше устройство в резиновый Ducky!</string>
-    <string name="slideTitle2">USB Cable</string>
-    <string name="slideDesc2">USB wired interface for launching attack!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
-    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
-    <string name="slideTitle5">Privacy Policy</string>
-    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideTitle2">USB кабел</string>
+    <string name="slideDesc2">USB интерфейс за изстрелване!</string>
+    <string name="slideTitle3">Мрежов контакт</string>
+    <string name="slideDesc3">Wi-Fi базирани гнездо интерфейси за стартиране на атака чрез поддържани външни инструменти!</string>
+    <string name="slideTitle4">Отказ от отговорност</string>
+    <string name="slideDesc4">Потребител на приложението носи единствено отговорност за причинените щети. Никой друг субект не може да бъде държан отговорен за щетите, направени с помощта на това приложение! Практикувайте внимателно, когато използвате приложението и не използвайте това, за да причините вреда на други хора!</string>
+    <string name="slideTitle5">Политика за поверителност</string>
+    <string name="slideDesc5">Няма данни за каквато и да е форма, използвана и продадена! Някои позволения, които биха могли да повдигнат опасения за неприкосновеността на личния живот, са помолени само за работата на някои функции в приложението и не е да събира данни! Личният ви живот е уважаван!</string>
+    <string name="slideTitle6">Позволение на приложение</string>
+    <string name="slideDesc6">Моля, предоставете на приложението необходимото разрешение за работа!</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
+    <string name="update_new">Налична е нова актуализация</string>
+    <string name="update_hash_error">Несъответствие на файла! Невъзможно обновяване.</string>
+    <string name="update_activity">Обновяване на Rucky</string>
     <string name="update_version">Версии</string>
-    <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_version_nightly">Нощна версия</string>
+    <string name="update_changelog">\"Шангелог\"</string>
+    <string name="update_status">Състояние на актуализиране</string>
+    <string name="update_action">Изтеглете и инсталирайте актуализация</string>
+    <string name="update_downloading">Изтегляне на Update</string>
+    <string name="install_update">Прилагане на обновяване</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
+    <string name="exit_dialog">Желаете ли да скриете или излезете от приложението?</string>
+    <string name="btn_exit">Изход:</string>
+    <string name="btn_back">Кожа!</string>
+    <string name="unlock">Отключване на приложението</string>
+    <string name="auth">Потвърждаване на удостоверяване</string>
+    <string name="update">Обновяване:</string>
+    <string name="setting">Настройки:</string>
     <string name="codeHint">Введите или нагрузите резиновые скрипты</string>
     <string name="loadBtn">Нагрузка</string>
     <string name="saveBtn">Сохранить</string>
     <string name="delBtn">Удалить</string>
     <string name="runBtn">Запустить</string>
-    <string name="confBtn">Config</string>
-    <string name="btn_continue">Continue</string>
-    <string name="root_err">Root Access Required For USB Cable Attack!</string>
-    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="confBtn">-Да.</string>
+    <string name="btn_continue">Продължи:</string>
+    <string name="root_err">Root достъп, необходим за USB кабел атака!</string>
+    <string name="kernel_err">"Ядро не се поддържа за USB кабел атака!"</string>
     <!-- Config screen -->
-    <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="config_activity">\"Tслабите\"</string>
+    <string name="config_status_usb_on">USB връзка</string>
+    <string name="config_status_usb_off">USB изключен</string>
+    <string name="config_status_net_on">Мрежова връзка, свързана</string>
+    <string name="config_status_net_off">Мрежова връзка, изключена</string>
+    <string name="socket_address">Въведете IP адрес и адрес на порт</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Настройване на HID</string>
+    <string name="hid_download">Изтегляне:</string>
+    <string name="hid_update">Обновяване:</string>
+    <string name="hid_edit">Редакция:</string>
+    <string name="hid_delete">Удалить</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Име на ключ</string>
+    <string name="key_character">Ключов символ</string>
+    <string name="key_code">Код:</string>
+    <string name="key_ctrl">Клавиша Ctrl</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Ключ за смяна</string>
+    <string name="key_meta">\"мета ключ\"</string>
+    <string name="keycode">Код:</string>
+    <string name="modcode">Код на модификатор</string>
+    <string name="key_details">Основни данни:</string>
     <!-- Setting screen -->
     <string name="setting_general">Общие положения</string>
-    <string name="dark_theme_title">Night Mode</string>
-    <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
-    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
-    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="dark_theme_title">Нощен режим</string>
+    <string name="dark_theme_summary">Задаване на тъмна тема</string>
+    <string name="accent_theme_title">Тема:</string>
+    <string name="accent_theme_summary">Промяна акцент цвят</string>
+    <string name="hide_icon_title">Скриване/деактивиране на иконата за стартиране</string>
+    <string name="hide_icon_summary">Изберете * #*#78259#*#за стартиране. На Андроид 10 нататък, иконата ще бъде деактивирана, но не е скрита.</string>
     <string name="delete_dep_title">Удалить приложение</string>
     <string name="delete_dep_summary">Очистка и удаление приложения.</string>
     <string name="settings_sec_title">Расширенная безопасность</string>
     <string name="settings_sec_desc">Включить шифрование файлов скрипта и блокировку экрана.</string>
-    <string name="setting_device">Attack Mode Settings</string>
-    <string name="settings_usb_title">USB Connect Launch</string>
-    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
-    <string name="settings_net_title">Network Socket Connect Launch</string>
-    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
+    <string name="setting_device">Настройки на режим на атака</string>
+    <string name="hid_choice_title">Персонализируем HID</string>
+    <string name="hid_choice_summary">Превключване между Legacy HID и Customisable HID</string>
+    <string name="hid_title">HID език</string>
+    <string name="hid_summary">Изтеглете допълнителни HID езици или създайте нови пластове на HID.</string>
+    <string name="settings_usb_title">Стартиране на USB Connect</string>
+    <string name="settings_usb_desc">Бутон за стартиране ще стартира атака, когато USB е свързан.</string>
+    <string name="settings_net_title">Стартиране на контакта на мрежата</string>
+    <string name="settings_net_desc">Бутон за стартиране ще стартира атака, когато Network Socket е свързан.</string>
     <string name="setting_about">Инфо</string>
     <string name="setting_developer_title">Разработчик</string>
     <string name="settings_version_title">Версии</string>
     <string name="settings_arch_title">Архитектура</string>
     <string name="settings_lic_title">Лицензия</string>
     <string name="settings_support">Поддержка</string>
-    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_title">Въпроси на GitHub</string>
     <string name="settings_git_desc">Нажмите, чтобы добавить задачи или запрос функции.</string>
     <string name="settings_locale_title">Локализация</string>
-    <string name="settings_locale_desc">Contribute to app localization.</string>
-    <string name="release">Distribution</string>
+    <string name="settings_locale_desc">Допринасят за локализацията на приложението.</string>
+    <string name="release">Дистрибуция:</string>
     <string name="releaseNetHunter">Магазин приложений NetHunter</string>
     <string name="releaseGitHub">Релиз GitHub</string>
+    <string name="releaseGitHubNightly">\"Гитуб Найтли\"</string>
     <string name="releaseTest">Отладка релиза</string>
     <string name="releaseOthers">Поддерживаемый релиз</string>
-    <string name="btn_select">Select</string>
-    <string name="btn_cancel">Cancel</string>
+    <string name="btn_select">Избор:</string>
+    <string name="btn_cancel">Отмяна?</string>
     <string name="btn_save">Сохранить</string>
-    <string name="file_saved">saved</string>
-    <string name="file_deleted">deleted</string>
-    <string name="file_name">File Name</string>
+    <string name="file_saved">спасена.</string>
+    <string name="title_open_file">Отваряне на файл</string>
+    <string name="title_delete_file">Изтриване на файл</string>
+    <string name="file_deleted">се заличава.</string>
+    <string name="file_name">Име на файл</string>
+    <string name="title_save_file">Запис на файл</string>
     <string-array name="modes">
-        <item>USB Cable</item>
-        <item>Network Socket</item>
+        <item>USB кабел</item>
+        <item>Мрежов контакт</item>
     </string-array>
     <string-array name="hidLanguages">
-        <item>American English</item>
-        <item>Turkish</item>
-        <item>Swedish</item>
-        <item>Slovenian</item>
-        <item>Russian</item>
-        <item>Portuguese</item>
-        <item>Norwegian</item>
-        <item>Italian</item>
-        <item>Croatian</item>
-        <item>United Kingdom English</item>
-        <item>French</item>
-        <item>Finnish</item>
-        <item>Spanish</item>
-        <item>Danish</item>
-        <item>German</item>
-        <item>Canadian French</item>
-        <item>Brazilian Portuguese</item>
-        <item>Belarusian</item>
-        <item>Hungarian</item>
+        <item>Американски английски</item>
+        <item>Турски:</item>
+        <item>Шведски:</item>
+        <item>Словения:</item>
+        <item>Руски:</item>
+        <item>Португалски:</item>
+        <item>Норвежки:</item>
+        <item>Италиански:</item>
+        <item>Хърватски:</item>
+        <item>Обединено кралство Английски</item>
+        <item>Френски:</item>
+        <item>Финландски</item>
+        <item>Испански:</item>
+        <item>Датски.</item>
+        <item>Немски:</item>
+        <item>Канадски френски</item>
+        <item>Бразилски португалски</item>
+        <item>Беларус:</item>
+        <item>Унгарски:</item>
     </string-array>
 </resources>

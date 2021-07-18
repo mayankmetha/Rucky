@@ -1,69 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Unlock App</string>
-    <string name="auth">Confirm authentication</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
-    <string name="init_next">NEXT</string>
+    <string name="init_next">下一個</string>
     <string name="init_skip">SKIP</string>
-    <string name="init_agree">AGREE</string>
-    <string name="init_start">HACK</string>
+    <string name="init_agree">同意</string>
+    <string name="init_start">哈克</string>
     <string name="slideDesc1">把你的裝置變成橡膠 Ducky！</string>
-    <string name="slideTitle2">USB Cable</string>
-    <string name="slideDesc2">USB wired interface for launching attack!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
-    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
-    <string name="slideTitle5">Privacy Policy</string>
-    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideTitle2">USB 纜線</string>
+    <string name="slideDesc2">啟動攻擊的 USB 有線介面！</string>
+    <string name="slideTitle3">網路 Socket</string>
+    <string name="slideDesc3">以 Wi-Fi 為基礎的 Socket 介面，用於透過支援的外部工具發動攻擊！</string>
+    <string name="slideTitle4">免責聲明</string>
+    <string name="slideDesc4">應用程式的使用者完全負責造成的損害。 沒有其他實體可對使用此應用程式所執行的損害承擔責任！ 使用應用程式時練習謹慎，請勿使用此作法對他人造成傷害！</string>
+    <string name="slideTitle5">隱私權原則</string>
+    <string name="slideDesc5">未收集、使用和銷售任何表單的資料！ 一些可能會提出隱私問題的許可權只被要求在應用程式中的某些功能運作，而不收集資料！ 你的隱私被尊重了！</string>
+    <string name="slideTitle6">應用程式許可權</string>
+    <string name="slideDesc6">請授與應用程式所需的應用程式許可權！</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
+    <string name="update_new">可用的新更新項目</string>
+    <string name="update_hash_error">檔案簽章不符！ 無法更新。</string>
+    <string name="update_activity">Rucky 更新</string>
     <string name="update_version">版本</string>
+    <string name="update_version_nightly">夜間版本</string>
     <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_status">更新狀態</string>
+    <string name="update_action">下載並安裝更新</string>
+    <string name="update_downloading">正在下載更新</string>
+    <string name="install_update">正在套用更新</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
+    <string name="exit_dialog">您要隱藏或結束應用程式嗎？</string>
+    <string name="btn_exit">出口</string>
+    <string name="btn_back">藏</string>
+    <string name="unlock">解除鎖定應用程式</string>
+    <string name="auth">確認鑑別</string>
+    <string name="update">更新</string>
+    <string name="setting">設定</string>
     <string name="codeHint">在這裡鍵入或載入橡膠達基 Script</string>
     <string name="loadBtn">裝載</string>
     <string name="saveBtn">儲存</string>
     <string name="delBtn">刪除</string>
     <string name="runBtn">快跑</string>
     <string name="confBtn">Config</string>
-    <string name="btn_continue">Continue</string>
-    <string name="root_err">Root Access Required For USB Cable Attack!</string>
-    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="btn_continue">繼續</string>
+    <string name="root_err">USB 纜線攻擊需要 Root 存取！</string>
+    <string name="kernel_err">"USB 纜線攻擊不支援 Kernel ！"</string>
     <!-- Config screen -->
-    <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="config_activity">特韋克斯</string>
+    <string name="config_status_usb_on">已連接 USB</string>
+    <string name="config_status_usb_off">USB 斷線</string>
+    <string name="config_status_net_on">網路 Socket 已連接</string>
+    <string name="config_status_net_off">網路 Socket 已斷線</string>
+    <string name="socket_address">輸入 Socket IP 及埠位址</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID 配置</string>
+    <string name="hid_download">下載</string>
+    <string name="hid_update">更新</string>
+    <string name="hid_edit">編輯</string>
+    <string name="hid_delete">刪除</string>
+    <!-- Keylist screen -->
+    <string name="key_title">金鑰名稱</string>
+    <string name="key_character">索引鍵字元</string>
+    <string name="key_code">金鑰代碼</string>
+    <string name="key_ctrl">Ctrl 鍵</string>
+    <string name="key_alt">Alt 鍵</string>
+    <string name="key_shift">Shift 鍵</string>
+    <string name="key_meta">Meta 索引鍵</string>
+    <string name="keycode">金鑰代碼</string>
+    <string name="modcode">修改者代碼</string>
+    <string name="key_details">金鑰詳細資料</string>
     <!-- Setting screen -->
     <string name="setting_general">將軍</string>
-    <string name="dark_theme_title">Night Mode</string>
-    <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
-    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
-    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="dark_theme_title">夜間模式</string>
+    <string name="dark_theme_summary">設定暗主題</string>
+    <string name="accent_theme_title">主題</string>
+    <string name="accent_theme_summary">變更重音顏色</string>
+    <string name="hide_icon_title">隱藏/停用啟動程式圖示</string>
+    <string name="hide_icon_summary">Dial *#*#78259#*#* 要啟動。 在 Android 10 之後，圖示會停用，但不會隱藏。</string>
     <string name="delete_dep_title">解除安裝應用程式</string>
     <string name="delete_dep_summary">清除及解除安裝應用程式。</string>
     <string name="settings_sec_title">高階安全</string>
     <string name="settings_sec_desc">啟用 Script 檔加密和畫面鎖定。</string>
-    <string name="setting_device">Attack Mode Settings</string>
-    <string name="settings_usb_title">USB Connect Launch</string>
-    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
-    <string name="settings_net_title">Network Socket Connect Launch</string>
-    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
+    <string name="setting_device">攻擊模式設定</string>
+    <string name="hid_choice_title">可自訂的 HID</string>
+    <string name="hid_choice_summary">在舊式 HID 和可自訂 HID 之間切換</string>
+    <string name="hid_title">HID 語言</string>
+    <string name="hid_summary">下載其他 HID 語言或設計新的 HID 佈置。</string>
+    <string name="settings_usb_title">USB 連接啟動</string>
+    <string name="settings_usb_desc">當 USB 連接時，執行按鈕會啟動攻擊。</string>
+    <string name="settings_net_title">網路 Socket 連接啟動</string>
+    <string name="settings_net_desc">「執行」按鈕將在網路 Socket 連接時啟動攻擊。</string>
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">開發人員</string>
     <string name="settings_version_title">版本</string>
@@ -73,41 +99,45 @@
     <string name="settings_git_title">GitHub 問題</string>
     <string name="settings_git_desc">按一下以新增問題或特性要求。</string>
     <string name="settings_locale_title">本地化</string>
-    <string name="settings_locale_desc">Contribute to app localization.</string>
-    <string name="release">Distribution</string>
+    <string name="settings_locale_desc">協助應用程式本地化。</string>
+    <string name="release">分佈</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub 版本</string>
+    <string name="releaseGitHubNightly">GitHub 夜間</string>
     <string name="releaseTest">除錯發行</string>
     <string name="releaseOthers">不支援的版本</string>
-    <string name="btn_select">Select</string>
-    <string name="btn_cancel">Cancel</string>
+    <string name="btn_select">選擇</string>
+    <string name="btn_cancel">取消</string>
     <string name="btn_save">儲存</string>
-    <string name="file_saved">saved</string>
-    <string name="file_deleted">deleted</string>
-    <string name="file_name">File Name</string>
+    <string name="file_saved">已儲存</string>
+    <string name="title_open_file">開啟檔案</string>
+    <string name="title_delete_file">刪除檔案</string>
+    <string name="file_deleted">已刪除</string>
+    <string name="file_name">檔案名稱</string>
+    <string name="title_save_file">儲存檔案</string>
     <string-array name="modes">
-        <item>USB Cable</item>
-        <item>Network Socket</item>
+        <item>USB 纜線</item>
+        <item>網路 Socket</item>
     </string-array>
     <string-array name="hidLanguages">
-        <item>American English</item>
-        <item>Turkish</item>
-        <item>Swedish</item>
-        <item>Slovenian</item>
-        <item>Russian</item>
-        <item>Portuguese</item>
-        <item>Norwegian</item>
-        <item>Italian</item>
-        <item>Croatian</item>
-        <item>United Kingdom English</item>
-        <item>French</item>
-        <item>Finnish</item>
-        <item>Spanish</item>
-        <item>Danish</item>
-        <item>German</item>
-        <item>Canadian French</item>
-        <item>Brazilian Portuguese</item>
-        <item>Belarusian</item>
-        <item>Hungarian</item>
+        <item>美國英文</item>
+        <item>土耳其語</item>
+        <item>瑞典人</item>
+        <item>斯洛維尼亞語</item>
+        <item>俄語</item>
+        <item>葡萄牙語</item>
+        <item>挪威人</item>
+        <item>義大利</item>
+        <item>克羅埃西亞語</item>
+        <item>英國英文</item>
+        <item>法語</item>
+        <item>芬蘭</item>
+        <item>西班牙語</item>
+        <item>丹麥</item>
+        <item>德語</item>
+        <item>加拿大法文</item>
+        <item>巴西葡萄牙文</item>
+        <item>白俄羅斯文</item>
+        <item>匈牙利</item>
     </string-array>
 </resources>

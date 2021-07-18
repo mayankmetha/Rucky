@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">JÄRGMINE</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">NÕUSTUB</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Pane oma seade Kummi-Duckysse!</string>
+    <string name="slideTitle2">USB kaabel</string>
+    <string name="slideDesc2">USB traadiga liides rünnakuks!</string>
+    <string name="slideTitle3">Võrgupesa</string>
+    <string name="slideDesc3">Wi-Fi põhised sokkel liidesed rünnakuks toetatud väliste tööriistade abil!</string>
+    <string name="slideTitle4">Lahtiütlemine</string>
+    <string name="slideDesc4">Rakenduse kasutaja vastutab ainult tekitatud kahju eest. Ükski teine üksus ei vastuta selle rakenduse kasutamise eest! Harjutage ettevaatlik, kui kasutate rakendust ja ärge kasutage seda, et kahjustada teisi!</string>
+    <string name="slideTitle5">Privaatsuspoliitika</string>
+    <string name="slideDesc5">Ühtegi vormi pole kogutud, kasutatud ega müüdud! Mõned õigused, mis võivad tõsta privaatsust mured on ainult küsida tööd teatud funktsioone app ja ei koguda andmeid! Teie privaatsust austatakse!</string>
+    <string name="slideTitle6">Rakenduse luba</string>
+    <string name="slideDesc6">Palun anna app nõutud luba tööle!</string>
+    <!-- Update screen -->
+    <string name="update_new">Uus uuendus</string>
+    <string name="update_hash_error">Fail Signature Mismatch! Ei Saa Uuendada.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Versioon</string>
+    <string name="update_version_nightly">Öine versioon</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Uuenda olekut</string>
+    <string name="update_action">Laadige alla ja installige värskendus</string>
+    <string name="update_downloading">Allalaadimise uuendamine</string>
+    <string name="install_update">Värskenda</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">Kas soovid rakenduse ära peita või väljuda?</string>
+    <string name="btn_exit">Välju</string>
+    <string name="btn_back">Peida</string>
+    <string name="unlock">Lukusta rakendus</string>
+    <string name="auth">Autentimise kinnitamine</string>
+    <string name="update">Uuenda</string>
+    <string name="setting">Seadistused</string>
+    <string name="codeHint">Laadi või laadi kummitublid skriptid siin</string>
+    <string name="loadBtn">Laadi</string>
+    <string name="saveBtn">Salvesta</string>
+    <string name="delBtn">Kustuta</string>
+    <string name="runBtn">Käivita</string>
+    <string name="confBtn">Seadistus</string>
+    <string name="btn_continue">Jätka</string>
+    <string name="root_err">USB Kaabelrünnaku Jaoks Vajalik Juurepääs!</string>
+    <string name="kernel_err">"Kernel Ei Ole Toetatud USB Cable Attack!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB ühendatud</string>
+    <string name="config_status_usb_off">USB-ühendus katkestatud</string>
+    <string name="config_status_net_on">Võrgupistikupesa ühendatud</string>
+    <string name="config_status_net_off">Võrgupistikupesa lahutatud</string>
+    <string name="socket_address">Sisesta pesa IP ja pordi aadress</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID seadistus</string>
+    <string name="hid_download">Laadi alla</string>
+    <string name="hid_update">Uuenda</string>
+    <string name="hid_edit">Muuda</string>
+    <string name="hid_delete">Kustuta</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Võtme nimi</string>
+    <string name="key_character">Võtmemärk</string>
+    <string name="key_code">Võtme kood</string>
+    <string name="key_ctrl">Ctrl võti</string>
+    <string name="key_alt">Alt Võti</string>
+    <string name="key_shift">Shift</string>
+    <string name="key_meta">Metavõti</string>
+    <string name="keycode">Võtme kood</string>
+    <string name="modcode">Muutekkood</string>
+    <string name="key_details">Võtme üksikasjad</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Üldine</string>
+    <string name="dark_theme_title">Öörežiim</string>
+    <string name="dark_theme_summary">Tumeda teema määramine</string>
+    <string name="accent_theme_title">Teema</string>
+    <string name="accent_theme_summary">Muuda aktsendi värvi</string>
+    <string name="hide_icon_title">Peida/keela käivitaja ikoon</string>
+    <string name="hide_icon_summary">Dial * #*#78259# #* käivitada. Sees Android 10, ikoon on keelatud, kuid ei ole peidetud.</string>
+    <string name="delete_dep_title">Eemalda App</string>
+    <string name="delete_dep_summary">Puhasta ja desinstallige rakendus.</string>
+    <string name="settings_sec_title">Ettemakse</string>
+    <string name="settings_sec_desc">Skriptifaili krüptimise ja ekraani lukustumise lubamine.</string>
+    <string name="setting_device">Ründerežiimi seadistused</string>
+    <string name="hid_choice_title">Kohandatud HID</string>
+    <string name="hid_choice_summary">Lüliti Legacy HID ja Hooldatava HID vahel</string>
+    <string name="hid_title">HID-keel</string>
+    <string name="hid_summary">Lae alla täiendavaid HID keeli või disain uus HID paigutusega.</string>
+    <string name="settings_usb_title">USB Connect</string>
+    <string name="settings_usb_desc">Käivita nupp käivita rünnak, kui USB on ühendatud.</string>
+    <string name="settings_net_title">Võrgupesa ühendamine</string>
+    <string name="settings_net_desc">Käivita nupp käivitab rünnaku, kui võrgusokk on ühendatud.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Arendaja</string>
+    <string name="settings_version_title">Versioon</string>
+    <string name="settings_arch_title">Arhitektuur</string>
+    <string name="settings_lic_title">Litsents</string>
+    <string name="settings_support">Toetus</string>
+    <string name="settings_git_title">GitHub Küsimused</string>
+    <string name="settings_git_desc">Klõpsa küsimuste või funktsiooni taotluse lisamiseks.</string>
+    <string name="settings_locale_title">Lokaliseerimine</string>
+    <string name="settings_locale_desc">Aitab kaasa rakenduse lokaliseerimisele.</string>
+    <string name="release">Jaotumine</string>
+    <string name="releaseNetHunter">NetHunter App pood</string>
+    <string name="releaseGitHub">GitHub release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Silumisteade</string>
+    <string name="releaseOthers">Toetamata vabastamine</string>
+    <string name="btn_select">Vali</string>
+    <string name="btn_cancel">Loobu</string>
+    <string name="btn_save">Salvesta</string>
+    <string name="file_saved">salvestatud</string>
+    <string name="title_open_file">Ava fail</string>
+    <string name="title_delete_file">Kustuta fail</string>
+    <string name="file_deleted">kustutatud</string>
+    <string name="file_name">Faili nimi</string>
+    <string name="title_save_file">Faili salvestamine</string>
+    <string-array name="modes">
+        <item>USB kaabel</item>
+        <item>Võrgupesa</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Ameerika inglise keel</item>
+        <item>Türgi</item>
+        <item>Rootsi</item>
+        <item>Sloveeni</item>
+        <item>Vene</item>
+        <item>Portugali</item>
+        <item>Norra</item>
+        <item>Itaalia</item>
+        <item>Horvaadi</item>
+        <item>Suurbritannia</item>
+        <item>Prantsuse</item>
+        <item>Soome</item>
+        <item>Hispaania</item>
+        <item>Taani</item>
+        <item>Saksa</item>
+        <item>Kanada prantsuse</item>
+        <item>Brasiilia portugali</item>
+        <item>Valgevene</item>
+        <item>Ungari</item>
+    </string-array>
+</resources>
