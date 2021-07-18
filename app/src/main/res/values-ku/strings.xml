@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <!-- Update screen -->
+    <string name="update_new">نوێ پەرەپێداوی</string>
+    <!-- Editor screen -->
+    <string name="unlock">Unlock App</string>
+    <string name="auth">سڵاو چۆنن </string>
+    <!-- Config screen -->
+    <!-- HID config screen -->
+    <!-- Keylist screen -->
+    <!-- Setting screen -->
+</resources>

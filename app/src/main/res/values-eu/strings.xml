@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">HURRENGOA</string>
+    <string name="init_skip">SALTATU</string>
+    <string name="init_agree">ONARTU</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Bihurtu zure gailua Rubber Ducky!</string>
+    <!-- Update screen -->
+    <string name="update_new">Eguneratze berria eskuragarri</string>
+    <!-- Editor screen -->
+    <string name="unlock">Desblokeatu aplikazioa</string>
+    <string name="auth">Autentifikazioa baieztatu</string>
+    <!-- Config screen -->
+    <!-- HID config screen -->
+    <!-- Keylist screen -->
+    <!-- Setting screen -->
+</resources>

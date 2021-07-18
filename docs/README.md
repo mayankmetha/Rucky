@@ -306,7 +306,11 @@ REPEAT 1
 Code    |Language           |Translated
 :---:   |:---:              | :---:
 ar      |Arabic             |100%
+az      |Azerbaijani        |60%
+b+ber   |Berber             |19%
+b+sat   |Santali            |26%
 bg      |Bulgarian          |100%
+br      |Breton             |6%
 cs      |Czech              |100%
 da      |Danish             |100%
 de      |German             |100%
@@ -315,15 +319,20 @@ en-rGB  |English (UK)       |100%
 en-rUS  |English (US)       |100%
 es      |Spanish            |100%
 et      |Estonian           |100%
+eu      |Basque             |4%
+fa      |Persian            |5%
 fi      |Finnish            |100%
 fr      |French             |100%
 hi      |Hindi              |100%
 hr      |Croatian           |100%
+hu      |Hungarian          |16%
 in      |Indonesian         |100%
 it      |Italian            |100%
+is      |Icelandic          |0%
 iw      |Hebrew             |100%
 ja      |Japanese           |100%
 ko      |Korean             |100%
+ku      |Kurdish            |1%
 lt      |Lithuanian         |100%
 lv      |Latvian            |100%
 ms      |Malay              |100%
