@@ -28,7 +28,7 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 
 Ducky Script syntax is simple. Each command resides on a new line and may have options follow. Commands are written in ALL CAPS, because ducks are loud and like to quack with pride. Most commands invoke keystrokes, key-combos or strings of text, while some offer delays or pauses. Below is a list of commands and their function, followed by some example usage. Some syntax extended from the original [Hak5 Ducky Script Syntax](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript). Mouse ducky scripts are different from those seen online and have been defined to keep the similarity with the keyboard ducky scripts.
 
-<b>Note:</b> In parameters `[num]` represents a number, `[char]` represents characters A-Z, a-z.
+<b>Note:</b> In parameters `[num]` represents a number, `[char]` represents characters A-Z, a-z. [Customizable HID](https://mayankmetha.github.io/Rucky-KeyMap/) support too has been added.
 
 ### Keyboard
 
@@ -201,7 +201,30 @@ SPACE | Emulates spacebar
 TAB | Emulates tab key
 BACKSPACE or BKSP | Emulates backspace key. On MacOS this is the delete key.
 ENTER | Emulates enter key
-FN | F1 to F24 Key. Not yet support. Will be added in future.
+F1 | Emulates F1 key
+F2 | Emulates F2 key
+F3 | Emulates F3 key
+F4 | Emulates F4 key
+F5 | Emulates F5 key
+F6 | Emulates F6 key
+F7 | Emulates F7 key
+F8 | Emulates F8 key
+F9 | Emulates F9 key
+F10 | Emulates F10 key
+F11 | Emulates F11 key
+F12 | Emulates F12 key
+F13 | Emulates F13 key
+F14 | Emulates F14 key
+F15 | Emulates F15 key
+F16 | Emulates F16 key
+F17 | Emulates F17 key
+F18 | Emulates F18 key
+F19 | Emulates F19 key
+F20 | Emulates F20 key
+F21 | Emulates F21 key
+F22 | Emulates F22 key
+F23 | Emulates F23 key
+F24 | Emulates F24 key
 
 #### Combo Key
 
@@ -223,7 +246,7 @@ Some commands has a parameter which is a combo key. These keys belong to US Engl
 - LEFTARROW or LEFT
 - RIGHTARROW or RIGHT
 - BREAK or PAUSE
-- F1 to F12 (F13 to F24 will be add in future)
+- F1 to F24
 - single number `[num]`
 - Single character `[char]`
 - ` or ~
@@ -255,7 +278,7 @@ All mouse/pointer commands will start with this command. REPEAT command and DELA
 
 <b>Syntax:</b> 
 
-Command | Command Type | Parameter 1 | Parameter 2 | Parameter 3 | Optional Parameter | Description
+Command | Command Type | Parameter 1 | Parameter 2 | Parameter 3 | Parameter 4 | Description
 :---: | :---: | :---: | :---: | :---: | :---: | :---:
 MOUSE or POINTER | CLICK or TOUCH or PRESS | [button] | [num] | | | Mouse button click. Mouse does not move along `[x]` and `[y]` directions.
 MOUSE or POINTER | HOLD or DRAG | [button] | [x] | [y] | [num] | Mouse button click and hold. Mouse can be moved along `[x]` and `[y]` directions.
@@ -278,6 +301,13 @@ REPEAT 1
 ```
 
 ---
+
+## App Translation
+Code    | Language    | Translated | Approved
+:---:   |:---:        | :---:      |:---:
+en-rUS  |English (US) |100%    |100%
+en-rGB  |English (UK) |100%    |100%
+en-hi   |Hindi        |100%    |100%
 
 ## Features 
 Status| Feature

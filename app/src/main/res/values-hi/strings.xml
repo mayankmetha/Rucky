@@ -1,69 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">एप्लीकेशन अनलॉक करें</string>
-    <string name="auth">Confirm authentication</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
-    <string name="init_next">NEXT</string>
-    <string name="init_skip">SKIP</string>
-    <string name="init_agree">AGREE</string>
-    <string name="init_start">HACK</string>
+    <string name="init_next">अगला</string>
+    <string name="init_skip">सीप</string>
+    <string name="init_agree">सहमत होना</string>
+    <string name="init_start">हैक</string>
     <string name="slideDesc1">अपनी युक्ति को एक रबड़ Ducky को बंद करो!</string>
-    <string name="slideTitle2">USB Cable</string>
-    <string name="slideDesc2">USB wired interface for launching attack!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
-    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
-    <string name="slideTitle5">Privacy Policy</string>
-    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideTitle2">यूएसबी केबल</string>
+    <string name="slideDesc2">हमले शुरू करने के लिए यूएसबी वायर्ड इंटरफेस!</string>
+    <string name="slideTitle3">नेटवर्क सॉकेट</string>
+    <string name="slideDesc3">समर्थित बाहरी उपकरणों के माध्यम से हमला करने के लिए वाई-फाई आधारित सॉकेट इंटरफेस!</string>
+    <string name="slideTitle4">अस्वीकरण</string>
+    <string name="slideDesc4">ऐप का उपयोगकर्ता नुकसान के लिए पूरी तरह से जिम्मेदार है. इस ऐप का उपयोग करने के लिए किए गए नुकसान के लिए कोई अन्य एंटिटी नहीं ठहराया जा सकता! एप्लिकेशन का उपयोग करते समय सावधानी बरतनी चाहिए और दूसरों को नुकसान पहुँचाने के लिए इसका उपयोग नहीं करना!</string>
+    <string name="slideTitle5">गोपनीयता नीति</string>
+    <string name="slideDesc5">किसी भी फार्म का कोई डेटा एकत्र नहीं किया जाता है, इस्तेमाल किया जाता है और बेचा कुछ अनुमतियां जो गोपनीयता संबंधी चिंताओं को उठा सकती हैं, केवल एप में कुछ सुविधाओं के काम करने के लिए कहा जाता है और डेटा इकट्ठा करने के लिए नहीं है! आपकी गोपनीयता का सम्मान किया जाता है!</string>
+    <string name="slideTitle6">एप्लिकेशन अनुमति</string>
+    <string name="slideDesc6">कृपया एप्लिकेशन को काम करने के लिए आवश्यक अनुमति प्रदान करें!</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
+    <string name="update_new">नया अद्यतन उपलब्ध</string>
+    <string name="update_hash_error">फ़ाइल हस्ताक्षर मिसमैच! अद्यतन नहीं कर सकते.</string>
+    <string name="update_activity">Rucky अद्यतन</string>
     <string name="update_version">संस्करण</string>
-    <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_version_nightly">रात का संस्करण</string>
+    <string name="update_changelog">चेंजलॉग</string>
+    <string name="update_status">अद्यतन स्थिति</string>
+    <string name="update_action">अपडेट डाउनलोड और इंस्टॉल करें</string>
+    <string name="update_downloading">अद्यतन डाउनलोड करें</string>
+    <string name="install_update">अद्यतन लागू करें</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
+    <string name="exit_dialog">क्या आप एप्लिकेशन को छिपाने या बाहर निकलने के लिए चाहते हैं?</string>
+    <string name="btn_exit">बाहर निकलें</string>
+    <string name="btn_back">छुपाएं</string>
+    <string name="unlock">एप्लीकेशन अनलॉक करें</string>
+    <string name="auth">सत्यापन पुष्टि करें</string>
+    <string name="update">अद्यतन</string>
+    <string name="setting">विन्यास</string>
     <string name="codeHint">रबड़ या रबड़ की लिपिकार</string>
     <string name="loadBtn">लोड</string>
     <string name="saveBtn">सेव</string>
     <string name="delBtn">मिटाए</string>
     <string name="runBtn">चलाएं</string>
-    <string name="confBtn">Config</string>
-    <string name="btn_continue">Continue</string>
-    <string name="root_err">Root Access Required For USB Cable Attack!</string>
-    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="confBtn">कॉन्फ़िग</string>
+    <string name="btn_continue">जारी रखें</string>
+    <string name="root_err">यूएसबी केबल हमले के लिए रूट पहुँच आवश्यक है!</string>
+    <string name="kernel_err">"यूएसबी केबल हमले के लिए कर्नेल समर्थित नहीं!"</string>
     <!-- Config screen -->
-    <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="config_activity">ट्वीक्स</string>
+    <string name="config_status_usb_on">यूएसबी कनेक्टेड</string>
+    <string name="config_status_usb_off">यूएसबी डिसकनेक्टेड</string>
+    <string name="config_status_net_on">संजाल सॉकेट कनेक्टेड</string>
+    <string name="config_status_net_off">संजाल सॉकेट डिसकनेक्टेड</string>
+    <string name="socket_address">सॉकेट आईपी और पोर्ट पता भरें</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">एचआईडी कॉन्फ़िग</string>
+    <string name="hid_download">डाउनलोड करें</string>
+    <string name="hid_update">अद्यतन</string>
+    <string name="hid_edit">संपादित करें</string>
+    <string name="hid_delete">मिटाए</string>
+    <!-- Keylist screen -->
+    <string name="key_title">कुंजी नाम</string>
+    <string name="key_character">कुंजी अक्षर</string>
+    <string name="key_code">कुंजी कोड</string>
+    <string name="key_ctrl">कंट्रोल कुंजी</string>
+    <string name="key_alt">ऑल्ट कुंजी</string>
+    <string name="key_shift">शिफ्ट कुंजी</string>
+    <string name="key_meta">मेटा कुंजी</string>
+    <string name="keycode">कुंजी कोड</string>
+    <string name="modcode">संशोधक कोड</string>
+    <string name="key_details">कुंजी विवरण</string>
     <!-- Setting screen -->
     <string name="setting_general">सामान्य</string>
-    <string name="dark_theme_title">Night Mode</string>
-    <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
-    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
-    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="dark_theme_title">रात्रि मोड</string>
+    <string name="dark_theme_summary">गहरा प्रसंग सेट करें</string>
+    <string name="accent_theme_title">प्रसंग</string>
+    <string name="accent_theme_summary">टोन रंग बदलें</string>
+    <string name="hide_icon_title">लॉचर प्रतीक छुपाएँ/निष्क्रिय करें</string>
+    <string name="hide_icon_summary">डायल *#*#78259#*#* पर लॉन्च करने के लिए. एंड्रॉयड 10 के बाद, आइकन अक्षम किया जाएगा, लेकिन छुपा नहीं है.</string>
     <string name="delete_dep_title">एप्लिकेशन अनइंस्टॉल करें</string>
     <string name="delete_dep_summary">साफ अप और अनइंस्टॉल करें एप्लिकेशन.</string>
     <string name="settings_sec_title">अग्रिम सुरक्षा</string>
     <string name="settings_sec_desc">स्क्रिप्ट फ़ाइल गोपन और स्क्रीन लॉक सक्षम करें.</string>
-    <string name="setting_device">Attack Mode Settings</string>
-    <string name="settings_usb_title">USB Connect Launch</string>
-    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
-    <string name="settings_net_title">Network Socket Connect Launch</string>
-    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
+    <string name="setting_device">आक्रमण मोड विन्यास</string>
+    <string name="hid_choice_title">अनुकूलन योग्य एचआईडी</string>
+    <string name="hid_choice_summary">लीगेसी एचआईडी और अनुकूलन योग्य एचआईडी के बीच स्विच करें</string>
+    <string name="hid_title">एचआईडी भाषा</string>
+    <string name="hid_summary">अतिरिक्त एचआईडी भाषाओं या डिजाइन नए एचआईडी लेआउट डाउनलोड करें.</string>
+    <string name="settings_usb_title">यूएसबी कनेक्ट लॉन्च</string>
+    <string name="settings_usb_desc">जब USB कनेक्ट हो गया है तो बटन को चालू किया जाएगा.</string>
+    <string name="settings_net_title">संजाल सॉकेट कनेक्ट करें</string>
+    <string name="settings_net_desc">रन बटन तब हमला करेगा जब संजाल सॉकेट से जुड़ा हुआ है.</string>
     <string name="setting_about">जानकारी</string>
     <string name="setting_developer_title">डिवेलपर</string>
     <string name="settings_version_title">संस्करण</string>
@@ -73,41 +99,45 @@
     <string name="settings_git_title">गीदी मुद्दे</string>
     <string name="settings_git_desc">मुद्दों या फीचर अनुरोध जोड़ने के लिए क्लिक करें</string>
     <string name="settings_locale_title">स्थानीकरण</string>
-    <string name="settings_locale_desc">Contribute to app localization.</string>
-    <string name="release">Distribution</string>
+    <string name="settings_locale_desc">एप्लिकेशन स्थानीयकरण में योगदान.</string>
+    <string name="release">वितरण</string>
     <string name="releaseNetHunter">नेटवर्टर एप्लिकेशन स्टोर</string>
     <string name="releaseGitHub">गीदी रिलीज</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">डिबग रिलीज</string>
     <string name="releaseOthers">समर्थित रिलीज़</string>
-    <string name="btn_select">Select</string>
-    <string name="btn_cancel">Cancel</string>
+    <string name="btn_select">चुनें</string>
+    <string name="btn_cancel">रद्द करें</string>
     <string name="btn_save">सेव</string>
-    <string name="file_saved">saved</string>
-    <string name="file_deleted">deleted</string>
-    <string name="file_name">File Name</string>
+    <string name="file_saved">बचा हुआ</string>
+    <string name="title_open_file">फ़ाइल खोलें</string>
+    <string name="title_delete_file">फ़ाइल मिटाएँ</string>
+    <string name="file_deleted">लोप</string>
+    <string name="file_name">फ़ाइल नाम</string>
+    <string name="title_save_file">फ़ाइल सहेजें</string>
     <string-array name="modes">
-        <item>USB Cable</item>
-        <item>Network Socket</item>
+        <item>यूएसबी केबल</item>
+        <item>नेटवर्क सॉकेट</item>
     </string-array>
     <string-array name="hidLanguages">
-        <item>American English</item>
-        <item>Turkish</item>
-        <item>Swedish</item>
-        <item>Slovenian</item>
-        <item>Russian</item>
-        <item>Portuguese</item>
-        <item>Norwegian</item>
-        <item>Italian</item>
-        <item>Croatian</item>
-        <item>United Kingdom English</item>
-        <item>French</item>
-        <item>Finnish</item>
-        <item>Spanish</item>
-        <item>Danish</item>
-        <item>German</item>
-        <item>Canadian French</item>
-        <item>Brazilian Portuguese</item>
-        <item>Belarusian</item>
-        <item>Hungarian</item>
+        <item>अमेरिकी अंग्रेजी</item>
+        <item>तुर्की भाषा</item>
+        <item>स्वीडिश भाषा</item>
+        <item>स्लोवेनिआ</item>
+        <item>रूसी</item>
+        <item>पुर्तगाली</item>
+        <item>नार्वे</item>
+        <item>इतालवी भाषा</item>
+        <item>क्रोएशियाई</item>
+        <item>यूनाइटेड किंगडम अंग्रेजी</item>
+        <item>फ्रेंच भाषा</item>
+        <item>फ़िनिश</item>
+        <item>स्पेनी भाषा</item>
+        <item>दानिश</item>
+        <item>जर्मन</item>
+        <item>कनाडा फ़्रेंच</item>
+        <item>पुर्तगाली पुर्तगाली</item>
+        <item>बेलारूसी</item>
+        <item>हंगेरी</item>
     </string-array>
 </resources>

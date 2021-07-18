@@ -2347,6 +2347,18 @@ public class HID {
             case "f10": return keys.get("KEY_F10");
             case "f11": return keys.get("KEY_F11");
             case "f12": return keys.get("KEY_F12");
+            case "f13": return keys.get("KEY_F13");
+            case "f14": return keys.get("KEY_F14");
+            case "f15": return keys.get("KEY_F15");
+            case "f16": return keys.get("KEY_F16");
+            case "f17": return keys.get("KEY_F17");
+            case "f18": return keys.get("KEY_F18");
+            case "f19": return keys.get("KEY_F19");
+            case "f20": return keys.get("KEY_F20");
+            case "f21": return keys.get("KEY_F21");
+            case "f22": return keys.get("KEY_F22");
+            case "f23": return keys.get("KEY_F23");
+            case "f24": return keys.get("KEY_F24");
             case "0": return keys.get("KEY_0");
             case "1": return keys.get("KEY_1");
             case "2": return keys.get("KEY_2");
@@ -2434,6 +2446,36 @@ public class HID {
             tmp = "echo \"\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\" > /dev/hidg0\n";
         }
         return tmp;
+    }
+
+    private String mbyteCode(String button, String x, String y, String scroll, String count) {
+        StringBuilder tmp = new StringBuilder();
+        String[] mbytes = new String[4];
+
+        if(button.trim().equals("LEFT")) mbytes[0] = "01";
+        else if(button.trim().equals("RIGHT")) mbytes[0] = "02";
+        else if(button.trim().equals("MIDDLE")) mbytes[0] = "04";
+        else mbytes[0] = "00";
+
+        if(Integer.parseInt(x) >= -127 && Integer.parseInt(x) <= 127)
+            mbytes[1] = String.format("%02X", Byte.parseByte(x));
+        else
+            mbytes[1] = "00";
+
+        if(Integer.parseInt(y) >= -127 && Integer.parseInt(y) <= 127)
+            mbytes[2] = String.format("%02X", Byte.parseByte(y));
+        else
+            mbytes[2] = "00";
+
+        if(scroll.trim().equals("UP")) mbytes[3] = "01";
+        else if(scroll.trim().equals("DOWN")) mbytes[3] = "FF";
+        else mbytes[3] = "00";
+
+        for (int i = 0; i < Integer.parseInt(count); i++) {
+            tmp.append("echo \"\\\\x").append(mbytes[0]).append("\\\\x").append(mbytes[1]).append("\\\\x").append(mbytes[2]).append("\\\\x").append(mbytes[3]).append("\" > /dev/hidg1\n");
+            tmp.append("echo \"\\\\x00\\\\x00\\\\x00\\\\x00\" > /dev/hidg1\n");
+        }
+        return tmp.toString();
     }
 
     public ArrayList<String> getCmd() {
@@ -2623,6 +2665,103 @@ public class HID {
             else if (lines[a].startsWith("ENTER")) {
                 shell.add(kbbyteCode(keys.get("KEY_ENTER")));
             }
+            //F1
+            else if (lines[a].startsWith("F1")) {
+                shell.add(kbbyteCode(keys.get("KEY_F1")));
+            }
+            //F2
+            else if (lines[a].startsWith("F2")) {
+                shell.add(kbbyteCode(keys.get("KEY_F2")));
+            }
+            //F3
+            else if (lines[a].startsWith("F3")) {
+                shell.add(kbbyteCode(keys.get("KEY_F3")));
+            }
+            //F4
+            else if (lines[a].startsWith("F4")) {
+                shell.add(kbbyteCode(keys.get("KEY_F4")));
+            }
+            //F5
+            else if (lines[a].startsWith("F5")) {
+                shell.add(kbbyteCode(keys.get("KEY_F5")));
+            }
+            //F6
+            else if (lines[a].startsWith("F6")) {
+                shell.add(kbbyteCode(keys.get("KEY_F6")));
+            }
+            //F7
+            else if (lines[a].startsWith("F7")) {
+                shell.add(kbbyteCode(keys.get("KEY_F7")));
+            }
+            //F8
+            else if (lines[a].startsWith("F8")) {
+                shell.add(kbbyteCode(keys.get("KEY_F8")));
+            }
+            //F9
+            else if (lines[a].startsWith("F9")) {
+                shell.add(kbbyteCode(keys.get("KEY_F9")));
+            }
+            //F10
+            else if (lines[a].startsWith("F10")) {
+                shell.add(kbbyteCode(keys.get("KEY_F10")));
+            }
+            //F11
+            else if (lines[a].startsWith("F11")) {
+                shell.add(kbbyteCode(keys.get("KEY_F11")));
+            }
+            //F12
+            else if (lines[a].startsWith("F12")) {
+                shell.add(kbbyteCode(keys.get("KEY_F12")));
+            }
+            //F13
+            else if (lines[a].startsWith("F13")) {
+                shell.add(kbbyteCode(keys.get("KEY_F13")));
+            }
+            //F14
+            else if (lines[a].startsWith("F14")) {
+                shell.add(kbbyteCode(keys.get("KEY_F14")));
+            }
+            //F15
+            else if (lines[a].startsWith("F15")) {
+                shell.add(kbbyteCode(keys.get("KEY_F15")));
+            }
+            //F16
+            else if (lines[a].startsWith("F16")) {
+                shell.add(kbbyteCode(keys.get("KEY_F16")));
+            }
+            //F17
+            else if (lines[a].startsWith("F17")) {
+                shell.add(kbbyteCode(keys.get("KEY_F17")));
+            }
+            //F18
+            else if (lines[a].startsWith("F18")) {
+                shell.add(kbbyteCode(keys.get("KEY_F18")));
+            }
+            //F19
+            else if (lines[a].startsWith("F19")) {
+                shell.add(kbbyteCode(keys.get("KEY_F19")));
+            }
+            //F20
+            else if (lines[a].startsWith("F20")) {
+                shell.add(kbbyteCode(keys.get("KEY_F20")));
+            }
+            //F21
+            else if (lines[a].startsWith("F21")) {
+                shell.add(kbbyteCode(keys.get("KEY_F21")));
+            }
+            //F22
+            else if (lines[a].startsWith("F22")) {
+                shell.add(kbbyteCode(keys.get("KEY_F22")));
+            }
+            //F23
+            else if (lines[a].startsWith("F23")) {
+                shell.add(kbbyteCode(keys.get("KEY_F23")));
+            }
+            //F24
+            else if (lines[a].startsWith("F24")) {
+                shell.add(kbbyteCode(keys.get("KEY_F24")));
+            }
+            //TODO: MOUSE or POINTER
             shell.add("sleep " + defdelay + "\n");
         }
     }

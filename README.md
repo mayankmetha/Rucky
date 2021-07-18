@@ -28,21 +28,21 @@ An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 
 Ducky Script syntax is simple. Each command resides on a new line and may have options follow. Commands are written in ALL CAPS, because ducks are loud and like to quack with pride. Most commands invoke keystrokes, key-combos or strings of text, while some offer delays or pauses. Below is a list of commands and their function, followed by some example usage. Some syntax extended from the original [Hak5 Ducky Script Syntax](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript). Mouse ducky scripts are different from those seen online and have been defined to keep the similarity with the keyboard ducky scripts.
 
-<b>Note:</b> In parameters `[num]` represents a number, `[char]` represents characters A-Z, a-z.
+<b>Note:</b> In parameters `[num]` represents a number, `[char]` represents characters A-Z, a-z. [Customizable HID](https://mayankmetha.github.io/Rucky-KeyMap/) support too has been added.
 
 ### Keyboard
 
-#### DEFAULTDELAY or DEFAULT_DELAY 
+#### DEFAULTDELAY or DEFAULT_DELAY
 
 DEFAULT_DELAY or DEFAULTDELAY is used to define how long (milliseconds) to wait between each subsequent command. DEFAULT_DELAY must be issued at the beginning of the ducky script and is optional. Not specifying the DEFAULT_DELAY will result in faster execution of ducky scripts. This command is mostly useful when debugging.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Parameter
 :---: | :---:
 DEFAULTDELAY or DEFAULT_DELAY | [num]
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 DEFAULTDELAY 100
 DEFAULT_DELAY 100
@@ -52,13 +52,13 @@ DEFAULT_DELAY 100
 
 DELAY creates a momentary pause in the ducky script. It is quite handy for creating a moment of pause between sequential commands that may take the target computer some time to process. DELAY time is specified in milliseconds. Multiple DELAY commands can be used to create longer delays.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Parameter
 :---: | :---:
 DELAY | [num]
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 DELAY 500
 ```
@@ -67,13 +67,13 @@ DELAY 500
 
 Similar to the REM command in Basic and other languages, lines beginning with REM will not be processed. REM is a comment.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Parameter
 :---: | :---:
 REM | comment string
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 REM This is a comment
 ```
@@ -82,13 +82,13 @@ REM This is a comment
 
 Repeats the last command `[num]` times
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Parameter
 :---: | :---:
 REPEAT | [num]
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 DELAY 1
 REPEAT 5
@@ -98,13 +98,13 @@ REPEAT 5
 
 STRING processes the text following taking special care to auto-shift. STRING can accept a single or multiple characters.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Parameter
 :---: | :---:
 STRING | all possible printable characters supported on a specific keyboard layout
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 STRING hello world
 ```
@@ -113,13 +113,13 @@ STRING hello world
 
 Emulates the Windows-Key, sometimes referred to as the Super-key.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Parameter
 :---: | :---:
 GUI or WINDOWS or COMMAND or META | Combo Key
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 GUI r
 ```
@@ -128,13 +128,13 @@ GUI r
 
 Unlike CAPSLOCK, cruise control for cool, the SHIFT command can be used when navigating fields to select text, among other functions.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Optional Parameter | Parameter
 :---: | :---: | :---:
 SHIFT | ALT or GUI or WINDOWS or COMMAND or META or CTRL or CONTROL | Combo Key
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 SHIFT a
 SHIFT ALT 4
@@ -144,13 +144,13 @@ SHIFT ALT 4
 
 Found to the left of the space key on most keyboards, the ALT key is instrumental in many automation operations.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Optional Parameter | Parameter
 :---: | :---: | :---:
 ALT | SHIFT or CTRL or CONTROL | Combo Key
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 ALT a
 ALT SHIFT e
@@ -160,13 +160,13 @@ ALT SHIFT e
 
 The king of key-combos, CONTROL is all mighty.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Optional Parameter | Parameter
 :---: | :---: | :---:
 CTRL or CONTROL | SHIFT or ALT | Combo Key
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 CTRL s
 CTRL ALT DELETE
@@ -176,7 +176,7 @@ CTRL ALT DELETE
 
 These keys have no parameters.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
 Command | Description
 :---: | :---
@@ -201,7 +201,30 @@ SPACE | Emulates spacebar
 TAB | Emulates tab key
 BACKSPACE or BKSP | Emulates backspace key. On MacOS this is the delete key.
 ENTER | Emulates enter key
-FN | F1 to F24 Key. Not yet support. Will be added in future.
+F1 | Emulates F1 key
+F2 | Emulates F2 key
+F3 | Emulates F3 key
+F4 | Emulates F4 key
+F5 | Emulates F5 key
+F6 | Emulates F6 key
+F7 | Emulates F7 key
+F8 | Emulates F8 key
+F9 | Emulates F9 key
+F10 | Emulates F10 key
+F11 | Emulates F11 key
+F12 | Emulates F12 key
+F13 | Emulates F13 key
+F14 | Emulates F14 key
+F15 | Emulates F15 key
+F16 | Emulates F16 key
+F17 | Emulates F17 key
+F18 | Emulates F18 key
+F19 | Emulates F19 key
+F20 | Emulates F20 key
+F21 | Emulates F21 key
+F22 | Emulates F22 key
+F23 | Emulates F23 key
+F24 | Emulates F24 key
 
 #### Combo Key
 
@@ -223,7 +246,7 @@ Some commands has a parameter which is a combo key. These keys belong to US Engl
 - LEFTARROW or LEFT
 - RIGHTARROW or RIGHT
 - BREAK or PAUSE
-- F1 to F12 (F13 to F24 will be add in future)
+- F1 to F24
 - single number `[num]`
 - Single character `[char]`
 - ` or ~
@@ -242,7 +265,7 @@ Some commands has a parameter which is a combo key. These keys belong to US Engl
 #### MOUSE or POINTER
 All mouse/pointer commands will start with this command. REPEAT command and DELAY commands effect can also be applied to mouse commands.
 
-<b>Note:</b> 
+<b>Note:</b>
 1. In parameter field `[button]`, which emulates a mouse button action and can have the following value:
     - LEFT
     - RIGHT
@@ -253,16 +276,16 @@ All mouse/pointer commands will start with this command. REPEAT command and DELA
     - DOWN
 4. In parameters `[num]` represents a number. This is used to repeat the action. Alternatively, REPEAT command can be used.
 
-<b>Syntax:</b> 
+<b>Syntax:</b>
 
-Command | Command Type | Parameter 1 | Parameter 2 | Parameter 3 | Optional Parameter | Description
+Command | Command Type | Parameter 1 | Parameter 2 | Parameter 3 | Parameter 4 | Description
 :---: | :---: | :---: | :---: | :---: | :---: | :---:
 MOUSE or POINTER | CLICK or TOUCH or PRESS | [button] | [num] | | | Mouse button click. Mouse does not move along `[x]` and `[y]` directions.
 MOUSE or POINTER | HOLD or DRAG | [button] | [x] | [y] | [num] | Mouse button click and hold. Mouse can be moved along `[x]` and `[y]` directions.
 MOUSE or POINTER | MOVE or TRANSLATE | [x] | [y] | [num] | | Mouse button does not click. Mouse can be moved along `[x]` and `[y]` directions.
 MOUSE or POINTER | KNOB or WHEEL or SCROLL | [scroll] | [num] | | | Mouse button does not click. Mouse can be scrolled up or down.
 
-<b>Example:</b> 
+<b>Example:</b>
 ```
 REM double left click
 MOUSE CLICK LEFT 2
@@ -278,6 +301,13 @@ REPEAT 1
 ```
 
 ---
+
+## App Translation
+Code    | Language    | Translated | Approved
+:---:   |:---:        | :---:      |:---:
+en-rUS  |English (US) |100%    |100%
+en-rGB  |English (UK) |100%    |100%
+en-hi   |Hindi        |100%    |100%
 
 ## Features 
 Status| Feature

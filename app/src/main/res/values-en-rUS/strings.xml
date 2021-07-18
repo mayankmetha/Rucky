@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Unlock App</string>
-    <string name="auth">Confirm authentication</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">NEXT</string>
     <string name="init_skip">SKIP</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">App Permission</string>
     <string name="slideDesc6">Please grant app the required permission to work!</string>
     <!-- Update screen -->
+    <string name="update_new">New update available</string>
+    <string name="update_hash_error">File Signature Mismatch! Cannot Update.</string>
     <string name="update_activity">Rucky Update</string>
     <string name="update_version">Version</string>
+    <string name="update_version_nightly">Nightly Version</string>
     <string name="update_changelog">Changelog</string>
     <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
+    <string name="update_action">Download and Install Update</string>
     <string name="update_downloading">Downloading Update</string>
     <string name="install_update">Applying Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Would you like to hide or exit the app?</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_back">Hide</string>
+    <string name="unlock">Unlock App</string>
+    <string name="auth">Confirm authentication</string>
     <string name="update">Update</string>
     <string name="setting">Settings</string>
     <string name="codeHint">Type or load rubber ducky scripts here</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Network Socket Connected</string>
     <string name="config_status_net_off">Network Socket Disconnected</string>
     <string name="socket_address">Enter Socket IP and Port Address</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Download</string>
+    <string name="hid_update">Update</string>
+    <string name="hid_edit">Edit</string>
+    <string name="hid_delete">Delete</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Key Name</string>
+    <string name="key_character">Key Character</string>
+    <string name="key_code">Key Code</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Key Code</string>
+    <string name="modcode">Modifier Code</string>
+    <string name="key_details">Key Details</string>
     <!-- Setting screen -->
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Night Mode</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Advance Security</string>
     <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
     <string name="setting_device">Attack Mode Settings</string>
+    <string name="hid_choice_title">Customisable HID</string>
+    <string name="hid_choice_summary">Switch between Legacy HID and Customisable HID</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">Download additional HID languages or design new HID layouts.</string>
     <string name="settings_usb_title">USB Connect Launch</string>
     <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
     <string name="settings_net_title">Network Socket Connect Launch</string>
@@ -77,14 +103,18 @@
     <string name="release">Distribution</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug Release</string>
     <string name="releaseOthers">Non Supported Release</string>
     <string name="btn_select">Select</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_save">Save</string>
     <string name="file_saved">saved</string>
+    <string name="title_open_file">Open File</string>
+    <string name="title_delete_file">Delete File</string>
     <string name="file_deleted">deleted</string>
     <string name="file_name">File Name</string>
+    <string name="title_save_file">Save File</string>
     <string-array name="modes">
         <item>USB Cable</item>
         <item>Network Socket</item>

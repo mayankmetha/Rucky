@@ -31,7 +31,7 @@
     <string name="update_version_nightly">Nightly Version</string>
     <string name="update_changelog">Changelog</string>
     <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
+    <string name="update_action">Download and Install Update</string>
     <string name="update_downloading">Downloading Update</string>
     <string name="install_update">Applying Update</string>
 
@@ -60,7 +60,7 @@
     <string name="config_status_net_on">Network Socket Connected</string>
     <string name="config_status_net_off">Network Socket Disconnected</string>
     <string name="socket_address">Enter Socket IP and Port Address</string>
-    <string name="socket_ip_hint">[0&#8211;255].[0&#8211;255].[0&#8211;255].[0&#8211;255]:[1&#8211;65535]</string>
+    <string name="socket_ip_hint" translatable="false">[0&#8211;255].[0&#8211;255].[0&#8211;255].[0&#8211;255]:[1&#8211;65535]</string>
 
     <!-- HID config screen -->
     <string name="hid_activity">HID Config</string>
