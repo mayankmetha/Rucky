@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">SETERUSNYA</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">SETUJU</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Hidupkan peranti anda kepada Rubber Ducky!</string>
+    <string name="slideTitle2">Kabel USB</string>
+    <string name="slideDesc2">Antaramuka wayar USB untuk melancarkan serangan!</string>
+    <string name="slideTitle3">Soket Rangkaian</string>
+    <string name="slideDesc3">Wi-Fi berasaskan antaramuka soket untuk melancarkan serangan melalui alat luaran yang disokong!</string>
+    <string name="slideTitle4">Penolak</string>
+    <string name="slideDesc4">Pengguna aplikasi adalah sangat bertanggungjawab untuk kerosakan yang disebabkan oleh kerosakan. Tiada entiti lain yang boleh ditahan kerana kerosakan yang dilakukan menggunakan aplikasi ini! Beri amaran apabila menggunakan aplikasi dan jangan gunakan ini untuk menyebabkan bahaya kepada orang lain!</string>
+    <string name="slideTitle5">Polisi Privasi</string>
+    <string name="slideDesc5">Tiada Data bagi mana-mana bentuk yang dikumpul, digunakan dan dijual! Sesetengah keizinan yang boleh meningkatkan kebimbangan privasi hanya diminta untuk menjayakan ciri-ciri tertentu dalam aplikasi dan bukan untuk mengumpul data! Privasi anda dihormati!</string>
+    <string name="slideTitle6">Keizinan App</string>
+    <string name="slideDesc6">Sila berikan aplikasi kebenaran yang diperlukan untuk bekerja!</string>
+    <!-- Update screen -->
+    <string name="update_new">Kemaskini baru tersedia</string>
+    <string name="update_hash_error">Tandatangan Fail Tidak sepadan! Tidak Dapat Kemaskini.</string>
+    <string name="update_activity">Kemaskini Rucky</string>
+    <string name="update_version">Versi</string>
+    <string name="update_version_nightly">Versi Secerah</string>
+    <string name="update_changelog">Log penukaran</string>
+    <string name="update_status">Kemaskini Status</string>
+    <string name="update_action">Muat turun dan Pasang Kemas kini</string>
+    <string name="update_downloading">Memuat turun Kemaskini</string>
+    <string name="install_update">Menerapkan Kemaskini</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">Adakah anda ingin menyembunyikan atau keluar aplikasi?</string>
+    <string name="btn_exit">Keluar</string>
+    <string name="btn_back">Sembunyi</string>
+    <string name="unlock">Nyahkunci App</string>
+    <string name="auth">Sahkan pengesahihan</string>
+    <string name="update">Kemaskini</string>
+    <string name="setting">Tetapan</string>
+    <string name="codeHint">Taip atau muatkan skrip ducky getah di sini</string>
+    <string name="loadBtn">Muatkan</string>
+    <string name="saveBtn">&amp; Simpan</string>
+    <string name="delBtn">&amp; Hapuskan</string>
+    <string name="runBtn">&amp; Lari</string>
+    <string name="confBtn">Konfig</string>
+    <string name="btn_continue">Teruskan</string>
+    <string name="root_err">Akses Root Diperlukan Untuk Serangan Kabel USB!</string>
+    <string name="kernel_err">"Kernel Tidak Disokong Untuk Serangan Kabel USB!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweet</string>
+    <string name="config_status_usb_on">Bersambung USB</string>
+    <string name="config_status_usb_off">USB Terputus</string>
+    <string name="config_status_net_on">Soket Rangkaian Bersambung</string>
+    <string name="config_status_net_off">Soket Rangkaian Terputus</string>
+    <string name="socket_address">Masukkan Alamat IP dan Alamat Port</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Tetapan HID</string>
+    <string name="hid_download">Muat turun</string>
+    <string name="hid_update">Kemaskini</string>
+    <string name="hid_edit">Edit</string>
+    <string name="hid_delete">&amp; Hapuskan</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nama Kunci</string>
+    <string name="key_character">Aksara Kekunci</string>
+    <string name="key_code">Kod Kunci</string>
+    <string name="key_ctrl">Kekunci Ctrl</string>
+    <string name="key_alt">Kekunci Alt</string>
+    <string name="key_shift">Kekunci Shift</string>
+    <string name="key_meta">Kekunci Meta</string>
+    <string name="keycode">Kod Kunci</string>
+    <string name="modcode">Kod Pengubahsuai</string>
+    <string name="key_details">Perincian Kunci</string>
+    <!-- Setting screen -->
+    <string name="setting_general">&amp; Umum</string>
+    <string name="dark_theme_title">Mod Malam</string>
+    <string name="dark_theme_summary">Tetapkan tema gelap</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Ubah warna loghat</string>
+    <string name="hide_icon_title">Sembunyi/Lumpuhkan Ikon Pelancar</string>
+    <string name="hide_icon_summary">Dail * #*#78259#*#* untuk dilancarkan. Pada Android 10 onof, ikon akan dinyahaktifkan, tetapi tidak disembunyikan.</string>
+    <string name="delete_dep_title">Nyahpasang App</string>
+    <string name="delete_dep_summary">Bersih dan nyahpasang aplikasi.</string>
+    <string name="settings_sec_title">Keselamatan Maju</string>
+    <string name="settings_sec_desc">Benarkan penyulitan fail skrip dan kunci skrin.</string>
+    <string name="setting_device">Tetapan Mod Serangan</string>
+    <string name="hid_choice_title">HID boleh suai</string>
+    <string name="hid_choice_summary">Tukar diantara HID Legacy dan HeID Kasmisable</string>
+    <string name="hid_title">Bahasa HID</string>
+    <string name="hid_summary">Muat turun bahasa HID tambahan atau reka bentangan HID baru.</string>
+    <string name="settings_usb_title">Pelancaran USB Dilancarkan</string>
+    <string name="settings_usb_desc">Jalankan butang akan melancarkan serangan bila USB bersambung.</string>
+    <string name="settings_net_title">Pelancaran Sambungan Soket Rangkaian</string>
+    <string name="settings_net_desc">Jalankan butang akan melancarkan serangan bila Rangkaian Socket bersambung.</string>
+    <string name="setting_about">Maklumat</string>
+    <string name="setting_developer_title">Pembangun</string>
+    <string name="settings_version_title">Versi</string>
+    <string name="settings_arch_title">Senibina</string>
+    <string name="settings_lic_title">Lesen</string>
+    <string name="settings_support">Sokongan</string>
+    <string name="settings_git_title">Isu GitHub</string>
+    <string name="settings_git_desc">Klik untuk tambah isu atau permintaan fitur.</string>
+    <string name="settings_locale_title">Pengeloksan</string>
+    <string name="settings_locale_desc">Menyumbang kepada aplikasi penyemakan.</string>
+    <string name="release">Pengagihan</string>
+    <string name="releaseNetHunter">Stor App NetHunter</string>
+    <string name="releaseGitHub">Pelepasan Gitang</string>
+    <string name="releaseGitHubNightly">Giton!</string>
+    <string name="releaseTest">Pelepasan Nyahpepijat</string>
+    <string name="releaseOthers">Keluaran Tidak Disokong</string>
+    <string name="btn_select">Pilih</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_save">&amp; Simpan</string>
+    <string name="file_saved">disimpan</string>
+    <string name="title_open_file">Buka Fail</string>
+    <string name="title_delete_file">Padam Fail</string>
+    <string name="file_deleted">dipadam</string>
+    <string name="file_name">Nama Fail</string>
+    <string name="title_save_file">Simpan Fail</string>
+    <string-array name="modes">
+        <item>Kabel USB</item>
+        <item>Soket Rangkaian</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Inggeris Amerika</item>
+        <item>Turki</item>
+        <item>Sweden</item>
+        <item>Slovenia</item>
+        <item>Bahasa Rusia</item>
+        <item>Portugis</item>
+        <item>Norwegian</item>
+        <item>Itali</item>
+        <item>Bahasa Croatia</item>
+        <item>Inggeris United Kingdom</item>
+        <item>Perancis</item>
+        <item>Finland</item>
+        <item>Bahasa Sepanyol</item>
+        <item>Danish</item>
+        <item>Jerman</item>
+        <item>Perancis Kanada</item>
+        <item>Portugis Brazil</item>
+        <item>BelarusiName</item>
+        <item>Hungary</item>
+    </string-array>
+</resources>

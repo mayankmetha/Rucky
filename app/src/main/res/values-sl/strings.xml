@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">VELJA.</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Obrni napravo k Rubber Duckyju!</string>
+    <string name="slideTitle2">USB Kabel</string>
+    <string name="slideDesc2">USB ožičen vmesnik za napad!</string>
+    <string name="slideTitle3">Omrežna Vtičnica</string>
+    <string name="slideDesc3">Vmesniki vtičnic, ki temeljijo na wi-fi, za zagon napada prek podprtih zunanjih orodij!</string>
+    <string name="slideTitle4">Izjava o omejitvi odgovornosti</string>
+    <string name="slideDesc4">Uporabnik aplikacije je izključno odgovoren za povzročeno škodo. Nobena druga entiteta ne more biti odgovorna za škodo, opravljeno s to aplikacijo! Bodite previdni pri uporabi aplikacije in ne uporabljajte tega, da bi škodovadili drugim.</string>
+    <string name="slideTitle5">Pravilnik o zasebnosti</string>
+    <string name="slideDesc5">Podatki o nobeni obliki se ne zbirajo, uporabljajo in prodajajo. Nekatera dovoljenja, ki lahko vzbuja pomisleke glede zasebnosti, so zahtevana samo za delo določenih funkcij v aplikaciji in ni za zbiranje podatkov! Vaša zasebnost je spoštoena!</string>
+    <string name="slideTitle6">Dovoljenje Aplikacije</string>
+    <string name="slideDesc6">Aplikaciji dodelite zahtevano dovoljenje za delo!</string>
+    <!-- Update screen -->
+    <string name="update_new">Na voljo je nova posodobitev</string>
+    <string name="update_hash_error">Neujemanje podpisov datoteke! Posodobitve ni mogoče posodobiti.</string>
+    <string name="update_activity">Rucky posodobitev</string>
+    <string name="update_version">Različica</string>
+    <string name="update_version_nightly">Večerna različica</string>
+    <string name="update_changelog">Dnevnik sprememb</string>
+    <string name="update_status">Posodobi status</string>
+    <string name="update_action">Prenesite in namestite posodobitev</string>
+    <string name="update_downloading">Prenašanje posodobitve</string>
+    <string name="install_update">Uveljavljanje posodobitve</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">Ali želite skriti ali zapustiti aplikacijo?</string>
+    <string name="btn_exit">Izhod</string>
+    <string name="btn_back">Skrij</string>
+    <string name="unlock">Odkleni Aplikacijo</string>
+    <string name="auth">Potrditev overjanja</string>
+    <string name="update">Posodobi</string>
+    <string name="setting">Nastavitve</string>
+    <string name="codeHint">Tukaj vnesite ali naloži gumijaste skripte</string>
+    <string name="loadBtn">Naloži</string>
+    <string name="saveBtn">Shrani</string>
+    <string name="delBtn">Izbriši</string>
+    <string name="runBtn">Zaženi</string>
+    <string name="confBtn">Konfiguracija</string>
+    <string name="btn_continue">Nadaljuj</string>
+    <string name="root_err">Za Kabel USB Je Potreben Korenski Dostop!</string>
+    <string name="kernel_err">"Jedro Ni Podprto Za Kabel USB."</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Povezan</string>
+    <string name="config_status_usb_off">Povezava USB Je Prekinjena</string>
+    <string name="config_status_net_on">Omrežna Vtičnica Povezana</string>
+    <string name="config_status_net_off">Povezava Z Omrežjem Je Prekinjena</string>
+    <string name="socket_address">Vnesite Naslov IP In Vrata Vtičnice</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Prenesi</string>
+    <string name="hid_update">Posodobi</string>
+    <string name="hid_edit">Uredi</string>
+    <string name="hid_delete">Izbriši</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Ime ključa</string>
+    <string name="key_character">Znakovni znak</string>
+    <string name="key_code">Koda ključa</string>
+    <string name="key_ctrl">Tipka Ctrl</string>
+    <string name="key_alt">Tipka Alt</string>
+    <string name="key_shift">Tipka Shift</string>
+    <string name="key_meta">Meta-ključ</string>
+    <string name="keycode">Koda ključa</string>
+    <string name="modcode">Koda modifikatorja</string>
+    <string name="key_details">Podrobnosti o ključu</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Splošno</string>
+    <string name="dark_theme_title">Nočni način</string>
+    <string name="dark_theme_summary">Nastavi temno temo</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Spremeni barvo naglasa</string>
+    <string name="hide_icon_title">Skrij / Onemogoci Ikono Zaganjalnika</string>
+    <string name="hide_icon_summary">Zavrti * #*#78259#*#* za zagon. V sistemu Android 10 naprej bo ikona onemogota, vendar ne skrita.</string>
+    <string name="delete_dep_title">Odstrani Namestitev Aplikacije</string>
+    <string name="delete_dep_summary">Počisti aplikacijo in jo odstrani.</string>
+    <string name="settings_sec_title">Vnaprejšnje zavarovanje</string>
+    <string name="settings_sec_desc">Omogoči šifriranje datoteke skripta in zaklepanje zaslona.</string>
+    <string name="setting_device">Nastavitve načina napada</string>
+    <string name="hid_choice_title">HID, ki ga je mogoče prilagoditi</string>
+    <string name="hid_choice_summary">Preklopi med Legacy HID in prilagodljivo HID</string>
+    <string name="hid_title">Jezik HID</string>
+    <string name="hid_summary">Prenesite dodatne jezike HID ali oblikujte nove postavitve HID-jev.</string>
+    <string name="settings_usb_title">Zagon USB Connect</string>
+    <string name="settings_usb_desc">Gumb Zaženi bo zagnan, ko je USB prikljuen.</string>
+    <string name="settings_net_title">Zagon Povezave Omrežne Vtičnice</string>
+    <string name="settings_net_desc">Gumb Zaženi bo zagnan, ko je povezan omrežni vtičnik.</string>
+    <string name="setting_about">Informacije o</string>
+    <string name="setting_developer_title">Razvijalec</string>
+    <string name="settings_version_title">Različica</string>
+    <string name="settings_arch_title">Arhitektura</string>
+    <string name="settings_lic_title">Licenca</string>
+    <string name="settings_support">Podpora</string>
+    <string name="settings_git_title">Vprašanja GitHub</string>
+    <string name="settings_git_desc">Kliknite, če želite dodati težave ali zahtevo za funkcijo.</string>
+    <string name="settings_locale_title">Lokalizacija</string>
+    <string name="settings_locale_desc">Prispejte k lokaliziranju aplikacij.</string>
+    <string name="release">Distribuin</string>
+    <string name="releaseNetHunter">Shramba Aplikacij NetHunter</string>
+    <string name="releaseGitHub">Izdaja gitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nikonočni</string>
+    <string name="releaseTest">Razhrošči izdajo</string>
+    <string name="releaseOthers">Nepodprta Izdaja</string>
+    <string name="btn_select">Izberi</string>
+    <string name="btn_cancel">Preklici</string>
+    <string name="btn_save">Shrani</string>
+    <string name="file_saved">shranjeni</string>
+    <string name="title_open_file">Odpri datoteko</string>
+    <string name="title_delete_file">Izbriši datoteko</string>
+    <string name="file_deleted">izbrisi</string>
+    <string name="file_name">Ime datoteke</string>
+    <string name="title_save_file">Shrani datoteko</string>
+    <string-array name="modes">
+        <item>USB Kabel</item>
+        <item>Omrežna Vtičnica</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Ameriška angleščina</item>
+        <item>Turščina</item>
+        <item>Švedščina</item>
+        <item>Slovensko</item>
+        <item>Ruščina</item>
+        <item>Portugalščina</item>
+        <item>Norveščina</item>
+        <item>Italijanščini</item>
+        <item>Hrvaščina</item>
+        <item>Združeno kraljestvo Angleščina</item>
+        <item>Francoz</item>
+        <item>Finščina</item>
+        <item>Španščina</item>
+        <item>Danščina</item>
+        <item>Nemščina</item>
+        <item>Kanadski francoski</item>
+        <item>Brazilska portugal</item>
+        <item>Beloruščina</item>
+        <item>Madžarščina</item>
+    </string-array>
+</resources>

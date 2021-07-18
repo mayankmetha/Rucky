@@ -1,52 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Uygulama kilidini aç</string>
-    <string name="auth">Kimlik doğrulamasını onayla</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">İLERİ</string>
     <string name="init_skip">ATLA</string>
-    <string name="init_agree">AGREE</string>
+    <string name="init_agree">KABUL ET</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Cihazını bir Rubber Ducky \'ye çevir!</string>
     <string name="slideTitle2">USB kablosu</string>
     <string name="slideDesc2">Saldırı başlatmak için USB kablolu arayüz!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideTitle3">Ağ Yuvası</string>
+    <string name="slideDesc3">Desteklenen dış araçlar aracılığıyla saldırı başlatmak için kullanılan Wi-Fi tabanlı yuva arabirimleri!</string>
+    <string name="slideTitle4">Sorumluluğun</string>
     <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
     <string name="slideTitle5">Privacy Policy</string>
     <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideTitle6">Uygulama izni</string>
+    <string name="slideDesc6">Lütfen uygulamaya çalışmak için gerekli izni verin!</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
+    <string name="update_new">Yeni güncelleme var</string>
+    <string name="update_hash_error">Dosya Imzası Uyuşmazlığı! Güncelleştirilemiyor.</string>
+    <string name="update_activity">Rucky Güncelleme</string>
     <string name="update_version">Sürüm</string>
-    <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_version_nightly">Gecelik Sürüm</string>
+    <string name="update_changelog">Değişiklikler</string>
+    <string name="update_status">Güncelleme Durumu</string>
+    <string name="update_action">Güncellemeyi İndirin ve Yükleyin</string>
+    <string name="update_downloading">Güncelleştirme İndiriliyor</string>
+    <string name="install_update">Güncellemeleri Uygulama</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
+    <string name="exit_dialog">Uygulamadan gizlemek ya da uygulamadan çıkmak istiyor musunuz?</string>
+    <string name="btn_exit">Çıkış</string>
+    <string name="btn_back">Gizle</string>
+    <string name="unlock">Uygulama kilidini aç</string>
+    <string name="auth">Kimlik doğrulamasını onayla</string>
+    <string name="update">Güncelleştir</string>
+    <string name="setting">Ayarlar</string>
     <string name="codeHint">Lastik ördeksiz komut dosyalarını buraya yazın ya da yükleyin</string>
     <string name="loadBtn">Yükle</string>
     <string name="saveBtn">Kaydet</string>
     <string name="delBtn">Sil</string>
     <string name="runBtn">Çalıştır</string>
-    <string name="confBtn">Config</string>
+    <string name="confBtn">Konfig</string>
     <string name="btn_continue">Devam</string>
     <string name="root_err">USB Kablo Saldırısı Için Kök Erişim Gerekiyor!</string>
     <string name="kernel_err">"USB Kablosu Saldırısı İçin Çekirdek Desteklenmiyor!"</string>
     <!-- Config screen -->
-    <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
+    <string name="config_activity">İnce Ayarlar</string>
+    <string name="config_status_usb_on">USB Bağlandı</string>
+    <string name="config_status_usb_off">Bağlantı kesildi</string>
+    <string name="config_status_net_on">Ağ Yuvası Bağlı Değil</string>
+    <string name="config_status_net_off">Ağ Yuvası Bağlı Değil</string>
     <string name="socket_address">Enter Socket IP and Port Address</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID Yapılandırması</string>
+    <string name="hid_download">Karşıdan Yükle</string>
+    <string name="hid_update">Güncelleştir</string>
+    <string name="hid_edit">Düzenle</string>
+    <string name="hid_delete">Sil</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Anahtar Adı</string>
+    <string name="key_character">Anahtar Karakter</string>
+    <string name="key_code">Anahtar Kodu</string>
+    <string name="key_ctrl">Ctrl Tuşu</string>
+    <string name="key_alt">Alt Tuşu</string>
+    <string name="key_shift">Üst Karakter Anahtarı</string>
+    <string name="key_meta">Meta Anahtar</string>
+    <string name="keycode">Anahtar Kodu</string>
+    <string name="modcode">Değiştirici Kodu</string>
+    <string name="key_details">Anahtar Ayrıntıları</string>
     <!-- Setting screen -->
     <string name="setting_general">Genel</string>
     <string name="dark_theme_title">Night Mode</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Gelişmiş Güvenlik</string>
     <string name="settings_sec_desc">Komut dosyası şifreleme ve ekran kilidini etkinleştirin.</string>
     <string name="setting_device">Saldırı Modu Ayarları</string>
+    <string name="hid_choice_title">Özelleştirilebilir HID</string>
+    <string name="hid_choice_summary">Eski HID ve Customisable HID arasında geçiş</string>
+    <string name="hid_title">HID Dili</string>
+    <string name="hid_summary">Ek HID dillerini karşıdan yükleyin ya da yeni HID düzenlerini tasarlayın.</string>
     <string name="settings_usb_title">USB Bağlantı Başlatma</string>
     <string name="settings_usb_desc">USB bağlandığında çalıştır düğmesi saldırı başlatır.</string>
     <string name="settings_net_title">Network Socket Connect Launch</string>
@@ -77,17 +103,21 @@
     <string name="release">Dağıtım</string>
     <string name="releaseNetHunter">NetHunter Uygulama Mağazası</string>
     <string name="releaseGitHub">GitHub Yayın Düzeyi</string>
+    <string name="releaseGitHubNightly">GitHub Gecelik</string>
     <string name="releaseTest">Hata Ayıklama Yayını</string>
     <string name="releaseOthers">Desteklenmeyen Yayın Düzeyi</string>
-    <string name="btn_select">Select</string>
+    <string name="btn_select">Seç</string>
     <string name="btn_cancel">İptal</string>
     <string name="btn_save">Kaydet</string>
     <string name="file_saved">kaydedildi</string>
+    <string name="title_open_file">Dosya Aç</string>
+    <string name="title_delete_file">Dosyayı Sil</string>
     <string name="file_deleted">silindi</string>
     <string name="file_name">Dosya Adı</string>
+    <string name="title_save_file">Dosyayı Sakla</string>
     <string-array name="modes">
         <item>USB kablosu</item>
-        <item>Network Socket</item>
+        <item>Ağ Yuvası</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Amerikan ingilizcesi</item>

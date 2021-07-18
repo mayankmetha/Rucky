@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">తదుపరి</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">ఆగ్రీ</string>
+    <string name="init_start">హాక్</string>
+    <string name="slideDesc1">మీ పరికరం ఒక రబ్బర్ దుకానికి చెయ్యండి!</string>
+    <string name="slideTitle2">USB కేబుల్</string>
+    <string name="slideDesc2">లాంచింగ్ దాడి కోసం USB వాయింగ్ ఇంటర్ఫేస్!</string>
+    <string name="slideTitle3">నెట్వర్క్ సాకెట్</string>
+    <string name="slideDesc3">Wi-Fi ఆధారిత సాకెట్ ఇంటర్ఫేస్ కొరకు సహాయక బాహ్య పనిముట్లు ద్వారా దాడి చేయుట!</string>
+    <string name="slideTitle4">డిస్క్లెమెర్</string>
+    <string name="slideDesc4">అనువర్తనం యొక్క వినియోగదారు సంభవించిన నష్టాలకు మాత్రమే బాధ్యత వహిస్తారు. ఈ అనువర్తనాన్ని ఉపయోగించి చేసిన నష్టాలకు మరే ఇతర సంస్థ కూడా బాధ్యత వహించదు! అనువర్తనాన్ని ఉపయోగిస్తున్నప్పుడు జాగ్రత్తగా ఉండండి మరియు ఇతరులకు హాని కలిగించడానికి దీన్ని ఉపయోగించవద్దు!</string>
+    <string name="slideTitle5">ప్రీవేసీ విధానం</string>
+    <string name="slideDesc5">ఏ రూపాన్ని ఏ రూపాన్ని సేకరిస్తారు, ఉపయోగించి విక్రయించబడలేదు! గోప్యతా ఆందోనాలను పెంచేందుకు కొన్ని అనుమతులను మాత్రమే అప్డేట్ లో కొన్ని లక్షణాలను పనిచేస్తాయి మరియు డేటా సేకరించడం లేదు! మీ గోప్యత గౌరవించబడుతుంది!</string>
+    <string name="slideTitle6">ఆప్ పెర్మిషన్</string>
+    <string name="slideDesc6">పని చేయడానికి అవసరమైన అనుమతి దయచేసి అనుమతి చేయండి!</string>
+    <!-- Update screen -->
+    <string name="update_new">కొత్త నవీకరణ అందుబాటులు</string>
+    <string name="update_hash_error">దస్త్రపు సిగ్ప్రెస్ మిస్పోల్! నవీకరణ చేయలేరు.</string>
+    <string name="update_activity">రక్కీ నవీకరణ</string>
+    <string name="update_version">వెర్షన్</string>
+    <string name="update_version_nightly">Nightly వెర్షన్</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">నవీకరణ స్థితి</string>
+    <string name="update_action">నవీకరణను డౌన్‌లోడ్ చేసి, ఇన్‌స్టాల్ చేయండి</string>
+    <string name="update_downloading">నవీకరణ దిగుమతి చేస్తోంది</string>
+    <string name="install_update">\@ info: progress</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">మీరు యాప్ ను దాచడానికి లేదా నిలుపుకోవాలనుకుంటున్నారా?</string>
+    <string name="btn_exit">ఎక్విట్</string>
+    <string name="btn_back">మరుగుచేయి</string>
+    <string name="unlock">అప్పెన్ అన్లాక్</string>
+    <string name="auth">ఆధిక్యాన్ని నిర్వచించుము</string>
+    <string name="update">నవీకరణ</string>
+    <string name="setting">అమరిక</string>
+    <string name="codeHint">రబ్బరు డయాకీ స్క్రిప్టులను ఇక్కడ టైపు లేదా లోడ్ చేయుము</string>
+    <string name="loadBtn">లోడుచేయుము</string>
+    <string name="saveBtn">\@ action: button</string>
+    <string name="delBtn">తొలగించు</string>
+    <string name="runBtn">నడుము</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">కొనసాగించు</string>
+    <string name="root_err">రౌట్ యాక్సెస్ కోసం USB కేబుల్ అటాక్ కోసం!</string>
+    <string name="kernel_err">"కెర్నెల్ USB కేబుల్ అటాక్ కోసం సదరు చేయబడలేదు!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB అనుసంధించబడింది</string>
+    <string name="config_status_usb_off">USB అనుసంధానించబడినది</string>
+    <string name="config_status_net_on">నెట్వర్క్ Socket Connected</string>
+    <string name="config_status_net_off">నెట్వర్క్ Socket Disconnected</string>
+    <string name="socket_address">సాకెట్ IP మరియు పోర్ట్ చిరునామాను ప్రవేశపెట్టుము</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID కాన్ఫిగ్</string>
+    <string name="hid_download">డౌన్లోడ్</string>
+    <string name="hid_update">నవీకరణ</string>
+    <string name="hid_edit">సరికూర్చు</string>
+    <string name="hid_delete">తొలగించు</string>
+    <!-- Keylist screen -->
+    <string name="key_title">కీ పేరు</string>
+    <string name="key_character">కీ అక్షరము</string>
+    <string name="key_code">కీ కోడ్</string>
+    <string name="key_ctrl">Ctrl కీ</string>
+    <string name="key_alt">Alt కీ</string>
+    <string name="key_shift">షిఫ్టు కీ</string>
+    <string name="key_meta">మెటా కీ</string>
+    <string name="keycode">కీ కోడ్</string>
+    <string name="modcode">సవరింపు కోడ్</string>
+    <string name="key_details">కీ వివరాలు</string>
+    <!-- Setting screen -->
+    <string name="setting_general">జనరల్</string>
+    <string name="dark_theme_title">రాత్రి విధి</string>
+    <string name="dark_theme_summary">చీకటి థీమ్ అమర్చు</string>
+    <string name="accent_theme_title">థీమ్</string>
+    <string name="accent_theme_summary">యాక్సెంట్ రంగును మార్చుము</string>
+    <string name="hide_icon_title">లాన్చర్ Icon అచేతనం/అచేతనంచేయి</string>
+    <string name="hide_icon_summary">Dial * #*#78259ప్రారంభం. ఆండ్రాయిడ్ 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="delete_dep_title">అప్ను స్థాపించుము</string>
+    <string name="delete_dep_summary">శుభ్రం మరియు అన్స్టాల్ అప్ను.</string>
+    <string name="settings_sec_title">అద్వైత భద్రత</string>
+    <string name="settings_sec_desc">స్క్రిప్ట్ ఫైల్ ఎన్క్రిప్షన్ మరియు స్క్రీన్ లాక్ ను చేర్చు.</string>
+    <string name="setting_device">అటాక్ మోడ్ అమరిక</string>
+    <string name="hid_choice_title">కస్టమబుల్ HID</string>
+    <string name="hid_choice_summary">లెజెసీ HID మరియు కస్టమబుల్ HID ల మధ్య మారుతుంది</string>
+    <string name="hid_title">HID భాష</string>
+    <string name="hid_summary">అదనపు HID భాషలు లేదా రూపకల్పన కొత్త HID లు డౌన్లోడ్.</string>
+    <string name="settings_usb_title">USB అనుసంత ప్రారంభం</string>
+    <string name="settings_usb_desc">రన్ బటన్ USB అనుసంధానించబడినప్పుడు దాడి ప్రారంభించబడుతుంది.</string>
+    <string name="settings_net_title">నెట్వర్క్ సాకెట్ అనుసంత ప్రారంభము</string>
+    <string name="settings_net_desc">నెట్వర్క్ సొకెట్ అనుసంధానించినప్పుడు పన్ బటన్ దాడి ప్రారంభిస్తుంది.</string>
+    <string name="setting_about">సమాచారం</string>
+    <string name="setting_developer_title">డెవలపర్</string>
+    <string name="settings_version_title">వెర్షన్</string>
+    <string name="settings_arch_title">ఆర్కిటెక్చర్</string>
+    <string name="settings_lic_title">లైసెన్స్</string>
+    <string name="settings_support">\@ title: window</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">విషయాలను లేదా ఫీచర్ అభ్యర్ధనలను జతచేయుటకు నొక్కుము.</string>
+    <string name="settings_locale_title">స్థానికత</string>
+    <string name="settings_locale_desc">యాప్ స్థావరీకరణకు సవరణ.</string>
+    <string name="release">\@ option: check</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">గిట్హబ్ విడుదల</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">డీబగ్ విడుదల</string>
+    <string name="releaseOthers">అదనపు విడుదల</string>
+    <string name="btn_select">ఎంచుకోండి</string>
+    <string name="btn_cancel">రద్దు</string>
+    <string name="btn_save">\@ action: button</string>
+    <string name="file_saved">రక్షించు</string>
+    <string name="title_open_file">దస్త్రం తెరువుము</string>
+    <string name="title_delete_file">దస్త్రం తీసివేయి</string>
+    <string name="file_deleted">తొలగించబడినది</string>
+    <string name="file_name">దస్త్రం పేరు</string>
+    <string name="title_save_file">ఫైలును దాయుము</string>
+    <string-array name="modes">
+        <item>USB కేబుల్</item>
+        <item>నెట్వర్క్ సాకెట్</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>అమెరికన్ ఇంగ్లీష్</item>
+        <item>టర్కిష్</item>
+        <item>స్వీడిష్</item>
+        <item>స్లోవేనియన్Name</item>
+        <item>రష్యన్</item>
+        <item>పోర్చుగీస్</item>
+        <item>నార్వేజియన్</item>
+        <item>ఇటాలియన్</item>
+        <item>క్రొయేషియాName</item>
+        <item>యునైటెడ్ కింగ్డంName</item>
+        <item>ఫ్రెంచ్</item>
+        <item>ఫినిష్</item>
+        <item>స్పానిష్Name</item>
+        <item>డానిష్</item>
+        <item>జర్మన్</item>
+        <item>కెనడియన్ ఫ్రెంచ్</item>
+        <item>బ్రాజిలియన్ పోర్చుగీస్</item>
+        <item>బెలారసియన్Name</item>
+        <item>హంగేరియన్</item>
+    </string-array>
+</resources>

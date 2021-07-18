@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">TIẾP THEO</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">AGREE</string>
+    <string name="init_start">Tan Cong</string>
+    <string name="slideDesc1">Hãy biến thiết bị của bạn thành Rubber Ducky!</string>
+    <string name="slideTitle2">Cáp USB</string>
+    <string name="slideDesc2">Can ket noi USB !</string>
+    <string name="slideTitle3">Mạng Lưới</string>
+    <string name="slideDesc3">Wi-Fi dựa trên các giao diện ổ cắm cho việc tung ra các cuộc tấn công thông qua!</string>
+    <string name="slideTitle4">Miễn trừ trách nhiệm</string>
+    <string name="slideDesc4">Người dùng ứng dụng này chỉ chịu trách nhiệm về những thiệt hại gây ra. Không có thực thể nào khác có thể được đảm bảo chịu trách nhiệm vê ̀ các thiệt hại được sử dụng Thực hành thận trọng khi sử dụng ứng dụng và không sử dụng nó để gây hại cho người khác!</string>
+    <string name="slideTitle5">Chính Sách Quyền Riêng Tư</string>
+    <string name="slideDesc5">Không có dư ̃ liệu nào được thu thập, sử dụng và bán! Một sô ́ quyền có thể tăng các mối quan tâm vê ̀ quyền riêng tư chỉ được yêu cầu cho việc làm việc một sô ́ tính năng nào đó trong ứng dụng và không được thu thập Sự riêng tư của anh được tôn trọng!</string>
+    <string name="slideTitle6">Quyền ứng dụng</string>
+    <string name="slideDesc6">Vui lòng cấp cho ứng dụng quyền cần thiết để làm việc!</string>
+    <!-- Update screen -->
+    <string name="update_new">Bản cập nhật mới sẵn sàng</string>
+    <string name="update_hash_error">Không khớp chư ̃ ký tập tin! Không thể cập nhật.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Phiên bản</string>
+    <string name="update_version_nightly">Phiên bản hàng đêm</string>
+    <string name="update_changelog">Bản ghi thay đổi</string>
+    <string name="update_status">Trạng thái cập nhật</string>
+    <string name="update_action">Tải xuống và cài đặt bản cập nhật</string>
+    <string name="update_downloading">Tải về</string>
+    <string name="install_update">Đang áp dụng</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">Bạn có muốn ẩn hoặc thoát ứng dụng không?</string>
+    <string name="btn_exit">Thoát</string>
+    <string name="btn_back">Ẩn</string>
+    <string name="unlock">Unlock App</string>
+    <string name="auth">Xác thực</string>
+    <string name="update">Cập nhật</string>
+    <string name="setting">Cấu hình</string>
+    <string name="codeHint">Go va tai cac tap lenh cho rubber ducky o day</string>
+    <string name="loadBtn">Tải</string>
+    <string name="saveBtn">Lưu</string>
+    <string name="delBtn">Xóa</string>
+    <string name="runBtn">Chạy</string>
+    <string name="confBtn">Cấu hình</string>
+    <string name="btn_continue">Tiếp tục</string>
+    <string name="root_err">Yêu Cầu Truy Cập Root Để Tấn Công Cáp USB!</string>
+    <string name="kernel_err">"Không Hỗ Trợ Hạt Nhân Cho Máy Tấn Công Cáp USB!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">Kết nối USB</string>
+    <string name="config_status_usb_off">Ngắt kết nối</string>
+    <string name="config_status_net_on">Kết nối mạng lưới</string>
+    <string name="config_status_net_off">Ngắt kết nối mạng</string>
+    <string name="socket_address">Nhập địa chỉ IP và địa chỉ cổng</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Tải xuống</string>
+    <string name="hid_update">Cập nhật</string>
+    <string name="hid_edit">Chỉnh sửa</string>
+    <string name="hid_delete">Xóa</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Tên Khóa</string>
+    <string name="key_character">Nhân vật chính</string>
+    <string name="key_code">Mã khóa</string>
+    <string name="key_ctrl">Phím Ctrl</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Phím Shift</string>
+    <string name="key_meta">Siêu khoá</string>
+    <string name="keycode">Mã khóa</string>
+    <string name="modcode">Mã sửa đổi</string>
+    <string name="key_details">Chi tiết khóa</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Cài đặt chung</string>
+    <string name="dark_theme_title">Chế độ đêm</string>
+    <string name="dark_theme_summary">Giao dien toi</string>
+    <string name="accent_theme_title">Chủ đề</string>
+    <string name="accent_theme_summary">Thay đổi màu sắc</string>
+    <string name="hide_icon_title">Vô hiệu hóa biểu tượng launcher</string>
+    <string name="hide_icon_summary">Dial * #*#78259#*#* để khởi động. Trên Android 10 trở đi, biểu tượng sẽ bị vô hiệu hóa, nhưng không bị ẩn.</string>
+    <string name="delete_dep_title">Gỡ cài đặt ứng dụng</string>
+    <string name="delete_dep_summary">Dọn dẹp và gơ ̃ cài đặt ứng dụng.</string>
+    <string name="settings_sec_title">Bảo mật</string>
+    <string name="settings_sec_desc">Bật mã hóa tập tin tập lệnh và khóa màn hình.</string>
+    <string name="setting_device">Cài đặt chế độ</string>
+    <string name="hid_choice_title">HID tùy chỉnh</string>
+    <string name="hid_choice_summary">Chuyển đổi giữa HID của Legacy HID và Customisable HID</string>
+    <string name="hid_title">Ngôn ngư ̃ HID</string>
+    <string name="hid_summary">Tải các ngôn ngữ HID bổ sung hoặc thiết kế bố cục HID mới.</string>
+    <string name="settings_usb_title">Khởi động kết nối USB</string>
+    <string name="settings_usb_desc">Nút chạy sẽ khởi động khi USB được kết nối.</string>
+    <string name="settings_net_title">Khởi chạy mạng Socket Connect</string>
+    <string name="settings_net_desc">Nút chạy sẽ chạy tấn công khi Mạng Socket được kết nối.</string>
+    <string name="setting_about">Thông tin</string>
+    <string name="setting_developer_title">Nhà phát triển</string>
+    <string name="settings_version_title">Phiên bản</string>
+    <string name="settings_arch_title">Kiến trúc</string>
+    <string name="settings_lic_title">Giấy phép</string>
+    <string name="settings_support">Hỗ trợ</string>
+    <string name="settings_git_title">Vấn đê ̀ GitHub</string>
+    <string name="settings_git_desc">Nhấp để thêm vấn đê ̀ hoặc yêu cầu tính năng.</string>
+    <string name="settings_locale_title">Địa phương</string>
+    <string name="settings_locale_desc">Đóng góp cho việc định vị ứng dụng.</string>
+    <string name="release">Phân phối</string>
+    <string name="releaseNetHunter">Kho ứng dụng NetHunter</string>
+    <string name="releaseGitHub">Phát hành GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Phát hành gỡ lỗi</string>
+    <string name="releaseOthers">Phát hành không hỗ trợ</string>
+    <string name="btn_select">Chọn</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="btn_save">Lưu</string>
+    <string name="file_saved">đã lưu</string>
+    <string name="title_open_file">Mở tập tin</string>
+    <string name="title_delete_file">Xoá tập tin</string>
+    <string name="file_deleted">xóa</string>
+    <string name="file_name">Tên File</string>
+    <string name="title_save_file">Lưu tập tin</string>
+    <string-array name="modes">
+        <item>Cáp USB</item>
+        <item>Mạng Lưới</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Tiếng Anh Mỹ</item>
+        <item>Tiếng Thổ</item>
+        <item>Thuỵ Điển</item>
+        <item>Tiếng Slovenia</item>
+        <item>Nga</item>
+        <item>Bồ Đào Nha</item>
+        <item>Na Uy</item>
+        <item>Ý</item>
+        <item>Croatia</item>
+        <item>Tiếng Anh Vương quốc Anh</item>
+        <item>Pháp</item>
+        <item>Phần Lan</item>
+        <item>Tây Ban Nha</item>
+        <item>Đan Mạch</item>
+        <item>Đức</item>
+        <item>Pháp Canada</item>
+        <item>Bồ Đào Nha</item>
+        <item>Be-</item>
+        <item>Hungary</item>
+    </string-array>
+</resources>

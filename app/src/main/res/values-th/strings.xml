@@ -1,113 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">ปลดล๊อคแอป</string>
-    <string name="auth">Confirm authentication</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">NEXT</string>
     <string name="init_skip">SKIP</string>
-    <string name="init_agree">AGREE</string>
+    <string name="init_agree">เห็นด้วย</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Vrid din enhet till en Rubber Ducky!</string>
     <string name="slideTitle2">สายเคเบิล USB</string>
     <string name="slideDesc2">USB-kabelgränssnitt för start-attack!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
-    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
-    <string name="slideTitle5">Privacy Policy</string>
-    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideTitle3">ซ็อกเก็ตเครือข่าย</string>
+    <string name="slideDesc3">ซ็อกเก็ตอินเตอร์เฟสแบบ Wi-Fi สำหรับการเรียกใช้โจมตีผ่านเครื่องมือภายนอกที่สนับสนุน!</string>
+    <string name="slideTitle4">ข้อความปฏิเสธความรับผิดชอบ</string>
+    <string name="slideDesc4">ผู้ใช้ของแอ็พมีหน้าที่รับผิดชอบต่อความเสียหายที่เกิดขึ้นเท่านั้น ไม่มีเอนทิตีอื่นที่สามารถเก็บไว้สำหรับความเสียหายที่ทำโดยใช้แอ็พนี้! ฝึกระมัดระวังเมื่อใช้ app และไม่ใช้วิธีนี้จะทำให้เกิดอันตรายต่อผู้อื่น!</string>
+    <string name="slideTitle5">นโยบายความเป็นส่วนตัว</string>
+    <string name="slideDesc5">ไม่มีข้อมูลของฟอร์มใดๆที่ถูกรวบรวมไว้, ใช้และจำหน่าย! สิทธิบางอย่างที่อาจทำให้เกิดข้อกังวลเกี่ยวกับความเป็นส่วนตัวจะถูกถามถึงการทำงานของคุณลักษณะบางอย่างเท่านั้นในแอ็พและไม่สามารถรวบรวมข้อมูลได้! ความส่วนตัวของคุณเป็นที่เคารพ!</string>
+    <string name="slideTitle6">สิทธิของแอ็พ</string>
+    <string name="slideDesc6">โปรดให้สิทธิแก่แอ็พที่จำเป็นในการทำงาน!</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
-    <string name="update_version">Version</string>
-    <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_new">มีอัพเดตใหม่</string>
+    <string name="update_hash_error">ลายเซ็นไฟล์ไม่ตรงกัน! ไม่สามารถอัพเดต</string>
+    <string name="update_activity">Rucky อัพเดต</string>
+    <string name="update_version">เวอร์ชัน</string>
+    <string name="update_version_nightly">เวอร์ชันกลางคืน</string>
+    <string name="update_changelog">เปลี่ยนบันทึกการทำงาน</string>
+    <string name="update_status">อัพเดตสถานะ</string>
+    <string name="update_action">ดาวน์โหลดและติดตั้งอัปเดต</string>
+    <string name="update_downloading">กำลังดาวน์โหลดอัพเดต</string>
+    <string name="install_update">การใช้อัพเดต</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
-    <string name="codeHint">Type or load rubber ducky scripts here</string>
-    <string name="loadBtn">Load</string>
-    <string name="saveBtn">Save</string>
-    <string name="delBtn">Delete</string>
-    <string name="runBtn">Run</string>
-    <string name="confBtn">Config</string>
-    <string name="btn_continue">Continue</string>
-    <string name="root_err">Root Access Required For USB Cable Attack!</string>
-    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="exit_dialog">คุณต้องการซ่อนหรือออกจากแอพหรือไม่?</string>
+    <string name="btn_exit">ออก</string>
+    <string name="btn_back">ซ่อน</string>
+    <string name="unlock">ปลดล๊อคแอป</string>
+    <string name="auth">Confirm authentication</string>
+    <string name="update">อัพเดต</string>
+    <string name="setting">การตั้งค่า</string>
+    <string name="codeHint">พิมพ์หรือโหลดสคริปต์จากยางที่นี่</string>
+    <string name="loadBtn">โหลด</string>
+    <string name="saveBtn">บันทึก</string>
+    <string name="delBtn">ลบ</string>
+    <string name="runBtn">เรียกใช้</string>
+    <string name="confBtn">ตั้งค่าคอนฟิก</string>
+    <string name="btn_continue">ดำเนินการต่อ</string>
+    <string name="root_err">ต้องการสิทธิเข้าถึงระดับรูทสำหรับสายเคเบิล USB</string>
+    <string name="kernel_err">"เคอร์เนลไม่สนับสนุน USB Cable Attack!"</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="config_status_usb_on">เชื่อมต่อ USB แล้ว</string>
+    <string name="config_status_usb_off">ยกเลิกการเชื่อมต่อ USB</string>
+    <string name="config_status_net_on">ซ็อกเก็ตเครือข่ายที่เชื่อมต่อ</string>
+    <string name="config_status_net_off">ซ็อกเก็ตเครือข่ายถูกยกเลิก</string>
+    <string name="socket_address">ป้อนซ็อกเก็ต IP และแอดเดรสพอร์ต</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">คอนฟิก HID</string>
+    <string name="hid_download">ดาวน์โหลด</string>
+    <string name="hid_update">อัพเดต</string>
+    <string name="hid_edit">แก้ไข</string>
+    <string name="hid_delete">ลบ</string>
+    <!-- Keylist screen -->
+    <string name="key_title">ชื่อคีย์</string>
+    <string name="key_character">คีย์อักขระ</string>
+    <string name="key_code">โค้ดคีย์</string>
+    <string name="key_ctrl">คีย์ Ctrl</string>
+    <string name="key_alt">ปุ่ม Alt</string>
+    <string name="key_shift">ปุ่ม Shift</string>
+    <string name="key_meta">คีย์เมตา</string>
+    <string name="keycode">โค้ดคีย์</string>
+    <string name="modcode">โมดิฟายเออร์โค้ด</string>
+    <string name="key_details">รายละเอียดคีย์</string>
     <!-- Setting screen -->
-    <string name="setting_general">General</string>
-    <string name="dark_theme_title">Night Mode</string>
-    <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
-    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
-    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
-    <string name="delete_dep_title">Uninstall App</string>
-    <string name="delete_dep_summary">Clean up and uninstall app.</string>
-    <string name="settings_sec_title">Advance Security</string>
-    <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
-    <string name="setting_device">Attack Mode Settings</string>
-    <string name="settings_usb_title">USB Connect Launch</string>
-    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
-    <string name="settings_net_title">Network Socket Connect Launch</string>
-    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
-    <string name="setting_about">Info</string>
-    <string name="setting_developer_title">Developer</string>
-    <string name="settings_version_title">Version</string>
-    <string name="settings_arch_title">Architecture</string>
-    <string name="settings_lic_title">License</string>
-    <string name="settings_support">Support</string>
-    <string name="settings_git_title">GitHub Issues</string>
-    <string name="settings_git_desc">Click to add issues or feature request.</string>
-    <string name="settings_locale_title">Localization</string>
-    <string name="settings_locale_desc">Contribute to app localization.</string>
-    <string name="release">Distribution</string>
-    <string name="releaseNetHunter">NetHunter App Store</string>
-    <string name="releaseGitHub">GitHub Release</string>
-    <string name="releaseTest">Debug Release</string>
-    <string name="releaseOthers">Non Supported Release</string>
-    <string name="btn_select">Select</string>
-    <string name="btn_cancel">Cancel</string>
-    <string name="btn_save">Save</string>
-    <string name="file_saved">saved</string>
-    <string name="file_deleted">deleted</string>
-    <string name="file_name">File Name</string>
+    <string name="setting_general">ทั่วไป</string>
+    <string name="dark_theme_title">โหมดกลางคืน</string>
+    <string name="dark_theme_summary">ตั้งค่าธีมสีเข้ม</string>
+    <string name="accent_theme_title">ธีม</string>
+    <string name="accent_theme_summary">เปลี่ยนสีของ accent</string>
+    <string name="hide_icon_title">ซ่อน/ปิดใช้งานไอคอน Launcher</string>
+    <string name="hide_icon_summary">โทร *# *#78259# * * เพื่อเรียกใช้งาน บน Android 10 เป็นต้นไปไอคอนจะถูกปิดใช้งานแต่ไม่ถูกซ่อน</string>
+    <string name="delete_dep_title">ถอนการติดตั้งแอ็พ</string>
+    <string name="delete_dep_summary">คลีนอัพและถอนการติดตั้งแอ็พพลิเคชัน</string>
+    <string name="settings_sec_title">การรักษาความปลอดภัยระดับสูง</string>
+    <string name="settings_sec_desc">เปิดใช้งานการเข้ารหัสไฟล์สคริปต์และการล็อกหน้าจอ</string>
+    <string name="setting_device">ค่าติดตั้งโหมดการโจมตี</string>
+    <string name="hid_choice_title">HID ที่กำหนดเองได้</string>
+    <string name="hid_choice_summary">สลับระหว่าง Legacy HID และ HID ที่กำหนดเองได้</string>
+    <string name="hid_title">ภาษา HID</string>
+    <string name="hid_summary">ดาวน์โหลดภาษา HID เพิ่มเติมหรือออกแบบโครงร่าง HID ใหม่</string>
+    <string name="settings_usb_title">การเชื่อมต่อ USB เชื่อมต่อ</string>
+    <string name="settings_usb_desc">ปุ่มรันจะเรียกทำงานการโจมตีเมื่อเชื่อมต่อ USB</string>
+    <string name="settings_net_title">การเชื่อมต่อเชื่อมต่อซ็อกเก็ตเครือข่าย</string>
+    <string name="settings_net_desc">ปุ่มรันจะเรียกทำงานการโจมตีเมื่อเน็ตเวิร์กซ็อกเก็ตถูกเชื่อมต่อ</string>
+    <string name="setting_about">ข้อมูล</string>
+    <string name="setting_developer_title">นักพัฒนา</string>
+    <string name="settings_version_title">เวอร์ชัน</string>
+    <string name="settings_arch_title">สถาปัตยกรรม</string>
+    <string name="settings_lic_title">ใบอนุญาต</string>
+    <string name="settings_support">การสนับสนุน</string>
+    <string name="settings_git_title">ปัญหา Git Hub</string>
+    <string name="settings_git_desc">คลิกเพื่อเพิ่มปัญหาหรือร้องขอคุณลักษณะ</string>
+    <string name="settings_locale_title">การแปลภาษา</string>
+    <string name="settings_locale_desc">มีส่วนร่วมในการแปลแอพ</string>
+    <string name="release">การแจกจ่าย</string>
+    <string name="releaseNetHunter">ร้าน Net Hunter App Store</string>
+    <string name="releaseGitHub">รีลีส Git Hub</string>
+    <string name="releaseGitHubNightly">Git Hub อย่างไนท์</string>
+    <string name="releaseTest">ดีบักรีลีส</string>
+    <string name="releaseOthers">รีลีสที่ไม่สนับสนุน</string>
+    <string name="btn_select">เลือก</string>
+    <string name="btn_cancel">ยกเลิก</string>
+    <string name="btn_save">บันทึก</string>
+    <string name="file_saved">บันทึก</string>
+    <string name="title_open_file">เปิดไฟล์</string>
+    <string name="title_delete_file">ลบไฟล์</string>
+    <string name="file_deleted">ถูกลบ</string>
+    <string name="file_name">ชื่อไฟล์</string>
+    <string name="title_save_file">บันทึกไฟล์</string>
     <string-array name="modes">
         <item>สายเคเบิล USB</item>
-        <item>Network Socket</item>
+        <item>ซ็อกเก็ตเครือข่าย</item>
     </string-array>
     <string-array name="hidLanguages">
-        <item>American English</item>
-        <item>Turkish</item>
-        <item>Swedish</item>
-        <item>Slovenian</item>
-        <item>Russian</item>
-        <item>Portuguese</item>
-        <item>Norwegian</item>
-        <item>Italian</item>
-        <item>Croatian</item>
-        <item>United Kingdom English</item>
-        <item>French</item>
-        <item>Finnish</item>
-        <item>Spanish</item>
-        <item>Danish</item>
-        <item>German</item>
-        <item>Canadian French</item>
-        <item>Brazilian Portuguese</item>
-        <item>Belarusian</item>
-        <item>Hungarian</item>
+        <item>อังกฤษอเมริกัน</item>
+        <item>ตุรกี</item>
+        <item>สวีดิช</item>
+        <item>สโลวีเนีย</item>
+        <item>รัสเซีย</item>
+        <item>ภาษาโปรตุเกส</item>
+        <item>ภาษานอร์เวีย</item>
+        <item>ภาษาอิตาลี</item>
+        <item>ภาษาโครเอเชีย</item>
+        <item>สหราชอาณาจักรอังกฤษ</item>
+        <item>ภาษาฝรั่งเศส</item>
+        <item>ภาษาฟินแลนด์</item>
+        <item>ภาษาสเปน</item>
+        <item>ภาษาเดนมาร์ก</item>
+        <item>เยอรมัน</item>
+        <item>ภาษาฝรั่งเศสในแคนาดา</item>
+        <item>ภาษาบราซิลโปรตุเกส</item>
+        <item>ภาษาเบลารุส</item>
+        <item>ฮังการี</item>
     </string-array>
 </resources>

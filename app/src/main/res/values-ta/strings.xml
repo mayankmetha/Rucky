@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">அடுத்து</string>
+    <string name="init_skip">தவிர்</string>
+    <string name="init_agree">அக்ரீ</string>
+    <string name="init_start">ஹாக்</string>
+    <string name="slideDesc1">உங்கள் சாதனத்தை ரூபர் Ducky க்கு திரும்ப!</string>
+    <string name="slideTitle2">USB Cable</string>
+    <string name="slideDesc2">தாக்குதல் துவக்குவதற்கு USB இடைமுகம்!</string>
+    <string name="slideTitle3">பிணைய சாக்கெட்</string>
+    <string name="slideDesc3">Wi-Fi அடிப்படையிலான சாக்கெட் இடைமுகங்கள் ஆதரிக்கப்படாத வெளிப்புற கருவிகளை மூலம் தாக்குதல்!</string>
+    <string name="slideTitle4">வலைப்பதிவு</string>
+    <string name="slideDesc4">அப்பொருளின் பயனீட்டாளர் தமது தாக்குதலுக்கு சரியாக பொறுப்பேற்றது. இந்த ஆப் பயன்படுத்தி செய்யப்பட்ட நம்பிக்கைகளுக்கு வேறு எந்த உரிமைகள் நடைபெற முடியும்! பயன்பாடு பயன்படும் போது பயன்பாடு செய்கிறது; மற்றவர்களுக்கு ஏற்றுக்கொள்வதற்கு இதை பயன்படுத்தாது!</string>
+    <string name="slideTitle5">தனிப்பயன் கொள்கை</string>
+    <string name="slideDesc5">எந்த வடிவத்தையும் எதுவும் சேகரித்தல், பயன்படுத்தப்பட்டு விற்பனை செய்யப்படவில்லை! சில அனுமதிகள், தனிப்பயன் கவனத்தை உயர்த்தமுடியும், அப்பொழுது சில அம்சங்களின் வேலை மட்டுமே கேட்கும் மற்றும் தரவு சேகரிக்க இல்லையா! உங்கள் தனிப்பயன் மதிப்பு உள்ளது!</string>
+    <string name="slideTitle6">ஆப்ப அனுமதி</string>
+    <string name="slideDesc6">தயவு செய்து பணிக்கு தேவையான அனுமதி தயவு செய்து!</string>
+    <!-- Update screen -->
+    <string name="update_new">புதிய புதுப்பித்தல்</string>
+    <string name="update_hash_error">கோப்பு கையெழுத்து பொருத்தம்! புதுப்பிக்க முடியவில்லை.</string>
+    <string name="update_activity">\@ info: status</string>
+    <string name="update_version">பதிப்பு</string>
+    <string name="update_version_nightly">Nightly பதிப்பு</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">நிலையை புதுப்பி</string>
+    <string name="update_action">புதுப்பிப்பைப் பதிவிறக்கி நிறுவவும்</string>
+    <string name="update_downloading">புதுப்பிக்கப்படுகிறது</string>
+    <string name="install_update">புதுப்பிக்கப்படுகிறது</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">நீங்கள் ஏற்றத்தை மறைக்க விரும்புகிறீர்களா?</string>
+    <string name="btn_exit">வெளியேறு</string>
+    <string name="btn_back">மறை</string>
+    <string name="unlock">அழுத்தம்</string>
+    <string name="auth">உறுதிப்படுத்தல்</string>
+    <string name="update">புதுப்பி</string>
+    <string name="setting">அமைப்புகள்</string>
+    <string name="codeHint">இங்கு வகை அல்லது ஏற்ற ரப்பர் டக்கி ஸ்கிரிப்டுகள்</string>
+    <string name="loadBtn">ஏற்றம்</string>
+    <string name="saveBtn">சேமி</string>
+    <string name="delBtn">நீக்கு</string>
+    <string name="runBtn">இயக்கு</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">தொடர்ந்து</string>
+    <string name="root_err">Root Access Required For USB Cable Attack!</string>
+    <string name="kernel_err">"கெர்னல் ஆதரிக்கப்படாத USB Cable Attack!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">தவறுகள்</string>
+    <string name="config_status_usb_on">USB இணைப்பு</string>
+    <string name="config_status_usb_off">USB துண்டிக்கப்பட்டது</string>
+    <string name="config_status_net_on">பிணைய சாக்கெட் இணைக்கப்பட்டது</string>
+    <string name="config_status_net_off">பிணைய சாக்கெட் துண்டிக்கப்பட்டது</string>
+    <string name="socket_address">சாக்கெட் IP மற்றும் துறை முகவரிகளை உள்ளிடு</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">இறக்குபவர்</string>
+    <string name="hid_update">புதுப்பி</string>
+    <string name="hid_edit">திருத்து</string>
+    <string name="hid_delete">நீக்கு</string>
+    <!-- Keylist screen -->
+    <string name="key_title">விசை பெயர்</string>
+    <string name="key_character">விசை எழுத்து</string>
+    <string name="key_code">விசை குறியீடு</string>
+    <string name="key_ctrl">Ctrl விசை</string>
+    <string name="key_alt">Alt விசை</string>
+    <string name="key_shift">Shift விசை</string>
+    <string name="key_meta">மெட்டா விசை</string>
+    <string name="keycode">விசை குறியீடு</string>
+    <string name="modcode">மாற்று குறியீடு</string>
+    <string name="key_details">விசை விவரங்கள்</string>
+    <!-- Setting screen -->
+    <string name="setting_general">பொதுவான</string>
+    <string name="dark_theme_title">இரவு வகை</string>
+    <string name="dark_theme_summary">கருவியின் தலைப்பை அமை</string>
+    <string name="accent_theme_title">பொருள்</string>
+    <string name="accent_theme_summary">உச்சரிப்பு வண்ணத்தை மாற்று</string>
+    <string name="hide_icon_title">QShortcut</string>
+    <string name="hide_icon_summary">Dial * #*#78259#* #* #* #* #* அறிவிப்பு. Android 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="delete_dep_title">ஆப்ப நிறுவுதலை</string>
+    <string name="delete_dep_summary">சுத்தம் மற்றும் நிறுவுத பயன்பாடு.</string>
+    <string name="settings_sec_title">பாதுகாப்பு</string>
+    <string name="settings_sec_desc">ஸ்கிரிப்ட் கோப்பு மறையாக்கம் மற்றும் திரை பூட்டை செயல்படுத்து.</string>
+    <string name="setting_device">அட்டை முறை அமைப்புகள்</string>
+    <string name="hid_choice_title">தனிப்பயன் HID</string>
+    <string name="hid_choice_summary">லெகசி HID மற்றும் தனிப்பயன் HID இடையே மாற்று</string>
+    <string name="hid_title">HID மொழி</string>
+    <string name="hid_summary">கூடுதல் HID மொழிகளை இறக்கு அல்லது புதிய HID உருவரைகள் வடிவமைக்கவும்.</string>
+    <string name="settings_usb_title">QShortcut</string>
+    <string name="settings_usb_desc">இயங்கும் பொத்தானை USB இணைக்கப்பட்டிருக்கும் போது தாக்குதலை துவக்குகிறது.</string>
+    <string name="settings_net_title">வலைப்பதிவொன்றின் இணைப்பு</string>
+    <string name="settings_net_desc">பிணைய சாக்கெட் இணைக்கப்பட்டிருக்கும் பொத்தானை இயக்க பொத்தானை துவக்குகிறது.</string>
+    <string name="setting_about">தகவல்</string>
+    <string name="setting_developer_title">உருவாக்கியோர்</string>
+    <string name="settings_version_title">பதிப்பு</string>
+    <string name="settings_arch_title">கட்டமைப்பு</string>
+    <string name="settings_lic_title">உரிமம்</string>
+    <string name="settings_support">ஆதரவு</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">விசையை சேர்க்க க்ளிக் செய்யவும்.</string>
+    <string name="settings_locale_title">தனிப்பயன்</string>
+    <string name="settings_locale_desc">பயன்பாடு உள்ளிடு.</string>
+    <string name="release">\@ option: check</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub வெளியீடு</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">பிழை வெளியீடு</string>
+    <string name="releaseOthers">ஆதரிக்கப்படாத வெளியீடு</string>
+    <string name="btn_select">தேர்ந்தெடு</string>
+    <string name="btn_cancel">ரத்து செய்</string>
+    <string name="btn_save">சேமி</string>
+    <string name="file_saved">சேமிக்கப்பட்டது</string>
+    <string name="title_open_file">கோப்பினை திற</string>
+    <string name="title_delete_file">கோப்பினை நீக்கு</string>
+    <string name="file_deleted">நீக்கப்பட்டது</string>
+    <string name="file_name">கோப்பு பெயர்</string>
+    <string name="title_save_file">கோப்பினை சேமி</string>
+    <string-array name="modes">
+        <item>USB Cable</item>
+        <item>பிணைய சாக்கெட்</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>அமெரிக்க ஆங்கிலம்</item>
+        <item>துருக்கியம்</item>
+        <item>ஸ்விடிஷ்</item>
+        <item>ஸ்லோவினியாName</item>
+        <item>ரஷ்யா</item>
+        <item>போர்த்துகீஸ்</item>
+        <item>நார்வேஜியன்</item>
+        <item>இத்தாலியன்</item>
+        <item>Croatian</item>
+        <item>ஐக்கிய இராச்சியம் ஆங்கிலம்</item>
+        <item>பிரெஞ்சு</item>
+        <item>ஃபினிஷ்Name</item>
+        <item>ஸ்பானிஷ்</item>
+        <item>டேனிஷ்Name</item>
+        <item>ஜெர்மன்</item>
+        <item>கனடா பிரெஞ்சு</item>
+        <item>பிரேசிலிName</item>
+        <item>பெலாரூசியன்Name</item>
+        <item>ஹங்கேரியன்Name</item>
+    </string-array>
+</resources>

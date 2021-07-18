@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">VIENOJAS</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Pagrieziet savu ierīci uz gumijas Ducky!</string>
+    <string name="slideTitle2">USB kabelis</string>
+    <string name="slideDesc2">USB vadu interfeiss uzbrukuma uzsākšanai!</string>
+    <string name="slideTitle3">Tīkla ligzda</string>
+    <string name="slideDesc3">Wi-Fi bāzes kontaktligzdas interfeisi, lai uzsāktu uzbrukumu, izmantojot atbalstus ārējos instrumentus!</string>
+    <string name="slideTitle4">Atruna</string>
+    <string name="slideDesc4">Lietotnes lietotājs ir atbildīgs tikai par nodarīto kaitējumu. Neviens cits uzņēmums nevar saukt pie atbildības par zaudējumiem, kas darīts, izmantojot šo app! Praktizēt piesardzību, lietojot lietotni un nelietojiet to, lai kaitētu citiem!</string>
+    <string name="slideTitle5">Privātuma politika</string>
+    <string name="slideDesc5">Nekāda veida dati netiek savākti, izmantoti un pārdoti! Dažas atļaujas, kas varētu paaugstināt privātuma bažas, ir tikai lūgts strādāt dažas funkcijas app un nav savākt datus! Jūsu privātums tiek ievērots!</string>
+    <string name="slideTitle6">Lietotnes atļauja</string>
+    <string name="slideDesc6">Lūdzu, dotiet lietotni, nepieciešama atļauja strādāt!</string>
+    <!-- Update screen -->
+    <string name="update_new">Jauns atjauninājums pieejams</string>
+    <string name="update_hash_error">Faila paraksts Mismaču! Nevar Atjaunināt.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Versija</string>
+    <string name="update_version_nightly">Nakts Versija</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Atjaunināt statusu</string>
+    <string name="update_action">Lejupielādējiet un instalējiet atjauninājumu</string>
+    <string name="update_downloading">Lejupielādē atjauninājumu</string>
+    <string name="install_update">Atjaunot</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">Vai vēlaties paslēpt vai iziet no programmas?</string>
+    <string name="btn_exit">Iziešana</string>
+    <string name="btn_back">Slēpt</string>
+    <string name="unlock">Atslēgt App</string>
+    <string name="auth">Apstiprināt autentifikāciju</string>
+    <string name="update">Atjauninājums</string>
+    <string name="setting">Iestatījumi</string>
+    <string name="codeHint">Tips vai slodzes gumija ducky skripti šeit</string>
+    <string name="loadBtn">Slodze</string>
+    <string name="saveBtn">Saglabāt</string>
+    <string name="delBtn">Dzēst</string>
+    <string name="runBtn">Palaist</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Turpināt</string>
+    <string name="root_err">USB Kabeļa Tack Root Nepieciešama!</string>
+    <string name="kernel_err">"Kodola Nav Atbalstīta USB Kabeļa Tack!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB savienots</string>
+    <string name="config_status_usb_off">USB atvienots</string>
+    <string name="config_status_net_on">Pieslēgta tīkla ligzda</string>
+    <string name="config_status_net_off">Atvienots tīkla ligzda</string>
+    <string name="socket_address">Ievadiet Socket IP un Port Address</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID konfigurēšana</string>
+    <string name="hid_download">Lejupielādēt</string>
+    <string name="hid_update">Atjauninājums</string>
+    <string name="hid_edit">Rediģēt</string>
+    <string name="hid_delete">Dzēst</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Atslēgas nosaukums</string>
+    <string name="key_character">Atslēgas rakstzīme</string>
+    <string name="key_code">Pamatkods</string>
+    <string name="key_ctrl">Ctrl</string>
+    <string name="key_alt">Alat key</string>
+    <string name="key_shift">Mainīt atslēgu</string>
+    <string name="key_meta">Meta Atslēga</string>
+    <string name="keycode">Pamatkods</string>
+    <string name="modcode">Modifikatora kods</string>
+    <string name="key_details">Pamatinformācija</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Vispārīgi noteikumi</string>
+    <string name="dark_theme_title">Nakts režīms</string>
+    <string name="dark_theme_summary">Iestatīt tumšo tēmu</string>
+    <string name="accent_theme_title">Tēma</string>
+    <string name="accent_theme_summary">Mainīt akcentu krāsu</string>
+    <string name="hide_icon_title">Slēpt/izslēgt palaišanas ikonu</string>
+    <string name="hide_icon_summary">Dial * #*#78259#*#* lai uzsāktu. Uz Android 10 un turpmāk, ikona tiks atslēgts, bet ne slēpta.</string>
+    <string name="delete_dep_title">Atinstalēt App</string>
+    <string name="delete_dep_summary">Notīrāt un atinstalēt lietotni.</string>
+    <string name="settings_sec_title">Apsardze</string>
+    <string name="settings_sec_desc">Ieslēgt skriptu failu šifrēšanu un ekrāna bloķēšanu.</string>
+    <string name="setting_device">Uzbrukuma režīma iestatījumi</string>
+    <string name="hid_choice_title">Pielāgojams HID</string>
+    <string name="hid_choice_summary">Pārslēgties starp Legacy HID un Customizable HID</string>
+    <string name="hid_title">HID valoda</string>
+    <string name="hid_summary">Lejupielādēt papildu HID valodas vai dizaina jaunus HID izkārtojumus.</string>
+    <string name="settings_usb_title">USB savienošanas palaišana</string>
+    <string name="settings_usb_desc">Palaist pogu uzsāks uzbrukumu, kad USB ir savienots.</string>
+    <string name="settings_net_title">Tīkla Socket Connect palaišanas</string>
+    <string name="settings_net_desc">Palaist pogu uzsāks uzbrukumu, kad Network Socket ir savienots.</string>
+    <string name="setting_about">Informācija</string>
+    <string name="setting_developer_title">Izstrādātājs</string>
+    <string name="settings_version_title">Versija</string>
+    <string name="settings_arch_title">Arhitektūra</string>
+    <string name="settings_lic_title">Licence</string>
+    <string name="settings_support">Atbalsts</string>
+    <string name="settings_git_title">GitHub Jautājumi</string>
+    <string name="settings_git_desc">Noklikšķiniet, lai pievienotu jautājumus vai funkciju pieprasījumu.</string>
+    <string name="settings_locale_title">Lokalizācija</string>
+    <string name="settings_locale_desc">Veicināt lietotņu lokalizāciju.</string>
+    <string name="release">Izkliede</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Neightly</string>
+    <string name="releaseTest">Atkļūdošanas izlaišana</string>
+    <string name="releaseOthers">Nav Atbalstīts</string>
+    <string name="btn_select">Izvēlēties</string>
+    <string name="btn_cancel">Atcelt</string>
+    <string name="btn_save">Saglabāt</string>
+    <string name="file_saved">ietaupot</string>
+    <string name="title_open_file">Atvērt failu</string>
+    <string name="title_delete_file">Dzēst failu</string>
+    <string name="file_deleted">svītrota</string>
+    <string name="file_name">Faila nosaukums</string>
+    <string name="title_save_file">Saglabāt failu</string>
+    <string-array name="modes">
+        <item>USB kabelis</item>
+        <item>Tīkla ligzda</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turcijas</item>
+        <item>Zviedrijas</item>
+        <item>Slovēņu valodā</item>
+        <item>Krievu valodā</item>
+        <item>Portugāļu valodā</item>
+        <item>Norvēģijas</item>
+        <item>Itālijas</item>
+        <item>Horvātijas</item>
+        <item>Apvienotā Karaliste</item>
+        <item>Franču valodā</item>
+        <item>Somu</item>
+        <item>Spāņu</item>
+        <item>Dāņu valodā</item>
+        <item>Vācu valodā</item>
+        <item>Kanādas franču</item>
+        <item>Brazīlijas portugāļu</item>
+        <item>Baltkrievu</item>
+        <item>Ungārijas</item>
+    </string-array>
+</resources>

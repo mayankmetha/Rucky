@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">KITAS</string>
+    <string name="init_skip">SSKP</string>
+    <string name="init_agree">SUSITARIA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Įjunkite savo įrenginį į Gumos Duckę!</string>
+    <string name="slideTitle2">USB kabelis</string>
+    <string name="slideDesc2">USB laidinė sąsaja paleisti ataką!</string>
+    <string name="slideTitle3">Tinklo lizdas</string>
+    <string name="slideDesc3">Wi-Fi pagrįstas lizdas sąsajų paleisti ataka per remiamas išorės įrankiai!</string>
+    <string name="slideTitle4">Atsakomybės apribojimas</string>
+    <string name="slideDesc4">Programėlė naudotojas yra atsakingas tik už padarytą žalą. Joks kitas subjektas negali būti atsakingas už žalą, padarytą naudojant šią programą! Praktikuoti atsargiai, kai naudojate app ir nenaudai tai sukelti žalos kitiems!</string>
+    <string name="slideTitle5">Privatumo politika</string>
+    <string name="slideDesc5">Jokių duomenų apie bet kokią formą nėra renkami, naudojami ir parduodami! Kai kurie leidimai, kurie gali kelti privatumo problemų, yra prašoma tik tam tikrų funkcijų, app ir nėra rinkti duomenis! Jūsų privatumas yra gerbiamas!</string>
+    <string name="slideTitle6">Programėlių leidimas</string>
+    <string name="slideDesc6">Prašome suteikti programėlę, reikalingą leidimą dirbti!</string>
+    <!-- Update screen -->
+    <string name="update_new">Naujas atnaujinimas galimas</string>
+    <string name="update_hash_error">Failo Parašo Nesutapimas! Negalima Atnaujinti.</string>
+    <string name="update_activity">Rackio atnaujinimas</string>
+    <string name="update_version">Versija</string>
+    <string name="update_version_nightly">Naktinis versija</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Atnaujinti būseną</string>
+    <string name="update_action">Atsisiųskite ir įdiekite naujinimą</string>
+    <string name="update_downloading">Atsisiuntimas atnaujinimas</string>
+    <string name="install_update">&amp; Atnaujinti</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">Ar norite paslėpti ar išeiti iš programos?</string>
+    <string name="btn_exit">Išvykimas</string>
+    <string name="btn_back">Slėpti</string>
+    <string name="unlock">Atrakinti programą</string>
+    <string name="auth">Patvirtinti tapatybę</string>
+    <string name="update">Atnaujinti</string>
+    <string name="setting">Nustatymai</string>
+    <string name="codeHint">Tipas arba apkrovos guminiai ducky scenarikai čia</string>
+    <string name="loadBtn">Apkrova</string>
+    <string name="saveBtn">Įrašyti</string>
+    <string name="delBtn">Ištrinti</string>
+    <string name="runBtn">Paleisti</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Tęsti</string>
+    <string name="root_err">Pagrindinė Prieiga Reikalinga USB Kabelio Ataka!</string>
+    <string name="kernel_err">"Branduolys Nėra Palaikomas USB Kabelio Ataka!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB prijungtas</string>
+    <string name="config_status_usb_off">USB išjungtas</string>
+    <string name="config_status_net_on">Tinklo lizdas prijungtas</string>
+    <string name="config_status_net_off">Tinklo lizdas atjungtas</string>
+    <string name="socket_address">Įveskite lizdo IP ir prievadų adresą</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Atsiųsti</string>
+    <string name="hid_update">Atnaujinti</string>
+    <string name="hid_edit">Redaguoti</string>
+    <string name="hid_delete">Ištrinti</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Rakto pavadinimas</string>
+    <string name="key_character">Rakto simbolis</string>
+    <string name="key_code">Pagrindinis Kodas</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt raktas</string>
+    <string name="key_shift">Keisti raktą</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Pagrindinis Kodas</string>
+    <string name="modcode">Modifikavimo kodas</string>
+    <string name="key_details">Pagrindinė informacija</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Bendrosios nuostatos</string>
+    <string name="dark_theme_title">Naktinis režimas</string>
+    <string name="dark_theme_summary">Nustatyti tamsią temą</string>
+    <string name="accent_theme_title">Tema</string>
+    <string name="accent_theme_summary">Keisti akcento spalvą</string>
+    <string name="hide_icon_title">Nuslėpti/Išjungti paleidimo Icon</string>
+    <string name="hide_icon_summary">Skambink * **********pradės#78259 Android 10 ir vėliau, piktograma bus išjungta, bet ne paslėpta.</string>
+    <string name="delete_dep_title">Pašalinti programėlė</string>
+    <string name="delete_dep_summary">Išvalyti ir pašalinti programėlę.</string>
+    <string name="settings_sec_title">Išankstinis užstatas</string>
+    <string name="settings_sec_desc">Įgalinti scenarijų failų šifravimas ir ekrano užraktas.</string>
+    <string name="setting_device">Atakos režimo nustatymai</string>
+    <string name="hid_choice_title">Pritaikomas HID</string>
+    <string name="hid_choice_summary">Persijungti tarp Legacy HID ir Custoropriese HID</string>
+    <string name="hid_title">HID kalba</string>
+    <string name="hid_summary">Atsisiųsti papildomų HID kalbos arba sukurti naują HID maketus.</string>
+    <string name="settings_usb_title">USB Connect paleidimas</string>
+    <string name="settings_usb_desc">Paleisti mygtuką bus pradėti ataka, kai USB yra prijungtas.</string>
+    <string name="settings_net_title">Tinklo lizdas prijungti paleidimo pradžią</string>
+    <string name="settings_net_desc">Paleisti mygtuką bus pradėti ataka, kai tinklo lizdas yra prijungtas.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Programuotojas</string>
+    <string name="settings_version_title">Versija</string>
+    <string name="settings_arch_title">Architektūra</string>
+    <string name="settings_lic_title">Licencija</string>
+    <string name="settings_support">Parama</string>
+    <string name="settings_git_title">Github Klausimai</string>
+    <string name="settings_git_desc">Spragtelkite norėdami pridėti klausimų ar pageidavimu.</string>
+    <string name="settings_locale_title">Lokalizavimas</string>
+    <string name="settings_locale_desc">Prisidėti prie app lokalizacijos.</string>
+    <string name="release">Pasiskirstymas</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub išleidimas</string>
+    <string name="releaseGitHubNightly">GitHub Nakčiai</string>
+    <string name="releaseTest">Derinti išleidimą</string>
+    <string name="releaseOthers">Nepalaikomas išleidimas</string>
+    <string name="btn_select">Pasirinkti</string>
+    <string name="btn_cancel">Atšaukti</string>
+    <string name="btn_save">Įrašyti</string>
+    <string name="file_saved">išsaugotas</string>
+    <string name="title_open_file">Atverti failą</string>
+    <string name="title_delete_file">Pašalinti failą</string>
+    <string name="file_deleted">Išbraukti.</string>
+    <string name="file_name">Failo pavadinimas</string>
+    <string name="title_save_file">Įrašyti failą</string>
+    <string-array name="modes">
+        <item>USB kabelis</item>
+        <item>Tinklo lizdas</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikos lietuvių</item>
+        <item>Turkijos</item>
+        <item>Švediškai</item>
+        <item>Slovėnija</item>
+        <item>Rusų</item>
+        <item>Portugalinis</item>
+        <item>Norvegų kalba</item>
+        <item>Italy</item>
+        <item>Kroatų</item>
+        <item>Jungtinė Karalystė</item>
+        <item>Prancūziškai</item>
+        <item>Suomija</item>
+        <item>Ispanų</item>
+        <item>Danijos</item>
+        <item>Vokiečių</item>
+        <item>Kanados prancūzų</item>
+        <item>Brazilijos portugalų</item>
+        <item>Baltarusijos</item>
+        <item>Vengrų</item>
+    </string-array>
+</resources>

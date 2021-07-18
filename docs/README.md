@@ -323,6 +323,10 @@ in      |Indonesian         |100%
 it      |Italian            |100%
 iw      |Hebrew             |100%
 ja      |Japanese           |100%
+ko      |Korean             |100%
+lt      |Lithuanian         |100%
+lv      |Latvian            |100%
+ms      |Malay              |100%
 nb      |Norwegian Bokmal   |100%
 nl      |Dutch              |100%
 no      |Norwegian          |100%
@@ -331,8 +335,16 @@ pt      |Portuguese         |100%
 ro      |Romanian           |100%
 ru      |Russian            |100%
 sk      |Slovak             |100%
+sl      |Slovenian          |100%
 sv      |Swedish            |100%
+ta      |Tamil              |100%
+te      |Telugu             |100%
+th      |Thai               |100%
+tr      |Turkish            |100%
 uk      |Ukrainian          |100%
+ur-rIN  |Urdu (IN)          |100%
+ur-rPK  |Urdu (PK)          |100%
+vi      |Vietnamese         |100%
 zh-rCN  |Chinese Simplified |100%
 zh-rTW  |Chinese Traditional|100%
 

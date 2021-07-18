@@ -1,69 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Unlock App</string>
-    <string name="auth">Confirm authentication</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
-    <string name="init_next">NEXT</string>
-    <string name="init_skip">SKIP</string>
-    <string name="init_agree">AGREE</string>
-    <string name="init_start">HACK</string>
+    <string name="init_next">다음</string>
+    <string name="init_skip">건너뛰기</string>
+    <string name="init_agree">동의</string>
+    <string name="init_start">해킹</string>
     <string name="slideDesc1">장치를 러버버키로 돌려라!</string>
-    <string name="slideTitle2">USB Cable</string>
-    <string name="slideDesc2">USB wired interface for launching attack!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
-    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
-    <string name="slideTitle5">Privacy Policy</string>
-    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideTitle2">USB 케이블</string>
+    <string name="slideDesc2">공격 개시를 위한 USB 유선 인터페이스!</string>
+    <string name="slideTitle3">네트워크 소켓</string>
+    <string name="slideDesc3">지원되는 외부 도구를 통해 공격을 실행하는 Wi-Fi 기반 소켓 인터페이스!</string>
+    <string name="slideTitle4">면책사항</string>
+    <string name="slideDesc4">이 앱의 사용자는 이로 인한 피해에 전적으로 책임이 있다. 이 앱을 사용하여 발생한 피해에 대해 다른 엔티티를 보유할 수 없습니다. 앱을 사용할 때 주의를 주의하고 이를 사용하여 다른 사용자에게 피해를 주지 마십시오.</string>
+    <string name="slideTitle5">개인정보 보호정책</string>
+    <string name="slideDesc5">어떠한 형태의 데이터도 수집, 사용 및 판매되지 않습니다! 개인정보 보호 문제를 제기할 수 있는 일부 권한은 앱에서 특정 기능의 작동만을 요구하고 데이터를 수집하지 않는 것입니다! 당신의 사생활은 존중됩니다!</string>
+    <string name="slideTitle6">애플리케이션 권한</string>
+    <string name="slideDesc6">작업에 필요한 권한을 앱에 부여하십시오!</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
+    <string name="update_new">새 업데이트 사용 가능</string>
+    <string name="update_hash_error">파일 서명 불일치! 업데이트할 수 없습니다.</string>
+    <string name="update_activity">러키 업데이트</string>
     <string name="update_version">버전 (버전)</string>
-    <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_version_nightly">야간 버전</string>
+    <string name="update_changelog">변경 로그</string>
+    <string name="update_status">업데이트 상태</string>
+    <string name="update_action">업데이트 다운로드 및 설치</string>
+    <string name="update_downloading">업데이트 다운로드</string>
+    <string name="install_update">업데이트 적용하기</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
+    <string name="exit_dialog">앱을 숨기거나 종료하시겠습니까?</string>
+    <string name="btn_exit">종료</string>
+    <string name="btn_back">숨기기</string>
+    <string name="unlock">잠금 해제</string>
+    <string name="auth">인증 확인</string>
+    <string name="update">업데이트</string>
+    <string name="setting">설정</string>
     <string name="codeHint">여기에 고무줄 스크립트를 입력하거나 로드합니다.</string>
     <string name="loadBtn">적재</string>
     <string name="saveBtn">다른 이름으로 저장</string>
     <string name="delBtn">삭제하기</string>
     <string name="runBtn">실행하는 작업</string>
-    <string name="confBtn">Config</string>
-    <string name="btn_continue">Continue</string>
-    <string name="root_err">Root Access Required For USB Cable Attack!</string>
-    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="confBtn">구성</string>
+    <string name="btn_continue">계속</string>
+    <string name="root_err">USB 케이블 공격에 대한 루트 액세스!</string>
+    <string name="kernel_err">"커널이 USB 케이블 공격에 지원되지 않음!"</string>
     <!-- Config screen -->
-    <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="config_activity">트윗크</string>
+    <string name="config_status_usb_on">연결된 USB</string>
+    <string name="config_status_usb_off">USB 연결 해제</string>
+    <string name="config_status_net_on">네트워크 소켓 연결</string>
+    <string name="config_status_net_off">네트워크 소켓 연결 해제</string>
+    <string name="socket_address">소켓 IP및 포트 주소 입력</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID 구성</string>
+    <string name="hid_download">다운로드</string>
+    <string name="hid_update">업데이트</string>
+    <string name="hid_edit">편집</string>
+    <string name="hid_delete">삭제하기</string>
+    <!-- Keylist screen -->
+    <string name="key_title">키 이름</string>
+    <string name="key_character">키 문자</string>
+    <string name="key_code">키 코드</string>
+    <string name="key_ctrl">Ctrl 키</string>
+    <string name="key_alt">Alt 키</string>
+    <string name="key_shift">시프트 키</string>
+    <string name="key_meta">메타 키</string>
+    <string name="keycode">키 코드</string>
+    <string name="modcode">수정자 코드</string>
+    <string name="key_details">주요 세부 사항</string>
     <!-- Setting screen -->
     <string name="setting_general">일반적인</string>
-    <string name="dark_theme_title">Night Mode</string>
-    <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
-    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
-    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="dark_theme_title">야간 모드</string>
+    <string name="dark_theme_summary">짙은 테마 설정하기</string>
+    <string name="accent_theme_title">테마</string>
+    <string name="accent_theme_summary">액센트 색상 변경하기</string>
+    <string name="hide_icon_title">실행 프로그램 아이콘 숨기기/사용 안함</string>
+    <string name="hide_icon_summary">시작 * #*#78259#*#* 가 실행됩니다. Android 10이상에서는 아이콘을 사용하지 않지만 숨길 수는 없습니다.</string>
     <string name="delete_dep_title">애플리케이션 제거하기</string>
     <string name="delete_dep_summary">앱을 정리하고 설치 제거하십시오.</string>
     <string name="settings_sec_title">어드밴스 보안</string>
     <string name="settings_sec_desc">스크립트 파일 암호화 및 화면 잠금 사용</string>
-    <string name="setting_device">Attack Mode Settings</string>
-    <string name="settings_usb_title">USB Connect Launch</string>
-    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
-    <string name="settings_net_title">Network Socket Connect Launch</string>
-    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
+    <string name="setting_device">공격 모드 설정</string>
+    <string name="hid_choice_title">커스터마이즈 가능한 HID</string>
+    <string name="hid_choice_summary">레거시 HID와 커스터마이즈 가능한 HID간 전환</string>
+    <string name="hid_title">HID 언어</string>
+    <string name="hid_summary">추가 HID 언어를 다운로드하거나 새로운 HID 레이아웃을 설계한다.</string>
+    <string name="settings_usb_title">USB 연결 실행</string>
+    <string name="settings_usb_desc">USB가 연결되면 실행 버튼이 공격을 시작합니다.</string>
+    <string name="settings_net_title">네트워크 소켓 연결 실행</string>
+    <string name="settings_net_desc">네트워크 소켓이 연결되면 실행 단추가 공격을 시작합니다.</string>
     <string name="setting_about">정보정보</string>
     <string name="setting_developer_title">개발자 (Developer)</string>
     <string name="settings_version_title">버전 (버전)</string>
@@ -73,41 +99,45 @@
     <string name="settings_git_title">GitHub 이슈</string>
     <string name="settings_git_desc">클릭하면 문제 또는 기능 요청을 추가할 수 있습니다.</string>
     <string name="settings_locale_title">로컬화 시작</string>
-    <string name="settings_locale_desc">Contribute to app localization.</string>
-    <string name="release">Distribution</string>
+    <string name="settings_locale_desc">앱 현지화에 기여.</string>
+    <string name="release">유통</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub 릴리스</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">디버그 해제</string>
     <string name="releaseOthers">지원되지 않는 릴리스</string>
-    <string name="btn_select">Select</string>
-    <string name="btn_cancel">Cancel</string>
+    <string name="btn_select">선택</string>
+    <string name="btn_cancel">취소</string>
     <string name="btn_save">다른 이름으로 저장</string>
-    <string name="file_saved">saved</string>
-    <string name="file_deleted">deleted</string>
-    <string name="file_name">File Name</string>
+    <string name="file_saved">저장된</string>
+    <string name="title_open_file">파일 열기</string>
+    <string name="title_delete_file">파일 삭제</string>
+    <string name="file_deleted">삭제된</string>
+    <string name="file_name">파일 이름</string>
+    <string name="title_save_file">파일 저장</string>
     <string-array name="modes">
-        <item>USB Cable</item>
-        <item>Network Socket</item>
+        <item>USB 케이블</item>
+        <item>네트워크 소켓</item>
     </string-array>
     <string-array name="hidLanguages">
-        <item>American English</item>
-        <item>Turkish</item>
-        <item>Swedish</item>
-        <item>Slovenian</item>
-        <item>Russian</item>
-        <item>Portuguese</item>
-        <item>Norwegian</item>
-        <item>Italian</item>
-        <item>Croatian</item>
-        <item>United Kingdom English</item>
-        <item>French</item>
-        <item>Finnish</item>
-        <item>Spanish</item>
-        <item>Danish</item>
-        <item>German</item>
-        <item>Canadian French</item>
-        <item>Brazilian Portuguese</item>
-        <item>Belarusian</item>
-        <item>Hungarian</item>
+        <item>미국 영어</item>
+        <item>터키어</item>
+        <item>스웨덴어</item>
+        <item>슬로베니아어</item>
+        <item>러시아어</item>
+        <item>포르투갈어</item>
+        <item>노르웨이어</item>
+        <item>이탈리아어</item>
+        <item>크로아티아</item>
+        <item>영국 영어</item>
+        <item>프랑스어</item>
+        <item>핀란드어</item>
+        <item>스페인어</item>
+        <item>덴마크어</item>
+        <item>독일어</item>
+        <item>캐나다 프랑스어</item>
+        <item>브라질 포르투갈어</item>
+        <item>벨라루스</item>
+        <item>헝가리어</item>
     </string-array>
 </resources>

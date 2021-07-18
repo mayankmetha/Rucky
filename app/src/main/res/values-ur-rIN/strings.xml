@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">آگے</string>
+    <string name="init_skip">سکپ</string>
+    <string name="init_agree">Aآيت</string>
+    <string name="init_start">ہیک</string>
+    <string name="slideDesc1">ایک ربڑ Ducky کے لئے آپ کے آلہ باری!</string>
+    <string name="slideTitle2">USB کیبل</string>
+    <string name="slideDesc2">حملے شروع کرنے کے لئے یو ایس بی وائرڈ انٹرفیس!</string>
+    <string name="slideTitle3">نیٹ ورک ساکٹ</string>
+    <string name="slideDesc3">بیرونی اوزار کی مدد سے حملہ کرنے کے لئے وائی فائی کی بنیاد ساکٹ انٹرفیس!</string>
+    <string name="slideTitle4">تانگیر</string>
+    <string name="slideDesc4">ایپ کا صارف مکمل طور پر ہونے والے نقصانات کا ذمہ دار ہے. اس ایپ کو استعمال کرنے والے نقصانات کے لیے کوئی اور ہستی ذمہ دار نہیں ہوسکتی! ایپ استعمال کرتے وقت احتیاط کی مشق اور دوسروں کو نقصان پہنچانے کے لئے اس کا استعمال نہیں کرتے ہیں!</string>
+    <string name="slideTitle5">پرائیویسی پالیسی</string>
+    <string name="slideDesc5">کسی بھی شکل کا کوئی ڈیٹا جمع, استعمال اور فروخت کیا جاتا ہے! کچھ اجازہ جو رازداری کے خدشات کو بلند کر سکتے ہیں صرف ایپ میں مخصوص خصوصیات کے کام کرنے کے لئے کہا جاتا ہے اور ڈیٹا جمع کرنے کے لئے نہیں ہے! آپ کی پرائیویسی کا احترام ہے!</string>
+    <string name="slideTitle6">ایپ پرمشن</string>
+    <string name="slideDesc6">براہ کرم ایپ کو کام کرنے کی مطلوبہ اجازت عنایت فرمائیں!</string>
+    <!-- Update screen -->
+    <string name="update_new">نیا اپ ڈیٹ دستیاب</string>
+    <string name="update_hash_error">فائل سگنیچر میمیچ! اپ ڈیٹ نہیں.</string>
+    <string name="update_activity">روسے اپ ڈیٹ</string>
+    <string name="update_version">ورژن</string>
+    <string name="update_version_nightly">براہ راست ورژن</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">اپ ڈیٹ سٹیٹس</string>
+    <string name="update_action">اپ ڈیٹ ڈاؤن لوڈ اور انسٹال کریں</string>
+    <string name="update_downloading">ڈاؤن لوڈنگ اپ ڈیٹ</string>
+    <string name="install_update">اپ ڈیٹ کرنا</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">آپ کو چھپانے یا ایپ سے باہر نکلنے کے لئے چاہتے ہیں?</string>
+    <string name="btn_exit">باہر نکلیں</string>
+    <string name="btn_back">چھپائیں</string>
+    <string name="unlock">انلاک ایپ</string>
+    <string name="auth">تصدیق توثیق</string>
+    <string name="update">اپ ڈیٹ</string>
+    <string name="setting">سیٹنگز</string>
+    <string name="codeHint">ٹائپ یا لوڈ ربڑ ducky سکرپٹ یہاں</string>
+    <string name="loadBtn">لاڑ</string>
+    <string name="saveBtn">بچائیں</string>
+    <string name="delBtn">حذف</string>
+    <string name="runBtn">رن</string>
+    <string name="confBtn">کانگونہ</string>
+    <string name="btn_continue">Continue reading →</string>
+    <string name="root_err">روٹ کی رسائی USB کیبل حملے کے لئے پریشان!</string>
+    <string name="kernel_err">"دانے یوایسبی کیبل اٹیک کے لئے معاون نہیں ہے!"</string>
+    <!-- Config screen -->
+    <string name="config_activity">ردوبدل</string>
+    <string name="config_status_usb_on">USB Connected</string>
+    <string name="config_status_usb_off">USB Disجڑا</string>
+    <string name="config_status_net_on">نیٹ ورک ساکٹ مربوط</string>
+    <string name="config_status_net_off">نیٹ ورک ساکٹ ڈسکہ</string>
+    <string name="socket_address">ساکٹ IP اور پورٹ ایڈریس درج کریں</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID تشکیل</string>
+    <string name="hid_download">ڈاؤنلوڈ کریں</string>
+    <string name="hid_update">اپ ڈیٹ</string>
+    <string name="hid_edit">تصیح</string>
+    <string name="hid_delete">حذف</string>
+    <!-- Keylist screen -->
+    <string name="key_title">کلیدی نام</string>
+    <string name="key_character">کلیدی کردار</string>
+    <string name="key_code">کلیدی کوڈ</string>
+    <string name="key_ctrl">کے لئے Ctrl</string>
+    <string name="key_alt">آلٹ کلیدی</string>
+    <string name="key_shift">شفٹ کلیدی</string>
+    <string name="key_meta">میٹا کلیدی</string>
+    <string name="keycode">کلیدی کوڈ</string>
+    <string name="modcode">مولیفائر کوڈ</string>
+    <string name="key_details">کلیدی تفصیلات</string>
+    <!-- Setting screen -->
+    <string name="setting_general">جنرل</string>
+    <string name="dark_theme_title">نائٹ موڈ</string>
+    <string name="dark_theme_summary">نیم تاریک تھیم</string>
+    <string name="accent_theme_title">تھیم</string>
+    <string name="accent_theme_summary">بدلتی تلفظ کا رنگ</string>
+    <string name="hide_icon_title">ھیڈ/ڈس ایبل لاؤچر آئیکون</string>
+    <string name="hide_icon_summary">Dial * ##78259* * * * * * شروع کرنے کے لیے * * * * لوڈ, اتارنا Android 10 کے بعد, آئیکن غیر فعال ہو جائے گا, لیکن چھپا نہیں.</string>
+    <string name="delete_dep_title">انانسٹال ایپ</string>
+    <string name="delete_dep_summary">کلین اپ اور انسٹال ایپ.</string>
+    <string name="settings_sec_title">ایڈوانس سیکورٹی</string>
+    <string name="settings_sec_desc">Enable سکرپٹ فائل خفیہ کاری اور اسکرین لاک</string>
+    <string name="setting_device">حملہ موڈ سیٹنگز</string>
+    <string name="hid_choice_title">کسٹمر کے بارے میں</string>
+    <string name="hid_choice_summary">ورثہ ہیڈ اور کسٹمر کے درمیان سوئچ</string>
+    <string name="hid_title">زمرہ: زبان</string>
+    <string name="hid_summary">اضافی ترین مادری زبانوں کو ڈاؤن لوڈ کریں یا نئے ہیڈ لائن کو ڈیزائن کریں.</string>
+    <string name="settings_usb_title">USB کنیکٹ لانچ</string>
+    <string name="settings_usb_desc">رن بٹن پر حملہ کریں گے جب USB سے متصل ہے.</string>
+    <string name="settings_net_title">نیٹ ورک ساکٹ کنیکٹ لانچ</string>
+    <string name="settings_net_desc">چلائیں بٹن پر حملہ کریں گے جب نیٹ ورک ساکٹ منسلک ہے.</string>
+    <string name="setting_about">انفو</string>
+    <string name="setting_developer_title">ڈیولپر</string>
+    <string name="settings_version_title">ورژن</string>
+    <string name="settings_arch_title">فن تعمیر</string>
+    <string name="settings_lic_title">لائسینس</string>
+    <string name="settings_support">سپورٹ</string>
+    <string name="settings_git_title">GitHub مسائل</string>
+    <string name="settings_git_desc">مدعوں یا فیچر کی درخواست شامل کرنے کے لئے کلک کریں.</string>
+    <string name="settings_locale_title">ستھانیکرن</string>
+    <string name="settings_locale_desc">ایپ لوکلائزیشن کو خراج تحسین</string>
+    <string name="release">تقسیم</string>
+    <string name="releaseNetHunter">نیٹ ہنٹر ایپ سٹور</string>
+    <string name="releaseGitHub">GitHub ریلیز</string>
+    <string name="releaseGitHubNightly">گیحب نیٹلی</string>
+    <string name="releaseTest">ڈیبگ ریلیز</string>
+    <string name="releaseOthers">غیر امدادی ریلیز</string>
+    <string name="btn_select">منتخب کريں</string>
+    <string name="btn_cancel">منسوخ</string>
+    <string name="btn_save">بچائیں</string>
+    <string name="file_saved">بچا لیا</string>
+    <string name="title_open_file">اوپن فائل</string>
+    <string name="title_delete_file">حذف فائل</string>
+    <string name="file_deleted">خارج کر دیا</string>
+    <string name="file_name">فائل نام</string>
+    <string name="title_save_file">محفوظ فائل</string>
+    <string-array name="modes">
+        <item>USB کیبل</item>
+        <item>نیٹ ورک ساکٹ</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>امریکی انگریزی</item>
+        <item>ترکی</item>
+        <item>سویڈش</item>
+        <item>سلووینیائی</item>
+        <item>روسی</item>
+        <item>پرتگالی</item>
+        <item>ناروے</item>
+        <item>اٹالین</item>
+        <item>کروشیائی</item>
+        <item>یونائٹیڈ کنگڈم</item>
+        <item>فرانسیسی</item>
+        <item>فننش</item>
+        <item>سپینش</item>
+        <item>دانش</item>
+        <item>جرمن</item>
+        <item>کینیڈین فرانسیسی</item>
+        <item>برازیلین پرتگالی</item>
+        <item>بیلاروسی</item>
+        <item>ہنگیرین</item>
+    </string-array>
+</resources>
