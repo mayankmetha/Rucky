@@ -1,69 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Odomknúť aplikáciu</string>
-    <string name="auth">Potvrdiť autentifikáciu</string>
-    <string name="update_new">New update available</string>
     <!-- Init Screen -->
     <string name="init_next">ĎALŠÍ</string>
     <string name="init_skip">PRESKOČIŤ</string>
-    <string name="init_agree">AGREE</string>
+    <string name="init_agree">SÚHLASÍM</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Premeňte svoje zariadenie na Rubber Ducky!</string>
     <string name="slideTitle2">USB kábel</string>
     <string name="slideDesc2">Káblové rozhranie USB pre spustenie útoku!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
-    <string name="slideTitle4">Disclaimer</string>
-    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
-    <string name="slideTitle5">Privacy Policy</string>
-    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
-    <string name="slideTitle6">App Permission</string>
-    <string name="slideDesc6">Please grant app the required permission to work!</string>
+    <string name="slideTitle3">Sieťový soket</string>
+    <string name="slideDesc3">Wi-Fi rozhranie soketu pre spúšťanie útoku pomocou podporovaných externých nástrojov!</string>
+    <string name="slideTitle4">Upozornenie</string>
+    <string name="slideDesc4">Za spôsobené škody zodpovedá výlučne používateľ aplikácie. Žiadny iný subjekt nezodpovedá za škody spôsobené pomocou tejto aplikácie! Pri používaní aplikácie buďte opatrní a nepoužívajte ju na poškodenie iných!</string>
+    <string name="slideTitle5">Zásady ochrany osobných údajov</string>
+    <string name="slideDesc5">Žiadne údaje nie sú zhromažďované, používané ani predávané! Niektoré povolenia, ktoré by mohli vzbudiť obavy o ochranu osobných údajov, sa požadujú iba na fungovanie určitých funkcií aplikácie a nie na zhromažďovanie údajov! Vaše súkromie je rešpektované!</string>
+    <string name="slideTitle6">Povolenia aplikácie</string>
+    <string name="slideDesc6">Udeľte aplikácii požadované povolenie na správne fungovanie!</string>
     <!-- Update screen -->
-    <string name="update_activity">Rucky Update</string>
+    <string name="update_new">K dispozícii je nová aktualizácia</string>
+    <string name="update_hash_error">Nezhoda podpisu súboru! Nie je možné aktualizovať.</string>
+    <string name="update_activity">Aktualizácia Rucky</string>
     <string name="update_version">Verzia</string>
-    <string name="update_changelog">Changelog</string>
-    <string name="update_status">Update Status</string>
-    <string name="update_action">Download &amp; Install Update</string>
-    <string name="update_downloading">Downloading Update</string>
-    <string name="install_update">Applying Update</string>
+    <string name="update_version_nightly">Nočný verzia</string>
+    <string name="update_changelog">Zoznam zmien</string>
+    <string name="update_status">Stav aktualizácie</string>
+    <string name="update_action">Stiahnuť a nainštalovať aktualizáciu</string>
+    <string name="update_downloading">Sťahovanie aktualizácie</string>
+    <string name="install_update">Zavádzanie aktualizácie</string>
     <!-- Editor screen -->
-    <string name="update">Update</string>
-    <string name="setting">Settings</string>
+    <string name="exit_dialog">Chcete skryť alebo ukončiť aplikáciu?</string>
+    <string name="btn_exit">Ukončiť</string>
+    <string name="btn_back">Skryť</string>
+    <string name="unlock">Odomknúť aplikáciu</string>
+    <string name="auth">Potvrdiť autentifikáciu</string>
+    <string name="update">Aktualizácia</string>
+    <string name="setting">Nastavenia</string>
     <string name="codeHint">Tu napíšte alebo načítajte skripty Rubber Ducky</string>
     <string name="loadBtn">Načítať</string>
     <string name="saveBtn">Uložiť</string>
     <string name="delBtn">Odstrániť</string>
     <string name="runBtn">Spustť</string>
-    <string name="confBtn">Config</string>
+    <string name="confBtn">Konfigurácia</string>
     <string name="btn_continue">Pokračovať</string>
     <string name="root_err">Pre útok cez USB kábel sa vyžaduje prístup roota!</string>
     <string name="kernel_err">"Kernel nepodporuje útok cez USB kábel!"</string>
     <!-- Config screen -->
-    <string name="config_activity">Tweaks</string>
-    <string name="config_status_usb_on">USB Connected</string>
-    <string name="config_status_usb_off">USB Disconnected</string>
-    <string name="config_status_net_on">Network Socket Connected</string>
-    <string name="config_status_net_off">Network Socket Disconnected</string>
-    <string name="socket_address">Enter Socket IP and Port Address</string>
+    <string name="config_activity">Vylepšenia</string>
+    <string name="config_status_usb_on">USB pripojené</string>
+    <string name="config_status_usb_off">USB odpojené</string>
+    <string name="config_status_net_on">Sieťový soket pripojený</string>
+    <string name="config_status_net_off">Sieťový soket odpojený</string>
+    <string name="socket_address">Zadajte IP soketu a adresu portu</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Konfigurácia HID</string>
+    <string name="hid_download">Prevziať</string>
+    <string name="hid_update">Aktualizácia</string>
+    <string name="hid_edit">Upraviť</string>
+    <string name="hid_delete">Odstrániť</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Názov kľúča</string>
+    <string name="key_character">Kľúčový znak</string>
+    <string name="key_code">Kód kľúča</string>
+    <string name="key_ctrl">Kláves Ctrl</string>
+    <string name="key_alt">Kláves Alt</string>
+    <string name="key_shift">Kláves Shift</string>
+    <string name="key_meta">Meta kľúč</string>
+    <string name="keycode">Kód kľúča</string>
+    <string name="modcode">Kód modifikátora</string>
+    <string name="key_details">Podrobnosti o kľúči</string>
     <!-- Setting screen -->
     <string name="setting_general">Všeobecné</string>
-    <string name="dark_theme_title">Night Mode</string>
-    <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
-    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
-    <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
+    <string name="dark_theme_title">Nočný režim</string>
+    <string name="dark_theme_summary">Nastaviť tmavý motív</string>
+    <string name="accent_theme_title">Motív</string>
+    <string name="accent_theme_summary">Zmeniť farbu zvýraznenia</string>
+    <string name="hide_icon_title">Skryť/Zakázať ikonu spúšťača</string>
+    <string name="hide_icon_summary">Pre spustenie vytočte *#*#78259#*#*. Na Androide 10 a novších bude ikona deaktivovaná, ale nie skrytá.</string>
     <string name="delete_dep_title">Odinštalovať Aplikáciu</string>
     <string name="delete_dep_summary">Vyčistiť a odinštalovať aplikáciu.</string>
     <string name="settings_sec_title">Pokročilé zabezpečenie</string>
     <string name="settings_sec_desc">Povoliť šifrovanie súborov skriptu a uzamknutie obrazovky.</string>
     <string name="setting_device">Nastavenie režimu útoku</string>
+    <string name="hid_choice_title">Prispôsobiteľné HID</string>
+    <string name="hid_choice_summary">Prepnúť medzi Legacy HID a Customisable HID</string>
+    <string name="hid_title">Jazyk HID</string>
+    <string name="hid_summary">Stiahnite si ďalšie HID jazyky alebo navrhnite nové formáty HID.</string>
     <string name="settings_usb_title">Spustenie pripojenia USB</string>
     <string name="settings_usb_desc">Tlačidlo spustí útok po pripojení USB.</string>
-    <string name="settings_net_title">Network Socket Connect Launch</string>
-    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
+    <string name="settings_net_title">Spustiť pripojenie sieťového soketu</string>
+    <string name="settings_net_desc">Tlačidlo spustiť začne útok, keď je sieťový soket pripojený.</string>
     <string name="setting_about">Informácie</string>
     <string name="setting_developer_title">Vvojár</string>
     <string name="settings_version_title">Verzia</string>
@@ -73,21 +99,25 @@
     <string name="settings_git_title">Problémy GitHub</string>
     <string name="settings_git_desc">Kliknutím pridajte problémy alebo žiadosť o funkciu.</string>
     <string name="settings_locale_title">Lokalizácia</string>
-    <string name="settings_locale_desc">Contribute to app localization.</string>
+    <string name="settings_locale_desc">Prispejte k lokalizácii aplikácie.</string>
     <string name="release">Distribúcia</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub vydanie</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug vydanie</string>
     <string name="releaseOthers">Nepodporované vydanie</string>
-    <string name="btn_select">Select</string>
+    <string name="btn_select">Vybrať</string>
     <string name="btn_cancel">Zrušiť</string>
     <string name="btn_save">Uložiť</string>
     <string name="file_saved">uložené</string>
+    <string name="title_open_file">Otvoriť súbor</string>
+    <string name="title_delete_file">Vymazať súbor</string>
     <string name="file_deleted">odstránené</string>
     <string name="file_name">Názov súboru</string>
+    <string name="title_save_file">Uložiť súbor</string>
     <string-array name="modes">
         <item>USB kábel</item>
-        <item>Network Socket</item>
+        <item>Sieťový soket</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Americká angličtina</item>

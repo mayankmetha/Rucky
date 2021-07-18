@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">App ontgrendelen</string>
-    <string name="auth">Verificatie bevestigen</string>
-    <string name="update_new">Nieuwe update beschikbaar</string>
     <!-- Init Screen -->
     <string name="init_next">VOLGENDE</string>
     <string name="init_skip">OVERSLAAN</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">App Toestemming</string>
     <string name="slideDesc6">Verleen de app de toestemming om te werken!</string>
     <!-- Update screen -->
+    <string name="update_new">Nieuwe update beschikbaar</string>
+    <string name="update_hash_error">Niet-overeenkomende bestandshandtekening! Bijwerken is niet mogelijk.</string>
     <string name="update_activity">Rucky Update</string>
     <string name="update_version">Versie</string>
+    <string name="update_version_nightly">Nachtelijke versie</string>
     <string name="update_changelog">Wijzigingslogboek</string>
     <string name="update_status">Status bijwerken</string>
-    <string name="update_action">Download &amp; Installeren Update</string>
+    <string name="update_action">Download en installeer Update</string>
     <string name="update_downloading">Update downloaden</string>
     <string name="install_update">Update toepassen</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Wilt u de app verbergen of afsluiten?</string>
+    <string name="btn_exit">Afsluiten</string>
+    <string name="btn_back">Verbergen</string>
+    <string name="unlock">App ontgrendelen</string>
+    <string name="auth">Verificatie bevestigen</string>
     <string name="update">Vernieuwen</string>
     <string name="setting">Instellingen</string>
     <string name="codeHint">Typ of laad rubberen ducky scripts hier</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Netwerk Socket verbonden</string>
     <string name="config_status_net_off">Netwerk socket verbinding verbroken</string>
     <string name="socket_address">Voer Socket IP en Poort Adres in</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID-configuratie</string>
+    <string name="hid_download">Downloaden</string>
+    <string name="hid_update">Vernieuwen</string>
+    <string name="hid_edit">Bewerken</string>
+    <string name="hid_delete">Verwijderen</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Sleutelnaam</string>
+    <string name="key_character">Sleutelteken</string>
+    <string name="key_code">Sleutelcode</string>
+    <string name="key_ctrl">Ctrl toets</string>
+    <string name="key_alt">Alt-toets</string>
+    <string name="key_shift">Shift-toets</string>
+    <string name="key_meta">Meta-sleutel</string>
+    <string name="keycode">Sleutelcode</string>
+    <string name="modcode">Aanpassingcode</string>
+    <string name="key_details">Sleutelgegevens</string>
     <!-- Setting screen -->
     <string name="setting_general">Algemeen</string>
     <string name="dark_theme_title">Nacht modus</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Verbetering van beveiliging</string>
     <string name="settings_sec_desc">Script-bestandsversleuteling en schermvergrendeling inschakelen.</string>
     <string name="setting_device">Aanvalmodus Instellingen</string>
+    <string name="hid_choice_title">Aanpasbare HID</string>
+    <string name="hid_choice_summary">Schakelen tussen Legacy HID en aanpasbare HID</string>
+    <string name="hid_title">HID-taal</string>
+    <string name="hid_summary">Extra HID-talen downloaden of nieuwe HID-layouts ontwerpen.</string>
     <string name="settings_usb_title">USB verbinding starten</string>
     <string name="settings_usb_desc">Uitvoerknop zal aanvallen lanceren wanneer USB is aangesloten.</string>
     <string name="settings_net_title">Netwerk Socket Connect lancering</string>
@@ -77,14 +103,18 @@
     <string name="release">Distributie</string>
     <string name="releaseNetHunter">NetHunter App Winkel</string>
     <string name="releaseGitHub">GitHub release</string>
+    <string name="releaseGitHubNightly">GitHub Nachtelijke</string>
     <string name="releaseTest">Debug release</string>
     <string name="releaseOthers">Niet-ondersteunde release</string>
     <string name="btn_select">Selecteren</string>
     <string name="btn_cancel">annuleren</string>
     <string name="btn_save">Opslaan</string>
     <string name="file_saved">opgeslagen</string>
+    <string name="title_open_file">Bestand openen</string>
+    <string name="title_delete_file">Bestand wissen</string>
     <string name="file_deleted">verwijderd</string>
     <string name="file_name">File Name</string>
+    <string name="title_save_file">Bestand opslaan</string>
     <string-array name="modes">
         <item>USB kabel</item>
         <item>Netwerk soep</item>

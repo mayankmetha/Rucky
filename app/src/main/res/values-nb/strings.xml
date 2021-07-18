@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Lås opp app</string>
-    <string name="auth">Bekreft autentisering</string>
-    <string name="update_new">Ny oppdatering tilgjengelig</string>
     <!-- Init Screen -->
     <string name="init_next">NESTE</string>
     <string name="init_skip">SKIP</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">App tillatelse</string>
     <string name="slideDesc6">Vennligst gi appen nødvendig tillatelse til å virke!</string>
     <!-- Update screen -->
+    <string name="update_new">Ny oppdatering tilgjengelig</string>
+    <string name="update_hash_error">Filsignatur Mismatch! Kan ikke oppdatere.</string>
     <string name="update_activity">Skill og oppdater</string>
     <string name="update_version">Versjon</string>
+    <string name="update_version_nightly">Nightly versjon</string>
     <string name="update_changelog">Endringslogg</string>
     <string name="update_status">Oppdater status</string>
-    <string name="update_action">Last ned &amp; Installer oppdatering</string>
+    <string name="update_action">Last ned og installer oppdatering</string>
     <string name="update_downloading">Laster ned oppdatering</string>
     <string name="install_update">Bruker oppdatering</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Har du lyst til å gjemme deg eller avslutte appen?</string>
+    <string name="btn_exit">Avslutt</string>
+    <string name="btn_back">Skjul</string>
+    <string name="unlock">Lås opp app</string>
+    <string name="auth">Bekreft autentisering</string>
     <string name="update">Oppdater</string>
     <string name="setting">Innstillinger</string>
     <string name="codeHint">Type eller lastgummikork skripter her</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Nettverkskontakt tilkoblet</string>
     <string name="config_status_net_off">Nettverksforbindelsen er frakoblet</string>
     <string name="socket_address">Skriv inn Socket IP og port adresse</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID-konfigurasjon</string>
+    <string name="hid_download">Last ned</string>
+    <string name="hid_update">Oppdater</string>
+    <string name="hid_edit">Rediger</string>
+    <string name="hid_delete">Slett</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nøkkelnavn</string>
+    <string name="key_character">Nøkkeltegn</string>
+    <string name="key_code">Nøkkelkode</string>
+    <string name="key_ctrl">Ctrl-tast</string>
+    <string name="key_alt">Alt nøkkel</string>
+    <string name="key_shift">Skifttast</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Nøkkelkode</string>
+    <string name="modcode">Modifikatorkode</string>
+    <string name="key_details">Opplysninger om nøkkel</string>
     <!-- Setting screen -->
     <string name="setting_general">Generelt</string>
     <string name="dark_theme_title">Natt modus</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Sikkerhet avanser</string>
     <string name="settings_sec_desc">Aktiver kryptering av skriptfiler og skjermlås.</string>
     <string name="setting_device">Innstillinger for angrepsmodus</string>
+    <string name="hid_choice_title">Tilværlig HID</string>
+    <string name="hid_choice_summary">Bytt mellom Legacy HID og Customsobel HID</string>
+    <string name="hid_title">HID-språk</string>
+    <string name="hid_summary">Last ned ekstra HID-språk eller design nye HID-layouter.</string>
     <string name="settings_usb_title">Start USB-tilkobling</string>
     <string name="settings_usb_desc">Kjør-knappen vil starte angrep når USB kobles til.</string>
     <string name="settings_net_title">Nettverkstilkobling start</string>
@@ -77,14 +103,18 @@
     <string name="release">Distribusjon</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub versjon</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Feilsøk versjon</string>
     <string name="releaseOthers">Ikke-Støttede utgivelse</string>
     <string name="btn_select">Velg</string>
     <string name="btn_cancel">Avbryt</string>
     <string name="btn_save">Lagre</string>
     <string name="file_saved">lagret</string>
+    <string name="title_open_file">Åpne fil</string>
+    <string name="title_delete_file">Slett fil</string>
     <string name="file_deleted">slettet</string>
     <string name="file_name">Fil Navn</string>
+    <string name="title_save_file">Lagre fil</string>
     <string-array name="modes">
         <item>USB Kabel</item>
         <item>Nettverks Socket</item>

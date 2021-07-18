@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Sblocca App</string>
-    <string name="auth">Conferma autenticazione</string>
-    <string name="update_new">Nuovo aggiornamento disponibile</string>
     <!-- Init Screen -->
     <string name="init_next">PROSSIMO</string>
     <string name="init_skip">SALTA</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Permesso App</string>
     <string name="slideDesc6">Si prega di concedere l\'app l\'autorizzazione necessaria per funzionare!</string>
     <!-- Update screen -->
+    <string name="update_new">Nuovo aggiornamento disponibile</string>
+    <string name="update_hash_error">File Signature Mismatch! Impossibile aggiornare.</string>
     <string name="update_activity">Aggiornamento Rucky</string>
     <string name="update_version">Versione</string>
+    <string name="update_version_nightly">Versione notturna</string>
     <string name="update_changelog">Changelog</string>
     <string name="update_status">Aggiorna Stato</string>
-    <string name="update_action">Scarica &amp; Installa l\'aggiornamento</string>
+    <string name="update_action">Scarica e installa l\'aggiornamento</string>
     <string name="update_downloading">Scaricamento Aggiornamento</string>
     <string name="install_update">Applicazione Dell\'Aggiornamento</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ti piacerebbe nascondere o uscire dall\'app?</string>
+    <string name="btn_exit">Uscita</string>
+    <string name="btn_back">Nascondi</string>
+    <string name="unlock">Sblocca App</string>
+    <string name="auth">Conferma autenticazione</string>
     <string name="update">Aggiorna</string>
     <string name="setting">Impostazioni</string>
     <string name="codeHint">Scrivi o carica qui gli script ducky della gomma</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Rete Socket Connessa</string>
     <string name="config_status_net_off">Rete Socket Disconnesso</string>
     <string name="socket_address">Inserisci indirizzo IP e porta Socket</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Scarica</string>
+    <string name="hid_update">Aggiorna</string>
+    <string name="hid_edit">Modifica</string>
+    <string name="hid_delete">Cancellare</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nome chiave</string>
+    <string name="key_character">Carattere Chiave</string>
+    <string name="key_code">Codice chiave</string>
+    <string name="key_ctrl">Chiave Ctrl</string>
+    <string name="key_alt">Chiave Alt</string>
+    <string name="key_shift">Chiave di turno</string>
+    <string name="key_meta">Chiave meta</string>
+    <string name="keycode">Codice chiave</string>
+    <string name="modcode">Codice modificatore</string>
+    <string name="key_details">Dettagli chiave</string>
     <!-- Setting screen -->
     <string name="setting_general">Generale</string>
     <string name="dark_theme_title">Modalità Notturna</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Protezione Avanzata</string>
     <string name="settings_sec_desc">Abilita la crittografia del file script e il blocco schermo.</string>
     <string name="setting_device">Impostazioni modalità attacco</string>
+    <string name="hid_choice_title">HID personalizzabile</string>
+    <string name="hid_choice_summary">Switch tra Legacy HID e HID personalizzabile</string>
+    <string name="hid_title">Lingua HID</string>
+    <string name="hid_summary">Scaricare ulteriori linguaggi HID o progettare nuovi layout HID.</string>
     <string name="settings_usb_title">Avvio connessione USB</string>
     <string name="settings_usb_desc">Il pulsante Esegui attacco quando viene collegato il USB.</string>
     <string name="settings_net_title">Network Socket Connect Launch</string>
@@ -77,14 +103,18 @@
     <string name="release">Distribuzione</string>
     <string name="releaseNetHunter">App Store NetHunter</string>
     <string name="releaseGitHub">Rilascio GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Rilascio di debug</string>
     <string name="releaseOthers">Rilascio non supportato</string>
     <string name="btn_select">Seleziona</string>
     <string name="btn_cancel">Annulla</string>
     <string name="btn_save">Salvare</string>
     <string name="file_saved">salvato</string>
+    <string name="title_open_file">File aperti</string>
+    <string name="title_delete_file">Elimina file</string>
     <string name="file_deleted">eliminato</string>
     <string name="file_name">Nome File</string>
+    <string name="title_save_file">Salva file</string>
     <string-array name="modes">
         <item>Cavo USB</item>
         <item>Socket Di Rete</item>

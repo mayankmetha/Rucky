@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">アプリのアンロック</string>
-    <string name="auth">認証を確認</string>
-    <string name="update_new">新しいアップデートが利用可能です</string>
     <!-- Init Screen -->
     <string name="init_next">次</string>
     <string name="init_skip">スキップ</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">アプリの権限</string>
     <string name="slideDesc6">動作するために必要な権限をアプリに付与してください！</string>
     <!-- Update screen -->
+    <string name="update_new">新しいアップデートが利用可能です</string>
+    <string name="update_hash_error">ファイル・シグニチャーの不一致! 更新不可。</string>
     <string name="update_activity">ラッキーなアップデート</string>
     <string name="update_version">バージョン</string>
+    <string name="update_version_nightly">夜間バージョン</string>
     <string name="update_changelog">更新履歴</string>
     <string name="update_status">ステータスを更新</string>
-    <string name="update_action">ダウンロード &amp; アップデートのインストール</string>
+    <string name="update_action">アップデートのダウンロードとインストール</string>
     <string name="update_downloading">アップデートをダウンロード中</string>
     <string name="install_update">アップデートを適用中</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">アプリケーションを非表示にするか、終了しますか ?</string>
+    <string name="btn_exit">出口</string>
+    <string name="btn_back">非表示</string>
+    <string name="unlock">アプリのアンロック</string>
+    <string name="auth">認証を確認</string>
     <string name="update">更新</string>
     <string name="setting">設定</string>
     <string name="codeHint">Rubber Duckyのスクリプトを入力または読込みます</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">ネットワークソケットが接続されました</string>
     <string name="config_status_net_off">ネットワークソケットが切断されました</string>
     <string name="socket_address">ソケットIPとポートアドレスを入力してください</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID 構成</string>
+    <string name="hid_download">ダウンロード</string>
+    <string name="hid_update">更新</string>
+    <string name="hid_edit">編集</string>
+    <string name="hid_delete">削除</string>
+    <!-- Keylist screen -->
+    <string name="key_title">キー名</string>
+    <string name="key_character">キー文字</string>
+    <string name="key_code">キー・コード</string>
+    <string name="key_ctrl">Ctrl キー</string>
+    <string name="key_alt">Alt キー</string>
+    <string name="key_shift">シフト・キー</string>
+    <string name="key_meta">メタ・キー</string>
+    <string name="keycode">キー・コード</string>
+    <string name="modcode">修飾コード</string>
+    <string name="key_details">キーの詳細</string>
     <!-- Setting screen -->
     <string name="setting_general">一般</string>
     <string name="dark_theme_title">夜間モード</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">高度なセキュリティ</string>
     <string name="settings_sec_desc">スクリプトファイルの暗号化と画面ロックを有効にします。</string>
     <string name="setting_device">攻撃モードの設定</string>
+    <string name="hid_choice_title">カスタマイズ可能な HID</string>
+    <string name="hid_choice_summary">レガシー HID とカスタマイズ可能な HID の切り替え</string>
+    <string name="hid_title">HID 言語</string>
+    <string name="hid_summary">追加の HID 言語をダウンロードするか、新しい HID レイアウトを設計してください</string>
     <string name="settings_usb_title">USB接続で起動</string>
     <string name="settings_usb_desc">USB接続時に攻撃を開始します。</string>
     <string name="settings_net_title">ネットワークソケット接続の起動</string>
@@ -77,14 +103,18 @@
     <string name="release">配布</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub配信</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">デバッグ配信</string>
     <string name="releaseOthers">サポートされていない配信</string>
     <string name="btn_select">選択</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_save">保存</string>
     <string name="file_saved">保存しました</string>
+    <string name="title_open_file">ファイルを開く</string>
+    <string name="title_delete_file">ファイルの削除</string>
     <string name="file_deleted">削除しました</string>
     <string name="file_name">ファイル名</string>
+    <string name="title_save_file">ファイルの保存</string>
     <string-array name="modes">
         <item>USBケーブル</item>
         <item>ネットワークソケット</item>

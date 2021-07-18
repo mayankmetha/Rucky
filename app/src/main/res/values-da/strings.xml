@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Oplås App</string>
-    <string name="auth">Bekræft godkendelse</string>
-    <string name="update_new">Ny opdatering tilgængelig</string>
     <!-- Init Screen -->
     <string name="init_next">NÆSTE</string>
     <string name="init_skip">SKIP</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">App Tilladelse</string>
     <string name="slideDesc6">Tildel venligst app den krævede tilladelse til at arbejde!</string>
     <!-- Update screen -->
+    <string name="update_new">Ny opdatering tilgængelig</string>
+    <string name="update_hash_error">Mismatch af filsignatur! Kan ikke opdatere.</string>
     <string name="update_activity">Rucky Opdatering</string>
     <string name="update_version">Version</string>
+    <string name="update_version_nightly">Nightly Version</string>
     <string name="update_changelog">Ændringslog</string>
     <string name="update_status">Opdater Status</string>
-    <string name="update_action">Download &amp; installer opdatering</string>
+    <string name="update_action">Download og installer opdatering</string>
     <string name="update_downloading">Downloader Opdatering</string>
     <string name="install_update">Anvender Opdatering</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Vil du skjule eller afslutte appen?</string>
+    <string name="btn_exit">Afslut</string>
+    <string name="btn_back">Skjul</string>
+    <string name="unlock">Oplås app</string>
+    <string name="auth">Bekræft godkendelse</string>
     <string name="update">Opdater</string>
     <string name="setting">Indstillinger</string>
     <string name="codeHint">Skriv eller indlæse gummiducky-scripts her</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Netværksokkel Forbundet</string>
     <string name="config_status_net_off">Netværksokkel Afbrudt</string>
     <string name="socket_address">Indtast Socket IP og Port Adresse</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID-konfig</string>
+    <string name="hid_download">Download</string>
+    <string name="hid_update">Opdater</string>
+    <string name="hid_edit">Redigér</string>
+    <string name="hid_delete">Slet</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nøglenavn</string>
+    <string name="key_character">Nøgletegn</string>
+    <string name="key_code">Nøglekode</string>
+    <string name="key_ctrl">Ctrl-tast</string>
+    <string name="key_alt">Alt-nøgle</string>
+    <string name="key_shift">Skift-nøgle</string>
+    <string name="key_meta">Metatnøgle</string>
+    <string name="keycode">Nøglekode</string>
+    <string name="modcode">Modifikatorkode</string>
+    <string name="key_details">Nøgledetaljer</string>
     <!-- Setting screen -->
     <string name="setting_general">Almindelige bestemmelser</string>
     <string name="dark_theme_title">Nattilstand</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Forhåndssikkerhed</string>
     <string name="settings_sec_desc">Aktivér scriptfilkryptering og skærmlås i scriptfiler.</string>
     <string name="setting_device">Indstillinger For Angrebstilstand</string>
+    <string name="hid_choice_title">Tilpasset HID</string>
+    <string name="hid_choice_summary">Skift mellem Legacy HID og Customisable HID</string>
+    <string name="hid_title">HID-sprog</string>
+    <string name="hid_summary">Download yderligere HID-sprog eller designe nye HID-layouts.</string>
     <string name="settings_usb_title">Start Med USB-Forbindelse</string>
     <string name="settings_usb_desc">Kør knappen vil starte angreb, når USB er tilsluttet.</string>
     <string name="settings_net_title">Start Med Netværksforbindelse</string>
@@ -77,14 +103,18 @@
     <string name="release">Distribution</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub-release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Fejlfindingsrelease</string>
     <string name="releaseOthers">Ikke-understøttet release</string>
     <string name="btn_select">Vælg</string>
     <string name="btn_cancel">Annuller</string>
     <string name="btn_save">Gem</string>
     <string name="file_saved">gemt</string>
+    <string name="title_open_file">Åbn fil</string>
+    <string name="title_delete_file">Slet fil</string>
     <string name="file_deleted">slettet</string>
     <string name="file_name">Fil Navn</string>
+    <string name="title_save_file">Gem fil</string>
     <string-array name="modes">
         <item>USB-kabel</item>
         <item>Netværk Sokkel</item>

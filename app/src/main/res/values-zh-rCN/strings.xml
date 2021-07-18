@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">解锁应用</string>
-    <string name="auth">确认身份验证</string>
-    <string name="update_new">有新的更新可用</string>
     <!-- Init Screen -->
     <string name="init_next">下一个</string>
     <string name="init_skip">SKIP</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">应用权限</string>
     <string name="slideDesc6">请授予应用程序所需的工作权限！</string>
     <!-- Update screen -->
+    <string name="update_new">有新的更新可用</string>
+    <string name="update_hash_error">文件签名不匹配 ! 无法更新。</string>
     <string name="update_activity">Rucky 更新</string>
     <string name="update_version">版本</string>
+    <string name="update_version_nightly">夜间版本</string>
     <string name="update_changelog">更新日志</string>
     <string name="update_status">更新状态</string>
-    <string name="update_action">下载 &amp; 安装更新</string>
+    <string name="update_action">下载并安装更新</string>
     <string name="update_downloading">下载更新</string>
     <string name="install_update">正在应用更新</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">要隐藏或退出应用程序吗 ?</string>
+    <string name="btn_exit">退出</string>
+    <string name="btn_back">英</string>
+    <string name="unlock">解锁应用</string>
+    <string name="auth">确认身份验证</string>
     <string name="update">更新</string>
     <string name="setting">设置</string>
     <string name="codeHint">在此处键入或加载橡胶管道脚本</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">网络套接字已连接</string>
     <string name="config_status_net_off">网络套接字断开连接</string>
     <string name="socket_address">输入套接字IP和端口地址</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID 配置</string>
+    <string name="hid_download">下载</string>
+    <string name="hid_update">更新</string>
+    <string name="hid_edit">编辑</string>
+    <string name="hid_delete">删除</string>
+    <!-- Keylist screen -->
+    <string name="key_title">密钥名称</string>
+    <string name="key_character">键字符</string>
+    <string name="key_code">密钥代码</string>
+    <string name="key_ctrl">Ctrl 键</string>
+    <string name="key_alt">Alt 键</string>
+    <string name="key_shift">Shift 键</string>
+    <string name="key_meta">元键</string>
+    <string name="keycode">密钥代码</string>
+    <string name="modcode">修改者代码</string>
+    <string name="key_details">密钥详细信息</string>
     <!-- Setting screen -->
     <string name="setting_general">A. 概况</string>
     <string name="dark_theme_title">夜间模式</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">B. 预先安全</string>
     <string name="settings_sec_desc">启用脚本文件加密和屏幕锁定。</string>
     <string name="setting_device">攻击模式设置</string>
+    <string name="hid_choice_title">可定制 HID</string>
+    <string name="hid_choice_summary">旧 HID 与可定制 HID 之间的切换</string>
+    <string name="hid_title">HID 语言</string>
+    <string name="hid_summary">下载其他 HID 语言或设计新的 HID 布局。</string>
     <string name="settings_usb_title">USB 连接启动</string>
     <string name="settings_usb_desc">当USB连接时，运行按钮会启动攻击。</string>
     <string name="settings_net_title">网络套接字连接启动</string>
@@ -77,14 +103,18 @@
     <string name="release">分布</string>
     <string name="releaseNetHunter">NetHunter 应用商店</string>
     <string name="releaseGitHub">GitHub 发布</string>
+    <string name="releaseGitHubNightly">GitHub 夜间</string>
     <string name="releaseTest">调试发布</string>
     <string name="releaseOthers">非支持的版本</string>
     <string name="btn_select">选择</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_save">保存</string>
     <string name="file_saved">已保存</string>
+    <string name="title_open_file">打开文件</string>
+    <string name="title_delete_file">删除文件</string>
     <string name="file_deleted">已删除</string>
     <string name="file_name">文件名称</string>
+    <string name="title_save_file">保存文件</string>
     <string-array name="modes">
         <item>USB 电线</item>
         <item>网络套接字</item>

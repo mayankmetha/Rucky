@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Odblokuj aplikację</string>
-    <string name="auth">Potwierdź uwierzytelnianie</string>
-    <string name="update_new">Dostępna jest nowa aktualizacja</string>
     <!-- Init Screen -->
     <string name="init_next">NASTĘPNY</string>
     <string name="init_skip">POKAŻ</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Uprawnienia aplikacji</string>
     <string name="slideDesc6">Proszę przyznać aplikacji wymagane uprawnienia do pracy!</string>
     <!-- Update screen -->
+    <string name="update_new">Dostępna jest nowa aktualizacja</string>
+    <string name="update_hash_error">Niezgodność Sygnatury Pliku! Nie Można Zaktualizować.</string>
     <string name="update_activity">Aktualizacja Rucky</string>
     <string name="update_version">Wersja</string>
+    <string name="update_version_nightly">Wersja nocna</string>
     <string name="update_changelog">Lista zmian</string>
     <string name="update_status">Aktualizuj status</string>
-    <string name="update_action">Pobierz &amp; Zainstaluj aktualizację</string>
+    <string name="update_action">Pobierz i zainstaluj aktualizację</string>
     <string name="update_downloading">Pobieranie aktualizacji</string>
     <string name="install_update">Stosowanie aktualizacji</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Czy chcesz ukryć lub zamknąć aplikację?</string>
+    <string name="btn_exit">Wyjdź</string>
+    <string name="btn_back">Ukryj</string>
+    <string name="unlock">Odblokuj aplikację</string>
+    <string name="auth">Potwierdź uwierzytelnianie</string>
     <string name="update">Aktualizuj</string>
     <string name="setting">Ustawienia</string>
     <string name="codeHint">Skrypty typu lub załadowcze z gumy</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Skieszonka sieciowa połączona</string>
     <string name="config_status_net_off">Skieszonka sieciowa odłączona</string>
     <string name="socket_address">Wprowadź adres IP gniazda i port</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Konfiguracja HID</string>
+    <string name="hid_download">Pobierz</string>
+    <string name="hid_update">Aktualizuj</string>
+    <string name="hid_edit">Edytuj</string>
+    <string name="hid_delete">Usuń</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nazwa klucza</string>
+    <string name="key_character">Znak klucza</string>
+    <string name="key_code">Kod klucza</string>
+    <string name="key_ctrl">Klawisz Ctrl</string>
+    <string name="key_alt">Klawisz Alt</string>
+    <string name="key_shift">Klawisz Shift</string>
+    <string name="key_meta">Klucz meta</string>
+    <string name="keycode">Kod klucza</string>
+    <string name="modcode">Kod modyfikatora</string>
+    <string name="key_details">Szczegóły klucza</string>
     <!-- Setting screen -->
     <string name="setting_general">Ogólny</string>
     <string name="dark_theme_title">Tryb nocny</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Zabezpieczenie zaliczkowe</string>
     <string name="settings_sec_desc">Włącz szyfrowanie plików skryptu i blokadę ekranu.</string>
     <string name="setting_device">Ustawienia trybu ataku</string>
+    <string name="hid_choice_title">Identyfikator HID użytkownika</string>
+    <string name="hid_choice_summary">Przełączanie między wcześniejszym identyfikatorem HID i niestandardowym identyfikatorem HID</string>
+    <string name="hid_title">Język HID</string>
+    <string name="hid_summary">Pobierz dodatkowe języki HID lub zaprojektuj nowe układy HID.</string>
     <string name="settings_usb_title">Uruchom połączenie USB</string>
     <string name="settings_usb_desc">Przycisk uruchamia atak po podłączeniu USB.</string>
     <string name="settings_net_title">Uruchamianie gniazda sieciowego</string>
@@ -77,14 +103,18 @@
     <string name="release">Rozkład</string>
     <string name="releaseNetHunter">Sklep z aplikacjami NetHunter</string>
     <string name="releaseGitHub">Wydanie GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Wydanie debugowania</string>
     <string name="releaseOthers">Nieobsługiwane wydanie</string>
     <string name="btn_select">Wybierz</string>
     <string name="btn_cancel">Anuluj</string>
     <string name="btn_save">Zapisz</string>
     <string name="file_saved">zapisano</string>
+    <string name="title_open_file">Otwórz plik</string>
+    <string name="title_delete_file">Usuń plik</string>
     <string name="file_deleted">usunięto</string>
     <string name="file_name">Nazwa pliku</string>
+    <string name="title_save_file">Zapisz plik</string>
     <string-array name="modes">
         <item>Kabel USB</item>
         <item>Skieszonka sieci</item>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">فتح التطبيق</string>
-    <string name="auth">تأكيد المصادقة</string>
-    <string name="update_new">تحديث جديد متوفر</string>
     <!-- Init Screen -->
     <string name="init_next">التالي</string>
     <string name="init_skip">سكي بي</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">إذن التطبيق</string>
     <string name="slideDesc6">الرجاء منح التطبيق الإذن المطلوب للعمل!</string>
     <!-- Update screen -->
+    <string name="update_new">تحديث جديد متوفر</string>
+    <string name="update_hash_error">توقيع الملف غير مطابق ! لا يمكن التعديل.</string>
     <string name="update_activity">تحديث الحظ</string>
     <string name="update_version">النسخة</string>
+    <string name="update_version_nightly">نسخة مباشرة</string>
     <string name="update_changelog">تغيير</string>
     <string name="update_status">حالة التحديث</string>
-    <string name="update_action">تحميل &amp; تثبيت التحديث</string>
+    <string name="update_action">تحميل وتثبيت التحديث</string>
     <string name="update_downloading">تنزيل التحديث</string>
     <string name="install_update">تطبيق التحديث</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">هل ترغب في إخفاء أو الخروج من التطبيق ؟</string>
+    <string name="btn_exit">خروج</string>
+    <string name="btn_back">اخفاء</string>
+    <string name="unlock">فتح التطبيق</string>
+    <string name="auth">تأكيد المصادقة</string>
     <string name="update">تحديث</string>
     <string name="setting">الإعدادات</string>
     <string name="codeHint">اكتب أو قم بتحميل البرامج النصية للمطاط هنا</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">مقبس الشبكة متصل</string>
     <string name="config_status_net_off">مقبس الشبكة غير متصل</string>
     <string name="socket_address">أدخل عنوان IP والمنفذ</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">توصيف HID</string>
+    <string name="hid_download">تحميل</string>
+    <string name="hid_update">تحديث</string>
+    <string name="hid_edit">تحرير</string>
+    <string name="hid_delete">حذف</string>
+    <!-- Keylist screen -->
+    <string name="key_title">اسم المفتاح</string>
+    <string name="key_character">حرف مفتاح</string>
+    <string name="key_code">كود المفتاح</string>
+    <string name="key_ctrl">مفتاح Ctrl</string>
+    <string name="key_alt">مفتاح Alt</string>
+    <string name="key_shift">مفتاح Shift</string>
+    <string name="key_meta">مفتاح Meta</string>
+    <string name="keycode">كود المفتاح</string>
+    <string name="modcode">كود المعدل</string>
+    <string name="key_details">تفاصيل المفتاح</string>
     <!-- Setting screen -->
     <string name="setting_general">عام</string>
     <string name="dark_theme_title">الوضع الليلي</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">مستوى السرية المتقدم</string>
     <string name="settings_sec_desc">اتاحة تشفير ملف النص المنسق واقفال الشاشة.</string>
     <string name="setting_device">إعدادات وضع الهجوم</string>
+    <string name="hid_choice_title">HID قابل للتعديل</string>
+    <string name="hid_choice_summary">التبديل بين HD Legacy HID و Customable HID</string>
+    <string name="hid_title">HID اللغة</string>
+    <string name="hid_summary">قم بتحميل لغات HID اضافية أو تصميم أشكال عامة جديدة للHID.</string>
     <string name="settings_usb_title">تشغيل اتصال USB</string>
     <string name="settings_usb_desc">سيبدأ زر التشغيل الهجوم عند توصيل USB.</string>
     <string name="settings_net_title">إطلاق مقبس الشبكة</string>
@@ -77,14 +103,18 @@
     <string name="release">التوزيع</string>
     <string name="releaseNetHunter">مخزن Netصياد App</string>
     <string name="releaseGitHub">اصدار GitHub</string>
+    <string name="releaseGitHubNightly">GitHub بشكل صريح</string>
     <string name="releaseTest">اصدار تصحيح الأخطاء</string>
     <string name="releaseOthers">اصدار غير مدعم</string>
     <string name="btn_select">حدد</string>
     <string name="btn_cancel">إلغاء</string>
     <string name="btn_save">حفظ</string>
     <string name="file_saved">محفوظة</string>
+    <string name="title_open_file">فتح ملف</string>
+    <string name="title_delete_file">حذف ملف</string>
     <string name="file_deleted">تم الحذف</string>
     <string name="file_name">اسم الملف</string>
+    <string name="title_save_file">حفظ ملف</string>
     <string-array name="modes">
         <item>كابل USB</item>
         <item>مقبس الشبكة</item>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Avaa Sovellus</string>
-    <string name="auth">Vahvista todennus</string>
-    <string name="update_new">Uusi päivitys saatavilla</string>
     <!-- Init Screen -->
     <string name="init_next">SEURAAVA</string>
     <string name="init_skip">OHITA</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Sovelluksen Käyttöoikeus</string>
     <string name="slideDesc6">Anna sovellukselle tarvittava käyttöoikeus!</string>
     <!-- Update screen -->
+    <string name="update_new">Uusi päivitys saatavilla</string>
+    <string name="update_hash_error">Allekirjoitus Mändäys! Päivitys ei onnistu.</string>
     <string name="update_activity">Rucky Päivitys</string>
     <string name="update_version">Versio</string>
+    <string name="update_version_nightly">Nightly-versio</string>
     <string name="update_changelog">Muutosloki</string>
     <string name="update_status">Päivitä Tila</string>
-    <string name="update_action">Lataa &amp; Asenna päivitys</string>
+    <string name="update_action">Lataa ja asenna päivitys</string>
     <string name="update_downloading">Ladataan Päivitystä</string>
     <string name="install_update">Toteutetaan Päivitystä</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Haluatko piilottaa tai poistaa sovelluksen?</string>
+    <string name="btn_exit">Poistuminen</string>
+    <string name="btn_back">Piilota</string>
+    <string name="unlock">Avaa Sovellus</string>
+    <string name="auth">Vahvista todennus</string>
     <string name="update">Päivitä</string>
     <string name="setting">Asetukset</string>
     <string name="codeHint">Kirjoita tai lataa kumiankkasankit tähän</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Verkon Socket Yhdistetty</string>
     <string name="config_status_net_off">Verkkopeli Yhteys Katkaistu</string>
     <string name="socket_address">Syötä Socket IP ja satamaosoite</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">HID-Config</string>
+    <string name="hid_download">Lataa</string>
+    <string name="hid_update">Päivitä</string>
+    <string name="hid_edit">Muokkaa</string>
+    <string name="hid_delete">Poista</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Avainnimi</string>
+    <string name="key_character">Avainmerkki</string>
+    <string name="key_code">Avainkoodi</string>
+    <string name="key_ctrl">Ctrl-avain</string>
+    <string name="key_alt">Alt-avain</string>
+    <string name="key_shift">Vaihto avain</string>
+    <string name="key_meta">Meta-avain</string>
+    <string name="keycode">Avainkoodi</string>
+    <string name="modcode">Muutoskoodi</string>
+    <string name="key_details">Keskeiset tiedot</string>
     <!-- Setting screen -->
     <string name="setting_general">Yleistä</string>
     <string name="dark_theme_title">Yötila</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Ennakkosuojaus</string>
     <string name="settings_sec_desc">Ota komentotiedoston salaus ja näytön lukitus käyttöön.</string>
     <string name="setting_device">Hyökkäystilan Asetukset</string>
+    <string name="hid_choice_title">Mukautettu HID</string>
+    <string name="hid_choice_summary">Vaihda välillä Legacy HID ja Customisable HID</string>
+    <string name="hid_title">HID-kieli</string>
+    <string name="hid_summary">Lataa lisää HID-kieliä tai suunnitella uusia HID-asetteluja.</string>
     <string name="settings_usb_title">Usb Connect Käynnistys</string>
     <string name="settings_usb_desc">Suorita painike käynnistää hyökkäyksen, kun USB on kytketty.</string>
     <string name="settings_net_title">Network Socket Connect Launch</string>
@@ -77,14 +103,18 @@
     <string name="release">Jakelu</string>
     <string name="releaseNetHunter">NetHunterin App-kauppa</string>
     <string name="releaseGitHub">GitHubin jakeluversio</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debugin vapautus</string>
     <string name="releaseOthers">Tuettu vapautus</string>
     <string name="btn_select">Valitse</string>
     <string name="btn_cancel">Peruuta</string>
     <string name="btn_save">Tallenna</string>
     <string name="file_saved">tallennettu</string>
+    <string name="title_open_file">Avaa tiedosto</string>
+    <string name="title_delete_file">Poista tiedosto</string>
     <string name="file_deleted">poistettu</string>
     <string name="file_name">Tiedoston Nimi</string>
+    <string name="title_save_file">Tallenna tiedosto</string>
     <string-array name="modes">
         <item>USB Kaapeli</item>
         <item>Verkon Socket</item>

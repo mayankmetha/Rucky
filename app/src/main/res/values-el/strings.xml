@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Splash screen -->
-    <string name="unlock">Ξεκλείδωμα Εφαρμογής</string>
-    <string name="auth">Επιβεβαίωση ταυτοποίησης</string>
-    <string name="update_new">Διαθέσιμη νέα ενημέρωση</string>
     <!-- Init Screen -->
     <string name="init_next">ΕΠΟΜΕΝΟ</string>
     <string name="init_skip">ΠΑΡΑΛΕΙΨΗ</string>
@@ -21,14 +18,22 @@
     <string name="slideTitle6">Άδεια Εφαρμογής</string>
     <string name="slideDesc6">Παρακαλούμε εκχωρήστε στην εφαρμογή την απαιτούμενη άδεια για να λειτουργήσει!</string>
     <!-- Update screen -->
+    <string name="update_new">Διαθέσιμη νέα ενημέρωση</string>
+    <string name="update_hash_error">Ασυμφωνία Υπογραφή Αρχείου! Αδύνατη Ενημέρωση.</string>
     <string name="update_activity">Αναβάθμιση Rucky</string>
     <string name="update_version">Έκδοση</string>
+    <string name="update_version_nightly">Nightly Έκδοση</string>
     <string name="update_changelog">Αρχείο Αλλαγών</string>
     <string name="update_status">Ενημέρωση Κατάστασης</string>
-    <string name="update_action">Λήψη &amp; Εγκατάσταση Ενημέρωσης</string>
+    <string name="update_action">Λήψη και εγκατάσταση ενημέρωσης</string>
     <string name="update_downloading">Λήψη Ενημέρωσης</string>
     <string name="install_update">Εφαρμογή Ενημέρωσης</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Θέλετε να κρυφτείτε ή να κλείσετε την εφαρμογή?</string>
+    <string name="btn_exit">Έξοδος:</string>
+    <string name="btn_back">Κρύψου</string>
+    <string name="unlock">Ξεκλείδωμα Εφαρμογής</string>
+    <string name="auth">Επιβεβαίωση ταυτοποίησης</string>
     <string name="update">Ενημέρωση</string>
     <string name="setting">Ρυθμίσεις</string>
     <string name="codeHint">Πληκτρολογήστε ή φορτώστε δέσμες ενεργειών από καουτσούκ εδώ</string>
@@ -47,6 +52,23 @@
     <string name="config_status_net_on">Συνδέθηκε Δικτυακή Υποδοχή</string>
     <string name="config_status_net_off">Αποσύνδεση Υποδοχής Δικτύου</string>
     <string name="socket_address">Εισαγωγή διεύθυνσης IP και θύρας υποδοχής</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Ρύθμιση HID</string>
+    <string name="hid_download">&amp; Λήψη</string>
+    <string name="hid_update">Ενημέρωση</string>
+    <string name="hid_edit">Τροποποίηση:</string>
+    <string name="hid_delete">Διαγραφή</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Όνομα κλειδιού</string>
+    <string name="key_character">Χαρακτήρας κλειδιού</string>
+    <string name="key_code">Κωδικός κλειδιού</string>
+    <string name="key_ctrl">Κλειδί Ctrl</string>
+    <string name="key_alt">Κλειδί Alt</string>
+    <string name="key_shift">Κλειδί Shift</string>
+    <string name="key_meta">Κλειδί Meta</string>
+    <string name="keycode">Κωδικός κλειδιού</string>
+    <string name="modcode">Κωδικός τροποποίησης:</string>
+    <string name="key_details">Λεπτομέρειες κλειδιού</string>
     <!-- Setting screen -->
     <string name="setting_general">Γενικά</string>
     <string name="dark_theme_title">Νυχτερινή Λειτουργία</string>
@@ -60,6 +82,10 @@
     <string name="settings_sec_title">Προκαταβολική Ασφάλεια</string>
     <string name="settings_sec_desc">Ενεργοποίηση κρυπτογράφησης αρχείων σεναρίου και κλειδώματος οθόνης.</string>
     <string name="setting_device">Ρυθμίσεις Λειτουργίας Επίθεσης</string>
+    <string name="hid_choice_title">Προσαρμόσιμο HID</string>
+    <string name="hid_choice_summary">Εναλλαγή μεταξύ Legacy HID και προσαρμόσιμη HID</string>
+    <string name="hid_title">Γλώσσα HID</string>
+    <string name="hid_summary">Μεταφόρτωση πρόσθετων γλωσσών HID ή σχεδιασμός νέων διατάξεων HID.</string>
     <string name="settings_usb_title">Εκκίνηση Σύνδεσης Usb</string>
     <string name="settings_usb_desc">Εκτέλεση κουμπιού θα ξεκινήσει επίθεση όταν είναι συνδεδεμένο το USB.</string>
     <string name="settings_net_title">Έναρξη Σύνδεσης Δικτύου</string>
@@ -77,14 +103,18 @@
     <string name="release">Κατανομή</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">Έκδοση GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Απελευθέρωση Σφαλμάτων</string>
     <string name="releaseOthers">Μη Υποστηριζόμενη Έκδοση</string>
     <string name="btn_select">Επιλογή</string>
     <string name="btn_cancel">Ακύρωση</string>
     <string name="btn_save">Αποθήκευση</string>
     <string name="file_saved">αποθηκεύτηκε</string>
+    <string name="title_open_file">Άνοιγμα αρχείου</string>
+    <string name="title_delete_file">Διαγραφή αρχείου</string>
     <string name="file_deleted">διαγράφηκε</string>
     <string name="file_name">Όνομα Αρχείου</string>
+    <string name="title_save_file">Αποθήκευση αρχείου</string>
     <string-array name="modes">
         <item>Καλώδιο USB</item>
         <item>Υποδοχή Δικτύου</item>

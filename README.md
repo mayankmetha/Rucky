@@ -303,16 +303,32 @@ REPEAT 1
 ---
 
 # App Translation
-Code    |Language     |Translated  |Approved
-:---:   |:---:        | :---:      |:---:
-en-rGB  |English (UK) |100%    |100%
-en-rUS  |English (US) |100%    |100%
-es      |Spanish      |100%    |100%
-hi      |Hindi        |100%    |100%
-ro      |Romanian     |100%    |100%
-ru      |Russian      |100%    |100%
-sv      |Swedish      |100%    |100%
-uk      |Ukrainian    |100%    |100%
+Code    |Language           |Translated
+:---:   |:---:              | :---:
+ar      |Arabic             |100%
+cs      |Czech              |100%
+da      |Danish             |100%
+de      |German             |100%
+el      |Greek              |100%
+en-rGB  |English (UK)       |100%
+en-rUS  |English (US)       |100%
+es      |Spanish            |100%
+fi      |Finnish            |100%
+fr      |French             |100%
+hi      |Hindi              |100%
+it      |Italian            |100%
+ja      |Japanese           |100%
+nb      |Norwegian Bokmal   |100%
+nl      |Dutch              |100%
+no      |Norwegian          |100%
+pl      |Polish             |100%
+pt      |Portuguese         |100%
+ro      |Romanian           |100%
+ru      |Russian            |100%
+sk      |Slovak             |100%
+sv      |Swedish            |100%
+uk      |Ukrainian          |100%
+zh-rCN  |Chinese Simplified |100%
 
 ---
 
