@@ -7,32 +7,32 @@
 
 ---
 
-## Download
-### GitHub
+# Download
+## GitHub
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
 [![Github nightly](https://img.shields.io/badge/nightly-v2.2%20(386)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
 
-### Nethunter App Store
+## Nethunter App Store
 [![Nethuter Release](https://img.shields.io/badge/release-v2.2-blue)](https://store.nethunter.com/en/packages/com.mayank.rucky/)
 
 ---
 
-## Readme
+# Readme
 An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 - <b><i>Wired Mode:</i></b> Needs a custom kernel with usb hid feature or a kernel with configfs to be enabled for this mode to be used.
 - <b><i>Wireless:</i></b> Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
 
 ---
 
-## Ducky Script
+# Ducky Script
 
 Ducky Script syntax is simple. Each command resides on a new line and may have options follow. Commands are written in ALL CAPS, because ducks are loud and like to quack with pride. Most commands invoke keystrokes, key-combos or strings of text, while some offer delays or pauses. Below is a list of commands and their function, followed by some example usage. Some syntax extended from the original [Hak5 Ducky Script Syntax](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript). Mouse ducky scripts are different from those seen online and have been defined to keep the similarity with the keyboard ducky scripts.
 
 <b>Note:</b> In parameters `[num]` represents a number, `[char]` represents characters A-Z, a-z. [Customizable HID](https://mayankmetha.github.io/Rucky-KeyMap/) support too has been added.
 
-### Keyboard
+## Keyboard
 
-#### DEFAULTDELAY or DEFAULT_DELAY
+### DEFAULTDELAY or DEFAULT_DELAY
 
 DEFAULT_DELAY or DEFAULTDELAY is used to define how long (milliseconds) to wait between each subsequent command. DEFAULT_DELAY must be issued at the beginning of the ducky script and is optional. Not specifying the DEFAULT_DELAY will result in faster execution of ducky scripts. This command is mostly useful when debugging.
 
@@ -48,7 +48,7 @@ DEFAULTDELAY 100
 DEFAULT_DELAY 100
 ```
 
-#### DELAY
+### DELAY
 
 DELAY creates a momentary pause in the ducky script. It is quite handy for creating a moment of pause between sequential commands that may take the target computer some time to process. DELAY time is specified in milliseconds. Multiple DELAY commands can be used to create longer delays.
 
@@ -63,7 +63,7 @@ DELAY | [num]
 DELAY 500
 ```
 
-#### REM
+### REM
 
 Similar to the REM command in Basic and other languages, lines beginning with REM will not be processed. REM is a comment.
 
@@ -78,7 +78,7 @@ REM | comment string
 REM This is a comment
 ```
 
-#### REPEAT
+### REPEAT
 
 Repeats the last command `[num]` times
 
@@ -94,7 +94,7 @@ DELAY 1
 REPEAT 5
 ```
 
-#### STRING
+### STRING
 
 STRING processes the text following taking special care to auto-shift. STRING can accept a single or multiple characters.
 
@@ -109,7 +109,7 @@ STRING | all possible printable characters supported on a specific keyboard layo
 STRING hello world
 ```
 
-#### GUI or WINDOWS or COMMAND or META
+### GUI or WINDOWS or COMMAND or META
 
 Emulates the Windows-Key, sometimes referred to as the Super-key.
 
@@ -124,7 +124,7 @@ GUI or WINDOWS or COMMAND or META | Combo Key
 GUI r
 ```
 
-#### SHIFT
+### SHIFT
 
 Unlike CAPSLOCK, cruise control for cool, the SHIFT command can be used when navigating fields to select text, among other functions.
 
@@ -140,7 +140,7 @@ SHIFT a
 SHIFT ALT 4
 ```
 
-#### ALT
+### ALT
 
 Found to the left of the space key on most keyboards, the ALT key is instrumental in many automation operations.
 
@@ -156,7 +156,7 @@ ALT a
 ALT SHIFT e
 ```
 
-#### CONTROL or CTRL
+### CONTROL or CTRL
 
 The king of key-combos, CONTROL is all mighty.
 
@@ -172,7 +172,7 @@ CTRL s
 CTRL ALT DELETE
 ```
 
-#### Extended Keys
+### Extended Keys
 
 These keys have no parameters.
 
@@ -226,7 +226,7 @@ F22 | Emulates F22 key
 F23 | Emulates F23 key
 F24 | Emulates F24 key
 
-#### Combo Key
+### Combo Key
 
 Some commands has a parameter which is a combo key. These keys belong to US English keyboard. List of supported combo key are:
 
@@ -260,9 +260,9 @@ Some commands has a parameter which is a combo key. These keys belong to US Engl
 - \- or _
 - = or +
 
-### Mouse/Pointer (Will be added in future)
+## Mouse/Pointer (Will be added in future)
 
-#### MOUSE or POINTER
+### MOUSE or POINTER
 All mouse/pointer commands will start with this command. REPEAT command and DELAY commands effect can also be applied to mouse commands.
 
 <b>Note:</b>
@@ -302,14 +302,14 @@ REPEAT 1
 
 ---
 
-## App Translation
+# App Translation
 Code    | Language    | Translated | Approved
 :---:   |:---:        | :---:      |:---:
 en-rUS  |English (US) |100%    |100%
 en-rGB  |English (UK) |100%    |100%
-en-hi   |Hindi        |100%    |100%
+hi      |Hindi        |100%    |100%
 
-## Features 
+# Features
 Status| Feature
 :---:| :---
 ✅| USB HID (Root & custom kernel required)
@@ -350,7 +350,7 @@ Status| Feature
 
 ---
 
-## Featuring Rucky
+# Featuring Rucky
 - [Kali Linux 2019.3 Release](https://www.kali.org/blog/kali-linux-2019-3-release/)
 - [Prog.World](https://prog.world/kali-linux-nethunter-on-android-part-3-breaking-the-distance/)
 - [ProgrammerSought](https://www.programmersought.com/article/30497171179/)
@@ -361,7 +361,7 @@ Status| Feature
 
 ---
 
-## Legacy Work
+# Legacy Work
 [![RPi](https://img.shields.io/badge/Raspberry%20Pi-0%20W-maroon)](https://github.com/mayankmetha/Rucky-Ext-RPi)
 [![HID](https://img.shields.io/badge/Project-Legacy%20HID-lightgreen)](https://github.com/mayankmetha/Rucky-Legacy-HID)
 [![Android](https://img.shields.io/badge/android-4.4.x-green)](https://github.com/mayankmetha/Rucky/releases/tag/1.9)
