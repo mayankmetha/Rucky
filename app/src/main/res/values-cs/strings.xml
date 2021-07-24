@@ -22,7 +22,7 @@
     <string name="update_hash_error">Neshoda podpisu souboru! Nelze aktualizovat.</string>
     <string name="update_activity">Aktualizace Rucky</string>
     <string name="update_version">Verze</string>
-    <string name="update_version_nightly">Nightly Version</string>
+    <string name="update_version_nightly">Verze Nightly</string>
     <string name="update_changelog">Seznam změn</string>
     <string name="update_status">Stav aktualizace</string>
     <string name="update_action">Stáhnout a nainstalovat aktualizaci</string>
@@ -59,16 +59,16 @@
     <string name="hid_edit">Upravit</string>
     <string name="hid_delete">Smazat</string>
     <!-- Keylist screen -->
-    <string name="key_title">Název klíče</string>
-    <string name="key_character">Klíčový znak</string>
+    <string name="key_title">Název klávesy</string>
+    <string name="key_character">Znak klávesy</string>
     <string name="key_code">Kód klávesy</string>
     <string name="key_ctrl">Klávesa Ctrl</string>
     <string name="key_alt">Klávesa Alt</string>
     <string name="key_shift">Klávesa Shift</string>
-    <string name="key_meta">Metaklíč</string>
+    <string name="key_meta">Klávesa Meta</string>
     <string name="keycode">Kód klávesy</string>
-    <string name="modcode">Kód modifikátora</string>
-    <string name="key_details">Podrobnosti klíče</string>
+    <string name="modcode">Kód modifikátoru</string>
+    <string name="key_details">Podrobnosti klávesy</string>
     <!-- Setting screen -->
     <string name="setting_general">Obecné</string>
     <string name="dark_theme_title">Noční režim</string>
@@ -83,9 +83,9 @@
     <string name="settings_sec_desc">Povolit šifrování souborů skriptu a zámek obrazovky.</string>
     <string name="setting_device">Nastavení režimu útoku</string>
     <string name="hid_choice_title">Přizpůsobitelné HID</string>
-    <string name="hid_choice_summary">Přepnutí mezi starším HID a přizpůsobitelné ID HID</string>
+    <string name="hid_choice_summary">Přepnutí mezi starším HID a přizpůsobitelným ID HID</string>
     <string name="hid_title">Jazyk HID</string>
-    <string name="hid_summary">Stáhněte si další jazyky HID nebo navrhněte nové rozvržení HID.</string>
+    <string name="hid_summary">Stáhněte si další jazyky HID nebo navrhněte nová rozvržení HID.</string>
     <string name="settings_usb_title">Spuštění připojení USB</string>
     <string name="settings_usb_desc">Tlačítko spustí útok po připojení USB.</string>
     <string name="settings_net_title">Spustit připojení síťového soketu</string>
@@ -98,12 +98,12 @@
     <string name="settings_support">Podpora</string>
     <string name="settings_git_title">Hlášení chyb GitHub</string>
     <string name="settings_git_desc">Kliknutím přidáte chyby nebo požadavky na funkce.</string>
-    <string name="settings_locale_title">Lokalizace</string>
-    <string name="settings_locale_desc">Přispějte k lokalizaci aplikace.</string>
+    <string name="settings_locale_title">Překlady</string>
+    <string name="settings_locale_desc">Přispějte k překladům aplikace.</string>
     <string name="release">Distribuce</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub vydání</string>
-    <string name="releaseGitHubNightly">GitHub Nightly.</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug vydání</string>
     <string name="releaseOthers">Nepodporované vydání</string>
     <string name="btn_select">Vybrat</string>
@@ -111,7 +111,7 @@
     <string name="btn_save">Uložit</string>
     <string name="file_saved">uloženo</string>
     <string name="title_open_file">Otevřít soubor</string>
-    <string name="title_delete_file">Odstranit soubor</string>
+    <string name="title_delete_file">Smazat soubor</string>
     <string name="file_deleted">smazáno</string>
     <string name="file_name">Název souboru</string>
     <string name="title_save_file">Uložit soubor</string>

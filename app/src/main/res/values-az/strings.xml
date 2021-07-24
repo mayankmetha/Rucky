@@ -12,10 +12,14 @@
     <string name="slideTitle3">Şəbəkə yuvası</string>
     <string name="slideDesc3">Dəstəklənən xarici alətlər ilə hücum başlatmaq üçün Wi-Fi əsaslı soket interfeysləri!</string>
     <string name="slideTitle4">Məsuliyyətdən imtina</string>
+    <string name="slideDesc4">Verilmiş zərərlərə görə tətbiqin istifadəçisi məsuliyyət daşıyır. Bu tətbiqi istifadə edərək verilən zərərlərə görə başqa heç kəs məsuliyyət daşımır! Tətbiqi istifadə edərkən diqqətli olun və başqalarına zərər vermək üçün istifadə etməyin!</string>
     <string name="slideTitle5">Gizlilik Siyasəti</string>
+    <string name="slideDesc5">Heç bir məlumat (verilənlər) yığılmır, istifadə edilmir və satılmır! Gizlilik narahatlıqlarınızı artıran bəzi icazələr yalnız tətbiqin müəyyən özəlliklərinin işləməsi üçün istənilir və heç bir məlumat yığılmır! Gizliliyinizə hörmət edirik!</string>
     <string name="slideTitle6">Tətbiq icazələri</string>
+    <string name="slideDesc6">Zəhmət olmasa işləməsi üçün tətbiqə tələb olunan icazəni verin!</string>
     <!-- Update screen -->
     <string name="update_new">Yeniləmə var</string>
+    <string name="update_hash_error">Fayl imza uyğunsuzluğu! Yenilənə bilmir.</string>
     <string name="update_activity">Rucky yeniləmələri</string>
     <string name="update_version">Versiya</string>
     <string name="update_version_nightly">Nightly versiyası</string>
@@ -32,6 +36,7 @@
     <string name="auth">Kimlik təsvibini təsdiqlə</string>
     <string name="update">Yeniləmə</string>
     <string name="setting">Tənzimləmələr</string>
+    <string name="codeHint">Rubber ducky \"script\"lərini bura yazın və ya yükləyin</string>
     <string name="loadBtn">Yüklə</string>
     <string name="saveBtn">Saxla</string>
     <string name="delBtn">Sil</string>
@@ -41,11 +46,14 @@
     <string name="root_err">USB kabel hücumu üçün kök müraciəti tələb olunur!</string>
     <string name="kernel_err">"USB kabel hücumu üçün nüvə dəstəklənmir!"</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB bağlandı</string>
     <string name="config_status_usb_off">USB bağlantısı kəsildi</string>
     <string name="config_status_net_on">Şəbəkə yuvası bağlandı</string>
     <string name="config_status_net_off">Şəbəkə yuvasının bağlantısı kəsildi</string>
+    <string name="socket_address">Yuva IP və Port ünvanlarını daxil et</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID konfiqurasiyası</string>
     <string name="hid_download">Endir</string>
     <string name="hid_update">Yeniləmə</string>
     <string name="hid_edit">Düzəliş et</string>
@@ -67,6 +75,15 @@
     <string name="dark_theme_summary">Tünd temanı tənzimlə</string>
     <string name="accent_theme_title">Tema</string>
     <string name="accent_theme_summary">Vurğu rəngini dəyişdir</string>
+    <string name="hide_icon_title">Başladıcı nişanını gizlət/sıradan çıxart</string>
+    <string name="hide_icon_summary">Başlatmaq üçün *#*#78259#*#* yığın. Android 10-dan etibarən nişan sıradan çıxarılacaq, ancaq gizlədilməyəcək.</string>
+    <string name="delete_dep_title">Tətbiqi sil</string>
+    <string name="delete_dep_summary">Tətbiqi təmizlə və sil.</string>
+    <string name="settings_sec_title">Qabaqcıl təhlükəsizlik</string>
+    <string name="settings_sec_desc">Script fayl şifrələməsini və ekran kilidini fəallaşdırın.</string>
+    <string name="setting_device">Hücum rejimi tənzimləmələri</string>
+    <string name="hid_choice_title">Özəlləşdirilə bilən HID</string>
+    <string name="hid_choice_summary">Köhnə HID və Özəlləşdirilə bilən HID arasında keçid</string>
     <string name="hid_title">HID dili</string>
     <string name="hid_summary">Əlavə HID dillərini endirin və ya yeni HID düzülüşlərini dizayn edin.</string>
     <string name="settings_usb_title">USB Bağlantı başlatma</string>

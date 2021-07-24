@@ -6,23 +6,23 @@
     <string name="init_skip">PASSER</string>
     <string name="init_agree">ACCEPTER</string>
     <string name="init_start">HACK</string>
-    <string name="slideDesc1">Transformez votre appareil en caoutchouc !</string>
+    <string name="slideDesc1">Transformez votre appareil en Rubber Ducky !</string>
     <string name="slideTitle2">Câble USB</string>
     <string name="slideDesc2">Interface USB câblée pour lancer une attaque !</string>
-    <string name="slideTitle3">Socket réseau</string>
-    <string name="slideDesc3">Des interfaces de socket basées sur le Wi-Fi pour lancer des attaques via des outils externes pris en charge !</string>
+    <string name="slideTitle3">Connecteur Réseau</string>
+    <string name="slideDesc3">Des interfaces de connection basées sur le Wi-Fi pour lancer des attaques via des outils externes pris en charge !</string>
     <string name="slideTitle4">Clause de non-responsabilité</string>
-    <string name="slideDesc4">L\'utilisateur de l\'application est seul responsable des dommages causés. Aucune autre entité ne peut être tenue responsable des dommages causés par cette application ! Pratiquez de la prudence lors de l\'utilisation de l\'application et ne l\'utilisez pas pour causer des dommages aux autres !</string>
+    <string name="slideDesc4">L\'utilisateur de l\'application est seul responsable des dommages causés. Aucune autre entité ne peut être tenue responsable des dommages causés par cette application ! Soyez prudent lors de l\'utilisation de l\'application et ne l\'utilisez pas pour causer des dommages aux autres !</string>
     <string name="slideTitle5">Politique de confidentialité</string>
-    <string name="slideDesc5">Aucune donnée d\'aucune forme n\'est collectée, utilisée et vendue! Certaines autorisations qui pourraient soulever des problèmes de confidentialité ne sont demandées que pour le fonctionnement de certaines fonctionnalités de l\'application et ne sont pas destinées à collecter des données ! Votre vie privée est respectée !</string>
+    <string name="slideDesc5">Aucune donnée d\'aucune forme n\'est collectée, utilisée et vendue! Certaines autorisations qui pourraient causer des problèmes de confidentialité ne sont demandées que pour le fonctionnement de certaines fonctionnalités de l\'application et ne sont pas destinées à collecter des données ! Votre vie privée est respectée !</string>
     <string name="slideTitle6">Autorisation de l\'application</string>
-    <string name="slideDesc6">Veuillez accorder à l\'application l\'autorisation requise pour travailler!</string>
+    <string name="slideDesc6">Veuillez accorder à l\'application l\'autorisation requise pour fonctionner!</string>
     <!-- Update screen -->
     <string name="update_new">Nouvelle mise à jour disponible</string>
-    <string name="update_hash_error">Non-concordance de signature de fichier ! Mise à jour impossible.</string>
-    <string name="update_activity">Mise à jour ruqueuse</string>
+    <string name="update_hash_error">Non-concordance de signature du fichier ! Mise à jour impossible.</string>
+    <string name="update_activity">Mise à jour de Rucky</string>
     <string name="update_version">Version </string>
-    <string name="update_version_nightly">Version de nuit</string>
+    <string name="update_version_nightly">Version Nightly</string>
     <string name="update_changelog">Historique des modifications</string>
     <string name="update_status">Mettre à jour le statut</string>
     <string name="update_action">Télécharger et installer la mise à jour</string>
@@ -33,13 +33,13 @@
     <string name="btn_exit">Quitter</string>
     <string name="btn_back">Masquer</string>
     <string name="unlock">Déverrouiller l\'application</string>
-    <string name="auth">Confirm authentication</string>
+    <string name="auth">Confirmer l\'authentification</string>
     <string name="update">Mise à jour</string>
     <string name="setting">Réglages</string>
-    <string name="codeHint">Tapez ou chargez les scripts de caoutchouc ici</string>
+    <string name="codeHint">Écrivez ou chargez les scripts rubber ducky</string>
     <string name="loadBtn">Charger</string>
     <string name="saveBtn">Enregistrer</string>
-    <string name="delBtn">Supprimez</string>
+    <string name="delBtn">Supprimer</string>
     <string name="runBtn">Executer</string>
     <string name="confBtn">Configuration</string>
     <string name="btn_continue">Continuer</string>
@@ -49,47 +49,47 @@
     <string name="config_activity">Réglages</string>
     <string name="config_status_usb_on">USB connecté</string>
     <string name="config_status_usb_off">USB déconnecté</string>
-    <string name="config_status_net_on">Socket réseau connecté</string>
-    <string name="config_status_net_off">Socket réseau déconnecté</string>
-    <string name="socket_address">Entrez l\'adresse IP et le port de la socket</string>
+    <string name="config_status_net_on">Connecteur réseau connecté</string>
+    <string name="config_status_net_off">Connecteur réseau déconnecté</string>
+    <string name="socket_address">Entrez l\'adresse IP et le port du connecteur</string>
     <!-- HID config screen -->
     <string name="hid_activity">Configuration HID</string>
     <string name="hid_download">Télécharger</string>
     <string name="hid_update">Mise à jour</string>
     <string name="hid_edit">Editer</string>
-    <string name="hid_delete">Supprimez</string>
+    <string name="hid_delete">Supprimer</string>
     <!-- Keylist screen -->
     <string name="key_title">Nom de clé</string>
-    <string name="key_character">Caractère de clé</string>
-    <string name="key_code">Code de clé</string>
-    <string name="key_ctrl">Touches Ctrl</string>
-    <string name="key_alt">Toule Alt</string>
-    <string name="key_shift">Clé de décalage</string>
-    <string name="key_meta">Métaclé</string>
-    <string name="keycode">Code de clé</string>
+    <string name="key_character">Caractère de la clé</string>
+    <string name="key_code">Code de la clé</string>
+    <string name="key_ctrl">Touche Ctrl</string>
+    <string name="key_alt">Touche Alt</string>
+    <string name="key_shift">Touche Shift</string>
+    <string name="key_meta">Touche Meta</string>
+    <string name="keycode">Code de la clé</string>
     <string name="modcode">Code Modificateur</string>
     <string name="key_details">Détails de la clé</string>
     <!-- Setting screen -->
-    <string name="setting_general">Généraux</string>
+    <string name="setting_general">Général</string>
     <string name="dark_theme_title">Mode Nuit</string>
     <string name="dark_theme_summary">Définir le thème sombre</string>
     <string name="accent_theme_title">Thème</string>
     <string name="accent_theme_summary">Changer la couleur d\'accentuation</string>
-    <string name="hide_icon_title">Cacher/Désactiver l\'icône du lanceur</string>
-    <string name="hide_icon_summary">Composer *#*#78259#*#* pour démarrer. Sur Android 10, l\'icône sera désactivée, mais non cachée.</string>
+    <string name="hide_icon_title">Cacher/Désactiver l\'icône de l\'appli</string>
+    <string name="hide_icon_summary">Composer *#*#78259#*#* pour démarrer. À partir d\'Android 10, l\'icône sera désactivée, mais non cachée.</string>
     <string name="delete_dep_title">Désinstaller l\'application</string>
     <string name="delete_dep_summary">Nettoyer et désinstaller l\'application.</string>
     <string name="settings_sec_title">Sécurité Avancée</string>
     <string name="settings_sec_desc">Activer le chiffrement des fichiers de script et le verrouillage de l\'écran.</string>
     <string name="setting_device">Réglages du Mode Attaque</string>
     <string name="hid_choice_title">ID HID personnalisable</string>
-    <string name="hid_choice_summary">Basculs entre ID HID existant et HID personnalisable</string>
+    <string name="hid_choice_summary">Basculer entre HID ancien et HID personnalisable</string>
     <string name="hid_title">Langue HID</string>
     <string name="hid_summary">Télécharger des langues HID supplémentaires ou concevoir de nouvelles mises en page HID.</string>
     <string name="settings_usb_title">Lancement de la connexion USB</string>
     <string name="settings_usb_desc">Le bouton Exécuter lance une attaque lorsque l\'USB est connecté.</string>
     <string name="settings_net_title">Lancement de Network Socket Connect</string>
-    <string name="settings_net_desc">Le bouton Exécuter lance une attaque lorsque la prise réseau est connectée.</string>
+    <string name="settings_net_desc">Le bouton Exécuter lance une attaque lorsque le connecteur réseau est connectée.</string>
     <string name="setting_about">Infos</string>
     <string name="setting_developer_title">Développeur</string>
     <string name="settings_version_title">Version </string>
@@ -99,9 +99,9 @@
     <string name="settings_git_title">Problèmes GitHub</string>
     <string name="settings_git_desc">Cliquez pour ajouter des tickets ou une demande de fonctionnalité.</string>
     <string name="settings_locale_title">Traduction</string>
-    <string name="settings_locale_desc">Contribuer à la localisation de l\'application.</string>
+    <string name="settings_locale_desc">Contribuer à la traduction de l\'application.</string>
     <string name="release">Distribution</string>
-    <string name="releaseNetHunter">Boutique NetHunter</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">Version GitHub</string>
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Version de débogage</string>
@@ -117,7 +117,7 @@
     <string name="title_save_file">Sauvegarder le fichier</string>
     <string-array name="modes">
         <item>Câble USB</item>
-        <item>Socket réseau</item>
+        <item>Connecteur Réseau</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Anglais américain</item>

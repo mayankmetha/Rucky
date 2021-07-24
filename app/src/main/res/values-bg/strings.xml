@@ -3,12 +3,12 @@
     <!-- Splash screen -->
     <!-- Init Screen -->
     <string name="init_next">Следваща:</string>
-    <string name="init_skip">SKIP</string>
-    <string name="init_agree">СЪГЛАСНА</string>
-    <string name="init_start">HACK</string>
-    <string name="slideDesc1">Превратите ваше устройство в резиновый Ducky!</string>
+    <string name="init_skip">ПРЕСКОК</string>
+    <string name="init_agree">СЪГЛАСИЕ</string>
+    <string name="init_start">ХАК</string>
+    <string name="slideDesc1">Превърнете устройството си в Rubber Ducky!</string>
     <string name="slideTitle2">USB кабел</string>
-    <string name="slideDesc2">USB интерфейс за изстрелване!</string>
+    <string name="slideDesc2">Интерфейс през проводник USB за стартиране на атака!</string>
     <string name="slideTitle3">Мрежов контакт</string>
     <string name="slideDesc3">Wi-Fi базирани гнездо интерфейси за стартиране на атака чрез поддържани външни инструменти!</string>
     <string name="slideTitle4">Отказ от отговорност</string>
@@ -18,46 +18,46 @@
     <string name="slideTitle6">Позволение на приложение</string>
     <string name="slideDesc6">Моля, предоставете на приложението необходимото разрешение за работа!</string>
     <!-- Update screen -->
-    <string name="update_new">Налична е нова актуализация</string>
+    <string name="update_new">Налично ново обновление</string>
     <string name="update_hash_error">Несъответствие на файла! Невъзможно обновяване.</string>
     <string name="update_activity">Обновяване на Rucky</string>
     <string name="update_version">Версии</string>
     <string name="update_version_nightly">Нощна версия</string>
-    <string name="update_changelog">\"Шангелог\"</string>
+    <string name="update_changelog">Списък на промените</string>
     <string name="update_status">Състояние на актуализиране</string>
-    <string name="update_action">Изтеглете и инсталирайте актуализация</string>
-    <string name="update_downloading">Изтегляне на Update</string>
+    <string name="update_action">Изтегляне и инсталиране на обновяването</string>
+    <string name="update_downloading">Изтегляне на обновяването</string>
     <string name="install_update">Прилагане на обновяване</string>
     <!-- Editor screen -->
     <string name="exit_dialog">Желаете ли да скриете или излезете от приложението?</string>
-    <string name="btn_exit">Изход:</string>
-    <string name="btn_back">Кожа!</string>
+    <string name="btn_exit">Изход</string>
+    <string name="btn_back">Скриване</string>
     <string name="unlock">Отключване на приложението</string>
     <string name="auth">Потвърждаване на удостоверяване</string>
-    <string name="update">Обновяване:</string>
-    <string name="setting">Настройки:</string>
-    <string name="codeHint">Введите или нагрузите резиновые скрипты</string>
-    <string name="loadBtn">Нагрузка</string>
-    <string name="saveBtn">Сохранить</string>
-    <string name="delBtn">Удалить</string>
-    <string name="runBtn">Запустить</string>
-    <string name="confBtn">-Да.</string>
-    <string name="btn_continue">Продължи:</string>
+    <string name="update">Обновяване</string>
+    <string name="setting">Настройки</string>
+    <string name="codeHint">Type or load rubber ducky scripts here</string>
+    <string name="loadBtn">Зареждане</string>
+    <string name="saveBtn">Запазване</string>
+    <string name="delBtn">Изтриване</string>
+    <string name="runBtn">Стартиране</string>
+    <string name="confBtn">Конфигуриране</string>
+    <string name="btn_continue">Продължаване</string>
     <string name="root_err">Root достъп, необходим за USB кабел атака!</string>
-    <string name="kernel_err">"Ядро не се поддържа за USB кабел атака!"</string>
+    <string name="kernel_err">"Ядрото не се поддържа за атака на USB кабела!"</string>
     <!-- Config screen -->
-    <string name="config_activity">\"Tслабите\"</string>
-    <string name="config_status_usb_on">USB връзка</string>
-    <string name="config_status_usb_off">USB изключен</string>
+    <string name="config_activity">Нагласяния</string>
+    <string name="config_status_usb_on">Свързано USB</string>
+    <string name="config_status_usb_off">Изключено USB</string>
     <string name="config_status_net_on">Мрежова връзка, свързана</string>
     <string name="config_status_net_off">Мрежова връзка, изключена</string>
     <string name="socket_address">Въведете IP адрес и адрес на порт</string>
     <!-- HID config screen -->
     <string name="hid_activity">Настройване на HID</string>
-    <string name="hid_download">Изтегляне:</string>
-    <string name="hid_update">Обновяване:</string>
-    <string name="hid_edit">Редакция:</string>
-    <string name="hid_delete">Удалить</string>
+    <string name="hid_download">Изтегляне</string>
+    <string name="hid_update">Обновяване</string>
+    <string name="hid_edit">Редактиране</string>
+    <string name="hid_delete">Изтриване</string>
     <!-- Keylist screen -->
     <string name="key_title">Име на ключ</string>
     <string name="key_character">Ключов символ</string>
@@ -108,7 +108,7 @@
     <string name="releaseOthers">Поддерживаемый релиз</string>
     <string name="btn_select">Избор:</string>
     <string name="btn_cancel">Отмяна?</string>
-    <string name="btn_save">Сохранить</string>
+    <string name="btn_save">Запазване</string>
     <string name="file_saved">спасена.</string>
     <string name="title_open_file">Отваряне на файл</string>
     <string name="title_delete_file">Изтриване на файл</string>

@@ -306,7 +306,7 @@ REPEAT 1
 Code    |Language           |Translated
 :---:   |:---:              | :---:
 ar      |Arabic             |100%
-az      |Azerbaijani        |60%
+az      |Azerbaijani        |100%
 b+ber   |Berber             |19%
 b+sat   |Santali            |26%
 bg      |Bulgarian          |100%
