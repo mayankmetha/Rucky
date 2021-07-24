@@ -4,5 +4,5 @@
         android:toDegrees="180"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:duration="5000" />
+        android:duration="2000" />
 </set>
