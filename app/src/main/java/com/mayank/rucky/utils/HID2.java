@@ -753,7 +753,6 @@ public class HID2 {
             else if (lines[a].startsWith("F24")) {
                 shell.add(keyboard(keys.get("KEY_F24")));
             }
-            //TODO: MOUSE or POINTER
             shell.add("sleep " + defdelay + "\n");
         }
     }
