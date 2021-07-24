@@ -366,7 +366,7 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     public static void buildNotification(Context context, String text) {
-        Intent sIntent = new Intent(context, SplashActivity.class);
+        Intent sIntent = new Intent(context, WelcomeActivity.class);
         sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent sPendingIntent;
         sPendingIntent = PendingIntent.getActivity(context, 0, sIntent, PendingIntent.FLAG_IMMUTABLE);

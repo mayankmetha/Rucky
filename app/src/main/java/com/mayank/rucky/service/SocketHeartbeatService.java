@@ -10,7 +10,7 @@ import androidx.core.app.NotificationCompat;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.activity.EditorActivity;
-import com.mayank.rucky.activity.SplashActivity;
+import com.mayank.rucky.activity.WelcomeActivity;
 import com.mayank.rucky.receiver.NetSocketReceiver;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
@@ -40,7 +40,7 @@ public class SocketHeartbeatService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Intent sIntent = new Intent(getApplicationContext(), SplashActivity.class);
+        Intent sIntent = new Intent(getApplicationContext(), WelcomeActivity.class);
         sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent sPendingIntent;
         sPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, sIntent, PendingIntent.FLAG_IMMUTABLE);

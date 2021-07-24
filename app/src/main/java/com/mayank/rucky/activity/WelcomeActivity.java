@@ -15,12 +15,13 @@ import android.widget.RelativeLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
+import androidx.core.splashscreen.SplashScreen;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 
-public class SplashActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     private Config config;
 
@@ -48,6 +49,8 @@ public class SplashActivity extends AppCompatActivity {
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(flags);
 
+        SplashScreen.installSplashScreen(this);
+
         if (Build.VERSION.SDK_INT<=Build.VERSION_CODES.R)
             splash();
         else
@@ -55,18 +58,18 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     void launchNext() {
-        startActivity(new Intent(SplashActivity.this, config.getInitState() ? EditorActivity.class : InitActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, config.getInitState() ? EditorActivity.class : InitActivity.class));
         finish();
     }
 
     private void splash() {
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_welcome);
         RelativeLayout parentLayout = findViewById(R.id.splashParentLayout);
         parentLayout.setBackground(ContextCompat.getDrawable(this, Constants.themeSplashBorder[config.getAccentTheme()]));
         ImageView i1 = findViewById(R.id.imageViewBG);
         FrameLayout l2= findViewById(R.id.splashTextView);
         i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
-        new Handler().postDelayed(this::launchNext, 1000);
+        new Handler().postDelayed(this::launchNext, 2000);
     }
 }

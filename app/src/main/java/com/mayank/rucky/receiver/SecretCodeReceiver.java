@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.mayank.rucky.activity.SplashActivity;
+import com.mayank.rucky.activity.WelcomeActivity;
 
 public class SecretCodeReceiver extends BroadcastReceiver {
 
@@ -13,7 +13,7 @@ public class SecretCodeReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         assert action != null;
         if (action.equals("android.provider.Telephony.SECRET_CODE")) {
-            Intent i = new Intent(context, SplashActivity.class);
+            Intent i = new Intent(context, WelcomeActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
         }

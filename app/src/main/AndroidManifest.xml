@@ -27,7 +27,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="${appIconRound}"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Rucky"
+        android:theme="${splashTheme}"
         tools:ignore="AllowBackup">
 
         <service
@@ -76,7 +76,7 @@
         </receiver>
 
         <activity
-            android:name=".activity.SplashActivity"
+            android:name=".activity.WelcomeActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="uiMode|locale"
             android:exported="true"
@@ -94,7 +94,7 @@
             android:exported="true"
             android:icon="${appIcon}"
             android:roundIcon="${appIconRound}"
-            android:targetActivity=".activity.SplashActivity">
+            android:targetActivity=".activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

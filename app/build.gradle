@@ -53,7 +53,8 @@ android {
             }
             manifestPlaceholders = [
                     appIcon: "@mipmap/ic_launcher_nightly",
-                    appIconRound: "@mipmap/ic_launcher_nightly_round"
+                    appIconRound: "@mipmap/ic_launcher_nightly_round",
+                    splashTheme: "@style/Theme.AppSplashNightly"
             ]
             minifyEnabled true
             shrinkResources true
@@ -67,7 +68,8 @@ android {
             }
             manifestPlaceholders = [
                     appIcon: "@mipmap/ic_launcher",
-                    appIconRound: "@mipmap/ic_launcher_round"
+                    appIconRound: "@mipmap/ic_launcher_round",
+                    splashTheme: "@style/Theme.AppSplashRelease"
             ]
             minifyEnabled true
             shrinkResources true
@@ -81,7 +83,8 @@ android {
             }
             manifestPlaceholders = [
                     appIcon: "@mipmap/ic_launcher",
-                    appIconRound: "@mipmap/ic_launcher_round"
+                    appIconRound: "@mipmap/ic_launcher_round",
+                    splashTheme: "@style/Theme.AppSplashRelease"
             ]
             minifyEnabled true
             shrinkResources true

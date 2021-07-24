@@ -31,7 +31,7 @@ import com.mayank.rucky.R;
 import com.mayank.rucky.activity.BrowserActivity;
 import com.mayank.rucky.activity.EditorActivity;
 import com.mayank.rucky.activity.HidActivity;
-import com.mayank.rucky.activity.SplashActivity;
+import com.mayank.rucky.activity.WelcomeActivity;
 import com.mayank.rucky.utils.ColorAdapter;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
@@ -345,7 +345,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void restartActivity() {
-        Intent restartIntent = new Intent(this.getActivity(), SplashActivity.class);
+        Intent restartIntent = new Intent(this.getActivity(), WelcomeActivity.class);
         restartIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         restartIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         this.requireActivity().finish();
