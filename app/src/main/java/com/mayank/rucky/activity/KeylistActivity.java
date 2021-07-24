@@ -22,7 +22,7 @@ import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.KeyAdapter;
 
-import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.IOUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -312,7 +312,7 @@ public class KeylistActivity extends AppCompatActivity {
         try {
             fInputStream = new FileInputStream(file);
             inputStream = new BufferedInputStream(fInputStream);
-            IOUtils.copy(inputStream, writer, "UTF-8");
+            IOUtil.copy(inputStream, writer, "UTF-8");
             inputStream.close();
             fInputStream.close();
         } catch (Exception e) {

@@ -48,7 +48,7 @@ import com.mayank.rucky.utils.HID;
 import com.mayank.rucky.utils.HID2;
 import com.mayank.rucky.utils.Networks;
 
-import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.IOUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -723,7 +723,7 @@ public class EditorActivity extends AppCompatActivity {
                         inputStream = new BufferedInputStream(fInputStream);
                     }
                     writer = new StringWriter();
-                    IOUtils.copy(inputStream, writer, "UTF-8");
+                    IOUtil.copy(inputStream, writer, "UTF-8");
                     scripts.setText(writer.toString());
                     inputStream.close();
                     fInputStream.close();
@@ -842,7 +842,7 @@ public class EditorActivity extends AppCompatActivity {
         try {
             fInputStream = new FileInputStream(file);
             inputStream = new BufferedInputStream(fInputStream);
-            IOUtils.copy(inputStream, writer, "UTF-8");
+            IOUtil.copy(inputStream, writer, "UTF-8");
             inputStream.close();
             fInputStream.close();
         } catch (Exception e) {
