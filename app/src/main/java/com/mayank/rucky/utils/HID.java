@@ -2448,38 +2448,33 @@ public class HID {
         return tmp;
     }
 
-    private String mbyteCode(String button, String x, String y, String scroll, String count) {
-        StringBuilder tmp = new StringBuilder();
-        String[] mbytes = new String[4];
+    private ArrayList<String> mbyteCode(String[] mbytes, int count) {
+        ArrayList<String> tmpStr = new ArrayList<>();
 
-        if(button.trim().equals("LEFT")) mbytes[0] = "01";
-        else if(button.trim().equals("RIGHT")) mbytes[0] = "02";
-        else if(button.trim().equals("MIDDLE")) mbytes[0] = "04";
-        else mbytes[0] = "00";
-
-        if(Integer.parseInt(x) >= -127 && Integer.parseInt(x) <= 127)
-            mbytes[1] = String.format("%02X", Byte.parseByte(x));
-        else
-            mbytes[1] = "00";
-
-        if(Integer.parseInt(y) >= -127 && Integer.parseInt(y) <= 127)
-            mbytes[2] = String.format("%02X", Byte.parseByte(y));
-        else
-            mbytes[2] = "00";
-
-        if(scroll.trim().equals("UP")) mbytes[3] = "01";
-        else if(scroll.trim().equals("DOWN")) mbytes[3] = "FF";
-        else mbytes[3] = "00";
-
-        for (int i = 0; i < Integer.parseInt(count); i++) {
-            tmp.append("echo \"\\\\x").append(mbytes[0]).append("\\\\x").append(mbytes[1]).append("\\\\x").append(mbytes[2]).append("\\\\x").append(mbytes[3]).append("\" > /dev/hidg1\n");
-            tmp.append("echo \"\\\\x00\\\\x00\\\\x00\\\\x00\" > /dev/hidg1\n");
+        for (int i = 0; i < count; i++) {
+            String tmp = "echo \"\\\\x" + mbytes[0] + "\\\\x" + mbytes[1] + "\\\\x" + mbytes[2] + "\\\\x" + mbytes[3] + "\" > /dev/hidg1\n" +
+                    "echo \"\\\\x00\\\\x00\\\\x00\\\\x00\" > /dev/hidg1\n";
+            tmpStr.add(tmp);
         }
-        return tmp.toString();
+        return tmpStr;
     }
 
     public ArrayList<String> getCmd() {
         return shell;
+    }
+
+    private int getMouseLoopVar(String str) {
+        int count = 1;
+        try {
+            if (str == null || str.replaceAll("\\s+","").isEmpty()) {
+                return count;
+            } else {
+                count = Integer.parseInt(str);
+            }
+        } catch (Exception e) {
+            return count;
+        }
+        return count;
     }
 
     public void parse(@NonNull String str) {
@@ -2509,6 +2504,91 @@ public class HID {
                 int x = parseInt(con);
                 for (int i = 0; i < x; i++) {
                     parse(lines[a - 1]);
+                }
+            }
+            //MOUSE or POINTER
+            else if(lines[a].startsWith("MOUSE") || lines[a].startsWith("POINTER")) {
+                con = lines[a];
+                con = con.replace("MOUSE ","");
+                con = con.replace("POINTER ","");
+                String[] mbytes = {"00", "00", "00", "00"};
+                int mloop;
+                //CLICK or TOUCH or PRESS
+                if(con.startsWith("CLICK") || con.startsWith("TOUCH") || con.startsWith("PRESS")) {
+                    con = con.replace("CLICK ","");
+                    con = con.replace("TOUCH ","");
+                    con = con.replace("PRESS ","");
+                    if(con.startsWith("LEFT")) {
+                        con = con.replace("LEFT ", "");
+                        mbytes[0] = "01";
+                    } else if(con.startsWith("RIGHT")) {
+                        con = con.replace("RIGHT ", "");
+                        mbytes[0] = "02";
+                    } else if(con.startsWith("MIDDLE")) {
+                        con = con.replace("MIDDLE ", "");
+                        mbytes[0] = "04";
+                    } else mbytes[0] = "00";
+                    mloop = getMouseLoopVar(con);
+                    shell.addAll(mbyteCode(mbytes, mloop));
+                }
+                //HOLD or DRAG
+                else if(con.startsWith("HOLD") || con.startsWith("DRAG")) {
+                    con = con.replace("HOLD ","");
+                    con = con.replace("DRAG ","");
+                    if(con.startsWith("LEFT")) {
+                        con = con.replace("LEFT ", "");
+                        mbytes[0] = "01";
+                    } else if(con.startsWith("RIGHT")) {
+                        con = con.replace("RIGHT ", "");
+                        mbytes[0] = "02";
+                    } else if(con.startsWith("MIDDLE")) {
+                        con = con.replace("MIDDLE ", "");
+                        mbytes[0] = "04";
+                    } else mbytes[0] = "00";
+                    String[] numParams = con.split("\\s+");
+                    if(numParams.length == 2 || numParams.length == 3) {
+                        if (Integer.parseInt(numParams[0]) >= -127 && Integer.parseInt(numParams[0]) <= 127)
+                            mbytes[1] = String.format("%02X", Byte.parseByte(numParams[0]));
+                        else mbytes[1] = "00";
+                        if (Integer.parseInt(numParams[1]) >= -127 && Integer.parseInt(numParams[1]) <= 127)
+                            mbytes[2] = String.format("%02X", Byte.parseByte(numParams[1]));
+                        else mbytes[2] = "00";
+                        if (numParams.length == 3) mloop = getMouseLoopVar(numParams[2]);
+                        else mloop = 1;
+                        shell.addAll(mbyteCode(mbytes, mloop));
+                    }
+                }
+                //MOVE or TRANSLATE
+                else if(con.startsWith("MOVE") || con.startsWith("TRANSLATE")) {
+                    con = con.replace("MOVE ","");
+                    con = con.replace("TRANSLATE ","");
+                    String[] numParams = con.split("\\s+");
+                    if(numParams.length == 2 || numParams.length == 3) {
+                        if (Integer.parseInt(numParams[0]) >= -127 && Integer.parseInt(numParams[0]) <= 127)
+                            mbytes[1] = String.format("%02X", Byte.parseByte(numParams[0]));
+                        else mbytes[1] = "00";
+                        if (Integer.parseInt(numParams[1]) >= -127 && Integer.parseInt(numParams[1]) <= 127)
+                            mbytes[2] = String.format("%02X", Byte.parseByte(numParams[1]));
+                        else mbytes[2] = "00";
+                        if (numParams.length == 3) mloop = getMouseLoopVar(numParams[2]);
+                        else mloop = 1;
+                        shell.addAll(mbyteCode(mbytes, mloop));
+                    }
+                }
+                //KNOB or WHEEL or SCROLL
+                if(con.startsWith("KNOB") || con.startsWith("WHEEL") || con.startsWith("SCROLL")) {
+                    con = con.replace("KNOB ","");
+                    con = con.replace("WHEEL ","");
+                    con = con.replace("SCROLL ","");
+                    if(con.startsWith("UP")) {
+                        con = con.replace("UP ", "");
+                        mbytes[3] = "01";
+                    } else if(con.startsWith("DOWN")) {
+                        con = con.replace("DOWN ", "");
+                        mbytes[3] = "FF";
+                    } else mbytes[3] = "00";
+                    mloop = getMouseLoopVar(con);
+                    shell.addAll(mbyteCode(mbytes, mloop));
                 }
             }
             //STRING
@@ -2761,7 +2841,6 @@ public class HID {
             else if (lines[a].startsWith("F24")) {
                 shell.add(kbbyteCode(keys.get("KEY_F24")));
             }
-            //TODO: MOUSE or POINTER
             shell.add("sleep " + defdelay + "\n");
         }
     }
