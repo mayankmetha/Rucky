@@ -382,8 +382,8 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="splash_foreground" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/app/animal.svg" />
+                            <entry key="outputName" value="splash_name" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/app/name.svg" />
                           </map>
                         </option>
                       </PersistentState>

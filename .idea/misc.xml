@@ -12,11 +12,14 @@
         <entry key="app/src/main/res/drawable/ic_run.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ripple.xml" value="0.303125" />
-        <entry key="app/src/main/res/drawable/splash_anim_icon.xml" value="0.176953125" />
+        <entry key="app/src/main/res/drawable/splash_anim_icon.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/splash_background.xml" value="0.303125" />
         <entry key="app/src/main/res/drawable/splash_foreground.xml" value="0.292578125" />
         <entry key="app/src/main/res/drawable/splash_gradient_amber.xml" value="0.303125" />
         <entry key="app/src/main/res/drawable/splash_icon.xml" value="0.176953125" />
+        <entry key="app/src/main/res/drawable/splash_icon_1.xml" value="0.2388888888888889" />
+        <entry key="app/src/main/res/drawable/splash_icon_2.xml" value="0.2388888888888889" />
+        <entry key="app/src/main/res/drawable/splash_name.xml" value="0.2388888888888889" />
         <entry key="app/src/main/res/layout/activity_browser.xml" value="0.23394808743169399" />
         <entry key="app/src/main/res/layout/activity_config.xml" value="0.16598360655737704" />
         <entry key="app/src/main/res/layout/activity_editor.xml" value="0.17452185792349728" />
