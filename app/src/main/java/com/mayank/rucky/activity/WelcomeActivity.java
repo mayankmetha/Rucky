@@ -58,8 +58,11 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     void launchNext() {
-        startActivity(new Intent(WelcomeActivity.this, config.getInitState() ? EditorActivity.class : InitActivity.class));
-        finish();
+        Intent intent = new Intent(WelcomeActivity.this, config.getInitState() ? EditorActivity.class : InitActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        this.finish();
     }
 
     private void splash() {

@@ -80,7 +80,7 @@
             android:clearTaskOnLaunch="true"
             android:configChanges="uiMode|locale"
             android:exported="true"
-            android:launchMode="singleInstance">
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -94,7 +94,7 @@
             android:exported="true"
             android:icon="${appIcon}"
             android:roundIcon="${appIconRound}"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:targetActivity=".activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -105,35 +105,27 @@
 
         <activity
             android:name=".activity.InitActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
         <activity
             android:name=".activity.EditorActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
         <activity
             android:name=".activity.UpdateActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
         <activity
             android:name=".activity.SettingsActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
         <activity
             android:name=".activity.BrowserActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
         <activity
             android:name=".activity.ConfigActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
         <activity
             android:name=".activity.HidActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
         <activity
             android:name=".activity.KeylistActivity"
-            android:launchMode="singleInstance"
             android:configChanges="uiMode|locale" />
 
     </application>
