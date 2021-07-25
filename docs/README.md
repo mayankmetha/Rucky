@@ -271,7 +271,7 @@ All mouse/pointer commands will start with this command. REPEAT command and DELA
     - RIGHT
     - MIDDLE
 2. In parameter field `[x]` and `[y]`, which emulates mouse movement action and can have the value range from -127 to 127. This represents pixels and is relative to where the mouse currently is. If you are at the point (150,150) then you can move the mouse to (127,127) pixels of this point followed by (23,23). Therefore, if the mouse is at (0,0) [top left corner] and you want to move to (1920, 1080) [bottom right corner, assuming a 1080p display], then you would need to move the mouse a few times 127 pixels at a time (or less) in either direction.
-3. In parameter field `[scroll wheel]`, which emulates mouse scroll whell action and can have the following value:
+3. In parameter field `[scroll]`, which emulates mouse scroll whell action and can have the following value:
     - UP
     - DOWN
 4. In parameters `[num]` represents a number. This is used to repeat the action. Alternatively, REPEAT command can be used.
