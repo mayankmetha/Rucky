@@ -10,7 +10,7 @@
 # Download
 ## GitHub
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
-[![Github nightly](https://img.shields.io/badge/nightly-v2.2%20(386)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
+[![Github nightly](https://img.shields.io/badge/nightly-v2.2%20(412)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
 
 ## Nethunter App Store
 [![Nethuter Release](https://img.shields.io/badge/release-v2.2-blue)](https://store.nethunter.com/en/packages/com.mayank.rucky/)
@@ -260,7 +260,7 @@ Some commands has a parameter which is a combo key. These keys belong to US Engl
 - \- or _
 - = or +
 
-## Mouse/Pointer (Will be added in future)
+## Mouse/Pointer
 
 ### MOUSE or POINTER
 All mouse/pointer commands will start with this command. REPEAT command and DELAY commands effect can also be applied to mouse commands.

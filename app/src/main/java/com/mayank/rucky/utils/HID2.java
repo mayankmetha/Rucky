@@ -382,8 +382,8 @@ public class HID2 {
         ArrayList<String> tmpStr = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            String tmp = "echo \"\\\\x" + mbytes[0] + "\\\\x" + mbytes[1] + "\\\\x" + mbytes[2] + "\\\\x" + mbytes[3] + "\" > /dev/hidg1\n" +
-                    "echo \"\\\\x00\\\\x00\\\\x00\\\\x00\" > /dev/hidg1\n";
+            String tmp = "echo \"\\\\x" + mbytes[0] + "\\\\x" + mbytes[1] + "\\\\x" + mbytes[2] + "\\\\x" + mbytes[3] + "\" > /dev/hidg1\n";
+            //tmp += "echo \"\\\\x00\\\\x00\\\\x00\\\\x00\" > /dev/hidg1\n";
             tmpStr.add(tmp);
         }
         return tmpStr;
