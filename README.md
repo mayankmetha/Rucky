@@ -385,7 +385,7 @@ Status| Feature
 ✅| In-app update service (GitHub release only)
 ✅| Kali Linux NetHunter Support
 ✅| Nightly Builds
-❌| ConfigFS auto configuration
+🚧| ConfigFS auto configuration
 ✅| Multiple HID languages support
 ✅| Customizable HID for additional language support
 ✅| Platform independent HID support
