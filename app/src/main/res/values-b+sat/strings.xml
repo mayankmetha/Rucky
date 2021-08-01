@@ -19,6 +19,8 @@
     <string name="update_downloading">ᱟᱹᱯᱰᱮᱴ ᱰᱟᱩᱱᱞᱳᱰᱚᱜ ᱠᱟᱱᱟ </string>
     <string name="install_update">ᱟᱹᱯᱰᱮᱴ ᱮᱢ ᱪᱷᱚᱜ ᱠᱟᱱᱟ</string>
     <!-- Editor screen -->
+    <string name="btn_exit">ᱵᱟᱹᱰ</string>
+    <string name="btn_back">ᱩᱠᱩ</string>
     <string name="unlock">ᱮᱯ ᱠᱷᱩᱞᱟᱹᱭ ᱢᱮ</string>
     <string name="auth">ᱚᱛᱷᱮᱱᱴᱤᱠᱮᱥᱚᱱ ᱠᱚᱱᱯᱷᱟᱨᱢ</string>
     <string name="update">ᱟ.ᱯᱰᱮᱴ</string>
@@ -31,13 +33,18 @@
     <string name="btn_continue">ᱞᱟᱦᱟ</string>
     <string name="root_err">USB ᱠᱮᱵᱟᱹᱞ ᱟᱠᱨᱚᱢᱚᱬ ᱠᱟᱹᱜᱤᱫ ᱨᱩᱩᱴ ᱚᱫᱮᱨ ᱫᱚᱨᱠᱟᱨ!</string>
     <!-- Config screen -->
+    <string name="config_activity">ᱴᱣᱤᱠ</string>
     <string name="config_status_usb_on">USB Connected</string>
     <!-- HID config screen -->
     <string name="hid_update">ᱟ.ᱯᱰᱮᱴ</string>
+    <string name="hid_edit">ᱥᱟᱯᱲᱟᱣ</string>
     <string name="hid_delete">ᱜᱮᱫ ᱜᱤᱰᱤ</string>
     <!-- Keylist screen -->
+    <string name="key_title">ᱪᱟᱹᱵᱤ ᱧᱤᱛᱩᱢ</string>
     <!-- Setting screen -->
     <string name="setting_general">ᱡᱮᱱᱨᱟᱞ</string>
+    <string name="dark_theme_title">ᱧᱤᱛ ᱢᱳᱰ</string>
+    <string name="accent_theme_title">ᱛᱷᱤᱢ</string>
     <string name="delete_dep_title">ᱮᱯᱯ ᱚᱲᱚᱠ ᱢᱮ</string>
     <string name="delete_dep_summary">ᱮᱯᱯ ᱠᱚ ᱥᱟᱯᱷᱟ ᱟᱨ ᱚᱲᱚᱠ ᱢᱮ ᱾</string>
     <string name="settings_sec_title">ᱮᱰᱵᱷᱟᱱᱥ ᱥᱮᱠᱭᱚᱨᱴᱤ</string>
