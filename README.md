@@ -308,7 +308,7 @@ Code    |Language           |Translated
 ar      |Arabic             |100%
 az      |Azerbaijani        |100%
 b+ber   |Berber             |19%
-b+sat   |Santali            |26%
+b+sat   |Santali            |29%
 bg      |Bulgarian          |100%
 br      |Breton             |6%
 cs      |Czech              |100%
