@@ -1,17 +1,6 @@
-• Release: v2.2 Nethunter release build added.
-• Updated Readme.md
-• Added app localisation
 • Fixed Readme
-• Added localisation for 30 languages completed.
-• Added localisation for 42 languages completed.
-• Added localisation for 9 more partially translated languages.
-• crowdin tools added
-• Fixed translation
-• Upgrade libs
-• Fixed init ui
-• Fixed annoying android 12 splash screen
-• Integrate android 12 splash screen to original splash screen.
-• Fix app instance
-• Fix annoying android 12 splash screen showing up on intent
-• Experimental Rubber Ducky mouse support added
-• Experimental Rubber Ducky mouse support added
+• updated build tools
+• Added configFS USB Gadget auto detect and config
+• Fixed Readme
+• Updated translation
+• Nightly v419
