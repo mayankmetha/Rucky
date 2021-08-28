@@ -11,7 +11,7 @@
 # Download
 ## GitHub
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
-[![Github nightly](https://img.shields.io/badge/nightly-v2.2%20(421)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
+[![Github nightly](https://img.shields.io/badge/nightly-v2.2%20(425)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
 
 ## Nethunter App Store
 [![Nethuter Release](https://img.shields.io/badge/release-v2.2-blue)](https://store.nethunter.com/en/packages/com.mayank.rucky/)
@@ -386,15 +386,15 @@ Status| Feature
 ✅| In-app update service (GitHub release only)
 ✅| Kali Linux NetHunter Support
 ✅| Nightly Builds
-🚧| ConfigFS auto configuration
+✅| ConfigFS auto configuration
 ✅| Multiple HID languages support
 ✅| Customizable HID for additional language support
 ✅| Platform independent HID support
 ✅| Can attack virtually any system with USB HID support
-🚧| USB HID mouse support
+✅| USB HID mouse support
 ❌| Disable app level virtualization (parallel app prevention)
 ❌| App anti-tamper detection
-❌| Runtime process name masking
+🚧| Runtime process name masking
 ❌| Memory dump prevention
 ❌| Anti-debug protection (Frida probe prevention)
 💡| More feature addition on request
