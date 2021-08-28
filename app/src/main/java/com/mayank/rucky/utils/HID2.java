@@ -390,9 +390,11 @@ public class HID2 {
     }
 
     public void parse(@NonNull String str) {
+        str = str.replaceAll(" +"," ");
         String[] lines = str.split("\\r?\\n");
         String con;
         for (int a = 0; a < lines.length; a++) {
+            lines[a] = lines[a].trim();
             //DEFAULTDELAY or DEFAULT_DELAY
             if (a == 0 && (lines[a].startsWith("DEFAULTDELAY") || lines[a].startsWith("DEFAULT_DELAY"))) {
                 con = lines[a];
@@ -572,185 +574,185 @@ public class HID2 {
                 }
             }
             //MENU or APP
-            else if (lines[a].startsWith("MENU") || lines[a].startsWith("APP")) {
+            else if (lines[a].equals("MENU") || lines[a].equals("APP")) {
                 shell.add(keyboard(keys.get("KEY_F10"),keys.get("MODIFIERKEY_SHIFT")));
             }
             //DOWNARROW or DOWN
-            else if (lines[a].startsWith("DOWN") || lines[a].startsWith("DOWNARROW")) {
+            else if (lines[a].equals("DOWN") || lines[a].equals("DOWNARROW")) {
                 shell.add(keyboard(keys.get("KEY_DOWN")));
             }
             //UPARROW or UP
-            else if (lines[a].startsWith("UP") || lines[a].startsWith("UPARROW")) {
+            else if (lines[a].equals("UP") || lines[a].equals("UPARROW")) {
                 shell.add(keyboard(keys.get("KEY_UP")));
             }
             //LEFTARROW or LEFT
-            else if (lines[a].startsWith("LEFT") || lines[a].startsWith("LEFTARROW")) {
+            else if (lines[a].equals("LEFT") || lines[a].equals("LEFTARROW")) {
                 shell.add(keyboard(keys.get("KEY_LEFT")));
             }
             //RIGHTARROW or RIGHT
-            else if (lines[a].startsWith("RIGHT") || lines[a].startsWith("RIGHTARROW")) {
+            else if (lines[a].equals("RIGHT") || lines[a].equals("RIGHTARROW")) {
                 shell.add(keyboard(keys.get("KEY_RIGHT")));
             }
             //DELETE
-            else if (lines[a].startsWith("DELETE")) {
+            else if (lines[a].equals("DELETE")) {
                 shell.add(keyboard(keys.get("KEY_DELETE")));
             }
             //END
-            else if (lines[a].startsWith("END")) {
+            else if (lines[a].equals("END")) {
                 shell.add(keyboard(keys.get("KEY_END")));
             }
             //HOME
-            else if (lines[a].startsWith("HOME")) {
+            else if (lines[a].equals("HOME")) {
                 shell.add(keyboard(keys.get("KEY_HOME")));
             }
             //INSERT
-            else if (lines[a].startsWith("INSERT")) {
+            else if (lines[a].equals("INSERT")) {
                 shell.add(keyboard(keys.get("KEY_INSERT")));
             }
             //PAGEUP
-            else if (lines[a].startsWith("PAGEUP")) {
+            else if (lines[a].equals("PAGEUP")) {
                 shell.add(keyboard(keys.get("KEY_PAGEUP")));
             }
             //PAGEDOWN
-            else if (lines[a].startsWith("PAGEDOWN")) {
+            else if (lines[a].equals("PAGEDOWN")) {
                 shell.add(keyboard(keys.get("KEY_PAGEDOWN")));
             }
             //PRINTSCREEN or PRINTSCRN or PRNTSCRN or PRTSCN or PRSC or PRTSCR
-            else if (lines[a].startsWith("PRINTSCREEN") || lines[a].startsWith("PRINTSCRN") ||
-                    lines[a].startsWith("PRNTSCRN") || lines[a].startsWith("PRTSCN") ||
-                    lines[a].startsWith("PRSC") || lines[a].startsWith("PRTSCR")) {
+            else if (lines[a].equals("PRINTSCREEN") || lines[a].equals("PRINTSCRN") ||
+                    lines[a].equals("PRNTSCRN") || lines[a].equals("PRTSCN") ||
+                    lines[a].equals("PRSC") || lines[a].equals("PRTSCR")) {
                 shell.add(keyboard(keys.get("KEY_SYSRQ")));
             }
             //BREAK or PAUSE
-            else if (lines[a].startsWith("BREAK") || lines[a].startsWith("PAUSE")) {
+            else if (lines[a].equals("BREAK") || lines[a].equals("PAUSE")) {
                 shell.add(keyboard(keys.get("KEY_PAUSE")));
             }
             //NUMLOCK
-            else if (lines[a].startsWith("NUMLOCK")) {
+            else if (lines[a].equals("NUMLOCK")) {
                 shell.add(keyboard(keys.get("KEY_NUMLOCK")));
             }
             //CAPSLOCK
-            else if (lines[a].startsWith("CAPSLOCK")) {
+            else if (lines[a].equals("CAPSLOCK")) {
                 shell.add(keyboard(keys.get("KEY_CAPSLOCK")));
             }
             //SCROLLLOCK
-            else if (lines[a].startsWith("SCROLLLOCK")) {
+            else if (lines[a].equals("SCROLLLOCK")) {
                 shell.add(keyboard(keys.get("KEY_SCROLLLOCK")));
             }
             //ESC or ESCAPE
-            else if (lines[a].startsWith("ESCAPE") || lines[a].startsWith("ESC")) {
+            else if (lines[a].equals("ESCAPE") || lines[a].equals("ESC")) {
                 shell.add(keyboard(keys.get("KEY_ESC")));
             }
             //SPACE
-            else if (lines[a].startsWith("SPACE")) {
+            else if (lines[a].equals("SPACE")) {
                 shell.add(keyboard(keys.get("KEY_SPACE")));
             }
             //TAB
-            else if (lines[a].startsWith("TAB")) {
+            else if (lines[a].equals("TAB")) {
                 shell.add(keyboard(keys.get("KEY_TAB")));
             }
             //BACKSPACE or BKSP
-            else if (lines[a].startsWith("BACKSPACE") || lines[a].startsWith("BKSP")) {
+            else if (lines[a].equals("BACKSPACE") || lines[a].equals("BKSP")) {
                 shell.add(keyboard(keys.get("KEY_BACKSPACE")));
             }
             //ENTER
-            else if (lines[a].startsWith("ENTER")) {
+            else if (lines[a].equals("ENTER")) {
                 shell.add(keyboard(keys.get("KEY_ENTER")));
             }
             //F1
-            else if (lines[a].startsWith("F1")) {
+            else if (lines[a].equals("F1")) {
                 shell.add(keyboard(keys.get("KEY_F1")));
             }
             //F2
-            else if (lines[a].startsWith("F2")) {
+            else if (lines[a].equals("F2")) {
                 shell.add(keyboard(keys.get("KEY_F2")));
             }
             //F3
-            else if (lines[a].startsWith("F3")) {
+            else if (lines[a].equals("F3")) {
                 shell.add(keyboard(keys.get("KEY_F3")));
             }
             //F4
-            else if (lines[a].startsWith("F4")) {
+            else if (lines[a].equals("F4")) {
                 shell.add(keyboard(keys.get("KEY_F4")));
             }
             //F5
-            else if (lines[a].startsWith("F5")) {
+            else if (lines[a].equals("F5")) {
                 shell.add(keyboard(keys.get("KEY_F5")));
             }
             //F6
-            else if (lines[a].startsWith("F6")) {
+            else if (lines[a].equals("F6")) {
                 shell.add(keyboard(keys.get("KEY_F6")));
             }
             //F7
-            else if (lines[a].startsWith("F7")) {
+            else if (lines[a].equals("F7")) {
                 shell.add(keyboard(keys.get("KEY_F7")));
             }
             //F8
-            else if (lines[a].startsWith("F8")) {
+            else if (lines[a].equals("F8")) {
                 shell.add(keyboard(keys.get("KEY_F8")));
             }
             //F9
-            else if (lines[a].startsWith("F9")) {
+            else if (lines[a].equals("F9")) {
                 shell.add(keyboard(keys.get("KEY_F9")));
             }
             //F10
-            else if (lines[a].startsWith("F10")) {
+            else if (lines[a].equals("F10")) {
                 shell.add(keyboard(keys.get("KEY_F10")));
             }
             //F11
-            else if (lines[a].startsWith("F11")) {
+            else if (lines[a].equals("F11")) {
                 shell.add(keyboard(keys.get("KEY_F11")));
             }
             //F12
-            else if (lines[a].startsWith("F12")) {
+            else if (lines[a].equals("F12")) {
                 shell.add(keyboard(keys.get("KEY_F12")));
             }
             //F13
-            else if (lines[a].startsWith("F13")) {
+            else if (lines[a].equals("F13")) {
                 shell.add(keyboard(keys.get("KEY_F13")));
             }
             //F14
-            else if (lines[a].startsWith("F14")) {
+            else if (lines[a].equals("F14")) {
                 shell.add(keyboard(keys.get("KEY_F14")));
             }
             //F15
-            else if (lines[a].startsWith("F15")) {
+            else if (lines[a].equals("F15")) {
                 shell.add(keyboard(keys.get("KEY_F15")));
             }
             //F16
-            else if (lines[a].startsWith("F16")) {
+            else if (lines[a].equals("F16")) {
                 shell.add(keyboard(keys.get("KEY_F16")));
             }
             //F17
-            else if (lines[a].startsWith("F17")) {
+            else if (lines[a].equals("F17")) {
                 shell.add(keyboard(keys.get("KEY_F17")));
             }
             //F18
-            else if (lines[a].startsWith("F18")) {
+            else if (lines[a].equals("F18")) {
                 shell.add(keyboard(keys.get("KEY_F18")));
             }
             //F19
-            else if (lines[a].startsWith("F19")) {
+            else if (lines[a].equals("F19")) {
                 shell.add(keyboard(keys.get("KEY_F19")));
             }
             //F20
-            else if (lines[a].startsWith("F20")) {
+            else if (lines[a].equals("F20")) {
                 shell.add(keyboard(keys.get("KEY_F20")));
             }
             //F21
-            else if (lines[a].startsWith("F21")) {
+            else if (lines[a].equals("F21")) {
                 shell.add(keyboard(keys.get("KEY_F21")));
             }
             //F22
-            else if (lines[a].startsWith("F22")) {
+            else if (lines[a].equals("F22")) {
                 shell.add(keyboard(keys.get("KEY_F22")));
             }
             //F23
-            else if (lines[a].startsWith("F23")) {
+            else if (lines[a].equals("F23")) {
                 shell.add(keyboard(keys.get("KEY_F23")));
             }
             //F24
-            else if (lines[a].startsWith("F24")) {
+            else if (lines[a].equals("F24")) {
                 shell.add(keyboard(keys.get("KEY_F24")));
             }
             shell.add("sleep " + defdelay + "\n");

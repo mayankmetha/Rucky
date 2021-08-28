@@ -206,6 +206,7 @@
         <item name="dialogPreferenceStyle">@style/Popup</item>
         <item name="colorControlHighlight">?attr/appColorAccentDark</item>
         <item name="chipStyle">@style/RadioChip</item>
+        <item name="android:colorControlActivated">?attr/appColorAccent</item>
     </style>
 
     <style name="Popup" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
@@ -224,6 +225,7 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowIsTranslucent">false</item>
+        <item name="android:colorControlActivated">?attr/appColorAccent</item>
     </style>
 
     <style name="Alert.Button" parent="Widget.MaterialComponents.Button.TextButton">
