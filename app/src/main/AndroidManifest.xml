@@ -77,10 +77,12 @@
 
         <activity
             android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait"
             android:clearTaskOnLaunch="true"
             android:configChanges="uiMode|locale"
             android:exported="true"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -90,6 +92,7 @@
 
         <activity-alias
             android:name=".Main"
+            android:screenOrientation="portrait"
             android:enabled="true"
             android:exported="true"
             android:icon="${appIcon}"
@@ -105,28 +108,44 @@
 
         <activity
             android:name=".activity.InitActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.EditorActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.UpdateActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.SettingsActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.BrowserActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.ConfigActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.HidActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.KeylistActivity"
-            android:configChanges="uiMode|locale" />
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode|locale"
+            tools:ignore="LockedOrientationActivity" />
 
     </application>
 

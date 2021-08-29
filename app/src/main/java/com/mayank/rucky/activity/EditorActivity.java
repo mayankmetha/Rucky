@@ -98,7 +98,7 @@ public class EditorActivity extends AppCompatActivity {
     public NotificationCompat.Builder updateNotify;
     static SecretKey key;
     static AlgorithmParameterSpec iv;
-    Process p;
+    static Process p;
     private static DataOutputStream dos;
     private static BufferedReader dis;
     public static ArrayList<String> cmds;
@@ -167,6 +167,7 @@ public class EditorActivity extends AppCompatActivity {
             if(config.getHIDMode() == 1)
                 stopNetworkSocketService(this);
             finishAndRemoveTask();
+            System.exit(0);
         });
         builder.setNeutralButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
         builder.setNegativeButton(getResources().getString(R.string.btn_back), (dialog, which) -> super.onBackPressed());
@@ -555,15 +556,17 @@ public class EditorActivity extends AppCompatActivity {
 
     private void getRoot() {
         try {
-            p = Runtime.getRuntime().exec("su");
-            dos = new DataOutputStream(p.getOutputStream());
-            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            if(dos != null) {
-                dos.writeBytes("id\n");
-                dos.flush();
-                String rootCheck = dis.readLine();
-                if(rootCheck.contains("uid=0")) {
-                    root = true;
+            if (p == null) {
+                p = Runtime.getRuntime().exec("su");
+                dos = new DataOutputStream(p.getOutputStream());
+                dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
+                if (dos != null) {
+                    dos.writeBytes("id\n");
+                    dos.flush();
+                    String rootCheck = dis.readLine();
+                    if (rootCheck.contains("uid=0")) {
+                        root = true;
+                    }
                 }
             }
         } catch (Exception ignored) {
