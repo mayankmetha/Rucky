@@ -140,8 +140,9 @@ public class ConfigActivity extends AppCompatActivity {
         if (config.getHIDMode() == 0) {
             config.setNetworkStatus(false);
             EditorActivity.stopNetworkSocketService(this);
-            ipButton.setVisibility(View.INVISIBLE);
-            ipStatusDivider.setVisibility(View.INVISIBLE);
+            ipButton.setEnabled(false);
+            ipButton.setAlpha(0);
+            ipStatusDivider.setAlpha(0);
             if (config.getUSBStatus()) {
                 statusText.setText(R.string.config_status_usb_on);
                 statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_usb));
@@ -151,8 +152,9 @@ public class ConfigActivity extends AppCompatActivity {
             }
         } else if (config.getHIDMode() == 1) {
             EditorActivity.startNetworkSocketService(this);
-            ipButton.setVisibility(View.VISIBLE);
-            ipStatusDivider.setVisibility(View.VISIBLE);
+            ipButton.setEnabled(true);
+            ipButton.setAlpha(1);
+            ipStatusDivider.setAlpha(1);
             if (config.getNetworkStatus()) {
                 statusText.setText(R.string.config_status_net_on);
                 statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_net));
