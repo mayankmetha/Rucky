@@ -443,7 +443,8 @@ public class EditorActivity extends AppCompatActivity {
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
                 updateNotificationManager.notify(0, updateNotify.build());
-                updateBtn.setVisibility(View.VISIBLE);
+                updateBtn.setEnabled(true);
+                updateBtn.setAlpha(1);
             } else if(newVersion > currentVersion) {
                 Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
                 updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -454,12 +455,15 @@ public class EditorActivity extends AppCompatActivity {
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
                 updateNotificationManager.notify(0, updateNotify.build());
-                updateBtn.setVisibility(View.VISIBLE);
+                updateBtn.setEnabled(true);
+                updateBtn.setAlpha(1);
             } else {
-                updateBtn.setVisibility(View.GONE);
+                updateBtn.setEnabled(false);
+                updateBtn.setAlpha(0);
             }
         } else {
-            updateBtn.setVisibility(View.GONE);
+            updateBtn.setEnabled(false);
+            updateBtn.setAlpha(0);
         }
 
         updateBtn.setOnClickListener(view -> {
