@@ -168,13 +168,16 @@ public class InitActivity extends AppCompatActivity {
 
             if (position == layouts.length - 1) {
                 btnNext.setText(getString(R.string.init_start));
-                btnSkip.setVisibility(View.INVISIBLE);
+                btnSkip.setEnabled(false);
+                btnSkip.setAlpha(0);
             } else if (position == 3 || position == 4) {
                 btnNext.setText(getString(R.string.init_agree));
-                btnSkip.setVisibility(View.VISIBLE);
+                btnSkip.setEnabled(true);
+                btnSkip.setAlpha(1);
             } else {
                 btnNext.setText(getString(R.string.init_next));
-                btnSkip.setVisibility(View.VISIBLE);
+                btnSkip.setEnabled(true);
+                btnSkip.setAlpha(1);
             }
         }
     };

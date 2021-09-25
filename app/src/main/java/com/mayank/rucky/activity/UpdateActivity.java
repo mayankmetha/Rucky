@@ -81,17 +81,22 @@ public class UpdateActivity extends AppCompatActivity {
         ProgressBar downloadProgress = findViewById(R.id.update_progress);
         downloadProgress.setProgress(0);
         downloadProgress.setMax(100);
-        downloadProgress.setVisibility(View.INVISIBLE);
+        downloadProgress.setEnabled(false);
+        downloadProgress.setAlpha(0);
 
         TextView progressBarLabel = findViewById(R.id.progress_label);
-        progressBarLabel.setVisibility(View.INVISIBLE);
+        progressBarLabel.setEnabled(false);
+        progressBarLabel.setAlpha(0);
 
         Button actionButton = findViewById(R.id.action_button);
         actionButton.setText(R.string.update_action);
         actionButton.setOnClickListener(view -> {
-            actionButton.setVisibility(View.INVISIBLE);
-            downloadProgress.setVisibility(View.VISIBLE);
-            progressBarLabel.setVisibility(View.VISIBLE);
+            actionButton.setEnabled(false);
+            actionButton.setAlpha(0);
+            downloadProgress.setEnabled(true);
+            downloadProgress.setAlpha(1);
+            progressBarLabel.setEnabled(true);
+            progressBarLabel.setAlpha(1);
             dlRef = downloadUpdate();
             Runnable runnable = () -> {
                 while (downloadProgress.getProgress() < 100 && (checkStatus(dlRef) == DownloadManager.STATUS_PENDING || checkStatus(dlRef) == DownloadManager.STATUS_RUNNING)) {
@@ -100,12 +105,15 @@ public class UpdateActivity extends AppCompatActivity {
                 runOnUiThread(() -> {
                     if (downloadProgress.getProgress() != 100) {
                         downloadProgress.setProgress(0);
-                        progressBarLabel.setVisibility(View.INVISIBLE);
-                        actionButton.setVisibility(View.VISIBLE);
+                        progressBarLabel.setEnabled(false);
+                        progressBarLabel.setAlpha(0);
+                        actionButton.setEnabled(true);
+                        actionButton.setAlpha(1);
                     } else {
                         progressBarLabel.setText(R.string.install_update);
                     }
-                    downloadProgress.setVisibility(View.INVISIBLE);
+                    downloadProgress.setEnabled(false);
+                    downloadProgress.setAlpha(0);
                 });
             };
             new Thread(runnable).start();
