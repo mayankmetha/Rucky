@@ -1,14 +1,14 @@
 package com.mayank.rucky.utils;
 
 import java.util.Date;
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class Randoms {
 
-    Random random;
+    SecureRandom random;
 
     Randoms() {
-        random = new Random();
+        random = new SecureRandom();
         Date date = new Date();
         random.setSeed(date.getTime());
     }

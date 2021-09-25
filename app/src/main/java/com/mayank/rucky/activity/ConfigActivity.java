@@ -140,8 +140,8 @@ public class ConfigActivity extends AppCompatActivity {
         if (config.getHIDMode() == 0) {
             config.setNetworkStatus(false);
             EditorActivity.stopNetworkSocketService(this);
-            ipButton.setVisibility(View.GONE);
-            ipStatusDivider.setVisibility(View.GONE);
+            ipButton.setVisibility(View.INVISIBLE);
+            ipStatusDivider.setVisibility(View.INVISIBLE);
             if (config.getUSBStatus()) {
                 statusText.setText(R.string.config_status_usb_on);
                 statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_usb));

@@ -35,12 +35,6 @@ public class Constants {
     public static final String PREF_HID_FILE = "hidFile";
     public static final String PREF_HID_FILE_SELECTED = "hidFileSelected";
 
-    //keystore
-    public static final String PREF_GEN_KEY = "genKeyDone";
-    public static final String KEYSTORE_PROVIDER_ANDROID_KEYSTORE = "AndroidKeyStore";
-    public static final String RUCKY_KEYSTORE = "RuckyKeystore";
-    public static final String RUCKY_KEYSTORE2 = "RuckyKeystore2";
-
     //notifications
     public static final String CHANNEL_ID = "com.mayank.rucky.update";
     public static final String CHANNEL_NAME = "Update";
