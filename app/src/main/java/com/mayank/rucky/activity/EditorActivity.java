@@ -845,11 +845,10 @@ public class EditorActivity extends AppCompatActivity {
                         EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
                                 keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
                         fOutputStream = encryptedFile.openFileOutput();
-                        outputStream = new BufferedOutputStream(fOutputStream);
                     } else {
                         fOutputStream = new FileOutputStream(file);
-                        outputStream = new BufferedOutputStream(fOutputStream);
                     }
+                    outputStream = new BufferedOutputStream(fOutputStream);
                     outputStream.write(content.getBytes(StandardCharsets.UTF_8));
                     outputStream.close();
                     fOutputStream.close();
@@ -895,11 +894,10 @@ public class EditorActivity extends AppCompatActivity {
                         EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
                                 keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
                         fInputStream = encryptedFile.openFileInput();
-                        inputStream = new BufferedInputStream(fInputStream);
                     } else {
                         fInputStream = new FileInputStream(file);
-                        inputStream = new BufferedInputStream(fInputStream);
                     }
+                    inputStream = new BufferedInputStream(fInputStream);
                     writer = new StringWriter();
                     IOUtil.copy(inputStream, writer, "UTF-8");
                     scripts.setText(writer.toString());

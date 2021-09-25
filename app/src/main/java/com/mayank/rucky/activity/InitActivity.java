@@ -168,7 +168,7 @@ public class InitActivity extends AppCompatActivity {
 
             if (position == layouts.length - 1) {
                 btnNext.setText(getString(R.string.init_start));
-                btnSkip.setVisibility(View.GONE);
+                btnSkip.setVisibility(View.INVISIBLE);
             } else if (position == 3 || position == 4) {
                 btnNext.setText(getString(R.string.init_agree));
                 btnSkip.setVisibility(View.VISIBLE);

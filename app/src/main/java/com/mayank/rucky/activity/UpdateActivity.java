@@ -1,5 +1,6 @@
 package com.mayank.rucky.activity;
 
+import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -161,8 +162,8 @@ public class UpdateActivity extends AppCompatActivity {
         query.setFilterById(downloadRef);
         Cursor cursor = downloadManager.query(query);
         if (cursor.moveToFirst()) {
-            float fileSize = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
-            float downloadedSize = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+            @SuppressLint("Range") float fileSize = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
+            @SuppressLint("Range") float downloadedSize = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
             float progress = downloadedSize/fileSize;
             if (fileSize != -1)
                 return ((int)(progress*100));
