@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -28,6 +27,13 @@ import com.mayank.rucky.utils.Constants;
 public class WelcomeActivity extends AppCompatActivity {
 
     private Config config;
+
+    static {
+        System.loadLibrary("dynamic_name");
+    }
+
+    public native String changeProcessName();
+    public native String restoreProcessName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +59,11 @@ public class WelcomeActivity extends AppCompatActivity {
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(flags);
 
+        if(config.getSec())
+            changeProcessName();
+        else
+            restoreProcessName();
+
         if (config.getInitState() && config.getSec())
             biometric();
 
@@ -74,7 +85,6 @@ public class WelcomeActivity extends AppCompatActivity {
         BiometricPrompt biometricPrompt = new BiometricPrompt(this, ContextCompat.getMainExecutor(this), new BiometricPrompt.AuthenticationCallback() {
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
-                Log.e("onAuthenticationError", errString.toString());
                 super.onAuthenticationError(errorCode, errString);
                 finishAffinity();
                 System.exit(0);
@@ -88,7 +98,6 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void onAuthenticationFailed() {
-                Log.e("onAuthenticationFailed", "Mayank");
                 super.onAuthenticationFailed();
                 finishAffinity();
                 System.exit(0);
