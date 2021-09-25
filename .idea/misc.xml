@@ -46,6 +46,7 @@
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_nightly_round.xml" value="0.303125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.303125" />
         <entry key="app/src/main/res/xml/key_option.xml" value="0.22814207650273224" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.187109375" />
         <entry key="app/src/main/res/xml/settings.xml" value="0.21550546448087432" />
       </map>
     </option>
