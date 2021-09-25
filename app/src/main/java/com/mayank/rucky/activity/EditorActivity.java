@@ -1,16 +1,5 @@
 package com.mayank.rucky.activity;
 
-import static android.util.Base64.decode;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.biometric.BiometricPrompt;
-import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
@@ -32,6 +21,16 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
+import androidx.security.crypto.EncryptedFile;
+import androidx.security.crypto.MasterKey;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -71,22 +70,13 @@ import java.io.StringWriter;
 import java.net.Socket;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.security.KeyStore;
+import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
-import java.security.PrivateKey;
-import java.security.spec.AlgorithmParameterSpec;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
-import java.util.concurrent.Executor;
 
-import javax.crypto.Cipher;
-import javax.crypto.CipherInputStream;
-import javax.crypto.CipherOutputStream;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 import javax.net.ssl.HttpsURLConnection;
 
 public class EditorActivity extends AppCompatActivity {
@@ -96,8 +86,7 @@ public class EditorActivity extends AppCompatActivity {
 
     public static Config config;
     public NotificationCompat.Builder updateNotify;
-    static SecretKey key;
-    static AlgorithmParameterSpec iv;
+    private static MasterKey keyAlias;
     Process p;
     private static DataOutputStream dos;
     private static BufferedReader dis;
@@ -135,7 +124,7 @@ public class EditorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editor);
 
         if (config.getInitState() && config.getSec())
-            biometric();
+            getKey();
 
         if (savedInstanceState == null) {
             requestPermissions();
@@ -176,55 +165,12 @@ public class EditorActivity extends AppCompatActivity {
         exitDialog.show();
     }
 
-    public void biometric() {
-        Executor executor = ContextCompat.getMainExecutor(this);
-        BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
-            @Override
-            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
-                super.onAuthenticationError(errorCode, errString);
-                finishAffinity();
-                System.exit(0);
-            }
-
-            @Override
-            public void onAuthenticationSucceeded(
-                    @NonNull BiometricPrompt.AuthenticationResult result) {
-                super.onAuthenticationSucceeded(result);
-                getKey();
-            }
-
-            @Override
-            public void onAuthenticationFailed() {
-                super.onAuthenticationFailed();
-                finishAffinity();
-                System.exit(0);
-            }
-        });
-
-        BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle(getResources().getString(R.string.unlock))
-                .setSubtitle(getResources().getString(R.string.auth))
-                .setNegativeButtonText(getResources().getString(R.string.btn_cancel))
-                .setConfirmationRequired(false)
-                .build();
-        biometricPrompt.authenticate(promptInfo);
-    }
-
     void getKey() {
-        try{
-            KeyStore keyStore = KeyStore.getInstance(Constants.KEYSTORE_PROVIDER_ANDROID_KEYSTORE);
-            keyStore.load(null);
-            KeyStore.Entry entry = keyStore.getEntry(Constants.KEYSTORE_PROVIDER_ANDROID_KEYSTORE,null);
-            PrivateKey privateKey = ((KeyStore.PrivateKeyEntry) entry).getPrivateKey();
-            Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-            cipher.init(Cipher.DECRYPT_MODE, privateKey);
-            String k64 = config.getKeyStore1();
-            byte[] tmp = decode(k64, Base64.DEFAULT);
-            key = new SecretKeySpec(cipher.doFinal(tmp),"AES");
-            String k642 = config.getKeyStore2();
-            byte[] tmp2 = decode(k642,Base64.DEFAULT);
-            iv = new IvParameterSpec(cipher.doFinal(tmp2));
-        } catch (Exception e) {
+        try {
+            keyAlias = new MasterKey.Builder(this, MasterKey.DEFAULT_MASTER_KEY_ALIAS)
+                    .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+                    .build();
+        } catch (GeneralSecurityException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -892,10 +838,10 @@ public class EditorActivity extends AppCompatActivity {
                 OutputStream outputStream;
                 try {
                     if (config.getSec()) {
-                        Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
-                        c.init(Cipher.ENCRYPT_MODE, key, iv);
-                        fOutputStream = new FileOutputStream(file);
-                        outputStream = new BufferedOutputStream(new CipherOutputStream(fOutputStream, c));
+                        EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
+                                keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
+                        fOutputStream = encryptedFile.openFileOutput();
+                        outputStream = new BufferedOutputStream(fOutputStream);
                     } else {
                         fOutputStream = new FileOutputStream(file);
                         outputStream = new BufferedOutputStream(fOutputStream);
@@ -942,10 +888,10 @@ public class EditorActivity extends AppCompatActivity {
                 StringWriter writer;
                 try {
                     if (config.getSec() && file.getPath().endsWith(".enc")) {
-                        Cipher c = Cipher.getInstance("AES/CBC/PKCS7Padding");
-                        c.init(Cipher.DECRYPT_MODE, key, iv);
-                        fInputStream = new FileInputStream(file);
-                        inputStream = new BufferedInputStream(new CipherInputStream(fInputStream,c));
+                        EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
+                                keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
+                        fInputStream = encryptedFile.openFileInput();
+                        inputStream = new BufferedInputStream(fInputStream);
                     } else {
                         fInputStream = new FileInputStream(file);
                         inputStream = new BufferedInputStream(fInputStream);

@@ -89,31 +89,6 @@ public class Config extends Application {
         editor.putBoolean(Constants.PREF_DEV_NET, enable).apply();
     }
 
-    // keystore
-    public boolean getKey() {
-        return sharedPreferences.getBoolean(Constants.PREF_GEN_KEY, false);
-    }
-
-    public void setKey(boolean key) {
-        editor.putBoolean(Constants.PREF_GEN_KEY, key).apply();
-    }
-
-    public String getKeyStore1() {
-        return sharedPreferences.getString(Constants.RUCKY_KEYSTORE, "");
-    }
-
-    public void setKeyStore1(String key1) {
-        editor.putString(Constants.RUCKY_KEYSTORE, key1).apply();
-    }
-
-    public String getKeyStore2() {
-        return sharedPreferences.getString(Constants.RUCKY_KEYSTORE2, "");
-    }
-
-    public void setKeyStore2(String key2) {
-        editor.putString(Constants.RUCKY_KEYSTORE2, key2).apply();
-    }
-
     // hid
     public boolean getHIDCustomise() { return sharedPreferences.getBoolean(Constants.PREF_HID_CHOICE, false); }
 

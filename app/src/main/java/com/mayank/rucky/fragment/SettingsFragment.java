@@ -1,7 +1,5 @@
 package com.mayank.rucky.fragment;
 
-import static android.util.Base64.encodeToString;
-
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -10,9 +8,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.security.keystore.KeyGenParameterSpec;
-import android.security.keystore.KeyProperties;
-import android.util.Base64;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.WindowManager;
@@ -36,15 +31,7 @@ import com.mayank.rucky.utils.ColorAdapter;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.SecureRandom;
 import java.util.Objects;
-
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -145,28 +132,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         assert securitySwitch != null;
         securitySwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
-            if(!config.getKey()) {
-                try {
-                    SecureRandom secRnd = new SecureRandom();
-                    IvParameterSpec iv = new IvParameterSpec(secRnd.generateSeed(16));
-                    KeyGenerator keygen = KeyGenerator.getInstance("AES");
-                    keygen.init(256);
-                    SecretKey key = keygen.generateKey();
-                    KeyPairGenerator kpg = KeyPairGenerator.getInstance(KeyProperties.KEY_ALGORITHM_RSA,Constants.KEYSTORE_PROVIDER_ANDROID_KEYSTORE);
-                    kpg.initialize(new KeyGenParameterSpec.Builder(Constants.KEYSTORE_PROVIDER_ANDROID_KEYSTORE, KeyProperties.PURPOSE_DECRYPT|KeyProperties.PURPOSE_ENCRYPT)
-                            .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_RSA_PKCS1)
-                            .setBlockModes(KeyProperties.BLOCK_MODE_ECB).build());
-                    KeyPair kp;
-                    kp = kpg.generateKeyPair();
-                    Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-                    cipher.init(Cipher.ENCRYPT_MODE, kp.getPublic());
-                    config.setKeyStore2(encodeToString(cipher.doFinal(iv.getIV()), Base64.DEFAULT));
-                    config.setKeyStore1(encodeToString(cipher.doFinal(key.getEncoded()), Base64.DEFAULT));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                config.setKey(true);
-            }
             config.setSec(switched);
             restartActivity();
             return true;

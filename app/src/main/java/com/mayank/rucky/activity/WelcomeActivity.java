@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -12,8 +13,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 import androidx.core.splashscreen.SplashScreen;
 
@@ -49,12 +53,48 @@ public class WelcomeActivity extends AppCompatActivity {
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(flags);
 
+        if (config.getInitState() && config.getSec())
+            biometric();
+
         SplashScreen.installSplashScreen(this);
 
         if (Build.VERSION.SDK_INT<=Build.VERSION_CODES.R)
             splash();
         else
             launchNext();
+    }
+
+    public void biometric() {
+        BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle(getResources().getString(R.string.unlock))
+                .setSubtitle(getResources().getString(R.string.auth))
+                .setConfirmationRequired(false)
+                .setAllowedAuthenticators(BiometricManager.Authenticators.DEVICE_CREDENTIAL | BiometricManager.Authenticators.BIOMETRIC_STRONG)
+                .build();
+        BiometricPrompt biometricPrompt = new BiometricPrompt(this, ContextCompat.getMainExecutor(this), new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                Log.e("onAuthenticationError", errString.toString());
+                super.onAuthenticationError(errorCode, errString);
+                finishAffinity();
+                System.exit(0);
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(
+                    @NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                Log.e("onAuthenticationFailed", "Mayank");
+                super.onAuthenticationFailed();
+                finishAffinity();
+                System.exit(0);
+            }
+        });
+        biometricPrompt.authenticate(promptInfo);
     }
 
     void launchNext() {
