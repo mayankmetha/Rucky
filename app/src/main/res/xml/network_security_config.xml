@@ -5,7 +5,28 @@
         </trust-anchors>
     </base-config>
     <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">github.io</domain>
         <domain includeSubdomains="true">github.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+        <pin-set expiration="2022-05-10">
+            <pin digest="SHA-256">k2v657xBsOVe1PQRwOsHsw3bsGT2VzIqz5K+59sNQws=</pin>
+            <pin digest="SHA-256">4PhpWPCTGkqmmjRFussirzvNSi4LjL7WWhUSAVFIXDc=</pin>
+            <pin digest="SHA-256">7zwAM/YU+zd8BZMCl0J943URuyF35zefKC7QIoxTq+U=</pin>
+            <pin digest="SHA-256">vnCogm4QYze/Bc9r88xdA6NTQY74p4BAz2w5gxkLG2M=</pin>
+        </pin-set>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="false">
         <domain includeSubdomains="true">crowdin.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+        <pin-set expiration="2022-04-23">
+            <pin digest="SHA-256">u0dRnSigSkADHGmd7AlnoYbqfg1tewCFEjjzNzhliQQ=</pin>
+            <pin digest="SHA-256">JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=</pin>
+            <pin digest="SHA-256">++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=</pin>
+            <pin digest="SHA-256">KwccWaCgrnaw6tsrrSO61FgLacNgG2MMLq8GE6+oP5I=</pin>
+        </pin-set>
     </domain-config>
 </network-security-config>
