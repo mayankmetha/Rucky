@@ -14,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -129,7 +130,7 @@ public class EditorActivity extends AppCompatActivity {
             requestPermissions();
         }
 
-        new Handler().postDelayed(() -> supportedFiles(true), 1000);
+        new Handler(Looper.getMainLooper()).postDelayed(() -> supportedFiles(true), 1000);
 
         getReleaseSigningHash();
         setNotificationChannel();
@@ -147,7 +148,8 @@ public class EditorActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        disableConfigFSHID();
+        if(config.getConfigFSOption())
+            disableConfigFSHID();
         AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
         builder.setTitle(getResources().getString(R.string.exit_dialog));
         builder.setCancelable(false);

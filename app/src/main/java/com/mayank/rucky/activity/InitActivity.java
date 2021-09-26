@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -133,7 +132,8 @@ public class InitActivity extends AppCompatActivity {
         dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml(Constants.HTML_DOTS));
+            dots[i].setText(Constants.DOTS);
+            dots[i].setText(Constants.DOTS);
             dots[i].setTextSize(35);
             dots[i].setTextColor(ContextCompat.getColor(this, R.color.foreground));
             dotsLayout.addView(dots[i]);

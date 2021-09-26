@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -170,7 +171,7 @@ public class HidActivity extends AppCompatActivity {
 
     void updateListView() {
         EditorActivity.keymapListRefresh(getApplicationContext());
-        new Handler().postDelayed(() -> {
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
             hidList.removeAllViewsInLayout();
             hidList.setAdapter(adapter);
         }, 500);

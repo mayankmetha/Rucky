@@ -121,6 +121,6 @@ public class Constants {
             R.drawable.splash_gradient_pink,            R.drawable.splash_gradient_red
     };
 
-    public static final String HTML_DOTS = "&#8226;";
+    public static final String DOTS = "•";
 
 }
