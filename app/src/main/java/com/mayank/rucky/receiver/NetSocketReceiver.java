@@ -6,6 +6,7 @@ import android.content.Intent;
 
 import com.mayank.rucky.activity.EditorActivity;
 import com.mayank.rucky.utils.Config;
+import com.mayank.rucky.utils.Constants;
 
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
@@ -23,11 +24,11 @@ public class NetSocketReceiver extends BroadcastReceiver {
         config = new Config(context);
         String action = intent.getAction();
         assert action != null;
-        if (action.equals("com.mayank.rucky.netSocketConnected")) {
+        if (action.equals(Constants.NET_SOCKET_CONNECTED)) {
             config.setNetworkStatus(true);
             oldStatus = status;
             status = 1;
-        } else if (action.equals("com.mayank.rucky.netSocketDisconnected")) {
+        } else if (action.equals(Constants.NET_SOCKET_DISCONNECTED)) {
             config.setNetworkStatus(false);
             oldStatus = status;
             status = 0;

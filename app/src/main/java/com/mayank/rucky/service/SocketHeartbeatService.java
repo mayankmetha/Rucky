@@ -51,8 +51,8 @@ public class SocketHeartbeatService extends Service {
                 .setContentIntent(sPendingIntent)
                 .setAutoCancel(false).build());
         IntentFilter filter = new IntentFilter();
-        filter.addAction("com.mayank.rucky.netSocketConnected");
-        filter.addAction("com.mayank.rucky.netSocketDisconnected");
+        filter.addAction(Constants.NET_SOCKET_CONNECTED);
+        filter.addAction(Constants.NET_SOCKET_DISCONNECTED);
         registerReceiver(receiver, filter);
         heartbeatTask();
         EditorActivity.updateNotification(getApplicationContext());
@@ -87,12 +87,12 @@ public class SocketHeartbeatService extends Service {
         try {
             Socket socket = new Socket(ip, port);
             if (socket.isConnected())
-                i.setAction("com.mayank.rucky.netSocketConnected");
+                i.setAction(Constants.NET_SOCKET_CONNECTED);
             else
-                i.setAction("com.mayank.rucky.netSocketDisconnected");
+                i.setAction(Constants.NET_SOCKET_DISCONNECTED);
             socket.close();
         } catch (Exception e) {
-            i.setAction("com.mayank.rucky.netSocketDisconnected");
+            i.setAction(Constants.NET_SOCKET_DISCONNECTED);
         }
     }
 }

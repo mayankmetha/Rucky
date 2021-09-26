@@ -18,6 +18,7 @@
         </pin-set>
     </domain-config>
     <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">crwd.in</domain>
         <domain includeSubdomains="true">crowdin.com</domain>
         <trust-anchors>
             <certificates src="system" />

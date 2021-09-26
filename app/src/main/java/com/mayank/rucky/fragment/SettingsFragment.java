@@ -1,6 +1,5 @@
 package com.mayank.rucky.fragment;
 
-import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -69,7 +68,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void darkThemeSetting() {
-        final SwitchPreference themeSwitch = findPreference("theme");
+        final SwitchPreference themeSwitch = findPreference(Constants.PREF_KEY_DARK_THEME);
         assert themeSwitch != null;
         themeSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
@@ -80,7 +79,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void accentColorSetting() {
-        final Preference accentPreference = findPreference("accent");
+        final Preference accentPreference = findPreference(Constants.PREF_KEY_ACCENT_COLOR);
         assert accentPreference != null;
         accentPreference.setOnPreferenceClickListener(preference -> {
             int[] colors = getResources().getIntArray(R.array.colors);
@@ -113,22 +112,22 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void hideLauncherIcon() {
-        final SwitchPreference iconSwitch = findPreference("icon");
+        final SwitchPreference iconSwitch = findPreference(Constants.PREF_KEY_LAUNCHER_ICON);
         assert iconSwitch != null;
         iconSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
             config.setIcon(switched);
             if (switched) {
-                requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky", "com.mayank.rucky.Main"),PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+                requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName(Constants.PACKAGE_NAME, Constants.MAIN_ACTIVITY),PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
             } else {
-                requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName("com.mayank.rucky", "com.mayank.rucky.Main"),PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+                requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName(Constants.PACKAGE_NAME, Constants.MAIN_ACTIVITY),PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
             }
             return true;
         });
     }
 
     private void security() {
-        final SwitchPreference securitySwitch = findPreference("sec");
+        final SwitchPreference securitySwitch = findPreference(Constants.PREF_KEY_SECURITY);
         assert securitySwitch != null;
         securitySwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
@@ -139,12 +138,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void cleanup() {
-        final Preference depPreference = findPreference("uninstall");
+        final Preference depPreference = findPreference(Constants.PREF_KEY_CLEANUP);
         assert depPreference != null;
         depPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(Intent.ACTION_DELETE);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.setData(Uri.parse("package:com.mayank.rucky"));
+            intent.setData(Uri.parse(Constants.PACKAGE_URI));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             startActivity(intent);
             return true;
@@ -152,9 +151,9 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void hidSettings() {
-        final SwitchPreference hidCustomise = findPreference("hidSelect");
+        final SwitchPreference hidCustomise = findPreference(Constants.PREF_KEY_HID_CUSTOMISE);
         assert hidCustomise != null;
-        final Preference hidPreference = findPreference("hid");
+        final Preference hidPreference = findPreference(Constants.PREF_KEY_HID);
         assert hidPreference != null;
         hidPreference.setEnabled(config.getHIDCustomise());
         hidPreference.setSelectable(config.getHIDCustomise());
@@ -177,7 +176,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void usb() {
-        final SwitchPreference usb = findPreference("usb");
+        final SwitchPreference usb = findPreference(Constants.PREF_KEY_USB);
         assert usb != null;
         usb.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
@@ -188,7 +187,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void net() {
-        final SwitchPreference net = findPreference("net");
+        final SwitchPreference net = findPreference(Constants.PREF_KEY_NET);
         assert net != null;
         net.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
@@ -199,19 +198,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void developer() {
-        final Preference developerPreference = findPreference("developer");
+        final Preference developerPreference = findPreference(Constants.PREF_KEY_DEV);
         assert developerPreference != null;
         developerPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
             intent.putExtra(Constants.activityTitle, getResources().getString(R.string.setting_developer_title));
-            intent.putExtra(Constants.webViewID, "https://mayankmetha.github.io");
+            intent.putExtra(Constants.webViewID, Constants.DEV_WEBSITE);
             startActivity(intent);
             return true;
         });
     }
 
     private void version() {
-        final Preference versionPreference = findPreference("version");
+        final Preference versionPreference = findPreference(Constants.PREF_KEY_VERSION);
         assert versionPreference != null;
         double currentVersion = 0.0;
         int currentVersionCode = 0;
@@ -222,43 +221,37 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        versionPreference.setSummary(currentVersion +" ("+ currentVersionCode +")");
+        versionPreference.setSummary(requireContext().getResources().getString(R.string.app_version, currentVersion, currentVersionCode));
     }
 
     private void arch() {
         String currentArch = Build.SUPPORTED_ABIS[0];
-        final Preference archPreference = findPreference("arch");
+        final Preference archPreference = findPreference(Constants.PREF_KEY_ARCH);
         assert archPreference != null;
         archPreference.setSummary(currentArch);
     }
 
-    @SuppressLint("NonConstantResourceId")
     private void source() {
-        final Preference distributionPreference = findPreference("source");
+        final Preference distributionPreference = findPreference(Constants.PREF_KEY_DISTRIBUTION);
         assert distributionPreference != null;
         distributionPreference.setSummary(EditorActivity.distro);
         String title = "";
         String url = "";
         boolean canIntent = true;
-        switch (EditorActivity.distro) {
-            case R.string.releaseGitHub:
-                title = getResources().getString(R.string.releaseGitHub);
-                url = "https://mayankmetha.github.io/Rucky/";
-                break;
-            case R.string.releaseGitHubNightly:
-                title = getResources().getString(R.string.releaseGitHubNightly);
-                url = "https://mayankmetha.github.io/Rucky/";
-                break;
-            case R.string.releaseTest:
-                title = getResources().getString(R.string.releaseTest);
-                url = "https://mayankmetha.github.io/Rucky/";
-                break;
-            case R.string.releaseNetHunter:
-                title = getResources().getString(R.string.releaseNetHunter);
-                url = "https://store.nethunter.com/en/packages/com.mayank.rucky/";
-                break;
-            default:
-                canIntent = false;
+        if (EditorActivity.distro == R.string.releaseGitHub) {
+            title = getResources().getString(R.string.releaseGitHub);
+            url = Constants.GITHUB_RELEASE;
+        } else if (EditorActivity.distro == R.string.releaseGitHubNightly) {
+            title = getResources().getString(R.string.releaseGitHubNightly);
+            url = Constants.GITHUB_RELEASE;
+        } else if (EditorActivity.distro == R.string.releaseTest) {
+            title = getResources().getString(R.string.releaseTest);
+            url = Constants.GITHUB_RELEASE;
+        } else if (EditorActivity.distro == R.string.releaseNetHunter) {
+            title = getResources().getString(R.string.releaseNetHunter);
+            url = Constants.KALI_NETHUNTER_RELEASE;
+        } else {
+            canIntent = false;
         }
         if(canIntent) {
             String finalTitle = title;
@@ -274,36 +267,36 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void license() {
-        final Preference licencePreference = findPreference("lic");
+        final Preference licencePreference = findPreference(Constants.PREF_KEY_LICENCE);
         assert licencePreference != null;
         licencePreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
             intent.putExtra(Constants.activityTitle, getResources().getString(R.string.settings_lic_title));
-            intent.putExtra(Constants.webViewID, "https://raw.githubusercontent.com/mayankmetha/Rucky/master/LICENSE");
+            intent.putExtra(Constants.webViewID, Constants.APP_LIC);
             startActivity(intent);
             return true;
         });
     }
 
     private void gitIssue() {
-        Preference gitPreference = findPreference("git");
+        Preference gitPreference = findPreference(Constants.PREF_KEY_GIT);
         assert gitPreference != null;
         gitPreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
             intent.putExtra(Constants.activityTitle, getResources().getString(R.string.settings_git_title));
-            intent.putExtra(Constants.webViewID, "https://github.com/mayankmetha/Rucky/issues");
+            intent.putExtra(Constants.webViewID, Constants.GIT_ISSUES);
             startActivity(intent);
             return true;
         });
     }
 
     private void translate() {
-        final Preference localePreference = findPreference("locale");
+        final Preference localePreference = findPreference(Constants.PREF_KEY_LOCALE);
         assert localePreference != null;
         localePreference.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity(), BrowserActivity.class);
             intent.putExtra(Constants.activityTitle, getResources().getString(R.string.settings_locale_title));
-            intent.putExtra(Constants.webViewID,"https://crwd.in/rucky");
+            intent.putExtra(Constants.webViewID,Constants.CROWDIN_JOIN);
             startActivity(intent);
             return true;
         });

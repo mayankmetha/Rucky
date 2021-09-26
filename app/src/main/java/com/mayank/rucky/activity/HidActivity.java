@@ -1,6 +1,5 @@
 package com.mayank.rucky.activity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -227,12 +226,11 @@ public class HidActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @SuppressLint("SetTextI18n")
     void redrawItem(View view, HidModel model) {
         TextView name = view.findViewById(R.id.hid_name);
         name.setText(model.getHidModelName());
         TextView rev = view.findViewById(R.id.hid_version);
-        rev.setText("Version: "+ model.getHidModelRevision());
+        rev.setText(getResources().getString(R.string.hid_version,model.getHidModelRevision()));
         ImageView icon = view.findViewById(R.id.hid_icon);
         switch (model.getHidModelState()) {
             case Constants.HID_DOWNLOAD:

@@ -1,6 +1,5 @@
 package com.mayank.rucky.activity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -128,14 +127,13 @@ public class InitActivity extends AppCompatActivity {
 
     }
 
-    @SuppressLint("ResourceType")
     private void addBottomDots(int currentPage) {
         TextView[] dots = new TextView[layouts.length];
 
         dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml("&#8226;"));
+            dots[i].setText(Html.fromHtml(Constants.HTML_DOTS));
             dots[i].setTextSize(35);
             dots[i].setTextColor(ContextCompat.getColor(this, R.color.foreground));
             dotsLayout.addView(dots[i]);

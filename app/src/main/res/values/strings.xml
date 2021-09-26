@@ -137,6 +137,8 @@
     <string name="file_deleted">deleted</string>
     <string name="file_name">File Name</string>
     <string name="title_save_file">Save File</string>
+    <string name="hid_version">Version: %d</string>
+    <string name="app_version" translatable="false">%.1f (%d)</string>
 
     <string-array name="modes">
         <item>USB Cable</item>

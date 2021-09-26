@@ -1,6 +1,5 @@
 package com.mayank.rucky.activity;
 
-import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,7 +11,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.method.ScrollingMovementMethod;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -62,7 +60,7 @@ public class UpdateActivity extends AppCompatActivity {
         EditorActivity.updateNotificationManager.cancel(0);
         setContentView(R.layout.activity_update);
 
-        apkFile = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),"rucky.apk");
+        apkFile = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),Constants.APK_NAME);
         downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
         deleteOldUpdateFiles();
         IntentFilter intentFilter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
@@ -142,18 +140,16 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
     private void getChangelog() {
-        String url = EditorActivity.nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/Changelog" : "https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/Changelog_"+EditorActivity.newVersion+"";
+        String url = EditorActivity.nightly ? Constants.CHANGELOG_NIGHTLY : Constants.CHANGELOG_RELEASE+EditorActivity.newVersion;
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> changelog.setText(response.trim()), (Response.ErrorListener) error -> {}));
     }
 
     void deleteOldUpdateFiles() {
         if (apkFile.exists() || apkFile.isFile()) {
-            //noinspection ResultOfMethodCallIgnored
             apkFile.delete();
             if(apkFile.exists() || apkFile.isFile()){
                 try {
-                    //noinspection ResultOfMethodCallIgnored
                     apkFile.getCanonicalFile().delete();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -170,8 +166,8 @@ public class UpdateActivity extends AppCompatActivity {
         query.setFilterById(downloadRef);
         Cursor cursor = downloadManager.query(query);
         if (cursor.moveToFirst()) {
-            @SuppressLint("Range") float fileSize = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
-            @SuppressLint("Range") float downloadedSize = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+            float fileSize = cursor.getInt(Math.max(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES), 0));
+            float downloadedSize = cursor.getInt(Math.max(cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR),0));
             float progress = downloadedSize/fileSize;
             if (fileSize != -1)
                 return ((int)(progress*100));
@@ -195,14 +191,14 @@ public class UpdateActivity extends AppCompatActivity {
     private long downloadUpdate() {
         Uri uri;
         if (EditorActivity.nightly)
-            uri = Uri.parse("https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk");
+            uri = Uri.parse(Constants.URL_NIGHTLY);
          else
-            uri = Uri.parse("https://github.com/mayankmetha/Rucky/releases/download/"+EditorActivity.newVersion+"/rucky.apk");
+            uri = Uri.parse(Constants.URL_BASE_RELEASE+EditorActivity.newVersion+Constants.URL_FILE_RELEASE);
         DownloadManager.Request req = new DownloadManager.Request(uri);
         req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         req.setAllowedOverRoaming(true);
         req.setTitle(getString(R.string.update_activity));
-        req.setDestinationUri(Uri.fromFile(new File(this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),"rucky.apk")));
+        req.setDestinationUri(Uri.fromFile(new File(this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),Constants.APK_NAME)));
         req.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
         return downloadManager.enqueue(req);
     }
@@ -219,7 +215,6 @@ public class UpdateActivity extends AppCompatActivity {
     void generateHash() {
         String genSHA512 = null;
         try {
-            //noinspection UnstableApiUsage
             genSHA512 = Files.asByteSource(apkFile).hash(Hashing.sha512()).toString();
         } catch (IOException e) {
             e.printStackTrace();
@@ -253,7 +248,7 @@ public class UpdateActivity extends AppCompatActivity {
         }
         Intent installer = new Intent(Intent.ACTION_VIEW);
         installer.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        installer.setDataAndType(apkUri, "application/vnd.android.package-archive");
+        installer.setDataAndType(apkUri, Constants.URI_INSTALLER);
         installer.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         finish();
         startActivity(installer);

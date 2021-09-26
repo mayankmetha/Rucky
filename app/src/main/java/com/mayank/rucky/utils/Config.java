@@ -1,6 +1,5 @@
 package com.mayank.rucky.utils;
 
-import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,7 +10,6 @@ public class Config extends Application {
     private final SharedPreferences.Editor editor;
     final static int randomTheme = new Randoms().randomTheme();
 
-    @SuppressLint("CommitPrefEdits")
     public Config(Context context) {
         sharedPreferences = context.getSharedPreferences(Constants.PREF, MODE_PRIVATE);
         editor = sharedPreferences.edit();

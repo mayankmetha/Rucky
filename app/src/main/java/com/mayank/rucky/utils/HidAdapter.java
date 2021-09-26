@@ -1,6 +1,5 @@
 package com.mayank.rucky.utils;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,7 +42,6 @@ public class HidAdapter extends ArrayAdapter<HidModel> {
         return false;
     }
 
-    @SuppressLint("SetTextI18n")
     @NonNull
     @Override
     public View getView(int pos, View convertedView, @NonNull ViewGroup parent) {
@@ -55,7 +53,7 @@ public class HidAdapter extends ArrayAdapter<HidModel> {
         TextView name = convertedView.findViewById(R.id.hid_name);
         name.setText(hidViewModel.getHidModelName());
         TextView rev = convertedView.findViewById(R.id.hid_version);
-        rev.setText("Version: "+ hidViewModel.getHidModelRevision());
+        rev.setText(context.getResources().getString(R.string.hid_version, hidViewModel.getHidModelRevision()));
         ImageView icon = convertedView.findViewById(R.id.hid_icon);
         switch (hidViewModel.getHidModelState()) {
             case Constants.HID_DOWNLOAD:

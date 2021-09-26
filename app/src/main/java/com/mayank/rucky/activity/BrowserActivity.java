@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.WindowManager;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
@@ -39,6 +40,8 @@ public class BrowserActivity extends AppCompatActivity {
         String url = getIntent().getStringExtra(Constants.webViewID);
 
         webView = findViewById(R.id.browserView);
+        webView.setWebViewClient(new WebViewClient());
+        webView.setWebChromeClient(new WebChromeClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
         webView.getSettings().setLoadsImagesAutomatically(true);
@@ -73,5 +76,4 @@ public class BrowserActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 }

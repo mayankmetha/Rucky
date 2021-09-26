@@ -7,6 +7,7 @@ import android.os.Build;
 
 import com.mayank.rucky.activity.EditorActivity;
 import com.mayank.rucky.utils.Config;
+import com.mayank.rucky.utils.Constants;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -27,8 +28,8 @@ public class USBReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         assert action != null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            if (action.equals("android.hardware.usb.action.USB_STATE")) {
-                config.setUSBStatus(Objects.requireNonNull(intent.getExtras()).getBoolean("connected"));
+            if (action.equals(Constants.USB_ACTION)) {
+                config.setUSBStatus(Objects.requireNonNull(intent.getExtras()).getBoolean(Constants.USB_ACTION_STATE));
                 EditorActivity.updateServiceStatus(context);
             }
         } else {

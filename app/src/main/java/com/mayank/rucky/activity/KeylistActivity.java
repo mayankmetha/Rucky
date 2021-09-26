@@ -1,7 +1,6 @@
 package com.mayank.rucky.activity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
@@ -184,7 +183,6 @@ public class KeylistActivity extends AppCompatActivity {
         for(int i = ctrlKey.getChildCount()-1; i >=0 ; i--) {
             checked = (Chip) ctrlKey.getChildAt(i);
             if(model != null && model.getCtrl(model.getModifier()).equalsIgnoreCase(checked.getText().toString())) {
-                Log.e("Ctrlchecked",checked.getText().toString());
                 checkedFlag = true;
                 checked.setChecked(true);
                 ctrl.set(model.getCtrlInt(model.getModifier()));
