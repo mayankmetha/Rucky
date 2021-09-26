@@ -10,6 +10,7 @@ public class Constants {
     public static final String PACKAGE_URI = "package:com.mayank.rucky";
     public static final String DEV_WEBSITE = "https://mayankmetha.github.io";
     public static final String GITHUB_RELEASE = "https://mayankmetha.github.io/Rucky/";
+    public static final String GITHUB_RELEASE_LATEST = "https://github.com/mayankmetha/Rucky/releases/latest";
     public static final String KALI_NETHUNTER_RELEASE = "https://store.nethunter.com/en/packages/com.mayank.rucky/";
     public static final String APP_LIC = "https://raw.githubusercontent.com/mayankmetha/Rucky/master/LICENSE";
     public static final String GIT_ISSUES = "https://github.com/mayankmetha/Rucky/issues";
@@ -20,7 +21,14 @@ public class Constants {
     public static final String URL_NIGHTLY = "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk";
     public static final String URL_BASE_RELEASE = "https://github.com/mayankmetha/Rucky/releases/download/";
     public static final String URL_FILE_RELEASE = "/rucky.apk";
+    public static final String CFG_NIGHTLY = "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.cfg";
+    public static final String CFG_BASE_RELEASE = "https://github.com/mayankmetha/Rucky/releases/download/";
+    public static final String CFG_FILE_RELEASE = "/rucky.cfg";
+    public static final String SIG_NIGHTLY = "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512";
+    public static final String SIG_BASE_RELEASE = "https://github.com/mayankmetha/Rucky/releases/download/";
+    public static final String SIG_FILE_RELEASE = "/rucky.sha512";
     public static final String URI_INSTALLER = "application/vnd.android.package-archive";
+    public static final String KEYMAP_URL = "https://raw.githubusercontent.com/mayankmetha/Rucky-KeyMap/main/keymap.json";
 
     //HIDModel
     public static final int HID_OFFLINE = 1;

@@ -24,7 +24,7 @@
     <string name="slideDesc6">Please grant app the required permission to work!</string>
 
     <!-- Update screen -->
-    <string name="update_new">New update available</string>
+    <string name="update_new">New Update Available Version: </string>
     <string name="update_hash_error">File Signature Mismatch! Cannot Update.</string>
     <string name="update_activity">Rucky Update</string>
     <string name="update_version">Version</string>

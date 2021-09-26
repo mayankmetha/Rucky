@@ -383,7 +383,7 @@ public class EditorActivity extends AppCompatActivity {
         if (n.isNetworkPresent(this)) {
             Runnable runnable = () -> {
                 try {
-                    URL url = new URL("https://github.com/mayankmetha/Rucky/releases/latest");
+                    URL url = new URL(Constants.GITHUB_RELEASE_LATEST);
                     HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
                     conn.setInstanceFollowRedirects(false);
                     conn.getInputStream();
@@ -406,7 +406,7 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     private StringRequest getUpdateMetadata() {
-        String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.cfg" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.cfg";
+        String url = nightly ? Constants.CFG_NIGHTLY : Constants.CFG_BASE_RELEASE + newVersion + Constants.CFG_FILE_RELEASE;
         return new StringRequest(Request.Method.GET, url,
                 response -> {
                     String[] lines = response.split("\\r?\\n");
@@ -426,7 +426,7 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     private StringRequest getUpdateSignature() {
-        String url = nightly ? "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky.sha512" : "https://github.com/mayankmetha/Rucky/releases/download/" + newVersion + "/rucky.sha512";
+        String url = nightly ? Constants.SIG_NIGHTLY : Constants.SIG_BASE_RELEASE + newVersion + Constants.SIG_FILE_RELEASE;
         return new StringRequest(Request.Method.GET, url, response -> getSHA512 = response.trim(), error -> getSHA512 = "");
     }
 
@@ -436,9 +436,9 @@ public class EditorActivity extends AppCompatActivity {
             if (nightly && newNightly > currentNightly) {
                 Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
                 updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_IMMUTABLE);
                 updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                        .setContentTitle(getResources().getString(R.string.update_new)+" Nightly Version: "+ newVersion+" ("+newNightly+")")
+                        .setContentTitle(String.format("%s%s (%s)",getString(R.string.update_new),newVersion,newNightly))
                         .setSmallIcon(R.drawable.ic_notification)
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
@@ -448,9 +448,9 @@ public class EditorActivity extends AppCompatActivity {
             } else if(newVersion > currentVersion) {
                 Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
                 updateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                @SuppressLint("UnspecifiedImmutableFlag") PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent notifyPendingIntent = PendingIntent.getActivity(this, 0, updateIntent, PendingIntent.FLAG_IMMUTABLE);
                 updateNotify = new NotificationCompat.Builder(this, Constants.CHANNEL_ID)
-                        .setContentTitle(getResources().getString(R.string.update_new) + " Version: " + newVersion)
+                        .setContentTitle(String.format("%s%s",getString(R.string.update_new),newVersion))
                         .setSmallIcon(R.drawable.ic_notification)
                         .setContentIntent(notifyPendingIntent)
                         .setAutoCancel(false);
@@ -1056,8 +1056,7 @@ public class EditorActivity extends AppCompatActivity {
 
     static void getKeymapRepo(Context context) {
         RequestQueue requestQueue = Volley.newRequestQueue(context);
-        String url = "https://raw.githubusercontent.com/mayankmetha/Rucky-KeyMap/main/keymap.json";
-        JsonArrayRequest req = new JsonArrayRequest(Request.Method.GET, url, null,
+        JsonArrayRequest req = new JsonArrayRequest(Request.Method.GET, Constants.KEYMAP_URL, null,
             response -> {
                 for(int i=0; i < response.length(); i++) {
                     boolean added = false;
