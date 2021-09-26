@@ -3,11 +3,14 @@ package com.mayank.rucky.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -24,9 +27,6 @@ import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.CustomTransformation;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class InitActivity extends AppCompatActivity {
 
@@ -46,11 +46,27 @@ public class InitActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        hideNavigationBar();
         setTheme(Constants.themeList[config.getAccentTheme()]);
         config.setAccentTheme(config.getAccentTheme());
         setContentView(R.layout.activity_init);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            getWindow().setDecorFitsSystemWindows(false);
+            WindowInsetsController controller = getWindow().getInsetsController();
+            if(controller != null) {
+                controller.hide(WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars());
+                controller.setSystemBarsBehavior(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            }
+        }
+        else {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
+        }
 
         viewPager = findViewById(R.id.view_pager);
         dotsLayout = findViewById(R.id.layoutDots);
@@ -98,51 +114,17 @@ public class InitActivity extends AppCompatActivity {
         setTheme(Constants.themeList[config.getAccentTheme()]);
     }
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        hideNavigationBar();
-    }
-
-    public void hideNavigationBar() {
-        final View decorView = this.getWindow().getDecorView();
-        final int uiOptions =
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-                InitActivity.this.runOnUiThread(() -> decorView.setSystemUiVisibility(uiOptions));
-            }
-        };
-        timer.scheduleAtFixedRate(task, 1, 2);
-
-    }
-
     private void addBottomDots(int currentPage) {
+        final TypedValue value = new TypedValue();
+        TypedArray typedArray = this.getTheme().obtainStyledAttributes(value.data,new int[]{ R.attr.appColorAccent });
         TextView[] dots = new TextView[layouts.length];
-
         dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Constants.DOTS);
-            dots[i].setText(Constants.DOTS);
             dots[i].setTextSize(35);
-            dots[i].setTextColor(ContextCompat.getColor(this, R.color.foreground));
+            dots[i].setTextColor( i == currentPage ? typedArray.getColor(0, 0) : ContextCompat.getColor(this, R.color.foreground));
             dotsLayout.addView(dots[i]);
-        }
-
-        if (dots.length > 0) {
-            final TypedValue value = new TypedValue();
-            TypedArray typedArray = this.getTheme().obtainStyledAttributes(value.data,new int[]{ R.attr.appColorAccent });
-            dots[currentPage].setTextColor(typedArray.getColor(0, 0));
         }
     }
 

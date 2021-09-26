@@ -10,45 +10,50 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/layoutDots"/>
-
-    <LinearLayout
-        android:id="@+id/layoutDots"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dots_height"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dots_margin_bottom"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-    </LinearLayout>
+        android:layout_above="@id/view_divider" />
 
     <View
+        android:id="@+id/view_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_above="@id/layoutDots"
+        android:layout_above="@id/view_bottom_bar"
         android:background="@drawable/divider" />
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/InitButton"
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/view_bottom_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="@string/init_next"
-        android:textColor="?attr/appColorAccent"
-        tools:ignore="RelativeOverlap" />
+        android:orientation="horizontal">
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/InitButton"
-        android:id="@+id/btn_skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:text="@string/init_skip"
-        android:textColor="?attr/appColorAccent"
-        tools:ignore="RelativeOverlap" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_skip"
+            style="@style/InitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/init_skip"
+            android:textColor="?attr/appColorAccent"
+            tools:ignore="RelativeOverlap" />
+
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            style="@style/InitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/init_next"
+            android:textColor="?attr/appColorAccent"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
 
 </RelativeLayout>

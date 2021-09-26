@@ -201,7 +201,7 @@ public class EditorActivity extends AppCompatActivity {
                     }
                 }
             } else {
-                for (Signature signature : getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES).signatures) {
+                for (Signature signature : PackageInfoCompat.getSignatures(getPackageManager(),getPackageName())) {
                     MessageDigest md = MessageDigest.getInstance("SHA256");
                     md.update(signature.toByteArray());
                     hashList.add(new String(Base64.encode(md.digest(), 0)));
