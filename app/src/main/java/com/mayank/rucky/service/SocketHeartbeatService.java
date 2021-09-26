@@ -55,7 +55,14 @@ public class SocketHeartbeatService extends Service {
         filter.addAction(Constants.NET_SOCKET_DISCONNECTED);
         registerReceiver(receiver, filter);
         heartbeatTask();
-        EditorActivity.updateNotification(getApplicationContext());
+        EditorActivity.serviceNotificationManager.notify(1, new NotificationCompat.Builder(getApplicationContext(), Constants.SCHANNEL_ID)
+                .setContentTitle(getApplicationContext().getString(config.getStatusTextRes()))
+                .setSmallIcon(R.drawable.ic_notification)
+                .setOngoing(true)
+                .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0,
+                        new Intent(getApplicationContext(), WelcomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK),
+                        PendingIntent.FLAG_IMMUTABLE))
+                .setAutoCancel(false).build());
         return START_NOT_STICKY;
     }
 

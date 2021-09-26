@@ -370,7 +370,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/swap_calls/baseline_swap_calls_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/dynamic_form/baseline_dynamic_form_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -380,9 +380,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="splash_name" />
+                            <entry key="outputName" value="ic_config_fs" />
                             <entry key="sourceFile" value="$PROJECT_DIR$/app/name.svg" />
                           </map>
                         </option>

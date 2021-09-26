@@ -93,8 +93,6 @@ public class EditorActivity extends AppCompatActivity {
     public static ArrayList<String> cmds;
     public static NotificationManager serviceNotificationManager;
     public static NotificationManager updateNotificationManager;
-    @SuppressLint("StaticFieldLeak")
-    public static NotificationCompat.Builder sNotify;
     private static boolean noHidFile = false;
     public static ArrayList<HidModel> keymap;
 
@@ -154,7 +152,7 @@ public class EditorActivity extends AppCompatActivity {
         builder.setCancelable(false);
         builder.setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
             if(config.getHIDMode() == 1)
-                stopNetworkSocketService(this);
+                stopNetworkSocketService();
             finishAndRemoveTask();
             System.exit(0);
         });
@@ -260,84 +258,63 @@ public class EditorActivity extends AppCompatActivity {
         } else {
             serviceNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
-
-        updateServiceStatus(this);
+        updateServiceStatus();
     }
 
-    public static void startNetworkSocketService(Context context) {
+    private void startNetworkSocketService() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            context.startForegroundService(new Intent(context, SocketHeartbeatService.class));
+            getApplicationContext().startForegroundService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
         } else {
-            context.startService(new Intent(context, SocketHeartbeatService.class));
+            getApplicationContext().startService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
         }
-        updateNotification(context);
+        updateNotification();
     }
 
-    public static void stopNetworkSocketService(Context context) {
-        context.stopService(new Intent(context, SocketHeartbeatService.class));
+    private void stopNetworkSocketService() {
+        getApplicationContext().stopService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
     }
 
-    public static boolean configActivityCreated() {
-        return ConfigActivity.statusText != null && ConfigActivity.statusImage != null;
-    }
-
-    public static void updateConfigActivityUSBStatus(Config config, Context context) {
-        if (configActivityCreated()) {
-            if (config.getUSBStatus()) {
-                ConfigActivity.statusText.setText(R.string.config_status_usb_on);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_usb));
-            } else {
-                ConfigActivity.statusText.setText(R.string.config_status_usb_off);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_usb_off));
-            }
+    private void updateConfigActivityUSBStatus() {
+        if (config.getUSBStatus()) {
+            config.setStatusTextRes(R.string.config_status_usb_on);
+            config.setStatusImageRes(R.drawable.ic_usb);
+        } else {
+            config.setStatusTextRes(R.string.config_status_usb_off);
+            config.setStatusImageRes(R.drawable.ic_usb_off);
         }
     }
 
-    public static void updateConfigActivityNetSocketStatus(Config config, Context context) {
-        if (configActivityCreated()) {
-            if (config.getNetworkStatus()) {
-                ConfigActivity.statusText.setText(R.string.config_status_net_on);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_net));
-            } else {
-                ConfigActivity.statusText.setText(R.string.config_status_net_off);
-                ConfigActivity.statusImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_net_off));
-            }
+    private void updateConfigActivityNetSocketStatus() {
+        if (config.getNetworkStatus()) {
+            config.setStatusTextRes(R.string.config_status_net_on);
+            config.setStatusImageRes(R.drawable.ic_net);
+        } else {
+            config.setStatusTextRes(R.string.config_status_net_off);
+            config.setStatusImageRes(R.drawable.ic_net_off);
         }
     }
 
-    public static void updateServiceStatus(Context context) {
-        Config config = new Config(context);
+    private void updateServiceStatus() {
         if (config.getHIDMode() == 0) {
-            stopNetworkSocketService(context);
-            updateConfigActivityUSBStatus(config, context);
+            stopNetworkSocketService();
+            updateConfigActivityUSBStatus();
         } else if (config.getHIDMode() == 1) {
-            startNetworkSocketService(context);
-            updateConfigActivityNetSocketStatus(config, context);
-            updateNotification(context);
+            startNetworkSocketService();
+            updateConfigActivityNetSocketStatus();
+            updateNotification();
         }
     }
 
-    public static void buildNotification(Context context, String text) {
-        Intent sIntent = new Intent(context, WelcomeActivity.class);
-        sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent sPendingIntent;
-        sPendingIntent = PendingIntent.getActivity(context, 0, sIntent, PendingIntent.FLAG_IMMUTABLE);
-        sNotify = new NotificationCompat.Builder(context, Constants.SCHANNEL_ID)
-                .setContentTitle(text)
-                .setSmallIcon(R.drawable.ic_notification)
-                .setOngoing(true)
-                .setContentIntent(sPendingIntent)
-                .setAutoCancel(false);
-        serviceNotificationManager.notify(1, sNotify.build());
-    }
-
-    public static void updateNotification(Context context) {
-        Config c = new Config(context);
-        if (c.getHIDMode() == 1) {
-            if (c.getNetworkStatus())
-                buildNotification(context,context.getString(R.string.config_status_net_on));
-            else
-                buildNotification(context,context.getString(R.string.config_status_net_off));
+    private void updateNotification() {
+        if (config.getHIDMode() == 1) {
+            serviceNotificationManager.notify(1, new NotificationCompat.Builder(getApplicationContext(), Constants.SCHANNEL_ID)
+                    .setContentTitle(getApplicationContext().getString(config.getStatusTextRes()))
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setOngoing(true)
+                    .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0,
+                            new Intent(getApplicationContext(), WelcomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK),
+                            PendingIntent.FLAG_IMMUTABLE))
+                    .setAutoCancel(false).build());
         }
     }
 
@@ -735,7 +712,7 @@ public class EditorActivity extends AppCompatActivity {
         if (root) {
             if(checkHIDFiles())
                 canExe = true;
-            else {
+            else if(config.getConfigFSOption()) {
                 if(checkKernel() && checkConfigFS()) {
                     if(createConfigFSKeyboard() == 0 && createConfigFSMouse() == 0) {
                         canExe = enableConfigFSHID();
@@ -750,6 +727,16 @@ public class EditorActivity extends AppCompatActivity {
                             kernelExit.show();
                         }
                     }
+                }
+            } else {
+                if(!quiet) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
+                    builder.setTitle(getResources().getString(R.string.kernel_err));
+                    builder.setCancelable(false);
+                    builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
+                    AlertDialog kernelExit = builder.create();
+                    Objects.requireNonNull(kernelExit.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+                    kernelExit.show();
                 }
             }
         } else {

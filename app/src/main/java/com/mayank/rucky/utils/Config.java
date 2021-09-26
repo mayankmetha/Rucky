@@ -15,6 +15,10 @@ public class Config extends Application {
         editor = sharedPreferences.edit();
     }
 
+    public SharedPreferences getAppSharedPreferences() {
+        return sharedPreferences;
+    }
+
     // dark theme
     public boolean getDarkMode() {
         return sharedPreferences.getBoolean(Constants.PREF_SETTINGS_DARK_THEME, true);
@@ -160,5 +164,32 @@ public class Config extends Application {
 
     public void setNetworkAddress(String address) {
         editor.putString(Constants.PREF_DEV_NET_ADDRESS, address).apply();
+    }
+
+    //config status text
+    public int getStatusTextRes() {
+        return sharedPreferences.getInt(Constants.PREF_UI_STATUS_TEXT,0);
+    }
+
+    public void setStatusTextRes(int resId) {
+        editor.putInt(Constants.PREF_UI_STATUS_TEXT, resId).apply();
+    }
+
+    //config status text
+    public int getStatusImageRes() {
+        return sharedPreferences.getInt(Constants.PREF_UI_STATUS_IMG,0);
+    }
+
+    public void setStatusImageRes(int resId) {
+        editor.putInt(Constants.PREF_UI_STATUS_IMG, resId).apply();
+    }
+
+    //configfs preference
+    public boolean getConfigFSOption() {
+        return sharedPreferences.getBoolean(Constants.PREF_CONFIGFS, false);
+    }
+
+    public void setConfigFSOption(boolean status) {
+        editor.putBoolean(Constants.PREF_CONFIGFS, status).apply();
     }
 }

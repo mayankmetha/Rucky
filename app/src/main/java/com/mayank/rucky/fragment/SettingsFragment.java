@@ -53,6 +53,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         security();
         cleanup();
 
+        configFS();
         hidSettings();
         usb();
         net();
@@ -146,6 +147,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             intent.setData(Uri.parse(Constants.PACKAGE_URI));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             startActivity(intent);
+            return true;
+        });
+    }
+
+    private void configFS() {
+        final SwitchPreference configfs = findPreference(Constants.PREF_KEY_CONFIGFS);
+        assert configfs != null;
+        configfs.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean switched = !((SwitchPreference) preference).isChecked();
+            config.setConfigFSOption(switched);
+            restartActivity();
             return true;
         });
     }

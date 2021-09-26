@@ -1,6 +1,8 @@
 package com.mayank.rucky.activity;
 
-import android.annotation.SuppressLint;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.LayoutInflater;
@@ -15,9 +17,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
 import com.mayank.rucky.R;
+import com.mayank.rucky.service.SocketHeartbeatService;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 
@@ -31,10 +35,8 @@ import java.util.regex.Pattern;
 public class ConfigActivity extends AppCompatActivity {
 
     Config config;
-    @SuppressLint("StaticFieldLeak")
-    public static TextView statusText;
-    @SuppressLint("StaticFieldLeak")
-    public static ImageView statusImage;
+    public TextView statusText;
+    public ImageView statusImage;
     public Button ipButton;
     public View ipStatusDivider;
 
@@ -66,6 +68,11 @@ public class ConfigActivity extends AppCompatActivity {
         language();
         mode();
         networkAddress();
+
+        config.getAppSharedPreferences().registerOnSharedPreferenceChangeListener((sharedPreferences, s) -> {
+            if (s.equals(Constants.PREF_UI_STATUS_TEXT) || s.equals(Constants.PREF_UI_STATUS_IMG))
+                updateStatus();
+        });
     }
 
     private void language() {
@@ -139,31 +146,38 @@ public class ConfigActivity extends AppCompatActivity {
     private void updateStatus() {
         if (config.getHIDMode() == 0) {
             config.setNetworkStatus(false);
-            EditorActivity.stopNetworkSocketService(this);
+            getApplicationContext().stopService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
             ipButton.setEnabled(false);
             ipButton.setAlpha(0);
             ipStatusDivider.setAlpha(0);
             if (config.getUSBStatus()) {
-                statusText.setText(R.string.config_status_usb_on);
-                statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_usb));
+                config.setStatusTextRes(R.string.config_status_usb_on);
+                config.setStatusImageRes(R.drawable.ic_usb);
             } else {
-                statusText.setText(R.string.config_status_usb_off);
-                statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_usb_off));
+                config.setStatusTextRes(R.string.config_status_usb_off);
+                config.setStatusImageRes(R.drawable.ic_usb_off);
             }
         } else if (config.getHIDMode() == 1) {
-            EditorActivity.startNetworkSocketService(this);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                getApplicationContext().startForegroundService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
+            } else {
+                getApplicationContext().startService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
+            }
+            updateNotification();
             ipButton.setEnabled(true);
             ipButton.setAlpha(1);
             ipStatusDivider.setAlpha(1);
             if (config.getNetworkStatus()) {
-                statusText.setText(R.string.config_status_net_on);
-                statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_net));
+                config.setStatusTextRes(R.string.config_status_net_on);
+                config.setStatusImageRes(R.drawable.ic_net);
             } else {
-                statusText.setText(R.string.config_status_net_off);
-                statusImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_net_off));
+                config.setStatusTextRes(R.string.config_status_net_off);
+                config.setStatusImageRes(R.drawable.ic_net_off);
             }
-            EditorActivity.updateNotification(this);
+            updateNotification();
         }
+        statusImage.setImageDrawable(ContextCompat.getDrawable(this,config.getStatusImageRes()));
+        statusText.setText(config.getStatusTextRes());
     }
 
     private void networkAddress() {
@@ -181,13 +195,24 @@ public class ConfigActivity extends AppCompatActivity {
                 if (matcher.matches())
                     config.setNetworkAddress(address.getText().toString());
                 ipButton.setText(config.getNetworkAddress());
-                EditorActivity.updateNotification(this);
+                updateNotification();
             });
             builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog saveDialog = builder.create();
             Objects.requireNonNull(saveDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
             saveDialog.show();
         });
+    }
+
+    private void updateNotification() {
+        EditorActivity.serviceNotificationManager.notify(1, new NotificationCompat.Builder(getApplicationContext(), Constants.SCHANNEL_ID)
+                .setContentTitle(getApplicationContext().getString(config.getStatusTextRes()))
+                .setSmallIcon(R.drawable.ic_notification)
+                .setOngoing(true)
+                .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0,
+                        new Intent(getApplicationContext(), WelcomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK),
+                        PendingIntent.FLAG_IMMUTABLE))
+                .setAutoCancel(false).build());
     }
 
 }
