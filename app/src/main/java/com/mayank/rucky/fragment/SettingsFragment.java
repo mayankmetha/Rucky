@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.pm.PackageInfoCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
@@ -225,10 +226,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final Preference versionPreference = findPreference(Constants.PREF_KEY_VERSION);
         assert versionPreference != null;
         double currentVersion = 0.0;
-        int currentVersionCode = 0;
+        long currentVersionCode = 0;
         try {
             PackageInfo pInfo = this.requireActivity().getPackageManager().getPackageInfo(this.requireActivity().getPackageName(), 0);
-            currentVersionCode = pInfo.versionCode;
+            currentVersionCode = PackageInfoCompat.getLongVersionCode(pInfo);
             currentVersion = Double.parseDouble(pInfo.versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();

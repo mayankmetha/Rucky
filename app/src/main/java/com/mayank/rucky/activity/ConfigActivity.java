@@ -4,7 +4,6 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -62,7 +61,10 @@ public class ConfigActivity extends AppCompatActivity {
         ipStatusDivider = findViewById(R.id.divider_config3);
 
         ipButton.setText(config.getNetworkAddress());
-        SOCKET_ADDRESS = Pattern.compile(Patterns.IP_ADDRESS+":"+"([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])");
+        SOCKET_ADDRESS = Pattern.compile("((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(25[0-5]|2[0-4]"
+                + "[0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]"
+                + "[0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}"
+                + "|[1-9][0-9]|[0-9]))"+":"+"([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])");
 
         updateStatus();
         language();

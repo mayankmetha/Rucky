@@ -29,6 +29,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.pm.PackageInfoCompat;
 import androidx.security.crypto.EncryptedFile;
 import androidx.security.crypto.MasterKey;
 
@@ -102,8 +103,8 @@ public class EditorActivity extends AppCompatActivity {
     RequestQueue queue;
     static double currentVersion;
     static double newVersion;
-    static int currentNightly;
-    static int newNightly;
+    static long currentNightly;
+    static long newNightly;
     public static int minAndroidSDK;
 
     @Override
@@ -173,6 +174,7 @@ public class EditorActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("PackageManagerGetSignatures")
     private void getReleaseSigningHash() {
         String NetHunter = "x2j+O+TND/jjH0ryjO/2ROPpjCvHoHK/XnjrgdAHJfM=";
         String GitHubRelease = "0Xv/I6xP6Q1wKbIqCgXi4CafhKZtOZLOR575TiqN93s=";
@@ -197,9 +199,7 @@ public class EditorActivity extends AppCompatActivity {
                     }
                 }
             } else {
-                @SuppressLint("PackageManagerGetSignatures")
-                PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
-                for (Signature signature : info.signatures) {
+                for (Signature signature : getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES).signatures) {
                     MessageDigest md = MessageDigest.getInstance("SHA256");
                     md.update(signature.toByteArray());
                     hashList.add(new String(Base64.encode(md.digest(), 0)));
@@ -349,7 +349,7 @@ public class EditorActivity extends AppCompatActivity {
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
             currentVersion = Double.parseDouble(pInfo.versionName);
-            currentNightly = pInfo.versionCode;
+            currentNightly = PackageInfoCompat.getLongVersionCode(pInfo);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -389,7 +389,7 @@ public class EditorActivity extends AppCompatActivity {
                     String[] lines = response.split("\\r?\\n");
                     try {
                         minAndroidSDK = lines[0] != null ? Integer.parseInt(lines[0]) : 0;
-                        newNightly = lines[1] != null ? Integer.parseInt(lines[1]) : currentNightly;
+                        newNightly = lines[1] != null ? Long.parseLong(lines[1]) : currentNightly;
                     } catch (Exception e) {
                         minAndroidSDK = 0;
                         newNightly = currentNightly;
@@ -783,11 +783,9 @@ public class EditorActivity extends AppCompatActivity {
             builder.setCancelable(false);
             builder.setItems(fileName, (dialog, i) -> {
                 File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
-                //noinspection ResultOfMethodCallIgnored
                 file.delete();
                 if(file.exists()){
                     try {
-                        //noinspection ResultOfMethodCallIgnored
                         file.getCanonicalFile().delete();
                     } catch (IOException e) {
                         e.printStackTrace();

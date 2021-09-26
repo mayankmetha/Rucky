@@ -3,7 +3,6 @@ package com.mayank.rucky.activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -23,6 +22,9 @@ import androidx.core.splashscreen.SplashScreen;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -122,6 +124,6 @@ public class WelcomeActivity extends AppCompatActivity {
         FrameLayout l2= findViewById(R.id.splashTextView);
         i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
-        new Handler().postDelayed(this::launchNext, 2000);
+        Executors.newSingleThreadScheduledExecutor().schedule(this::launchNext, 2, TimeUnit.SECONDS);
     }
 }

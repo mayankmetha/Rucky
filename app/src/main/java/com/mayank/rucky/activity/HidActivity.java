@@ -178,11 +178,9 @@ public class HidActivity extends AppCompatActivity {
 
     void hidDelete(HidModel model) {
         File file = new File(this.getExternalFilesDir("keymap"),model.getHidModelFilename());
-        //noinspection ResultOfMethodCallIgnored
         file.delete();
         if(file.exists()){
             try {
-                //noinspection ResultOfMethodCallIgnored
                 file.getCanonicalFile().delete();
             } catch (IOException e) {
                 e.printStackTrace();
