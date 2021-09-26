@@ -8,6 +8,19 @@
 
 ---
 
+# Status
+## Build
+[![Debug Build](https://github.com/mayankmetha/Rucky/actions/workflows/debug_build.yml/badge.svg)](https://github.com/mayankmetha/Rucky/actions/workflows/debug_build.yml)
+[![Github Nightly Build](https://github.com/mayankmetha/Rucky/actions/workflows/github_nightly_build.yml/badge.svg)](https://github.com/mayankmetha/Rucky/actions/workflows/github_nightly_build.yml)
+[![Github Release Build](https://github.com/mayankmetha/Rucky/actions/workflows/github_release_build.yml/badge.svg)](https://github.com/mayankmetha/Rucky/actions/workflows/github_release_build.yml)
+[![Nethunter Build](https://github.com/mayankmetha/Rucky/actions/workflows/nethunter_build.yml/badge.svg)](https://github.com/mayankmetha/Rucky/actions/workflows/nethunter_build.yml)
+
+## Code Analysis
+[![CodeQL](https://github.com/mayankmetha/Rucky/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mayankmetha/Rucky/actions/workflows/codeql-analysis.yml)
+[![mobsfscan sarif](https://github.com/mayankmetha/Rucky/actions/workflows/mobsfscan_sarif.yml/badge.svg)](https://github.com/mayankmetha/Rucky/actions/workflows/mobsfscan_sarif.yml)
+
+---
+
 # Download
 ## GitHub
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
