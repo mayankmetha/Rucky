@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -85,8 +87,6 @@ public class InitActivity extends AppCompatActivity {
                 R.layout.activity_init_slide6
         };
 
-        addBottomDots(0);
-
         MyViewPagerAdapter viewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.registerOnPageChangeCallback(viewPagerPageChangeListener);
@@ -101,6 +101,7 @@ public class InitActivity extends AppCompatActivity {
                 launchHomeScreen();
             }
         });
+        new Handler(Looper.getMainLooper()).postDelayed(() -> addBottomDots(0), 100);
     }
 
     @Override
@@ -117,14 +118,16 @@ public class InitActivity extends AppCompatActivity {
     private void addBottomDots(int currentPage) {
         final TypedValue value = new TypedValue();
         TypedArray typedArray = this.getTheme().obtainStyledAttributes(value.data,new int[]{ R.attr.appColorAccent });
+        if (dotsLayout != null)
+            dotsLayout.removeAllViews();
         TextView[] dots = new TextView[layouts.length];
-        dotsLayout.removeAllViews();
-        for (int i = 0; i < dots.length; i++) {
+        for (int i = 0; i < layouts.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Constants.DOTS);
             dots[i].setTextSize(35);
             dots[i].setTextColor( i == currentPage ? typedArray.getColor(0, 0) : ContextCompat.getColor(this, R.color.foreground));
-            dotsLayout.addView(dots[i]);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            dotsLayout.addView(dots[i],params);
         }
     }
 
@@ -139,6 +142,7 @@ public class InitActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
 
     ViewPager2.OnPageChangeCallback viewPagerPageChangeListener = new ViewPager2.OnPageChangeCallback() {
 

@@ -24,7 +24,6 @@ import androidx.core.content.FileProvider;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.common.hash.Hashing;
@@ -142,7 +141,7 @@ public class UpdateActivity extends AppCompatActivity {
     private void getChangelog() {
         String url = EditorActivity.nightly ? Constants.CHANGELOG_NIGHTLY : Constants.CHANGELOG_RELEASE+EditorActivity.newVersion;
         RequestQueue queue = Volley.newRequestQueue(this);
-        queue.add(new StringRequest(Request.Method.GET, url, (Response.Listener<String>) response -> changelog.setText(response.trim()), (Response.ErrorListener) error -> {}));
+        queue.add(new StringRequest(Request.Method.GET, url, response -> changelog.setText(response.trim()), error -> {}));
     }
 
     void deleteOldUpdateFiles() {

@@ -407,7 +407,7 @@ Status| Feature
 ✅| USB HID mouse support
 ❌| Disable app level virtualization (parallel app prevention)
 ❌| App anti-tamper detection
-🚧| Runtime process name masking
+✅| Runtime process name masking
 ❌| Memory dump prevention
 ❌| Anti-debug protection (Frida probe prevention)
 💡| More feature addition on request
