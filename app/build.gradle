@@ -133,7 +133,7 @@ dependencies {
     implementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'com.google.guava:guava:31.0.1-jre'
+    implementation 'com.google.guava:guava:31.0.1-android'
     implementation group: 'commons-io', name: 'commons-io', version: '20030203.000550'
 }
 repositories {
