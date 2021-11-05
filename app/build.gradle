@@ -120,20 +120,20 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation "androidx.preference:preference:1.1.1"
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'androidx.biometric:biometric:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.concurrent:concurrent-futures:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'androidx.core:core:1.7.0'
     implementation 'androidx.core:core-animation:1.0.0-alpha02'
     implementation 'androidx.core:core-splashscreen:1.0.0-alpha02'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.security:security-crypto:1.1.0-alpha03'
-    implementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
+    implementation 'androidx.security:security-app-authenticator:1.0.0-alpha02'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'com.google.guava:guava:31.0.1-android'
     implementation group: 'commons-io', name: 'commons-io', version: '20030203.000550'
 }
 repositories {

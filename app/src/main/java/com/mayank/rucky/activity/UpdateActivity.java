@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -26,14 +27,14 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.common.hash.Hashing;
-import com.google.common.io.Files;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.security.MessageDigest;
 import java.util.Objects;
 
 public class UpdateActivity extends AppCompatActivity {
@@ -213,13 +214,10 @@ public class UpdateActivity extends AppCompatActivity {
     };
 
     void generateHash() {
-        String genSHA512 = null;
-        try {
-            genSHA512 = Files.asByteSource(apkFile).hash(Hashing.sha512()).toString();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        assert genSHA512 != null;
+        Log.e("genSHA512","generating SHA512");
+        String genSHA512 = computeSHA512(apkFile);
+        Log.e("genSHA512", genSHA512);
+        Log.e("getSHA512",EditorActivity.getSHA512);
         if (genSHA512.equals(EditorActivity.getSHA512)) {
             installUpdate();
         } else {
@@ -252,6 +250,27 @@ public class UpdateActivity extends AppCompatActivity {
         installer.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         finish();
         startActivity(installer);
+    }
+
+    private String computeSHA512(File file) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            byte[] byteArray = new byte[1024];
+            int bytesCount;
+            MessageDigest digest = MessageDigest.getInstance("SHA-512");
+            while ((bytesCount = fis.read(byteArray)) != -1) {
+                digest.update(byteArray, 0, bytesCount);
+            }
+            fis.close();
+            byte[] bytes = digest.digest();
+            for (byte aByte : bytes) {
+                sb.append(Integer.toString((aByte & 0xff) + 0x100, 16).substring(1));
+            }
+        } catch (Exception e) {
+            sb.delete(0, sb.length());
+        }
+        return sb.toString();
     }
 
 }
