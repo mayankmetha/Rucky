@@ -92,7 +92,7 @@ public class Constants {
     //service & receivers
     public static final String NET_SOCKET_CONNECTED = "com.mayank.rucky.netSocketConnected";
     public static final String NET_SOCKET_DISCONNECTED = "com.mayank.rucky.netSocketDisconnected";
-    public static final String TELEPHONY_SECRET_CODE = "android.provider.Telephony.SECRET_CODE";
+    public static final String TELEPHONY = "android.provider.Telephony.SECRET_CODE";
     public static final String USB_ACTION = "android.hardware.usb.action.USB_STATE";
     public static final String USB_ACTION_STATE = "connected";
 

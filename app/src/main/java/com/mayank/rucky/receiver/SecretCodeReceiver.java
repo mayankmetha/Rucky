@@ -13,7 +13,7 @@ public class SecretCodeReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         assert action != null;
-        if (action.equals(Constants.TELEPHONY_SECRET_CODE)) {
+        if (action.equals(Constants.TELEPHONY)) {
             Intent i = new Intent(context, WelcomeActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
