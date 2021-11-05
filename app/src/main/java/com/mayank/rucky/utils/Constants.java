@@ -28,7 +28,7 @@ public class Constants {
     public static final String SIG_BASE_RELEASE = "https://github.com/mayankmetha/Rucky/releases/download/";
     public static final String SIG_FILE_RELEASE = "/rucky.sha512";
     public static final String URI_INSTALLER = "application/vnd.android.package-archive";
-    public static final String KEYMAP_URL = "https://raw.githubusercontent.com/mayankmetha/Rucky-KeyMap/main/keymap.json";
+    public static final String KEYBOARDMAP_URL = "https://raw.githubusercontent.com/mayankmetha/Rucky-KeyMap/main/keymap.json";
 
     //HIDModel
     public static final int HID_OFFLINE = 1;

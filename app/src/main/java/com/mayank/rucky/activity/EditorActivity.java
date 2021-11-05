@@ -1107,7 +1107,7 @@ public class EditorActivity extends AppCompatActivity {
 
     static void getKeymapRepo(Context context) {
         RequestQueue requestQueue = Volley.newRequestQueue(context);
-        JsonArrayRequest req = new JsonArrayRequest(Request.Method.GET, Constants.KEYMAP_URL, null,
+        JsonArrayRequest req = new JsonArrayRequest(Request.Method.GET, Constants.KEYBOARDMAP_URL, null,
             response -> {
                 for(int i=0; i < response.length(); i++) {
                     boolean added = false;
