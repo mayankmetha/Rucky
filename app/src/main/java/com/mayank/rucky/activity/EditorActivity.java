@@ -44,6 +44,7 @@ import com.android.volley.toolbox.Volley;
 import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
 import com.datatheorem.android.trustkit.TrustKit;
 import com.google.android.material.snackbar.Snackbar;
+import com.kimchangyoun.rootbeerFresh.RootBeer;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.HidModel;
 import com.mayank.rucky.service.SocketHeartbeatService;
@@ -508,7 +509,40 @@ public class EditorActivity extends AppCompatActivity {
         }
     }
 
+    /*private void getRoot() {
+        String disStr;
+        ArrayList<String> killList = new ArrayList<>();
+        try {
+            Process ps = Runtime.getRuntime().exec("ps -u $(whoami)");
+            BufferedReader psDis = new BufferedReader(new InputStreamReader(ps.getInputStream()));
+            while((disStr = psDis.readLine()) != null) {
+                disStr = disStr.replaceAll(" +"," ");
+                if (disStr.endsWith("su"))
+                    killList.add(disStr.split(" ")[1]);
+            }
+            p = Runtime.getRuntime().exec("su");
+            dos = new DataOutputStream(p.getOutputStream());
+            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            if (dos != null) {
+                dos.writeBytes("id\n");
+                dos.flush();
+                disStr = dis.readLine();
+                if (disStr.contains("uid=0")) {
+                    root = true;
+                }
+            }
+            for (int i=0; i< killList.size(); i++) {
+                assert dos != null;
+                dos.writeBytes("kill -9 "+killList.get(0)+"\n");
+                dos.flush();
+            }
+        } catch (Exception ignored) {
+        }
+    }*/
+
     private void getRoot() {
+        RootBeer rootBeer = new RootBeer(this);
+        root = rootBeer.isRooted() || rootBeer.isRootedWithoutBusyBoxCheck();
         String disStr;
         ArrayList<String> killList = new ArrayList<>();
         try {
