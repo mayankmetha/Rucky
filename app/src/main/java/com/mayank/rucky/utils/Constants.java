@@ -123,4 +123,11 @@ public class Constants {
 
     public static final String DOTS = "•";
 
+    public static final String[] hostnames = {
+            "*.github.io",
+            "*.github.com",
+            "*.crwd.in",
+            "*.crowdin.com",
+    };
+
 }

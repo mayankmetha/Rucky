@@ -24,8 +24,11 @@ import androidx.core.content.FileProvider;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
+import com.datatheorem.android.trustkit.TrustKit;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
@@ -33,8 +36,12 @@ import com.mayank.rucky.utils.Constants;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.util.Objects;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class UpdateActivity extends AppCompatActivity {
 
@@ -141,7 +148,24 @@ public class UpdateActivity extends AppCompatActivity {
 
     private void getChangelog() {
         String url = EditorActivity.nightly ? Constants.CHANGELOG_NIGHTLY : Constants.CHANGELOG_RELEASE+EditorActivity.newVersion;
-        RequestQueue queue = Volley.newRequestQueue(this);
+        RequestQueue queue;
+        queue = Volley.newRequestQueue(this, new HurlStack() {
+            @Override
+            protected HttpURLConnection createConnection(URL url) throws IOException {
+                HttpURLConnection connection = super.createConnection(url);
+                if (connection instanceof HttpsURLConnection) {
+                    HttpsURLConnection httpsConnection = (HttpsURLConnection) connection;
+                    CTHostnameVerifierBuilder builder = new CTHostnameVerifierBuilder(httpsConnection.getHostnameVerifier());
+                    for (String host : Constants.hostnames) {
+                        builder.includeHost(host);
+                    }
+                    httpsConnection.setHostnameVerifier(builder.build());
+                    httpsConnection.setSSLSocketFactory(TrustKit.getInstance().getSSLSocketFactory(url.getHost()));
+                }
+                return connection;
+            }
+        });
+
         queue.add(new StringRequest(Request.Method.GET, url, response -> changelog.setText(response.trim()), error -> {}));
     }
 

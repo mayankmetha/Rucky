@@ -23,8 +23,11 @@ import androidx.core.content.ContextCompat;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
+import com.datatheorem.android.trustkit.TrustKit;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.HidModel;
 import com.mayank.rucky.utils.Config;
@@ -38,9 +41,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.Objects;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class HidActivity extends AppCompatActivity {
 
@@ -198,7 +205,22 @@ public class HidActivity extends AppCompatActivity {
     }
 
     void hidDownload(Context context, View v, HidModel hidViewModel) {
-        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        RequestQueue requestQueue = Volley.newRequestQueue(this, new HurlStack() {
+            @Override
+            protected HttpURLConnection createConnection(URL url) throws IOException {
+                HttpURLConnection connection = super.createConnection(url);
+                if (connection instanceof HttpsURLConnection) {
+                    HttpsURLConnection httpsConnection = (HttpsURLConnection) connection;
+                    CTHostnameVerifierBuilder builder = new CTHostnameVerifierBuilder(httpsConnection.getHostnameVerifier());
+                    for (String host : Constants.hostnames) {
+                        builder.includeHost(host);
+                    }
+                    httpsConnection.setHostnameVerifier(builder.build());
+                    httpsConnection.setSSLSocketFactory(TrustKit.getInstance().getSSLSocketFactory(url.getHost()));
+                }
+                return connection;
+            }
+        });
 
         JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET, hidViewModel.getHidModelUrl(), null,
             response -> {

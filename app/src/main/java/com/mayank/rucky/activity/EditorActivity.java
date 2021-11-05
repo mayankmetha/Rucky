@@ -36,10 +36,12 @@ import androidx.security.crypto.MasterKey;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
 import com.datatheorem.android.trustkit.TrustKit;
 import com.google.android.material.snackbar.Snackbar;
 import com.mayank.rucky.R;
@@ -70,6 +72,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.HttpURLConnection;
 import java.net.Socket;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -339,7 +342,24 @@ public class EditorActivity extends AppCompatActivity {
         } else {
             updateNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
-        queue = Volley.newRequestQueue(this);
+
+        queue = Volley.newRequestQueue(this, new HurlStack() {
+            @Override
+            protected HttpURLConnection createConnection(URL url) throws IOException {
+                HttpURLConnection connection = super.createConnection(url);
+                if (connection instanceof HttpsURLConnection) {
+                    HttpsURLConnection httpsConnection = (HttpsURLConnection) connection;
+                    CTHostnameVerifierBuilder builder = new CTHostnameVerifierBuilder(httpsConnection.getHostnameVerifier());
+                    for (String host : Constants.hostnames) {
+                        builder.includeHost(host);
+                    }
+                    httpsConnection.setHostnameVerifier(builder.build());
+                    httpsConnection.setSSLSocketFactory(TrustKit.getInstance().getSSLSocketFactory(url.getHost()));
+                }
+                return connection;
+            }
+        });
+
         if (config.getUpdateFlag()) {
             preCheckAppUpdate();
         }
