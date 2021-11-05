@@ -11,7 +11,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -214,10 +213,7 @@ public class UpdateActivity extends AppCompatActivity {
     };
 
     void generateHash() {
-        Log.e("genSHA512","generating SHA512");
         String genSHA512 = computeSHA512(apkFile);
-        Log.e("genSHA512", genSHA512);
-        Log.e("getSHA512",EditorActivity.getSHA512);
         if (genSHA512.equals(EditorActivity.getSHA512)) {
             installUpdate();
         } else {
