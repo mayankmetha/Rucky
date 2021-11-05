@@ -16,6 +16,7 @@
             <pin digest="SHA-256">7zwAM/YU+zd8BZMCl0J943URuyF35zefKC7QIoxTq+U=</pin>
             <pin digest="SHA-256">vnCogm4QYze/Bc9r88xdA6NTQY74p4BAz2w5gxkLG2M=</pin>
         </pin-set>
+        <trustkit-config enforcePinning="true" />
     </domain-config>
     <domain-config cleartextTrafficPermitted="false">
         <domain includeSubdomains="true">crwd.in</domain>
@@ -29,5 +30,6 @@
             <pin digest="SHA-256">++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=</pin>
             <pin digest="SHA-256">KwccWaCgrnaw6tsrrSO61FgLacNgG2MMLq8GE6+oP5I=</pin>
         </pin-set>
+        <trustkit-config enforcePinning="true" />
     </domain-config>
 </network-security-config>

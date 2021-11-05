@@ -40,6 +40,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.datatheorem.android.trustkit.TrustKit;
 import com.google.android.material.snackbar.Snackbar;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.HidModel;
@@ -129,6 +130,8 @@ public class EditorActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             requestPermissions();
         }
+
+        TrustKit.initializeWithNetworkSecurityConfiguration(this);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> supportedFiles(true), 1000);
 
