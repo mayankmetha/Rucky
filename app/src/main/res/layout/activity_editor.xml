@@ -30,6 +30,7 @@
         <com.google.android.material.button.MaterialButton
             style="@style/IconButton"
             android:id="@+id/update_button"
+            android:filterTouchesWhenObscured="true"
             android:minWidth="64sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,6 +45,7 @@
         <com.google.android.material.button.MaterialButton
             style="@style/IconButton"
             android:id="@+id/setting_button"
+            android:filterTouchesWhenObscured="true"
             android:minWidth="64sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -141,6 +143,7 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/ldBtn"
+                android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -156,6 +159,7 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/delBtn"
+                android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -171,6 +175,7 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/svBtb"
+                android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -186,6 +191,7 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/exBtn"
+                android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -201,6 +207,7 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/IconButton"
                 android:id="@+id/cfgBtn"
+                android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

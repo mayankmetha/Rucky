@@ -29,6 +29,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_skip"
             style="@style/InitButton"
+            android:filterTouchesWhenObscured="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -47,6 +48,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next"
             style="@style/InitButton"
+            android:filterTouchesWhenObscured="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

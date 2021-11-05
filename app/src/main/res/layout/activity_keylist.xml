@@ -30,6 +30,7 @@
         <com.google.android.material.button.MaterialButton
             style="@style/IconButton"
             android:id="@+id/add_keymap_btn"
+            android:filterTouchesWhenObscured="true"
             android:minWidth="64sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,6 +45,7 @@
         <com.google.android.material.button.MaterialButton
             style="@style/IconButton"
             android:id="@+id/refresh_keymap_btn"
+            android:filterTouchesWhenObscured="true"
             android:minWidth="64sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

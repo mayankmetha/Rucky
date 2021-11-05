@@ -119,6 +119,7 @@
                 <com.google.android.material.button.MaterialButton
                     style="@style/InitButton"
                     android:id="@+id/action_button"
+                    android:filterTouchesWhenObscured="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"/>

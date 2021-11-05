@@ -25,10 +25,17 @@
         <entry key="app/src/main/res/layout/activity_editor.xml" value="0.17452185792349728" />
         <entry key="app/src/main/res/layout/activity_init.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_init_slide1.xml" value="0.16484375" />
+        <entry key="app/src/main/res/layout/activity_init_slide2.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/activity_init_slide3.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/activity_init_slide4.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/activity_init_slide5.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/activity_init_slide6.xml" value="0.2421448087431694" />
         <entry key="app/src/main/res/layout/activity_key_details.xml" value="0.22199453551912568" />
         <entry key="app/src/main/res/layout/activity_keylist.xml" value="0.23668032786885246" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.159765625" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16484375" />
+        <entry key="app/src/main/res/layout/activity_update.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.14250191277735272" />
         <entry key="app/src/main/res/layout/color_button.xml" value="0.22506830601092895" />
         <entry key="app/src/main/res/layout/color_grid.xml" value="0.16484375" />
         <entry key="app/src/main/res/layout/config_network.xml" value="0.22814207650273224" />
