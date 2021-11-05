@@ -79,9 +79,11 @@ public class KeylistActivity extends AppCompatActivity {
         refreshList();
 
         Button refreshBtn = findViewById(R.id.refresh_keymap_btn);
+        refreshBtn.setFilterTouchesWhenObscured(true);
         refreshBtn.setOnClickListener(v -> refreshList());
 
         Button newKeyBtn = findViewById(R.id.add_keymap_btn);
+        newKeyBtn.setFilterTouchesWhenObscured(true);
         newKeyBtn.setOnClickListener(v -> keyDetailDialog(null));
 
         keylist.setOnItemClickListener((parent, view, position, id) -> {

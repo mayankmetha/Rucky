@@ -112,9 +112,11 @@ public class HidActivity extends AppCompatActivity {
         });
 
         Button refreshHid = findViewById(R.id.refresh_hid_btn);
+        refreshHid.setFilterTouchesWhenObscured(true);
         refreshHid.setOnClickListener(view -> updateListView());
 
         Button addNewHid = findViewById(R.id.add_hid_btn);
+        addNewHid.setFilterTouchesWhenObscured(true);
         addNewHid.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(HidActivity.this);
             builder.setTitle(getResources().getString(R.string.file_name));
@@ -231,6 +233,7 @@ public class HidActivity extends AppCompatActivity {
         TextView rev = view.findViewById(R.id.hid_version);
         rev.setText(getResources().getString(R.string.hid_version,model.getHidModelRevision()));
         ImageView icon = view.findViewById(R.id.hid_icon);
+        icon.setFilterTouchesWhenObscured(true);
         switch (model.getHidModelState()) {
             case Constants.HID_DOWNLOAD:
                 icon.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.hid_download));

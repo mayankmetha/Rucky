@@ -129,6 +129,7 @@ public class WelcomeActivity extends AppCompatActivity {
         RelativeLayout parentLayout = findViewById(R.id.splashParentLayout);
         parentLayout.setBackground(ContextCompat.getDrawable(this, Constants.themeSplashBorder[config.getAccentTheme()]));
         ImageView i1 = findViewById(R.id.imageViewBG);
+        i1.setFilterTouchesWhenObscured(true);
         FrameLayout l2= findViewById(R.id.splashTextView);
         i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));

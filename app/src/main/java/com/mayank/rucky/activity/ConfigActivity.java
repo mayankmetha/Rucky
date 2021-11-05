@@ -57,7 +57,9 @@ public class ConfigActivity extends AppCompatActivity {
 
         statusText = findViewById(R.id.status_text);
         statusImage = findViewById(R.id.status_icon);
+        statusImage.setFilterTouchesWhenObscured(true);
         ipButton = findViewById(R.id.ipBtn);
+        ipButton.setFilterTouchesWhenObscured(true);
         ipStatusDivider = findViewById(R.id.divider_config3);
 
         ipButton.setText(config.getNetworkAddress());
@@ -79,6 +81,7 @@ public class ConfigActivity extends AppCompatActivity {
 
     private void language() {
         Button langBtn = findViewById(R.id.hidBtn);
+        langBtn.setFilterTouchesWhenObscured(true);
         ArrayList<String> languages;
         if(!config.getHIDCustomise()) {
             languages = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.hidLanguages)));
@@ -128,6 +131,7 @@ public class ConfigActivity extends AppCompatActivity {
     private void mode() {
         ArrayList<String> modes = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.modes)));
         Button modeBtn = findViewById(R.id.modeBtn);
+        modeBtn.setFilterTouchesWhenObscured(true);
         modeBtn.setText(modes.get(config.getHIDMode()));
         modeBtn.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);

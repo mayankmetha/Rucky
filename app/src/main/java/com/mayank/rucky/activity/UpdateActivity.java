@@ -86,6 +86,7 @@ public class UpdateActivity extends AppCompatActivity {
         progressBarLabel.setAlpha(0);
 
         Button actionButton = findViewById(R.id.action_button);
+        actionButton.setFilterTouchesWhenObscured(true);
         actionButton.setText(R.string.update_action);
         actionButton.setOnClickListener(view -> {
             actionButton.setEnabled(false);

@@ -411,6 +411,7 @@ public class EditorActivity extends AppCompatActivity {
 
     private void updateScreen() {
         Button updateBtn = findViewById(R.id.update_button);
+        updateBtn.setFilterTouchesWhenObscured(true);
         if (config.getUpdateFlag()) {
             if (nightly && newNightly > currentNightly) {
                 Intent updateIntent = new Intent(EditorActivity.this, UpdateActivity.class);
@@ -453,6 +454,7 @@ public class EditorActivity extends AppCompatActivity {
 
     private void openSettings() {
         Button settingBtn = findViewById(R.id.setting_button);
+        settingBtn.setFilterTouchesWhenObscured(true);
         settingBtn.setOnClickListener(view -> {
             Intent settingIntent = new Intent(EditorActivity.this, SettingsActivity.class);
             startActivity(settingIntent);
@@ -758,10 +760,15 @@ public class EditorActivity extends AppCompatActivity {
     private void ide() {
         int[] colors = getResources().getIntArray(R.array.colors);
         Button DelBtn = findViewById(R.id.delBtn);
+        DelBtn.setFilterTouchesWhenObscured(true);
         Button SaveBtn = findViewById(R.id.svBtb);
+        SaveBtn.setFilterTouchesWhenObscured(true);
         Button LoadBtn = findViewById(R.id.ldBtn);
+        LoadBtn.setFilterTouchesWhenObscured(true);
         Button ExeBtn = findViewById(R.id.exBtn);
+        ExeBtn.setFilterTouchesWhenObscured(true);
         Button CfgBtn = findViewById(R.id.cfgBtn);
+        CfgBtn.setFilterTouchesWhenObscured(true);
 
         DelBtn.setOnClickListener(view -> {
             final File[] tmp = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();

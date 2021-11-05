@@ -92,6 +92,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 config.setAccentTheme(position);
                 adapter.updateSelection(position);
                 ImageView selectedButton = v.findViewById(R.id.color_button);
+                selectedButton.setFilterTouchesWhenObscured(true);
                 selectedButton.setImageDrawable(ContextCompat.getDrawable(this.requireActivity(), R.drawable.color_button_selected));
                 selectedButton.setColorFilter(colors[position]);
             });

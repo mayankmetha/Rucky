@@ -55,12 +55,14 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ViewHolder> 
         } else {
             holder.getButton().setImageDrawable(ContextCompat.getDrawable(adapterContext, R.drawable.color_button));
         }
+        holder.getButton().setFilterTouchesWhenObscured(true);
         holder.getButton().setColorFilter(colorList[holder.getBindingAdapterPosition()]);
         holder.getButton().setOnClickListener(v -> clickListener.onItemClick(holder.getBindingAdapterPosition(), v));
     }
 
     public void updateSelection(int position) {
         views.get(selectedPosition).getButton().setImageDrawable(ContextCompat.getDrawable(adapterContext, R.drawable.color_button));
+        views.get(selectedPosition).getButton().setFilterTouchesWhenObscured(true);
         views.get(selectedPosition).getButton().setColorFilter(colorList[selectedPosition]);
         selectedPosition = position;
     }
@@ -76,6 +78,7 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ViewHolder> 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             button = (ImageView) itemView.findViewById(R.id.color_button);
+            button.setFilterTouchesWhenObscured(true);
             button.setOnClickListener(v -> clickListener.onItemClick(getBindingAdapterPosition(),v));
         }
 

@@ -73,7 +73,9 @@ public class InitActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_pager);
         dotsLayout = findViewById(R.id.layoutDots);
         btnSkip = findViewById(R.id.btn_skip);
+        btnSkip.setFilterTouchesWhenObscured(true);
         btnNext = findViewById(R.id.btn_next);
+        btnNext.setFilterTouchesWhenObscured(true);
 
         CustomTransformation transformation = new CustomTransformation();
         viewPager.setPageTransformer(transformation);
