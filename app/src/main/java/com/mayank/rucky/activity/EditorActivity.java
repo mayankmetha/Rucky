@@ -7,6 +7,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
@@ -220,23 +221,56 @@ public class EditorActivity extends AppCompatActivity {
         for (int i = 0; i < hashList.size(); i++) {
             if(hashList.get(i).trim().equals(NetHunter)) {
                 distro = R.string.releaseNetHunter;
+                nightly = false;
                 config.setUpdateFlag(false);
+                if (isDebuggable()) {
+                    tamperExit();
+                }
             } else if(hashList.get(i).trim().equals(GitHubRelease)) {
                 distro = R.string.releaseGitHub;
+                nightly = false;
                 config.setUpdateFlag(true);
+                if (isDebuggable()) {
+                    tamperExit();
+                }
             } else if(hashList.get(i).trim().equals(GitHubNightly)) {
                 distro = R.string.releaseGitHubNightly;
                 nightly = true;
                 config.setUpdateFlag(true);
+                if (isDebuggable()) {
+                    tamperExit();
+                }
             } else if(hashList.get(i).trim().equals(debug)) {
                 distro = R.string.releaseTest;
                 nightly = true;
                 config.setUpdateFlag(true);
             } else {
                 distro = R.string.releaseOthers;
+                nightly = false;
                 config.setUpdateFlag(false);
             }
         }
+    }
+
+    private boolean isDebuggable(){
+        return ((this.getApplicationContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0);
+    }
+
+    private void tamperExit() {
+        if(config.getConfigFSOption())
+            disableConfigFSHID();
+        AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
+        builder.setTitle(getResources().getString(R.string.tampered));
+        builder.setCancelable(false);
+        builder.setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
+            if(config.getHIDMode() == 1)
+                stopNetworkSocketService();
+            finishAndRemoveTask();
+            System.exit(0);
+        });
+        AlertDialog exitDialog = builder.create();
+        Objects.requireNonNull(exitDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        exitDialog.show();
     }
 
     @Override

@@ -380,8 +380,8 @@ Status| Feature
 ✅| USB HID over network socket
 ✅| USB connection detection
 ✅| Run attack UI button
-✅| Autolaunch attack on USB connect
-✅| Autolaunch attack on network socket connect
+✅| Auto launch attack on USB connect
+✅| Auto launch attack on network socket connect
 ✅| Save scripts
 ✅| Load scripts
 ✅| Delete scripts
@@ -406,11 +406,11 @@ Status| Feature
 ✅| USB HID mouse support
 ✅| Root detection
 ✅| Runtime process name masking
-❌| Emulator detection
+✅| Emulator detection
+🚧| App anti-tamper detection
+🚧| Anti-debug protection (Frida probe prevention)
 ❌| Disable app level virtualization (parallel app prevention)
-❌| App anti-tamper detection
 ❌| Memory dump prevention
-❌| Anti-debug protection (Frida probe prevention)
 💡| More feature addition on request
 
 ---
