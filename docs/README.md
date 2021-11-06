@@ -378,7 +378,6 @@ Status| Feature
 :---:| :---
 ✅| USB HID (Root & custom kernel required)
 ✅| USB HID over network socket
-❌| USB HID over bluetooth
 ✅| USB connection detection
 ✅| Run attack UI button
 ✅| Autolaunch attack on USB connect
@@ -405,9 +404,11 @@ Status| Feature
 ✅| Platform independent HID support
 ✅| Can attack virtually any system with USB HID support
 ✅| USB HID mouse support
+✅| Root detection
+✅| Runtime process name masking
+❌| Emulator detection
 ❌| Disable app level virtualization (parallel app prevention)
 ❌| App anti-tamper detection
-✅| Runtime process name masking
 ❌| Memory dump prevention
 ❌| Anti-debug protection (Frida probe prevention)
 💡| More feature addition on request
