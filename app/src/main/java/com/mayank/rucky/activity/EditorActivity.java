@@ -89,6 +89,10 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class EditorActivity extends AppCompatActivity {
 
+    static {
+        System.loadLibrary("ptrace_blocker");
+    }
+
     private boolean root = false;
     private boolean hidPresent = true;
 
@@ -113,6 +117,8 @@ public class EditorActivity extends AppCompatActivity {
     static long currentNightly;
     static long newNightly;
     public static int minAndroidSDK;
+
+    public native void ptraceBlock();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -225,6 +231,8 @@ public class EditorActivity extends AppCompatActivity {
                 config.setUpdateFlag(false);
                 if (isDebuggable()) {
                     tamperExit();
+                } else {
+                    ptraceBlock();
                 }
             } else if(hashList.get(i).trim().equals(GitHubRelease)) {
                 distro = R.string.releaseGitHub;
@@ -232,6 +240,8 @@ public class EditorActivity extends AppCompatActivity {
                 config.setUpdateFlag(true);
                 if (isDebuggable()) {
                     tamperExit();
+                } else {
+                    ptraceBlock();
                 }
             } else if(hashList.get(i).trim().equals(GitHubNightly)) {
                 distro = R.string.releaseGitHubNightly;
@@ -239,6 +249,8 @@ public class EditorActivity extends AppCompatActivity {
                 config.setUpdateFlag(true);
                 if (isDebuggable()) {
                     tamperExit();
+                } else {
+                    ptraceBlock();
                 }
             } else if(hashList.get(i).trim().equals(debug)) {
                 distro = R.string.releaseTest;
@@ -542,37 +554,6 @@ public class EditorActivity extends AppCompatActivity {
             }
         }
     }
-
-    /*private void getRoot() {
-        String disStr;
-        ArrayList<String> killList = new ArrayList<>();
-        try {
-            Process ps = Runtime.getRuntime().exec("ps -u $(whoami)");
-            BufferedReader psDis = new BufferedReader(new InputStreamReader(ps.getInputStream()));
-            while((disStr = psDis.readLine()) != null) {
-                disStr = disStr.replaceAll(" +"," ");
-                if (disStr.endsWith("su"))
-                    killList.add(disStr.split(" ")[1]);
-            }
-            p = Runtime.getRuntime().exec("su");
-            dos = new DataOutputStream(p.getOutputStream());
-            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            if (dos != null) {
-                dos.writeBytes("id\n");
-                dos.flush();
-                disStr = dis.readLine();
-                if (disStr.contains("uid=0")) {
-                    root = true;
-                }
-            }
-            for (int i=0; i< killList.size(); i++) {
-                assert dos != null;
-                dos.writeBytes("kill -9 "+killList.get(0)+"\n");
-                dos.flush();
-            }
-        } catch (Exception ignored) {
-        }
-    }*/
 
     private void getRoot() {
         RootBeer rootBeer = new RootBeer(this);
