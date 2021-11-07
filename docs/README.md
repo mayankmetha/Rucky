@@ -417,6 +417,7 @@ Status| Feature
 
 # Featuring Rucky
 - [Kali Linux 2019.3 Release](https://www.kali.org/blog/kali-linux-2019-3-release/)
+- [Kali Linux 2021.1 Release](https://www.kali.org/blog/kali-linux-2021-1-release/)
 - [Prog.World](https://prog.world/kali-linux-nethunter-on-android-part-3-breaking-the-distance/)
 - [ProgrammerSought](https://www.programmersought.com/article/30497171179/)
 - [Dark_Mechanic YouTube Channel](https://youtu.be/ic-X-FCLNk8)
