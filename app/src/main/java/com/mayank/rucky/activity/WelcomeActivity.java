@@ -38,12 +38,10 @@ public class WelcomeActivity extends AppCompatActivity {
 
     static {
         System.loadLibrary("dynamic_name");
-        System.loadLibrary("ptrace_blocker");
     }
 
     public native String changeProcessName();
     public native String restoreProcessName();
-    public native void ptraceBlock();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +56,6 @@ public class WelcomeActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
         setTheme(Constants.themeList[config.getAccentTheme()]);
-
-        ptraceBlock();
 
         if(config.getSec())
             changeProcessName();

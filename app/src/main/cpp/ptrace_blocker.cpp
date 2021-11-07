@@ -36,11 +36,6 @@ void anti_debug() {
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_mayank_rucky_activity_WelcomeActivity_ptraceBlock(JNIEnv* env, jobject /* this */) {
-    anti_debug();
-}
-
-extern "C" JNIEXPORT void JNICALL
 Java_com_mayank_rucky_activity_EditorActivity_ptraceBlock(JNIEnv* env, jobject /* this */) {
     anti_debug();
 }

@@ -142,7 +142,10 @@ public class EditorActivity extends AppCompatActivity {
             requestPermissions();
         }
 
-        TrustKit.initializeWithNetworkSecurityConfiguration(this);
+        try {
+            TrustKit.initializeWithNetworkSecurityConfiguration(this);
+        } catch (Exception ignored) {
+        }
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> supportedFiles(true), 1000);
 
