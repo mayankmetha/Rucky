@@ -2593,11 +2593,19 @@ public class HID {
                     shell.addAll(mbyteCode(mbytes, mloop));
                 }
             }
-            //STRING
-            else if (lines[a].startsWith("STRING")) {
-                con = lines[a].replace("STRING ", "");
-                ArrayList<String> tmp = kblangbytes(con);
-                shell.addAll(tmp);
+            //STRING or STRING_DELAY or STRINGDELAY
+            else if (lines[a].startsWith("STRING") || lines[a].startsWith("STRINGDELAY") || lines[a].startsWith("STRING_DELAY")) {
+                long stringDelay = 0;
+                if(lines[a].contains("DELAY")) {
+                    con = lines[a];
+                    con = con.replace("STRINGDELAY ","");
+                    con = con.replace("STRING_DELAY ","");
+                    stringDelay = Long.parseLong(con.split(" ",2)[0]);
+                    con = con.split(" ",2)[1];
+                } else {
+                    con = lines[a].replace("STRING ", "");
+                }
+                shell.addAll(kblangbytes(stringDelay, con));
             }
             //GUI or WINDOWS or COMMAND or META
             else if (lines[a].startsWith("GUI") || lines[a].startsWith("WINDOWS") ||
@@ -2847,7 +2855,7 @@ public class HID {
         }
     }
 
-    private ArrayList<String> kblangbytes(@NonNull String str) {
+    private ArrayList<String> kblangbytes(long stringDelay, @NonNull String str) {
         ArrayList<String> kbstrokes = new ArrayList<>();
         char[] ch = str.toCharArray();
         for (char aCh : ch) {
@@ -3742,6 +3750,9 @@ public class HID {
                     if (keycodes.containsKey("UNICODE_20AC"))
                         kbstrokes.add(keycodes.get("UNICODE_20AC"));
                     break;
+            }
+            if (stringDelay != 0) {
+                kbstrokes.add("sleep " + (((float)stringDelay) / 1000) + "\n");
             }
         }
         return kbstrokes;
