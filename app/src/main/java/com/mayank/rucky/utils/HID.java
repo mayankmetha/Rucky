@@ -437,7 +437,7 @@ public class HID {
         keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_7"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_BACKSLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_0"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
     }
 
     private void defineSV() {
@@ -503,7 +503,7 @@ public class HID {
         keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_8"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_MINUS"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5F",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_EQUAL"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_61",kbbyteCode(keys.get("KEY_A")));
@@ -543,11 +543,11 @@ public class HID {
         keycodes.put("ISO_8859_1_B5",kbbyteCode(keys.get("KEY_M"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_BD",kbbyteCode(keys.get("KEY_GRAVE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_C4",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ISO_8859_1_C5",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_C5",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_D6",kbbyteCode(keys.get("KEY_SEMICOLON"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_DF",kbbyteCode(keys.get("KEY_S"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_E4",kbbyteCode(keys.get("KEY_QUOTE")));
-        keycodes.put("ISO_8859_1_E5",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ISO_8859_1_E5",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ISO_8859_1_F0",kbbyteCode(keys.get("KEY_D"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_F6",kbbyteCode(keys.get("KEY_SEMICOLON")));
         keycodes.put("ISO_8859_1_FE",kbbyteCode(keys.get("KEY_T"),keys.get("MODIFIERKEY_RIGHT_ALT")));
@@ -575,7 +575,7 @@ public class HID {
         keycodes.put("ASCII_70",kbbyteCode(keys.get("KEY_P")));
         keycodes.put("ASCII_72",kbbyteCode(keys.get("KEY_R")));
         keycodes.put("ASCII_73",kbbyteCode(keys.get("KEY_S")));
-        keycodes.put("UNICODE_161",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("UNICODE_161",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ASCII_74",kbbyteCode(keys.get("KEY_T")));
         keycodes.put("ASCII_75",kbbyteCode(keys.get("KEY_U")));
         keycodes.put("ASCII_76",kbbyteCode(keys.get("KEY_V")));
@@ -586,7 +586,7 @@ public class HID {
         keycodes.put("ASCII_71",kbbyteCode(keys.get("KEY_Q")));
         keycodes.put("ASCII_77",kbbyteCode(keys.get("KEY_W")));
         keycodes.put("UNICODE_107",kbbyteCode(keys.get("KEY_QUOTE")));
-        keycodes.put("UNICODE_111",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("UNICODE_111",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_41",kbbyteCode(keys.get("KEY_A"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_42",kbbyteCode(keys.get("KEY_B"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_43",kbbyteCode(keys.get("KEY_C"),keys.get("MODIFIERKEY_SHIFT")));
@@ -606,7 +606,7 @@ public class HID {
         keycodes.put("ASCII_50",kbbyteCode(keys.get("KEY_P"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_52",kbbyteCode(keys.get("KEY_R"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_53",kbbyteCode(keys.get("KEY_S"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("UNICODE_160",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("UNICODE_160",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_54",kbbyteCode(keys.get("KEY_T"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_55",kbbyteCode(keys.get("KEY_U"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_56",kbbyteCode(keys.get("KEY_V"),keys.get("MODIFIERKEY_SHIFT")));
@@ -617,7 +617,7 @@ public class HID {
         keycodes.put("ASCII_51",kbbyteCode(keys.get("KEY_Q"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_57",kbbyteCode(keys.get("KEY_W"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("UNICODE_106",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("UNICODE_110",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("UNICODE_110",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_21",kbbyteCode(keys.get("KEY_1"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_22",kbbyteCode(keys.get("KEY_2"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_23",kbbyteCode(keys.get("KEY_3"),keys.get("MODIFIERKEY_SHIFT")));
@@ -637,8 +637,8 @@ public class HID {
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_Q"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_W"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("UNICODE_20AC",kbbyteCode(keys.get("KEY_E"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_F7",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_D7",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ISO_8859_1_F7",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ISO_8859_1_D7",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_F"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_G"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("UNICODE_142",kbbyteCode(keys.get("KEY_K"),keys.get("MODIFIERKEY_RIGHT_ALT")));
@@ -727,10 +727,10 @@ public class HID {
         keycodes.put("ISO_8859_5_DE",kbbyteCode(keys.get("KEY_O")));
         keycodes.put("ISO_8859_5_BF",kbbyteCode(keys.get("KEY_P"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_5_DF",kbbyteCode(keys.get("KEY_P")));
-        keycodes.put("ISO_8859_5_CE",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ISO_8859_5_EE",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
-        keycodes.put("ISO_8859_5_C9",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ISO_8859_5_E9",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ISO_8859_5_CE",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_5_EE",kbbyteCode(keys.get("KEY_LEFTBRACE")));
+        keycodes.put("ISO_8859_5_C9",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_5_E9",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ISO_8859_5_B0",kbbyteCode(keys.get("KEY_A"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_5_C1",kbbyteCode(keys.get("KEY_S"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_5_E1",kbbyteCode(keys.get("KEY_S")));
@@ -797,8 +797,8 @@ public class HID {
         keycodes.put("ASCII_30",kbbyteCode(keys.get("KEY_0")));
         keycodes.put("ASCII_3F",kbbyteCode(keys.get("KEY_MINUS"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_27",kbbyteCode(keys.get("KEY_MINUS")));
-        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ASCII_2C",kbbyteCode(keys.get("KEY_COMMA")));
         keycodes.put("ASCII_3B",kbbyteCode(keys.get("KEY_COMMA"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_2D",kbbyteCode(keys.get("KEY_SLASH")));
@@ -838,7 +838,7 @@ public class HID {
         keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_TILDE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_TILDE")));
-        keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_61",kbbyteCode(keys.get("KEY_A")));
         keycodes.put("ASCII_62",kbbyteCode(keys.get("KEY_B")));
         keycodes.put("ASCII_63",kbbyteCode(keys.get("KEY_C")));
@@ -944,7 +944,7 @@ public class HID {
         keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_8"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_EQUAL")));
         keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5F",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_EQUAL"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_61",kbbyteCode(keys.get("KEY_A")));
@@ -976,7 +976,7 @@ public class HID {
         keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_7"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_GRAVE")));
         keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_0"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7F",kbbyteCode(keys.get("KEY_BACKSPACE")));
         keycodes.put("ISO_8859_1_A0",kbbyteCode(keys.get("KEY_SPACE")));
         keycodes.put("ISO_8859_1_A3",kbbyteCode(keys.get("KEY_3"),keys.get("MODIFIERKEY_RIGHT_ALT")));
@@ -985,11 +985,11 @@ public class HID {
         keycodes.put("ISO_8859_1_AB",kbbyteCode(keys.get("KEY_4")));
         keycodes.put("ISO_8859_1_B5",kbbyteCode(keys.get("KEY_M"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_BD",kbbyteCode(keys.get("KEY_GRAVE")));
-        keycodes.put("ISO_8859_1_C5",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_C5",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_C6",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_D8",kbbyteCode(keys.get("KEY_SEMICOLON"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_DF",kbbyteCode(keys.get("KEY_S"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_E5",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ISO_8859_1_E5",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ISO_8859_1_E6",kbbyteCode(keys.get("KEY_QUOTE")));
         keycodes.put("ISO_8859_1_F0",kbbyteCode(keys.get("KEY_D"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_F8",kbbyteCode(keys.get("KEY_SEMICOLON")));
@@ -1008,8 +1008,8 @@ public class HID {
         keycodes.put("ASCII_27",kbbyteCode(keys.get("KEY_MINUS")));
         keycodes.put("ASCII_28",kbbyteCode(keys.get("KEY_8"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_29",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_2C",kbbyteCode(keys.get("KEY_COMMA")));
         keycodes.put("ASCII_2D",kbbyteCode(keys.get("KEY_SLASH")));
         keycodes.put("ASCII_2E",kbbyteCode(keys.get("KEY_PERIOD")));
@@ -1057,9 +1057,9 @@ public class HID {
         keycodes.put("ASCII_58",kbbyteCode(keys.get("KEY_X"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_59",kbbyteCode(keys.get("KEY_Y"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5A",kbbyteCode(keys.get("KEY_Z"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_GRAVE")));
-        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_EQUAL"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5F",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_61",kbbyteCode(keys.get("KEY_A")));
@@ -1088,12 +1088,12 @@ public class HID {
         keycodes.put("ASCII_78",kbbyteCode(keys.get("KEY_X")));
         keycodes.put("ASCII_79",kbbyteCode(keys.get("KEY_Y")));
         keycodes.put("ASCII_7A",kbbyteCode(keys.get("KEY_Z")));
-        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_GRAVE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_E0",kbbyteCode(keys.get("KEY_QUOTE")));
-        keycodes.put("ISO_8859_1_E8",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
-        keycodes.put("ISO_8859_1_E9",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_E8",kbbyteCode(keys.get("KEY_LEFTBRACE")));
+        keycodes.put("ISO_8859_1_E9",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_EC",kbbyteCode(keys.get("KEY_EQUAL")));
         keycodes.put("ISO_8859_1_F2",kbbyteCode(keys.get("KEY_SEMICOLON")));
         keycodes.put("ISO_8859_1_F9",kbbyteCode(keys.get("KEY_BACKSLASH")));
@@ -1120,7 +1120,7 @@ public class HID {
         keycodes.put("ASCII_70",kbbyteCode(keys.get("KEY_P")));
         keycodes.put("ASCII_72",kbbyteCode(keys.get("KEY_R")));
         keycodes.put("ASCII_73",kbbyteCode(keys.get("KEY_S")));
-        keycodes.put("UNICODE_161",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("UNICODE_161",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ASCII_74",kbbyteCode(keys.get("KEY_T")));
         keycodes.put("ASCII_75",kbbyteCode(keys.get("KEY_U")));
         keycodes.put("ASCII_76",kbbyteCode(keys.get("KEY_V")));
@@ -1131,7 +1131,7 @@ public class HID {
         keycodes.put("ASCII_71",kbbyteCode(keys.get("KEY_Q")));
         keycodes.put("ASCII_77",kbbyteCode(keys.get("KEY_W")));
         keycodes.put("UNICODE_107",kbbyteCode(keys.get("KEY_QUOTE")));
-        keycodes.put("UNICODE_111",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("UNICODE_111",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_41",kbbyteCode(keys.get("KEY_A"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_42",kbbyteCode(keys.get("KEY_B"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_43",kbbyteCode(keys.get("KEY_C"),keys.get("MODIFIERKEY_SHIFT")));
@@ -1151,7 +1151,7 @@ public class HID {
         keycodes.put("ASCII_50",kbbyteCode(keys.get("KEY_P"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_52",kbbyteCode(keys.get("KEY_R"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_53",kbbyteCode(keys.get("KEY_S"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("UNICODE_160",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("UNICODE_160",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_54",kbbyteCode(keys.get("KEY_T"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_55",kbbyteCode(keys.get("KEY_U"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_56",kbbyteCode(keys.get("KEY_V"),keys.get("MODIFIERKEY_SHIFT")));
@@ -1162,7 +1162,7 @@ public class HID {
         keycodes.put("ASCII_51",kbbyteCode(keys.get("KEY_Q"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_57",kbbyteCode(keys.get("KEY_W"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("UNICODE_106",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("UNICODE_110",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("UNICODE_110",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_21",kbbyteCode(keys.get("KEY_1"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_22",kbbyteCode(keys.get("KEY_2"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_23",kbbyteCode(keys.get("KEY_3"),keys.get("MODIFIERKEY_SHIFT")));
@@ -1182,8 +1182,8 @@ public class HID {
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_Q"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_W"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("UNICODE_20AC",kbbyteCode(keys.get("KEY_E"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_F7",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_D7",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ISO_8859_1_F7",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ISO_8859_1_D7",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_F"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_G"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("UNICODE_142",kbbyteCode(keys.get("KEY_K"),keys.get("MODIFIERKEY_RIGHT_ALT")));
@@ -1284,9 +1284,9 @@ public class HID {
         keycodes.put("ASCII_58",kbbyteCode(keys.get("KEY_X"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_59",kbbyteCode(keys.get("KEY_Y"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5A",kbbyteCode(keys.get("KEY_Z"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ASCII_23",kbbyteCode(keys.get("KEY_F7")));
-        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_6"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5F",kbbyteCode(keys.get("KEY_MINUS"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_GRAVE")));
@@ -1316,9 +1316,9 @@ public class HID {
         keycodes.put("ASCII_78",kbbyteCode(keys.get("KEY_X")));
         keycodes.put("ASCII_79",kbbyteCode(keys.get("KEY_Y")));
         keycodes.put("ASCII_7A",kbbyteCode(keys.get("KEY_Z")));
-        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_F7"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_102ND"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7F",kbbyteCode(keys.get("KEY_BACKSPACE")));
         keycodes.put("ISO_8859_1_A0",kbbyteCode(keys.get("KEY_SPACE")));
@@ -1337,7 +1337,7 @@ public class HID {
         keycodes.put("ASCII_21",kbbyteCode(keys.get("KEY_SLASH")));
         keycodes.put("ASCII_22",kbbyteCode(keys.get("KEY_3")));
         keycodes.put("ASCII_23",kbbyteCode(keys.get("KEY_3"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_24",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ASCII_24",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_25",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_26",kbbyteCode(keys.get("KEY_1")));
         keycodes.put("ASCII_27",kbbyteCode(keys.get("KEY_4")));
@@ -1430,8 +1430,8 @@ public class HID {
         keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_2"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7F",kbbyteCode(keys.get("KEY_BACKSPACE")));
         keycodes.put("ISO_8859_1_A0",kbbyteCode(keys.get("KEY_SPACE")));
-        keycodes.put("ISO_8859_1_A3",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ISO_8859_1_A4",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ISO_8859_1_A3",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_A4",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_A7",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_B0",kbbyteCode(keys.get("KEY_MINUS"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_B2",kbbyteCode(keys.get("KEY_GRAVE")));
@@ -1470,7 +1470,7 @@ public class HID {
         keycodes.put("ASCII_6F",kbbyteCode(keys.get("KEY_O")));
         keycodes.put("ASCII_70",kbbyteCode(keys.get("KEY_P")));
         keycodes.put("ASCII_61",kbbyteCode(keys.get("KEY_A")));
-        keycodes.put("ISO_8859_1_E4",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ISO_8859_1_E4",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_73",kbbyteCode(keys.get("KEY_S")));
         keycodes.put("ASCII_64",kbbyteCode(keys.get("KEY_D")));
         keycodes.put("ASCII_66",kbbyteCode(keys.get("KEY_F")));
@@ -1515,7 +1515,7 @@ public class HID {
         keycodes.put("ASCII_4F",kbbyteCode(keys.get("KEY_O"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_50",kbbyteCode(keys.get("KEY_P"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_41",kbbyteCode(keys.get("KEY_A"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_53",kbbyteCode(keys.get("KEY_S"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_44",kbbyteCode(keys.get("KEY_D"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_46",kbbyteCode(keys.get("KEY_F"),keys.get("MODIFIERKEY_SHIFT")));
@@ -1546,7 +1546,7 @@ public class HID {
         keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_0"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_MINUS"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_102ND"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_B5",kbbyteCode(keys.get("KEY_M"),keys.get("MODIFIERKEY_RIGHT_ALT")));
     }
@@ -1562,8 +1562,8 @@ public class HID {
         keycodes.put("ASCII_27",kbbyteCode(keys.get("KEY_MINUS")));
         keycodes.put("ASCII_28",kbbyteCode(keys.get("KEY_8"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_29",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_2C",kbbyteCode(keys.get("KEY_COMMA")));
         keycodes.put("ASCII_2D",kbbyteCode(keys.get("KEY_SLASH")));
         keycodes.put("ASCII_2E",kbbyteCode(keys.get("KEY_PERIOD")));
@@ -1611,10 +1611,10 @@ public class HID {
         keycodes.put("ASCII_58",kbbyteCode(keys.get("KEY_X"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_59",kbbyteCode(keys.get("KEY_Y"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5A",kbbyteCode(keys.get("KEY_Z"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_GRAVE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5F",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_61",kbbyteCode(keys.get("KEY_A")));
         keycodes.put("ASCII_62",kbbyteCode(keys.get("KEY_B")));
@@ -1642,14 +1642,14 @@ public class HID {
         keycodes.put("ASCII_78",kbbyteCode(keys.get("KEY_X")));
         keycodes.put("ASCII_79",kbbyteCode(keys.get("KEY_Y")));
         keycodes.put("ASCII_7A",kbbyteCode(keys.get("KEY_Z")));
-        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_1"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_4"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_BA",kbbyteCode(keys.get("KEY_GRAVE")));
         keycodes.put("ISO_8859_1_E0",kbbyteCode(keys.get("KEY_QUOTE")));
-        keycodes.put("ISO_8859_1_E8",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
-        keycodes.put("ISO_8859_1_E9",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_E8",kbbyteCode(keys.get("KEY_LEFTBRACE")));
+        keycodes.put("ISO_8859_1_E9",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_EC",kbbyteCode(keys.get("KEY_EQUAL")));
         keycodes.put("ISO_8859_1_F2",kbbyteCode(keys.get("KEY_SEMICOLON")));
         keycodes.put("ISO_8859_1_F9",kbbyteCode(keys.get("KEY_BACKSLASH")));
@@ -1748,7 +1748,7 @@ public class HID {
         keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_7"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_EQUAL"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_0"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7F",kbbyteCode(keys.get("KEY_BACKSPACE")));
         keycodes.put("ISO_8859_1_A0",kbbyteCode(keys.get("KEY_SPACE")));
         keycodes.put("ISO_8859_1_A3",kbbyteCode(keys.get("KEY_3"),keys.get("MODIFIERKEY_RIGHT_ALT")));
@@ -1757,11 +1757,11 @@ public class HID {
         keycodes.put("ISO_8859_1_AB",kbbyteCode(keys.get("KEY_4")));
         keycodes.put("ISO_8859_1_B5",kbbyteCode(keys.get("KEY_M"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_BD",kbbyteCode(keys.get("KEY_GRAVE")));
-        keycodes.put("ISO_8859_1_C5",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_C5",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_C6",kbbyteCode(keys.get("KEY_SEMICOLON"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_D8",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_DF",kbbyteCode(keys.get("KEY_S"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_E5",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ISO_8859_1_E5",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ISO_8859_1_E6",kbbyteCode(keys.get("KEY_SEMICOLON")));
         keycodes.put("ISO_8859_1_F0",kbbyteCode(keys.get("KEY_D"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_F8",kbbyteCode(keys.get("KEY_QUOTE")));
@@ -1780,8 +1780,8 @@ public class HID {
         keycodes.put("ASCII_27",kbbyteCode(keys.get("KEY_BACKSLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_28",kbbyteCode(keys.get("KEY_8"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_29",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_2C",kbbyteCode(keys.get("KEY_COMMA")));
         keycodes.put("ASCII_2D",kbbyteCode(keys.get("KEY_SLASH")));
         keycodes.put("ASCII_2E",kbbyteCode(keys.get("KEY_PERIOD")));
@@ -1864,7 +1864,7 @@ public class HID {
         keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_7"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_102ND"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_0"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_7F",kbbyteCode(keys.get("KEY_BACKSPACE")));
         keycodes.put("ISO_8859_1_A0",kbbyteCode(keys.get("KEY_SPACE")));
         keycodes.put("ISO_8859_1_A4",kbbyteCode(keys.get("KEY_E"),keys.get("MODIFIERKEY_RIGHT_ALT")));
@@ -1874,11 +1874,11 @@ public class HID {
         keycodes.put("ISO_8859_1_B3",kbbyteCode(keys.get("KEY_3"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_C4",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_D6",kbbyteCode(keys.get("KEY_SEMICOLON"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ISO_8859_1_DC",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_DC",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_DF",kbbyteCode(keys.get("KEY_MINUS")));
         keycodes.put("ISO_8859_1_E4",kbbyteCode(keys.get("KEY_QUOTE")));
         keycodes.put("ISO_8859_1_F6",kbbyteCode(keys.get("KEY_SEMICOLON")));
-        keycodes.put("ISO_8859_1_FC",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ISO_8859_1_FC",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("UNICODE_20AC",kbbyteCode(keys.get("KEY_E"),keys.get("MODIFIERKEY_RIGHT_ALT")));
     }
 
@@ -1942,10 +1942,10 @@ public class HID {
         keycodes.put("ASCII_58",kbbyteCode(keys.get("KEY_X"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_59",kbbyteCode(keys.get("KEY_Y"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5A",kbbyteCode(keys.get("KEY_Z"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_GRAVE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ASCII_5F",kbbyteCode(keys.get("KEY_MINUS"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_QUOTE")));
         keycodes.put("ASCII_61",kbbyteCode(keys.get("KEY_A")));
@@ -1984,14 +1984,14 @@ public class HID {
         keycodes.put("ISO_8859_1_A4",kbbyteCode(keys.get("KEY_5"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_A6",kbbyteCode(keys.get("KEY_7"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_A7",kbbyteCode(keys.get("KEY_O"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_A8",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ISO_8859_1_A8",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_AC",kbbyteCode(keys.get("KEY_6"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_AD",kbbyteCode(keys.get("KEY_PERIOD"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_AF",kbbyteCode(keys.get("KEY_GRAVE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_B4",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_B5",kbbyteCode(keys.get("KEY_M"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_B6",kbbyteCode(keys.get("KEY_P"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_B8",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ISO_8859_1_B8",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ISO_8859_1_B1",kbbyteCode(keys.get("KEY_1"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_B2",kbbyteCode(keys.get("KEY_8"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_B3",kbbyteCode(keys.get("KEY_9"),keys.get("MODIFIERKEY_RIGHT_ALT")));
@@ -2076,9 +2076,9 @@ public class HID {
         keycodes.put("ASCII_2F",kbbyteCode(keys.get("KEY_Q"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_3F",kbbyteCode(keys.get("KEY_W"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ISO_8859_1_B0",kbbyteCode(keys.get("KEY_E"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_BACKSLASH")));
-        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_7B",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_7D",kbbyteCode(keys.get("KEY_BACKSLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_102ND")));
         keycodes.put("ASCII_2C",kbbyteCode(keys.get("KEY_COMMA")));
@@ -2088,11 +2088,11 @@ public class HID {
         keycodes.put("ASCII_3E",kbbyteCode(keys.get("KEY_PERIOD"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_3A",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ISO_8859_1_A7",kbbyteCode(keys.get("KEY_EQUAL"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ISO_8859_1_B4",kbbyteCode(keys.get("KEY_LEFT_BRACE")));
+        keycodes.put("ISO_8859_1_B4",kbbyteCode(keys.get("KEY_LEFTBRACE")));
         keycodes.put("ASCII_7E",kbbyteCode(keys.get("KEY_QUOTE")));
         keycodes.put("ASCII_7C",kbbyteCode(keys.get("KEY_102ND"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_30",kbbyteCode(keys.get("KEY_0")));
         keycodes.put("ASCII_31",kbbyteCode(keys.get("KEY_1")));
         keycodes.put("ASCII_32",kbbyteCode(keys.get("KEY_2")));
@@ -2110,13 +2110,13 @@ public class HID {
         keycodes.put("ASCII_21",kbbyteCode(keys.get("KEY_8")));
         keycodes.put("ASCII_22",kbbyteCode(keys.get("KEY_3")));
         keycodes.put("ASCII_23",kbbyteCode(keys.get("KEY_3"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_24",kbbyteCode(keys.get("KEY_RIGHT_BRACE")));
+        keycodes.put("ASCII_24",kbbyteCode(keys.get("KEY_RIGHTBRACE")));
         keycodes.put("ASCII_25",kbbyteCode(keys.get("KEY_QUOTE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_26",kbbyteCode(keys.get("KEY_1")));
         keycodes.put("ASCII_27",kbbyteCode(keys.get("KEY_4")));
         keycodes.put("ASCII_28",kbbyteCode(keys.get("KEY_5")));
         keycodes.put("ASCII_29",kbbyteCode(keys.get("KEY_MINUS")));
-        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_SHIFT")));
+        keycodes.put("ASCII_2A",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_2B",kbbyteCode(keys.get("KEY_SLASH"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_2C",kbbyteCode(keys.get("KEY_M")));
         keycodes.put("ASCII_2D",kbbyteCode(keys.get("KEY_EQUAL")));
@@ -2165,9 +2165,9 @@ public class HID {
         keycodes.put("ASCII_58",kbbyteCode(keys.get("KEY_X"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_59",kbbyteCode(keys.get("KEY_Y"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_5A",kbbyteCode(keys.get("KEY_W"),keys.get("MODIFIERKEY_SHIFT")));
-        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_RIGHT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5B",kbbyteCode(keys.get("KEY_RIGHTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5C",kbbyteCode(keys.get("KEY_102ND"),keys.get("MODIFIERKEY_RIGHT_ALT")));
-        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_LEFT_BRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
+        keycodes.put("ASCII_5D",kbbyteCode(keys.get("KEY_LEFTBRACE"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5E",kbbyteCode(keys.get("KEY_6"),keys.get("MODIFIERKEY_RIGHT_ALT")));
         keycodes.put("ASCII_5F",kbbyteCode(keys.get("KEY_EQUAL"),keys.get("MODIFIERKEY_SHIFT")));
         keycodes.put("ASCII_60",kbbyteCode(keys.get("KEY_BACKSLASH"),keys.get("MODIFIERKEY_RIGHT_ALT")));

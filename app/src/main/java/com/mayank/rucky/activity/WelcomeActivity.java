@@ -67,10 +67,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
         SplashScreen.installSplashScreen(this);
 
-        if (Build.VERSION.SDK_INT<=Build.VERSION_CODES.R)
-            splash();
-        else
-            launchNext();
+        splash();
     }
 
     public void biometric() {
