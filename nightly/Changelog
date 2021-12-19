@@ -1,16 +1,1 @@
-• Create codeql-analysis.yml
-• Update codeql-analysis.yml
-• Create ossar-analysis.yml
-• Fix encryption and biometrics
-• Update SECURITY.md
-• Added dynamic process name
-• Create mobsfscan_sarif.yml
-• Update codeql-analysis.yml
-• Fix security vulnerabilities
-• Add tls security
-• ssl pinning
-• fix UI
-• Fixed lint issues and configfs issues
-• Fixed UI
-• Updated splash screen animated icon for android 12
-• Nightly 453
+• Nightly 473
