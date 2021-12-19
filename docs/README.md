@@ -107,6 +107,22 @@ REPEAT | [num]
 DELAY 1
 REPEAT 5
 ```
+### STRING_DELAY or STRINGDELAY
+
+STRING processes the text following taking special care to auto-shift with additional delay between each character. STRING can accept a single or multiple characters.
+
+<b>Syntax:</b>
+
+Command | Delay Parameter | Parameter
+:---: | :---: | :---:
+STRING_DELAY | [num] | all possible printable characters supported on a specific keyboard layout
+STRINGDELAY  | [num] | all possible printable characters supported on a specific keyboard layout
+
+<b>Example:</b>
+```
+STRING_DELAY 1000 hello world
+STRINGDELAY 1000 hello world
+```
 
 ### STRING
 
