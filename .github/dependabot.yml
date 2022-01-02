@@ -4,3 +4,7 @@ updates:
     directory: "/app/" 
     schedule:
       interval: "daily"
+- package-ecosystem: "gradle" 
+    directory: "/" 
+    schedule:
+      interval: "daily"
