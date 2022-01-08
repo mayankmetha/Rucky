@@ -421,8 +421,10 @@ Status| Feature
 ✅| Can attack virtually any system with USB HID support
 ✅| USB HID mouse support
 ✅| Root detection
+✅| Magisk Module
 ✅| Runtime process name masking
 ✅| Emulator detection
+🚧| Monet Theme
 🚧| App anti-tamper detection
 🚧| Anti-debug protection (Frida probe prevention)
 ❌| Disable app level virtualization (parallel app prevention)

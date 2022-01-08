@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <feature name="android.permission.WAKE_LOCK" />
+    <feature name="android.permission.ACCESS_NETWORK_STATE" />
+    <feature name="android.permission.ACCESS_WIFI_STATE" />
+    <feature name="android.permission.CHANGE_WIFI_STATE" />
+    <feature name="android.permission.INTERNET" />
+    <feature name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <feature name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <feature name="android.permission.WRITE_EXTERNAL_STORAGE" ignore="ScopedStorage" />
+    <feature name="android.permission.READ_EXTERNAL_STORAGE" />
+    <feature name="android.permission.FOREGROUND_SERVICE" />
+    <feature name="com.mayank.rucky.net" />
+</permissions>
