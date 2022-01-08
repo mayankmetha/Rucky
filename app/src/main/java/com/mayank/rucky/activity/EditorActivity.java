@@ -232,29 +232,14 @@ public class EditorActivity extends AppCompatActivity {
                 distro = R.string.releaseNetHunter;
                 nightly = false;
                 config.setUpdateFlag(false);
-                if (isDebuggable()) {
-                    tamperExit();
-                } else {
-                    ptraceBlock();
-                }
             } else if(hashList.get(i).trim().equals(GitHubRelease)) {
                 distro = R.string.releaseGitHub;
                 nightly = false;
                 config.setUpdateFlag(true);
-                if (isDebuggable()) {
-                    tamperExit();
-                } else {
-                    ptraceBlock();
-                }
             } else if(hashList.get(i).trim().equals(GitHubNightly)) {
                 distro = R.string.releaseGitHubNightly;
                 nightly = true;
                 config.setUpdateFlag(true);
-                if (isDebuggable()) {
-                    tamperExit();
-                } else {
-                    ptraceBlock();
-                }
             } else if(hashList.get(i).trim().equals(debug)) {
                 distro = R.string.releaseTest;
                 nightly = true;
@@ -277,7 +262,7 @@ public class EditorActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
         builder.setTitle(getResources().getString(R.string.tampered));
         builder.setCancelable(false);
-        builder.setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
+        builder.setPositiveButton(getResources().getString(R.string.btn_continue), (dialog, which) -> {
             if(config.getHIDMode() == 1)
                 stopNetworkSocketService();
             finishAndRemoveTask();
