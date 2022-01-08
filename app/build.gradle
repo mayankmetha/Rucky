@@ -12,7 +12,7 @@ def getVersionCode = { ->
         return Integer.parseInt(stdout.toString().trim())+1
     }
     catch (ignored) {
-        return 0
+        return 1
     }
 }
 
