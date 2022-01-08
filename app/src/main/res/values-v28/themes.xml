@@ -300,24 +300,10 @@
 
     <style name="Theme.Rucky.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="Theme.AppSplashDebug" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/debug_bg</item>
+    <style name="Theme.AppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/launcher_bg</item>
         <item name="postSplashScreenTheme">@style/Theme.Rucky</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
-        <item name="windowSplashScreenAnimationDuration">1000</item>
-    </style>
-
-    <style name="Theme.AppSplashNightly" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/nightly_bg</item>
-        <item name="postSplashScreenTheme">@style/Theme.Rucky</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
-        <item name="windowSplashScreenAnimationDuration">1000</item>
-    </style>
-
-    <style name="Theme.AppSplashRelease" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/release_bg</item>
-        <item name="postSplashScreenTheme">@style/Theme.Rucky</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="windowSplashScreenAnimationDuration">1000</item>
     </style>
 

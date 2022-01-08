@@ -2,10 +2,8 @@
 <resources>
 
     <!-- custom -->
-    <color name="icon">#FF5722</color>
-    <color name="debug_bg">#3A001E</color>
-    <color name="nightly_bg">#034A75</color>
-    <color name="release_bg">#CDDC39</color>
+    <color name="launcher_fg">#FF5722</color>
+    <color name="launcher_bg">#CDDC39</color>
     <color name="transparent">#00000000</color>
 
     <!-- material -->

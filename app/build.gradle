@@ -41,11 +41,6 @@ android {
                 checkReleaseBuilds false
                 abortOnError false
             }
-            manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher_debug",
-                    appIconRound: "@mipmap/ic_launcher_debug_round",
-                    splashTheme: "@style/Theme.AppSplashDebug"
-            ]
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -56,11 +51,6 @@ android {
                 checkReleaseBuilds false
                 abortOnError false
             }
-            manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher_nightly",
-                    appIconRound: "@mipmap/ic_launcher_nightly_round",
-                    splashTheme: "@style/Theme.AppSplashNightly"
-            ]
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -71,11 +61,6 @@ android {
                 checkReleaseBuilds false
                 abortOnError false
             }
-            manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher",
-                    appIconRound: "@mipmap/ic_launcher_round",
-                    splashTheme: "@style/Theme.AppSplashRelease"
-            ]
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -86,11 +71,6 @@ android {
                 checkReleaseBuilds false
                 abortOnError false
             }
-            manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher",
-                    appIconRound: "@mipmap/ic_launcher_round",
-                    splashTheme: "@style/Theme.AppSplashRelease"
-            ]
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
