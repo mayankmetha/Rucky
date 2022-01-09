@@ -35,7 +35,9 @@
         <entry key="app/src/main/res/drawable/color_button.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/color_button_selected.xml" value="0.16640625" />
         <entry key="app/src/main/res/drawable/cursor.xml" value="0.176953125" />
+        <entry key="app/src/main/res/drawable/divider.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/frame.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable/hid_download.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/hid_new.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/hid_offline.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/hid_refresh.xml" value="0.1875" />

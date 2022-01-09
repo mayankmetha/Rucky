@@ -66,7 +66,6 @@ public class HidActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_hid);
         config.setHIDIntent("");
         config.setHIDFile("");

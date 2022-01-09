@@ -42,42 +42,42 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/update_button"
-            android:layout_weight="1"
-            android:filterTouchesWhenObscured="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/update"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            app:iconPadding="0sp"
+            android:layout_weight="1"
+            android:contentDescription="@string/update"
+            android:filterTouchesWhenObscured="true"
+            app:icon="@drawable/ic_update"
             app:iconGravity="textTop"
-            app:icon="@drawable/ic_update"/>
+            app:iconPadding="0sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cfgBtn"
-            android:layout_weight="1"
-            android:filterTouchesWhenObscured="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/confBtn"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            app:iconPadding="0sp"
+            android:layout_weight="1"
+            android:contentDescription="@string/confBtn"
+            android:filterTouchesWhenObscured="true"
+            app:icon="@drawable/ic_config"
             app:iconGravity="textTop"
-            app:icon="@drawable/ic_config"/>
+            app:iconPadding="0sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/setting_button"
-            android:layout_weight="1"
-            android:filterTouchesWhenObscured="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/setting"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            app:iconPadding="0sp"
+            android:layout_weight="1"
+            android:contentDescription="@string/setting"
+            android:filterTouchesWhenObscured="true"
+            app:icon="@drawable/ic_settings"
             app:iconGravity="textTop"
-            app:icon="@drawable/ic_settings"/>
+            app:iconPadding="0sp" />
 
     </LinearLayout>
 

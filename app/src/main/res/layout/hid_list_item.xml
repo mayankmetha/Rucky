@@ -2,12 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
+    style="@style/Theme.Rucky.Monet"
     android:padding="16sp">
 
     <ImageView
-        app:tint="?attr/appColorAccent"
         android:layout_margin="16sp"
         android:layout_width="24sp"
         android:layout_height="24sp"
@@ -19,7 +18,7 @@
         android:layout_height="match_parent"
         android:gravity="center|center_horizontal|center_vertical">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/hid_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +26,7 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/hid_version"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
