@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    style="@style/Theme.Rucky.Monet" >
 
     <LinearLayout
         android:id="@+id/appBarLayout"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8sp"
@@ -22,17 +23,10 @@
             android:paddingStart="24sp"
             android:paddingEnd="24sp"
             android:id="@+id/browserTitle"
-            android:textColor="?attr/appColorAccent"
             android:textSize="32sp"
             android:textStyle="bold"
             android:layout_weight="1"
             tools:ignore="InefficientWeight" />
-
-        <View
-            android:id="@+id/view_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@drawable/divider" />
 
     </LinearLayout>
 

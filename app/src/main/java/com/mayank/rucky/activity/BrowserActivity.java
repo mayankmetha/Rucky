@@ -32,7 +32,6 @@ public class BrowserActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_browser);
         String title = getIntent().getStringExtra(Constants.activityTitle);
         TextView browserTitle = findViewById(R.id.browserTitle);
