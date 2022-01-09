@@ -37,7 +37,6 @@ public class ConfigActivity extends AppCompatActivity {
     public TextView statusText;
     public ImageView statusImage;
     public Button ipButton;
-    public View ipStatusDivider;
 
     public static Pattern SOCKET_ADDRESS;
 
@@ -52,7 +51,6 @@ public class ConfigActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_config);
 
         statusText = findViewById(R.id.status_text);
@@ -60,7 +58,6 @@ public class ConfigActivity extends AppCompatActivity {
         statusImage.setFilterTouchesWhenObscured(true);
         ipButton = findViewById(R.id.ipBtn);
         ipButton.setFilterTouchesWhenObscured(true);
-        ipStatusDivider = findViewById(R.id.divider_config3);
 
         ipButton.setText(config.getNetworkAddress());
         SOCKET_ADDRESS = Pattern.compile("((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(25[0-5]|2[0-4]"
@@ -155,7 +152,6 @@ public class ConfigActivity extends AppCompatActivity {
             getApplicationContext().stopService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
             ipButton.setEnabled(false);
             ipButton.setAlpha(0);
-            ipStatusDivider.setAlpha(0);
             if (config.getUSBStatus()) {
                 config.setStatusTextRes(R.string.config_status_usb_on);
                 config.setStatusImageRes(R.drawable.ic_usb);
@@ -172,7 +168,6 @@ public class ConfigActivity extends AppCompatActivity {
             updateNotification();
             ipButton.setEnabled(true);
             ipButton.setAlpha(1);
-            ipStatusDivider.setAlpha(1);
             if (config.getNetworkStatus()) {
                 config.setStatusTextRes(R.string.config_status_net_on);
                 config.setStatusImageRes(R.drawable.ic_net);
