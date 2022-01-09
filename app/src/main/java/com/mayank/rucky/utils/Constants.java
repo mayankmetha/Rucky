@@ -111,18 +111,6 @@ public class Constants {
             R.style.pink,           R.style.red
     };
 
-    public static final int[] themeSplashBorder = {
-            R.drawable.splash_gradient_blue_grey,       R.drawable.splash_gradient_brown,
-            R.drawable.splash_gradient_deep_orange,     R.drawable.splash_gradient_orange,
-            R.drawable.splash_gradient_amber,           R.drawable.splash_gradient_yellow,
-            R.drawable.splash_gradient_lime,            R.drawable.splash_gradient_light_green,
-            R.drawable.splash_gradient_green,           R.drawable.splash_gradient_teal,
-            R.drawable.splash_gradient_cyan,            R.drawable.splash_gradient_light_blue,
-            R.drawable.splash_gradient_blue,            R.drawable.splash_gradient_indigo,
-            R.drawable.splash_gradient_deep_purple,     R.drawable.splash_gradient_purple,
-            R.drawable.splash_gradient_pink,            R.drawable.splash_gradient_red
-    };
-
     public static final String DOTS = "•";
 
     public static final String[] hostnames = {
