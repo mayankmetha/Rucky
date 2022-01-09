@@ -15,7 +15,6 @@ import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -28,7 +27,7 @@ import androidx.core.splashscreen.SplashScreen;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
-import com.mayank.rucky.utils.Constants;
+
 
 import java.util.Objects;
 
@@ -55,7 +54,6 @@ public class WelcomeActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
 
         if(config.getSec())
             changeProcessName();
@@ -140,12 +138,10 @@ public class WelcomeActivity extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
         }
-        RelativeLayout parentLayout = findViewById(R.id.splashParentLayout);
-        parentLayout.setBackground(ContextCompat.getDrawable(this, Constants.themeSplashBorder[config.getAccentTheme()]));
-        ImageView i1 = findViewById(R.id.imageViewBG);
+        ImageView i1 = findViewById(R.id.imageViewFG);
         i1.setFilterTouchesWhenObscured(true);
         FrameLayout l2= findViewById(R.id.splashTextView);
-        i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate));
+        i1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
         l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
         new Handler(Looper.getMainLooper()).postDelayed(this::launchNext, 2000);
     }

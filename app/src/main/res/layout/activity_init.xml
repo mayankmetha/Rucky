@@ -1,41 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.InitActivity"
-    android:background="@color/background">
+    style="@style/Theme.Rucky.Monet">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/view_divider" />
-
-    <View
-        android:id="@+id/view_divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_above="@id/view_bottom_bar"
-        android:background="@drawable/divider" />
+        android:layout_above="@id/view_bottom_bar" />
 
     <LinearLayout
         android:id="@+id/view_bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="32sp" >
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_skip"
-            style="@style/InitButton"
             android:filterTouchesWhenObscured="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/init_skip"
-            android:textColor="?attr/appColorAccent"
-            tools:ignore="RelativeOverlap" />
+            android:text="@string/init_skip" />
 
         <LinearLayout
             android:id="@+id/layoutDots"
@@ -47,14 +36,11 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next"
-            style="@style/InitButton"
             android:filterTouchesWhenObscured="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/init_next"
-            android:textColor="?attr/appColorAccent"
-            tools:ignore="RelativeOverlap" />
+            android:text="@string/init_next" />
 
     </LinearLayout>
 

@@ -2,12 +2,10 @@ package com.mayank.rucky.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,8 +46,6 @@ public class InitActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
-        config.setAccentTheme(config.getAccentTheme());
         setContentView(R.layout.activity_init);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -118,8 +114,6 @@ public class InitActivity extends AppCompatActivity {
     }
 
     private void addBottomDots(int currentPage) {
-        final TypedValue value = new TypedValue();
-        TypedArray typedArray = this.getTheme().obtainStyledAttributes(value.data,new int[]{ R.attr.appColorAccent });
         if (dotsLayout != null)
             dotsLayout.removeAllViews();
         TextView[] dots = new TextView[layouts.length];
@@ -127,7 +121,7 @@ public class InitActivity extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Constants.DOTS);
             dots[i].setTextSize(35);
-            dots[i].setTextColor( i == currentPage ? typedArray.getColor(0, 0) : ContextCompat.getColor(this, R.color.foreground));
+            dots[i].setTextColor( i == currentPage ? ContextCompat.getColor(this, com.google.android.material.R.color.material_dynamic_primary50) : ContextCompat.getColor(this, com.google.android.material.R.color.material_dynamic_neutral50));
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             dotsLayout.addView(dots[i],params);
         }
