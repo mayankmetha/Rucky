@@ -4,14 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-night/alert.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable-night/ic_arch.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-night/ic_config_fs.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable-night/ic_dark.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable-night/ic_developer.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-night/ic_disclaimer.xml" value="0.21736111111111112" />
+        <entry key="app/src/main/res/drawable-night/ic_github.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-night/ic_hid.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable-night/ic_icon.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable-night/ic_launch.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable-night/ic_license.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-night/ic_localize.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-night/ic_net.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable-night/ic_net_off.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable-night/ic_permission.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable-night/ic_policy.xml" value="0.21736111111111112" />
+        <entry key="app/src/main/res/drawable-night/ic_store.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-night/ic_swap.xml" value="0.176953125" />
+        <entry key="app/src/main/res/drawable-night/ic_uninstall.xml" value="0.176953125" />
         <entry key="app/src/main/res/drawable-night/ic_usb.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable-night/ic_usb_off.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable-night/ic_version.xml" value="0.176953125" />
         <entry key="app/src/main/res/drawable-night/ic_wired.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable-night/ic_wireless.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable-night/ripple.xml" value="0.303125" />
@@ -20,21 +33,41 @@
         <entry key="app/src/main/res/drawable/alert.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/color_button.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/color_button_selected.xml" value="0.16640625" />
+        <entry key="app/src/main/res/drawable/cursor.xml" value="0.176953125" />
         <entry key="app/src/main/res/drawable/frame.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable/hid_new.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/hid_offline.xml" value="0.171875" />
+        <entry key="app/src/main/res/drawable/hid_refresh.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/hid_update.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_arch.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_color.xml" value="0.171875" />
+        <entry key="app/src/main/res/drawable/ic_config.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_config_fs.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_dark.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_developer.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_disclaimer.xml" value="0.21736111111111112" />
+        <entry key="app/src/main/res/drawable/ic_github.xml" value="0.21736111111111112" />
+        <entry key="app/src/main/res/drawable/ic_hid.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_icon.xml" value="0.292578125" />
+        <entry key="app/src/main/res/drawable/ic_launch.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.303125" />
+        <entry key="app/src/main/res/drawable/ic_license.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_localize.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_net.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/ic_net_off.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/ic_permission.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable/ic_policy.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable/ic_run.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.171875" />
+        <entry key="app/src/main/res/drawable/ic_security.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_store.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_swap.xml" value="0.176953125" />
         <entry key="app/src/main/res/drawable/ic_theme.xml" value="0.21736111111111112" />
+        <entry key="app/src/main/res/drawable/ic_uninstall.xml" value="0.176953125" />
+        <entry key="app/src/main/res/drawable/ic_update.xml" value="0.176953125" />
         <entry key="app/src/main/res/drawable/ic_usb.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/ic_usb_off.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable/ic_version.xml" value="0.176953125" />
         <entry key="app/src/main/res/drawable/ic_wired.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable/ic_wireless.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable/ripple.xml" value="0.303125" />
