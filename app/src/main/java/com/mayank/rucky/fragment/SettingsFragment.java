@@ -7,31 +7,20 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.WindowManager;
-import android.widget.ImageView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.pm.PackageInfoCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.activity.BrowserActivity;
 import com.mayank.rucky.activity.EditorActivity;
 import com.mayank.rucky.activity.HidActivity;
 import com.mayank.rucky.activity.WelcomeActivity;
-import com.mayank.rucky.utils.ColorAdapter;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
-
-import java.util.Objects;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -46,10 +35,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        this.requireActivity().setTheme(Constants.themeList[config.getAccentTheme()]);
 
         darkThemeSetting();
-        colorSetting();
         hideLauncherIcon();
         security();
         cleanup();
@@ -76,59 +63,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             boolean switched = !((SwitchPreference) preference).isChecked();
             config.setDarkMode(switched);
             restartActivity();
-            return true;
-        });
-    }
-
-    private void colorSetting() {
-        final SwitchPreference monetSwitch = findPreference(Constants.PREF_KEY_MONET);
-        assert monetSwitch != null;
-        final Preference accentPreference = findPreference(Constants.PREF_KEY_ACCENT_COLOR);
-        assert accentPreference != null;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            accentPreference.setEnabled(!config.getMonet());
-            accentPreference.setVisible(!config.getMonet());
-            monetSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
-                boolean switched = !((SwitchPreference) preference).isChecked();
-                config.setMonet(switched);
-                restartActivity();
-                return true;
-            });
-        } else {
-            accentPreference.setEnabled(true);
-            accentPreference.setVisible(true);
-            monetSwitch.setEnabled(false);
-            monetSwitch.setChecked(false);
-            monetSwitch.setVisible(false);
-            config.setMonet(false);
-        }
-        accentPreference.setOnPreferenceClickListener(preference -> {
-            int[] colors = getResources().getIntArray(R.array.colors);
-            LayoutInflater colorLI = LayoutInflater.from(this.requireActivity());
-            RecyclerView view = (RecyclerView) colorLI.inflate(R.layout.color_grid, null);
-            ColorAdapter adapter = new ColorAdapter(colors, this.requireActivity());
-            adapter.onItemClicked((position, v) -> {
-                config.setAccentTheme(position);
-                adapter.updateSelection(position);
-                ImageView selectedButton = v.findViewById(R.id.color_button);
-                selectedButton.setFilterTouchesWhenObscured(true);
-                selectedButton.setImageDrawable(ContextCompat.getDrawable(this.requireActivity(), R.drawable.color_button_selected));
-                selectedButton.setColorFilter(colors[position]);
-            });
-            int gridRowSize = 5;
-            view.setAdapter(adapter);
-            GridLayoutManager grids = new GridLayoutManager(this.requireActivity(),gridRowSize);
-            view.setLayoutManager(grids);
-            view.setForegroundGravity(Gravity.CENTER);
-            AlertDialog.Builder builder = new AlertDialog.Builder(this.requireActivity());
-            builder.setCancelable(false);
-            builder.setView(view);
-            builder.setTitle(R.string.accent_theme_title);
-            builder.setPositiveButton(getResources().getString(R.string.btn_select), (dialog, which) -> restartActivity());
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog dialog = builder.create();
-            Objects.requireNonNull(dialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            dialog.show();
             return true;
         });
     }

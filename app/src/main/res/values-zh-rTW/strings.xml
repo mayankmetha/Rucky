@@ -73,8 +73,6 @@
     <string name="setting_general">將軍</string>
     <string name="dark_theme_title">夜間模式</string>
     <string name="dark_theme_summary">設定暗主題</string>
-    <string name="accent_theme_title">主題</string>
-    <string name="accent_theme_summary">變更重音顏色</string>
     <string name="hide_icon_title">隱藏/停用啟動程式圖示</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* 要啟動。 在 Android 10 之後，圖示會停用，但不會隱藏。</string>
     <string name="delete_dep_title">解除安裝應用程式</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub 夜間</string>
     <string name="releaseTest">除錯發行</string>
     <string name="releaseOthers">不支援的版本</string>
-    <string name="btn_select">選擇</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_save">儲存</string>
     <string name="file_saved">已儲存</string>

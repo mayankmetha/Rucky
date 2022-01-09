@@ -73,8 +73,6 @@
     <string name="setting_general">Almindelige bestemmelser</string>
     <string name="dark_theme_title">Nattilstand</string>
     <string name="dark_theme_summary">Sæt mørkt tema</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Skift accentfarve</string>
     <string name="hide_icon_title">Skjul/Deaktivér Launcher-Ikon</string>
     <string name="hide_icon_summary">Ring *#*#78259#*#* for at starte. På Android 10 og derover vil ikonet blive deaktiveret, men ikke skjult.</string>
     <string name="delete_dep_title">Fjern installation af program</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Fejlfindingsrelease</string>
     <string name="releaseOthers">Ikke-understøttet release</string>
-    <string name="btn_select">Vælg</string>
     <string name="btn_cancel">Annuller</string>
     <string name="btn_save">Gem</string>
     <string name="file_saved">gemt</string>

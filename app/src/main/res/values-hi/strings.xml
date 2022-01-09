@@ -73,8 +73,6 @@
     <string name="setting_general">सामान्य</string>
     <string name="dark_theme_title">रात्रि मोड</string>
     <string name="dark_theme_summary">गहरा प्रसंग सेट करें</string>
-    <string name="accent_theme_title">प्रसंग</string>
-    <string name="accent_theme_summary">टोन रंग बदलें</string>
     <string name="hide_icon_title">लॉचर प्रतीक छुपाएँ/निष्क्रिय करें</string>
     <string name="hide_icon_summary">डायल *#*#78259#*#* पर लॉन्च करने के लिए. एंड्रॉयड 10 के बाद, आइकन अक्षम किया जाएगा, लेकिन छुपा नहीं है.</string>
     <string name="delete_dep_title">एप्लिकेशन अनइंस्टॉल करें</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">डिबग रिलीज</string>
     <string name="releaseOthers">समर्थित रिलीज़</string>
-    <string name="btn_select">चुनें</string>
     <string name="btn_cancel">रद्द करें</string>
     <string name="btn_save">सेव</string>
     <string name="file_saved">बचा हुआ</string>

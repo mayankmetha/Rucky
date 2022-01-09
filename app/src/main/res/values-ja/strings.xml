@@ -73,8 +73,6 @@
     <string name="setting_general">一般</string>
     <string name="dark_theme_title">夜間モード</string>
     <string name="dark_theme_summary">ダークテーマを設定</string>
-    <string name="accent_theme_title">テーマ</string>
-    <string name="accent_theme_summary">アクセントカラーの変更</string>
     <string name="hide_icon_title">ランチャーアイコンの非表示/無効化</string>
     <string name="hide_icon_summary">起動するには*#*#78259#*#*をダイヤルしてください。Android 10以降ではアイコンは無効になりますが、非表示にはなりません。</string>
     <string name="delete_dep_title">アプリをアンインストール</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">デバッグ配信</string>
     <string name="releaseOthers">サポートされていない配信</string>
-    <string name="btn_select">選択</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_save">保存</string>
     <string name="file_saved">保存しました</string>

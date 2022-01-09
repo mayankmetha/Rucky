@@ -73,8 +73,6 @@
     <string name="setting_general">Allgemein</string>
     <string name="dark_theme_title">Nachtmodus</string>
     <string name="dark_theme_summary">Dunkles Design setzen</string>
-    <string name="accent_theme_title">Thema</string>
-    <string name="accent_theme_summary">Akzentfarbe ändern</string>
     <string name="hide_icon_title">Launcher-Icon ausblenden/deaktivieren</string>
     <string name="hide_icon_summary">Wählen Sie *#*#78259#*#* um zu starten. Auf Android 10 wird das Symbol deaktiviert, aber nicht versteckt.</string>
     <string name="delete_dep_title">App deinstallieren</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug-Veröffentlichung</string>
     <string name="releaseOthers">Nicht unterstützte Version</string>
-    <string name="btn_select">Auswählen</string>
     <string name="btn_cancel">Abbrechen</string>
     <string name="btn_save">Speichern</string>
     <string name="file_saved">Gespeichert</string>

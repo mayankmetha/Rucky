@@ -27,7 +27,6 @@ public class SettingsActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_settings);
         getSupportFragmentManager().beginTransaction().replace(R.id.setting_container, new SettingsFragment()).commit();
     }
@@ -40,7 +39,6 @@ public class SettingsActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
     }
 
 }

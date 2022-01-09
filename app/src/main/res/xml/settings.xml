@@ -14,19 +14,6 @@
             app:title="@string/dark_theme_title" />
 
         <SwitchPreference
-            app:defaultValue="false"
-            app:icon="@drawable/ic_theme"
-            app:key="monet"
-            app:summary="Theme based on wallpaper color"
-            app:title="Monet Theme" />
-
-        <Preference
-            app:icon="@drawable/ic_color"
-            app:key="accent"
-            app:title="@string/accent_theme_title"
-            app:summary="@string/accent_theme_summary" />
-
-        <SwitchPreference
             app:key="icon"
             app:icon="@drawable/ic_launch"
             app:defaultValue="false"

@@ -46,7 +46,7 @@
             android:filterTouchesWhenObscured="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/loadBtn"
+            android:contentDescription="@string/update"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             app:iconPadding="0sp"
@@ -72,7 +72,7 @@
             android:filterTouchesWhenObscured="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/delBtn"
+            android:contentDescription="@string/setting"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             app:iconPadding="0sp"
@@ -87,7 +87,6 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
-            app:boxStrokeColor="@color/text_input_box_stroke"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/BtnGrp"

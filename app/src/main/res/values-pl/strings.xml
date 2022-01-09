@@ -73,8 +73,6 @@
     <string name="setting_general">Ogólny</string>
     <string name="dark_theme_title">Tryb nocny</string>
     <string name="dark_theme_summary">Ustaw ciemny motyw</string>
-    <string name="accent_theme_title">Motyw</string>
-    <string name="accent_theme_summary">Zmień kolor akcentu</string>
     <string name="hide_icon_title">Ukryj/Wyłącz ikonę Launcher</string>
     <string name="hide_icon_summary">Wybieraj *#*#78259#*#* aby uruchomić. Na Androidzie 10 ikona zostanie wyłączona, ale nie ukryta.</string>
     <string name="delete_dep_title">Odinstaluj aplikację</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Wydanie debugowania</string>
     <string name="releaseOthers">Nieobsługiwane wydanie</string>
-    <string name="btn_select">Wybierz</string>
     <string name="btn_cancel">Anuluj</string>
     <string name="btn_save">Zapisz</string>
     <string name="file_saved">zapisano</string>

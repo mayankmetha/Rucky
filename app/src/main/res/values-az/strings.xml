@@ -73,8 +73,6 @@
     <string name="setting_general">Ümumi</string>
     <string name="dark_theme_title">Gecə rejimi</string>
     <string name="dark_theme_summary">Tünd temanı tənzimlə</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Vurğu rəngini dəyişdir</string>
     <string name="hide_icon_title">Başladıcı nişanını gizlət/sıradan çıxart</string>
     <string name="hide_icon_summary">Başlatmaq üçün *#*#78259#*#* yığın. Android 10-dan etibarən nişan sıradan çıxarılacaq, ancaq gizlədilməyəcək.</string>
     <string name="delete_dep_title">Tətbiqi sil</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Sazlama buraxılışı</string>
     <string name="releaseOthers">Dəstəklənməyən buraxılış</string>
-    <string name="btn_select">Seç</string>
     <string name="btn_cancel">İmtina</string>
     <string name="btn_save">Saxla</string>
     <string name="file_saved">saxlanıldı</string>

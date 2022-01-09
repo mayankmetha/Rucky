@@ -73,8 +73,6 @@
     <string name="setting_general">Загальні налаштування</string>
     <string name="dark_theme_title">Нічний режим</string>
     <string name="dark_theme_summary">Встановити темну тему</string>
-    <string name="accent_theme_title">Тема</string>
-    <string name="accent_theme_summary">Змінити колір акценту</string>
     <string name="hide_icon_title">Приховати/вимкнути іконку лаунчера</string>
     <string name="hide_icon_summary">Набрати *#*#78259#*#* для запуску. На Android 10 onwards буде вимкнуто піктограму, але не приховано.</string>
     <string name="delete_dep_title">Видалити додаток</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub нічно</string>
     <string name="releaseTest">Налагодження релізу</string>
     <string name="releaseOthers">Непідтримуваний реліз</string>
-    <string name="btn_select">Вибрати</string>
     <string name="btn_cancel">Скасувати</string>
     <string name="btn_save">Зберегти</string>
     <string name="file_saved">збережено</string>

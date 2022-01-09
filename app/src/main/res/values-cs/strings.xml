@@ -73,8 +73,6 @@
     <string name="setting_general">Obecné</string>
     <string name="dark_theme_title">Noční režim</string>
     <string name="dark_theme_summary">Nastavit tmavý motiv</string>
-    <string name="accent_theme_title">Motiv</string>
-    <string name="accent_theme_summary">Změnit barvu zvýraznění</string>
     <string name="hide_icon_title">Skrýt/zakázat ikonu spouštěče</string>
     <string name="hide_icon_summary">Pro spuštění vytočte *#*#78259#*#*. Na Androidu 10 a výše bude ikona zakázána, ale nebude skryta.</string>
     <string name="delete_dep_title">Odinstalovat aplikaci</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug vydání</string>
     <string name="releaseOthers">Nepodporované vydání</string>
-    <string name="btn_select">Vybrat</string>
     <string name="btn_cancel">Zrušit</string>
     <string name="btn_save">Uložit</string>
     <string name="file_saved">uloženo</string>

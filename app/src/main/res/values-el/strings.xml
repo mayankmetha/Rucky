@@ -73,8 +73,6 @@
     <string name="setting_general">Γενικά</string>
     <string name="dark_theme_title">Νυχτερινή Λειτουργία</string>
     <string name="dark_theme_summary">Ορισμός σκοτεινού θέματος</string>
-    <string name="accent_theme_title">Θέμα</string>
-    <string name="accent_theme_summary">Αλλαγή χρώματος έμφασης</string>
     <string name="hide_icon_title">Απόκρυψη/Απενεργοποίηση Εικονιδίου Εκκινητή</string>
     <string name="hide_icon_summary">Κλήση *#*#78259#*#* για εκκίνηση. Στο Android 10 και μετά, το εικονίδιο θα απενεργοποιηθεί, αλλά δεν θα κρυφτεί.</string>
     <string name="delete_dep_title">Απεγκατάσταση Εφαρμογής</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Απελευθέρωση Σφαλμάτων</string>
     <string name="releaseOthers">Μη Υποστηριζόμενη Έκδοση</string>
-    <string name="btn_select">Επιλογή</string>
     <string name="btn_cancel">Ακύρωση</string>
     <string name="btn_save">Αποθήκευση</string>
     <string name="file_saved">αποθηκεύτηκε</string>

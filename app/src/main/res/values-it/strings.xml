@@ -73,8 +73,6 @@
     <string name="setting_general">Generale</string>
     <string name="dark_theme_title">Modalità Notturna</string>
     <string name="dark_theme_summary">Imposta tema scuro</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Cambia colore accento</string>
     <string name="hide_icon_title">Nascondi/Disabilita Icona Di Lancio</string>
     <string name="hide_icon_summary">Componi *#*#78259#*#* per lanciare. Su Android 10 in poi, l\'icona sarà disabilitata, ma non nascosta.</string>
     <string name="delete_dep_title">Disinstalla app</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Rilascio di debug</string>
     <string name="releaseOthers">Rilascio non supportato</string>
-    <string name="btn_select">Seleziona</string>
     <string name="btn_cancel">Annulla</string>
     <string name="btn_save">Salvare</string>
     <string name="file_saved">salvato</string>

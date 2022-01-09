@@ -73,8 +73,6 @@
     <string name="setting_general">Cài đặt chung</string>
     <string name="dark_theme_title">Chế độ đêm</string>
     <string name="dark_theme_summary">Giao dien toi</string>
-    <string name="accent_theme_title">Chủ đề</string>
-    <string name="accent_theme_summary">Thay đổi màu sắc</string>
     <string name="hide_icon_title">Vô hiệu hóa biểu tượng launcher</string>
     <string name="hide_icon_summary">Dial * #*#78259#*#* để khởi động. Trên Android 10 trở đi, biểu tượng sẽ bị vô hiệu hóa, nhưng không bị ẩn.</string>
     <string name="delete_dep_title">Gỡ cài đặt ứng dụng</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Phát hành gỡ lỗi</string>
     <string name="releaseOthers">Phát hành không hỗ trợ</string>
-    <string name="btn_select">Chọn</string>
     <string name="btn_cancel">Hủy</string>
     <string name="btn_save">Lưu</string>
     <string name="file_saved">đã lưu</string>

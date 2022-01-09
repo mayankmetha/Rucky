@@ -73,8 +73,6 @@
     <string name="setting_general">Yleistä</string>
     <string name="dark_theme_title">Yötila</string>
     <string name="dark_theme_summary">Aseta tumma teema</string>
-    <string name="accent_theme_title">Teema</string>
-    <string name="accent_theme_summary">Muuta aksenttien väriä</string>
     <string name="hide_icon_title">Piilota/Poista Käytöstä Käynnistinkuvake</string>
     <string name="hide_icon_summary">Valitse *#*#78259#*#* käynnistääksesi. Android 10:ssä kuvake poistetaan käytöstä, mutta ei piilotettu.</string>
     <string name="delete_dep_title">Poista App-asennus</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debugin vapautus</string>
     <string name="releaseOthers">Tuettu vapautus</string>
-    <string name="btn_select">Valitse</string>
     <string name="btn_cancel">Peruuta</string>
     <string name="btn_save">Tallenna</string>
     <string name="file_saved">tallennettu</string>

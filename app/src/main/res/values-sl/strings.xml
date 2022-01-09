@@ -73,8 +73,6 @@
     <string name="setting_general">Splošno</string>
     <string name="dark_theme_title">Nočni način</string>
     <string name="dark_theme_summary">Nastavi temno temo</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Spremeni barvo naglasa</string>
     <string name="hide_icon_title">Skrij / Onemogoci Ikono Zaganjalnika</string>
     <string name="hide_icon_summary">Zavrti * #*#78259#*#* za zagon. V sistemu Android 10 naprej bo ikona onemogota, vendar ne skrita.</string>
     <string name="delete_dep_title">Odstrani Namestitev Aplikacije</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nikonočni</string>
     <string name="releaseTest">Razhrošči izdajo</string>
     <string name="releaseOthers">Nepodprta Izdaja</string>
-    <string name="btn_select">Izberi</string>
     <string name="btn_cancel">Preklici</string>
     <string name="btn_save">Shrani</string>
     <string name="file_saved">shranjeni</string>

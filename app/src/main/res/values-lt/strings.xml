@@ -73,8 +73,6 @@
     <string name="setting_general">Bendrosios nuostatos</string>
     <string name="dark_theme_title">Naktinis režimas</string>
     <string name="dark_theme_summary">Nustatyti tamsią temą</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Keisti akcento spalvą</string>
     <string name="hide_icon_title">Nuslėpti/Išjungti paleidimo Icon</string>
     <string name="hide_icon_summary">Skambink * **********pradės#78259 Android 10 ir vėliau, piktograma bus išjungta, bet ne paslėpta.</string>
     <string name="delete_dep_title">Pašalinti programėlė</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nakčiai</string>
     <string name="releaseTest">Derinti išleidimą</string>
     <string name="releaseOthers">Nepalaikomas išleidimas</string>
-    <string name="btn_select">Pasirinkti</string>
     <string name="btn_cancel">Atšaukti</string>
     <string name="btn_save">Įrašyti</string>
     <string name="file_saved">išsaugotas</string>

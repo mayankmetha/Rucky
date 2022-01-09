@@ -73,8 +73,6 @@
     <string name="setting_general">Jeneral</string>
     <string name="dark_theme_title">Mode Malam</string>
     <string name="dark_theme_summary">Set tema gelap</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Ubah warna aksen</string>
     <string name="hide_icon_title">Sembunyikan/Matikan Ikon Peluncur</string>
     <string name="hide_icon_summary">Dial * #*#78259#*#* untuk diluncurkan. Pada Android 10 dan seterusnya, ikon akan dimatikan, tetapi tidak disembunyikan.</string>
     <string name="delete_dep_title">Hapus Instalasi Aplikasi</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Rilis Debug</string>
     <string name="releaseOthers">Rilis Tidak Didukung</string>
-    <string name="btn_select">Pilih</string>
     <string name="btn_cancel">Batal</string>
     <string name="btn_save">Simpan</string>
     <string name="file_saved">tersimpan</string>

@@ -73,8 +73,6 @@
     <string name="setting_general">Üldine</string>
     <string name="dark_theme_title">Öörežiim</string>
     <string name="dark_theme_summary">Tumeda teema määramine</string>
-    <string name="accent_theme_title">Teema</string>
-    <string name="accent_theme_summary">Muuda aktsendi värvi</string>
     <string name="hide_icon_title">Peida/keela käivitaja ikoon</string>
     <string name="hide_icon_summary">Dial * #*#78259# #* käivitada. Sees Android 10, ikoon on keelatud, kuid ei ole peidetud.</string>
     <string name="delete_dep_title">Eemalda App</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Silumisteade</string>
     <string name="releaseOthers">Toetamata vabastamine</string>
-    <string name="btn_select">Vali</string>
     <string name="btn_cancel">Loobu</string>
     <string name="btn_save">Salvesta</string>
     <string name="file_saved">salvestatud</string>

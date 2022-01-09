@@ -73,8 +73,6 @@
     <string name="setting_general">A. 概况</string>
     <string name="dark_theme_title">夜间模式</string>
     <string name="dark_theme_summary">设置暗色主题</string>
-    <string name="accent_theme_title">主题</string>
-    <string name="accent_theme_summary">更改音量颜色</string>
     <string name="hide_icon_title">隐藏/禁用启动器图标</string>
     <string name="hide_icon_summary">拨打*#78259#*#*#*来启动。在 Android 10 后，图标将被禁用，但不会隐藏。</string>
     <string name="delete_dep_title">卸载应用</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub 夜间</string>
     <string name="releaseTest">调试发布</string>
     <string name="releaseOthers">非支持的版本</string>
-    <string name="btn_select">选择</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_save">保存</string>
     <string name="file_saved">已保存</string>

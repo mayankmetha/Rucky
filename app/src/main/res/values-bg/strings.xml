@@ -73,8 +73,6 @@
     <string name="setting_general">Общие положения</string>
     <string name="dark_theme_title">Нощен режим</string>
     <string name="dark_theme_summary">Задаване на тъмна тема</string>
-    <string name="accent_theme_title">Тема:</string>
-    <string name="accent_theme_summary">Промяна акцент цвят</string>
     <string name="hide_icon_title">Скриване/деактивиране на иконата за стартиране</string>
     <string name="hide_icon_summary">Изберете * #*#78259#*#за стартиране. На Андроид 10 нататък, иконата ще бъде деактивирана, но не е скрита.</string>
     <string name="delete_dep_title">Удалить приложение</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">\"Гитуб Найтли\"</string>
     <string name="releaseTest">Отладка релиза</string>
     <string name="releaseOthers">Поддерживаемый релиз</string>
-    <string name="btn_select">Избор:</string>
     <string name="btn_cancel">Отмяна?</string>
     <string name="btn_save">Запазване</string>
     <string name="file_saved">спасена.</string>

@@ -73,8 +73,6 @@
     <string name="setting_general">Algemeen</string>
     <string name="dark_theme_title">Nacht modus</string>
     <string name="dark_theme_summary">Donker thema instellen</string>
-    <string name="accent_theme_title">Thema</string>
-    <string name="accent_theme_summary">Wijzig accentkleur</string>
     <string name="hide_icon_title">Verberg/Uitschakelen Launcher-pictogram</string>
     <string name="hide_icon_summary">Dial *#*#78259#* om te starten. Op Android 10 wordt het pictogram uitgeschakeld, maar niet verborgen.</string>
     <string name="delete_dep_title">App verwijderen</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nachtelijke</string>
     <string name="releaseTest">Debug release</string>
     <string name="releaseOthers">Niet-ondersteunde release</string>
-    <string name="btn_select">Selecteren</string>
     <string name="btn_cancel">annuleren</string>
     <string name="btn_save">Opslaan</string>
     <string name="file_saved">opgeslagen</string>

@@ -73,8 +73,6 @@
     <string name="setting_general">일반적인</string>
     <string name="dark_theme_title">야간 모드</string>
     <string name="dark_theme_summary">짙은 테마 설정하기</string>
-    <string name="accent_theme_title">테마</string>
-    <string name="accent_theme_summary">액센트 색상 변경하기</string>
     <string name="hide_icon_title">실행 프로그램 아이콘 숨기기/사용 안함</string>
     <string name="hide_icon_summary">시작 * #*#78259#*#* 가 실행됩니다. Android 10이상에서는 아이콘을 사용하지 않지만 숨길 수는 없습니다.</string>
     <string name="delete_dep_title">애플리케이션 제거하기</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">디버그 해제</string>
     <string name="releaseOthers">지원되지 않는 릴리스</string>
-    <string name="btn_select">선택</string>
     <string name="btn_cancel">취소</string>
     <string name="btn_save">다른 이름으로 저장</string>
     <string name="file_saved">저장된</string>

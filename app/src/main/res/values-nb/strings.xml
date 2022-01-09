@@ -73,8 +73,6 @@
     <string name="setting_general">Generelt</string>
     <string name="dark_theme_title">Natt modus</string>
     <string name="dark_theme_summary">Angi mørkt tema</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Endre aksentfarge</string>
     <string name="hide_icon_title">Skjul/deaktiver Launcher-ikon</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* for å starte. På Android 10 fremover, blir ikonet deaktivert, men ikke skjult.</string>
     <string name="delete_dep_title">Avinstaller appen</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Feilsøk versjon</string>
     <string name="releaseOthers">Ikke-Støttede utgivelse</string>
-    <string name="btn_select">Velg</string>
     <string name="btn_cancel">Avbryt</string>
     <string name="btn_save">Lagre</string>
     <string name="file_saved">lagret</string>

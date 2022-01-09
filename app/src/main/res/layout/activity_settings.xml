@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/SettingsPage"
-    tools:context=".activity.SettingsActivity">
+    style="@style/Theme.Rucky.Monet">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,19 +16,11 @@
         android:paddingEnd="24sp"
         android:layout_margin="8sp"
         android:text="@string/setting"
-        android:textColor="?attr/appColorAccent"
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <View
-        android:id="@+id/view_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/title"
-        android:background="@drawable/divider" />
-
     <FrameLayout
-        android:layout_below="@id/view_toolbar"
+        android:layout_below="@id/title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/setting_container" />

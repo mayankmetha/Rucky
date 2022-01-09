@@ -73,8 +73,6 @@
     <string name="setting_general">&amp; Umum</string>
     <string name="dark_theme_title">Mod Malam</string>
     <string name="dark_theme_summary">Tetapkan tema gelap</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Ubah warna loghat</string>
     <string name="hide_icon_title">Sembunyi/Lumpuhkan Ikon Pelancar</string>
     <string name="hide_icon_summary">Dail * #*#78259#*#* untuk dilancarkan. Pada Android 10 onof, ikon akan dinyahaktifkan, tetapi tidak disembunyikan.</string>
     <string name="delete_dep_title">Nyahpasang App</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">Giton!</string>
     <string name="releaseTest">Pelepasan Nyahpepijat</string>
     <string name="releaseOthers">Keluaran Tidak Disokong</string>
-    <string name="btn_select">Pilih</string>
     <string name="btn_cancel">Batal</string>
     <string name="btn_save">&amp; Simpan</string>
     <string name="file_saved">disimpan</string>

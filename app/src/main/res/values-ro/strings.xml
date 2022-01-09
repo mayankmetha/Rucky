@@ -73,8 +73,6 @@
     <string name="setting_general">Generalități</string>
     <string name="dark_theme_title">Mod Noapte</string>
     <string name="dark_theme_summary">Setare temă întunecată</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Schimbă culoarea de accent</string>
     <string name="hide_icon_title">Ascunde/Dezactivează pictograma Launcher</string>
     <string name="hide_icon_summary">Apelează *#*#78259#*#* de lansat. Începând cu Android 10, pictograma va fi dezactivată, dar nu ascunsă.</string>
     <string name="delete_dep_title">Dezinstalează aplicația</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">IGHub În noapte</string>
     <string name="releaseTest">Lansare depanare</string>
     <string name="releaseOthers">Lansare neacceptată</string>
-    <string name="btn_select">Selectare</string>
     <string name="btn_cancel">Anulează</string>
     <string name="btn_save">Salvează</string>
     <string name="file_saved">salvat</string>

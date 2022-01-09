@@ -35,7 +35,6 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/splashText"
             android:paddingTop="256sp"
             android:text="@string/splashScreen"
             android:textSize="32sp"

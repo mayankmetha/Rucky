@@ -73,8 +73,6 @@
     <string name="setting_general">عام</string>
     <string name="dark_theme_title">الوضع الليلي</string>
     <string name="dark_theme_summary">تعيين السمة المظلمة</string>
-    <string name="accent_theme_title">السمة</string>
-    <string name="accent_theme_summary">تغيير لون اللكنة</string>
     <string name="hide_icon_title">إخفاء/تعطيل أيقونة المشغل</string>
     <string name="hide_icon_summary">اطلب *#*#78259#*#* للتشغيل. عند اندرويد 10 فصاعدا، سيتم تعطيل أيقونة ، ولكن ليس مخفيا.</string>
     <string name="delete_dep_title">تطبيق الغاء التركيب</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub بشكل صريح</string>
     <string name="releaseTest">اصدار تصحيح الأخطاء</string>
     <string name="releaseOthers">اصدار غير مدعم</string>
-    <string name="btn_select">حدد</string>
     <string name="btn_cancel">إلغاء</string>
     <string name="btn_save">حفظ</string>
     <string name="file_saved">محفوظة</string>

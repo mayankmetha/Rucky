@@ -73,8 +73,6 @@
     <string name="setting_general">Vispārīgi noteikumi</string>
     <string name="dark_theme_title">Nakts režīms</string>
     <string name="dark_theme_summary">Iestatīt tumšo tēmu</string>
-    <string name="accent_theme_title">Tēma</string>
-    <string name="accent_theme_summary">Mainīt akcentu krāsu</string>
     <string name="hide_icon_title">Slēpt/izslēgt palaišanas ikonu</string>
     <string name="hide_icon_summary">Dial * #*#78259#*#* lai uzsāktu. Uz Android 10 un turpmāk, ikona tiks atslēgts, bet ne slēpta.</string>
     <string name="delete_dep_title">Atinstalēt App</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Neightly</string>
     <string name="releaseTest">Atkļūdošanas izlaišana</string>
     <string name="releaseOthers">Nav Atbalstīts</string>
-    <string name="btn_select">Izvēlēties</string>
     <string name="btn_cancel">Atcelt</string>
     <string name="btn_save">Saglabāt</string>
     <string name="file_saved">ietaupot</string>

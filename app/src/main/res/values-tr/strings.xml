@@ -73,8 +73,6 @@
     <string name="setting_general">Genel</string>
     <string name="dark_theme_title">Night Mode</string>
     <string name="dark_theme_summary">Set dark theme</string>
-    <string name="accent_theme_title">Theme</string>
-    <string name="accent_theme_summary">Change accent color</string>
     <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
     <string name="delete_dep_title">Uygulamayı Kaldır</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Gecelik</string>
     <string name="releaseTest">Hata Ayıklama Yayını</string>
     <string name="releaseOthers">Desteklenmeyen Yayın Düzeyi</string>
-    <string name="btn_select">Seç</string>
     <string name="btn_cancel">İptal</string>
     <string name="btn_save">Kaydet</string>
     <string name="file_saved">kaydedildi</string>

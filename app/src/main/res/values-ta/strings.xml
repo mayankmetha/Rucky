@@ -73,8 +73,6 @@
     <string name="setting_general">பொதுவான</string>
     <string name="dark_theme_title">இரவு வகை</string>
     <string name="dark_theme_summary">கருவியின் தலைப்பை அமை</string>
-    <string name="accent_theme_title">பொருள்</string>
-    <string name="accent_theme_summary">உச்சரிப்பு வண்ணத்தை மாற்று</string>
     <string name="hide_icon_title">QShortcut</string>
     <string name="hide_icon_summary">Dial * #*#78259#* #* #* #* #* அறிவிப்பு. Android 10 onwards, icon will be disabled, but not hidden.</string>
     <string name="delete_dep_title">ஆப்ப நிறுவுதலை</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">பிழை வெளியீடு</string>
     <string name="releaseOthers">ஆதரிக்கப்படாத வெளியீடு</string>
-    <string name="btn_select">தேர்ந்தெடு</string>
     <string name="btn_cancel">ரத்து செய்</string>
     <string name="btn_save">சேமி</string>
     <string name="file_saved">சேமிக்கப்பட்டது</string>

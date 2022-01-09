@@ -73,8 +73,6 @@
     <string name="setting_general">כללי</string>
     <string name="dark_theme_title">מצב לילה</string>
     <string name="dark_theme_summary">הגדרת נושא כהה</string>
-    <string name="accent_theme_title">ערכת נושא</string>
-    <string name="accent_theme_summary">שינוי צבע מבטא</string>
     <string name="hide_icon_title">הסתר/השבתה של איקון משגר</string>
     <string name="hide_icon_summary">חייג * #*#78259#*#* כדי להשיק. ב-Android 10 ואילך, האיקון יהיה מושבת, אך לא מוסתר.</string>
     <string name="delete_dep_title">הסרת התקנה של יישום</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub הלילה</string>
     <string name="releaseTest">שחרור באגים</string>
     <string name="releaseOthers">גירסה לא נתמכת</string>
-    <string name="btn_select">בחירה</string>
     <string name="btn_cancel">ביטול</string>
     <string name="btn_save">שמירה</string>
     <string name="file_saved">נשמר</string>

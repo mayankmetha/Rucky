@@ -44,7 +44,6 @@
     <!-- Setting screen -->
     <string name="setting_general">ᱡᱮᱱᱨᱟᱞ</string>
     <string name="dark_theme_title">ᱧᱤᱛ ᱢᱳᱰ</string>
-    <string name="accent_theme_title">ᱛᱷᱤᱢ</string>
     <string name="delete_dep_title">ᱮᱯᱯ ᱚᱲᱚᱠ ᱢᱮ</string>
     <string name="delete_dep_summary">ᱮᱯᱯ ᱠᱚ ᱥᱟᱯᱷᱟ ᱟᱨ ᱚᱲᱚᱠ ᱢᱮ ᱾</string>
     <string name="settings_sec_title">ᱮᱰᱵᱷᱟᱱᱥ ᱥᱮᱠᱭᱚᱨᱴᱤ</string>
@@ -60,7 +59,6 @@
     <string name="releaseNetHunter">NetHunter ᱮᱯᱯ ᱫᱚᱠᱟᱱ</string>
     <string name="releaseGitHub">GitHub ᱚᱲᱚᱠ ᱠᱚ</string>
     <string name="releaseTest">ᱰᱤᱵᱟᱹᱜ ᱚᱲᱚᱠ ᱠᱚ</string>
-    <string name="btn_select">ᱵᱟᱪᱷᱟᱣ</string>
     <string name="btn_cancel">ᱵᱚᱫᱽ</string>
     <string name="btn_save">ᱥᱟᱸᱪᱟᱣ</string>
     <string name="file_saved">ᱥᱟᱸᱪᱟᱣ</string>

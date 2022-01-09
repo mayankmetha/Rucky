@@ -73,8 +73,6 @@
     <string name="setting_general">Općenito</string>
     <string name="dark_theme_title">Noćni način</string>
     <string name="dark_theme_summary">Postavi tamnu temu</string>
-    <string name="accent_theme_title">Tema</string>
-    <string name="accent_theme_summary">Promjena boje akcenta</string>
     <string name="hide_icon_title">Sakrij / Onemogući Ikonu Pokretača</string>
     <string name="hide_icon_summary">Biraj * #* *#78259#*#* za pokretanje. Na Android 10 onwards, ikona će biti onemogućena, ali nije skrivena.</string>
     <string name="delete_dep_title">Deinstaliraj Aplikaciju</string>
@@ -106,7 +104,6 @@
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug izdanje</string>
     <string name="releaseOthers">Nepodržano Izdanje</string>
-    <string name="btn_select">Odaberi</string>
     <string name="btn_cancel">Otkaži</string>
     <string name="btn_save">Spremi</string>
     <string name="file_saved">spremljeno</string>
