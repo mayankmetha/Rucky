@@ -86,7 +86,6 @@
         android:layout_below="@id/key_code_box">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/ctrl_key_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center|center_horizontal|center_vertical"
@@ -108,21 +107,18 @@
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/ctrl_none"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_no" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/ctrl_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_left" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/ctrl_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_right" />
@@ -139,7 +135,6 @@
         android:layout_below="@id/ctrl_row">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/shift_key_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center|center_horizontal|center_vertical"
@@ -161,21 +156,18 @@
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/shift_none"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_no" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/shift_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_left" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/shift_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_right" />
@@ -192,7 +184,6 @@
         android:layout_below="@id/shift_row">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/alt_key_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center|center_horizontal|center_vertical"
@@ -214,21 +205,18 @@
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/alt_none"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_no" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/alt_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_left" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/alt_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_right" />
@@ -238,14 +226,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/meta_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/alt_row">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/meta_key_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center|center_horizontal|center_vertical"
@@ -267,21 +253,18 @@
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/meta_none"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_no" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/meta_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_left" />
 
             <com.google.android.material.chip.Chip
                 android:checkable="true"
-                android:id="@+id/meta_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/key_right" />

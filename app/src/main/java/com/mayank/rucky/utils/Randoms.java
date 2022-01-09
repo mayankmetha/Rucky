@@ -12,8 +12,4 @@ public class Randoms {
         Date date = new Date();
         random.setSeed(date.getTime());
     }
-
-    public int randomTheme() {
-        return random.nextInt(Constants.themeList.length);
-    }
 }

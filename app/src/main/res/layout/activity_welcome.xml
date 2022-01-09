@@ -33,6 +33,7 @@
         android:layout_centerInParent="true">
 
         <com.google.android.material.textview.MaterialTextView
+            style="@style/Theme.Rucky.Monet.ImageText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="256sp"

@@ -8,7 +8,6 @@ public class Config extends Application {
 
     private final SharedPreferences sharedPreferences;
     private final SharedPreferences.Editor editor;
-    final static int randomTheme = new Randoms().randomTheme();
 
     public Config(Context context) {
         sharedPreferences = context.getSharedPreferences(Constants.PREF, MODE_PRIVATE);
@@ -44,15 +43,6 @@ public class Config extends Application {
 
     public void setUpdateFlag(boolean canUpdate) {
         editor.putBoolean(Constants.PREF_SETTING_UPDATE, canUpdate).apply();
-    }
-
-    // accent theme
-    public int getAccentTheme() {
-        return sharedPreferences.getInt(Constants.PREF_SETTING_ACCENT, randomTheme);
-    }
-
-    public void setAccentTheme(int accentTheme) {
-        editor.putInt(Constants.PREF_SETTING_ACCENT, accentTheme).apply();
     }
 
     // launcher icon

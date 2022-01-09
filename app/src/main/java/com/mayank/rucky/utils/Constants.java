@@ -1,7 +1,5 @@
 package com.mayank.rucky.utils;
 
-import com.mayank.rucky.R;
-
 public class Constants {
 
     //package
@@ -44,7 +42,6 @@ public class Constants {
     public static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
     public static final String PREF_SETTING_INIT = "init";
     public static final String PREF_SETTING_UPDATE = "update";
-    public static final String PREF_SETTING_ACCENT = "accent";
     public static final String PREF_SETTING_ICON = "icon";
     public static final String PREF_SETTING_ADV_SECURITY = "advSecurity";
     public static final String PREF_CONFIGFS = "configfsUSB";
@@ -94,19 +91,6 @@ public class Constants {
     public static final String TELEPHONY = "android.provider.Telephony.SECRET_CODE";
     public static final String USB_ACTION = "android.hardware.usb.action.USB_STATE";
     public static final String USB_ACTION_STATE = "connected";
-
-    //theme
-    public static final int[] themeList = {
-            R.style.blue_grey,      R.style.brown,
-            R.style.deep_orange,    R.style.orange,
-            R.style.amber,          R.style.yellow,
-            R.style.lime,           R.style.light_green,
-            R.style.green,          R.style.teal,
-            R.style.cyan,           R.style.light_blue,
-            R.style.blue,           R.style.indigo,
-            R.style.deep_purple,    R.style.purple,
-            R.style.pink,           R.style.red
-    };
 
     public static final String DOTS = "•";
 

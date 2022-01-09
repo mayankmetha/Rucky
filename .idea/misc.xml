@@ -50,14 +50,18 @@
         <entry key="app/src/main/res/drawable/ic_config.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_config_fs.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_dark.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_developer.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_device.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_disclaimer.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable/ic_github.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable/ic_hid.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_icon.xml" value="0.292578125" />
+        <entry key="app/src/main/res/drawable/ic_keyboard.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_launch.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.303125" />
         <entry key="app/src/main/res/drawable/ic_license.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_load.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_localize.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_net.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/ic_net_off.xml" value="0.158203125" />
@@ -66,6 +70,7 @@
         <entry key="app/src/main/res/drawable/ic_run.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.171875" />
         <entry key="app/src/main/res/drawable/ic_security.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_store.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_swap.xml" value="0.176953125" />
         <entry key="app/src/main/res/drawable/ic_theme.xml" value="0.21736111111111112" />

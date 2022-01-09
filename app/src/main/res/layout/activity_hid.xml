@@ -72,8 +72,6 @@
         android:id="@+id/hid_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@drawable/divider"
-        android:dividerHeight="1dp"
         android:layout_below="@id/BtnGrpSetting" />
 
 </RelativeLayout>

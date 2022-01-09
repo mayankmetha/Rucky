@@ -110,7 +110,6 @@ public class InitActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
     }
 
     private void addBottomDots(int currentPage) {

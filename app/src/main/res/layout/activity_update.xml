@@ -44,7 +44,6 @@
                 android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/update_changelog_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8sp"
@@ -81,7 +80,6 @@
             android:padding="16sp">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/update_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8sp"

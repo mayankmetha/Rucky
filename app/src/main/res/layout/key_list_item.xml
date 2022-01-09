@@ -8,6 +8,7 @@
     style="@style/Theme.Rucky.Monet" >
 
     <com.google.android.material.textview.MaterialTextView
+        style="@style/Theme.Rucky.Monet.ImageText"
         android:id="@+id/key_icon"
         android:layout_width="32sp"
         android:layout_height="32sp"
