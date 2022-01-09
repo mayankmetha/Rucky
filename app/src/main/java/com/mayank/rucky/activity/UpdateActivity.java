@@ -62,7 +62,6 @@ public class UpdateActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         EditorActivity.updateNotificationManager.cancel(0);
         setContentView(R.layout.activity_update);
 
@@ -133,7 +132,6 @@ public class UpdateActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
     }
 
     @Override

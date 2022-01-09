@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    tools:context=".activity.UpdateActivity">
+    style="@style/Theme.Rucky.Monet">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,23 +15,14 @@
         android:paddingEnd="24sp"
         android:layout_margin="8sp"
         android:text="@string/update_activity"
-        android:textColor="?attr/appColorAccent"
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <View
-        android:id="@+id/view_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/title"
-        android:background="@drawable/divider" />
-
     <androidx.cardview.widget.CardView
-        app:cardBackgroundColor="@color/transparent"
         android:id="@+id/descCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/view_toolbar"
+        android:layout_below="@id/title"
         android:layout_margin="16sp"
         android:layout_marginStart="8sp"
         android:layout_marginTop="8sp"
@@ -43,11 +32,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/frame"
             android:orientation="vertical"
             android:padding="16sp">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/version_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,7 +43,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/update_changelog_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,28 +52,19 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8sp"
                 android:maxLines="10"
-                android:scrollbars="vertical"
-                android:scrollbarThumbVertical="?attr/appColorAccent" />
+                android:scrollbars="vertical" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/descCard"
-        android:background="@drawable/divider" />
-
     <androidx.cardview.widget.CardView
-        app:cardBackgroundColor="@color/transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/descCard"
@@ -98,11 +77,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/frame"
             android:orientation="vertical"
             android:padding="16sp">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/update_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -117,14 +95,13 @@
                 android:layout_gravity="center_vertical|center_horizontal">
 
                 <com.google.android.material.button.MaterialButton
-                    style="@style/InitButton"
                     android:id="@+id/action_button"
                     android:filterTouchesWhenObscured="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"/>
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/progress_label"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -136,8 +113,6 @@
                 <ProgressBar
                     android:layout_below="@id/progress_label"
                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                    android:progressBackgroundTint="@color/transparent"
-                    android:progressTint="?attr/appColorAccent"
                     android:id="@+id/update_progress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
