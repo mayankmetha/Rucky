@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.EditorActivity">
+    style="@style/Theme.Rucky.Monet">
 
     <LinearLayout
         android:id="@+id/toolbar"
@@ -12,8 +11,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8sp"
             android:layout_marginTop="8sp"
@@ -22,60 +21,72 @@
             android:paddingStart="24sp"
             android:paddingEnd="24sp"
             android:text="@string/app_name"
-            android:textColor="?attr/appColorAccent"
             android:textSize="32sp"
             android:textStyle="bold"
             android:layout_weight="1" />
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/IconButton"
-            android:id="@+id/update_button"
-            android:filterTouchesWhenObscured="true"
-            android:minWidth="64sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:contentDescription="@string/update"
-            android:text="@string/update"
-            android:padding="0sp"
-            app:icon="@drawable/ic_update"
-            app:iconTint="?attr/appColorAccent"
-            app:iconSize="32sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BtnGrpSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="bottom|end"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <com.google.android.material.button.MaterialButton
-            style="@style/IconButton"
-            android:id="@+id/setting_button"
+            android:id="@+id/update_button"
+            android:layout_weight="1"
             android:filterTouchesWhenObscured="true"
-            android:minWidth="64sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:contentDescription="@string/setting"
-            android:text="@string/setting"
-            android:padding="0sp"
-            app:icon="@drawable/ic_settings"
-            app:iconTint="?attr/appColorAccent"
-            app:iconSize="32sp"/>
+            android:contentDescription="@string/loadBtn"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:iconPadding="0sp"
+            app:iconGravity="textTop"
+            app:icon="@drawable/ic_update"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cfgBtn"
+            android:layout_weight="1"
+            android:filterTouchesWhenObscured="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/confBtn"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:iconPadding="0sp"
+            app:iconGravity="textTop"
+            app:icon="@drawable/ic_config"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/setting_button"
+            android:layout_weight="1"
+            android:filterTouchesWhenObscured="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/delBtn"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:iconPadding="0sp"
+            app:iconGravity="textTop"
+            app:icon="@drawable/ic_settings"/>
 
     </LinearLayout>
 
-    <View
-        android:id="@+id/view_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/toolbar"
-        android:background="@drawable/divider" />
-
     <RelativeLayout
-        android:layout_below="@id/view_toolbar"
+        android:layout_below="@id/BtnGrpSetting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/EditTextStyle"
-            android:id="@+id/codeLayout"
-            app:boxBackgroundColor="@color/transparent"
-            android:textColorHint="?attr/appColorAccent"
             app:boxStrokeColor="@color/text_input_box_stroke"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,29 +103,13 @@
                 android:id="@+id/code"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:cursorVisible="true"
                 android:ems="10"
                 android:gravity="start"
                 android:hint="@string/codeHint"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
-                android:lines="25"
-                android:padding="5dp"
-                android:paddingStart="5dp"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
-                android:textCursorDrawable="@drawable/cursor" />
+                android:lines="25" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/codeLayout"
-            android:background="@drawable/divider" />
 
         <LinearLayout
             android:id="@+id/BtnGrp"
@@ -127,98 +122,59 @@
             android:layout_marginBottom="5dp"
             android:gravity="bottom|end"
             android:orientation="horizontal"
-            android:padding="5dp"
-            android:paddingStart="5dp"
-            android:paddingLeft="5dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="5dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="5dp">
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/stick" />
+            android:padding="5dp">
 
             <com.google.android.material.button.MaterialButton
-                style="@style/IconButton"
                 android:id="@+id/ldBtn"
                 android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/loadBtn"
-                android:text="@string/loadBtn"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:iconPadding="0sp"
+                app:iconGravity="textTop"
                 app:icon="@drawable/ic_load"/>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/stick" />
-
             <com.google.android.material.button.MaterialButton
-                style="@style/IconButton"
                 android:id="@+id/delBtn"
                 android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/delBtn"
-                android:text="@string/delBtn"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:iconPadding="0sp"
+                app:iconGravity="textTop"
                 app:icon="@drawable/ic_delete"/>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/stick" />
-
             <com.google.android.material.button.MaterialButton
-                style="@style/IconButton"
                 android:id="@+id/svBtb"
                 android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/saveBtn"
-                android:text="@string/saveBtn"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:iconPadding="0sp"
+                app:iconGravity="textTop"
                 app:icon="@drawable/ic_save"/>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/stick" />
-
             <com.google.android.material.button.MaterialButton
-                style="@style/IconButton"
                 android:id="@+id/exBtn"
                 android:filterTouchesWhenObscured="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/runBtn"
-                android:text="@string/runBtn"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:iconPadding="0sp"
+                app:iconGravity="textTop"
                 app:icon="@drawable/ic_run"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/stick" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/IconButton"
-                android:id="@+id/cfgBtn"
-                android:filterTouchesWhenObscured="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/confBtn"
-                android:text="@string/confBtn"
-                app:icon="@drawable/ic_config"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/stick" />
 
         </LinearLayout>
 

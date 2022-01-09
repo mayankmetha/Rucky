@@ -22,6 +22,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -43,7 +44,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
 import com.datatheorem.android.trustkit.TrustKit;
-import com.google.android.material.snackbar.Snackbar;
 import com.kimchangyoun.rootbeerFresh.RootBeer;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.HidModel;
@@ -125,7 +125,6 @@ public class EditorActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_editor);
 
         if (config.getInitState() && config.getSec())
@@ -253,7 +252,6 @@ public class EditorActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         updateScreen();
     }
 
@@ -790,7 +788,6 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     private void ide() {
-        int[] colors = getResources().getIntArray(R.array.colors);
         Button DelBtn = findViewById(R.id.delBtn);
         DelBtn.setFilterTouchesWhenObscured(true);
         Button SaveBtn = findViewById(R.id.svBtb);
@@ -835,7 +832,7 @@ public class EditorActivity extends AppCompatActivity {
                         getApplicationContext().deleteFile(file.getName());
                     }
                 }
-                Snackbar.make(view, fileName[i] + " "+getResources().getString(R.string.file_deleted),Snackbar.LENGTH_SHORT).setBackgroundTint(colors[config.getAccentTheme()]).show();
+                Toast.makeText(this, fileName[i] + " "+getResources().getString(R.string.file_deleted),Toast.LENGTH_SHORT).show();
             });
             builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog delDialog = builder.create();
@@ -881,7 +878,7 @@ public class EditorActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                Snackbar.make(view, file.getName() + " "+getResources().getString(R.string.file_saved),Snackbar.LENGTH_SHORT).setBackgroundTint(colors[config.getAccentTheme()]).show();
+                Toast.makeText(this, file.getName() + " "+getResources().getString(R.string.file_saved),Toast.LENGTH_SHORT).show();
             });
             builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
             AlertDialog saveDialog = builder.create();
