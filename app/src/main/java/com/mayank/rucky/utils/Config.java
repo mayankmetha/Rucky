@@ -28,15 +28,6 @@ public class Config extends Application {
         editor.putBoolean(Constants.PREF_SETTINGS_DARK_THEME, isDarkModeEnabled).apply();
     }
 
-    // monet theme
-    public boolean getMonet() {
-        return sharedPreferences.getBoolean(Constants.PREF_SETTING_MONET, false);
-    }
-
-    public void setMonet(boolean isMonetEnabled) {
-        editor.putBoolean(Constants.PREF_SETTING_MONET, isMonetEnabled).apply();
-    }
-
     // init screen
     public boolean getInitState() {
         return !sharedPreferences.getBoolean(Constants.PREF_SETTING_INIT, true);
