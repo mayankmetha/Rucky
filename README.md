@@ -425,10 +425,6 @@ Status| Feature
 ✅| Runtime process name masking
 ✅| Emulator detection
 🚧| Monet Theme
-🚧| App anti-tamper detection
-🚧| Anti-debug protection (Frida probe prevention)
-❌| Disable app level virtualization (parallel app prevention)
-❌| Memory dump prevention
 💡| More feature addition on request
 
 ---

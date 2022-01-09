@@ -52,7 +52,6 @@
     <string name="btn_continue">Continue</string>
     <string name="root_err">Root Access Required For USB Cable Attack!</string>
     <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
-    <string name="tampered">Tampering detected!</string>
     <string name="vm">Virtual environment is not supported!</string>
 
     <!-- Config screen -->

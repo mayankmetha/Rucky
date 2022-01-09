@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.10.2)
 project("rucky")
 add_library(dynamic_name SHARED dynamic_name.cpp)
-add_library(ptrace_blocker SHARED ptrace_blocker.cpp)
 find_library(log-lib log)
 target_link_libraries(dynamic_name ${log-lib})
-target_link_libraries(ptrace_blocker ${log-lib})

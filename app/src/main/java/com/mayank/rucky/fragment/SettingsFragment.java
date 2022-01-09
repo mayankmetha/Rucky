@@ -49,7 +49,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         this.requireActivity().setTheme(Constants.themeList[config.getAccentTheme()]);
 
         darkThemeSetting();
-        accentColorSetting();
+        colorSetting();
         hideLauncherIcon();
         security();
         cleanup();
@@ -80,9 +80,28 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         });
     }
 
-    private void accentColorSetting() {
+    private void colorSetting() {
+        final SwitchPreference monetSwitch = findPreference(Constants.PREF_KEY_MONET);
+        assert monetSwitch != null;
         final Preference accentPreference = findPreference(Constants.PREF_KEY_ACCENT_COLOR);
         assert accentPreference != null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            accentPreference.setEnabled(!config.getMonet());
+            accentPreference.setVisible(!config.getMonet());
+            monetSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
+                boolean switched = !((SwitchPreference) preference).isChecked();
+                config.setMonet(switched);
+                restartActivity();
+                return true;
+            });
+        } else {
+            accentPreference.setEnabled(true);
+            accentPreference.setVisible(true);
+            monetSwitch.setEnabled(false);
+            monetSwitch.setChecked(false);
+            monetSwitch.setVisible(false);
+            config.setMonet(false);
+        }
         accentPreference.setOnPreferenceClickListener(preference -> {
             int[] colors = getResources().getIntArray(R.array.colors);
             LayoutInflater colorLI = LayoutInflater.from(this.requireActivity());
