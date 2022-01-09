@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16sp">
+    android:padding="16sp"
+    style="@style/Theme.Rucky.Monet" >
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/key_icon"
         android:layout_width="32sp"
         android:layout_height="32sp"
         android:layout_margin="8sp"
         android:textAlignment="center"
-        android:textColor="?attr/appColorAccent"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -22,11 +22,10 @@
         android:orientation="vertical"
         android:baselineAligned="false">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="?attr/appColorAccent"
             android:textStyle="bold"
             android:textSize="16sp"
             android:id="@+id/key_name" />
@@ -38,7 +37,7 @@
             android:orientation="horizontal"
             android:layout_weight="1">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -47,14 +46,14 @@
                 android:text="@string/keycode"
                 tools:ignore="NestedWeights" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/key_code"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="14sp" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -63,7 +62,7 @@
                 android:text="@string/modcode"
                 tools:ignore="NestedWeights" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/mod_code"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

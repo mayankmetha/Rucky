@@ -18,7 +18,6 @@ import com.google.android.material.chip.ChipGroup;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.KeyModel;
 import com.mayank.rucky.utils.Config;
-import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.KeyAdapter;
 
 import org.apache.commons.io.IOUtil;
@@ -61,7 +60,6 @@ public class KeylistActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setTheme(Constants.themeList[config.getAccentTheme()]);
         setContentView(R.layout.activity_keylist);
         TextView toolbarTitle = findViewById(R.id.toolbar_title);
         if(config.getHIDIntent().isEmpty() || config.getHIDIntent().equals(""))

@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-night/alert.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable-night/hid_download.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable-night/hid_offline.xml" value="0.158203125" />
+        <entry key="app/src/main/res/drawable-night/hid_update.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable-night/ic_arch.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-night/ic_config_fs.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable-night/ic_dark.xml" value="0.1875" />
