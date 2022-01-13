@@ -106,7 +106,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'androidx.core:core:1.7.0'
     implementation 'androidx.core:core-animation:1.0.0-alpha02'
-    implementation 'androidx.core:core-splashscreen:1.0.0-alpha02'
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.security:security-crypto:1.1.0-alpha03'
