@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-anydpi-v24/ic_notification.xml" value="0.198046875" />
         <entry key="app/src/main/res/drawable-night/alert.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable-night/hid_download.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable-night/hid_offline.xml" value="0.158203125" />
@@ -54,6 +55,8 @@
         <entry key="app/src/main/res/drawable/ic_developer.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_device.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_disclaimer.xml" value="0.21736111111111112" />
+        <entry key="app/src/main/res/drawable/ic_dots.xml" value="0.22361111111111112" />
+        <entry key="app/src/main/res/drawable/ic_dots_inactive.xml" value="0.22361111111111112" />
         <entry key="app/src/main/res/drawable/ic_github.xml" value="0.21736111111111112" />
         <entry key="app/src/main/res/drawable/ic_hid.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_icon.xml" value="0.292578125" />
