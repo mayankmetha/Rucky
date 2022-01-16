@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.pm.PackageInfoCompat;
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
@@ -30,10 +31,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.settings, rootKey);
         config = new Config(this.requireContext());
-        if (config.getDarkMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        switch (config.getDarkMode()) {
+            case 1: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); break;
+            case 2: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); break;
+            default: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
 
         darkThemeSetting();
@@ -57,11 +58,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void darkThemeSetting() {
-        final SwitchPreference themeSwitch = findPreference(Constants.PREF_KEY_DARK_THEME);
+        final ListPreference themeSwitch = findPreference(Constants.PREF_KEY_DARK_THEME);
         assert themeSwitch != null;
         themeSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
-            boolean switched = !((SwitchPreference) preference).isChecked();
-            config.setDarkMode(switched);
+            config.setDarkMode(Integer.parseInt(newValue.toString()));
             restartActivity();
             return true;
         });

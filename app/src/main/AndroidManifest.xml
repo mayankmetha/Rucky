@@ -31,7 +31,8 @@
         android:theme="@style/Theme.AppSplash"
         android:networkSecurityConfig="@xml/network_security_config"
         tools:ignore="AllowBackup"
-        tools:targetApi="n">
+        android:forceDarkAllowed="false"
+        tools:targetApi="q">
 
         <service
             android:name=".service.SocketHeartbeatService"
@@ -50,6 +51,7 @@
 
         <receiver
             android:name=".receiver.SecretCodeReceiver"
+            android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
@@ -61,6 +63,7 @@
         </receiver>
         <receiver
             android:name=".receiver.USBReceiver"
+            android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
@@ -71,6 +74,7 @@
         <receiver
             android:name=".receiver.NetSocketReceiver"
             android:exported="true"
+            android:enabled="true"
             android:permission="com.mayank.rucky.net">
             <intent-filter android:priority="999">
                 <action android:name="com.mayank.rucky.netSocketConnected" />
@@ -82,7 +86,6 @@
             android:name=".activity.WelcomeActivity"
             android:screenOrientation="portrait"
             android:clearTaskOnLaunch="true"
-            android:configChanges="uiMode|locale"
             android:exported="true"
             android:launchMode="singleTask"
             tools:ignore="LockedOrientationActivity">
@@ -112,42 +115,34 @@
         <activity
             android:name=".activity.InitActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.EditorActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.UpdateActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.SettingsActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.BrowserActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.ConfigActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.HidActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity.KeylistActivity"
             android:screenOrientation="portrait"
-            android:configChanges="uiMode|locale"
             tools:ignore="LockedOrientationActivity" />
 
     </application>

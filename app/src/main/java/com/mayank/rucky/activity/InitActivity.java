@@ -13,19 +13,17 @@ import android.view.WindowInsets;
 import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
-import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.CustomTransformation;
 
 public class InitActivity extends AppCompatActivity {
@@ -41,10 +39,10 @@ public class InitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         config = new Config(this);
-        if (config.getDarkMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        switch (config.getDarkMode()) {
+            case 1: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); break;
+            case 2: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); break;
+            default: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
         setContentView(R.layout.activity_init);
 
@@ -105,22 +103,26 @@ public class InitActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (config.getDarkMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        switch (config.getDarkMode()) {
+            case 1: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); break;
+            case 2: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); break;
+            default: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,WindowManager.LayoutParams.FLAG_SECURE);
     }
 
     private void addBottomDots(int currentPage) {
         if (dotsLayout != null)
             dotsLayout.removeAllViews();
-        TextView[] dots = new TextView[layouts.length];
+        ImageView[] dots = new ImageView[layouts.length];
         for (int i = 0; i < layouts.length; i++) {
-            dots[i] = new TextView(this);
-            dots[i].setText(Constants.DOTS);
-            dots[i].setTextSize(35);
-            dots[i].setTextColor( i == currentPage ? ContextCompat.getColor(this, com.google.android.material.R.color.material_dynamic_primary50) : ContextCompat.getColor(this, com.google.android.material.R.color.material_dynamic_neutral50));
+            dots[i] = new ImageView(this);
+            dots[i].setImageResource( i == currentPage ? R.drawable.ic_dots : R.drawable.ic_dots_inactive);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             dotsLayout.addView(dots[i],params);
         }

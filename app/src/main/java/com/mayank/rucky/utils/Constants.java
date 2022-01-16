@@ -92,8 +92,6 @@ public class Constants {
     public static final String USB_ACTION = "android.hardware.usb.action.USB_STATE";
     public static final String USB_ACTION_STATE = "connected";
 
-    public static final String DOTS = "•";
-
     public static final String[] hostnames = {
             "*.github.io",
             "*.github.com",

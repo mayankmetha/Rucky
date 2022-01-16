@@ -6,12 +6,14 @@
         app:key="settings"
         app:title="@string/setting_general">
 
-        <SwitchPreference
-            app:defaultValue="true"
+        <ListPreference
             app:icon="@drawable/ic_dark"
             app:key="theme"
             app:summary="@string/dark_theme_summary"
-            app:title="@string/dark_theme_title" />
+            app:title="@string/dark_theme_title"
+            app:defaultValue="0"
+            app:entries="@array/dark_theme_list"
+            app:entryValues="@array/dark_theme_values" />
 
         <SwitchPreference
             app:key="icon"

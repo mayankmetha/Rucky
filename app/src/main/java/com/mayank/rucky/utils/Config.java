@@ -19,12 +19,12 @@ public class Config extends Application {
     }
 
     // dark theme
-    public boolean getDarkMode() {
-        return sharedPreferences.getBoolean(Constants.PREF_SETTINGS_DARK_THEME, true);
+    public int getDarkMode() {
+        return sharedPreferences.getInt(Constants.PREF_SETTINGS_DARK_THEME, 0);
     }
 
-    public void setDarkMode(boolean isDarkModeEnabled) {
-        editor.putBoolean(Constants.PREF_SETTINGS_DARK_THEME, isDarkModeEnabled).apply();
+    public void setDarkMode(int darkModeValue) {
+        editor.putInt(Constants.PREF_SETTINGS_DARK_THEME, darkModeValue).apply();
     }
 
     // init screen

@@ -46,10 +46,10 @@ public class ConfigActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         config = new Config(this);
-        if (config.getDarkMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        switch (config.getDarkMode()) {
+            case 1: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); break;
+            case 2: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); break;
+            default: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
         setContentView(R.layout.activity_config);
 
@@ -210,10 +210,28 @@ public class ConfigActivity extends AppCompatActivity {
                 .setContentTitle(getApplicationContext().getString(config.getStatusTextRes()))
                 .setSmallIcon(R.drawable.ic_notification)
                 .setOngoing(true)
+                .setGroup(Constants.PACKAGE_NAME)
+                .setGroupSummary(true)
                 .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0,
                         new Intent(getApplicationContext(), WelcomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK),
                         PendingIntent.FLAG_IMMUTABLE))
                 .setAutoCancel(false).build());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,WindowManager.LayoutParams.FLAG_SECURE);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        switch (config.getDarkMode()) {
+            case 1: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); break;
+            case 2: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); break;
+            default: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        }
     }
 
 }

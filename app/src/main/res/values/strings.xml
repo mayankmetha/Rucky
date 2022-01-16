@@ -167,4 +167,10 @@
         <item>Hungarian</item>
     </string-array>
 
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Day</item>
+        <item>Night</item>
+    </string-array>
+
 </resources>
