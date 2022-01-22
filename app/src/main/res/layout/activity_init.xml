@@ -4,11 +4,19 @@
     android:layout_height="match_parent"
     style="@style/Theme.Rucky.Monet">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/view_bottom_bar" />
+        android:layout_above="@id/view_bottom_bar"
+        android:layout_margin="16sp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:id="@+id/view_bottom_bar"

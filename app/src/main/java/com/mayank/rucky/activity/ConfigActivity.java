@@ -151,7 +151,6 @@ public class ConfigActivity extends AppCompatActivity {
             config.setNetworkStatus(false);
             getApplicationContext().stopService(new Intent(getApplicationContext(), SocketHeartbeatService.class));
             ipButton.setEnabled(false);
-            ipButton.setAlpha(0);
             if (config.getUSBStatus()) {
                 config.setStatusTextRes(R.string.config_status_usb_on);
                 config.setStatusImageRes(R.drawable.ic_usb);
@@ -167,7 +166,6 @@ public class ConfigActivity extends AppCompatActivity {
             }
             updateNotification();
             ipButton.setEnabled(true);
-            ipButton.setAlpha(1);
             if (config.getNetworkStatus()) {
                 config.setStatusTextRes(R.string.config_status_net_on);
                 config.setStatusImageRes(R.drawable.ic_net);
