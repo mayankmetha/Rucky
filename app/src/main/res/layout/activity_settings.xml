@@ -19,10 +19,21 @@
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <FrameLayout
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewElevatedStyle"
         android:layout_below="@id/title"
+        android:padding="8sp"
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/setting_container" />
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_below="@id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/setting_container" />
+
+    </com.google.android.material.card.MaterialCardView>
+
 
 </RelativeLayout>

@@ -18,16 +18,14 @@
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewElevatedStyle"
         android:id="@+id/descCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
-        android:layout_margin="16sp"
-        android:layout_marginStart="8sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="8sp"
-        android:layout_marginBottom="8sp">
+        android:layout_margin="8sp"
+        android:padding="8sp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,17 +59,15 @@
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewElevatedStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/descCard"
-        android:layout_margin="16sp"
-        android:layout_marginStart="8sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="8sp"
-        android:layout_marginBottom="8sp">
+        android:layout_margin="8sp"
+        android:padding="8sp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,6 +115,6 @@
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

@@ -29,16 +29,24 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewElevatedStyle"
+        android:padding="8sp"
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <WebView
-            android:id="@+id/browserView"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
 
-    </RelativeLayout>
+            <WebView
+                android:id="@+id/browserView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>
