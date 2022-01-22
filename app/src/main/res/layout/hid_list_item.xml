@@ -6,7 +6,7 @@
     style="@style/Theme.Rucky.Monet"
     android:padding="16sp">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_margin="16sp"
         android:layout_width="24sp"
         android:layout_height="24sp"

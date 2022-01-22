@@ -104,12 +104,11 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <ProgressBar
+                <com.google.android.material.progressindicator.LinearProgressIndicator
                     android:layout_below="@id/progress_label"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:id="@+id/update_progress"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
             </RelativeLayout>
 

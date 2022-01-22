@@ -79,7 +79,7 @@
             android:layout_height="match_parent"
             android:padding="16sp">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/status_icon"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
