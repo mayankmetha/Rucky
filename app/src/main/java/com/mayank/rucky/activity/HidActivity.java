@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
@@ -28,6 +27,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
 import com.datatheorem.android.trustkit.TrustKit;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.HidModel;
 import com.mayank.rucky.utils.Config;
@@ -76,7 +76,7 @@ public class HidActivity extends AppCompatActivity {
         hidList.setAdapter(adapter);
         hidList.setOnItemClickListener((parent, view, position, id) -> {
             HidModel model = Objects.requireNonNull(adapter.getItem(position));
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
             builder.setTitle(model.getHidModelName());
             builder.setCancelable(true);
 
@@ -111,10 +111,7 @@ public class HidActivity extends AppCompatActivity {
                     });
                     break;
             }
-
-            AlertDialog listAction = builder.create();
-            Objects.requireNonNull(listAction.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            listAction.show();
+            builder.show();
         });
 
         Button refreshHid = findViewById(R.id.refresh_hid_btn);
@@ -123,51 +120,47 @@ public class HidActivity extends AppCompatActivity {
 
         Button addNewHid = findViewById(R.id.add_hid_btn);
         addNewHid.setFilterTouchesWhenObscured(true);
-        addNewHid.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(HidActivity.this);
-            builder.setTitle(getResources().getString(R.string.file_name));
-            LayoutInflater saveLI = LayoutInflater.from(this);
-            final View saveView = saveLI.inflate(R.layout.editor_save, null);
-            builder.setView(saveView);
-            final EditText fileName = saveView.findViewById(R.id.save_filename);
-            builder.setCancelable(false);
-            builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
-                File file;
-                String fileNameString = fileName.getText().toString().replaceAll("[\\\\/.]+","");
-                if (fileNameString.isEmpty()) {
-                    fileNameString = String.valueOf(new Date().getTime());
-                }
-                final File[] tmp = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
-                assert tmp != null;
-                for(File lfile : tmp) {
-                    if (fileNameString.equals(lfile.getName().replace(".json",""))) {
+        LayoutInflater saveLI = LayoutInflater.from(this);
+        final View saveView = saveLI.inflate(R.layout.editor_save, null);
+        final EditText fileName = saveView.findViewById(R.id.save_filename);
+        addNewHid.setOnClickListener(view -> new MaterialAlertDialogBuilder(HidActivity.this)
+                .setTitle(getResources().getString(R.string.file_name))
+                .setView(saveView)
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
+                    File file;
+                    String fileNameString = fileName.getText().toString().replaceAll("[\\\\/.]+","");
+                    if (fileNameString.isEmpty()) {
                         fileNameString = String.valueOf(new Date().getTime());
-                        break;
                     }
-                }
-                file = new File(getExternalFilesDir("keymap"),fileNameString+".json");
-                FileOutputStream fOutputStream;
-                OutputStream outputStream;
-                JSONObject jsonFile = new JSONObject();
-                try {
-                    jsonFile.put("version","0");
-                    jsonFile.put("mapping", new JSONObject());
-                    fOutputStream = new FileOutputStream(file);
-                    outputStream = new BufferedOutputStream(fOutputStream);
-                    outputStream.write(jsonFile.toString().getBytes(StandardCharsets.UTF_8));
-                    outputStream.close();
-                    fOutputStream.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                adapter.notifyDataSetChanged();
-                updateListView();
-            });
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog saveDialog = builder.create();
-            Objects.requireNonNull(saveDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            saveDialog.show();
-        });
+                    final File[] tmp = Objects.requireNonNull(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).listFiles();
+                    assert tmp != null;
+                    for(File lfile : tmp) {
+                        if (fileNameString.equals(lfile.getName().replace(".json",""))) {
+                            fileNameString = String.valueOf(new Date().getTime());
+                            break;
+                        }
+                    }
+                    file = new File(getExternalFilesDir("keymap"),fileNameString+".json");
+                    FileOutputStream fOutputStream;
+                    OutputStream outputStream;
+                    JSONObject jsonFile = new JSONObject();
+                    try {
+                        jsonFile.put("version","0");
+                        jsonFile.put("mapping", new JSONObject());
+                        fOutputStream = new FileOutputStream(file);
+                        outputStream = new BufferedOutputStream(fOutputStream);
+                        outputStream.write(jsonFile.toString().getBytes(StandardCharsets.UTF_8));
+                        outputStream.close();
+                        fOutputStream.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    adapter.notifyDataSetChanged();
+                    updateListView();
+                })
+                .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                .show());
     }
 
     @Override

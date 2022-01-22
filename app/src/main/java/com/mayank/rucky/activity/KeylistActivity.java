@@ -9,12 +9,12 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.KeyModel;
 import com.mayank.rucky.utils.Config;
@@ -86,7 +86,7 @@ public class KeylistActivity extends AppCompatActivity {
 
         keylist.setOnItemClickListener((parent, view, position, id) -> {
             KeyModel model = Objects.requireNonNull(adapter.getItem(position));
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
             builder.setTitle(R.string.key_details);
             builder.setCancelable(true);
             builder.setNegativeButton(R.string.hid_delete, (dialog, which) -> {
@@ -97,9 +97,7 @@ public class KeylistActivity extends AppCompatActivity {
                 keyDetailDialog(model);
                 dialog.cancel();
             });
-            AlertDialog listAction = builder.create();
-            Objects.requireNonNull(listAction.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            listAction.show();
+            builder.show();
         });
     }
 
@@ -163,7 +161,7 @@ public class KeylistActivity extends AppCompatActivity {
         AtomicInteger keyCode = new AtomicInteger(0);
         AtomicReference<String> keyString = new AtomicReference<>("");
         AtomicReference<Character> key = new AtomicReference<>('\0');
-        AlertDialog.Builder keyDialog = new AlertDialog.Builder(KeylistActivity.this);
+        MaterialAlertDialogBuilder keyDialog = new MaterialAlertDialogBuilder(KeylistActivity.this);
         keyDialog.setTitle(R.string.key_details);
         LayoutInflater keyLI = LayoutInflater.from(this);
         final View keyDetailView = keyLI.inflate(R.layout.key_details, null);
@@ -303,9 +301,7 @@ public class KeylistActivity extends AppCompatActivity {
             refreshList();
         });
         keyDialog.setNegativeButton(R.string.btn_cancel, (dialog, which) -> dialog.cancel());
-        AlertDialog keyForm = keyDialog.create();
-        Objects.requireNonNull(keyForm.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        keyForm.show();
+        keyDialog.show();
     }
 
     String jsonRead(File file) {
@@ -341,7 +337,7 @@ public class KeylistActivity extends AppCompatActivity {
             json.remove("mapping");
             json.put("mapping",mapping);
 
-            jsonWrite(new String(json.toString().getBytes(), StandardCharsets.US_ASCII).replace("\\\\","\\"));
+            jsonWrite(new String(json.toString().getBytes(), StandardCharsets.US_ASCII).replace("\\\\u","\\u"));
         } catch (JSONException e) {
             e.printStackTrace();
         }

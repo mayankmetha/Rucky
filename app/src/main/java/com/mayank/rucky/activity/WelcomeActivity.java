@@ -17,7 +17,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.biometric.BiometricManager;
@@ -25,11 +24,9 @@ import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 import androidx.core.splashscreen.SplashScreen;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
-
-
-import java.util.Objects;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -113,16 +110,14 @@ public class WelcomeActivity extends AppCompatActivity {
             startActivity(intent);
             this.finish();
         } else {
-            AlertDialog.Builder builder = new AlertDialog.Builder(WelcomeActivity.this);
-            builder.setTitle(getResources().getString(R.string.vm));
-            builder.setCancelable(false);
-            builder.setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
-                finishAndRemoveTask();
-                System.exit(0);
-            });
-            AlertDialog exitDialog = builder.create();
-            Objects.requireNonNull(exitDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            exitDialog.show();
+            new MaterialAlertDialogBuilder(WelcomeActivity.this)
+                    .setTitle(getResources().getString(R.string.vm))
+                    .setCancelable(false)
+                    .setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
+                        finishAndRemoveTask();
+                        System.exit(0);
+                    })
+                    .show();
         }
     }
 

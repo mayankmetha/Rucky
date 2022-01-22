@@ -17,7 +17,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.FileProvider;
@@ -29,6 +28,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
 import com.datatheorem.android.trustkit.TrustKit;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
@@ -39,7 +39,6 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.MessageDigest;
-import java.util.Objects;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -246,13 +245,11 @@ public class UpdateActivity extends AppCompatActivity {
             installUpdate();
         } else {
             config.setUpdateFlag(false);
-            AlertDialog.Builder builder = new AlertDialog.Builder(UpdateActivity.this);
-            builder.setTitle(getResources().getString(R.string.update_hash_error));
-            builder.setCancelable(false);
-            builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> goBackToEditorActivity()));
-            AlertDialog updateError = builder.create();
-            Objects.requireNonNull(updateError.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            updateError.show();
+            new MaterialAlertDialogBuilder(UpdateActivity.this)
+                    .setTitle(getResources().getString(R.string.update_hash_error))
+                    .setCancelable(false)
+                    .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> goBackToEditorActivity()))
+                    .show();
         }
     }
 

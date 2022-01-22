@@ -13,12 +13,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mayank.rucky.R;
 import com.mayank.rucky.service.SocketHeartbeatService;
 import com.mayank.rucky.utils.Config;
@@ -83,19 +83,15 @@ public class ConfigActivity extends AppCompatActivity {
         if(!config.getHIDCustomise()) {
             languages = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.hidLanguages)));
             langBtn.setText(languages.get(config.getHIDLanguage()));
-            langBtn.setOnClickListener(view -> {
-                AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
-                builder.setCancelable(false);
-                builder.setSingleChoiceItems(getResources().getStringArray(R.array.hidLanguages), config.getHIDLanguage(), (dialog, i) -> {
-                    config.setHIDLanguage(i);
-                    dialog.dismiss();
-                    langBtn.setText(languages.get(config.getHIDLanguage()));
-                });
-                builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-                AlertDialog hidDialog = builder.create();
-                Objects.requireNonNull(hidDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                hidDialog.show();
-            });
+            langBtn.setOnClickListener(view -> new MaterialAlertDialogBuilder(ConfigActivity.this)
+                    .setCancelable(false)
+                    .setSingleChoiceItems(getResources().getStringArray(R.array.hidLanguages), config.getHIDLanguage(), (dialog, i) -> {
+                        config.setHIDLanguage(i);
+                        dialog.dismiss();
+                        langBtn.setText(languages.get(config.getHIDLanguage()));
+                    })
+                    .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                    .show());
         } else {
             ArrayList<String> filename = new ArrayList<>();
             languages = new ArrayList<>();
@@ -109,19 +105,15 @@ public class ConfigActivity extends AppCompatActivity {
                 languages.add(filename.get(i).replace(".json", "").replace("_"," ").toUpperCase());
             }
             langBtn.setText(languages.get(filename.indexOf(config.getHIDFileSelected())));
-            langBtn.setOnClickListener(view -> {
-                AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
-                builder.setCancelable(false);
-                builder.setSingleChoiceItems(languages.toArray(new CharSequence[0]), filename.indexOf(config.getHIDFileSelected()), (dialog, i) -> {
-                    config.setHIDFileSelected(filename.get(i));
-                    dialog.dismiss();
-                    langBtn.setText(languages.get(i));
-                });
-                builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-                AlertDialog hidDialog = builder.create();
-                Objects.requireNonNull(hidDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                hidDialog.show();
-            });
+            langBtn.setOnClickListener(view -> new MaterialAlertDialogBuilder(ConfigActivity.this)
+                    .setCancelable(false)
+                    .setSingleChoiceItems(languages.toArray(new CharSequence[0]), filename.indexOf(config.getHIDFileSelected()), (dialog, i) -> {
+                        config.setHIDFileSelected(filename.get(i));
+                        dialog.dismiss();
+                        langBtn.setText(languages.get(i));
+                    })
+                    .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                    .show());
         }
     }
 
@@ -130,20 +122,16 @@ public class ConfigActivity extends AppCompatActivity {
         Button modeBtn = findViewById(R.id.modeBtn);
         modeBtn.setFilterTouchesWhenObscured(true);
         modeBtn.setText(modes.get(config.getHIDMode()));
-        modeBtn.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
-            builder.setCancelable(false);
-            builder.setSingleChoiceItems(getResources().getStringArray(R.array.modes), config.getHIDMode(), (dialog, i) -> {
-                config.setHIDMode(i);
-                dialog.dismiss();
-                modeBtn.setText(modes.get(config.getHIDMode()));
-                updateStatus();
-            });
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog modeDialog = builder.create();
-            Objects.requireNonNull(modeDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            modeDialog.show();
-        });
+        modeBtn.setOnClickListener(view -> new MaterialAlertDialogBuilder(ConfigActivity.this)
+                .setCancelable(false)
+                .setSingleChoiceItems(getResources().getStringArray(R.array.modes), config.getHIDMode(), (dialog, i) -> {
+                    config.setHIDMode(i);
+                    dialog.dismiss();
+                    modeBtn.setText(modes.get(config.getHIDMode()));
+                    updateStatus();
+                })
+                .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                .show());
     }
 
     private void updateStatus() {
@@ -181,25 +169,23 @@ public class ConfigActivity extends AppCompatActivity {
 
     private void networkAddress() {
         ipButton.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(ConfigActivity.this);
-            builder.setTitle(getResources().getString(R.string.socket_address));
             LayoutInflater socketLI = LayoutInflater.from(this);
             final View socketView = socketLI.inflate(R.layout.config_network, null);
-            builder.setView(socketView);
             EditText address = socketView.findViewById(R.id.socket_title);
             address.setText(config.getNetworkAddress());
-            builder.setCancelable(false);
-            builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
-                Matcher matcher = SOCKET_ADDRESS.matcher(address.getText().toString());
-                if (matcher.matches())
-                    config.setNetworkAddress(address.getText().toString());
-                ipButton.setText(config.getNetworkAddress());
-                updateNotification();
-            });
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog saveDialog = builder.create();
-            Objects.requireNonNull(saveDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            saveDialog.show();
+            new MaterialAlertDialogBuilder(ConfigActivity.this)
+                    .setTitle(getResources().getString(R.string.socket_address))
+                    .setView(socketView)
+                    .setCancelable(false)
+                    .setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
+                        Matcher matcher = SOCKET_ADDRESS.matcher(address.getText().toString());
+                        if (matcher.matches())
+                            config.setNetworkAddress(address.getText().toString());
+                        ipButton.setText(config.getNetworkAddress());
+                        updateNotification();
+                    })
+                    .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                    .show();
         });
     }
 

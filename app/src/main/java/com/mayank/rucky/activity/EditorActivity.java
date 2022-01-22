@@ -25,7 +25,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
@@ -44,6 +43,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
 import com.datatheorem.android.trustkit.TrustKit;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.kimchangyoun.rootbeerFresh.RootBeer;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.HidModel;
@@ -159,20 +159,18 @@ public class EditorActivity extends AppCompatActivity {
     public void onBackPressed() {
         if(config.getConfigFSOption())
             disableConfigFSHID();
-        AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-        builder.setTitle(getResources().getString(R.string.exit_dialog));
-        builder.setCancelable(false);
-        builder.setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
-            if(config.getHIDMode() == 1)
-                stopNetworkSocketService();
-            finishAndRemoveTask();
-            System.exit(0);
-        });
-        builder.setNeutralButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-        builder.setNegativeButton(getResources().getString(R.string.btn_back), (dialog, which) -> super.onBackPressed());
-        AlertDialog exitDialog = builder.create();
-        Objects.requireNonNull(exitDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        exitDialog.show();
+        new MaterialAlertDialogBuilder(EditorActivity.this)
+                .setTitle(getResources().getString(R.string.exit_dialog))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.btn_exit), (dialog, which) -> {
+                    if(config.getHIDMode() == 1)
+                        stopNetworkSocketService();
+                    finishAndRemoveTask();
+                    System.exit(0);
+                })
+                .setNeutralButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                .setNegativeButton(getResources().getString(R.string.btn_back), (dialog, which) -> super.onBackPressed())
+                .show();
     }
 
     void getKey() {
@@ -760,36 +758,30 @@ public class EditorActivity extends AppCompatActivity {
                         canExe = enableConfigFSHID();
                     } else {
                         if(!quiet) {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-                            builder.setTitle(getResources().getString(R.string.kernel_err));
-                            builder.setCancelable(false);
-                            builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
-                            AlertDialog kernelExit = builder.create();
-                            Objects.requireNonNull(kernelExit.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                            kernelExit.show();
+                            new MaterialAlertDialogBuilder(EditorActivity.this)
+                                    .setTitle(getResources().getString(R.string.kernel_err))
+                                    .setCancelable(false)
+                                    .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                                    .show();
                         }
                     }
                 }
             } else {
                 if(!quiet) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-                    builder.setTitle(getResources().getString(R.string.kernel_err));
-                    builder.setCancelable(false);
-                    builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
-                    AlertDialog kernelExit = builder.create();
-                    Objects.requireNonNull(kernelExit.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                    kernelExit.show();
+                    new MaterialAlertDialogBuilder(EditorActivity.this)
+                            .setTitle(getResources().getString(R.string.kernel_err))
+                            .setCancelable(false)
+                            .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                            .show();
                 }
             }
         } else {
             if(!quiet) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-                builder.setTitle(getResources().getString(R.string.root_err));
-                builder.setCancelable(false);
-                builder.setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()));
-                AlertDialog rootMissing = builder.create();
-                Objects.requireNonNull(rootMissing.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-                rootMissing.show();
+                new MaterialAlertDialogBuilder(EditorActivity.this)
+                        .setTitle(getResources().getString(R.string.root_err))
+                        .setCancelable(false)
+                        .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                        .show();
             }
         }
         return canExe;
@@ -824,74 +816,70 @@ public class EditorActivity extends AppCompatActivity {
             for (int i = 0; i < files.size(); i++) {
                 fileName[i] = files.get(i).getName();
             }
-            AlertDialog.Builder builder= new AlertDialog.Builder(EditorActivity.this);
-            builder.setTitle(getResources().getString(R.string.title_delete_file));
-            builder.setCancelable(false);
-            builder.setItems(fileName, (dialog, i) -> {
-                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
-                file.delete();
-                if(file.exists()){
-                    try {
-                        file.getCanonicalFile().delete();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    if(file.exists()){
-                        getApplicationContext().deleteFile(file.getName());
-                    }
-                }
-                Toast.makeText(this, fileName[i] + " "+getResources().getString(R.string.file_deleted),Toast.LENGTH_SHORT).show();
-            });
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog delDialog = builder.create();
-            Objects.requireNonNull(delDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            delDialog.show();
+            new MaterialAlertDialogBuilder(EditorActivity.this)
+                    .setTitle(getResources().getString(R.string.title_delete_file))
+                    .setCancelable(false)
+                    .setItems(fileName, (dialog, i) -> {
+                        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
+                        file.delete();
+                        if(file.exists()){
+                            try {
+                                file.getCanonicalFile().delete();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            if(file.exists()){
+                                getApplicationContext().deleteFile(file.getName());
+                            }
+                        }
+                        Toast.makeText(this, fileName[i] + " "+getResources().getString(R.string.file_deleted),Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                    .show();
         });
 
         SaveBtn.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(EditorActivity.this);
-            builder.setTitle(getResources().getString(R.string.title_save_file));
             LayoutInflater saveLI = LayoutInflater.from(this);
             final View saveView = saveLI.inflate(R.layout.editor_save, null);
-            builder.setView(saveView);
             final EditText fileName = saveView.findViewById(R.id.save_filename);
-            builder.setCancelable(false);
-            builder.setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
-                EditText scripts = findViewById(R.id.code);
-                File file;
-                String fileNameString = fileName.getText().toString().replaceAll("[\\\\/.]+","");
-                if (fileNameString.isEmpty()) {
-                    fileNameString = String.valueOf(new Date().getTime());
-                }
-                if (config.getSec()) {
-                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileNameString+".enc");
-                } else {
-                    file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileNameString+".txt");
-                }
-                String content = scripts.getText().toString();
-                FileOutputStream fOutputStream;
-                OutputStream outputStream;
-                try {
-                    if (config.getSec()) {
-                        EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
-                                keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
-                        fOutputStream = encryptedFile.openFileOutput();
-                    } else {
-                        fOutputStream = new FileOutputStream(file);
-                    }
-                    outputStream = new BufferedOutputStream(fOutputStream);
-                    outputStream.write(content.getBytes(StandardCharsets.UTF_8));
-                    outputStream.close();
-                    fOutputStream.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                Toast.makeText(this, file.getName() + " "+getResources().getString(R.string.file_saved),Toast.LENGTH_SHORT).show();
-            });
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog saveDialog = builder.create();
-            Objects.requireNonNull(saveDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            saveDialog.show();
+            new MaterialAlertDialogBuilder(EditorActivity.this)
+                    .setTitle(getResources().getString(R.string.title_save_file))
+                    .setView(saveView)
+                    .setCancelable(false)
+                    .setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
+                        EditText scripts = findViewById(R.id.code);
+                        File file;
+                        String fileNameString = fileName.getText().toString().replaceAll("[\\\\/.]+","");
+                        if (fileNameString.isEmpty()) {
+                            fileNameString = String.valueOf(new Date().getTime());
+                        }
+                        if (config.getSec()) {
+                            file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileNameString+".enc");
+                        } else {
+                            file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),fileNameString+".txt");
+                        }
+                        String content = scripts.getText().toString();
+                        FileOutputStream fOutputStream;
+                        OutputStream outputStream;
+                        try {
+                            if (config.getSec()) {
+                                EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
+                                        keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
+                                fOutputStream = encryptedFile.openFileOutput();
+                            } else {
+                                fOutputStream = new FileOutputStream(file);
+                            }
+                            outputStream = new BufferedOutputStream(fOutputStream);
+                            outputStream.write(content.getBytes(StandardCharsets.UTF_8));
+                            outputStream.close();
+                            fOutputStream.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        Toast.makeText(this, file.getName() + " "+getResources().getString(R.string.file_saved),Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                    .show();
         });
 
         LoadBtn.setOnClickListener(view -> {
@@ -911,37 +899,35 @@ public class EditorActivity extends AppCompatActivity {
             for (int i = 0; i < files.size(); i++) {
                 fileName[i] = files.get(i).getName();
             }
-            AlertDialog.Builder builder= new AlertDialog.Builder(EditorActivity.this);
-            builder.setTitle(getResources().getString(R.string.title_open_file));
-            builder.setCancelable(false);
-            builder.setItems(fileName, (dialog, i) -> {
-                EditText scripts = findViewById(R.id.code);
-                File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
-                FileInputStream fInputStream;
-                InputStream inputStream;
-                StringWriter writer;
-                try {
-                    if (config.getSec() && file.getPath().endsWith(".enc")) {
-                        EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
-                                keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
-                        fInputStream = encryptedFile.openFileInput();
-                    } else {
-                        fInputStream = new FileInputStream(file);
-                    }
-                    inputStream = new BufferedInputStream(fInputStream);
-                    writer = new StringWriter();
-                    IOUtil.copy(inputStream, writer, "UTF-8");
-                    scripts.setText(writer.toString());
-                    inputStream.close();
-                    fInputStream.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-            builder.setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel());
-            AlertDialog loadDialog = builder.create();
-            Objects.requireNonNull(loadDialog.getWindow()).setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            loadDialog.show();
+            new MaterialAlertDialogBuilder(EditorActivity.this)
+                    .setTitle(getResources().getString(R.string.title_open_file))
+                    .setCancelable(false)
+                    .setItems(fileName, (dialog, i) -> {
+                        EditText scripts = findViewById(R.id.code);
+                        File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
+                        FileInputStream fInputStream;
+                        InputStream inputStream;
+                        StringWriter writer;
+                        try {
+                            if (config.getSec() && file.getPath().endsWith(".enc")) {
+                                EncryptedFile encryptedFile = new EncryptedFile.Builder(this, file,
+                                        keyAlias, EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB).build();
+                                fInputStream = encryptedFile.openFileInput();
+                            } else {
+                                fInputStream = new FileInputStream(file);
+                            }
+                            inputStream = new BufferedInputStream(fInputStream);
+                            writer = new StringWriter();
+                            IOUtil.copy(inputStream, writer, "UTF-8");
+                            scripts.setText(writer.toString());
+                            inputStream.close();
+                            fInputStream.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    })
+                    .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
+                    .show();
         });
 
         ExeBtn.setOnClickListener(view -> {
