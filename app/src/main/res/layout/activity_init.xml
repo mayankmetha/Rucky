@@ -29,6 +29,7 @@
         android:padding="32sp" >
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.ElevatedButton"
             android:id="@+id/btn_skip"
             android:filterTouchesWhenObscured="true"
             android:layout_width="match_parent"
@@ -45,6 +46,7 @@
             android:orientation="horizontal" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.ElevatedButton"
             android:id="@+id/btn_next"
             android:filterTouchesWhenObscured="true"
             android:layout_width="match_parent"
