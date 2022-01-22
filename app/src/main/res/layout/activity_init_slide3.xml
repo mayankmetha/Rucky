@@ -20,6 +20,7 @@
             app:srcCompat="@drawable/ic_wireless" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:textColor="@color/md_theme_primary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/slideTitle3"
