@@ -98,6 +98,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:textColor="@color/md_theme_primary"
                 android:id="@+id/status_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

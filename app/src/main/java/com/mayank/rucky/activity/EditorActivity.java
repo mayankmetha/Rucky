@@ -22,7 +22,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +43,7 @@ import com.android.volley.toolbox.Volley;
 import com.appmattus.certificatetransparency.CTHostnameVerifierBuilder;
 import com.datatheorem.android.trustkit.TrustKit;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.snackbar.Snackbar;
 import com.kimchangyoun.rootbeerFresh.RootBeer;
 import com.mayank.rucky.R;
 import com.mayank.rucky.models.HidModel;
@@ -832,7 +832,7 @@ public class EditorActivity extends AppCompatActivity {
                                 getApplicationContext().deleteFile(file.getName());
                             }
                         }
-                        Toast.makeText(this, fileName[i] + " "+getResources().getString(R.string.file_deleted),Toast.LENGTH_SHORT).show();
+                        Snackbar.make(findViewById(android.R.id.content), fileName[i]+" "+getResources().getString(R.string.file_deleted), Snackbar.LENGTH_SHORT).show();
                     })
                     .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
                     .show();
@@ -876,7 +876,8 @@ public class EditorActivity extends AppCompatActivity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        Toast.makeText(this, file.getName() + " "+getResources().getString(R.string.file_saved),Toast.LENGTH_SHORT).show();
+                        Snackbar.make(findViewById(android.R.id.content), file.getName() + " "+getResources().getString(R.string.file_saved),Snackbar.LENGTH_SHORT)
+                                .show();
                     })
                     .setNegativeButton(getResources().getString(R.string.btn_cancel), (dialog, which) -> dialog.cancel())
                     .show();
