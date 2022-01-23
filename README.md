@@ -24,7 +24,7 @@
 # Download
 ## GitHub
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
-[![Github nightly](https://img.shields.io/badge/nightly-v2.3%20(483)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
+[![Github nightly](https://img.shields.io/badge/nightly-v2.3%20(519)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
 
 ## Nethunter App Store
 [![Nethuter Release](https://img.shields.io/badge/release-v2.2-blue)](https://store.nethunter.com/en/packages/com.mayank.rucky/)
@@ -402,7 +402,6 @@ Status| Feature
 ✅| Load scripts
 ✅| Delete scripts
 ✅| Day/Night theme
-✅| Customize accent colours
 ✅| Launch app via dialer app
 ✅| Hide launcher app (till Android 10)
 ✅| Disable app launch via launcher (Android 11 onwards)
@@ -424,7 +423,8 @@ Status| Feature
 ✅| Magisk Module
 ✅| Runtime process name masking
 ✅| Emulator detection
-🚧| Monet Theme
+✅| Monet Theme
+🚧| Bluetooth HID
 💡| More feature addition on request
 
 ---
