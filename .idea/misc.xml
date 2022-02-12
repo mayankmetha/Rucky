@@ -63,8 +63,11 @@
         <entry key="app/src/main/res/drawable/ic_keyboard.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/ic_launch.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.303125" />
+        <entry key="app/src/main/res/drawable/ic_launcher_monochrome.xml" value="0.1555" />
+        <entry key="app/src/main/res/drawable/ic_launcher_monochrome_foreground.xml" value="0.1555" />
         <entry key="app/src/main/res/drawable/ic_license.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_load.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_locale.xml" value="0.1555" />
         <entry key="app/src/main/res/drawable/ic_localize.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_net.xml" value="0.158203125" />
         <entry key="app/src/main/res/drawable/ic_net_off.xml" value="0.158203125" />
@@ -123,6 +126,7 @@
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.176953125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_debug.xml" value="0.176953125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_debug_round.xml" value="0.303125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_monochrome.xml" value="0.1555" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_nightly.xml" value="0.303125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_nightly_round.xml" value="0.303125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.303125" />

@@ -10,6 +10,7 @@ os.system("rm -rd app; mkdir app")
 
 for _ in mapping:
     os.system("cp -r tmp/"+mapping[_]+" app/"+_+"")
+    os.system("rm -rf tmp/"+mapping[_])
     print("Created: "+_)
 
 print("Total: "+str(len(mapping)))
