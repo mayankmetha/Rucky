@@ -1,6 +1,6 @@
 # Rucky 
 [![GitHub](https://img.shields.io/github/license/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/blob/master/LICENSE)
-[![Crowdin](https://badges.crowdin.net/rucky/localized.svg)](https://mayankmetha.github.io/Rucky/)
+[![Crowdin](https://badges.crowdin.net/rucky/localized.svg)](https://crwd.in/rucky)
 [![Android](https://img.shields.io/badge/android-6.x%2B-lightgrey)](https://github.com/mayankmetha/Rucky)
 [![Architecture](https://img.shields.io/badge/architecture-Independent-blueviolet)](https://github.com/mayankmetha/Rucky)
 [![Kernel <=3.18](https://img.shields.io/badge/kernel%20%3C%3D3.18-USB%20HID%20Patch%20Required-red)](https://github.com/mayankmetha/Rucky)
@@ -341,7 +341,7 @@ Status|Code    |Language           |Translated
 ❌|ak      |Akan               |0%
 ❌|sq      |Albanian           |0%
 ❌|am      |Amharic            |0%
-🚧|ar      |Arabic             |100%
+✅|ar      |Arabic             |100%
 ❌|an      |Aragonese          |0%
 ❌|hy      |Armenian           |0%
 ❌|as      |Assamese           |0%
@@ -362,7 +362,7 @@ Status|Code    |Language           |Translated
 ❌|bi      |Bislama            |0%
 ❌|bs      |Bosnian            |0%
 🚧|br      |Breton             |6%
-🚧|bg      |Bulgarian          |100%
+✅|bg      |Bulgarian          |100%
 ❌|my      |Burmese            |0%
 ❌|ca      |Catalan            |0%
 ❌|b+ceb   |Cebuano            |0%
@@ -370,23 +370,31 @@ Status|Code    |Language           |Translated
 ❌|ce      |Chechen            |0%
 ❌|b+chr   |Cherokee           |0%
 ❌|ny      |Chewa              |0%
-🚧|zh-rCN  |Chinese Simplified |100%
-🚧|zh-rTW  |Chinese Traditional|100%
+✅|zh-rCN  |Chinese Simplified |100%
+✅|zh-rTW  |Chinese Traditional|100%
 ❌|cv      |Chuvash            |0%
 ❌|kw      |Cornish            |0%
 ❌|co      |Corsican           |0%
 ❌|cr      |Cree               |0%
-🚧|hr      |Croatian           |100%
-🚧|cs      |Czech              |100%
-🚧|da      |Danish             |100%
+✅|hr      |Croatian           |100%
+✅|cs      |Czech              |100%
+✅|da      |Danish             |100%
 ❌|dv      |Dhivehi            |0%
 🚧|nl      |Dutch              |100%
 ❌|dz      |Dzongkha           |0%
 ✅|en-rGB  |English (UK)       |100%
 ✅|en-rUS  |English (US)       |100%
-🚧|et      |Estonian           |100%
-🚧|fi      |Finnish            |100%
-🚧|fr      |French             |100%
+❌|eo      |Esperanto          |0%
+✅|et      |Estonian           |100%
+❌|ee      |Ewe                |0%
+❌|fo      |Faroese            |0%
+❌|fj      |Fijian             |0%
+❌|b+fil   |Filipino           |0%
+✅|fi      |Finnish            |100%
+✅|fr      |French             |100%
+❌|fy      |Frisian            |0%
+❌|b+fur   |Friulian           |0%
+❌|ff      |Fula               |0%
 🚧|de      |German             |100%
 🚧|el      |Greek              |100%
 🚧|iw      |Hebrew             |100%
