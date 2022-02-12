@@ -380,7 +380,7 @@ Status|Code    |Language           |Translated
 ✅|cs      |Czech              |100%
 ✅|da      |Danish             |100%
 ❌|dv      |Dhivehi            |0%
-🚧|nl      |Dutch              |100%
+✅|nl      |Dutch              |100%
 ❌|dz      |Dzongkha           |0%
 ✅|en-rGB  |English (UK)       |100%
 ✅|en-rUS  |English (US)       |100%
@@ -395,40 +395,47 @@ Status|Code    |Language           |Translated
 ❌|fy      |Frisian            |0%
 ❌|b+fur   |Friulian           |0%
 ❌|ff      |Fula               |0%
-🚧|de      |German             |100%
-🚧|el      |Greek              |100%
-🚧|iw      |Hebrew             |100%
+❌|b+gaa   |Ga                 |0%
+❌|gl      |Galician           |0%
+❌|ka      |Georgian           |0%
+✅|de      |German             |100%
+❌|b+got   |Gothic             |0%
+✅|el      |Greek              |100%
+❌|kl      |Greenlandic        |0%
+❌|gn      |Guarani            |0%
+❌|gu      |Gujarati           |0%
+✅|iw      |Hebrew             |100%
 ✅|hi      |Hindi              |100%
 🚧|hu      |Hungarian          |15%
 🚧|is      |Icelandic          |0%
-🚧|in      |Indonesian         |100%
-🚧|it      |Italian            |100%
-🚧|ja      |Japanese           |100%
-🚧|ko      |Korean             |100%
+✅|in      |Indonesian         |100%
+✅|it      |Italian            |100%
+✅|ja      |Japanese           |100%
+✅|ko      |Korean             |100%
 🚧|ku      |Kurdish            |0%
-🚧|lv      |Latvian            |100%
-🚧|lt      |Lithuanian         |100%
-🚧|ms      |Malay              |100%
-🚧|no      |Norwegian          |100%
-🚧|nb      |Norwegian Bokmal   |100%
+✅|lv      |Latvian            |100%
+✅|lt      |Lithuanian         |100%
+✅|ms      |Malay              |100%
+✅|no      |Norwegian          |100%
+✅|nb      |Norwegian Bokmal   |100%
 🚧|fa      |Persian            |4%
-🚧|pl      |Polish             |100%
-🚧|pt      |Portuguese         |100%
-🚧|ro      |Romanian           |100%
+✅|pl      |Polish             |100%
+✅|pt      |Portuguese         |100%
+✅|ro      |Romanian           |100%
 ✅|ru      |Russian            |100%
 🚧|b+sat   |Santali            |26%
 ✅|sk      |Slovak             |100%
-🚧|sl      |Slovenian          |100%
-🚧|es      |Spanish            |100%
-🚧|sv      |Swedish            |100%
-🚧|ta      |Tamil              |100%
-🚧|te      |Telugu             |100%
-🚧|th      |Thai               |100%
-🚧|tr      |Turkish            |100%
-🚧|uk      |Ukrainian          |100%
-🚧|ur-rIN  |Urdu (IN)          |100%
-🚧|ur-rPK  |Urdu (PK)          |100%
-🚧|vi      |Vietnamese         |100%
+✅|sl      |Slovenian          |100%
+✅|es      |Spanish            |100%
+✅|sv      |Swedish            |100%
+✅|ta      |Tamil              |100%
+✅|te      |Telugu             |100%
+✅|th      |Thai               |100%
+✅|tr      |Turkish            |100%
+✅|uk      |Ukrainian          |100%
+✅|ur-rIN  |Urdu (IN)          |100%
+✅|ur-rPK  |Urdu (PK)          |100%
+✅|vi      |Vietnamese         |100%
 ❌|zu      |Zulu               |0%
 
 ---

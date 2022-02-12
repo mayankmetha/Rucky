@@ -18,7 +18,7 @@
     <string name="slideTitle6">Oprávnění aplikace</string>
     <string name="slideDesc6">Udělte aplikaci požadované oprávnění pro správné fungování!</string>
     <!-- Update screen -->
-    <string name="update_new">Nová dostupná aktualizace verze: </string>
+    <string name="update_new">Nová dostupná verze aktualizace: </string>
     <string name="update_hash_error">Neshoda podpisu souboru! Nelze aktualizovat.</string>
     <string name="update_activity">Aktualizace Rucky</string>
     <string name="update_version">Verze</string>
@@ -81,8 +81,8 @@
     <string name="settings_sec_title">Pokročilé zabezpečení</string>
     <string name="settings_sec_desc">Povolit šifrování souborů skriptu a zámek obrazovky.</string>
     <string name="setting_device">Nastavení režimu útoku</string>
-    <string name="configfs_title">Automatická konfigurace FS</string>
-    <string name="configfs_summary">Konfiguruje HID na zařízeních podporovaných v KonfigFS. Může poškodit nastavení USB.</string>
+    <string name="configfs_title">Automatická konfigurace ConfigFS</string>
+    <string name="configfs_summary">Provede konfiguraci HID na zařízeních podporovaných systémem ConfigFS. Může narušit nastavení USB.</string>
     <string name="hid_choice_title">Přizpůsobitelné HID</string>
     <string name="hid_choice_summary">Přepnutí mezi starším HID a přizpůsobitelným ID HID</string>
     <string name="hid_title">Jazyk HID</string>
