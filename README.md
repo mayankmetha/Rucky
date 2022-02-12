@@ -404,13 +404,26 @@ Status|Code    |Language           |Translated
 ❌|kl      |Greenlandic        |0%
 ❌|gn      |Guarani            |0%
 ❌|gu      |Gujarati           |0%
+❌|ht      |Haitian Creole     |0%
+❌|ha      |Hausa              |0%
+❌|b+haw   |Hawaiian           |0%
 ✅|iw      |Hebrew             |100%
+❌|hz      |Herero             |0%
+❌|b+hil   |Hiligaynon         |0%
 ✅|hi      |Hindi              |100%
+❌|ho      |Hiri Motu          |0%
+❌|b+hmn   |Hmong              |0%
 🚧|hu      |Hungarian          |15%
 🚧|is      |Icelandic          |0%
+❌|io      |Ido                |0%
+❌|ig      |Igbo               |0%
+❌|b+ilo   |Ilokano            |0%
 ✅|in      |Indonesian         |100%
+❌|iu      |Inuktitut          |0%
+❌|ga      |Irish              |0%
 ✅|it      |Italian            |100%
 ✅|ja      |Japanese           |100%
+❌|jv      |Javanese           |0%
 ✅|ko      |Korean             |100%
 🚧|ku      |Kurdish            |0%
 ✅|lv      |Latvian            |100%
@@ -436,6 +449,12 @@ Status|Code    |Language           |Translated
 ✅|ur-rIN  |Urdu (IN)          |100%
 ✅|ur-rPK  |Urdu (PK)          |100%
 ✅|vi      |Vietnamese         |100%
+❌|wa      |Walloon            |0%
+❌|cy      |Welsh              |0%
+❌|wo      |Wolof              |0%
+❌|xh      |Xhosa              |0%
+❌|ji      |Yiddish            |0%
+❌|yo      |Yoruba             |0%
 ❌|zu      |Zulu               |0%
 
 ---
