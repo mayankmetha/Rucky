@@ -18,7 +18,7 @@
     <string name="slideTitle6">Permesso App</string>
     <string name="slideDesc6">Si prega di concedere l\'app l\'autorizzazione necessaria per funzionare!</string>
     <!-- Update screen -->
-    <string name="update_new">Nuovo aggiornamento disponibile</string>
+    <string name="update_new">Nuovo Aggiornamento Versione Disponibile: </string>
     <string name="update_hash_error">File Signature Mismatch! Impossibile aggiornare.</string>
     <string name="update_activity">Aggiornamento Rucky</string>
     <string name="update_version">Versione</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Continua</string>
     <string name="root_err">Accesso Root Richiesto Per Attacco Cavo Usb!</string>
     <string name="kernel_err">"Kernel Non Supportato Per Attacco Cavo Usb!"</string>
+    <string name="vm">L\'ambiente virtuale non è supportato!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Connesso</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Protezione Avanzata</string>
     <string name="settings_sec_desc">Abilita la crittografia del file script e il blocco schermo.</string>
     <string name="setting_device">Impostazioni modalità attacco</string>
+    <string name="configfs_title">ConfigFS Automatico</string>
+    <string name="configfs_summary">Configurerà HID sui dispositivi supportati da ConfigFS. Potrebbe rompere le impostazioni USB.</string>
     <string name="hid_choice_title">HID personalizzabile</string>
     <string name="hid_choice_summary">Switch tra Legacy HID e HID personalizzabile</string>
     <string name="hid_title">Lingua HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">eliminato</string>
     <string name="file_name">Nome File</string>
     <string name="title_save_file">Salva file</string>
+    <string name="hid_version">Versione: %d</string>
     <string-array name="modes">
         <item>Cavo USB</item>
         <item>Socket Di Rete</item>
@@ -136,5 +140,10 @@
         <item>Portoghese Brasiliano</item>
         <item>Bielorusso</item>
         <item>Ungherese</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automatico</item>
+        <item>Giorno</item>
+        <item>Notte</item>
     </string-array>
 </resources>

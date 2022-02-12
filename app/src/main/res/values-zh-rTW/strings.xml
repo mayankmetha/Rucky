@@ -18,7 +18,7 @@
     <string name="slideTitle6">應用程式許可權</string>
     <string name="slideDesc6">請授與應用程式所需的應用程式許可權！</string>
     <!-- Update screen -->
-    <string name="update_new">可用的新更新項目</string>
+    <string name="update_new">新建可用的更新版本： </string>
     <string name="update_hash_error">檔案簽章不符！ 無法更新。</string>
     <string name="update_activity">Rucky 更新</string>
     <string name="update_version">版本</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">繼續</string>
     <string name="root_err">USB 纜線攻擊需要 Root 存取！</string>
     <string name="kernel_err">"USB 纜線攻擊不支援 Kernel ！"</string>
+    <string name="vm">不支援虛擬環境！</string>
     <!-- Config screen -->
     <string name="config_activity">特韋克斯</string>
     <string name="config_status_usb_on">已連接 USB</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">高階安全</string>
     <string name="settings_sec_desc">啟用 Script 檔加密和畫面鎖定。</string>
     <string name="setting_device">攻擊模式設定</string>
+    <string name="configfs_title">自動配置 ConfigFS</string>
+    <string name="configfs_summary">將在 ConfigFS 支援的裝置上配置 HID 。 可能中斷 USB 設定。</string>
     <string name="hid_choice_title">可自訂的 HID</string>
     <string name="hid_choice_summary">在舊式 HID 和可自訂 HID 之間切換</string>
     <string name="hid_title">HID 語言</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">已刪除</string>
     <string name="file_name">檔案名稱</string>
     <string name="title_save_file">儲存檔案</string>
+    <string name="hid_version">版本： %d</string>
     <string-array name="modes">
         <item>USB 纜線</item>
         <item>網路 Socket</item>
@@ -136,5 +140,10 @@
         <item>巴西葡萄牙文</item>
         <item>白俄羅斯文</item>
         <item>匈牙利</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>自動</item>
+        <item>戴</item>
+        <item>夜</item>
     </string-array>
 </resources>

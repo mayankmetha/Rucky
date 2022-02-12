@@ -18,7 +18,7 @@
     <string name="slideTitle6">Дозвіл додатку</string>
     <string name="slideDesc6">Будь ласка, надайте додатку необхідний дозвіл для роботи!</string>
     <!-- Update screen -->
-    <string name="update_new">Доступне нове оновлення</string>
+    <string name="update_new">Нова доступна версія оновлення: </string>
     <string name="update_hash_error">Підпис файлу неправильний! Неможливо оновити.</string>
     <string name="update_activity">Оновлення прив’язки</string>
     <string name="update_version">Версія</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Продовжити</string>
     <string name="root_err">Необхідний доступ до root-прав для атаки USB!</string>
     <string name="kernel_err">"Ядро не підтримується для атаки на USB!"</string>
+    <string name="vm">Віртуальне середовище не підтримується!</string>
     <!-- Config screen -->
     <string name="config_activity">Твіки</string>
     <string name="config_status_usb_on">USB під’єднано</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Розширена безпека</string>
     <string name="settings_sec_desc">Увімкнути шифрування і замикання сценарію файлів екрана.</string>
     <string name="setting_device">Налаштування режиму атаки</string>
+    <string name="configfs_title">Автоконфігурація ConfigFS</string>
+    <string name="configfs_summary">Буде налаштувати HID на пристроях, що підтримуються ConfigFS. Може зламати параметр USB.</string>
     <string name="hid_choice_title">HID з можливістю налаштування</string>
     <string name="hid_choice_summary">Перемикач між споконвісійним HID та настроюваним HID</string>
     <string name="hid_title">HID мови</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">вилучено</string>
     <string name="file_name">Назва файлу</string>
     <string name="title_save_file">Зберегти</string>
+    <string name="hid_version">Версія: %d</string>
     <string-array name="modes">
         <item>USB-кабель</item>
         <item>Мережева сокет</item>
@@ -136,5 +140,10 @@
         <item>Португальська бразильська</item>
         <item>Білоруська</item>
         <item>Угорська</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Авто</item>
+        <item>День</item>
+        <item>Ніч</item>
     </string-array>
 </resources>

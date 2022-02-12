@@ -18,7 +18,7 @@
     <string name="slideTitle6">Uygulama izni</string>
     <string name="slideDesc6">Lütfen uygulamaya çalışmak için gerekli izni verin!</string>
     <!-- Update screen -->
-    <string name="update_new">Yeni güncelleme var</string>
+    <string name="update_new">Kullanılabilecek Yeni Güncelleme Sürümü: </string>
     <string name="update_hash_error">Dosya Imzası Uyuşmazlığı! Güncelleştirilemiyor.</string>
     <string name="update_activity">Rucky Güncelleme</string>
     <string name="update_version">Sürüm</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Devam</string>
     <string name="root_err">USB Kablo Saldırısı Için Kök Erişim Gerekiyor!</string>
     <string name="kernel_err">"USB Kablosu Saldırısı İçin Çekirdek Desteklenmiyor!"</string>
+    <string name="vm">Sanal ortam desteklenmiyor!</string>
     <!-- Config screen -->
     <string name="config_activity">İnce Ayarlar</string>
     <string name="config_status_usb_on">USB Bağlandı</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Gelişmiş Güvenlik</string>
     <string name="settings_sec_desc">Komut dosyası şifreleme ve ekran kilidini etkinleştirin.</string>
     <string name="setting_device">Saldırı Modu Ayarları</string>
+    <string name="configfs_title">ConfigFS \' yi Otomatik Yapılandır</string>
+    <string name="configfs_summary">Desteklenen ConfigFS aygıtlarında HID yapılandırılacak. USB ayarını bozabilir.</string>
     <string name="hid_choice_title">Özelleştirilebilir HID</string>
     <string name="hid_choice_summary">Eski HID ve Customisable HID arasında geçiş</string>
     <string name="hid_title">HID Dili</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">silindi</string>
     <string name="file_name">Dosya Adı</string>
     <string name="title_save_file">Dosyayı Sakla</string>
+    <string name="hid_version">Sürüm: %d</string>
     <string-array name="modes">
         <item>USB kablosu</item>
         <item>Ağ Yuvası</item>
@@ -136,5 +140,10 @@
         <item>Brezilya Portekizcesi</item>
         <item>Beyaz Rusça</item>
         <item>Macarca</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Otomatik</item>
+        <item>Gün</item>
+        <item>Gece</item>
     </string-array>
 </resources>

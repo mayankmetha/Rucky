@@ -18,7 +18,7 @@
     <string name="slideTitle6">Povolenia aplikácie</string>
     <string name="slideDesc6">Udeľte aplikácii požadované povolenie na správne fungovanie!</string>
     <!-- Update screen -->
-    <string name="update_new">K dispozícii je nová aktualizácia</string>
+    <string name="update_new">K dispozícii je nová aktualizácia: </string>
     <string name="update_hash_error">Nezhoda podpisu súboru! Nie je možné aktualizovať.</string>
     <string name="update_activity">Aktualizácia Rucky</string>
     <string name="update_version">Verzia</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Pokračovať</string>
     <string name="root_err">Pre útok cez USB kábel sa vyžaduje prístup roota!</string>
     <string name="kernel_err">"Kernel nepodporuje útok cez USB kábel!"</string>
+    <string name="vm">Virtuálne prostredie nie je podporované!</string>
     <!-- Config screen -->
     <string name="config_activity">Vylepšenia</string>
     <string name="config_status_usb_on">USB pripojené</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Pokročilé zabezpečenie</string>
     <string name="settings_sec_desc">Povoliť šifrovanie súborov skriptu a uzamknutie obrazovky.</string>
     <string name="setting_device">Nastavenie režimu útoku</string>
+    <string name="configfs_title">Automatická konfigurácia ConfigFS</string>
+    <string name="configfs_summary">Nakonfiguruje HID na podporovaných zariadeniach ConfigFS. Môže pokaziť nastavenie USB.</string>
     <string name="hid_choice_title">Prispôsobiteľné HID</string>
     <string name="hid_choice_summary">Prepnúť medzi Legacy HID a Customisable HID</string>
     <string name="hid_title">Jazyk HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">odstránené</string>
     <string name="file_name">Názov súboru</string>
     <string name="title_save_file">Uložiť súbor</string>
+    <string name="hid_version">Verzia: %d</string>
     <string-array name="modes">
         <item>USB kábel</item>
         <item>Sieťový soket</item>
@@ -136,5 +140,10 @@
         <item>Brazílska portugalčina</item>
         <item>Bieloruština</item>
         <item>Maďarčina</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automaticky</item>
+        <item>Denný</item>
+        <item>Nočný</item>
     </string-array>
 </resources>

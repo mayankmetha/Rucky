@@ -18,7 +18,7 @@
     <string name="slideTitle6">Dozvola za aplikaciju</string>
     <string name="slideDesc6">Molim, dodijeli aplikaciji potrebnu dozvolu za rad!</string>
     <!-- Update screen -->
-    <string name="update_new">Dostupno je novo ažuriranje</string>
+    <string name="update_new">Nova raspoloživa verzija ažuriranja: </string>
     <string name="update_hash_error">Nepodudarni Potpis Datoteke! Ne može se ažurirati.</string>
     <string name="update_activity">Rucky ažuriranje</string>
     <string name="update_version">Inačica</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Nastavi</string>
     <string name="root_err">Potreban Je Korijenski Pristup Za USB Kabel!</string>
     <string name="kernel_err">"Kernel Nije Podržan Za USB Kabel!"</string>
+    <string name="vm">Virtualna okolina nije podržana!</string>
     <!-- Config screen -->
     <string name="config_activity">Tvitovi</string>
     <string name="config_status_usb_on">USB Spojen</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Napredna sigurnost</string>
     <string name="settings_sec_desc">Omogućite šifriranje datoteke skripta i zaključavanje ekrana.</string>
     <string name="setting_device">Postavke načina napada</string>
+    <string name="configfs_title">Automatski konfiguriraj ConfigFS</string>
+    <string name="configfs_summary">Konfigurirat će HID na ConfigFS podržanim uređajima. Može razbiti USB postavke.</string>
     <string name="hid_choice_title">Prilagodba HID-a</string>
     <string name="hid_choice_summary">Prebacivanje između Legacy HID i Customisable HID</string>
     <string name="hid_title">HID jezik</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">obrisano</string>
     <string name="file_name">Ime datoteke</string>
     <string name="title_save_file">Spremanje datoteke</string>
+    <string name="hid_version">Verzija: %d</string>
     <string-array name="modes">
         <item>USB kabel</item>
         <item>Mrežna Utičnica</item>
@@ -136,5 +140,10 @@
         <item>Brazilski</item>
         <item>Bjeloruski</item>
         <item>Mađarski</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Dan</item>
+        <item>Laku noć</item>
     </string-array>
 </resources>

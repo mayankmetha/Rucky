@@ -18,7 +18,6 @@
     <string name="slideTitle6">Tətbiq icazələri</string>
     <string name="slideDesc6">Zəhmət olmasa işləməsi üçün tətbiqə tələb olunan icazəni verin!</string>
     <!-- Update screen -->
-    <string name="update_new">Yeniləmə var</string>
     <string name="update_hash_error">Fayl imza uyğunsuzluğu! Yenilənə bilmir.</string>
     <string name="update_activity">Rucky yeniləmələri</string>
     <string name="update_version">Versiya</string>

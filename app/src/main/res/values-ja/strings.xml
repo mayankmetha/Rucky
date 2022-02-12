@@ -18,7 +18,7 @@
     <string name="slideTitle6">アプリの権限</string>
     <string name="slideDesc6">動作するために必要な権限をアプリに付与してください！</string>
     <!-- Update screen -->
-    <string name="update_new">新しいアップデートが利用可能です</string>
+    <string name="update_new">新しいアップデート利用可能なバージョン: </string>
     <string name="update_hash_error">ファイル・シグニチャーの不一致! 更新不可。</string>
     <string name="update_activity">ラッキーなアップデート</string>
     <string name="update_version">バージョン</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">続行</string>
     <string name="root_err">USBケーブル攻撃にはRootアクセスが必要です</string>
     <string name="kernel_err">"カーネルがUSBケーブル攻撃をサポートしていません"</string>
+    <string name="vm">仮想環境はサポートされていません！</string>
     <!-- Config screen -->
     <string name="config_activity">微調整</string>
     <string name="config_status_usb_on">USB接続</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">高度なセキュリティ</string>
     <string name="settings_sec_desc">スクリプトファイルの暗号化と画面ロックを有効にします。</string>
     <string name="setting_device">攻撃モードの設定</string>
+    <string name="configfs_title">ConfigFS の自動設定</string>
+    <string name="configfs_summary">ConfigFS対応デバイスでHIDを設定します。USB設定が破損する可能性があります。</string>
     <string name="hid_choice_title">カスタマイズ可能な HID</string>
     <string name="hid_choice_summary">レガシー HID とカスタマイズ可能な HID の切り替え</string>
     <string name="hid_title">HID 言語</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">削除しました</string>
     <string name="file_name">ファイル名</string>
     <string name="title_save_file">ファイルの保存</string>
+    <string name="hid_version">バージョン: %d</string>
     <string-array name="modes">
         <item>USBケーブル</item>
         <item>ネットワークソケット</item>
@@ -136,5 +140,10 @@
         <item>ポルトガル語 (ブラジル)</item>
         <item>ベラルーシ語</item>
         <item>ハンガリー語</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>自動</item>
+        <item>日</item>
+        <item>夜</item>
     </string-array>
 </resources>

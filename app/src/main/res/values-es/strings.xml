@@ -18,7 +18,7 @@
     <string name="slideTitle6">Permiso de aplicación</string>
     <string name="slideDesc6">¡Por favor, concede a la aplicación el permiso necesario para trabajar!</string>
     <!-- Update screen -->
-    <string name="update_new">Nueva actualización disponible</string>
+    <string name="update_new">Nueva versión disponible: </string>
     <string name="update_hash_error">Discrepancia de firma de archivo No se puede actualizar.</string>
     <string name="update_activity">Actualización de suerte</string>
     <string name="update_version">Versión</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Continuar</string>
     <string name="root_err">¡Acceso root requerido para el ataque por cable USB!</string>
     <string name="kernel_err">"Kernel no soportado para el ataque por cable USB!"</string>
+    <string name="vm">¡El entorno virtual no es compatible!</string>
     <!-- Config screen -->
     <string name="config_activity">Ajustes</string>
     <string name="config_status_usb_on">USB conectado</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Seguridad Avanzada</string>
     <string name="settings_sec_desc">Habilitar cifrado de archivos de script y bloqueo de pantalla.</string>
     <string name="setting_device">Ajustes del modo Ataque</string>
+    <string name="configfs_title">Configuración automática</string>
+    <string name="configfs_summary">Configurará HID en dispositivos compatibles con ConfigFS. Puede romper la configuración USB.</string>
     <string name="hid_choice_title">HID personalizable</string>
     <string name="hid_choice_summary">Conmutador entre HID heredado y HID personalizable</string>
     <string name="hid_title">HID Idioma</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">borrado</string>
     <string name="file_name">Nombre del archivo</string>
     <string name="title_save_file">Guardar archivo</string>
+    <string name="hid_version">Versión: %d</string>
     <string-array name="modes">
         <item>Cable USB</item>
         <item>Conector de red</item>
@@ -136,5 +140,10 @@
         <item>Portugués Brasileño</item>
         <item>Bielorruso</item>
         <item>Húngaro</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Día</item>
+        <item>Noche</item>
     </string-array>
 </resources>

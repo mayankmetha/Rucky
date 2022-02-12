@@ -18,7 +18,7 @@
     <string name="slideTitle6">App tillatelse</string>
     <string name="slideDesc6">Vennligst gi appen nødvendig tillatelse til å virke!</string>
     <!-- Update screen -->
-    <string name="update_new">Ny oppdatering tilgjengelig</string>
+    <string name="update_new">Ny oppdatering tilgjengelig versjon: </string>
     <string name="update_hash_error">Feil filsignatur! Kan ikke oppdatere.</string>
     <string name="update_activity">Skill og oppdater</string>
     <string name="update_version">Versjon</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Fortsett</string>
     <string name="root_err">Rottilgang kreves for USB-kabelangrep!</string>
     <string name="kernel_err">"Kjernen er ikke støttet for USB-kabelangrep!"</string>
+    <string name="vm">Virtuelt miljø støttes ikke!</string>
     <!-- Config screen -->
     <string name="config_activity">Tilpasninger</string>
     <string name="config_status_usb_on">USB tilkoblet</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Sikkerhet avanser</string>
     <string name="settings_sec_desc">Aktiver kryptering av skriptfiler og skjermlås.</string>
     <string name="setting_device">Innstillinger for angrepsmodus</string>
+    <string name="configfs_title">Automatisk konfigurering av konfigurasjon</string>
+    <string name="configfs_summary">Vil konfigurere helse på ConfigFS støttede enheter. Kan knuse USB-innstillingen.</string>
     <string name="hid_choice_title">Tilpassbar HID</string>
     <string name="hid_choice_summary">Bytt mellom tidligere HID og Tilpassbar HID</string>
     <string name="hid_title">HID språk</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">slettet</string>
     <string name="file_name">Fil Navn</string>
     <string name="title_save_file">Lagre fil</string>
+    <string name="hid_version">Versjon: %d</string>
     <string-array name="modes">
         <item>USB Kabel</item>
         <item>Nettverks Socket</item>
@@ -136,5 +140,10 @@
         <item>Brasiliansk portugisisk</item>
         <item>Hviterussisk</item>
         <item>Ungarsk</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automatisk</item>
+        <item>Dag</item>
+        <item>Natt</item>
     </string-array>
 </resources>

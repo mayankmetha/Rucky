@@ -18,7 +18,7 @@
     <string name="slideTitle6">Oprávnění aplikace</string>
     <string name="slideDesc6">Udělte aplikaci požadované oprávnění pro správné fungování!</string>
     <!-- Update screen -->
-    <string name="update_new">Nová aktualizace k dispozici</string>
+    <string name="update_new">Nová dostupná aktualizace verze: </string>
     <string name="update_hash_error">Neshoda podpisu souboru! Nelze aktualizovat.</string>
     <string name="update_activity">Aktualizace Rucky</string>
     <string name="update_version">Verze</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Pokračovat</string>
     <string name="root_err">Pro útok přes USB kabel je vyžadován přístup root!</string>
     <string name="kernel_err">"Kernel nepodporuje útok přes USB kabel!"</string>
+    <string name="vm">Virtuální prostředí není podporováno!</string>
     <!-- Config screen -->
     <string name="config_activity">Vylepšení</string>
     <string name="config_status_usb_on">USB připojeno</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Pokročilé zabezpečení</string>
     <string name="settings_sec_desc">Povolit šifrování souborů skriptu a zámek obrazovky.</string>
     <string name="setting_device">Nastavení režimu útoku</string>
+    <string name="configfs_title">Automatická konfigurace FS</string>
+    <string name="configfs_summary">Konfiguruje HID na zařízeních podporovaných v KonfigFS. Může poškodit nastavení USB.</string>
     <string name="hid_choice_title">Přizpůsobitelné HID</string>
     <string name="hid_choice_summary">Přepnutí mezi starším HID a přizpůsobitelným ID HID</string>
     <string name="hid_title">Jazyk HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">smazáno</string>
     <string name="file_name">Název souboru</string>
     <string name="title_save_file">Uložit soubor</string>
+    <string name="hid_version">Verze: %d</string>
     <string-array name="modes">
         <item>Kabel USB</item>
         <item>Síťový soket</item>
@@ -136,5 +140,10 @@
         <item>Brazilská portugalština</item>
         <item>Běloruština</item>
         <item>Maďarština</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automaticky</item>
+        <item>Den</item>
+        <item>Noc</item>
     </string-array>
 </resources>

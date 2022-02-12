@@ -18,7 +18,7 @@
     <string name="slideTitle6">Uprawnienia aplikacji</string>
     <string name="slideDesc6">Proszę przyznać aplikacji wymagane uprawnienia do pracy!</string>
     <!-- Update screen -->
-    <string name="update_new">Dostępna jest nowa aktualizacja</string>
+    <string name="update_new">Nowa dostępna wersja aktualizacji: </string>
     <string name="update_hash_error">Niezgodność Sygnatury Pliku! Nie Można Zaktualizować.</string>
     <string name="update_activity">Aktualizacja Rucky</string>
     <string name="update_version">Wersja</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Kontynuuj</string>
     <string name="root_err">Wymagany dostęp do roota do ataku kabla USB!</string>
     <string name="kernel_err">"Kernel nie jest obsługiwany do ataku kabla USB!"</string>
+    <string name="vm">Środowisko wirtualne nie jest obsługiwane!</string>
     <!-- Config screen -->
     <string name="config_activity">Ulepszenia</string>
     <string name="config_status_usb_on">Podłączono USB</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Zabezpieczenie zaliczkowe</string>
     <string name="settings_sec_desc">Włącz szyfrowanie plików skryptu i blokadę ekranu.</string>
     <string name="setting_device">Ustawienia trybu ataku</string>
+    <string name="configfs_title">Automatyczna konfiguracja konfiguracji</string>
+    <string name="configfs_summary">Skonfiguruje HID na obsługiwanych urządzeniach konfiguracyjnych. Może uszkodzić ustawienie USB.</string>
     <string name="hid_choice_title">Identyfikator HID użytkownika</string>
     <string name="hid_choice_summary">Przełączanie między wcześniejszym identyfikatorem HID i niestandardowym identyfikatorem HID</string>
     <string name="hid_title">Język HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">usunięto</string>
     <string name="file_name">Nazwa pliku</string>
     <string name="title_save_file">Zapisz plik</string>
+    <string name="hid_version">Wersja: %d</string>
     <string-array name="modes">
         <item>Kabel USB</item>
         <item>Skieszonka sieci</item>
@@ -136,5 +140,10 @@
         <item>Portugalski brazylijski</item>
         <item>białoruski</item>
         <item>węgierski</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Dzień</item>
+        <item>Noc</item>
     </string-array>
 </resources>

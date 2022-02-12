@@ -18,7 +18,7 @@
     <string name="slideTitle6">Autorisation de l\'application</string>
     <string name="slideDesc6">Veuillez accorder à l\'application l\'autorisation requise pour fonctionner!</string>
     <!-- Update screen -->
-    <string name="update_new">Nouvelle mise à jour disponible</string>
+    <string name="update_new">Nouvelle version disponible de mise à jour : </string>
     <string name="update_hash_error">Non-concordance de signature du fichier ! Mise à jour impossible.</string>
     <string name="update_activity">Mise à jour de Rucky</string>
     <string name="update_version">Version </string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Continuer</string>
     <string name="root_err">Accès Root requis pour une attaque par câble USB !</string>
     <string name="kernel_err">"L'attaque par câble USB ne prend pas ce kernel en charge !"</string>
+    <string name="vm">L\'environnement virtuel n\'est pas pris en charge !</string>
     <!-- Config screen -->
     <string name="config_activity">Réglages</string>
     <string name="config_status_usb_on">USB connecté</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Sécurité Avancée</string>
     <string name="settings_sec_desc">Activer le chiffrement des fichiers de script et le verrouillage de l\'écran.</string>
     <string name="setting_device">Réglages du Mode Attaque</string>
+    <string name="configfs_title">Configurer automatiquement les configurations</string>
+    <string name="configfs_summary">Configurer HID sur les périphériques pris en charge par ConfigFS. Peut briser les paramètres USB.</string>
     <string name="hid_choice_title">ID HID personnalisable</string>
     <string name="hid_choice_summary">Basculer entre HID ancien et HID personnalisable</string>
     <string name="hid_title">Langue HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">supprimé</string>
     <string name="file_name">Nom du fichier</string>
     <string name="title_save_file">Sauvegarder le fichier</string>
+    <string name="hid_version">Version : %d</string>
     <string-array name="modes">
         <item>Câble USB</item>
         <item>Connecteur Réseau</item>
@@ -136,5 +140,10 @@
         <item>Portugais brésilien</item>
         <item>Biélorusse</item>
         <item>Hongrois</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automatique</item>
+        <item>Jour</item>
+        <item>Nuit</item>
     </string-array>
 </resources>

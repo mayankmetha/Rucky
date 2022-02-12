@@ -18,7 +18,7 @@
     <string name="slideTitle6">Izin Aplikasi</string>
     <string name="slideDesc6">Mohon berikan aplikasi yang diperlukan untuk bekerja!</string>
     <!-- Update screen -->
-    <string name="update_new">Pembaruan baru tersedia</string>
+    <string name="update_new">Pembaruan Baru Versi Tersedia: </string>
     <string name="update_hash_error">Tanda Tangan Berkas Tidak Cocok! Tidak dapat memperbarui.</string>
     <string name="update_activity">Pemutakhiran Rucky</string>
     <string name="update_version">Versi</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Lanjut</string>
     <string name="root_err">Akses Root Diperlukan Untuk Serangan Kabel USB!</string>
     <string name="kernel_err">"Kernel Tidak Didukung Untuk Serangan Kabel USB!"</string>
+    <string name="vm">Lingkungan virtual tidak didukung!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Tersambung</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Keamanan Muka</string>
     <string name="settings_sec_desc">Aktifkan enkripsi berkas skrip dan kunci layar.</string>
     <string name="setting_device">Pengaturan Mode Serangan</string>
+    <string name="configfs_title">Konfigurasi Otomatis ConfigFS</string>
+    <string name="configfs_summary">Akan mengkonfigurasi HID pada perangkat yang didukung ConfigFS. Mungkin mematahkan pengaturan USB.</string>
     <string name="hid_choice_title">HID Kustomisabel</string>
     <string name="hid_choice_summary">Berpindah antara HID Warisan dan HID yang Disesuaikan</string>
     <string name="hid_title">Bahasa HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">terhapus</string>
     <string name="file_name">Nama File</string>
     <string name="title_save_file">Simpan Berkas</string>
+    <string name="hid_version">Versi: %d</string>
     <string-array name="modes">
         <item>Kabel USB</item>
         <item>Soket Jaringan</item>
@@ -136,5 +140,10 @@
         <item>Bahasa Portugis Brazil</item>
         <item>Belarusia</item>
         <item>Hungaria</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Otomatis</item>
+        <item>Hari</item>
+        <item>Malam</item>
     </string-array>
 </resources>

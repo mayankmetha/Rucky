@@ -2,25 +2,25 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
-    <string name="init_next">СЛЕДУЮЩИЙ</string>
-    <string name="init_skip">ПРОПУСК</string>
-    <string name="init_agree">СОГЛАСИТЬ</string>
+    <string name="init_next">ДАЛЕЕ</string>
+    <string name="init_skip">ПРОПУСТИТЬ</string>
+    <string name="init_agree">СОГЛАСЕН</string>
     <string name="init_start">ПОДСКАЗАТЬ</string>
-    <string name="slideDesc1">Поверни свое устройство резиновой Дуки!</string>
+    <string name="slideDesc1">Превратите Ваше устройство в Rubber Ducky!</string>
     <string name="slideTitle2">Кабель USB</string>
     <string name="slideDesc2">Проводной интерфейс USB для запуска атаки!</string>
-    <string name="slideTitle3">Сетевое сокет</string>
+    <string name="slideTitle3">Сетевой сокет</string>
     <string name="slideDesc3">Интерфейсы сокета Wi-Fi для запуска атак с помощью поддерживаемых внешних инструментов!</string>
-    <string name="slideTitle4">Оговорка</string>
-    <string name="slideDesc4">Пользователь приложения несет ответственность за причиненный ущерб. Никакие другие субъекты не могут нести ответственность за ущерб, причиненный с помощью этого приложения! Примите меры предосторожности при использовании приложения и не используйте это для причинения вреда другим!</string>
+    <string name="slideTitle4">Отказ от ответственности</string>
+    <string name="slideDesc4">Пользователь приложения несет единоличную ответственность за причиненный ущерб. Никакие другие субъекты не могут нести ответственность за ущерб, причиненный с помощью этого приложения! Примите меры предосторожности при использовании приложения и не используйте его для причинения вреда другим!</string>
     <string name="slideTitle5">Политика конфиденциальности</string>
-    <string name="slideDesc5">Данные любой формы не собираются, используются и продаются! Некоторые разрешения, которые могут вызвать проблемы конфиденциальности, запрашиваются только для работы определенных функций в приложении и не собирают данные! Ваша конфиденциальность уважается!</string>
+    <string name="slideDesc5">Данные никоим образом не собираются, не используются и не продаются! Некоторые разрешения, которые могут вызвать проблемы конфиденциальности, запрашиваются только для работы определенных функций в приложении и не собирают данные! Ваша конфиденциальность уважается!</string>
     <string name="slideTitle6">Разрешение приложения</string>
     <string name="slideDesc6">Пожалуйста, предоставьте приложению необходимое разрешение для работы!</string>
     <!-- Update screen -->
-    <string name="update_new">Доступно новое обновление</string>
+    <string name="update_new">Доступная версия обновления: </string>
     <string name="update_hash_error">Несоответствие сигнатуры файла! Невозможно обновить.</string>
-    <string name="update_activity">Хакерское обновление</string>
+    <string name="update_activity">Обновление Rucky</string>
     <string name="update_version">Версия</string>
     <string name="update_version_nightly">Ночная версия</string>
     <string name="update_changelog">Список изменений</string>
@@ -29,28 +29,29 @@
     <string name="update_downloading">Загрузка обновления</string>
     <string name="install_update">Применение обновления</string>
     <!-- Editor screen -->
-    <string name="exit_dialog">Скрыть или закрыть приложение?</string>
+    <string name="exit_dialog">Вы хотите скрыть или выйти из приложения?</string>
     <string name="btn_exit">Выход</string>
     <string name="btn_back">Скрыть</string>
     <string name="unlock">Разблокировать приложение</string>
     <string name="auth">Подтвердить аутентификацию</string>
     <string name="update">Обновить</string>
     <string name="setting">Настройки</string>
-    <string name="codeHint">Введите или загрузите здесь сценарии резиновых уток</string>
+    <string name="codeHint">Введите или загрузите здесь сценарии rubber ducky</string>
     <string name="loadBtn">Загрузить</string>
     <string name="saveBtn">Сохранить</string>
     <string name="delBtn">Удалить</string>
     <string name="runBtn">Выполнить</string>
     <string name="confBtn">Настройка</string>
     <string name="btn_continue">Продолжить</string>
-    <string name="root_err">Требуется Root доступ для атаки USB-кабелей!</string>
-    <string name="kernel_err">"Ядро не поддерживается для атаки USB-кабеля!"</string>
+    <string name="root_err">Требуется рут-доступ для атаки через USB-кабель!</string>
+    <string name="kernel_err">"Ядро не поддерживается для атаки через USB-кабель!"</string>
+    <string name="vm">Виртуальная среда не поддерживается!</string>
     <!-- Config screen -->
-    <string name="config_activity">Настройки</string>
+    <string name="config_activity">Твики</string>
     <string name="config_status_usb_on">USB подключен</string>
     <string name="config_status_usb_off">USB отключен</string>
-    <string name="config_status_net_on">Сетевое сокет подключено</string>
-    <string name="config_status_net_off">Сетевое сокет отключено</string>
+    <string name="config_status_net_on">Сетевой сокет подключен</string>
+    <string name="config_status_net_off">Сетевой сокет отключен</string>
     <string name="socket_address">Введите IP-адрес сокета и порт</string>
     <!-- HID config screen -->
     <string name="hid_activity">Конфигурация HID</string>
@@ -63,24 +64,26 @@
     <string name="key_character">Символ ключа</string>
     <string name="key_code">Код ключа</string>
     <string name="key_ctrl">Клавиша Ctrl</string>
-    <string name="key_alt">Ключ Alt</string>
-    <string name="key_shift">Клавиша смены</string>
+    <string name="key_alt">Клавиша Alt</string>
+    <string name="key_shift">Клавиша Shift</string>
     <string name="key_meta">Мета-ключ</string>
     <string name="keycode">Код ключа</string>
-    <string name="modcode">Код автора изменений</string>
+    <string name="modcode">Код изменений</string>
     <string name="key_details">Сведения о ключе</string>
     <!-- Setting screen -->
     <string name="setting_general">Общие сведения</string>
     <string name="dark_theme_title">Ночной режим</string>
     <string name="dark_theme_summary">Установить темную тему</string>
-    <string name="hide_icon_title">Скрыть/отключить значок лаунчера</string>
-    <string name="hide_icon_summary">Наберите *#*#78259#*#* для запуска. После Android 10 значок будет отключен, но не скрыт.</string>
+    <string name="hide_icon_title">Скрыть/отключить значок</string>
+    <string name="hide_icon_summary">Наберите *#*#78259#*#* для запуска. Начиная с Android 10, значок будет отключен, но не скрыт.</string>
     <string name="delete_dep_title">Удалить приложение</string>
     <string name="delete_dep_summary">Очистить и деинсталлировать приложение.</string>
-    <string name="settings_sec_title">Предварительная защита</string>
+    <string name="settings_sec_title">Расширенная безопасность</string>
     <string name="settings_sec_desc">Включить шифрование файла сценария и блокировку экрана.</string>
     <string name="setting_device">Настройки режима атаки</string>
-    <string name="hid_choice_title">ИД настраиваемых HID</string>
+    <string name="configfs_title">Автоматическая настройка ConfigFS</string>
+    <string name="configfs_summary">Настройка HID на устройствах с поддержкой ConfigFS. Возможен сбой параметров USB.</string>
+    <string name="hid_choice_title">Настраиваемая HID</string>
     <string name="hid_choice_summary">Переключение между Legacy HID и Customisable HID</string>
     <string name="hid_title">Язык HID</string>
     <string name="hid_summary">Загрузить дополнительные языки HID или разработать новые макеты HID.</string>
@@ -94,14 +97,14 @@
     <string name="settings_arch_title">Архитектура</string>
     <string name="settings_lic_title">Лицензия</string>
     <string name="settings_support">Поддержка</string>
-    <string name="settings_git_title">Проблемы GitHub</string>
+    <string name="settings_git_title">Проблемы на GitHub</string>
     <string name="settings_git_desc">Щелкните здесь, чтобы добавить неполадки или запрос на функцию.</string>
     <string name="settings_locale_title">Локализация</string>
     <string name="settings_locale_desc">Внести вклад в локализацию приложений.</string>
-    <string name="release">Распределение</string>
+    <string name="release">Распространение</string>
     <string name="releaseNetHunter">Магазин приложений NetHunter</string>
-    <string name="releaseGitHub">Выпуск GitHub</string>
-    <string name="releaseGitHubNightly">HitHub Nightly</string>
+    <string name="releaseGitHub">Версия GitHub</string>
+    <string name="releaseGitHubNightly">Ночная версия GitHub</string>
     <string name="releaseTest">Отладочный выпуск</string>
     <string name="releaseOthers">Неподдерживаемый выпуск</string>
     <string name="btn_cancel">Отменить</string>
@@ -112,21 +115,22 @@
     <string name="file_deleted">удалено</string>
     <string name="file_name">Имя файла</string>
     <string name="title_save_file">Сохранить файл</string>
+    <string name="hid_version">Версия: %d</string>
     <string-array name="modes">
         <item>Кабель USB</item>
-        <item>Сетевое сокет</item>
+        <item>Сетевой сокет</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Американский английский</item>
         <item>Турецкий</item>
         <item>Шведский</item>
-        <item>Slovenian</item>
+        <item>Словенский</item>
         <item>Русский</item>
         <item>Португальский</item>
         <item>Норвежский</item>
         <item>Итальянский</item>
         <item>Хорватский</item>
-        <item>United Kingdom English</item>
+        <item>Британский английский</item>
         <item>Французский</item>
         <item>Финский</item>
         <item>Испанский</item>
@@ -136,5 +140,10 @@
         <item>Бразильский португальский</item>
         <item>Белорусский</item>
         <item>Венгерский</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Автоматически</item>
+        <item>День</item>
+        <item>Ночь</item>
     </string-array>
 </resources>

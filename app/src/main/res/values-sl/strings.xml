@@ -18,7 +18,7 @@
     <string name="slideTitle6">Dovoljenje Aplikacije</string>
     <string name="slideDesc6">Aplikaciji dodelite zahtevano dovoljenje za delo!</string>
     <!-- Update screen -->
-    <string name="update_new">Na voljo je nova posodobitev</string>
+    <string name="update_new">Nova različica posodobitve na voljo: </string>
     <string name="update_hash_error">Neujemanje podpisov datoteke! Posodobitve ni mogoče posodobiti.</string>
     <string name="update_activity">Rucky posodobitev</string>
     <string name="update_version">Različica</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Nadaljuj</string>
     <string name="root_err">Za Kabel USB Je Potreben Korenski Dostop!</string>
     <string name="kernel_err">"Jedro Ni Podprto Za Kabel USB."</string>
+    <string name="vm">Navidezno okolje ni podprto!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Povezan</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Vnaprejšnje zavarovanje</string>
     <string name="settings_sec_desc">Omogoči šifriranje datoteke skripta in zaklepanje zaslona.</string>
     <string name="setting_device">Nastavitve načina napada</string>
+    <string name="configfs_title">Samodejna konfiguracija ConfigFS</string>
+    <string name="configfs_summary">Konfiguriranje HID-ja na podprtih napravah ConfigFS. Lahko prelomi USB nastavitev.</string>
     <string name="hid_choice_title">HID, ki ga je mogoče prilagoditi</string>
     <string name="hid_choice_summary">Preklopi med Legacy HID in prilagodljivo HID</string>
     <string name="hid_title">Jezik HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">izbrisi</string>
     <string name="file_name">Ime datoteke</string>
     <string name="title_save_file">Shrani datoteko</string>
+    <string name="hid_version">Različica: %d</string>
     <string-array name="modes">
         <item>USB Kabel</item>
         <item>Omrežna Vtičnica</item>
@@ -136,5 +140,10 @@
         <item>Brazilska portugal</item>
         <item>Beloruščina</item>
         <item>Madžarščina</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Samodejno</item>
+        <item>Dan</item>
+        <item>Noč.</item>
     </string-array>
 </resources>

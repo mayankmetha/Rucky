@@ -5,7 +5,6 @@
     <string name="init_next">بعدی</string>
     <string name="init_skip">رد کردن</string>
     <!-- Update screen -->
-    <string name="update_new">بروزرسانی جدید موجود است</string>
     <!-- Editor screen -->
     <string name="unlock">نرم‌افزارهای قفل شده</string>
     <string name="codeHint">Type or load rubber ducky scripts here</string>

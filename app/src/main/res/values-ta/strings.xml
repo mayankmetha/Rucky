@@ -18,7 +18,7 @@
     <string name="slideTitle6">ஆப்ப அனுமதி</string>
     <string name="slideDesc6">தயவு செய்து பணிக்கு தேவையான அனுமதி தயவு செய்து!</string>
     <!-- Update screen -->
-    <string name="update_new">புதிய புதுப்பித்தல்</string>
+    <string name="update_new">புதிய புதுப்பி இருக்கும் பதிப்பு: </string>
     <string name="update_hash_error">கோப்பு கையெழுத்து பொருத்தம்! புதுப்பிக்க முடியவில்லை.</string>
     <string name="update_activity">\@ info: status</string>
     <string name="update_version">பதிப்பு</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">தொடர்ந்து</string>
     <string name="root_err">Root Access Required For USB Cable Attack!</string>
     <string name="kernel_err">"கெர்னல் ஆதரிக்கப்படாத USB Cable Attack!"</string>
+    <string name="vm">மெய்நிகர் சூழல் ஆதரிக்கப்படவில்லை!</string>
     <!-- Config screen -->
     <string name="config_activity">தவறுகள்</string>
     <string name="config_status_usb_on">USB இணைப்பு</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">பாதுகாப்பு</string>
     <string name="settings_sec_desc">ஸ்கிரிப்ட் கோப்பு மறையாக்கம் மற்றும் திரை பூட்டை செயல்படுத்து.</string>
     <string name="setting_device">அட்டை முறை அமைப்புகள்</string>
+    <string name="configfs_title">தானாகவே வடிவமைப்பு FS</string>
+    <string name="configfs_summary">ConfigFS ஆதரவு கருவிகளில் HID வடிவமைக்கவும். மே யுஎஸ்பி அமைக்கிறது.</string>
     <string name="hid_choice_title">தனிப்பயன் HID</string>
     <string name="hid_choice_summary">லெகசி HID மற்றும் தனிப்பயன் HID இடையே மாற்று</string>
     <string name="hid_title">HID மொழி</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">நீக்கப்பட்டது</string>
     <string name="file_name">கோப்பு பெயர்</string>
     <string name="title_save_file">கோப்பினை சேமி</string>
+    <string name="hid_version">பதிப்பு: %d</string>
     <string-array name="modes">
         <item>USB Cable</item>
         <item>பிணைய சாக்கெட்</item>
@@ -136,5 +140,10 @@
         <item>பிரேசிலிName</item>
         <item>பெலாரூசியன்Name</item>
         <item>ஹங்கேரியன்Name</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>தானாகவே</item>
+        <item>நாள்</item>
+        <item>இரவு</item>
     </string-array>
 </resources>

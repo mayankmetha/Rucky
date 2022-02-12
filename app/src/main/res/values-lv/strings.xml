@@ -18,7 +18,7 @@
     <string name="slideTitle6">Lietotnes atļauja</string>
     <string name="slideDesc6">Lūdzu, dotiet lietotni, nepieciešama atļauja strādāt!</string>
     <!-- Update screen -->
-    <string name="update_new">Jauns atjauninājums pieejams</string>
+    <string name="update_new">Jauna Atjaunināt pieejamo versiju: </string>
     <string name="update_hash_error">Faila paraksts Mismaču! Nevar Atjaunināt.</string>
     <string name="update_activity">Rucky Update</string>
     <string name="update_version">Versija</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Turpināt</string>
     <string name="root_err">USB Kabeļa Tack Root Nepieciešama!</string>
     <string name="kernel_err">"Kodola Nav Atbalstīta USB Kabeļa Tack!"</string>
+    <string name="vm">Virtuālā vide netiek atbalstīta!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB savienots</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Apsardze</string>
     <string name="settings_sec_desc">Ieslēgt skriptu failu šifrēšanu un ekrāna bloķēšanu.</string>
     <string name="setting_device">Uzbrukuma režīma iestatījumi</string>
+    <string name="configfs_title">Automātiski konfigurēt ConfigFS</string>
+    <string name="configfs_summary">Konfigurēs HID uz ConfigFS atbalstītajām ierīcēm. Var salauzt USB iestatījumu.</string>
     <string name="hid_choice_title">Pielāgojams HID</string>
     <string name="hid_choice_summary">Pārslēgties starp Legacy HID un Customizable HID</string>
     <string name="hid_title">HID valoda</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">svītrota</string>
     <string name="file_name">Faila nosaukums</string>
     <string name="title_save_file">Saglabāt failu</string>
+    <string name="hid_version">Versija: %d</string>
     <string-array name="modes">
         <item>USB kabelis</item>
         <item>Tīkla ligzda</item>
@@ -136,5 +140,10 @@
         <item>Brazīlijas portugāļu</item>
         <item>Baltkrievu</item>
         <item>Ungārijas</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Diena</item>
+        <item>Nakts</item>
     </string-array>
 </resources>

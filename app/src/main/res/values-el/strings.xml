@@ -18,7 +18,7 @@
     <string name="slideTitle6">Άδεια Εφαρμογής</string>
     <string name="slideDesc6">Παρακαλούμε εκχωρήστε στην εφαρμογή την απαιτούμενη άδεια για να λειτουργήσει!</string>
     <!-- Update screen -->
-    <string name="update_new">Διαθέσιμη νέα ενημέρωση</string>
+    <string name="update_new">Διαθέσιμη Έκδοση Νέας Ενημέρωσης: </string>
     <string name="update_hash_error">Ασυμφωνία Υπογραφή Αρχείου! Αδύνατη Ενημέρωση.</string>
     <string name="update_activity">Αναβάθμιση Rucky</string>
     <string name="update_version">Έκδοση</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Συνέχεια</string>
     <string name="root_err">Root Πρόσβαση Απαιτείται Για Επίθεση Καλώδιο Usb!</string>
     <string name="kernel_err">"Πυρήνας Δεν Υποστηρίζεται Για Επίθεση Καλώδιο Usb!"</string>
+    <string name="vm">Το εικονικό περιβάλλον δεν υποστηρίζεται!</string>
     <!-- Config screen -->
     <string name="config_activity">Βελτιώσεις</string>
     <string name="config_status_usb_on">USB Συνδεδεμένο</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Προκαταβολική Ασφάλεια</string>
     <string name="settings_sec_desc">Ενεργοποίηση κρυπτογράφησης αρχείων σεναρίου και κλειδώματος οθόνης.</string>
     <string name="setting_device">Ρυθμίσεις Λειτουργίας Επίθεσης</string>
+    <string name="configfs_title">Αυτόματη Ρύθμιση Παραμέτρων</string>
+    <string name="configfs_summary">Θα ρυθμίσετε το HID στις υποστηριζόμενες συσκευές ConfigFS. Μπορεί να σπάσει τη ρύθμιση USB.</string>
     <string name="hid_choice_title">Προσαρμόσιμο HID</string>
     <string name="hid_choice_summary">Εναλλαγή μεταξύ Legacy HID και προσαρμόσιμη HID</string>
     <string name="hid_title">Γλώσσα HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">διαγράφηκε</string>
     <string name="file_name">Όνομα Αρχείου</string>
     <string name="title_save_file">Αποθήκευση αρχείου</string>
+    <string name="hid_version">Έκδοση: %d</string>
     <string-array name="modes">
         <item>Καλώδιο USB</item>
         <item>Υποδοχή Δικτύου</item>
@@ -136,5 +140,10 @@
         <item>Πορτογαλικά Βραζιλίας</item>
         <item>Λευκορωσικά</item>
         <item>Ουγγρικά</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Αυτόματο</item>
+        <item>Ημέρα</item>
+        <item>Νύχτα</item>
     </string-array>
 </resources>

@@ -18,7 +18,7 @@
     <string name="slideTitle6">Позволение на приложение</string>
     <string name="slideDesc6">Моля, предоставете на приложението необходимото разрешение за работа!</string>
     <!-- Update screen -->
-    <string name="update_new">Налично ново обновление</string>
+    <string name="update_new">Нова версия на Достъпна версия: </string>
     <string name="update_hash_error">Несъответствие на файла! Невъзможно обновяване.</string>
     <string name="update_activity">Обновяване на Rucky</string>
     <string name="update_version">Версии</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Продължаване</string>
     <string name="root_err">Root достъп, необходим за USB кабел атака!</string>
     <string name="kernel_err">"Ядрото не се поддържа за атака на USB кабела!"</string>
+    <string name="vm">Виртуална среда не се поддържа!</string>
     <!-- Config screen -->
     <string name="config_activity">Нагласяния</string>
     <string name="config_status_usb_on">Свързано USB</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Расширенная безопасность</string>
     <string name="settings_sec_desc">Включить шифрование файлов скрипта и блокировку экрана.</string>
     <string name="setting_device">Настройки на режим на атака</string>
+    <string name="configfs_title">Автоматично конфигуриране на configFS</string>
+    <string name="configfs_summary">Ще конфигурира HID на устройства, поддържани от ConfigFS. Може да счупи USB настройката.</string>
     <string name="hid_choice_title">Персонализируем HID</string>
     <string name="hid_choice_summary">Превключване между Legacy HID и Customisable HID</string>
     <string name="hid_title">HID език</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">се заличава.</string>
     <string name="file_name">Име на файл</string>
     <string name="title_save_file">Запис на файл</string>
+    <string name="hid_version">Версия: %d</string>
     <string-array name="modes">
         <item>USB кабел</item>
         <item>Мрежов контакт</item>
@@ -136,5 +140,10 @@
         <item>Бразилски португалски</item>
         <item>Беларус:</item>
         <item>Унгарски:</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Автоматично.</item>
+        <item>Ден:</item>
+        <item>Нощ.</item>
     </string-array>
 </resources>

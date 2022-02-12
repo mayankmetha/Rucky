@@ -18,7 +18,7 @@
     <string name="slideTitle6">Keizinan App</string>
     <string name="slideDesc6">Sila berikan aplikasi kebenaran yang diperlukan untuk bekerja!</string>
     <!-- Update screen -->
-    <string name="update_new">Kemaskini baru tersedia</string>
+    <string name="update_new">Versi Tersedia Kemaskini Baru: </string>
     <string name="update_hash_error">Tandatangan Fail Tidak sepadan! Tidak Dapat Kemaskini.</string>
     <string name="update_activity">Kemaskini Rucky</string>
     <string name="update_version">Versi</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Teruskan</string>
     <string name="root_err">Akses Root Diperlukan Untuk Serangan Kabel USB!</string>
     <string name="kernel_err">"Kernel Tidak Disokong Untuk Serangan Kabel USB!"</string>
+    <string name="vm">Persekitaran maya tidak disokong!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweet</string>
     <string name="config_status_usb_on">Bersambung USB</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Keselamatan Maju</string>
     <string name="settings_sec_desc">Benarkan penyulitan fail skrip dan kunci skrin.</string>
     <string name="setting_device">Tetapan Mod Serangan</string>
+    <string name="configfs_title">Konfigur Auto ConfigFS</string>
+    <string name="configfs_summary">Akan konfigur HID pada peranti disokong ConfigFS. Boleh memecahkan tetapan USB.</string>
     <string name="hid_choice_title">HID boleh suai</string>
     <string name="hid_choice_summary">Tukar diantara HID Legacy dan HeID Kasmisable</string>
     <string name="hid_title">Bahasa HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">dipadam</string>
     <string name="file_name">Nama Fail</string>
     <string name="title_save_file">Simpan Fail</string>
+    <string name="hid_version">Versi: %d</string>
     <string-array name="modes">
         <item>Kabel USB</item>
         <item>Soket Rangkaian</item>
@@ -136,5 +140,10 @@
         <item>Portugis Brazil</item>
         <item>BelarusiName</item>
         <item>Hungary</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Hari</item>
+        <item>Malam</item>
     </string-array>
 </resources>

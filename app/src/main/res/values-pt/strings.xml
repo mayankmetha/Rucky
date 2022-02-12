@@ -18,7 +18,7 @@
     <string name="slideTitle6">Permissão do aplicativo</string>
     <string name="slideDesc6">Por favor, conceda ao aplicativo a permissão necessária para trabalhar!</string>
     <!-- Update screen -->
-    <string name="update_new">Nova atualização disponível</string>
+    <string name="update_new">Nova Atualização Disponível: </string>
     <string name="update_hash_error">Incompatibilidade De Assinatura De Arquivo! Não pode Atualizar.</string>
     <string name="update_activity">Atualização Rucky</string>
     <string name="update_version">Versão</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Continuar</string>
     <string name="root_err">Acesso Root Necessário Para Ataque a Cabo USB!</string>
     <string name="kernel_err">"Kernel Não Suportado Para Ataque a Cabo USB!"</string>
+    <string name="vm">Ambiente virtual não suportado!</string>
     <!-- Config screen -->
     <string name="config_activity">Modificações</string>
     <string name="config_status_usb_on">USB conectado</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Segurança Avançada</string>
     <string name="settings_sec_desc">Ativar criptografia de arquivo de script e bloqueio de tela.</string>
     <string name="setting_device">Configurações do Modo Ataque</string>
+    <string name="configfs_title">Configurar automaticamente</string>
+    <string name="configfs_summary">Configurará o HID no dispositivo com suporte a ConfigFS. Pode quebrar a configuração USB.</string>
     <string name="hid_choice_title">HID customizável</string>
     <string name="hid_choice_summary">Switch entre Legacy HID e HID Customisable</string>
     <string name="hid_title">Idioma HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">excluído</string>
     <string name="file_name">Nome do Arquivo</string>
     <string name="title_save_file">Salvar Arquivo</string>
+    <string name="hid_version">Versão: %d</string>
     <string-array name="modes">
         <item>Cabo USB</item>
         <item>Socket de Rede</item>
@@ -136,5 +140,10 @@
         <item>Português Brasileiro</item>
         <item>Bielo-russo</item>
         <item>Húngaro</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automático</item>
+        <item>dia</item>
+        <item>Noite</item>
     </string-array>
 </resources>

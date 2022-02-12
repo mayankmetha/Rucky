@@ -8,21 +8,23 @@
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Verwandle dein Gerät zu einem Rubber Ducky!</string>
     <string name="slideTitle2">USB Kabel</string>
-    <string name="slideDesc2">USB-Schnittstelle zum Starten des Angriffs!</string>
-    <string name="slideTitle3">Network Socket</string>
-    <string name="slideDesc3">Wi-Fi-basierte Socket-Schnittstellen zum Starten von Angriff über unterstützte externe Tools!</string>
+    <string name="slideDesc2">USB-Schnittstelle zum Starten des Angriff!</string>
+    <string name="slideTitle3">Netzwerk Socket</string>
+    <string name="slideDesc3">Wifi basierende Socket-Schnittstellen zum Starten des Angriff über unterstützte externe Tools!</string>
     <string name="slideTitle4">Haftungsausschluss</string>
-    <string name="slideDesc4">Der Nutzer der App ist allein für die entstandenen Schäden verantwortlich. Keine andere Person kann für die mit dieser App verursachten Schäden haftbar gemacht werden! Gehen Sie vorsichtig vor, wenn Sie die App verwenden und nutzen Sie dies nicht, um anderen Schaden zuzufügen!</string>
+    <string name="slideDesc4">Der Nutzer der App ist allein für die entstandenen Schäden verantwortlich. Keine andere Person kann für die mit dieser App verursachten Schäden haftbar gemacht werden! Gehen Sie vorsichtig mit der Anwendung um, wenn Sie diese verwenden und nutzen sie bitte nicht, um anderen Schaden zuzufügen!</string>
     <string name="slideTitle5">Datenschutzerklärung</string>
-    <string name="slideDesc5">Es werden keine Daten von irgendeiner Form erhoben, verwendet und verkauft! Einige Berechtigungen, die Bedenken bezüglich des Datenschutzes wecken könnten, werden nur für das Funktionieren bestimmter Funktionen in der App angefordert und sollten keine Daten sammeln! Ihre Privatsphäre wird respektiert!</string>
+    <string name="slideDesc5">Es werden keine Daten in irgendeiner Form gesammelt, verwendet oder verkauft.
+Einige Berechtigungen, die Bedenken bezüglich des Datenschutzes wecken könnten, werden nur für das korrekte Funktionieren bestimmter Eigenschaften in der App benötigt und dienen keiner Datensammlung.
+Ihre Privatsphäre wird respektiert.</string>
     <string name="slideTitle6">App-Berechtigung</string>
-    <string name="slideDesc6">Bitte erteilen Sie der App die erforderliche Berechtigung, um zu funktionieren!</string>
+    <string name="slideDesc6">Bitte erteilen Sie der App die erforderliche Berechtigung, um die volle Funktionsweisen nutzen zu können</string>
     <!-- Update screen -->
-    <string name="update_new">New update available</string>
+    <string name="update_new">Neue verfügbare Version: </string>
     <string name="update_hash_error">Abweichung bei Dateisignatur! Aktualisierung nicht möglich.</string>
-    <string name="update_activity">Ruckiges Update</string>
+    <string name="update_activity">Update</string>
     <string name="update_version">Version</string>
-    <string name="update_version_nightly">Nächtliche Version</string>
+    <string name="update_version_nightly">Nightly Version</string>
     <string name="update_changelog">Changelog</string>
     <string name="update_status">Status aktualisieren</string>
     <string name="update_action">Update herunterladen und installieren</string>
@@ -36,15 +38,16 @@
     <string name="auth">Authentifizierung bestätigen</string>
     <string name="update">Aktualisieren</string>
     <string name="setting">Einstellungen</string>
-    <string name="codeHint">Schreibe oder lade Rubber Ducky Skripte hier</string>
+    <string name="codeHint">Schreibe oder lade hier Rubber Ducky Skripte herunter</string>
     <string name="loadBtn">Laden</string>
     <string name="saveBtn">Speichern</string>
     <string name="delBtn">Löschen</string>
     <string name="runBtn">Ausführen</string>
     <string name="confBtn">Konfiguration</string>
     <string name="btn_continue">Weiter</string>
-    <string name="root_err">Root-Rechte werden für USB Attacken benötigt!</string>
+    <string name="root_err">Root Rechte werden für USB Attacken benötigt!</string>
     <string name="kernel_err">"Der Kernel wird nicht für USB Attacken unterstützt!"</string>
+    <string name="vm">Virtuelle Umgebung wird nicht unterstützt!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB angeschlossen</string>
@@ -80,6 +83,8 @@
     <string name="settings_sec_title">Erweiterte Sicherheit (Root)</string>
     <string name="settings_sec_desc">Aktivieren Sie die Skript-Verschlüsselung und die Bildschirmsperre.</string>
     <string name="setting_device">Angriffsmodus Einstellungen</string>
+    <string name="configfs_title">ConfigFS automatisch konfigurieren</string>
+    <string name="configfs_summary">Konfiguriert HID auf ConfigFS unterstützten Geräten. Kann die USB-Einstellung stören.</string>
     <string name="hid_choice_title">Anpassbare HID</string>
     <string name="hid_choice_summary">Wechsel zwischen traditioneller HID und anpassungsfähiger HID</string>
     <string name="hid_title">HID-Sprache</string>
@@ -112,9 +117,10 @@
     <string name="file_deleted">Gelöscht</string>
     <string name="file_name">Dateiname</string>
     <string name="title_save_file">Datei speichern</string>
+    <string name="hid_version">Version: %d</string>
     <string-array name="modes">
         <item>USB Kabel</item>
-        <item>Network Socket</item>
+        <item>Netzwerk Socket</item>
     </string-array>
     <string-array name="hidLanguages">
         <item>Amerikanisches Englisch</item>
@@ -136,5 +142,10 @@
         <item>Portugiesisch (Brasilien)</item>
         <item>Weißrussisch</item>
         <item>Ungarisch</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Tag</item>
+        <item>Nacht</item>
     </string-array>
 </resources>

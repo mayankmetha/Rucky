@@ -18,7 +18,7 @@
     <string name="slideTitle6">Rakenduse luba</string>
     <string name="slideDesc6">Palun anna app nõutud luba tööle!</string>
     <!-- Update screen -->
-    <string name="update_new">Uus uuendus</string>
+    <string name="update_new">Uus Uuendatud Versioon: </string>
     <string name="update_hash_error">Fail Signature Mismatch! Ei Saa Uuendada.</string>
     <string name="update_activity">Rucky Update</string>
     <string name="update_version">Versioon</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Jätka</string>
     <string name="root_err">USB Kaabelrünnaku Jaoks Vajalik Juurepääs!</string>
     <string name="kernel_err">"Kernel Ei Ole Toetatud USB Cable Attack!"</string>
+    <string name="vm">Virtuaalne keskkond ei ole toetatud!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB ühendatud</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Ettemakse</string>
     <string name="settings_sec_desc">Skriptifaili krüptimise ja ekraani lukustumise lubamine.</string>
     <string name="setting_device">Ründerežiimi seadistused</string>
+    <string name="configfs_title">Automaatne seadistamise seadistused</string>
+    <string name="configfs_summary">Seadista HID konfigureerimis-ja seadistusseadmetesse. Võib puruneda USB-seade.</string>
     <string name="hid_choice_title">Kohandatud HID</string>
     <string name="hid_choice_summary">Lüliti Legacy HID ja Hooldatava HID vahel</string>
     <string name="hid_title">HID-keel</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">kustutatud</string>
     <string name="file_name">Faili nimi</string>
     <string name="title_save_file">Faili salvestamine</string>
+    <string name="hid_version">Versioon: %d</string>
     <string-array name="modes">
         <item>USB kaabel</item>
         <item>Võrgupesa</item>
@@ -136,5 +140,10 @@
         <item>Brasiilia portugali</item>
         <item>Valgevene</item>
         <item>Ungari</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automaatne</item>
+        <item>Päev</item>
+        <item>Öö</item>
     </string-array>
 </resources>

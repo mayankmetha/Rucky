@@ -18,7 +18,7 @@
     <string name="slideTitle6">애플리케이션 권한</string>
     <string name="slideDesc6">작업에 필요한 권한을 앱에 부여하십시오!</string>
     <!-- Update screen -->
-    <string name="update_new">새 업데이트 사용 가능</string>
+    <string name="update_new">새 업데이트 사용 가능 버전: </string>
     <string name="update_hash_error">파일 서명 불일치! 업데이트할 수 없습니다.</string>
     <string name="update_activity">러키 업데이트</string>
     <string name="update_version">버전 (버전)</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">계속</string>
     <string name="root_err">USB 케이블 공격에 대한 루트 액세스!</string>
     <string name="kernel_err">"커널이 USB 케이블 공격에 지원되지 않음!"</string>
+    <string name="vm">가상 환경이 지원되지 않습니다.</string>
     <!-- Config screen -->
     <string name="config_activity">트윗크</string>
     <string name="config_status_usb_on">연결된 USB</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">어드밴스 보안</string>
     <string name="settings_sec_desc">스크립트 파일 암호화 및 화면 잠금 사용</string>
     <string name="setting_device">공격 모드 설정</string>
+    <string name="configfs_title">ConfigFS 자동 구성하기</string>
+    <string name="configfs_summary">ConfigFS 지원 장치에 HID를 설정할 것이다. USB 설정을 해제한다.</string>
     <string name="hid_choice_title">커스터마이즈 가능한 HID</string>
     <string name="hid_choice_summary">레거시 HID와 커스터마이즈 가능한 HID간 전환</string>
     <string name="hid_title">HID 언어</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">삭제된</string>
     <string name="file_name">파일 이름</string>
     <string name="title_save_file">파일 저장</string>
+    <string name="hid_version">버전: %d</string>
     <string-array name="modes">
         <item>USB 케이블</item>
         <item>네트워크 소켓</item>
@@ -136,5 +140,10 @@
         <item>브라질 포르투갈어</item>
         <item>벨라루스</item>
         <item>헝가리어</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>자동</item>
+        <item>일</item>
+        <item>밤</item>
     </string-array>
 </resources>

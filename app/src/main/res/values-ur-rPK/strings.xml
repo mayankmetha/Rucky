@@ -18,7 +18,7 @@
     <string name="slideTitle6">ایپ پرمشن</string>
     <string name="slideDesc6">براہ کرم ایپ کو کام کرنے کی مطلوبہ اجازت عنایت فرمائیں!</string>
     <!-- Update screen -->
-    <string name="update_new">نیا اپ ڈیٹ دستیاب</string>
+    <string name="update_new">نیا اپ ڈیٹ Available ورژن: </string>
     <string name="update_hash_error">فائل سگنیچر میمیچ! اپ ڈیٹ نہیں.</string>
     <string name="update_activity">روسے اپ ڈیٹ</string>
     <string name="update_version">ورژن</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Continue reading →</string>
     <string name="root_err">روٹ کی رسائی USB کیبل حملے کے لئے پریشان!</string>
     <string name="kernel_err">"دانے یوایسبی کیبل اٹیک کے لئے معاون نہیں ہے!"</string>
+    <string name="vm">ورچوئل ماحول کی حمایت نہیں کی جاتی!</string>
     <!-- Config screen -->
     <string name="config_activity">ردوبدل</string>
     <string name="config_status_usb_on">USB Connected</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">ایڈوانس سیکورٹی</string>
     <string name="settings_sec_desc">Enable سکرپٹ فائل خفیہ کاری اور اسکرین لاک</string>
     <string name="setting_device">حملہ موڈ سیٹنگز</string>
+    <string name="configfs_title">آٹو کانفگر ConfigFS</string>
+    <string name="configfs_summary">کونکہ FS کی حمایت کرنے والے آلات کو ترتیب سے ترتیب دیں گے. مئی کو یو ایس بی ترتیب دے</string>
     <string name="hid_choice_title">کسٹمر کے بارے میں</string>
     <string name="hid_choice_summary">ورثہ ہیڈ اور کسٹمر کے درمیان سوئچ</string>
     <string name="hid_title">زمرہ: زبان</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">خارج کر دیا</string>
     <string name="file_name">فائل نام</string>
     <string name="title_save_file">محفوظ فائل</string>
+    <string name="hid_version">ورژن: %d</string>
     <string-array name="modes">
         <item>USB کیبل</item>
         <item>نیٹ ورک ساکٹ</item>
@@ -136,5 +140,10 @@
         <item>برازیلین پرتگالی</item>
         <item>بیلاروسی</item>
         <item>ہنگیرین</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>آٹو</item>
+        <item>دن</item>
+        <item>شب</item>
     </string-array>
 </resources>

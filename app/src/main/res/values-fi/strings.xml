@@ -18,7 +18,7 @@
     <string name="slideTitle6">Sovelluksen Käyttöoikeus</string>
     <string name="slideDesc6">Anna sovellukselle tarvittava käyttöoikeus!</string>
     <!-- Update screen -->
-    <string name="update_new">Uusi päivitys saatavilla</string>
+    <string name="update_new">Uusi Päivitys Saatavilla Oleva Versio: </string>
     <string name="update_hash_error">Allekirjoitus Mändäys! Päivitys ei onnistu.</string>
     <string name="update_activity">Rucky Päivitys</string>
     <string name="update_version">Versio</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Jatka</string>
     <string name="root_err">Root Access Vaaditaan USB Kaapeli Attack!</string>
     <string name="kernel_err">"Kernel Ei Tueta USB Kaapeli Attack!"</string>
+    <string name="vm">Virtuaalinen ympäristö ei ole tuettu!</string>
     <!-- Config screen -->
     <string name="config_activity">Tehosteet</string>
     <string name="config_status_usb_on">Usb Yhdistetty</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Ennakkosuojaus</string>
     <string name="settings_sec_desc">Ota komentotiedoston salaus ja näytön lukitus käyttöön.</string>
     <string name="setting_device">Hyökkäystilan Asetukset</string>
+    <string name="configfs_title">Määritä Asetukset Automaattisesti</string>
+    <string name="configfs_summary">Määrittää HID ConfigFS tuetut laitteet. Voi rikkoa USB-asetus.</string>
     <string name="hid_choice_title">Mukautettu HID</string>
     <string name="hid_choice_summary">Vaihda välillä Legacy HID ja Customisable HID</string>
     <string name="hid_title">HID-kieli</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">poistettu</string>
     <string name="file_name">Tiedoston Nimi</string>
     <string name="title_save_file">Tallenna tiedosto</string>
+    <string name="hid_version">Versio: %d</string>
     <string-array name="modes">
         <item>USB Kaapeli</item>
         <item>Verkon Socket</item>
@@ -136,5 +140,10 @@
         <item>Brasilian Portugali</item>
         <item>Valkovenäjä</item>
         <item>Unkari</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automaattinen</item>
+        <item>Päivä</item>
+        <item>Yö</item>
     </string-array>
 </resources>

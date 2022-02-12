@@ -18,7 +18,7 @@
     <string name="slideTitle6">Permisiune aplicație</string>
     <string name="slideDesc6">Vă rugăm să acordați aplicației permisiunea necesară pentru a lucra!</string>
     <!-- Update screen -->
-    <string name="update_new">Actualizare nouă disponibilă</string>
+    <string name="update_new">Nouă actualizare disponibilă: </string>
     <string name="update_hash_error">Nepotrivire semnătură fişier! Nu se poate actualiza.</string>
     <string name="update_activity">Actualizare Rucky</string>
     <string name="update_version">Versiune</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">Continuă</string>
     <string name="root_err">Acces Root necesar pentru atac prin cablu USB!</string>
     <string name="kernel_err">"Kernel-ul nu este acceptat pentru atacul prin cablu USB!"</string>
+    <string name="vm">Mediul virtual nu este suportat!</string>
     <!-- Config screen -->
     <string name="config_activity">Țesături</string>
     <string name="config_status_usb_on">Conectat USB</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">Securitate avansată</string>
     <string name="settings_sec_desc">Activează criptarea fișierului script și blocarea ecranului.</string>
     <string name="setting_device">Setări Mod Atac</string>
+    <string name="configfs_title">Configurare automată configurare</string>
+    <string name="configfs_summary">Va configura HID pe dispozitivele acceptate ConfigFS. Poate întrerupe setările USB.</string>
     <string name="hid_choice_title">HID personalizat</string>
     <string name="hid_choice_summary">Comutare între HID Legacy şi HID personalizat</string>
     <string name="hid_title">Limbă HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">șterse</string>
     <string name="file_name">Numele fișierului</string>
     <string name="title_save_file">Salvare fişier</string>
+    <string name="hid_version">Versiune: %d</string>
     <string-array name="modes">
         <item>Cablu USB</item>
         <item>Socket de rețea</item>
@@ -136,5 +140,10 @@
         <item>Portugheză braziliană</item>
         <item>Bielorusă</item>
         <item>Maghiară</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automat</item>
+        <item>Zi</item>
+        <item>Noapte</item>
     </string-array>
 </resources>

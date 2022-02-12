@@ -13,4 +13,4 @@ for _ in mapping:
     os.system("rm -rf tmp/"+mapping[_])
     print("Created: "+_)
 
-print("Total: "+str(len(mapping)))
+print("Total: "+str(len(mapping))+"/228")

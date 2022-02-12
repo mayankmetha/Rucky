@@ -18,7 +18,7 @@
     <string name="slideTitle6">สิทธิของแอ็พ</string>
     <string name="slideDesc6">โปรดให้สิทธิแก่แอ็พที่จำเป็นในการทำงาน!</string>
     <!-- Update screen -->
-    <string name="update_new">มีอัพเดตใหม่</string>
+    <string name="update_new">อัพเดตเวอร์ชันที่มีอยู่ใหม่: </string>
     <string name="update_hash_error">ลายเซ็นไฟล์ไม่ตรงกัน! ไม่สามารถอัพเดต</string>
     <string name="update_activity">Rucky อัพเดต</string>
     <string name="update_version">เวอร์ชัน</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">ดำเนินการต่อ</string>
     <string name="root_err">ต้องการสิทธิเข้าถึงระดับรูทสำหรับสายเคเบิล USB</string>
     <string name="kernel_err">"เคอร์เนลไม่สนับสนุน USB Cable Attack!"</string>
+    <string name="vm">ไม่สนับสนุนสภาวะแวดล้อมเสมือน!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">เชื่อมต่อ USB แล้ว</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">การรักษาความปลอดภัยระดับสูง</string>
     <string name="settings_sec_desc">เปิดใช้งานการเข้ารหัสไฟล์สคริปต์และการล็อกหน้าจอ</string>
     <string name="setting_device">ค่าติดตั้งโหมดการโจมตี</string>
+    <string name="configfs_title">กำหนดค่าคอนฟิกแบบอัตโนมัติ</string>
+    <string name="configfs_summary">จะกำหนดค่า HID บนอุปกรณ์ที่สนับสนุน Config FS อาจตัดการตั้งค่า USB ได้</string>
     <string name="hid_choice_title">HID ที่กำหนดเองได้</string>
     <string name="hid_choice_summary">สลับระหว่าง Legacy HID และ HID ที่กำหนดเองได้</string>
     <string name="hid_title">ภาษา HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">ถูกลบ</string>
     <string name="file_name">ชื่อไฟล์</string>
     <string name="title_save_file">บันทึกไฟล์</string>
+    <string name="hid_version">เวอร์ชัน: %d</string>
     <string-array name="modes">
         <item>สายเคเบิล USB</item>
         <item>ซ็อกเก็ตเครือข่าย</item>
@@ -136,5 +140,10 @@
         <item>ภาษาบราซิลโปรตุเกส</item>
         <item>ภาษาเบลารุส</item>
         <item>ฮังการี</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>อัตโนมัติ</item>
+        <item>วัน</item>
+        <item>ราตรีสวัสดิ์</item>
     </string-array>
 </resources>

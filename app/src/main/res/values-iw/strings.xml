@@ -18,7 +18,7 @@
     <string name="slideTitle6">הרשאה ליישום</string>
     <string name="slideDesc6">נא להעניק לאפליקציה את ההרשאה הדרושה לעבודה!</string>
     <!-- Update screen -->
-    <string name="update_new">עדכון חדש זמין</string>
+    <string name="update_new">עדכון חדש גרסה זמינה: </string>
     <string name="update_hash_error">התאמה של חתימת קובץ! לא ניתן לעדכן.</string>
     <string name="update_activity">עדכון ראקי</string>
     <string name="update_version">גרסה</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">המשך</string>
     <string name="root_err">דרושה גישת יסוד עבור התקפת USB Cable!</string>
     <string name="kernel_err">"לא נתמך עבור Kernel עבור התקפת USB Cable!"</string>
+    <string name="vm">סביבה וירטואלית אינה נתמכת!</string>
     <!-- Config screen -->
     <string name="config_activity">טושים</string>
     <string name="config_status_usb_on">חיבור USB</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">אבטחת מידע</string>
     <string name="settings_sec_desc">הפעלת הצפנת קובצי Script ומנעול מסך.</string>
     <string name="setting_device">הגדרות מצב התקפה</string>
+    <string name="configfs_title">קביעת תצורה אוטומטית של ConfigFS</string>
+    <string name="configfs_summary">קבעו את התצורה של HID על התקנים נתמכים של ConfigFS. יכול לשבור הגדרת USB.</string>
     <string name="hid_choice_title">HID ניתן להתאמה</string>
     <string name="hid_choice_summary">מעבר בין זיהוי הHID של Legacy ו-Customisable</string>
     <string name="hid_title">שפת HID</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">נמחק</string>
     <string name="file_name">שם קובץ</string>
     <string name="title_save_file">שמירת קובץ</string>
+    <string name="hid_version">גרסה: %d</string>
     <string-array name="modes">
         <item>Cable-USB</item>
         <item>סוקט רשת</item>
@@ -136,5 +140,10 @@
         <item>פורטוגזית ברזילאית</item>
         <item>בלארוס</item>
         <item>הונגרית</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>אוטומטי</item>
+        <item>יום</item>
+        <item>לילה</item>
     </string-array>
 </resources>

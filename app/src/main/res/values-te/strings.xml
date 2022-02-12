@@ -18,7 +18,7 @@
     <string name="slideTitle6">ఆప్ పెర్మిషన్</string>
     <string name="slideDesc6">పని చేయడానికి అవసరమైన అనుమతి దయచేసి అనుమతి చేయండి!</string>
     <!-- Update screen -->
-    <string name="update_new">కొత్త నవీకరణ అందుబాటులు</string>
+    <string name="update_new">\@ title: window </string>
     <string name="update_hash_error">దస్త్రపు సిగ్ప్రెస్ మిస్పోల్! నవీకరణ చేయలేరు.</string>
     <string name="update_activity">రక్కీ నవీకరణ</string>
     <string name="update_version">వెర్షన్</string>
@@ -45,6 +45,7 @@
     <string name="btn_continue">కొనసాగించు</string>
     <string name="root_err">రౌట్ యాక్సెస్ కోసం USB కేబుల్ అటాక్ కోసం!</string>
     <string name="kernel_err">"కెర్నెల్ USB కేబుల్ అటాక్ కోసం సదరు చేయబడలేదు!"</string>
+    <string name="vm">వర్చ్యువల్ వాతావరణం మద్దతులేదు!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB అనుసంధించబడింది</string>
@@ -80,6 +81,8 @@
     <string name="settings_sec_title">అద్వైత భద్రత</string>
     <string name="settings_sec_desc">స్క్రిప్ట్ ఫైల్ ఎన్క్రిప్షన్ మరియు స్క్రీన్ లాక్ ను చేర్చు.</string>
     <string name="setting_device">అటాక్ మోడ్ అమరిక</string>
+    <string name="configfs_title">ఆటోను ఆకృతీకరించుముName</string>
+    <string name="configfs_summary">ConfigFS సమర్థిత పరికరాలపై HID కన్పిస్తుంది. USB అమరిక విచ్ఛిన్నం.</string>
     <string name="hid_choice_title">కస్టమబుల్ HID</string>
     <string name="hid_choice_summary">లెజెసీ HID మరియు కస్టమబుల్ HID ల మధ్య మారుతుంది</string>
     <string name="hid_title">HID భాష</string>
@@ -112,6 +115,7 @@
     <string name="file_deleted">తొలగించబడినది</string>
     <string name="file_name">దస్త్రం పేరు</string>
     <string name="title_save_file">ఫైలును దాయుము</string>
+    <string name="hid_version">వెర్షన్: %d</string>
     <string-array name="modes">
         <item>USB కేబుల్</item>
         <item>నెట్వర్క్ సాకెట్</item>
@@ -136,5 +140,10 @@
         <item>బ్రాజిలియన్ పోర్చుగీస్</item>
         <item>బెలారసియన్Name</item>
         <item>హంగేరియన్</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ఆటంకం</item>
+        <item>రోజులు</item>
+        <item>రాత్రి</item>
     </string-array>
 </resources>

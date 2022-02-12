@@ -1,16 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Rucky</string>
-    <string name="icon" translatable="false">icon</string>
-
     <!-- Splash screen -->
-    <string name="splashScreen" translatable="false">RUCKY</string>
-
     <!-- Init Screen -->
     <string name="init_next">NEXT</string>
     <string name="init_skip">SKIP</string>
     <string name="init_agree">AGREE</string>
     <string name="init_start">HACK</string>
-    <string name="slideTitle1" translatable="false">Rucky</string>
     <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
     <string name="slideTitle2">USB Cable</string>
     <string name="slideDesc2">USB wired interface for launching attack!</string>
@@ -22,7 +17,6 @@
     <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
     <string name="slideTitle6">App Permission</string>
     <string name="slideDesc6">Please grant app the required permission to work!</string>
-
     <!-- Update screen -->
     <string name="update_new">New Update Available Version: </string>
     <string name="update_hash_error">File Signature Mismatch! Cannot Update.</string>
@@ -34,7 +28,6 @@
     <string name="update_action">Download and Install Update</string>
     <string name="update_downloading">Downloading Update</string>
     <string name="install_update">Applying Update</string>
-
     <!-- Editor screen -->
     <string name="exit_dialog">Would you like to hide or exit the app?</string>
     <string name="btn_exit">Exit</string>
@@ -52,7 +45,7 @@
     <string name="btn_continue">Continue</string>
     <string name="root_err">Root Access Required For USB Cable Attack!</string>
     <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
-
+    <string name="vm">Virtual environment is not supported!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB Connected</string>
@@ -60,15 +53,12 @@
     <string name="config_status_net_on">Network Socket Connected</string>
     <string name="config_status_net_off">Network Socket Disconnected</string>
     <string name="socket_address">Enter Socket IP and Port Address</string>
-    <string name="socket_ip_hint" translatable="false">[0&#8211;255].[0&#8211;255].[0&#8211;255].[0&#8211;255]:[1&#8211;65535]</string>
-
     <!-- HID config screen -->
     <string name="hid_activity">HID Config</string>
     <string name="hid_download">Download</string>
     <string name="hid_update">Update</string>
     <string name="hid_edit">Edit</string>
     <string name="hid_delete">Delete</string>
-
     <!-- Keylist screen -->
     <string name="key_title">Key Name</string>
     <string name="key_character">Key Character</string>
@@ -79,11 +69,7 @@
     <string name="key_meta">Meta Key</string>
     <string name="keycode">Key Code</string>
     <string name="modcode">Modifier Code</string>
-    <string name="key_no" translatable="false">None</string>
-    <string name="key_left" translatable="false">Left</string>
-    <string name="key_right" translatable="false">Right</string>
     <string name="key_details">Key Details</string>
-
     <!-- Setting screen -->
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Night Mode</string>
@@ -94,8 +80,9 @@
     <string name="delete_dep_summary">Clean up and uninstall app.</string>
     <string name="settings_sec_title">Advance Security</string>
     <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
-
     <string name="setting_device">Attack Mode Settings</string>
+    <string name="configfs_title">Auto Configure ConfigFS</string>
+    <string name="configfs_summary">Will configure HID on ConfigFS supported devices. May break USB setting.</string>
     <string name="hid_choice_title">Customisable HID</string>
     <string name="hid_choice_summary">Switch between Legacy HID and Customisable HID</string>
     <string name="hid_title">HID Language</string>
@@ -104,28 +91,22 @@
     <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
     <string name="settings_net_title">Network Socket Connect Launch</string>
     <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
-
     <string name="setting_about">Info</string>
     <string name="setting_developer_title">Developer</string>
-    <string name="setting_developer" translatable="false">Mayank Metha D</string>
     <string name="settings_version_title">Version</string>
     <string name="settings_arch_title">Architecture</string>
     <string name="settings_lic_title">License</string>
-    <string name="settings_lic_desc" translatable="false">GNU GPL v3.0</string>
-
     <string name="settings_support">Support</string>
     <string name="settings_git_title">GitHub Issues</string>
     <string name="settings_git_desc">Click to add issues or feature request.</string>
     <string name="settings_locale_title">Localization</string>
     <string name="settings_locale_desc">Contribute to app localization.</string>
-
     <string name="release">Distribution</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub Release</string>
     <string name="releaseGitHubNightly">GitHub Nightly</string>
     <string name="releaseTest">Debug Release</string>
     <string name="releaseOthers">Non Supported Release</string>
-
     <string name="btn_cancel">Cancel</string>
     <string name="btn_save">Save</string>
     <string name="file_saved">saved</string>
@@ -135,13 +116,10 @@
     <string name="file_name">File Name</string>
     <string name="title_save_file">Save File</string>
     <string name="hid_version">Version: %d</string>
-    <string name="app_version" translatable="false">%.1f (%d)</string>
-
     <string-array name="modes">
         <item>USB Cable</item>
         <item>Network Socket</item>
     </string-array>
-
     <string-array name="hidLanguages">
         <item>American English</item>
         <item>Turkish</item>
@@ -163,5 +141,9 @@
         <item>Belarusian</item>
         <item>Hungarian</item>
     </string-array>
-
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Day</item>
+        <item>Night</item>
+    </string-array>
 </resources>

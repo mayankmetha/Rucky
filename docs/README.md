@@ -350,11 +350,20 @@ av      |Avaric             |0%
 ae      |Avestan            |0%
 ay      |Aymara             |0%
 az      |Azerbaijani        |93%
-
-eu      |Basque             |4%
-b+ber   |Berber             |19%
+b+ban   |Balinese           |0%
+b+bal   |Balochi            |0%
+bm      |Bambara            |0%
+ba      |Bashkir            |0%
+eu      |Basque             |3%
+be      |Belarusian         |0%
+bn      |Bengali            |0%
+b+ber   |Berber             |18%
+bh      |Bihari             |0%
+bi      |Bislama            |0%
+bs      |Bosnian            |0%
 br      |Breton             |6%
 bg      |Bulgarian          |100%
+my      |Burmese            |0%
 zh-rCN  |Chinese Simplified |100%
 zh-rTW  |Chinese Traditional|100%
 hr      |Croatian           |100%
@@ -370,24 +379,24 @@ de      |German             |100%
 el      |Greek              |100%
 iw      |Hebrew             |100%
 hi      |Hindi              |100%
-hu      |Hungarian          |16%
+hu      |Hungarian          |15%
 is      |Icelandic          |0%
 in      |Indonesian         |100%
 it      |Italian            |100%
 ja      |Japanese           |100%
 ko      |Korean             |100%
-ku      |Kurdish            |1%
+ku      |Kurdish            |0%
 lv      |Latvian            |100%
 lt      |Lithuanian         |100%
 ms      |Malay              |100%
 no      |Norwegian          |100%
 nb      |Norwegian Bokmal   |100%
-fa      |Persian            |5%
+fa      |Persian            |4%
 pl      |Polish             |100%
 pt      |Portuguese         |100%
 ro      |Romanian           |100%
 ru      |Russian            |100%
-b+sat   |Santali            |29%
+b+sat   |Santali            |26%
 sk      |Slovak             |100%
 sl      |Slovenian          |100%
 es      |Spanish            |100%
@@ -400,6 +409,7 @@ uk      |Ukrainian          |100%
 ur-rIN  |Urdu (IN)          |100%
 ur-rPK  |Urdu (PK)          |100%
 vi      |Vietnamese         |100%
+zu      |Zulu               |100%
 
 ---
 
