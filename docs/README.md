@@ -364,12 +364,24 @@ Status|Code    |Language           |Translated
 🚧|br      |Breton             |6%
 🚧|bg      |Bulgarian          |100%
 ❌|my      |Burmese            |0%
+❌|ca      |Catalan            |0%
+❌|b+ceb   |Cebuano            |0%
+❌|ch      |Chamorro           |0%
+❌|ce      |Chechen            |0%
+❌|b+chr   |Cherokee           |0%
+❌|ny      |Chewa              |0%
 🚧|zh-rCN  |Chinese Simplified |100%
 🚧|zh-rTW  |Chinese Traditional|100%
+❌|cv      |Chuvash            |0%
+❌|kw      |Cornish            |0%
+❌|co      |Corsican           |0%
+❌|cr      |Cree               |0%
 🚧|hr      |Croatian           |100%
 🚧|cs      |Czech              |100%
 🚧|da      |Danish             |100%
+❌|dv      |Dhivehi            |0%
 🚧|nl      |Dutch              |100%
+❌|dz      |Dzongkha           |0%
 ✅|en-rGB  |English (UK)       |100%
 ✅|en-rUS  |English (US)       |100%
 🚧|et      |Estonian           |100%
@@ -409,7 +421,7 @@ Status|Code    |Language           |Translated
 🚧|ur-rIN  |Urdu (IN)          |100%
 🚧|ur-rPK  |Urdu (PK)          |100%
 🚧|vi      |Vietnamese         |100%
-🚧|zu      |Zulu               |100%
+❌|zu      |Zulu               |0%
 
 ---
 
