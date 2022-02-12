@@ -31,6 +31,19 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="$PROJECT_DIR$/app/animal.svg" />
+                                                <entry key="opacityPercent" value="80" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                       <entry key="text">
                                         <value>
                                           <PersistentState>
@@ -57,7 +70,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_arch" />
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/app/animal.svg" />
+                                      <entry key="outputName" value="ic_notification" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="ff5722" />
                                     </map>
@@ -98,7 +113,9 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" />
+                                                <entry key="imagePath" value="$PROJECT_DIR$/app/animal.svg" />
+                                                <entry key="scalingPercent" value="60" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -131,11 +148,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="034a75" />
-                                      <entry key="backgroundLayerName" value="ic_launcher_background_nightly" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="ic_launcher_nightly" />
+                                      <entry key="generateLegacyIcon" value="false" />
+                                      <entry key="generatePlayStoreIcon" value="false" />
+                                      <entry key="generateRoundIcon" value="false" />
+                                      <entry key="outputName" value="ic_launcher_monochrome" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -230,7 +246,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$PROJECT_DIR$/app/src/main/animal.svg" />
+                                                <entry key="imagePath" value="$PROJECT_DIR$/app/animal.svg" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -263,7 +279,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/app/src/main/animal.svg" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/app/animal.svg" />
                                       <entry key="outputName" value="ic_notification" />
                                     </map>
                                   </option>
@@ -370,7 +386,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/circle/baseline_circle_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/language/baseline_language_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -381,8 +397,8 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_dots" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/app/name.svg" />
+                            <entry key="outputName" value="ic_locale" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/app/animal.svg" />
                           </map>
                         </option>
                       </PersistentState>
