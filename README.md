@@ -24,7 +24,7 @@
 # Download
 ## GitHub
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/releases/latest)
-[![Github nightly](https://img.shields.io/badge/nightly-v2.3%20(519)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
+[![Github nightly](https://img.shields.io/badge/nightly-v2.3%20(541)-blueviolet)](https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/rucky-nightly.apk)
 
 ## Nethunter App Store
 [![Nethuter Release](https://img.shields.io/badge/release-v2.2-blue)](https://store.nethunter.com/en/packages/com.mayank.rucky/)

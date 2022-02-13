@@ -1,26 +1,18 @@
-• Prepare for Monet
-• Added static monet theme
-• Apply static monet to WelcomeActivity
-• Apply static monet to InitActivity
-• Apply static monet to BrowserActivity
-• Apply static monet to ConfigActivity
-• Apply static monet to EditorActivity
-• Apply static monet to HIDActivity
-• Apply static monet to KeylistActivity
-• Cleanup of old theme
-• Bump core-splashscreen from 1.0.0-alpha02 to 1.0.0-beta01
-• Bump appcompat from 1.4.0 to 1.4.1
-• Merge pull request #59 from mayankmetha/dependabot/gradle/androidx.core-core-splashscreen-1.0.0-beta01
-• Merge pull request #60 from mayankmetha/dependabot/gradle/androidx.appcompat-appcompat-1.4.1
-• Bump constraintlayout from 2.1.2 to 2.1.3
-• Merge pull request #61 from mayankmetha/dependabot/gradle/androidx.constraintlayout-constraintlayout-2.1.3
-• Dynamic Monet for Android 12
-• Added auto dark mode
-• Bump material from 1.6.0-alpha01 to 1.6.0-alpha02
-• Dynamic Monet Theme added
-• Merge pull request #63 from mayankmetha/dependabot/gradle/com.google.android.material-material-1.6.0-alpha02
-• Dynamic Monet Theme added
-• Fixed layout
-• fix monet
-• Fixed Monet Theme
-• Nightly 519
+• Bump preference from 1.2.0-rc01 to 1.2.0
+• Merge pull request #65 from mayankmetha/dependabot/gradle/androidx.preference-preference-1.2.0
+• Added Android Tiramisu monochrome launcher icon
+• Bump certificatetransparency-android from 1.0.0 to 1.1.0 (#67)
+• Bump certificatetransparency-android from 1.0.0 to 1.1.0 in /app (#66)
+• Added few locale templates
+• Updated locale
+• Updated Readme
+• Added locale template A-G
+• Added locale templates A-J,W-Z
+• Added locale templates A-L,W-Z
+• Added locale templates A-M,W-Z
+• Added locale templates A-O,W-Z
+• Added locale templates A-Q,W-Z
+• Added locale templates A-R,U-Z
+• Added locale templates A-S,U-Z
+• Supporting 210 locale.
+• Android 13 DP1 Support added
