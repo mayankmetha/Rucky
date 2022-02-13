@@ -479,9 +479,14 @@ Status|Code    |Language           |Translated
 ❌|oj      |Ojibwe             |0%
 ❌|om      |Oromo              |0%
 ❌|os      |Ossetian           |0%
+❌|pi      |Pali               |0%
+❌|b+pap   |Papiamento         |0%
+❌|ps      |Pashto             |0%
 🚧|fa      |Persian            |4%
 ✅|pl      |Polish             |100%
 ✅|pt      |Portuguese         |100%
+❌|pa      |Punjabi            |0%
+❌|qu      |Quechua            |0%
 ✅|ro      |Romanian           |100%
 ✅|ru      |Russian            |100%
 🚧|b+sat   |Santali            |26%

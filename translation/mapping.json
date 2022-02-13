@@ -143,10 +143,15 @@
     "values-oj":     "values-oj-rCA",
     "values-om":     "values-om-rET",
     "values-os":     "values-os-rSE",
-
+    "values-pi":     "values-pi-rIN",
+    "values-b+pap":  "values-pap-rPAP",
+    "values-ps":     "values-ps-rAF",
     "values-fa":     "values-fa-rIR",
     "values-pl":     "values-pl-rPL",
     "values-pt":     "values-pt-rPT",
+    "values-pa":     "values-pa-rIN",
+    "values-qu":     "values-qu-rPE",
+    
     "values-ro":     "values-ro-rRO",
     "values-ru":     "values-ru-rRU",
     "values-b+sat":  "values-sat-rIN",
