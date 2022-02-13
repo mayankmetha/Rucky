@@ -6,11 +6,11 @@ mapping = {}
 with open('mapping.json') as json_file:
     mapping = json.load(json_file)
 
-os.system("rm -rd app; mkdir app")
+os.system("rm -rf app/ && mkdir app")
 
 for _ in mapping:
     os.system("cp -r tmp/"+mapping[_]+" app/"+_+"")
-    os.system("rm -rf tmp/"+mapping[_])
     print("Created: "+_)
 
+os.system("rm -rf tmp/")
 print("Total: "+str(len(mapping)))

@@ -516,10 +516,19 @@ Status      |Code    |Language           |Translated
 ❌|ss       |Swati              |0%
 ✅|sv       |Swedish            |100%
 ❌|b+syc    |Syriac             |0%
+❌|tl       |Tagalog            |0%
+❌|ty       |Tahitian           |0%
+❌|tg       |Tajik              |0%
 ✅|ta       |Tamil              |100%
+❌|tt       |Tatar              |0%
 ✅|te       |Telugu             |100%
 ✅|th       |Thai               |100%
+❌|bo       |Tibetan            |0%
+❌|ti       |Tigrinya           |0%
+❌|ts       |Tsonga             |0%
+❌|tn       |Tswana             |0%
 ✅|tr       |Turkish            |100%
+❌|tk       |Turkmen            |0%
 ✅|uk       |Ukrainian          |100%
 ❌|b+hsb    |Upper Sorbian      |0%
 ✅|ur-rIN   |Urdu (IN)          |100%
