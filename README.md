@@ -452,7 +452,20 @@ Status|Code    |Language           |Translated
 ❌|lg      |Luganda            |0%
 ❌|b+luy   |Luhya              |0%
 ❌|lb      |Luxembourgish      |0%
+❌|mk      |Macedonian         |0%
+❌|b+mai   |Maithili           |0%
+❌|mg      |Malagasy           |0%
 ✅|ms      |Malay              |100%
+❌|ml      |Malayalam          |0%
+❌|mt      |Maltese            |0%
+❌|gv      |Manx               |0%
+❌|mi      |Maori              |0%
+❌|b+arn   |Mapudungun         |0%
+❌|mr      |Marathi            |0%
+❌|mh      |Marshallese        |0%
+❌|b+moh   |Mohawk             |0%
+❌|mn      |Mongolian          |0%
+❌|b+mos   |Mossi              |0%
 ✅|no      |Norwegian          |100%
 ✅|nb      |Norwegian Bokmal   |100%
 🚧|fa      |Persian            |4%
