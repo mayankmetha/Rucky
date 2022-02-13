@@ -466,8 +466,19 @@ Status|Code    |Language           |Translated
 ❌|b+moh   |Mohawk             |0%
 ❌|mn      |Mongolian          |0%
 ❌|b+mos   |Mossi              |0%
+❌|na      |Nauru              |0%
+❌|ng      |Ndonga             |0%
+❌|ne      |Nepali             |0%
+❌|se      |Northern Sami      |0%
+❌|b+nso   |Northern Sotho     |0%
 ✅|no      |Norwegian          |100%
 ✅|nb      |Norwegian Bokmal   |100%
+❌|nn      |Norwegian Nynorsk  |0%
+❌|oc      |Occitan            |0%
+❌|or      |Odia               |0%
+❌|oj      |Ojibwe             |0%
+❌|om      |Oromo              |0%
+❌|os      |Ossetian           |0%
 🚧|fa      |Persian            |4%
 ✅|pl      |Polish             |100%
 ✅|pt      |Portuguese         |100%
