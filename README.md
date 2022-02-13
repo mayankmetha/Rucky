@@ -424,10 +424,34 @@ Status|Code    |Language           |Translated
 ✅|it      |Italian            |100%
 ✅|ja      |Japanese           |100%
 ❌|jv      |Javanese           |0%
+❌|b+kab   |Kabyle             |0%
+❌|kn      |Kannada            |0%
+❌|b+pam   |Kapampangan        |0%
+❌|ks      |Kashmiri           |0%
+❌|b+csb   |Kashubian          |0%
+❌|kk      |Kazakh             |0%
+❌|km      |Khmer              |0%
+❌|rw      |Kinyarwanda        |0%
+❌|b+tlh   |Klingon            |0%
+❌|kv      |Komi               |0%
+❌|kg      |Kongo              |0%
+❌|b+kok   |Konkani            |0%
 ✅|ko      |Korean             |100%
 🚧|ku      |Kurdish            |0%
+❌|kj      |Kwanyama           |0%
+❌|ky      |Kyrgyz             |0%
+❌|lo      |Lao                |0%
+❌|la      |Latin              |0%
 ✅|lv      |Latvian            |100%
+❌|li      |Limburgish         |0%
+❌|ln      |Lingala            |0%
 ✅|lt      |Lithuanian         |100%
+❌|b+jbo   |Lojban             |0%
+❌|b+nds   |Low German         |0%
+❌|b+dsb   |Lower Sorbian      |0%
+❌|lg      |Luganda            |0%
+❌|b+luy   |Luhya              |0%
+❌|lb      |Luxembourgish      |0%
 ✅|ms      |Malay              |100%
 ✅|no      |Norwegian          |100%
 ✅|nb      |Norwegian Bokmal   |100%
