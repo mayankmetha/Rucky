@@ -151,9 +151,11 @@
     "values-pt":     "values-pt-rPT",
     "values-pa":     "values-pa-rIN",
     "values-qu":     "values-qu-rPE",
-    
     "values-ro":     "values-ro-rRO",
+    "values-rm":     "values-rm-rCH",
+    "values-rn":     "values-rn-rBI",
     "values-ru":     "values-ru-rRU",
+
     "values-b+sat":  "values-sat-rIN",
     "values-sk":     "values-sk-rSk",
     "values-sl":     "values-sl-rSI",
@@ -163,11 +165,15 @@
     "values-te":     "values-te-rIN",
     "values-th":     "values-th-rTH",
     "values-tr":     "values-tr-rTR",
+
     "values-uk":     "values-uk-rUA",
+    "values-b+hsb":  "values-hsb-rDE",
     "values-ur-rIN": "values-ur-rIN",
     "values-ur-rPK": "values-ur-rPK",
+    "values-ug":     "values-ug-rCN",
+    "values-uz":     "values-uz-rUZ",
+    "values-ve":     "values-ve-rZA",
     "values-vi":     "values-vi-rVN",
-    
     "values-wa":     "values-wa-rBE",
     "values-cy":     "values-cy-rGB",
     "values-wo":     "values-wo-rSN",

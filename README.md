@@ -488,6 +488,8 @@ Status|Code    |Language           |Translated
 ❌|pa      |Punjabi            |0%
 ❌|qu      |Quechua            |0%
 ✅|ro      |Romanian           |100%
+❌|rm      |Romansh            |0%
+❌|rn      |Rundi              |0%
 ✅|ru      |Russian            |100%
 🚧|b+sat   |Santali            |26%
 ✅|sk      |Slovak             |100%
@@ -499,8 +501,12 @@ Status|Code    |Language           |Translated
 ✅|th      |Thai               |100%
 ✅|tr      |Turkish            |100%
 ✅|uk      |Ukrainian          |100%
+❌|b+hsb   |Upper Sorbian      |0%
 ✅|ur-rIN  |Urdu (IN)          |100%
 ✅|ur-rPK  |Urdu (PK)          |100%
+❌|ug      |Uyghur             |0%
+❌|uz      |Uzbek              |0%
+❌|ve      |Venda              |0%
 ✅|vi      |Vietnamese         |100%
 ❌|wa      |Walloon            |0%
 ❌|cy      |Welsh              |0%
