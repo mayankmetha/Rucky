@@ -188,7 +188,7 @@ public class EditorActivity extends AppCompatActivity {
         String NetHunter = "x2j+O+TND/jjH0ryjO/2ROPpjCvHoHK/XnjrgdAHJfM=";
         String GitHubRelease = "0Xv/I6xP6Q1wKbIqCgXi4CafhKZtOZLOR575TiqN93s=";
         String GitHubNightly = "eEk+yGxeE5dXukQ4HiGYS4eEyTAcoC6Mfm1OX/1l12c=";
-        String debug = "im5KgLli2rx4iEvMVXotXGpfiR1/eqXEwBO2YQ6uP70=";
+        String debug = "6E9Beocz6JC8xJXYO7Wu3nZQwZW1bKb1M004n/xR2BE=";
         ArrayList<String> hashList = new ArrayList<>();
         nightly = false;
         try {
