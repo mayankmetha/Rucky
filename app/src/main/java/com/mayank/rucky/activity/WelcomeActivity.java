@@ -103,7 +103,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     void launchNext() {
-        if (!isEmulator()) {
+        if (isEmulator()) {
             Intent intent = new Intent(WelcomeActivity.this, config.getInitState() ? EditorActivity.class : InitActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

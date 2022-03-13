@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Theme.Rucky.Monet">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="8sp"
+            android:layout_marginBottom="8sp"
+            android:paddingStart="24sp"
+            android:paddingEnd="24sp"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/BtnGrpSetting"
+        style="?attr/materialCardViewElevatedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginBottom="8sp"
+        android:padding="8sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="bottom|end"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/update_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/update"
+                android:filterTouchesWhenObscured="true"
+                app:icon="@drawable/ic_update"
+                app:iconGravity="textTop"
+                app:iconPadding="0sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cfgBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/confBtn"
+                android:filterTouchesWhenObscured="true"
+                app:icon="@drawable/ic_config"
+                app:iconGravity="textTop"
+                app:iconPadding="0sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/setting"
+                android:filterTouchesWhenObscured="true"
+                app:icon="@drawable/ic_settings"
+                app:iconGravity="textTop"
+                app:iconPadding="0sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_below="@id/toolbar"
+        android:layout_toEndOf="@id/BtnGrpSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8sp"
+        android:padding="8sp"
+        style="?attr/materialCardViewElevatedStyle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/BtnGrp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:gravity="start"
+                    android:hint="@string/codeHint"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:lines="25" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/BtnGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom|end"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ldBtn"
+                    android:filterTouchesWhenObscured="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/loadBtn"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:iconPadding="0sp"
+                    app:iconGravity="textTop"
+                    app:icon="@drawable/ic_load"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delBtn"
+                    android:filterTouchesWhenObscured="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/delBtn"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:iconPadding="0sp"
+                    app:iconGravity="textTop"
+                    app:icon="@drawable/ic_delete"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/svBtb"
+                    android:filterTouchesWhenObscured="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/saveBtn"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:iconPadding="0sp"
+                    app:iconGravity="textTop"
+                    app:icon="@drawable/ic_save"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/exBtn"
+                    android:filterTouchesWhenObscured="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/runBtn"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:iconPadding="0sp"
+                    app:iconGravity="textTop"
+                    app:icon="@drawable/ic_run"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
