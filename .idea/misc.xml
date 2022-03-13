@@ -96,13 +96,53 @@
         <entry key="app/src/main/res/drawable/splash_icon_1.xml" value="0.2388888888888889" />
         <entry key="app/src/main/res/drawable/splash_icon_2.xml" value="0.2388888888888889" />
         <entry key="app/src/main/res/drawable/splash_name.xml" value="0.2388888888888889" />
+        <entry key="app/src/main/res/layout-land/activity_browser.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_config.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_editor.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_hid.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_init.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_init_slide1.xml" value="0.2129115006412997" />
+        <entry key="app/src/main/res/layout-land/activity_init_slide2.xml" value="0.29200513039760584" />
+        <entry key="app/src/main/res/layout-land/activity_init_slide3.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_init_slide4.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_init_slide5.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_init_slide6.xml" value="0.2128205128205128" />
+        <entry key="app/src/main/res/layout-land/activity_keylist.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_settings.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_update.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/activity_welcome.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/config_network.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/editor_save.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/hid_list_item.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/key_details.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-land/key_list_item.xml" value="0.32848324514991184" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_browser.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_config.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_editor.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_hid.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_init.xml" value="0.10462622549019608" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_init_slide1.xml" value="0.15179299103504482" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_init_slide2.xml" value="0.10462622549019608" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_init_slide3.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_init_slide4.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_init_slide5.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_init_slide6.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_keylist.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_settings.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_update.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_welcome.xml" value="0.11308439587128112" />
+        <entry key="app/src/main/res/layout-sw600dp/config_network.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/editor_save.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/hid_list_item.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/key_details.xml" value="0.1408828382838284" />
+        <entry key="app/src/main/res/layout-sw600dp/key_list_item.xml" value="0.1408828382838284" />
         <entry key="app/src/main/res/layout/activity_browser.xml" value="0.23394808743169399" />
-        <entry key="app/src/main/res/layout/activity_config.xml" value="0.16598360655737704" />
+        <entry key="app/src/main/res/layout/activity_config.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_editor.xml" value="0.17452185792349728" />
         <entry key="app/src/main/res/layout/activity_hid.xml" value="0.14250191277735272" />
         <entry key="app/src/main/res/layout/activity_init.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_init_slide1.xml" value="0.16484375" />
-        <entry key="app/src/main/res/layout/activity_init_slide2.xml" value="0.2421448087431694" />
+        <entry key="app/src/main/res/layout/activity_init_slide2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_init_slide3.xml" value="0.2421448087431694" />
         <entry key="app/src/main/res/layout/activity_init_slide4.xml" value="0.2421448087431694" />
         <entry key="app/src/main/res/layout/activity_init_slide5.xml" value="0.2421448087431694" />

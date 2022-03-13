@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    style="@style/Theme.Rucky.Monet"
+    android:padding="16sp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_margin="16sp"
+        android:layout_width="24sp"
+        android:layout_height="24sp"
+        android:id="@+id/hid_icon"
+        android:contentDescription="@string/hid_activity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_horizontal|center_vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hid_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hid_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hid_name"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

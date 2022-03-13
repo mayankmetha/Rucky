@@ -28,23 +28,27 @@
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/BtnGrpSetting"
-        android:layout_below="@id/toolbar"
         style="?attr/materialCardViewElevatedStyle"
-        android:padding="8sp"
-        android:layout_margin="8sp">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginBottom="8sp"
+        android:padding="8sp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:gravity="bottom|end"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="5dp">
 
             <com.google.android.material.button.MaterialButton
@@ -91,9 +95,10 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_below="@id/BtnGrpSetting"
+        android:layout_below="@id/toolbar"
+        android:layout_toEndOf="@id/BtnGrpSetting"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="8sp"
         android:padding="8sp"
         style="?attr/materialCardViewElevatedStyle">
