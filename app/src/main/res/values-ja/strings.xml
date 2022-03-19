@@ -143,7 +143,7 @@
     </string-array>
     <string-array name="dark_theme_list">
         <item>自動</item>
-        <item>日</item>
-        <item>夜</item>
+        <item>ライトモード</item>
+        <item>ダークモード</item>
     </string-array>
 </resources>

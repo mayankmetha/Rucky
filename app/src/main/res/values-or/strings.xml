@@ -3,9 +3,21 @@
     <!-- Splash screen -->
     <!-- Init Screen -->
     <!-- Update screen -->
+    <string name="update_version">ସଂସ୍କରଣ</string>
     <!-- Editor screen -->
     <!-- Config screen -->
     <!-- HID config screen -->
     <!-- Keylist screen -->
     <!-- Setting screen -->
+    <string name="dark_theme_title">ରାତ୍ରି ମୋଡ୍</string>
+    <string name="setting_about">ସୂଚନା</string>
+    <string name="settings_version_title">ସଂସ୍କରଣ</string>
+    <string name="settings_support">ସମର୍ଥନ</string>
+    <string name="btn_cancel">ବାତିଲ୍ କର</string>
+    <string name="hid_version">ସଂସ୍କରଣ: %d</string>
+    <string-array name="dark_theme_list">
+        <item>ସ୍ଵତଃ</item>
+        <item>ଦିନ</item>
+        <item>ରାତ୍ରି</item>
+    </string-array>
 </resources>

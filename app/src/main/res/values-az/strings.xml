@@ -6,7 +6,7 @@
     <string name="init_skip">ÖTÜR</string>
     <string name="init_agree">QƏBUL ET</string>
     <string name="init_start">HACK</string>
-    <string name="slideDesc1">Cihazınızı \"Rubber Ducky\"ə çevir!</string>
+    <string name="slideDesc1">Cihazınızı \"Rubber Ducky\"ə çevirin!</string>
     <string name="slideTitle2">USB Kabel</string>
     <string name="slideDesc2">Hücum başlatmaq üçün USB naqilli interfeys!</string>
     <string name="slideTitle3">Şəbəkə yuvası</string>
@@ -18,6 +18,7 @@
     <string name="slideTitle6">Tətbiq icazələri</string>
     <string name="slideDesc6">Zəhmət olmasa işləməsi üçün tətbiqə tələb olunan icazəni verin!</string>
     <!-- Update screen -->
+    <string name="update_new">Əlçatan yeni güncəlləmə versiyası:</string>
     <string name="update_hash_error">Fayl imza uyğunsuzluğu! Yenilənə bilmir.</string>
     <string name="update_activity">Rucky yeniləmələri</string>
     <string name="update_version">Versiya</string>
@@ -44,6 +45,7 @@
     <string name="btn_continue">Davam et</string>
     <string name="root_err">USB kabel hücumu üçün kök müraciəti tələb olunur!</string>
     <string name="kernel_err">"USB kabel hücumu üçün nüvə dəstəklənmir!"</string>
+    <string name="vm">Virtual mühit dəstəklənmir!</string>
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
     <string name="config_status_usb_on">USB bağlandı</string>
@@ -79,6 +81,8 @@
     <string name="settings_sec_title">Qabaqcıl təhlükəsizlik</string>
     <string name="settings_sec_desc">Script fayl şifrələməsini və ekran kilidini fəallaşdırın.</string>
     <string name="setting_device">Hücum rejimi tənzimləmələri</string>
+    <string name="configfs_title">ConfigFS-i avtomatik konfiqurasiya et</string>
+    <string name="configfs_summary">ConfigFS dəstəkli cihazlarda HID-i konfiqurasiya edir. USB tənzimləməsini zədələyə bilər.</string>
     <string name="hid_choice_title">Özəlləşdirilə bilən HID</string>
     <string name="hid_choice_summary">Köhnə HID və Özəlləşdirilə bilən HID arasında keçid</string>
     <string name="hid_title">HID dili</string>
@@ -111,6 +115,7 @@
     <string name="file_deleted">silindi</string>
     <string name="file_name">Fayl adı</string>
     <string name="title_save_file">Faylı saxla</string>
+    <string name="hid_version">Versiya: %d</string>
     <string-array name="modes">
         <item>USB Kabel</item>
         <item>Şəbəkə yuvası</item>
@@ -135,5 +140,10 @@
         <item>Braziliya Portuqalcası</item>
         <item>Belarusca</item>
         <item>Macarca</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Avto</item>
+        <item>Gündüz</item>
+        <item>Gecə</item>
     </string-array>
 </resources>

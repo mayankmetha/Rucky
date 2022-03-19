@@ -7,6 +7,7 @@
     <string name="init_agree">ONARTU</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Bihurtu zure gailua Rubber Ducky!</string>
+    <string name="slideTitle2">USB kablea</string>
     <!-- Update screen -->
     <!-- Editor screen -->
     <string name="unlock">Desblokeatu aplikazioa</string>
@@ -15,4 +16,8 @@
     <!-- HID config screen -->
     <!-- Keylist screen -->
     <!-- Setting screen -->
+    <string-array name="modes">
+        <item>USB kablea</item>
+        <item>Network Socket</item>
+    </string-array>
 </resources>
