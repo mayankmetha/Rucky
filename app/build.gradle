@@ -19,6 +19,7 @@ def getVersionCode = { ->
 android {
     compileSdkVersion 32
     buildToolsVersion "31.0.0"
+    namespace 'com.mayank.rucky'
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
