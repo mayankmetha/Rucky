@@ -113,7 +113,7 @@ dependencies {
     implementation 'androidx.security:security-app-authenticator:1.0.0-alpha02'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.android.volley:volley:1.2.1'
-    implementation 'com.appmattus.certificatetransparency:certificatetransparency-android:1.1.0'
+    implementation 'com.appmattus.certificatetransparency:certificatetransparency-android:1.1.1'
     implementation 'com.datatheorem.android.trustkit:trustkit:1.1.5'
     implementation 'com.google.android.material:material:1.7.0-alpha01'
     implementation 'com.github.kimchangyoun:rootbeerFresh:0.0.10'
