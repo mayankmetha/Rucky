@@ -32,7 +32,7 @@
     <color name="md_theme_inverseOnSurface">#1C1B1F</color>
     <color name="md_theme_inverseSurface">#E6E1E5</color>
     <color name="md_theme_primaryInverse">#6750A4</color>
-    <color name="seed">#6750A4</color>
-    <color name="error">#B3261E</color>
+    <!--<color name="seed">#6750A4</color>-->
+    <!--<color name="error">#B3261E</color>-->
 
 </resources>

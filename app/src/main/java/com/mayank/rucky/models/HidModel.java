@@ -20,10 +20,6 @@ public class HidModel {
         return name;
     }
 
-    public void setHidModelName(String name) {
-        this.name = name;
-    }
-
     public int getHidModelRevision() {
         return revision;
     }
@@ -34,10 +30,6 @@ public class HidModel {
 
     public String getHidModelFilename() {
         return filename;
-    }
-
-    public void setHidModelFilename(String filename) {
-        this.filename = filename;
     }
 
     public String getHidModelUrl() {
@@ -58,15 +50,5 @@ public class HidModel {
 
     public boolean modelExist(HidModel tmpModel) {
         return tmpModel.getHidModelName().equals(this.name);
-    }
-
-    public void updateModel(HidModel tmpModel) {
-        if(modelExist(tmpModel)) {
-            this.name = tmpModel.name;
-            this.revision = tmpModel.revision;
-            this.filename = tmpModel.filename;
-            this.url = tmpModel.url;
-            this.state = tmpModel.state;
-        }
     }
 }

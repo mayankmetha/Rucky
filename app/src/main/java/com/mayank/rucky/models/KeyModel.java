@@ -7,13 +7,6 @@ public class KeyModel {
     int keycode;
     int modifier;
 
-    public KeyModel(char key, String keyname, int keycode, int modifier) {
-        this.key = key;
-        this.keyname = keyname;
-        this.keycode = keycode;
-        this.modifier = modifier;
-    }
-
     public KeyModel(char key, String keyname, int keycode, String ctrl, String shift, String alt, String meta) {
         this.key = key;
         this.keyname = keyname;
@@ -36,10 +29,6 @@ public class KeyModel {
         return key;
     }
 
-    public void setKeyName(String keyname) {
-        this.keyname = keyname;
-    }
-
     public String getKeyName() {
         return keyname;
     }
@@ -50,10 +39,6 @@ public class KeyModel {
 
     public int getKeycode() {
         return keycode;
-    }
-
-    public void setModifier(int modifier) {
-        this.modifier = modifier;
     }
 
     public int getModifier() {
