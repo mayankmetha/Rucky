@@ -1,47 +1,11 @@
-name: Security check - Bandit
+uses: jpetrucciani/bandit-check@master
 
-on: push
+# specify a path
+uses: jpetrucciani/bandit-check@master
+with:
+  path: '.'
 
-jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-
-      matrix:
-
-        os: [ ubuntu-latest, macos-latest ]
-
-        python-version: [ '2.7.17', '3.6.10' ]
-
-    name: Python ${{ matrix.python-version }} ${{ matrix.os }} 
-
-    steps:
-
-    - uses: actions/checkout@v2
-
-    - name: Security check - Bandit
-
-      uses: ./
-
-      with:
-
-        python_version: ${{ matrix.python-version }}
-
-        project_path: .
-
-        ignore_failure: true
-
-    - name: Security check report artifacts
-
-      uses: actions/upload-artifact@v1
-
-      # if: failure()
-
-      with:
-
-        name: Security report
-
-        path: output/security_report.txt
+# provide some flags
+uses: jpetrucciani/bandit-check@master
+with:
+  bandit_flags: '-lll -o output.json -f json'
