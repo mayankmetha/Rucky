@@ -235,8 +235,8 @@ public class KeylistActivity extends AppCompatActivity {
             checked.setChecked(true);
         }
 
-        ctrlKey.setOnCheckedChangeListener((view, checkedId) -> {
-            Chip chip = view.findViewById(checkedId);
+        ctrlKey.setOnCheckedStateChangeListener((view, checkedIds) -> {
+            Chip chip = view.findViewById(checkedIds.get(0));
             if (chip != null) {
                 if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) ctrl.set(0);
                 else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) ctrl.set(-1);
@@ -244,8 +244,8 @@ public class KeylistActivity extends AppCompatActivity {
             }
         });
 
-        altKey.setOnCheckedChangeListener((view, checkedId) -> {
-            Chip chip = view.findViewById(checkedId);
+        altKey.setOnCheckedStateChangeListener((view, checkedIds) -> {
+            Chip chip = view.findViewById(checkedIds.get(0));
             if (chip != null) {
                 if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) alt.set(0);
                 else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) alt.set(-1);
@@ -253,8 +253,8 @@ public class KeylistActivity extends AppCompatActivity {
             }
         });
 
-        shiftKey.setOnCheckedChangeListener((view, checkedId) -> {
-            Chip chip = view.findViewById(checkedId);
+        shiftKey.setOnCheckedStateChangeListener((view, checkedIds) -> {
+            Chip chip = view.findViewById(checkedIds.get(0));
             if (chip != null) {
                 if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) shift.set(0);
                 else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) shift.set(-1);
@@ -262,8 +262,8 @@ public class KeylistActivity extends AppCompatActivity {
             }
         });
 
-        metaKey.setOnCheckedChangeListener((view, checkedId) -> {
-            Chip chip = view.findViewById(checkedId);
+        metaKey.setOnCheckedStateChangeListener((view, checkedIds) -> {
+            Chip chip = view.findViewById(checkedIds.get(0));
             if (chip != null) {
                 if(chip.getText().toString().equals(getResources().getString(R.string.key_no))) meta.set(0);
                 else if(chip.getText().toString().equals(getResources().getString(R.string.key_left))) meta.set(-1);
