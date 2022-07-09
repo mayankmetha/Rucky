@@ -15,9 +15,9 @@ import java.util.Iterator;
 public class HID2 {
 
     private float defdelay = 0;
-    private ArrayList<String> shell = new ArrayList<>();
-    private HashMap<String, String> keys = new HashMap<>();
-    private HashMap<Character, String> keymap = new HashMap<>();
+    private final ArrayList<String> shell = new ArrayList<>();
+    private final HashMap<String, String> keys = new HashMap<>();
+    private final HashMap<Character, String> keymap = new HashMap<>();
 
     public HID2(String jsonStr) {
         initKey();

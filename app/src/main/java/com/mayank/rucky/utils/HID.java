@@ -30,9 +30,9 @@ public class HID {
     private static final int hu = 18;
 
     private float defdelay = 0;
-    private ArrayList<String> shell = new ArrayList<>();
-    private HashMap<String, String> keys = new HashMap<>();
-    private HashMap<String, String> keycodes = new HashMap<>();
+    private final ArrayList<String> shell = new ArrayList<>();
+    private final HashMap<String, String> keys = new HashMap<>();
+    private final HashMap<String, String> keycodes = new HashMap<>();
 
     public HID(int x) {
         initKey();
