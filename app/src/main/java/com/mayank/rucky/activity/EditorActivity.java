@@ -1,6 +1,5 @@
 package com.mayank.rucky.activity;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -23,12 +22,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.pm.PackageInfoCompat;
 import androidx.security.crypto.EncryptedFile;
 import androidx.security.crypto.MasterKey;
@@ -129,10 +125,6 @@ public class EditorActivity extends AppCompatActivity {
 
         if (config.getInitState() && config.getSec())
             getKey();
-
-        if (savedInstanceState == null) {
-            requestPermissions();
-        }
 
         try {
             TrustKit.initializeWithNetworkSecurityConfiguration(this);
@@ -493,30 +485,6 @@ public class EditorActivity extends AppCompatActivity {
             Intent settingIntent = new Intent(EditorActivity.this, SettingsActivity.class);
             startActivity(settingIntent);
         });
-    }
-
-    private void requestPermissions() {
-        ArrayList<String> permission = new ArrayList<>();
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
-            permission.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
-            permission.add(Manifest.permission.READ_EXTERNAL_STORAGE);
-        if (!permission.isEmpty()) {
-            String[] per = new String[permission.size()];
-            ActivityCompat.requestPermissions(this, permission.toArray(per), 0);
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 0 && grantResults.length > 0 && permissions.length == grantResults.length) {
-            for (int i = 0; i < permissions.length; i++) {
-                if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
-                    requestPermissions();
-                }
-            }
-        }
     }
 
     private void getRoot() {

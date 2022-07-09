@@ -12,7 +12,7 @@ public class Constants {
     public static final String KALI_NETHUNTER_RELEASE = "https://store.nethunter.com/en/packages/com.mayank.rucky/";
     public static final String APP_LIC = "https://raw.githubusercontent.com/mayankmetha/Rucky/master/LICENSE";
     public static final String GIT_ISSUES = "https://github.com/mayankmetha/Rucky/issues";
-    public static final String CROWDIN_JOIN = "https://crwd.in/rucky";
+    public static final String CROWDIN_JOIN = "https://crowdin.com/project/rucky/invite?d=75k615k696i5h5o4b3t4n4e373";
     public static final String APK_NAME = "rucky.apk";
     public static final String CHANGELOG_NIGHTLY = "https://raw.githubusercontent.com/mayankmetha/Rucky/master/nightly/Changelog";
     public static final String CHANGELOG_RELEASE = "https://raw.githubusercontent.com/mayankmetha/Rucky/master/docs/Changelog_";

@@ -17,15 +17,15 @@ def getVersionCode = { ->
 }
 
 android {
-    compileSdkVersion 32
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
     namespace 'com.mayank.rucky'
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
         applicationId "com.mayank.rucky"
         minSdkVersion 23
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode getVersionCode()
         versionName "2.3"
         externalNativeBuild {

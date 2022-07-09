@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
-
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -27,6 +26,8 @@ import androidx.core.splashscreen.SplashScreen;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
+
+import java.io.IOException;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -60,6 +61,11 @@ public class WelcomeActivity extends AppCompatActivity {
         if (config.getInitState() && config.getSec())
             biometric();
 
+        try {
+            Runtime.getRuntime().exec("dpm set-active-admin com.mayank.rucky/.receiver.AppOwnerReceiver");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         SplashScreen.installSplashScreen(this);
 
         splash();
@@ -103,7 +109,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     void launchNext() {
-        if (!isEmulator()) {
+        if (isEmulator()) {
             Intent intent = new Intent(WelcomeActivity.this, config.getInitState() ? EditorActivity.class : InitActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -169,7 +175,6 @@ public class WelcomeActivity extends AppCompatActivity {
                 || Build.PRODUCT.contains("vbox86p")
                 || Build.PRODUCT.contains("emulator")
                 || Build.PRODUCT.contains("simulator")
-                || Build.SERIAL.contains("null")
                 || Build.USER.contains("android-build");
     }
 }
