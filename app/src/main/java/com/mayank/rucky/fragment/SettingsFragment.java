@@ -1,8 +1,6 @@
 package com.mayank.rucky.fragment;
 
-import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -17,19 +15,26 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
 
+import com.kimchangyoun.rootbeerFresh.RootBeer;
 import com.mayank.rucky.R;
 import com.mayank.rucky.activity.BrowserActivity;
 import com.mayank.rucky.activity.EditorActivity;
 import com.mayank.rucky.activity.HidActivity;
-import com.mayank.rucky.activity.SettingsActivity;
 import com.mayank.rucky.activity.WelcomeActivity;
-import com.mayank.rucky.receiver.AppOwnerReceiver;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
     private Config config;
+    private DataOutputStream dos;
+    private BufferedReader dis;
+    private String disStr;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -75,20 +80,64 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     private void deviceAdmin() {
         final SwitchPreference adminSwitch = findPreference(Constants.PREF_KEY_ADMIN);
         assert adminSwitch != null;
+        RootBeer rootBeer = new RootBeer(requireContext());
+        boolean root = rootBeer.isRooted() || rootBeer.isRootedWithoutBusyBoxCheck();
+        try {
+            Process p = Runtime.getRuntime().exec("su");
+            dos = new DataOutputStream(p.getOutputStream());
+            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            if (dos != null) {
+                dos.writeBytes("id\n");
+                dos.flush();
+                disStr = dis.readLine();
+                if (disStr.contains("uid=0")) {
+                    root = true;
+                }
+            }
+        } catch (Exception e) {
+            adminSwitch.setEnabled(false);
+            adminSwitch.setShouldDisableView(true);
+            adminSwitch.setVisible(false);
+            adminSwitch.setSelectable(false);
+        }
+        if(!root) {
+            adminSwitch.setEnabled(false);
+            adminSwitch.setShouldDisableView(true);
+            adminSwitch.setVisible(false);
+            adminSwitch.setSelectable(false);
+        } else {
+            adminSwitch.setEnabled(true);
+            adminSwitch.setShouldDisableView(false);
+            adminSwitch.setVisible(true);
+            adminSwitch.setSelectable(true);
+        }
         adminSwitch.setChecked(config.getDeviceAdmin());
-        DevicePolicyManager mDPM = (DevicePolicyManager)requireContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
         adminSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
             if (switched) {
-                Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
-                intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, new ComponentName(requireContext(), AppOwnerReceiver.class));
-                intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "");
-                SettingsActivity.startActivityForResult.launch(intent);
+                try {
+                    if (dos != null) {
+                        dos.writeBytes("dpm set-device-owner com.mayank.rucky/.receiver.AppOwnerReceiver;echo \"returnValue=$?\"\n");
+                        dos.flush();
+                        disStr = dis.readLine();
+                        config.setDeviceAdmin(disStr.contains("returnValue=0"));
+                    } config.setDeviceAdmin(false);
+                } catch (IOException e) {
+                    config.setDeviceAdmin(false);
+                }
             } else {
-                if(mDPM.isAdminActive(new ComponentName(requireContext(), AppOwnerReceiver.class)))
-                    mDPM.removeActiveAdmin(new ComponentName(requireContext(), AppOwnerReceiver.class));
-                restartActivity();
+                try {
+                    if (dos != null) {
+                        dos.writeBytes("dpm emove-active-admin com.mayank.rucky/.receiver.AppOwnerReceiver;echo \"returnValue=$?\"\n");
+                        dos.flush();
+                        disStr = dis.readLine();
+                        config.setDeviceAdmin(false);
+                    } config.setDeviceAdmin(false);
+                } catch (IOException e) {
+                    config.setDeviceAdmin(false);
+                }
             }
+            restartActivity();
             return true;
         });
     }
