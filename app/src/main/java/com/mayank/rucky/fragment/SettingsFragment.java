@@ -1,6 +1,8 @@
 package com.mayank.rucky.fragment;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -26,15 +28,12 @@ import com.mayank.rucky.utils.Constants;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
     private Config config;
     private DataOutputStream dos;
-    private BufferedReader dis;
-    private String disStr;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -85,59 +84,42 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         try {
             Process p = Runtime.getRuntime().exec("su");
             dos = new DataOutputStream(p.getOutputStream());
-            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            BufferedReader dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
             if (dos != null) {
                 dos.writeBytes("id\n");
                 dos.flush();
-                disStr = dis.readLine();
+                String disStr = dis.readLine();
                 if (disStr.contains("uid=0")) {
                     root = true;
                 }
             }
-        } catch (Exception e) {
-            adminSwitch.setEnabled(false);
-            adminSwitch.setShouldDisableView(true);
-            adminSwitch.setVisible(false);
-            adminSwitch.setSelectable(false);
+        } catch (Exception ignored) {
         }
-        if(!root) {
-            adminSwitch.setEnabled(false);
-            adminSwitch.setShouldDisableView(true);
-            adminSwitch.setVisible(false);
-            adminSwitch.setSelectable(false);
-        } else {
-            adminSwitch.setEnabled(true);
-            adminSwitch.setShouldDisableView(false);
-            adminSwitch.setVisible(true);
-            adminSwitch.setSelectable(true);
-        }
+        adminSwitch.setEnabled(root);
+        adminSwitch.setShouldDisableView(!root);
+        adminSwitch.setVisible(root);
+        adminSwitch.setSelectable(root);
         adminSwitch.setChecked(config.getDeviceAdmin());
         adminSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
             boolean switched = !((SwitchPreference) preference).isChecked();
             if (switched) {
                 try {
                     if (dos != null) {
-                        dos.writeBytes("dpm set-device-owner com.mayank.rucky/.receiver.AppOwnerReceiver;echo \"returnValue=$?\"\n");
+                        dos.writeBytes("dpm set-device-owner com.mayank.rucky/.receiver.AppOwnerReceiver\n");
                         dos.flush();
-                        disStr = dis.readLine();
-                        config.setDeviceAdmin(disStr.contains("returnValue=0"));
-                    } config.setDeviceAdmin(false);
-                } catch (IOException e) {
-                    config.setDeviceAdmin(false);
-                }
+                    }
+                } catch (Exception ignored) {}
             } else {
                 try {
                     if (dos != null) {
-                        dos.writeBytes("dpm emove-active-admin com.mayank.rucky/.receiver.AppOwnerReceiver;echo \"returnValue=$?\"\n");
+                        dos.writeBytes("dpm remove-active-admin com.mayank.rucky/.receiver.AppOwnerReceiver\n");
                         dos.flush();
-                        disStr = dis.readLine();
-                        config.setDeviceAdmin(false);
-                    } config.setDeviceAdmin(false);
-                } catch (IOException e) {
-                    config.setDeviceAdmin(false);
-                }
+                    }
+                } catch (Exception ignored) {}
+                DevicePolicyManager mDPM = (DevicePolicyManager)requireContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
+                if(mDPM.isDeviceOwnerApp(Constants.PACKAGE_NAME))
+                    mDPM.clearDeviceOwnerApp(Constants.PACKAGE_NAME);
             }
-            restartActivity();
             return true;
         });
     }

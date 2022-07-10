@@ -1,5 +1,6 @@
 package com.mayank.rucky.activity;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -24,6 +25,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.pm.PackageInfoCompat;
 import androidx.security.crypto.EncryptedFile;
@@ -108,6 +110,7 @@ public class EditorActivity extends AppCompatActivity {
     static long currentNightly;
     static long newNightly;
     public static int minAndroidSDK;
+    private static final int PERMISSION_REQUEST_NOTIFICATION = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,6 +137,11 @@ public class EditorActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(() -> supportedFiles(true), 1000);
 
         getReleaseSigningHash();
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, PERMISSION_REQUEST_NOTIFICATION);
+            }
+        }
         setNotificationChannel();
 
         if (config.getUpdateFlag())

@@ -27,8 +27,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mayank.rucky.R;
 import com.mayank.rucky.utils.Config;
 
-import java.io.IOException;
-
 public class WelcomeActivity extends AppCompatActivity {
 
     private Config config;
@@ -61,11 +59,6 @@ public class WelcomeActivity extends AppCompatActivity {
         if (config.getInitState() && config.getSec())
             biometric();
 
-        try {
-            Runtime.getRuntime().exec("dpm set-active-admin com.mayank.rucky/.receiver.AppOwnerReceiver");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         SplashScreen.installSplashScreen(this);
 
         splash();
