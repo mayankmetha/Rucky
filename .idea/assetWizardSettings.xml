@@ -386,7 +386,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/language/baseline_language_24.xml" />
+                                      <entry key="url" value="jar:file:/Applications/Android%20Studio%20Preview.app/Contents/plugins/android/lib/android.jar!/images/material/icons/materialicons/admin_panel_settings/baseline_admin_panel_settings_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -397,7 +397,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_locale" />
+                            <entry key="outputName" value="ic_device_owner" />
                             <entry key="sourceFile" value="$PROJECT_DIR$/app/animal.svg" />
                           </map>
                         </option>

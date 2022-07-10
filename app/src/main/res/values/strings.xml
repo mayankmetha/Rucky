@@ -89,6 +89,8 @@
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Night Mode</string>
     <string name="dark_theme_summary">Set dark theme</string>
+    <string name="device_admin_title">Make app device admin</string>
+    <string name="device_admin_summary">Required to bypass some of the restrictions on Android 13.</string>
     <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* to launch. On Android 10 onwards, icon will be disabled, but not hidden.</string>
     <string name="delete_dep_title">Uninstall App</string>

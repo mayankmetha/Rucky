@@ -16,6 +16,13 @@
             app:entryValues="@array/dark_theme_values" />
 
         <SwitchPreference
+            app:key="admin"
+            app:icon="@drawable/ic_device_owner"
+            app:defaultValue="false"
+            app:title="@string/device_admin_title"
+            app:summary="@string/device_admin_summary" />
+
+        <SwitchPreference
             app:key="icon"
             app:icon="@drawable/ic_launch"
             app:defaultValue="false"

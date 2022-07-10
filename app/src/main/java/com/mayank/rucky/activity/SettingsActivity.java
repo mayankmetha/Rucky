@@ -1,9 +1,12 @@
 package com.mayank.rucky.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -13,6 +16,7 @@ import com.mayank.rucky.utils.Config;
 
 public class SettingsActivity extends AppCompatActivity {
 
+    public static ActivityResultLauncher<Intent> startActivityForResult;
     private Config config;
 
     @Override
@@ -26,6 +30,13 @@ public class SettingsActivity extends AppCompatActivity {
             case 2: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES); break;
             default: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
+        startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            Intent restartIntent = new Intent(this, WelcomeActivity.class);
+            restartIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            restartIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            this.finish();
+            startActivity(restartIntent);
+        });
         setContentView(R.layout.activity_settings);
         getSupportFragmentManager().beginTransaction().replace(R.id.setting_container, new SettingsFragment()).commit();
     }

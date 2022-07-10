@@ -1,6 +1,8 @@
 package com.mayank.rucky.fragment;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -19,7 +21,9 @@ import com.mayank.rucky.R;
 import com.mayank.rucky.activity.BrowserActivity;
 import com.mayank.rucky.activity.EditorActivity;
 import com.mayank.rucky.activity.HidActivity;
+import com.mayank.rucky.activity.SettingsActivity;
 import com.mayank.rucky.activity.WelcomeActivity;
+import com.mayank.rucky.receiver.AppOwnerReceiver;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 
@@ -38,6 +42,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
 
         darkThemeSetting();
+        deviceAdmin();
         hideLauncherIcon();
         security();
         cleanup();
@@ -67,6 +72,27 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         });
     }
 
+    private void deviceAdmin() {
+        final SwitchPreference adminSwitch = findPreference(Constants.PREF_KEY_ADMIN);
+        assert adminSwitch != null;
+        adminSwitch.setChecked(config.getDeviceAdmin());
+        DevicePolicyManager mDPM = (DevicePolicyManager)requireContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
+        adminSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean switched = !((SwitchPreference) preference).isChecked();
+            if (switched) {
+                Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+                intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, new ComponentName(requireContext(), AppOwnerReceiver.class));
+                intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "");
+                SettingsActivity.startActivityForResult.launch(intent);
+            } else {
+                if(mDPM.isAdminActive(new ComponentName(requireContext(), AppOwnerReceiver.class)))
+                    mDPM.removeActiveAdmin(new ComponentName(requireContext(), AppOwnerReceiver.class));
+                restartActivity();
+            }
+            return true;
+        });
+    }
+
     private void hideLauncherIcon() {
         final SwitchPreference iconSwitch = findPreference(Constants.PREF_KEY_LAUNCHER_ICON);
         assert iconSwitch != null;
@@ -78,6 +104,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             } else {
                 requireActivity().getPackageManager().setComponentEnabledSetting(new ComponentName(Constants.PACKAGE_NAME, Constants.MAIN_ACTIVITY),PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
             }
+            restartActivity();
             return true;
         });
     }

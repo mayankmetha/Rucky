@@ -45,6 +45,15 @@ public class Config extends Application {
         editor.putBoolean(Constants.PREF_SETTING_UPDATE, canUpdate).apply();
     }
 
+    // device admin
+    public boolean getDeviceAdmin() {
+        return sharedPreferences.getBoolean(Constants.PREF_SETTING_ADMIN, false);
+    }
+
+    public void setDeviceAdmin(boolean isAdmin) {
+        editor.putBoolean(Constants.PREF_SETTING_ADMIN, isAdmin).apply();
+    }
+
     // launcher icon
     public void setIcon(boolean hideIcon) {
         editor.putBoolean(Constants.PREF_SETTING_ICON, hideIcon).apply();

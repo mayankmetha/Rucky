@@ -42,6 +42,7 @@ public class Constants {
     public static final String PREF_SETTINGS_DARK_THEME = "darkTheme";
     public static final String PREF_SETTING_INIT = "init";
     public static final String PREF_SETTING_UPDATE = "update";
+    public static final String PREF_SETTING_ADMIN = "admin";
     public static final String PREF_SETTING_ICON = "icon";
     public static final String PREF_SETTING_ADV_SECURITY = "advSecurity";
     public static final String PREF_CONFIGFS = "configfsUSB";
@@ -55,6 +56,7 @@ public class Constants {
 
     //shared preference keys
     public static final String PREF_KEY_DARK_THEME = "theme";
+    public static final String PREF_KEY_ADMIN = "admin";
     public static final String PREF_KEY_LAUNCHER_ICON = "icon";
     public static final String PREF_KEY_SECURITY = "sec";
     public static final String PREF_KEY_CLEANUP = "uninstall";
