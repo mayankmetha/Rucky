@@ -18,8 +18,8 @@ import java.util.ArrayList;
 
 public class HidAdapter extends ArrayAdapter<HidModel> {
 
-    ArrayList<HidModel> hidModelList;
-    Context context;
+    final ArrayList<HidModel> hidModelList;
+    final Context context;
 
     public HidAdapter(ArrayList<HidModel> hidModelList, Context context) {
         super(context, -1, hidModelList);

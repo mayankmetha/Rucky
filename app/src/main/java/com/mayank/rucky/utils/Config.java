@@ -46,10 +46,6 @@ public class Config extends Application {
     }
 
     // launcher icon
-    public boolean getIcon() {
-        return sharedPreferences.getBoolean(Constants.PREF_SETTING_ICON, false);
-    }
-
     public void setIcon(boolean hideIcon) {
         editor.putBoolean(Constants.PREF_SETTING_ICON, hideIcon).apply();
     }

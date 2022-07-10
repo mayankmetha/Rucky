@@ -2,10 +2,10 @@ package com.mayank.rucky.models;
 
 public class KeyModel {
 
-    char key;
-    String keyname;
-    int keycode;
-    int modifier;
+    final char key;
+    final String keyname;
+    final int keycode;
+    final int modifier;
 
     public KeyModel(char key, String keyname, int keycode, String ctrl, String shift, String alt, String meta) {
         this.key = key;
@@ -21,20 +21,12 @@ public class KeyModel {
         this.modifier = keyModifierGen(ctrl,shift,alt,meta);
     }
 
-    public void setKey(char key) {
-        this.key = key;
-    }
-
     public char getKey() {
         return key;
     }
 
     public String getKeyName() {
         return keyname;
-    }
-
-    public void setKeycode(int keycode) {
-        this.keycode = keycode;
     }
 
     public int getKeycode() {

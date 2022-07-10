@@ -2,9 +2,9 @@ package com.mayank.rucky.models;
 
 public class HidModel {
 
-    String name;
+    final String name;
     int revision;
-    String filename;
+    final String filename;
     String url;
     int state;
 

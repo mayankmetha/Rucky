@@ -37,8 +37,8 @@ public class WelcomeActivity extends AppCompatActivity {
         System.loadLibrary("dynamic_name");
     }
 
-    public native String changeProcessName();
-    public native String restoreProcessName();
+    public native void changeProcessName();
+    public native void restoreProcessName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

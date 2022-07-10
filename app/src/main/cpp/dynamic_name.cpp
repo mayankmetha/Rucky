@@ -19,7 +19,7 @@ const char* processName[] = {
         "com.android.chrome:sandboxed_process0"
 };
 
-extern "C" JNIEXPORT jstring JNICALL
+extern "C" JNIEXPORT void JNICALL
 Java_com_mayank_rucky_activity_WelcomeActivity_changeProcessName(JNIEnv* env, jobject /* this */) {
     std::random_device r;
     std::seed_seq seed{r(), r(), r(), r(), r(), r(), r(), r()};
@@ -29,13 +29,13 @@ Java_com_mayank_rucky_activity_WelcomeActivity_changeProcessName(JNIEnv* env, jo
     char *currentName = (char*)__progname;
     strcpy(currentName,processName[value]);
     currentName[strlen(processName[value])] = '\0';
-    return env->NewStringUTF(currentName);
+    env->NewStringUTF(currentName);
 }
 
-extern "C" JNIEXPORT jstring JNICALL
+extern "C" JNIEXPORT void JNICALL
 Java_com_mayank_rucky_activity_WelcomeActivity_restoreProcessName(JNIEnv* env, jobject /* this */) {
     char* currentName = (char*)__progname;
     strcpy(currentName,originalName);
     currentName[strlen(originalName)] = '\0';
-    return env->NewStringUTF(currentName);
+    env->NewStringUTF(currentName);
 }

@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class KeyAdapter extends ArrayAdapter<KeyModel> {
 
-    ArrayList<KeyModel> keyModelList;
-    Context context;
+    final ArrayList<KeyModel> keyModelList;
+    final Context context;
 
     public KeyAdapter(ArrayList<KeyModel> keyModelList, Context context) {
         super(context, -1, keyModelList);

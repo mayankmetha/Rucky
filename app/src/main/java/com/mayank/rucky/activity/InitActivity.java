@@ -141,7 +141,7 @@ public class InitActivity extends AppCompatActivity {
     }
 
 
-    ViewPager2.OnPageChangeCallback viewPagerPageChangeListener = new ViewPager2.OnPageChangeCallback() {
+    final ViewPager2.OnPageChangeCallback viewPagerPageChangeListener = new ViewPager2.OnPageChangeCallback() {
 
         @Override
         public void onPageSelected(int position) {
