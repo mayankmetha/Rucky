@@ -789,16 +789,14 @@ public class EditorActivity extends AppCompatActivity {
                     .setCancelable(false)
                     .setItems(fileName, (dialog, i) -> {
                         File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),files.get(i).getName());
-                        file.delete();
-                        if(file.exists()){
-                            try {
-                                file.getCanonicalFile().delete();
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                        try {
+                            if (!file.delete() && file.exists()) {
+                                if (!file.getCanonicalFile().delete() && file.exists()) {
+                                    getApplicationContext().deleteFile(file.getName());
+                                }
                             }
-                            if(file.exists()){
-                                getApplicationContext().deleteFile(file.getName());
-                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
                         Snackbar.make(findViewById(android.R.id.content), fileName[i]+" "+getResources().getString(R.string.file_deleted), Snackbar.LENGTH_SHORT).show();
                     })

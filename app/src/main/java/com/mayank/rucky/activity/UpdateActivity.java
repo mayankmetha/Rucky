@@ -173,18 +173,14 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
     void deleteOldUpdateFiles() {
-        if (apkFile.exists() || apkFile.isFile()) {
-            apkFile.delete();
-            if(apkFile.exists() || apkFile.isFile()){
-                try {
-                    apkFile.getCanonicalFile().delete();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                if(apkFile.exists()){
+        try {
+            if (!apkFile.delete() && apkFile.exists()) {
+                if (!apkFile.getCanonicalFile().delete() && apkFile.exists()) {
                     getApplicationContext().deleteFile(apkFile.getName());
                 }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
