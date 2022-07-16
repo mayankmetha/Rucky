@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ಮುಂದೆ</string>
+    <string name="init_skip">ಬಿಟ್ಟುಬಿಡಿ</string>
+    <string name="init_agree">ಒಪ್ಪುತ್ತೇನೆ</string>
+    <string name="init_start">ಹ್ಯಾಕ್ ಮಾಡಿ</string>
+    <string name="slideDesc1">ನಿಮ್ಮ ಸಾಧನವನ್ನು ರಬ್ಬರ್ ಡಕ್ಕಿಗೆ ತಿರುಗಿಸಿ!</string>
+    <string name="slideTitle2">USB ಕೇಬಲ್</string>
+    <string name="slideDesc2">ದಾಳಿಯನ್ನು ಪ್ರಾರಂಭಿಸಲು USB ವೈರ್ಡ್ ಇಂಟರ್ಫೇಸ್!</string>
+    <string name="slideTitle3">ನೆಟ್ವರ್ಕ್ ಸಾಕೆಟ್</string>
+    <string name="slideDesc3">ಬೆಂಬಲಿತ ಬಾಹ್ಯ ಪರಿಕರಗಳ ಮೂಲಕ ದಾಳಿಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ವೈ-ಫೈ ಆಧಾರಿತ ಸಾಕೆಟ್ ಇಂಟರ್ಫೇಸ್‌ಗಳು!</string>
+    <string name="slideTitle4">ಹಕ್ಕು ನಿರಾಕರಣೆ</string>
+    <string name="slideDesc4">ಉಂಟಾದ ಹಾನಿಗಳಿಗೆ ಅಪ್ಲಿಕೇಶನ್‌ನ ಬಳಕೆದಾರರು ಮಾತ್ರ ಜವಾಬ್ದಾರರಾಗಿರುತ್ತಾರೆ. ಈ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಿ ಮಾಡಿದ ಹಾನಿಗಳಿಗೆ ಬೇರೆ ಯಾವುದೇ ಘಟಕವನ್ನು ಹೊಣೆಗಾರರನ್ನಾಗಿ ಮಾಡಲಾಗುವುದಿಲ್ಲ! ಅಪ್ಲಿಕೇಶನ್ ಬಳಸುವಾಗ ಎಚ್ಚರಿಕೆಯಿಂದ ಅಭ್ಯಾಸ ಮಾಡಿ ಮತ್ತು ಇತರರಿಗೆ ಹಾನಿಯನ್ನುಂಟುಮಾಡಲು ಇದನ್ನು ಬಳಸಬೇಡಿ!</string>
+    <string name="slideTitle5">ಗೌಪ್ಯತಾ ನೀತಿ</string>
+    <string name="slideDesc5">ಯಾವುದೇ ರೂಪದ ಯಾವುದೇ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸಲಾಗುವುದಿಲ್ಲ, ಬಳಸಲಾಗುವುದಿಲ್ಲ ಮತ್ತು ಮಾರಾಟ ಮಾಡಲಾಗುವುದಿಲ್ಲ! ಗೌಪ್ಯತೆ ಕಾಳಜಿಯನ್ನು ಹೆಚ್ಚಿಸುವ ಕೆಲವು ಅನುಮತಿಗಳನ್ನು ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿನ ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳ ಕಾರ್ಯಕ್ಕಾಗಿ ಮಾತ್ರ ಕೇಳಲಾಗುತ್ತದೆ ಮತ್ತು ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸಲು ಅಲ್ಲ! ನಿಮ್ಮ ಗೌಪ್ಯತೆಯನ್ನು ಗೌರವಿಸಲಾಗುತ್ತದೆ!</string>
+    <string name="slideTitle6">ಅಪ್ಲಿಕೇಶನ್ ಅನುಮತಿ</string>
+    <string name="slideDesc6">ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್ ಕೆಲಸ ಮಾಡಲು ಅಗತ್ಯವಿರುವ ಅನುಮತಿಯನ್ನು ನೀಡಿ!</string>
     <!-- Update screen -->
+    <string name="update_new">ಹೊಸ ನವೀಕರಣ ಲಭ್ಯವಿರುವ ಆವೃತ್ತಿ:</string>
+    <string name="update_hash_error">ಫೈಲ್ ಸಹಿ ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ! ನವೀಕರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="update_activity">ರಕ್ಕಿ ನವೀಕರಣ</string>
+    <string name="update_version">ಆವೃತ್ತಿ</string>
+    <string name="update_version_nightly">ರಾತ್ರಿಯ ಆವೃತ್ತಿ</string>
+    <string name="update_changelog">ಚೇಂಜ್ಲಾಗ್</string>
+    <string name="update_status">ಸ್ಥಿತಿಯನ್ನು ನವೀಕರಿಸಿ</string>
+    <string name="update_action">ನವೀಕರಣವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಸ್ಥಾಪಿಸಿ</string>
+    <string name="update_downloading">ನವೀಕರಣವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
+    <string name="install_update">ನವೀಕರಣವನ್ನು ಅನ್ವಯಿಸಲಾಗುತ್ತಿದೆ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ನೀವು ಮರೆಮಾಡಲು ಅಥವಾ ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ನಿರ್ಗಮಿಸಲು ಬಯಸುವಿರಾ?</string>
+    <string name="btn_exit">ನಿರ್ಗಮಿಸಿ</string>
+    <string name="btn_back">ಮರೆಮಾಡಿ</string>
+    <string name="unlock">ಅಪ್ಲಿಕೇಶನ್ ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="auth">ದೃಢೀಕರಣವನ್ನು ದೃಢೀಕರಿಸಿ</string>
+    <string name="update">ನವೀಕರಿಸಿ</string>
+    <string name="setting">ಸಂಯೋಜನೆಗಳು</string>
+    <string name="codeHint">ಇಲ್ಲಿ ರಬ್ಬರ್ ಡಕಿ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ಟೈಪ್ ಮಾಡಿ ಅಥವಾ ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="loadBtn">ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="saveBtn">ಉಳಿಸಿ</string>
+    <string name="delBtn">ಅಳಿಸಿ</string>
+    <string name="runBtn">ಓಡು</string>
+    <string name="confBtn">ಸಂರಚನೆ</string>
+    <string name="btn_continue">ಮುಂದುವರಿಸಿ</string>
+    <string name="root_err">USB ಕೇಬಲ್ ದಾಳಿಗೆ ರೂಟ್ ಪ್ರವೇಶ ಅಗತ್ಯವಿದೆ!</string>
+    <string name="kernel_err">"ಯುಎಸ್‌ಬಿ ಕೇಬಲ್ ದಾಳಿಗೆ ಕರ್ನಲ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ!"</string>
+    <string name="vm">ವರ್ಚುವಲ್ ಪರಿಸರವು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ!</string>
     <!-- Config screen -->
+    <string name="config_activity">ಟ್ವೀಕ್ಸ್</string>
+    <string name="config_status_usb_on">USB ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
+    <string name="config_status_usb_off">USB ಸಂಪರ್ಕ ಕಡಿತಗೊಂಡಿದೆ</string>
+    <string name="config_status_net_on">ನೆಟ್‌ವರ್ಕ್ ಸಾಕೆಟ್ ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
+    <string name="config_status_net_off">ನೆಟ್‌ವರ್ಕ್ ಸಾಕೆಟ್ ಸಂಪರ್ಕ ಕಡಿತಗೊಂಡಿದೆ</string>
+    <string name="socket_address">ಸಾಕೆಟ್ ಐಪಿ ಮತ್ತು ಪೋರ್ಟ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID ಸಂರಚನೆ</string>
+    <string name="hid_download">ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="hid_update">ನವೀಕರಿಸಿ</string>
+    <string name="hid_edit">ತಿದ್ದು</string>
+    <string name="hid_delete">ಅಳಿಸಿ</string>
     <!-- Keylist screen -->
+    <string name="key_title">ಪ್ರಮುಖ ಹೆಸರು</string>
+    <string name="key_character">ಪ್ರಮುಖ ಪಾತ್ರ</string>
+    <string name="key_code">ಪ್ರಮುಖ ಕೋಡ್</string>
+    <string name="key_ctrl">Ctrl ಕೀ</string>
+    <string name="key_alt">ಆಲ್ಟ್ ಕೀ</string>
+    <string name="key_shift">ಶಿಫ್ಟ್ ಕೀ</string>
+    <string name="key_meta">ಮೆಟಾ ಕೀ</string>
+    <string name="keycode">ಪ್ರಮುಖ ಕೋಡ್</string>
+    <string name="modcode">ಮಾರ್ಪಡಿಸುವ ಕೋಡ್</string>
+    <string name="key_details">ಪ್ರಮುಖ ವಿವರಗಳು</string>
     <!-- Setting screen -->
+    <string name="setting_general">ಸಾಮಾನ್ಯ</string>
+    <string name="dark_theme_title">ರಾತ್ರಿ ಮೋಡ್</string>
+    <string name="dark_theme_summary">ಡಾರ್ಕ್ ಥೀಮ್ ಹೊಂದಿಸಿ</string>
+    <string name="device_admin_title">ಅಪ್ಲಿಕೇಶನ್ ಸಾಧನದ ಮಾಲೀಕರನ್ನು ಮಾಡಿ</string>
+    <string name="device_admin_summary">ರೂಟ್ ಅಗತ್ಯವಿದೆ. ಇದು Android ನಲ್ಲಿನ ಕೆಲವು ನಿರ್ಬಂಧಗಳನ್ನು ಬೈಪಾಸ್ ಮಾಡುವುದು.</string>
+    <string name="hide_icon_title">ಲಾಂಚರ್ ಐಕಾನ್ ಅನ್ನು ಮರೆಮಾಡಿ/ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ</string>
+    <string name="hide_icon_summary">ಡಯಲ್ *</string>
+    <string name="delete_dep_title">ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಅಸ್ಥಾಪಿಸಿ</string>
+    <string name="delete_dep_summary">ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ಮತ್ತು ಅಸ್ಥಾಪಿಸಿ.</string>
+    <string name="settings_sec_title">ಮುಂಗಡ ಭದ್ರತೆ</string>
+    <string name="settings_sec_desc">ಸ್ಕ್ರಿಪ್ಟ್ ಫೈಲ್ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಮತ್ತು ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
+    <string name="setting_device">ಅಟ್ಯಾಕ್ ಮೋಡ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="configfs_title">ಸ್ವಯಂ ಕಾನ್ಫಿಗರ್ ಕಾನ್ಫಿಗರ್ ಎಫ್ಎಸ್</string>
+    <string name="configfs_summary">ConfigFS ಬೆಂಬಲಿತ ಸಾಧನಗಳಲ್ಲಿ HID ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುತ್ತದೆ. USB ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಮುರಿಯಬಹುದು.</string>
+    <string name="hid_choice_title">ಗ್ರಾಹಕೀಯಗೊಳಿಸಬಹುದಾದ HID</string>
+    <string name="hid_choice_summary">ಲೆಗಸಿ HID ಮತ್ತು ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದಾದ HID ನಡುವೆ ಬದಲಿಸಿ</string>
+    <string name="hid_title">HID ಭಾಷೆ</string>
+    <string name="hid_summary">ಹೆಚ್ಚುವರಿ HID ಭಾಷೆಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಅಥವಾ ಹೊಸ HID ಲೇಔಟ್‌ಗಳನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಿ.</string>
+    <string name="settings_usb_title">USB ಕನೆಕ್ಟ್ ಲಾಂಚ್</string>
+    <string name="settings_usb_desc">USB ಸಂಪರ್ಕಗೊಂಡಾಗ ರನ್ ಬಟನ್ ದಾಳಿಯನ್ನು ಪ್ರಾರಂಭಿಸುತ್ತದೆ.</string>
+    <string name="settings_net_title">ನೆಟ್‌ವರ್ಕ್ ಸಾಕೆಟ್ ಸಂಪರ್ಕ ಪ್ರಾರಂಭ</string>
+    <string name="settings_net_desc">ನೆಟ್‌ವರ್ಕ್ ಸಾಕೆಟ್ ಸಂಪರ್ಕಗೊಂಡಾಗ ರನ್ ಬಟನ್ ದಾಳಿಯನ್ನು ಪ್ರಾರಂಭಿಸುತ್ತದೆ.</string>
+    <string name="setting_about">ಮಾಹಿತಿ</string>
+    <string name="setting_developer_title">ಡೆವಲಪರ್</string>
+    <string name="settings_version_title">ಆವೃತ್ತಿ</string>
+    <string name="settings_arch_title">ವಾಸ್ತುಶಿಲ್ಪ</string>
+    <string name="settings_lic_title">ಪರವಾನಗಿ</string>
+    <string name="settings_support">ಬೆಂಬಲ</string>
+    <string name="settings_git_title">GitHub ಸಮಸ್ಯೆಗಳು</string>
+    <string name="settings_git_desc">ಸಮಸ್ಯೆಗಳನ್ನು ಅಥವಾ ವೈಶಿಷ್ಟ್ಯದ ವಿನಂತಿಯನ್ನು ಸೇರಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ.</string>
+    <string name="settings_locale_title">ಸ್ಥಳೀಕರಣ</string>
+    <string name="settings_locale_desc">ಅಪ್ಲಿಕೇಶನ್ ಸ್ಥಳೀಕರಣಕ್ಕೆ ಕೊಡುಗೆ ನೀಡಿ.</string>
+    <string name="release">ವಿತರಣೆ</string>
+    <string name="releaseNetHunter">NetHunter ಆಪ್ ಸ್ಟೋರ್</string>
+    <string name="releaseGitHub">GitHub ಬಿಡುಗಡೆ</string>
+    <string name="releaseGitHubNightly">GitHub ರಾತ್ರಿ</string>
+    <string name="releaseTest">ಡೀಬಗ್ ಬಿಡುಗಡೆ</string>
+    <string name="releaseOthers">ಬೆಂಬಲವಿಲ್ಲದ ಬಿಡುಗಡೆ</string>
+    <string name="btn_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="btn_save">ಉಳಿಸಿ</string>
+    <string name="file_saved">ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="title_open_file">ಫೈಲ್ ತೆರೆಯಿರಿ</string>
+    <string name="title_delete_file">ಫೈಲ್ ಅಳಿಸಿ</string>
+    <string name="file_deleted">ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="file_name">ಕಡತದ ಹೆಸರು</string>
+    <string name="title_save_file">ಕಡತವನ್ನು ಉಳಿಸು</string>
+    <string name="hid_version">ಆವೃತ್ತಿ: %d</string>
+    <string-array name="modes">
+        <item>USB ಕೇಬಲ್</item>
+        <item>ನೆಟ್ವರ್ಕ್ ಸಾಕೆಟ್</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>ಅಮೇರಿಕನ್ ಇಂಗ್ಲೀಷ್</item>
+        <item>ಟರ್ಕಿಶ್</item>
+        <item>ಸ್ವೀಡಿಷ್</item>
+        <item>ಸ್ಲೊವೇನಿಯನ್</item>
+        <item>ರಷ್ಯನ್</item>
+        <item>ಪೋರ್ಚುಗೀಸ್</item>
+        <item>ನಾರ್ವೇಜಿಯನ್</item>
+        <item>ಇಟಾಲಿಯನ್</item>
+        <item>ಕ್ರೊಯೇಷಿಯನ್</item>
+        <item>ಯುನೈಟೆಡ್ ಕಿಂಗ್ಡಮ್ ಇಂಗ್ಲೀಷ್</item>
+        <item>ಫ್ರೆಂಚ್</item>
+        <item>ಫಿನ್ನಿಶ್</item>
+        <item>ಸ್ಪ್ಯಾನಿಷ್</item>
+        <item>ಡ್ಯಾನಿಶ್</item>
+        <item>ಜರ್ಮನ್</item>
+        <item>ಕೆನಡಿಯನ್ ಫ್ರೆಂಚ್</item>
+        <item>ಬ್ರೆಜಿಲಿಯನ್ ಪೋರ್ಚುಗೀಸ್</item>
+        <item>ಬೆಲರೂಸಿಯನ್</item>
+        <item>ಹಂಗೇರಿಯನ್</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ಆಟೋ</item>
+        <item>ದಿನ</item>
+        <item>ರಾತ್ರಿ</item>
+    </string-array>
 </resources>

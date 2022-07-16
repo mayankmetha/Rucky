@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">OLANDELAYO</string>
+    <string name="init_skip">YEQA</string>
+    <string name="init_agree">VUMA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Vula idivayisi yakho ibe Ducky Lerabha!</string>
+    <string name="slideTitle2">Ikhebula le-USB</string>
+    <string name="slideDesc2">I-interface ye-USB enezintambo zokuqalisa ukuhlasela!</string>
+    <string name="slideTitle3">Isokhethi Yenethiwekhi</string>
+    <string name="slideDesc3">Izixhumanisi zesokhethi ezisekelwe ku-Wi-Fi zokuqalisa ukuhlasela ngamathuluzi angaphandle asekelwayo!</string>
+    <string name="slideTitle4">Umshwana wokuzihlangula</string>
+    <string name="slideDesc4">Umsebenzisi wohlelo lokusebenza unesibopho kuphela ngomonakalo odaliwe. Ayikho enye inhlangano engathweswa icala ngomonakalo owenziwe kusetshenziswa lolu hlelo lokusebenza! Zijwayeze ukuqapha lapho usebenzisa uhlelo lokusebenza futhi ungasebenzisi lokhu ukulimaza abanye!</string>
+    <string name="slideTitle5">Inqubomgomo yobumfihlo</string>
+    <string name="slideDesc5">Ayikho Idatha yanoma yiluphi uhlobo eqoqwayo, isetshenziswe futhi idayiswe! Ezinye izimvume ezingase ziphakamise ukukhathazeka kobumfihlo zicelwa kuphela ekusebenzeni kwezici ezithile kuhlelo lokusebenza futhi akukhona ukuqoqa idatha! Ubumfihlo bakho buyahlonishwa!</string>
+    <string name="slideTitle6">Imvume yohlelo lokusebenza</string>
+    <string name="slideDesc6">Sicela unikeze uhlelo lokusebenza imvume edingekayo yokusebenza!</string>
     <!-- Update screen -->
+    <string name="update_new">Inguqulo Entsha Yesibuyekezo Esitholakalayo:</string>
+    <string name="update_hash_error">Ukungafani Kwesiginesha Yefayela! Ayikwazi Ukubuyekeza.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Inguqulo</string>
+    <string name="update_version_nightly">Inguqulo yasebusuku</string>
+    <string name="update_changelog">I-Changelog</string>
+    <string name="update_status">Buyekeza Isimo</string>
+    <string name="update_action">Landa futhi ufake isibuyekezo</string>
+    <string name="update_downloading">Ilanda Isibuyekezo</string>
+    <string name="install_update">Ifaka isibuyekezo</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ungathanda ukufihla noma ukuphuma ohlelweni lokusebenza?</string>
+    <string name="btn_exit">Phuma</string>
+    <string name="btn_back">Fihla</string>
+    <string name="unlock">Vula uhlelo lokusebenza</string>
+    <string name="auth">Qinisekisa ukufakazela ubuqiniso</string>
+    <string name="update">Buyekeza</string>
+    <string name="setting">Izilungiselelo</string>
+    <string name="codeHint">Thayipha noma layisha imibhalo ye-rubber ducky lapha</string>
+    <string name="loadBtn">Layisha</string>
+    <string name="saveBtn">Londoloza</string>
+    <string name="delBtn">Susa</string>
+    <string name="runBtn">Gijima</string>
+    <string name="confBtn">Lungiselela</string>
+    <string name="btn_continue">Qhubeka</string>
+    <string name="root_err">Ukufinyelela Kwezimpande Kudingeka Ekuhlaselweni Kwekhebula le-USB!</string>
+    <string name="kernel_err">"I-Kernel Ayisekelwe Ekuhlaselweni Kwekhebula le-USB!"</string>
+    <string name="vm">Indawo ebonakalayo ayisekelwe!</string>
     <!-- Config screen -->
+    <string name="config_activity">Ama-tweaks</string>
+    <string name="config_status_usb_on">I-USB Ixhunyiwe</string>
+    <string name="config_status_usb_off">I-USB Inqanyuliwe</string>
+    <string name="config_status_net_on">Isokhethi Yenethiwekhi Ixhunyiwe</string>
+    <string name="config_status_net_off">Isokhethi Yenethiwekhi Inqanyuliwe</string>
+    <string name="socket_address">Faka I-IP Yesokhethi kanye Nekheli Lembobo</string>
     <!-- HID config screen -->
+    <string name="hid_activity">I-HID Config</string>
+    <string name="hid_download">Landa</string>
+    <string name="hid_update">Buyekeza</string>
+    <string name="hid_edit">Hlela</string>
+    <string name="hid_delete">Susa</string>
     <!-- Keylist screen -->
+    <string name="key_title">Igama elingukhiye</string>
+    <string name="key_character">Umlingiswa Obalulekile</string>
+    <string name="key_code">Ikhodi engukhiye</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Ukhiye we-Alt</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">I-Meta Key</string>
+    <string name="keycode">Ikhodi engukhiye</string>
+    <string name="modcode">Ikhodi Yokushintsha</string>
+    <string name="key_details">Imininingwane Ebalulekile</string>
     <!-- Setting screen -->
+    <string name="setting_general">Okujwayelekile</string>
+    <string name="dark_theme_title">Imodi Yasebusuku</string>
+    <string name="dark_theme_summary">Setha itimu emnyama</string>
+    <string name="device_admin_title">Yenza umnikazi wedivayisi yohlelo lokusebenza</string>
+    <string name="device_admin_summary">Kudingeka Impande. Lokhu okokweqa eminye imikhawulo ku-Android.</string>
+    <string name="hide_icon_title">Fihla/Khubaza Isithonjana Sokuqalisa</string>
+    <string name="hide_icon_summary">Dayela *</string>
+    <string name="delete_dep_title">Khipha uhlelo lokusebenza</string>
+    <string name="delete_dep_summary">Hlanza futhi ukhiphe uhlelo lokusebenza.</string>
+    <string name="settings_sec_title">Ukuphepha Okuthuthukile</string>
+    <string name="settings_sec_desc">Nika amandla ukubethela kwefayela lombhalo kanye nokukhiya isikrini.</string>
+    <string name="setting_device">Izilungiselelo Zemodi Yokuhlasela</string>
+    <string name="configfs_title">Lungiselela Ngokuzenzakalelayo ConfigFS</string>
+    <string name="configfs_summary">Izolungiselela i-HID kumadivayisi asekelwe e-ConfigFS. Ingase yephule isilungiselelo se-USB.</string>
+    <string name="hid_choice_title">I-HID eyenziwe ngokwezifiso</string>
+    <string name="hid_choice_summary">Shintsha phakathi kwe-Legacy HID kanye ne-HID Engenziwa Ngokwezifiso</string>
+    <string name="hid_title">Ulimi HID</string>
+    <string name="hid_summary">Landa izilimi ezengeziwe ze-HID noma udizayine izakhiwo ezintsha ze-HID.</string>
+    <string name="settings_usb_title">I-USB Connect Launch</string>
+    <string name="settings_usb_desc">Inkinobho yokuqalisa izoqalisa ukuhlasela lapho i-USB ixhunyiwe.</string>
+    <string name="settings_net_title">I-Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Inkinobho yokuqalisa izoqalisa ukuhlasela lapho Isokhethi Yenethiwekhi ixhunyiwe.</string>
+    <string name="setting_about">Ulwazi</string>
+    <string name="setting_developer_title">Unjiniyela</string>
+    <string name="settings_version_title">Inguqulo</string>
+    <string name="settings_arch_title">Izakhiwo</string>
+    <string name="settings_lic_title">Ilayisensi</string>
+    <string name="settings_support">Ukusekela</string>
+    <string name="settings_git_title">Izinkinga ze-GitHub</string>
+    <string name="settings_git_desc">Chofoza ukuze wengeze izinkinga noma isicelo sesici.</string>
+    <string name="settings_locale_title">Ukwenza kwasendaweni</string>
+    <string name="settings_locale_desc">Faka isandla ekwenziweni kwasendaweni kohlelo lokusebenza.</string>
+    <string name="release">Ukusabalalisa</string>
+    <string name="releaseNetHunter">Isitolo se-NetHunter App</string>
+    <string name="releaseGitHub">Ukukhishwa kwe-GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Ukukhishwa kwe-Debug</string>
+    <string name="releaseOthers">Ukukhishwa Okungasekelwe</string>
+    <string name="btn_cancel">Khansela</string>
+    <string name="btn_save">Londoloza</string>
+    <string name="file_saved">igciniwe</string>
+    <string name="title_open_file">Vula Ifayela</string>
+    <string name="title_delete_file">Susa Ifayela</string>
+    <string name="file_deleted">kususiwe</string>
+    <string name="file_name">Igama lefayela</string>
+    <string name="title_save_file">Londoloza Ifayela</string>
+    <string name="hid_version">Inguqulo: %d</string>
+    <string-array name="modes">
+        <item>Ikhebula le-USB</item>
+        <item>Isokhethi Yenethiwekhi</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>IsiNgisi saseMelika</item>
+        <item>IsiTurkey</item>
+        <item>IsiSwidi</item>
+        <item>IsiSlovenian</item>
+        <item>IsiRashiya</item>
+        <item>IsiPutukezi</item>
+        <item>IsiNorwegian</item>
+        <item>IsiNtaliyane</item>
+        <item>IsiCroatia</item>
+        <item>IsiNgisi sase-United Kingdom</item>
+        <item>IsiFulentshi</item>
+        <item>IsiFinnish</item>
+        <item>ISpanishi</item>
+        <item>Isi-Danish</item>
+        <item>IsiJalimane</item>
+        <item>IsiFulentshi saseCanada</item>
+        <item>IsiPutukezi saseBrazil</item>
+        <item>IsiBelarusian</item>
+        <item>IsiHungary</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Okuzenzakalelayo</item>
+        <item>Usuku</item>
+        <item>Ebusuku</item>
+    </string-array>
 </resources>

@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ਅਗਲਾ</string>
+    <string name="init_skip">ਛੱਡੋ</string>
+    <string name="init_agree">ਸਹਿਮਤ ਹੋ</string>
+    <string name="init_start">ਹੈਕ</string>
+    <string name="slideDesc1">ਆਪਣੀ ਡਿਵਾਈਸ ਨੂੰ ਰਬੜ ਦੀ ਡਕੀ ਵਿੱਚ ਬਦਲੋ!</string>
+    <string name="slideTitle2">USB ਕੇਬਲ</string>
+    <string name="slideDesc2">ਹਮਲਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ USB ਵਾਇਰਡ ਇੰਟਰਫੇਸ!</string>
+    <string name="slideTitle3">ਨੈੱਟਵਰਕ ਸਾਕਟ</string>
+    <string name="slideDesc3">ਸਮਰਥਿਤ ਬਾਹਰੀ ਟੂਲਸ ਦੁਆਰਾ ਹਮਲਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ Wi-Fi ਅਧਾਰਤ ਸਾਕਟ ਇੰਟਰਫੇਸ!</string>
+    <string name="slideTitle4">ਬੇਦਾਅਵਾ</string>
+    <string name="slideDesc4">ਐਪ ਦਾ ਉਪਯੋਗਕਰਤਾ ਹੋਏ ਨੁਕਸਾਨ ਲਈ ਪੂਰੀ ਤਰ੍ਹਾਂ ਜ਼ਿੰਮੇਵਾਰ ਹੈ। ਇਸ ਐਪ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਹੋਏ ਨੁਕਸਾਨ ਲਈ ਕਿਸੇ ਹੋਰ ਸੰਸਥਾ ਨੂੰ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਠਹਿਰਾਇਆ ਜਾ ਸਕਦਾ! ਐਪ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਸਮੇਂ ਸਾਵਧਾਨੀ ਵਰਤੋ ਅਤੇ ਦੂਜਿਆਂ ਨੂੰ ਨੁਕਸਾਨ ਪਹੁੰਚਾਉਣ ਲਈ ਇਸਦੀ ਵਰਤੋਂ ਨਾ ਕਰੋ!</string>
+    <string name="slideTitle5">ਪਰਾਈਵੇਟ ਨੀਤੀ</string>
+    <string name="slideDesc5">ਕਿਸੇ ਵੀ ਫਾਰਮ ਦਾ ਕੋਈ ਡਾਟਾ ਇਕੱਠਾ, ਵਰਤਿਆ ਅਤੇ ਵੇਚਿਆ ਨਹੀਂ ਜਾਂਦਾ! ਕੁਝ ਅਨੁਮਤੀਆਂ ਜੋ ਗੋਪਨੀਯਤਾ ਦੀਆਂ ਚਿੰਤਾਵਾਂ ਨੂੰ ਵਧਾ ਸਕਦੀਆਂ ਹਨ, ਸਿਰਫ ਐਪ ਵਿੱਚ ਕੁਝ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੇ ਕੰਮ ਕਰਨ ਲਈ ਕਹੀਆਂ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਡੇਟਾ ਇਕੱਠਾ ਕਰਨ ਲਈ ਨਹੀਂ ਹਨ! ਤੁਹਾਡੀ ਗੋਪਨੀਯਤਾ ਦਾ ਆਦਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ!</string>
+    <string name="slideTitle6">ਐਪ ਅਨੁਮਤੀ</string>
+    <string name="slideDesc6">ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਨੂੰ ਕੰਮ ਕਰਨ ਲਈ ਲੋੜੀਂਦੀ ਇਜਾਜ਼ਤ ਦਿਓ!</string>
     <!-- Update screen -->
+    <string name="update_new">ਨਵਾਂ ਅੱਪਡੇਟ ਉਪਲਬਧ ਸੰਸਕਰਣ:</string>
+    <string name="update_hash_error">ਫਾਈਲ ਦਸਤਖਤ ਬੇਮੇਲ! ਅੱਪਡੇਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="update_activity">ਰਕੀ ਅੱਪਡੇਟ</string>
+    <string name="update_version">ਸੰਸਕਰਣ</string>
+    <string name="update_version_nightly">ਰਾਤ ਦਾ ਸੰਸਕਰਣ</string>
+    <string name="update_changelog">ਚੇਂਜਲਾਗ</string>
+    <string name="update_status">ਅੱਪਡੇਟ ਸਥਿਤੀ</string>
+    <string name="update_action">ਅੱਪਡੇਟ ਨੂੰ ਡਾਊਨਲੋਡ ਅਤੇ ਸਥਾਪਤ ਕਰੋ</string>
+    <string name="update_downloading">ਅੱਪਡੇਟ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
+    <string name="install_update">ਅੱਪਡੇਟ ਲਾਗੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ਕੀ ਤੁਸੀਂ ਐਪ ਨੂੰ ਲੁਕਾਉਣਾ ਜਾਂ ਬਾਹਰ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="btn_exit">ਨਿਕਾਸ</string>
+    <string name="btn_back">ਓਹਲੇ</string>
+    <string name="unlock">ਐਪ ਨੂੰ ਅਨਲੌਕ ਕਰੋ</string>
+    <string name="auth">ਪ੍ਰਮਾਣਿਕਤਾ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string name="update">ਅੱਪਡੇਟ ਕਰੋ</string>
+    <string name="setting">ਸੈਟਿੰਗਾਂ</string>
+    <string name="codeHint">ਇੱਥੇ ਰਬੜ ਡਕੀ ਸਕ੍ਰਿਪਟ ਟਾਈਪ ਕਰੋ ਜਾਂ ਲੋਡ ਕਰੋ</string>
+    <string name="loadBtn">ਲੋਡ ਕਰੋ</string>
+    <string name="saveBtn">ਸੇਵ ਕਰੋ</string>
+    <string name="delBtn">ਮਿਟਾਓ</string>
+    <string name="runBtn">ਰਨ</string>
+    <string name="confBtn">ਸੰਰਚਨਾ</string>
+    <string name="btn_continue">ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="root_err">USB ਕੇਬਲ ਹਮਲੇ ਲਈ ਰੂਟ ਪਹੁੰਚ ਦੀ ਲੋੜ ਹੈ!</string>
+    <string name="kernel_err">"USB ਕੇਬਲ ਹਮਲੇ ਲਈ ਕਰਨਲ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ!"</string>
+    <string name="vm">ਵਰਚੁਅਲ ਵਾਤਾਵਰਣ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ!</string>
     <!-- Config screen -->
+    <string name="config_activity">ਟਵੀਕਸ</string>
+    <string name="config_status_usb_on">USB ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="config_status_usb_off">USB ਡਿਸਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="config_status_net_on">ਨੈੱਟਵਰਕ ਸਾਕਟ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="config_status_net_off">ਨੈੱਟਵਰਕ ਸਾਕਟ ਡਿਸਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="socket_address">ਸਾਕਟ ਆਈਪੀ ਅਤੇ ਪੋਰਟ ਪਤਾ ਦਰਜ ਕਰੋ</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID ਸੰਰਚਨਾ</string>
+    <string name="hid_download">ਡਾਊਨਲੋਡ ਕਰੋ</string>
+    <string name="hid_update">ਅੱਪਡੇਟ ਕਰੋ</string>
+    <string name="hid_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
+    <string name="hid_delete">ਮਿਟਾਓ</string>
     <!-- Keylist screen -->
+    <string name="key_title">ਮੁੱਖ ਨਾਮ</string>
+    <string name="key_character">ਮੁੱਖ ਪਾਤਰ</string>
+    <string name="key_code">ਕੁੰਜੀ ਕੋਡ</string>
+    <string name="key_ctrl">Ctrl ਕੁੰਜੀ</string>
+    <string name="key_alt">Alt ਕੁੰਜੀ</string>
+    <string name="key_shift">ਸ਼ਿਫਟ ਕੁੰਜੀ</string>
+    <string name="key_meta">ਮੈਟਾ ਕੁੰਜੀ</string>
+    <string name="keycode">ਕੁੰਜੀ ਕੋਡ</string>
+    <string name="modcode">ਸੋਧਕ ਕੋਡ</string>
+    <string name="key_details">ਮੁੱਖ ਵੇਰਵੇ</string>
     <!-- Setting screen -->
+    <string name="setting_general">ਜਨਰਲ</string>
+    <string name="dark_theme_title">ਨਾਈਟ ਮੋਡ</string>
+    <string name="dark_theme_summary">ਗੂੜ੍ਹਾ ਥੀਮ ਸੈੱਟ ਕਰੋ</string>
+    <string name="device_admin_title">ਐਪ ਨੂੰ ਡਿਵਾਈਸ ਦਾ ਮਾਲਕ ਬਣਾਓ</string>
+    <string name="device_admin_summary">ਰੂਟ ਦੀ ਲੋੜ ਹੈ। ਇਹ Android \'ਤੇ ਕੁਝ ਪਾਬੰਦੀਆਂ ਨੂੰ ਬਾਈਪਾਸ ਕਰਨ ਲਈ ਹੈ।</string>
+    <string name="hide_icon_title">ਲੌਂਚਰ ਆਈਕਨ ਨੂੰ ਲੁਕਾਓ/ਅਯੋਗ ਕਰੋ</string>
+    <string name="hide_icon_summary">ਡਾਇਲ*</string>
+    <string name="delete_dep_title">ਐਪ ਨੂੰ ਅਣਇੰਸਟੌਲ ਕਰੋ</string>
+    <string name="delete_dep_summary">ਐਪ ਨੂੰ ਸਾਫ਼ ਕਰੋ ਅਤੇ ਅਣਇੰਸਟੌਲ ਕਰੋ।</string>
+    <string name="settings_sec_title">ਅਗਾਊਂ ਸੁਰੱਖਿਆ</string>
+    <string name="settings_sec_desc">ਸਕ੍ਰਿਪਟ ਫਾਈਲ ਐਨਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਸਕ੍ਰੀਨ ਲੌਕ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ।</string>
+    <string name="setting_device">ਅਟੈਕ ਮੋਡ ਸੈਟਿੰਗਾਂ</string>
+    <string name="configfs_title">ਆਟੋ ਸੰਰਚਨਾ ConfigFS</string>
+    <string name="configfs_summary">ConfigFS ਸਮਰਥਿਤ ਡਿਵਾਈਸਾਂ \'ਤੇ HID ਨੂੰ ਕੌਂਫਿਗਰ ਕਰੇਗਾ। USB ਸੈਟਿੰਗ ਨੂੰ ਤੋੜ ਸਕਦਾ ਹੈ।</string>
+    <string name="hid_choice_title">ਅਨੁਕੂਲਿਤ HID</string>
+    <string name="hid_choice_summary">ਪੁਰਾਤਨ HID ਅਤੇ ਅਨੁਕੂਲਿਤ HID ਵਿਚਕਾਰ ਸਵਿਚ ਕਰੋ</string>
+    <string name="hid_title">HID ਭਾਸ਼ਾ</string>
+    <string name="hid_summary">ਵਾਧੂ HID ਭਾਸ਼ਾਵਾਂ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰੋ ਜਾਂ ਨਵੇਂ HID ਲੇਆਉਟ ਡਿਜ਼ਾਈਨ ਕਰੋ।</string>
+    <string name="settings_usb_title">USB ਕਨੈਕਟ ਲਾਂਚ</string>
+    <string name="settings_usb_desc">USB ਕਨੈਕਟ ਹੋਣ \'ਤੇ ਰਨ ਬਟਨ ਹਮਲਾ ਸ਼ੁਰੂ ਕਰੇਗਾ।</string>
+    <string name="settings_net_title">ਨੈੱਟਵਰਕ ਸਾਕਟ ਕਨੈਕਟ ਲਾਂਚ</string>
+    <string name="settings_net_desc">ਨੈੱਟਵਰਕ ਸਾਕਟ ਕਨੈਕਟ ਹੋਣ \'ਤੇ ਰਨ ਬਟਨ ਹਮਲਾ ਸ਼ੁਰੂ ਕਰੇਗਾ।</string>
+    <string name="setting_about">ਜਾਣਕਾਰੀ</string>
+    <string name="setting_developer_title">ਵਿਕਾਸਕਾਰ</string>
+    <string name="settings_version_title">ਸੰਸਕਰਣ</string>
+    <string name="settings_arch_title">ਆਰਕੀਟੈਕਚਰ</string>
+    <string name="settings_lic_title">ਲਾਇਸੰਸ</string>
+    <string name="settings_support">ਸਪੋਰਟ</string>
+    <string name="settings_git_title">GitHub ਮੁੱਦੇ</string>
+    <string name="settings_git_desc">ਸਮੱਸਿਆਵਾਂ ਜਾਂ ਵਿਸ਼ੇਸ਼ਤਾ ਦੀ ਬੇਨਤੀ ਨੂੰ ਜੋੜਨ ਲਈ ਕਲਿੱਕ ਕਰੋ।</string>
+    <string name="settings_locale_title">ਸਥਾਨੀਕਰਨ</string>
+    <string name="settings_locale_desc">ਐਪ ਸਥਾਨਕਕਰਨ ਵਿੱਚ ਯੋਗਦਾਨ ਪਾਓ।</string>
+    <string name="release">ਵੰਡ</string>
+    <string name="releaseNetHunter">NetHunter ਐਪ ਸਟੋਰ</string>
+    <string name="releaseGitHub">GitHub ਰੀਲੀਜ਼</string>
+    <string name="releaseGitHubNightly">GitHub ਰਾਤ ਨੂੰ</string>
+    <string name="releaseTest">ਡੀਬੱਗ ਰੀਲੀਜ਼</string>
+    <string name="releaseOthers">ਗੈਰ-ਸਹਾਇਕ ਰੀਲੀਜ਼</string>
+    <string name="btn_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="btn_save">ਸੇਵ ਕਰੋ</string>
+    <string name="file_saved">ਸੰਭਾਲੀ ਗਈ</string>
+    <string name="title_open_file">ਫਾਇਲ ਖੋਲੋ</string>
+    <string name="title_delete_file">ਫਾਈਲ ਮਿਟਾਓ</string>
+    <string name="file_deleted">ਹਟਾਇਆ ਗਿਆ</string>
+    <string name="file_name">ਫਾਈਲ ਦਾ ਨਾਮ</string>
+    <string name="title_save_file">ਫਾਈਲ ਸੇਵ ਕਰੋ</string>
+    <string name="hid_version">ਸੰਸਕਰਣ: %d</string>
+    <string-array name="modes">
+        <item>USB ਕੇਬਲ</item>
+        <item>ਨੈੱਟਵਰਕ ਸਾਕਟ</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>ਅਮਰੀਕੀ ਅੰਗਰੇਜ਼ੀ</item>
+        <item>ਤੁਰਕੀ</item>
+        <item>ਸਵੀਡਿਸ਼</item>
+        <item>ਸਲੋਵੇਨੀਆਈ</item>
+        <item>ਰੂਸੀ</item>
+        <item>ਪੁਰਤਗਾਲੀ</item>
+        <item>ਨਾਰਵੇਜਿਅਨ</item>
+        <item>ਇਤਾਲਵੀ</item>
+        <item>ਕਰੋਸ਼ੀਅਨ</item>
+        <item>ਯੂਨਾਈਟਿਡ ਕਿੰਗਡਮ ਅੰਗਰੇਜ਼ੀ</item>
+        <item>ਫ੍ਰੈਂਚ</item>
+        <item>ਫਿਨਿਸ਼</item>
+        <item>ਸਪੇਨੀ</item>
+        <item>ਡੈਨਿਸ਼</item>
+        <item>ਜਰਮਨ</item>
+        <item>ਕੈਨੇਡੀਅਨ ਫ੍ਰੈਂਚ</item>
+        <item>ਬ੍ਰਾਜ਼ੀਲੀ ਪੁਰਤਗਾਲੀ</item>
+        <item>ਬੇਲਾਰੂਸੀ</item>
+        <item>ਹੰਗੇਰੀਅਨ</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ਆਟੋ</item>
+        <item>ਦਿਨ</item>
+        <item>ਰਾਤ</item>
+    </string-array>
 </resources>

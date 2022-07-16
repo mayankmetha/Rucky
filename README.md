@@ -1,4 +1,4 @@
-# Rucky 
+# Rucky
 [![GitHub](https://img.shields.io/github/license/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/blob/master/LICENSE)
 [![Crowdin](https://badges.crowdin.net/rucky/localized.svg)](https://crwd.in/rucky)
 [![Android](https://img.shields.io/badge/android-6.x%2B-lightgrey)](https://github.com/mayankmetha/Rucky)
@@ -297,13 +297,13 @@ All mouse/pointer commands will start with this command. REPEAT command and DELA
 
 <b>Note:</b>
 1. In parameter field `[button]`, which emulates a mouse button action and can have the following value:
-    - LEFT
-    - RIGHT
-    - MIDDLE
+   - LEFT
+   - RIGHT
+   - MIDDLE
 2. In parameter field `[x]` and `[y]`, which emulates mouse movement action and can have the value range from -127 to 127. This represents pixels and is relative to where the mouse currently is. If you are at the point (150,150) then you can move the mouse to (127,127) pixels of this point followed by (23,23). Therefore, if the mouse is at (0,0) [top left corner] and you want to move to (1920, 1080) [bottom right corner, assuming a 1080p display], then you would need to move the mouse a few times 127 pixels at a time (or less) in either direction.
 3. In parameter field `[scroll]`, which emulates mouse scroll whell action and can have the following value:
-    - UP
-    - DOWN
+   - UP
+   - DOWN
 4. In parameters `[num]` represents a number. This is used to repeat the action. Alternatively, REPEAT command can be used.
 
 <b>Syntax:</b>
@@ -361,7 +361,7 @@ REPEAT 1
 |   ❌    |    bh     |       Bihari        |     0%     |
 |   ❌    |    bi     |       Bislama       |     0%     |
 |   ❌    |    bs     |       Bosnian       |     0%     |
-|   🚧   |    br     |       Breton        |    14%     |
+|   ✅    |    br     |       Breton        |    100%    |
 |   ✅    |    bg     |      Bulgarian      |    100%    |
 |   ❌    |    my     |       Burmese       |     0%     |
 |   ❌    |    ca     |       Catalan       |     0%     |
@@ -403,7 +403,7 @@ REPEAT 1
 |   ✅    |    el     |        Greek        |    100%    |
 |   ❌    |    kl     |     Greenlandic     |     0%     |
 |   ❌    |    gn     |       Guarani       |     0%     |
-|   ❌    |    gu     |      Gujarati       |     0%     |
+|   ✅    |    gu     |      Gujarati       |    100%    |
 |   ❌    |    ht     |   Haitian Creole    |     0%     |
 |   ❌    |    ha     |        Hausa        |     0%     |
 |   ❌    |   b+haw   |      Hawaiian       |     0%     |
@@ -414,7 +414,7 @@ REPEAT 1
 |   ❌    |    ho     |      Hiri Motu      |     0%     |
 |   ❌    |   b+hmn   |        Hmong        |     0%     |
 |   ✅    |    hu     |      Hungarian      |    100%    |
-|   🚧   |    is     |      Icelandic      |     1%     |
+|   ✅    |    is     |      Icelandic      |    100%    |
 |   ❌    |    io     |         Ido         |     0%     |
 |   ❌    |    ig     |        Igbo         |     0%     |
 |   ❌    |   b+ilo   |       Ilokano       |     0%     |
@@ -425,7 +425,7 @@ REPEAT 1
 |   ✅    |    ja     |      Japanese       |    100%    |
 |   ❌    |    jv     |      Javanese       |     0%     |
 |   ❌    |   b+kab   |       Kabyle        |     0%     |
-|   ❌    |    kn     |       Kannada       |     0%     |
+|   ✅    |    kn     |       Kannada       |    100%    |
 |   ❌    |   b+pam   |     Kapampangan     |     0%     |
 |   ❌    |    ks     |      Kashmiri       |     0%     |
 |   ❌    |   b+csb   |      Kashubian      |     0%     |
@@ -437,7 +437,7 @@ REPEAT 1
 |   ❌    |    kg     |        Kongo        |     0%     |
 |   ❌    |   b+kok   |       Konkani       |     0%     |
 |   ✅    |    ko     |       Korean        |    100%    |
-|   🚧   |    ku     |       Kurdish       |     1%     |
+|   ✅    |    ku     |       Kurdish       |    100%    |
 |   ❌    |    kj     |      Kwanyama       |     0%     |
 |   ❌    |    ky     |       Kyrgyz        |     0%     |
 |   ❌    |    lo     |         Lao         |     0%     |
@@ -456,12 +456,12 @@ REPEAT 1
 |   ❌    |   b+mai   |      Maithili       |     0%     |
 |   ❌    |    mg     |      Malagasy       |     0%     |
 |   ✅    |    ms     |        Malay        |    100%    |
-|   ❌    |    ml     |      Malayalam      |     0%     |
+|   ✅    |    ml     |      Malayalam      |    100%    |
 |   ❌    |    mt     |       Maltese       |     0%     |
 |   ❌    |    gv     |        Manx         |     0%     |
 |   ❌    |    mi     |        Maori        |     0%     |
 |   ❌    |   b+arn   |     Mapudungun      |     0%     |
-|   ❌    |    mr     |       Marathi       |     0%     |
+|   ✅    |    mr     |       Marathi       |    100%    |
 |   ❌    |    mh     |     Marshallese     |     0%     |
 |   ❌    |   b+moh   |       Mohawk        |     0%     |
 |   ❌    |    mn     |      Mongolian      |     0%     |
@@ -482,10 +482,10 @@ REPEAT 1
 |   ❌    |    pi     |        Pali         |     0%     |
 |   ❌    |   b+pap   |     Papiamento      |     0%     |
 |   ❌    |    ps     |       Pashto        |     0%     |
-|   🚧   |    fa     |       Persian       |     8%     |
+|   ✅    |    fa     |       Persian       |    100%    |
 |   ✅    |    pl     |       Polish        |    100%    |
 |   ✅    |    pt     |     Portuguese      |    100%    |
-|   ❌    |    pa     |       Punjabi       |     0%     |
+|   ✅    |    pa     |       Punjabi       |    100%    |
 |   ❌    |    qu     |       Quechua       |     0%     |
 |   ✅    |    ro     |      Romanian       |    100%    |
 |   ❌    |    rm     |       Romansh       |     0%     |
@@ -501,7 +501,7 @@ REPEAT 1
 |   ❌    | b+sr+Latn |   Serbian (Latin)   |     0%     |
 |   ❌    |    sn     |        Shona        |     0%     |
 |   ❌    |    ii     |     Sichuan Yi      |     0%     |
-|   ❌    |    sd     |       Sindhi        |     0%     |
+|   ✅    |    sd     |       Sindhi        |    100%    |
 |   ❌    |    si     |       Sinhala       |     0%     |
 |   ✅    |    sk     |       Slovak        |    100%    |
 |   ✅    |    sl     |      Slovenian      |    100%    |
@@ -534,17 +534,18 @@ REPEAT 1
 |   ✅    |  ur-rIN   |      Urdu (IN)      |    100%    |
 |   ✅    |  ur-rPK   |      Urdu (PK)      |    100%    |
 |   ❌    |    ug     |       Uyghur        |     0%     |
-|   ❌    |    uz     |        Uzbek        |     0%     |
+|   ✅    |    uz     |        Uzbek        |    100%    |
 |   ❌    |    ve     |        Venda        |     0%     |
 |   ✅    |    vi     |     Vietnamese      |    100%    |
 |   ❌    |    wa     |       Walloon       |     0%     |
-|   ❌    |    cy     |        Welsh        |     0%     |
+|   ✅    |    cy     |        Welsh        |    100%    |
 |   ❌    |    wo     |        Wolof        |     0%     |
-|   ❌    |    xh     |        Xhosa        |     0%     |
+|   ✅    |    xh     |        Xhosa        |    100%    |
 |   ❌    |   b+sah   |     Yakut/Sakha     |     0%     |
-|   ❌    |    ji     |       Yiddish       |     0%     |
-|   ❌    |    yo     |       Yoruba        |     0%     |
-|   ❌    |    zu     |        Zulu         |     0%     |
+|   ✅    |    ji     |       Yiddish       |    100%    |
+|   ✅    |    yo     |       Yoruba        |    100%    |
+|   ✅    |    zu     |        Zulu         |    100%    |
+
 
 ---
 

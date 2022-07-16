@@ -4,9 +4,38 @@
     <!-- Init Screen -->
     <string name="init_next">بعدی</string>
     <string name="init_skip">رد کردن</string>
+    <string name="init_agree">موافق</string>
+    <string name="init_start">هک</string>
+    <string name="slideDesc1">دستگاه خود را به یک داکی لاستیکی تبدیل کنید!</string>
+    <string name="slideTitle2">کابل یو اس بی</string>
+    <string name="slideDesc2">رابط سیمی USB برای حمله!</string>
+    <string name="slideTitle3">سوکت شبکه</string>
+    <string name="slideDesc3">رابط های سوکت مبتنی بر Wi-Fi برای راه اندازی حمله از طریق ابزارهای خارجی پشتیبانی شده!</string>
+    <string name="slideTitle4">سلب مسئولیت</string>
+    <string name="slideDesc4">مسئولیت خسارات وارده بر عهده کاربر برنامه است. هیچ نهاد دیگری را نمی توان در قبال خسارات وارده با استفاده از این برنامه مسئول دانست! هنگام استفاده از برنامه احتیاط کنید و از آن برای آسیب رساندن به دیگران استفاده نکنید!</string>
+    <string name="slideTitle5">سیاست حفظ حریم خصوصی</string>
+    <string name="slideDesc5">هیچ داده ای از هر شکلی جمع آوری، استفاده و فروخته نمی شود! برخی از مجوزهایی که می توانند نگرانی های مربوط به حفظ حریم خصوصی را ایجاد کنند، فقط برای عملکرد برخی از ویژگی های برنامه درخواست می شوند و برای جمع آوری داده ها نیستند! حریم خصوصی شما محترم است!</string>
+    <string name="slideTitle6">مجوز برنامه</string>
+    <string name="slideDesc6">لطفاً مجوز لازم برای کار را به برنامه بدهید!</string>
     <!-- Update screen -->
+    <string name="update_new">به‌روزرسانی جدید نسخه موجود:</string>
+    <string name="update_hash_error">عدم تطابق امضای فایل! نمی توان به روز رسانی کرد.</string>
+    <string name="update_activity">به روز رسانی راکی</string>
+    <string name="update_version">نسخه</string>
+    <string name="update_version_nightly">نسخه شبانه</string>
+    <string name="update_changelog">تغییرات</string>
+    <string name="update_status">وضعیت به روز رسانی</string>
+    <string name="update_action">آپدیت را دانلود و نصب کنید</string>
+    <string name="update_downloading">در حال دانلود به روز رسانی</string>
+    <string name="install_update">در حال اعمال به روز رسانی</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">آیا می خواهید برنامه را مخفی کنید یا از آن خارج شوید؟</string>
+    <string name="btn_exit">خارج شوید</string>
+    <string name="btn_back">پنهان شدن</string>
     <string name="unlock">نرم‌افزارهای قفل شده</string>
+    <string name="auth">تایید احراز هویت</string>
+    <string name="update">به روز رسانی</string>
+    <string name="setting">تنظیمات</string>
     <string name="codeHint">Type or load rubber ducky scripts here</string>
     <string name="loadBtn">بارگذاری</string>
     <string name="saveBtn">ذخیره سازی</string>
@@ -14,10 +43,109 @@
     <string name="runBtn">اجرا کن</string>
     <string name="confBtn">پیکربندی</string>
     <string name="btn_continue">ادامه</string>
+    <string name="root_err">دسترسی روت برای حمله کابل USB مورد نیاز است!</string>
+    <string name="kernel_err">"کرنل برای حمله کابل USB پشتیبانی نمی شود!"</string>
+    <string name="vm">محیط مجازی پشتیبانی نمی شود!</string>
     <!-- Config screen -->
+    <string name="config_activity">ترفندها</string>
+    <string name="config_status_usb_on">USB متصل است</string>
+    <string name="config_status_usb_off">USB قطع شد</string>
+    <string name="config_status_net_on">سوکت شبکه متصل است</string>
+    <string name="config_status_net_off">سوکت شبکه قطع شد</string>
+    <string name="socket_address">سوکت IP و آدرس پورت را وارد کنید</string>
     <!-- HID config screen -->
+    <string name="hid_activity">پیکربندی HID</string>
+    <string name="hid_download">دانلود</string>
+    <string name="hid_update">به روز رسانی</string>
+    <string name="hid_edit">ویرایش کنید</string>
     <string name="hid_delete">حذف</string>
     <!-- Keylist screen -->
+    <string name="key_title">نام کلید</string>
+    <string name="key_character">شخصیت کلیدی</string>
+    <string name="key_code">کد کلیدی</string>
+    <string name="key_ctrl">کلید Ctrl</string>
+    <string name="key_alt">کلید Alt</string>
+    <string name="key_shift">کلید Shift</string>
+    <string name="key_meta">کلید متا</string>
+    <string name="keycode">کد کلیدی</string>
+    <string name="modcode">کد اصلاح کننده</string>
+    <string name="key_details">جزئیات کلیدی</string>
     <!-- Setting screen -->
+    <string name="setting_general">عمومی</string>
+    <string name="dark_theme_title">حالت شب</string>
+    <string name="dark_theme_summary">تنظیم تم تیره</string>
+    <string name="device_admin_title">مالک دستگاه برنامه شوید</string>
+    <string name="device_admin_summary">نیاز به ریشه این برای دور زدن برخی از محدودیت های اندروید است.</string>
+    <string name="hide_icon_title">پنهان کردن/غیرفعال کردن نماد راه‌انداز</string>
+    <string name="hide_icon_summary">شماره گیری *</string>
+    <string name="delete_dep_title">برنامه را حذف نصب کنید</string>
+    <string name="delete_dep_summary">برنامه را پاک و حذف کنید.</string>
+    <string name="settings_sec_title">امنیت پیشرفته</string>
+    <string name="settings_sec_desc">رمزگذاری فایل اسکریپت و قفل صفحه را فعال کنید.</string>
+    <string name="setting_device">تنظیمات حالت حمله</string>
+    <string name="configfs_title">پیکربندی خودکار ConfigFS</string>
+    <string name="configfs_summary">HID را در دستگاه های پشتیبانی شده از ConfigFS پیکربندی می کند. ممکن است تنظیمات USB را خراب کند.</string>
+    <string name="hid_choice_title">HID قابل تنظیم</string>
+    <string name="hid_choice_summary">بین HID قدیمی و HID قابل تنظیم تغییر دهید</string>
+    <string name="hid_title">زبان HID</string>
+    <string name="hid_summary">زبان‌های HID اضافی را دانلود کنید یا طرح‌بندی‌های HID جدید طراحی کنید.</string>
+    <string name="settings_usb_title">USB Connect راه اندازی شد</string>
+    <string name="settings_usb_desc">وقتی USB وصل شد، دکمه Run حمله را راه اندازی می کند.</string>
+    <string name="settings_net_title">اتصال سوکت شبکه راه اندازی شد</string>
+    <string name="settings_net_desc">هنگامی که سوکت شبکه متصل است، دکمه Run حمله را راه اندازی می کند.</string>
+    <string name="setting_about">اطلاعات</string>
+    <string name="setting_developer_title">توسعه دهنده</string>
+    <string name="settings_version_title">نسخه</string>
+    <string name="settings_arch_title">معماری</string>
+    <string name="settings_lic_title">مجوز</string>
+    <string name="settings_support">پشتیبانی</string>
+    <string name="settings_git_title">مشکلات GitHub</string>
+    <string name="settings_git_desc">برای افزودن مشکلات یا درخواست ویژگی کلیک کنید.</string>
+    <string name="settings_locale_title">بومی سازی</string>
+    <string name="settings_locale_desc">در بومی سازی برنامه مشارکت کنید.</string>
+    <string name="release">توزیع</string>
+    <string name="releaseNetHunter">فروشگاه برنامه NetHunter</string>
+    <string name="releaseGitHub">انتشار GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">انتشار اشکال زدایی</string>
+    <string name="releaseOthers">نسخه پشتیبانی نشده</string>
+    <string name="btn_cancel">لغو کنید</string>
     <string name="btn_save">ذخیره سازی</string>
+    <string name="file_saved">ذخیره</string>
+    <string name="title_open_file">فایل را باز کنید</string>
+    <string name="title_delete_file">حذف فایل</string>
+    <string name="file_deleted">حذف شده</string>
+    <string name="file_name">نام فایل</string>
+    <string name="title_save_file">ذخیره فایل</string>
+    <string name="hid_version">نسخه: %d</string>
+    <string-array name="modes">
+        <item>کابل یو اس بی</item>
+        <item>سوکت شبکه</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>انگلیسی آمریکایی</item>
+        <item>ترکی</item>
+        <item>سوئدی</item>
+        <item>اسلوونیایی</item>
+        <item>روسی</item>
+        <item>پرتغالی</item>
+        <item>نروژی</item>
+        <item>ایتالیایی</item>
+        <item>کروات</item>
+        <item>انگلیسی انگلستان</item>
+        <item>فرانسوی</item>
+        <item>فنلاندی</item>
+        <item>اسپانیایی</item>
+        <item>دانمارکی</item>
+        <item>آلمانی</item>
+        <item>فرانسوی کانادایی</item>
+        <item>پرتغالی برزیل</item>
+        <item>بلاروسی</item>
+        <item>مجارستانی</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>خودکار</item>
+        <item>روز</item>
+        <item>شب</item>
+    </string-array>
 </resources>

@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">اڳتي</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">متفق</string>
+    <string name="init_start">هيڪ</string>
+    <string name="slideDesc1">پنھنجي ڊوائيس کي ربر ڊڪي ڏانھن ڦيرايو!</string>
+    <string name="slideTitle2">USB ڪيبل</string>
+    <string name="slideDesc2">حملي کي شروع ڪرڻ لاءِ USB وائرڊ انٽرفيس!</string>
+    <string name="slideTitle3">نيٽ ورڪ ساکٽ</string>
+    <string name="slideDesc3">معاون خارجي اوزار ذريعي حملي شروع ڪرڻ لاءِ وائي فائي جي بنياد تي ساکٽ انٽرفيس!</string>
+    <string name="slideTitle4">رد ڪرڻ</string>
+    <string name="slideDesc4">ايپ جو استعمال ڪندڙ صرف نقصان جي ذميوار آهي. ٻيو ڪو به ادارو هن ايپ کي استعمال ڪندي ٿيل نقصانن جو ذميوار نٿو ٿي سگهي! ايپ استعمال ڪرڻ وقت احتياط ڪريو ۽ ٻين کي نقصان پهچائڻ لاءِ استعمال نه ڪريو!</string>
+    <string name="slideTitle5">رازداري پاليسي</string>
+    <string name="slideDesc5">ڪنهن به قسم جي ڊيٽا گڏ نه ڪئي وئي آهي، استعمال ٿيل ۽ وڪرو ڪيو ويو آهي! ڪجهه اجازتون جيڪي رازداري جي خدشات کي وڌائي سگھن ٿيون صرف ايپ ۾ ڪجهه خاصيتن جي ڪم ڪرڻ لاءِ پڇيا ويا آهن ۽ ڊيٽا گڏ ڪرڻ لاءِ نه آهن! توهان جي رازداري جو احترام آهي!</string>
+    <string name="slideTitle6">ايپ جي اجازت</string>
+    <string name="slideDesc6">مھرباني ڪري ايپ کي ڪم ڪرڻ جي گھربل اجازت ڏيو!</string>
     <!-- Update screen -->
+    <string name="update_new">نئون اپڊيٽ دستياب نسخو:</string>
+    <string name="update_hash_error">فائل جي دستخط بي ترتيب! اپڊيٽ نه ٿي سگھي.</string>
+    <string name="update_activity">رڪي اپڊيٽ</string>
+    <string name="update_version">نسخو</string>
+    <string name="update_version_nightly">رات جو نسخو</string>
+    <string name="update_changelog">تبديليءَ وارو</string>
+    <string name="update_status">اپڊيٽ اسٽيٽس</string>
+    <string name="update_action">اپڊيٽ ڊائون لوڊ ۽ انسٽال ڪريو</string>
+    <string name="update_downloading">اپڊيٽ ڊائون لوڊ ڪندي</string>
+    <string name="install_update">اپڊيٽ لاڳو ڪرڻ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ڇا توھان لڪائڻ چاھيو ٿا يا ايپ مان نڪرڻ چاھيو ٿا؟</string>
+    <string name="btn_exit">نڪرڻ</string>
+    <string name="btn_back">لڪائڻ</string>
+    <string name="unlock">ايپ کوليو</string>
+    <string name="auth">تصديق جي تصديق ڪريو</string>
+    <string name="update">تازه ڪاري</string>
+    <string name="setting">سيٽنگون</string>
+    <string name="codeHint">ٽائپ ڪريو يا لوڊ ڪريو ربر ڊڪي اسڪرپٽ هتي</string>
+    <string name="loadBtn">لوڊ</string>
+    <string name="saveBtn">بچايو</string>
+    <string name="delBtn">حذف ڪريو</string>
+    <string name="runBtn">ڊوڙ</string>
+    <string name="confBtn">ترتيب</string>
+    <string name="btn_continue">جاري رکو</string>
+    <string name="root_err">USB ڪيبل حملي لاءِ روٽ رسائي جي ضرورت آهي!</string>
+    <string name="kernel_err">"USB ڪيبل حملي لاءِ ڪنيل سپورٽ ناهي!"</string>
+    <string name="vm">مجازي ماحول سپورٽ نه آهي!</string>
     <!-- Config screen -->
+    <string name="config_activity">ٽائيڪس</string>
+    <string name="config_status_usb_on">USB ڳنڍيل</string>
+    <string name="config_status_usb_off">USB منقطع</string>
+    <string name="config_status_net_on">نيٽ ورڪ ساکٽ ڳنڍيل</string>
+    <string name="config_status_net_off">نيٽ ورڪ ساکٽ منقطع</string>
+    <string name="socket_address">داخل ڪريو ساکٽ IP ۽ پورٽ ايڊريس</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID ترتيب</string>
+    <string name="hid_download">ڊائون لوڊ ڪريو</string>
+    <string name="hid_update">تازه ڪاري</string>
+    <string name="hid_edit">ترميم ڪريو</string>
+    <string name="hid_delete">حذف ڪريو</string>
     <!-- Keylist screen -->
+    <string name="key_title">اهم نالو</string>
+    <string name="key_character">اهم ڪردار</string>
+    <string name="key_code">اهم ڪوڊ</string>
+    <string name="key_ctrl">Ctrl ڪي</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">شفٽ چاٻي</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">اهم ڪوڊ</string>
+    <string name="modcode">ترميمي ڪوڊ</string>
+    <string name="key_details">اهم تفصيل</string>
     <!-- Setting screen -->
+    <string name="setting_general">جنرل</string>
+    <string name="dark_theme_title">رات جو موڊ</string>
+    <string name="dark_theme_summary">ڳاڙهو موضوع سيٽ ڪريو</string>
+    <string name="device_admin_title">ايپ ڊيوائس مالڪ ٺاهيو</string>
+    <string name="device_admin_summary">روٽ گهربل. اهو آهي Android تي ڪجهه پابندين کي نظرانداز ڪرڻ.</string>
+    <string name="hide_icon_title">لانچر آئڪن کي لڪايو/بند ڪريو</string>
+    <string name="hide_icon_summary">ڊائل *</string>
+    <string name="delete_dep_title">ايپ کي انسٽال ڪريو</string>
+    <string name="delete_dep_summary">ايپ کي صاف ڪريو ۽ انسٽال ڪريو.</string>
+    <string name="settings_sec_title">اڳواٽ سيڪيورٽي</string>
+    <string name="settings_sec_desc">اسڪرپٽ فائل انڪرپشن ۽ اسڪرين لاڪ کي فعال ڪريو.</string>
+    <string name="setting_device">حملو موڊ سيٽنگون</string>
+    <string name="configfs_title">خودڪار ٺاھ جوڙ ConfigFS</string>
+    <string name="configfs_summary">ConfigFS سپورٽ ڊوائيسز تي HID ترتيب ڏيندو. USB سيٽنگ کي ٽوڙي سگھي ٿو.</string>
+    <string name="hid_choice_title">حسب ضرورت HID</string>
+    <string name="hid_choice_summary">تبديل ڪريو Legacy HID ۽ حسب ضرورت HID جي وچ ۾</string>
+    <string name="hid_title">HID ٻولي</string>
+    <string name="hid_summary">اضافي HID ٻوليون ڊائون لوڊ ڪريو يا نئون HID ترتيب ٺاھيو.</string>
+    <string name="settings_usb_title">USB Connect لانچ</string>
+    <string name="settings_usb_desc">رن بٽڻ حملو شروع ڪندو جڏهن USB ڳنڍيل هوندو.</string>
+    <string name="settings_net_title">نيٽ ورڪ ساکٽ ڪنيڪشن لانچ</string>
+    <string name="settings_net_desc">رن بٽڻ حملو شروع ڪندو جڏهن نيٽورڪ ساکٽ ڳنڍيل آهي.</string>
+    <string name="setting_about">ڄاڻ</string>
+    <string name="setting_developer_title">ڊولپر</string>
+    <string name="settings_version_title">نسخو</string>
+    <string name="settings_arch_title">آرڪيٽيڪچر</string>
+    <string name="settings_lic_title">لائسنس</string>
+    <string name="settings_support">حمايت</string>
+    <string name="settings_git_title">GitHub مسئلا</string>
+    <string name="settings_git_desc">مسئلا يا خصوصيت جي درخواست شامل ڪرڻ لاءِ ڪلڪ ڪريو.</string>
+    <string name="settings_locale_title">مقامي ڪرڻ</string>
+    <string name="settings_locale_desc">ايپ لوڪلائيزيشن ۾ تعاون ڪريو.</string>
+    <string name="release">ورهائڻ</string>
+    <string name="releaseNetHunter">NetHunter ايپ اسٽور</string>
+    <string name="releaseGitHub">GitHub رليز</string>
+    <string name="releaseGitHubNightly">GitHub رات جو</string>
+    <string name="releaseTest">ڊيبگ رليز</string>
+    <string name="releaseOthers">غير معاون ريليز</string>
+    <string name="btn_cancel">منسوخ ڪريو</string>
+    <string name="btn_save">بچايو</string>
+    <string name="file_saved">بچايو</string>
+    <string name="title_open_file">فائل کوليو</string>
+    <string name="title_delete_file">فائل کي حذف ڪريو</string>
+    <string name="file_deleted">حذف ٿيل</string>
+    <string name="file_name">فائل جو نالو</string>
+    <string name="title_save_file">فائل محفوظ ڪريو</string>
+    <string name="hid_version">نسخو: %d</string>
+    <string-array name="modes">
+        <item>USB ڪيبل</item>
+        <item>نيٽ ورڪ ساکٽ</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>آمريڪي انگريزي</item>
+        <item>ترڪي</item>
+        <item>سويڊني</item>
+        <item>سلوويني</item>
+        <item>روسي</item>
+        <item>پرتگالي</item>
+        <item>نارويجي</item>
+        <item>اطالوي</item>
+        <item>ڪروشيائي</item>
+        <item>برطانيه انگريزي</item>
+        <item>فرانسي</item>
+        <item>فني</item>
+        <item>اندلسي</item>
+        <item>ڊينش ٻولي</item>
+        <item>جرمني</item>
+        <item>ڪينيڊا فرانسيسي</item>
+        <item>برازيل پرتگالي</item>
+        <item>بيلاروسي</item>
+        <item>هنگري</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>خودڪار</item>
+        <item>ڏينهن</item>
+        <item>رات</item>
+    </string-array>
 </resources>

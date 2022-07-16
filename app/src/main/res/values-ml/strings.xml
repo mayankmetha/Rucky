@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">അടുത്തത്</string>
+    <string name="init_skip">ഒഴിവാക്കുക</string>
+    <string name="init_agree">സമ്മതിക്കുക</string>
+    <string name="init_start">ഹാക്ക്</string>
+    <string name="slideDesc1">നിങ്ങളുടെ ഉപകരണം ഒരു റബ്ബർ ഡക്കിയിലേക്ക് മാറ്റുക!</string>
+    <string name="slideTitle2">യൂഎസ്ബി കേബിൾ</string>
+    <string name="slideDesc2">ആക്രമണം നടത്താൻ യുഎസ്ബി വയർഡ് ഇന്റർഫേസ്!</string>
+    <string name="slideTitle3">നെറ്റ്‌വർക്ക് സോക്കറ്റ്</string>
+    <string name="slideDesc3">പിന്തുണയ്‌ക്കുന്ന ബാഹ്യ ഉപകരണങ്ങൾ വഴി ആക്രമണം ആരംഭിക്കുന്നതിനുള്ള വൈ-ഫൈ അധിഷ്‌ഠിത സോക്കറ്റ് ഇന്റർഫേസുകൾ!</string>
+    <string name="slideTitle4">നിരാകരണം</string>
+    <string name="slideDesc4">നാശനഷ്ടങ്ങൾക്ക് ആപ്പിന്റെ ഉപയോക്താവ് മാത്രമാണ് ഉത്തരവാദി. ഈ ആപ്പ് ഉപയോഗിച്ച് വരുത്തിയ നാശനഷ്ടങ്ങൾക്ക് മറ്റൊരു സ്ഥാപനത്തിനും ബാധ്യതയില്ല! ആപ്പ് ഉപയോഗിക്കുമ്പോൾ ജാഗ്രത പാലിക്കുക, മറ്റുള്ളവർക്ക് ദോഷം വരുത്താൻ ഇത് ഉപയോഗിക്കരുത്!</string>
+    <string name="slideTitle5">സ്വകാര്യതാനയം</string>
+    <string name="slideDesc5">ഒരു രൂപത്തിന്റെയും ഡാറ്റ ശേഖരിക്കുകയോ ഉപയോഗിക്കുകയോ വിൽക്കുകയോ ചെയ്യുന്നില്ല! സ്വകാര്യതാ ആശങ്കകൾ ഉന്നയിക്കുന്ന ചില അനുമതികൾ ആപ്പിലെ ചില ഫീച്ചറുകളുടെ പ്രവർത്തനത്തിന് വേണ്ടി മാത്രമാണ് ആവശ്യപ്പെടുന്നത്, ഡാറ്റ ശേഖരിക്കാനുള്ളതല്ല! നിങ്ങളുടെ സ്വകാര്യത മാനിക്കപ്പെടുന്നു!</string>
+    <string name="slideTitle6">ആപ്പ് അനുമതി</string>
+    <string name="slideDesc6">ആപ്പിന് പ്രവർത്തിക്കാൻ ആവശ്യമായ അനുമതി നൽകുക!</string>
     <!-- Update screen -->
+    <string name="update_new">പുതിയ അപ്‌ഡേറ്റ് ലഭ്യമായ പതിപ്പ്:</string>
+    <string name="update_hash_error">ഫയൽ ഒപ്പ് പൊരുത്തക്കേട്! അപ്ഡേറ്റ് ചെയ്യാൻ കഴിയില്ല.</string>
+    <string name="update_activity">റക്കി അപ്ഡേറ്റ്</string>
+    <string name="update_version">പതിപ്പ്</string>
+    <string name="update_version_nightly">രാത്രി പതിപ്പ്</string>
+    <string name="update_changelog">ചേഞ്ച്ലോഗ്</string>
+    <string name="update_status">സ്റ്റാറ്റസ് അപ്ഡേറ്റ് ചെയ്യുക</string>
+    <string name="update_action">അപ്ഡേറ്റ് ഡൗൺലോഡ് ചെയ്ത് ഇൻസ്റ്റാൾ ചെയ്യുക</string>
+    <string name="update_downloading">അപ്‌ഡേറ്റ് ഡൗൺലോഡ് ചെയ്യുന്നു</string>
+    <string name="install_update">അപ്ഡേറ്റ് പ്രയോഗിക്കുന്നു</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">നിങ്ങൾക്ക് ആപ്പ് മറയ്‌ക്കാനോ പുറത്തുകടക്കാനോ താൽപ്പര്യമുണ്ടോ?</string>
+    <string name="btn_exit">പുറത്ത്</string>
+    <string name="btn_back">മറയ്ക്കുക</string>
+    <string name="unlock">ആപ്പ് അൺലോക്ക് ചെയ്യുക</string>
+    <string name="auth">പ്രാമാണീകരണം സ്ഥിരീകരിക്കുക</string>
+    <string name="update">അപ്ഡേറ്റ് ചെയ്യുക</string>
+    <string name="setting">ക്രമീകരണങ്ങൾ</string>
+    <string name="codeHint">റബ്ബർ ഡക്കി സ്ക്രിപ്റ്റുകൾ ഇവിടെ ടൈപ്പ് ചെയ്യുക അല്ലെങ്കിൽ ലോഡ് ചെയ്യുക</string>
+    <string name="loadBtn">ലോഡ് ചെയ്യുക</string>
+    <string name="saveBtn">രക്ഷിക്കും</string>
+    <string name="delBtn">ഇല്ലാതാക്കുക</string>
+    <string name="runBtn">ഓടുക</string>
+    <string name="confBtn">കോൺഫിഗറേഷൻ</string>
+    <string name="btn_continue">തുടരുക</string>
+    <string name="root_err">USB കേബിൾ ആക്രമണത്തിന് റൂട്ട് ആക്സസ് ആവശ്യമാണ്!</string>
+    <string name="kernel_err">"USB കേബിൾ ആക്രമണത്തിന് കേർണൽ പിന്തുണയ്ക്കുന്നില്ല!"</string>
+    <string name="vm">വെർച്വൽ പരിസ്ഥിതി പിന്തുണയ്ക്കുന്നില്ല!</string>
     <!-- Config screen -->
+    <string name="config_activity">ട്വീക്കുകൾ</string>
+    <string name="config_status_usb_on">USB ബന്ധിപ്പിച്ചു</string>
+    <string name="config_status_usb_off">USB വിച്ഛേദിച്ചു</string>
+    <string name="config_status_net_on">നെറ്റ്‌വർക്ക് സോക്കറ്റ് ബന്ധിപ്പിച്ചു</string>
+    <string name="config_status_net_off">നെറ്റ്‌വർക്ക് സോക്കറ്റ് വിച്ഛേദിച്ചു</string>
+    <string name="socket_address">സോക്കറ്റ് ഐപിയും പോർട്ട് വിലാസവും നൽകുക</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID കോൺഫിഗറേഷൻ</string>
+    <string name="hid_download">ഡൗൺലോഡ്</string>
+    <string name="hid_update">അപ്ഡേറ്റ് ചെയ്യുക</string>
+    <string name="hid_edit">എഡിറ്റ് ചെയ്യുക</string>
+    <string name="hid_delete">ഇല്ലാതാക്കുക</string>
     <!-- Keylist screen -->
+    <string name="key_title">പ്രധാന നാമം</string>
+    <string name="key_character">പ്രധാന കഥാപാത്രം</string>
+    <string name="key_code">കീ കോഡ്</string>
+    <string name="key_ctrl">Ctrl കീ</string>
+    <string name="key_alt">ആൾട്ട് കീ</string>
+    <string name="key_shift">ഷിഫ്റ്റ് കീ</string>
+    <string name="key_meta">മെറ്റാ കീ</string>
+    <string name="keycode">കീ കോഡ്</string>
+    <string name="modcode">മോഡിഫയർ കോഡ്</string>
+    <string name="key_details">പ്രധാന വിശദാംശങ്ങൾ</string>
     <!-- Setting screen -->
+    <string name="setting_general">ജനറൽ</string>
+    <string name="dark_theme_title">രാത്രി മോഡ്</string>
+    <string name="dark_theme_summary">ഇരുണ്ട തീം സജ്ജമാക്കുക</string>
+    <string name="device_admin_title">ആപ്പ് ഉപകരണ ഉടമയാക്കുക</string>
+    <string name="device_admin_summary">റൂട്ട് ആവശ്യമാണ്. ആൻഡ്രോയിഡിലെ ചില നിയന്ത്രണങ്ങൾ മറികടക്കാനാണിത്.</string>
+    <string name="hide_icon_title">ലോഞ്ചർ ഐക്കൺ മറയ്ക്കുക/പ്രവർത്തനരഹിതമാക്കുക</string>
+    <string name="hide_icon_summary">ഡയൽ ചെയ്യുക *</string>
+    <string name="delete_dep_title">ആപ്പ് അൺഇൻസ്റ്റാൾ ചെയ്യുക</string>
+    <string name="delete_dep_summary">ആപ്പ് വൃത്തിയാക്കി അൺഇൻസ്റ്റാൾ ചെയ്യുക.</string>
+    <string name="settings_sec_title">മുൻകൂർ സുരക്ഷ</string>
+    <string name="settings_sec_desc">സ്ക്രിപ്റ്റ് ഫയൽ എൻക്രിപ്ഷനും സ്ക്രീൻ ലോക്കും പ്രവർത്തനക്ഷമമാക്കുക.</string>
+    <string name="setting_device">ആക്രമണ മോഡ് ക്രമീകരണങ്ങൾ</string>
+    <string name="configfs_title">സ്വയമേവ കോൺഫിഗർ കോൺഫിഗർ ചെയ്യുക</string>
+    <string name="configfs_summary">ConfigFS പിന്തുണയ്ക്കുന്ന ഉപകരണങ്ങളിൽ HID കോൺഫിഗർ ചെയ്യും. USB ക്രമീകരണം തകർത്തേക്കാം.</string>
+    <string name="hid_choice_title">ഇഷ്ടാനുസൃതമാക്കാവുന്ന HID</string>
+    <string name="hid_choice_summary">ലെഗസി എച്ച്‌ഐഡിയും ഇഷ്‌ടാനുസൃതമാക്കാവുന്ന എച്ച്ഐഡിയും തമ്മിൽ മാറുക</string>
+    <string name="hid_title">HID ഭാഷ</string>
+    <string name="hid_summary">അധിക HID ഭാഷകൾ ഡൗൺലോഡ് ചെയ്യുക അല്ലെങ്കിൽ പുതിയ HID ലേഔട്ടുകൾ രൂപകൽപ്പന ചെയ്യുക.</string>
+    <string name="settings_usb_title">USB കണക്റ്റ് ലോഞ്ച്</string>
+    <string name="settings_usb_desc">USB കണക്റ്റ് ചെയ്യുമ്പോൾ റൺ ബട്ടൺ ആക്രമണം ആരംഭിക്കും.</string>
+    <string name="settings_net_title">നെറ്റ്‌വർക്ക് സോക്കറ്റ് കണക്റ്റ് ലോഞ്ച്</string>
+    <string name="settings_net_desc">നെറ്റ്‌വർക്ക് സോക്കറ്റ് കണക്റ്റുചെയ്യുമ്പോൾ റൺ ബട്ടൺ ആക്രമണം ആരംഭിക്കും.</string>
+    <string name="setting_about">വിവരം</string>
+    <string name="setting_developer_title">ഡെവലപ്പർ</string>
+    <string name="settings_version_title">പതിപ്പ്</string>
+    <string name="settings_arch_title">വാസ്തുവിദ്യ</string>
+    <string name="settings_lic_title">ലൈസൻസ്</string>
+    <string name="settings_support">പിന്തുണ</string>
+    <string name="settings_git_title">GitHub പ്രശ്നങ്ങൾ</string>
+    <string name="settings_git_desc">പ്രശ്‌നങ്ങളോ ഫീച്ചർ അഭ്യർത്ഥനയോ ചേർക്കാൻ ക്ലിക്ക് ചെയ്യുക.</string>
+    <string name="settings_locale_title">പ്രാദേശികവൽക്കരണം</string>
+    <string name="settings_locale_desc">ആപ്പ് പ്രാദേശികവൽക്കരണത്തിന് സംഭാവന ചെയ്യുക.</string>
+    <string name="release">വിതരണ</string>
+    <string name="releaseNetHunter">NetHunter ആപ്പ് സ്റ്റോർ</string>
+    <string name="releaseGitHub">GitHub റിലീസ്</string>
+    <string name="releaseGitHubNightly">GitHub രാത്രി</string>
+    <string name="releaseTest">ഡീബഗ് റിലീസ്</string>
+    <string name="releaseOthers">പിന്തുണയില്ലാത്ത റിലീസ്</string>
+    <string name="btn_cancel">റദ്ദാക്കുക</string>
+    <string name="btn_save">രക്ഷിക്കും</string>
+    <string name="file_saved">രക്ഷിച്ചു</string>
+    <string name="title_open_file">ഫയൽ തുറക്കുക</string>
+    <string name="title_delete_file">ഫയൽ ഇല്ലാതാക്കുക</string>
+    <string name="file_deleted">ഇല്ലാതാക്കി</string>
+    <string name="file_name">ഫയലിന്റെ പേര്</string>
+    <string name="title_save_file">ഫയൽ സംരക്ഷിക്കുക</string>
+    <string name="hid_version">പതിപ്പ്: %d</string>
+    <string-array name="modes">
+        <item>യൂഎസ്ബി കേബിൾ</item>
+        <item>നെറ്റ്‌വർക്ക് സോക്കറ്റ്</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>അമേരിക്കൻ ഇംഗ്ലീഷ്</item>
+        <item>ടർക്കിഷ്</item>
+        <item>സ്വീഡിഷ്</item>
+        <item>സ്ലോവേനിയൻ</item>
+        <item>റഷ്യൻ</item>
+        <item>പോർച്ചുഗീസ്</item>
+        <item>നോർവീജിയൻ</item>
+        <item>ഇറ്റാലിയൻ</item>
+        <item>ക്രൊയേഷ്യൻ</item>
+        <item>യുണൈറ്റഡ് കിംഗ്ഡം ഇംഗ്ലീഷ്</item>
+        <item>ഫ്രഞ്ച്</item>
+        <item>ഫിന്നിഷ്</item>
+        <item>സ്പാനിഷ്</item>
+        <item>ഡാനിഷ്</item>
+        <item>ജർമ്മൻ</item>
+        <item>കനേഡിയൻ ഫ്രഞ്ച്</item>
+        <item>ബ്രസീലിയൻ പോർച്ചുഗീസ്</item>
+        <item>ബെലാറഷ്യൻ</item>
+        <item>ഹംഗേറിയൻ</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ഓട്ടോ</item>
+        <item>ദിവസം</item>
+        <item>രാത്രി</item>
+    </string-array>
 </resources>

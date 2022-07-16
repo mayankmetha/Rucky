@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">OKULANDELAYO</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">VUMA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Jika isixhobo sakho sibe yiRubber Ducky!</string>
+    <string name="slideTitle2">Intambo ye-USB</string>
+    <string name="slideDesc2">Ujongano olunentambo lwe-USB lokuqalisa uhlaselo!</string>
+    <string name="slideTitle3">Isokhethi yeNethiwekhi</string>
+    <string name="slideDesc3">Ujongano olusekwe kwiWi-Fi ukuze uqalise uhlaselo usebenzisa izixhobo ezixhaswayo zangaphandle!</string>
+    <string name="slideTitle4">Ukuzihlangula</string>
+    <string name="slideDesc4">Umsebenzisi we-app nguye yedwa onoxanduva lomonakalo owenziweyo. Alikho elinye iqumrhu elinokuthwalwa uxanduva lomonakalo owenziwe kusetyenziswa le app! Ziqhelise ukulumka xa usebenzisa usetyenziso kwaye ungasebenzisi oku ukwenzakalisa abanye!</string>
+    <string name="slideTitle5">umthetho wabucala</string>
+    <string name="slideDesc5">Akukho datha yalo naluphi na uhlobo oluqokelelweyo, lusetyenziswe kwaye luthengiswe! Ezinye iimvume ezinokuphakamisa iinkxalabo zabucala zicelwa kuphela ekusebenzeni kweempawu ezithile kwi-app kwaye ayikokuqokelela idatha! Ubumfihlo bakho buhlonitshiwe!</string>
+    <string name="slideTitle6">Imvume yosetyenziso</string>
+    <string name="slideDesc6">Nceda unike i-app imvume efunekayo yokusebenza!</string>
     <!-- Update screen -->
+    <string name="update_new">Uhlaziyo Olutsha Olufumanekayo Inguqulelo:</string>
+    <string name="update_hash_error">Ukungafani kweFayile yomsayino! AyinakuHlaziywa.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Inguqulelo</string>
+    <string name="update_version_nightly">Inguqulelo yasebusuku</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Ubume bohlaziyo</string>
+    <string name="update_action">Khuphela kwaye ufake uHlaziyo</string>
+    <string name="update_downloading">Kuthotywa Umthwalo woHlaziyo</string>
+    <string name="install_update">Ukusebenzisa uHlaziyo</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ngaba ungathanda ukufihla okanye ukuphuma kwi-app?</string>
+    <string name="btn_exit">Phuma</string>
+    <string name="btn_back">Fihla</string>
+    <string name="unlock">Vula i-App</string>
+    <string name="auth">Qinisekisa ubunyani</string>
+    <string name="update">Hlaziya</string>
+    <string name="setting">Iisetingi</string>
+    <string name="codeHint">Chwetheza okanye layisha imibhalo yerabha yedada apha</string>
+    <string name="loadBtn">Layisha</string>
+    <string name="saveBtn">Gcina</string>
+    <string name="delBtn">Cima</string>
+    <string name="runBtn">Baleka</string>
+    <string name="confBtn">Qwalasela</string>
+    <string name="btn_continue">Qhubeka</string>
+    <string name="root_err">Ukufikelela kwiNgcambu kuyafuneka kuHlaselo lweCable ye-USB!</string>
+    <string name="kernel_err">"I-Kernel ayixhaswanga kuhlaselo lweCable ye-USB!"</string>
+    <string name="vm">Okusingqongileyo okubonakalayo akuxhaswanga!</string>
     <!-- Config screen -->
+    <string name="config_activity">Iinguqu</string>
+    <string name="config_status_usb_on">I-USB iQhagamshelwe</string>
+    <string name="config_status_usb_off">I-USB icinyiwe</string>
+    <string name="config_status_net_on">Isokethi yeNethiwekhi iQhagamshelwe</string>
+    <string name="config_status_net_off">Isokethi yeNethiwekhi iqhawulwe</string>
+    <string name="socket_address">Ngenisa iSocket IP kunye nedilesi yePort</string>
     <!-- HID config screen -->
+    <string name="hid_activity">I-HID Config</string>
+    <string name="hid_download">Khuphela</string>
+    <string name="hid_update">Hlaziya</string>
+    <string name="hid_edit">Hlela</string>
+    <string name="hid_delete">Cima</string>
     <!-- Keylist screen -->
+    <string name="key_title">Igama elingundoqo</string>
+    <string name="key_character">Umlinganiswa oPhambili</string>
+    <string name="key_code">IKhowudi ePhambili</string>
+    <string name="key_ctrl">Ctrl Isitshixo</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Isitshixo seMeta</string>
+    <string name="keycode">IKhowudi ePhambili</string>
+    <string name="modcode">Ikhowudi yoLungiso</string>
+    <string name="key_details">Iinkcukacha ezingundoqo</string>
     <!-- Setting screen -->
+    <string name="setting_general">Ngokubanzi</string>
+    <string name="dark_theme_title">Imowudi yasebusuku</string>
+    <string name="dark_theme_summary">Seta umxholo omnyama</string>
+    <string name="device_admin_title">Yenza umnini wesixhobo sosetyenziso</string>
+    <string name="device_admin_summary">Ingcambu iyafuneka. Oku kukudlula ezinye izithintelo kwi-Android.</string>
+    <string name="hide_icon_title">Fihla /Khubaza i-Icon yoMqalisi</string>
+    <string name="hide_icon_summary">Cofa *</string>
+    <string name="delete_dep_title">Khipha i-App</string>
+    <string name="delete_dep_summary">Coca kwaye uyikhuphe i-app.</string>
+    <string name="settings_sec_title">Ukhuseleko oluPhambili</string>
+    <string name="settings_sec_desc">Yenza uguqulelo oluntsonkothileyo lwefayile yeskripthi kunye nokutshixa isikrini.</string>
+    <string name="setting_device">Imimiselo yeMowudi yoHlaselo</string>
+    <string name="configfs_title">Qwalasela i-ConfigFS ngokuzenzekela</string>
+    <string name="configfs_summary">Iza kuqwalasela i-HID kwizixhobo ezixhaswayo zeConfigFS. Inokwaphula useto lwe-USB.</string>
+    <string name="hid_choice_title">Customizable HID</string>
+    <string name="hid_choice_summary">Tshintsha phakathi kweLifa le-HID kunye ne-HID enokwenziwa ngokwezifiso</string>
+    <string name="hid_title">Ulwimi olufihlakeleyo</string>
+    <string name="hid_summary">Khuphela iilwimi ezongezelelweyo ze-HID okanye uyile iziyilo ezintsha ze-HID.</string>
+    <string name="settings_usb_title">USB Connect Launch</string>
+    <string name="settings_usb_desc">Iqhosha lokubaleka liza kuqalisa uhlaselo xa i-USB iqhagamshelwe.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Iqhosha lokubaleka liza kuqalisa uhlaselo xa i-Network Socket iqhagamshelwe.</string>
+    <string name="setting_about">Ulwazi</string>
+    <string name="setting_developer_title">Umphuhlisi</string>
+    <string name="settings_version_title">Inguqulelo</string>
+    <string name="settings_arch_title">Uyilo lwezakhiwo</string>
+    <string name="settings_lic_title">Ilayisensi</string>
+    <string name="settings_support">Inkxaso</string>
+    <string name="settings_git_title">Imiba yeGitHub</string>
+    <string name="settings_git_desc">Cofa ukongeza imiba okanye isicelo senqaku.</string>
+    <string name="settings_locale_title">Ukwenziwa kwendawo</string>
+    <string name="settings_locale_desc">Faka igalelo kusetyenziso lwasekuhlaleni.</string>
+    <string name="release">Ukusasazwa</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Ukukhutshwa kweGitHub</string>
+    <string name="releaseGitHubNightly">GitHub Ngobusuku</string>
+    <string name="releaseTest">Ukukhutshwa kweDebug</string>
+    <string name="releaseOthers">Ukukhutshwa okungaxhaswanga</string>
+    <string name="btn_cancel">Rhoxisa</string>
+    <string name="btn_save">Gcina</string>
+    <string name="file_saved">igciniwe</string>
+    <string name="title_open_file">Vula ifayile</string>
+    <string name="title_delete_file">Cima iFayile</string>
+    <string name="file_deleted">icinyiwe</string>
+    <string name="file_name">Igama lefayile</string>
+    <string name="title_save_file">Gcina Ifayile</string>
+    <string name="hid_version">Inguqulelo: %d</string>
+    <string-array name="modes">
+        <item>Intambo ye-USB</item>
+        <item>Isokhethi yeNethiwekhi</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>IsiNgesi saseMelika</item>
+        <item>IsiTurkey</item>
+        <item>Swedish</item>
+        <item>Slovenian</item>
+        <item>IsiRashiya</item>
+        <item>IsiPhuthukezi</item>
+        <item>Norwegian</item>
+        <item>IsiTaliyani</item>
+        <item>Croatian</item>
+        <item>IsiNgesi saseUnited Kingdom</item>
+        <item>IsiFrentshi</item>
+        <item>Finnish</item>
+        <item>Spanish</item>
+        <item>Danish</item>
+        <item>IsiJamani</item>
+        <item>IsiFrentshi saseKhanada</item>
+        <item>IsiPhuthukezi saseBrazil</item>
+        <item>IsiBhelarushiyen</item>
+        <item>Hungarian</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Ngokuzenzekelayo</item>
+        <item>Usuku</item>
+        <item>Busuku</item>
+    </string-array>
 </resources>

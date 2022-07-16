@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">NESAF</string>
+    <string name="init_skip">SGIP</string>
+    <string name="init_agree">CYTUNO</string>
+    <string name="init_start">HAC</string>
+    <string name="slideDesc1">Trowch eich dyfais yn Hwyaden Rwber!</string>
+    <string name="slideTitle2">Cebl USB</string>
+    <string name="slideDesc2">Rhyngwyneb gwifrau USB ar gyfer lansio ymosodiad!</string>
+    <string name="slideTitle3">Soced Rhwydwaith</string>
+    <string name="slideDesc3">Rhyngwynebau soced Wi-Fi ar gyfer lansio ymosodiad trwy offer allanol â chymorth!</string>
+    <string name="slideTitle4">Ymwadiad</string>
+    <string name="slideDesc4">Defnyddiwr yr ap yn unig sy\'n gyfrifol am yr iawndal a achosir. Ni all unrhyw endid arall fod yn atebol am yr iawndal a wneir gan ddefnyddio\'r app hwn! Byddwch yn ofalus wrth ddefnyddio\'r ap a pheidiwch â defnyddio hwn i achosi niwed i eraill!</string>
+    <string name="slideTitle5">Polisi Preifatrwydd</string>
+    <string name="slideDesc5">Nid oes unrhyw ddata o unrhyw ffurf yn cael ei gasglu, ei ddefnyddio a\'i werthu! Gofynnir am rai caniatâd a allai godi pryderon preifatrwydd yn unig ar gyfer gweithio rhai nodweddion yn yr ap ac nid yw i gasglu data! Perchir eich preifatrwydd!</string>
+    <string name="slideTitle6">Caniatâd Ap</string>
+    <string name="slideDesc6">Rhowch y caniatâd gofynnol i\'r ap weithio!</string>
     <!-- Update screen -->
+    <string name="update_new">Fersiwn Diweddariad Newydd Ar Gael:</string>
+    <string name="update_hash_error">Anghydweddiad Llofnod Ffeil! Methu Diweddaru.</string>
+    <string name="update_activity">Diweddariad Rucky</string>
+    <string name="update_version">Fersiwn</string>
+    <string name="update_version_nightly">Fersiwn Nosol</string>
+    <string name="update_changelog">Newidlog</string>
+    <string name="update_status">Diweddaru Statws</string>
+    <string name="update_action">Lawrlwytho a Gosod Diweddariad</string>
+    <string name="update_downloading">Wrthi\'n Lawrlwytho Diweddariad</string>
+    <string name="install_update">Gwneud Cais Diweddariad</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Hoffech chi guddio neu adael yr ap?</string>
+    <string name="btn_exit">Ymadael</string>
+    <string name="btn_back">Cuddio</string>
+    <string name="unlock">Datgloi App</string>
+    <string name="auth">Cadarnhau dilysu</string>
+    <string name="update">Diweddariad</string>
+    <string name="setting">Gosodiadau</string>
+    <string name="codeHint">Teipiwch neu llwythwch sgriptiau ducky rwber yma</string>
+    <string name="loadBtn">Llwyth</string>
+    <string name="saveBtn">Arbed</string>
+    <string name="delBtn">Dileu</string>
+    <string name="runBtn">Rhedeg</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Parhau</string>
+    <string name="root_err">Mynediad gwraidd sydd ei angen ar gyfer ymosodiad cebl USB!</string>
+    <string name="kernel_err">"msgstr \"Heb Gefnogi Cnewyllyn Ar gyfer Ymosodiad Cebl USB!\""</string>
+    <string name="vm">Ni chefnogir amgylchedd rhithwir!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Cysylltiedig</string>
+    <string name="config_status_usb_off">USB Datgysylltu</string>
+    <string name="config_status_net_on">Soced Rhwydwaith wedi\'i Gysylltiedig</string>
+    <string name="config_status_net_off">Soced Rhwydwaith wedi\'i Ddatgysylltu</string>
+    <string name="socket_address">Rhowch Soced IP a Cyfeiriad Porthladd</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Ffurfwedd HID</string>
+    <string name="hid_download">Lawrlwythwch</string>
+    <string name="hid_update">Diweddariad</string>
+    <string name="hid_edit">Golygu</string>
+    <string name="hid_delete">Dileu</string>
     <!-- Keylist screen -->
+    <string name="key_title">Enw Allweddol</string>
+    <string name="key_character">Cymeriad Allweddol</string>
+    <string name="key_code">Cod Allwedd</string>
+    <string name="key_ctrl">Allwedd Ctrl</string>
+    <string name="key_alt">Allwedd Alt</string>
+    <string name="key_shift">Allwedd Shift</string>
+    <string name="key_meta">Allwedd Meta</string>
+    <string name="keycode">Cod Allwedd</string>
+    <string name="modcode">Cod Addasydd</string>
+    <string name="key_details">Manylion Allweddol</string>
     <!-- Setting screen -->
+    <string name="setting_general">Cyffredinol</string>
+    <string name="dark_theme_title">Modd Nos</string>
+    <string name="dark_theme_summary">Gosod thema dywyll</string>
+    <string name="device_admin_title">Gwneud perchennog dyfais ap</string>
+    <string name="device_admin_summary">Gwraidd Angenrheidiol. Mae hyn er mwyn osgoi rhai o\'r cyfyngiadau ar Android.</string>
+    <string name="hide_icon_title">Cuddio /Analluogi Eicon Lansiwr</string>
+    <string name="hide_icon_summary">Deialwch *</string>
+    <string name="delete_dep_title">Dadosod App</string>
+    <string name="delete_dep_summary">Glanhau a dadosod app.</string>
+    <string name="settings_sec_title">Diogelwch Ymlaen Llaw</string>
+    <string name="settings_sec_desc">Galluogi amgryptio ffeil sgript a chlo sgrin.</string>
+    <string name="setting_device">Gosodiadau Modd Ymosod</string>
+    <string name="configfs_title">Ffurfweddu Ffurfweddu Auto</string>
+    <string name="configfs_summary">Bydd yn ffurfweddu HID ar ddyfeisiau a gefnogir gan ConfigFS. Gall dorri gosodiad USB.</string>
+    <string name="hid_choice_title">HID y gellir ei addasu</string>
+    <string name="hid_choice_summary">Newid rhwng Legacy HID a HID Customizable</string>
+    <string name="hid_title">HID Iaith</string>
+    <string name="hid_summary">Dadlwythwch ieithoedd HID ychwanegol neu dyluniwch gynlluniau HID newydd.</string>
+    <string name="settings_usb_title">Lansio Cyswllt USB</string>
+    <string name="settings_usb_desc">Bydd botwm rhedeg yn lansio ymosodiad pan fydd USB wedi\'i gysylltu.</string>
+    <string name="settings_net_title">Lansio Rhwydwaith Soced Cyswllt</string>
+    <string name="settings_net_desc">Bydd y botwm rhedeg yn lansio ymosodiad pan fydd Network Socket wedi\'i gysylltu.</string>
+    <string name="setting_about">Gwybodaeth</string>
+    <string name="setting_developer_title">Datblygwr</string>
+    <string name="settings_version_title">Fersiwn</string>
+    <string name="settings_arch_title">Pensaernïaeth</string>
+    <string name="settings_lic_title">Trwydded</string>
+    <string name="settings_support">Cefnogaeth</string>
+    <string name="settings_git_title">Materion GitHub</string>
+    <string name="settings_git_desc">Cliciwch i ychwanegu materion neu gais nodwedd.</string>
+    <string name="settings_locale_title">Lleoli</string>
+    <string name="settings_locale_desc">Cyfrannu at leoleiddio ap.</string>
+    <string name="release">Dosbarthiad</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Rhyddhad GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Bob Nos</string>
+    <string name="releaseTest">Rhyddhau Dadfygio</string>
+    <string name="releaseOthers">Rhyddhau Heb Gefnogaeth</string>
+    <string name="btn_cancel">Canslo</string>
+    <string name="btn_save">Arbed</string>
+    <string name="file_saved">cadwedig</string>
+    <string name="title_open_file">Agor Ffeil</string>
+    <string name="title_delete_file">Dileu Ffeil</string>
+    <string name="file_deleted">dileu</string>
+    <string name="file_name">Enw Ffeil</string>
+    <string name="title_save_file">Arbed ffeil</string>
+    <string name="hid_version">Fersiwn: %d</string>
+    <string-array name="modes">
+        <item>Cebl USB</item>
+        <item>Soced Rhwydwaith</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Saesneg Americanaidd</item>
+        <item>Twrceg</item>
+        <item>Swedeg</item>
+        <item>Slofeneg</item>
+        <item>Rwsiaidd</item>
+        <item>Portiwgaleg</item>
+        <item>Norwyaidd</item>
+        <item>Eidaleg</item>
+        <item>Croateg</item>
+        <item>Saesneg y Deyrnas Unedig</item>
+        <item>Ffrangeg</item>
+        <item>Ffinneg</item>
+        <item>Sbaeneg</item>
+        <item>Daneg</item>
+        <item>Almaeneg</item>
+        <item>Ffrangeg Canada</item>
+        <item>Portiwgaleg Brasil</item>
+        <item>Belarwseg</item>
+        <item>Hwngareg</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Dydd</item>
+        <item>Nos</item>
+    </string-array>
 </resources>

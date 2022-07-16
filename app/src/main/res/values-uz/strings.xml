@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">KEYINGISI</string>
+    <string name="init_skip">OʻTKAZISH</string>
+    <string name="init_agree">QAZIRISH</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Qurilmangizni Rubber Duckyga aylantiring!</string>
+    <string name="slideTitle2">USB kabeli</string>
+    <string name="slideDesc2">Hujumni boshlash uchun USB simli interfeys!</string>
+    <string name="slideTitle3">Tarmoq soketi</string>
+    <string name="slideDesc3">Qo\'llab-quvvatlanadigan tashqi vositalar orqali hujumni boshlash uchun Wi-Fi-ga asoslangan rozetka interfeyslari!</string>
+    <string name="slideTitle4">Rad etish</string>
+    <string name="slideDesc4">Etkazilgan zarar uchun faqat ilova foydalanuvchisi javobgardir. Ushbu ilova yordamida etkazilgan zarar uchun boshqa hech qanday tashkilot javobgar bo\'lmaydi! Ilovadan foydalanishda ehtiyot bo\'ling va undan boshqalarga zarar yetkazmaslik uchun foydalanmang!</string>
+    <string name="slideTitle5">Maxfiylik siyosati</string>
+    <string name="slideDesc5">Hech qanday shakldagi ma\'lumotlar yig\'ilmaydi, foydalanilmaydi va sotilmaydi! Maxfiylik bilan bog\'liq muammolarni keltirib chiqaradigan ba\'zi ruxsatlar faqat ilovadagi ba\'zi xususiyatlarning ishlashi uchun so\'raladi va ma\'lumotlarni yig\'ish uchun emas! Maxfiyligingiz hurmat qilinadi!</string>
+    <string name="slideTitle6">Ilova ruxsati</string>
+    <string name="slideDesc6">Iltimos, ilovaga ishlash uchun kerakli ruxsatni bering!</string>
     <!-- Update screen -->
+    <string name="update_new">Yangi yangilanish mavjud versiya:</string>
+    <string name="update_hash_error">Fayl imzosi nomuvofiqligi! Yangilab boʻlmadi.</string>
+    <string name="update_activity">Rucky yangilanishi</string>
+    <string name="update_version">Versiya</string>
+    <string name="update_version_nightly">Kecha versiyasi</string>
+    <string name="update_changelog">O\'zgarishlar jurnali</string>
+    <string name="update_status">Statusni yangilash</string>
+    <string name="update_action">Yangilanishni yuklab oling va o\'rnating</string>
+    <string name="update_downloading">Yangilanish yuklab olinmoqda</string>
+    <string name="install_update">Yangilanishni qo\'llash</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ilovani berkitish yoki undan chiqishni xohlaysizmi?</string>
+    <string name="btn_exit">Chiqish</string>
+    <string name="btn_back">Yashirish</string>
+    <string name="unlock">Ilova qulfini ochish</string>
+    <string name="auth">Autentifikatsiyani tasdiqlang</string>
+    <string name="update">Yangilash</string>
+    <string name="setting">Sozlamalar</string>
+    <string name="codeHint">Bu yerda kauchuk ducky skriptlarini yozing yoki yuklang</string>
+    <string name="loadBtn">Yuklash</string>
+    <string name="saveBtn">Saqlash</string>
+    <string name="delBtn">Oʻchirish</string>
+    <string name="runBtn">Yugurish</string>
+    <string name="confBtn">Konfiguratsiya</string>
+    <string name="btn_continue">Davom eting</string>
+    <string name="root_err">USB kabeliga hujum qilish uchun ildizga kirish kerak!</string>
+    <string name="kernel_err">"USB kabeliga hujum qilish uchun yadro qo'llab-quvvatlanmaydi!"</string>
+    <string name="vm">Virtual muhit qo\'llab-quvvatlanmaydi!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB ulangan</string>
+    <string name="config_status_usb_off">USB uzildi</string>
+    <string name="config_status_net_on">Tarmoq soketi ulangan</string>
+    <string name="config_status_net_off">Tarmoq soketi uzildi</string>
+    <string name="socket_address">Soket IP va Port manzilini kiriting</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID konfiguratsiyasi</string>
+    <string name="hid_download">Yuklab olish</string>
+    <string name="hid_update">Yangilash</string>
+    <string name="hid_edit">Tahrirlash</string>
+    <string name="hid_delete">Oʻchirish</string>
     <!-- Keylist screen -->
+    <string name="key_title">Kalit nomi</string>
+    <string name="key_character">Asosiy belgi</string>
+    <string name="key_code">Kalit kodi</string>
+    <string name="key_ctrl">Ctrl tugmasi</string>
+    <string name="key_alt">Alt tugmasi</string>
+    <string name="key_shift">Shift tugmasi</string>
+    <string name="key_meta">Meta kalit</string>
+    <string name="keycode">Kalit kodi</string>
+    <string name="modcode">Modifikator kodi</string>
+    <string name="key_details">Asosiy tafsilotlar</string>
     <!-- Setting screen -->
+    <string name="setting_general">General</string>
+    <string name="dark_theme_title">Tungi rejimi</string>
+    <string name="dark_theme_summary">Qorongʻi mavzuni oʻrnating</string>
+    <string name="device_admin_title">Ilova qurilmasi egasi qiling</string>
+    <string name="device_admin_summary">Root talab qilinadi. Bu Android-dagi ba\'zi cheklovlarni chetlab o\'tishdir.</string>
+    <string name="hide_icon_title">Launcher belgisini yashirish/o‘chirish</string>
+    <string name="hide_icon_summary">* terish</string>
+    <string name="delete_dep_title">Ilovani o\'chirish</string>
+    <string name="delete_dep_summary">Ilovani tozalang va o\'chirib tashlang.</string>
+    <string name="settings_sec_title">Oldindan xavfsizlik</string>
+    <string name="settings_sec_desc">Skript faylini shifrlash va ekran qulfini yoqing.</string>
+    <string name="setting_device">Hujum rejimi sozlamalari</string>
+    <string name="configfs_title">ConfigFSni avtomatik sozlash</string>
+    <string name="configfs_summary">ConfigFS qo\'llab-quvvatlanadigan qurilmalarda HIDni sozlaydi. USB sozlamalarini buzishi mumkin.</string>
+    <string name="hid_choice_title">Moslashtirilgan HID</string>
+    <string name="hid_choice_summary">Eski HID va moslashtirilgan HID oʻrtasida almashing</string>
+    <string name="hid_title">HID tili</string>
+    <string name="hid_summary">Qo\'shimcha HID tillarini yuklab oling yoki yangi HID maketlarini loyihalashtiring.</string>
+    <string name="settings_usb_title">USB ulanishini ishga tushiring</string>
+    <string name="settings_usb_desc">Run tugmasi USB ulanganda hujumni boshlaydi.</string>
+    <string name="settings_net_title">Tarmoq soketiga ulanishni ishga tushirish</string>
+    <string name="settings_net_desc">Run tugmasi tarmoq soketi ulanganda hujumni boshlaydi.</string>
+    <string name="setting_about">Ma\'lumot</string>
+    <string name="setting_developer_title">Dasturchi</string>
+    <string name="settings_version_title">Versiya</string>
+    <string name="settings_arch_title">Arxitektura</string>
+    <string name="settings_lic_title">Litsenziya</string>
+    <string name="settings_support">Qo\'llab-quvvatlash</string>
+    <string name="settings_git_title">GitHub muammolari</string>
+    <string name="settings_git_desc">Muammo yoki xususiyat so\'rovini qo\'shish uchun bosing.</string>
+    <string name="settings_locale_title">Mahalliylashtirish</string>
+    <string name="settings_locale_desc">Ilovalarni mahalliylashtirishga hissa qo\'shing.</string>
+    <string name="release">Tarqatish</string>
+    <string name="releaseNetHunter">NetHunter ilovalar do\'koni</string>
+    <string name="releaseGitHub">GitHub nashri</string>
+    <string name="releaseGitHubNightly">GitHub kechasi</string>
+    <string name="releaseTest">Nosozliklarni tuzatish versiyasi</string>
+    <string name="releaseOthers">Qo\'llab-quvvatlanmaydigan nashr</string>
+    <string name="btn_cancel">Bekor qilish</string>
+    <string name="btn_save">Saqlash</string>
+    <string name="file_saved">saqlangan</string>
+    <string name="title_open_file">Faylni oching</string>
+    <string name="title_delete_file">Faylni o\'chirish</string>
+    <string name="file_deleted">o\'chirildi</string>
+    <string name="file_name">Fayl nomi</string>
+    <string name="title_save_file">Faylni saqlash</string>
+    <string name="hid_version">Versiya: %d</string>
+    <string-array name="modes">
+        <item>USB kabeli</item>
+        <item>Tarmoq soketi</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerika ingliz</item>
+        <item>turkcha</item>
+        <item>shvedcha</item>
+        <item>sloven</item>
+        <item>rus</item>
+        <item>portugal</item>
+        <item>norveg</item>
+        <item>italyancha</item>
+        <item>xorvat</item>
+        <item>Buyuk Britaniya ingliz</item>
+        <item>frantsuz</item>
+        <item>fin</item>
+        <item>ispancha</item>
+        <item>Daniya</item>
+        <item>nemis</item>
+        <item>Kanada frantsuz</item>
+        <item>Braziliya portugal</item>
+        <item>belarus</item>
+        <item>venger</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Avtomatik</item>
+        <item>kun</item>
+        <item>Kecha</item>
+    </string-array>
 </resources>

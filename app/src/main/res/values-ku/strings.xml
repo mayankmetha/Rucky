@@ -2,12 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">PIŞTÎ</string>
+    <string name="init_skip">HILPERKÎN</string>
+    <string name="init_agree">QEBÛLKIRIN</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Amûra xwe veguherînin Rubber Ducky!</string>
+    <string name="slideTitle2">Cable USB</string>
+    <string name="slideDesc2">Têkiliya têl USB ji bo destpêkirina êrîşê!</string>
+    <string name="slideTitle3">Tora Socket</string>
+    <string name="slideDesc3">Têkiliyên soketên bingehîn ên Wi-Fi ji bo destpêkirina êrîşê bi navgîniya amûrên derveyî yên piştgirîkirî ve!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">Bikarhênerê sepanê bi tenê ji zirarên çêbûyî berpirsiyar e. Ti saziyek din nikare ji ber zirarên ku bi karanîna vê sepanê hatî çêkirin berpirsiyar neyê girtin! Dema ku sepanê bikar tînin hişyariyê bikin û vê yekê bikar neynin da ku zirarê bidin kesên din!</string>
+    <string name="slideTitle5">Privacy Policy</string>
+    <string name="slideDesc5">Ti Daneyên her formî nayê berhev kirin, bikar anîn û firotin! Hin destûrên ku dikarin fikarên nepenîtiyê zêde bikin tenê ji bo xebata hin taybetmendiyên di sepanê de têne xwestin û ne berhevkirina daneyan e! Nepeniya we rêzdar e!</string>
+    <string name="slideTitle6">Destûra App</string>
+    <string name="slideDesc6">Ji kerema xwe destûra xebatê ya pêwîst bidin sepanê!</string>
     <!-- Update screen -->
+    <string name="update_new">Guhertoya Nû ya Nû Berdest:</string>
+    <string name="update_hash_error">Nakokiya Îmzeya Pelê! Nabe Nûvekirin.</string>
+    <string name="update_activity">Rojanekirina Rucky</string>
+    <string name="update_version">Awa</string>
+    <string name="update_version_nightly">Nightly Versiyon</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Rewşa Nûvekirin</string>
+    <string name="update_action">Nûvekirin dakêşin û saz bikin</string>
+    <string name="update_downloading">Daxistina Nûvekirin</string>
+    <string name="install_update">Serlêdana Nûvekirinê</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ma hûn dixwazin ji sepanê veşêrin an derkevin?</string>
+    <string name="btn_exit">Derî</string>
+    <string name="btn_back">Veşartin</string>
     <string name="unlock">Unlock App</string>
     <string name="auth">سڵاو چۆنن </string>
+    <string name="update">Nûvekirin</string>
+    <string name="setting">Settings</string>
+    <string name="codeHint">Li vir nivîsarên gomî ducky binivîsin an bar bikin</string>
+    <string name="loadBtn">Gazîname</string>
+    <string name="saveBtn">Rizgarkirin</string>
+    <string name="delBtn">Jêbirin</string>
+    <string name="runBtn">Rev</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Berdewamkirin</string>
+    <string name="root_err">Ji bo Êrîşa Kabloya USB ya Root Pêdivî ye!</string>
+    <string name="kernel_err">"Kernel ji bo êrîşa kabloya USB nayê destek kirin!"</string>
+    <string name="vm">Jîngeha virtual nayê piştgirî kirin!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB ve girêdayî ye</string>
+    <string name="config_status_usb_off">USB veqetiya</string>
+    <string name="config_status_net_on">Tora Socket Girêdayî</string>
+    <string name="config_status_net_off">Tora Soketê Veqetiya</string>
+    <string name="socket_address">IP-ya Socket û Navnîşana Portê têkevin</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Download</string>
+    <string name="hid_update">Nûvekirin</string>
+    <string name="hid_edit">Weşandin</string>
+    <string name="hid_delete">Jêbirin</string>
     <!-- Keylist screen -->
+    <string name="key_title">Navê Key</string>
+    <string name="key_character">Karaktera Key</string>
+    <string name="key_code">Key Code</string>
+    <string name="key_ctrl">Bişkojka Ctrl</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Key Code</string>
+    <string name="modcode">Koda Guherker</string>
+    <string name="key_details">Details Key</string>
     <!-- Setting screen -->
+    <string name="setting_general">Giştî</string>
+    <string name="dark_theme_title">Moda Şevê</string>
+    <string name="dark_theme_summary">Mijara tarî saz bikin</string>
+    <string name="device_admin_title">Xwedî amûrê sepanê bikin</string>
+    <string name="device_admin_summary">Root Required. Ev e ku meriv hin qedexeyên li ser Android-ê derbas bike.</string>
+    <string name="hide_icon_title">Îkona Destpêker veşêre/Neçalak bike</string>
+    <string name="hide_icon_summary">Dial *</string>
+    <string name="delete_dep_title">Rakirina App</string>
+    <string name="delete_dep_summary">Sepanê paqij bikin û rakirin.</string>
+    <string name="settings_sec_title">Ewlekariya Pêşveçûnê</string>
+    <string name="settings_sec_desc">Şîfrekirina pelê skrîptê û girtina ekranê çalak bike.</string>
+    <string name="setting_device">Mîhengên Moda Êrîşê</string>
+    <string name="configfs_title">Veavakirina ConfigFS bixweber</string>
+    <string name="configfs_summary">Dê HID-ê li ser cîhazên piştgirîkirî yên ConfigFS mîheng bike. Dibe ku mîhenga USB-ê bişkîne.</string>
+    <string name="hid_choice_title">HID Customizable</string>
+    <string name="hid_choice_summary">Di navbera Legacy HID û HID-a Xweserî de biguherînin</string>
+    <string name="hid_title">Ziman HID</string>
+    <string name="hid_summary">Zimanên HID-ê yên din dakêşin an sêwiranên nû yên HID-ê sêwirînin.</string>
+    <string name="settings_usb_title">Destpêkirina girêdana USB</string>
+    <string name="settings_usb_desc">Dema ku USB ve girêdayî ye, bişkojka Run dê êrîşê dest pê bike.</string>
+    <string name="settings_net_title">Têkiliya Tora Socket Destpêkirin</string>
+    <string name="settings_net_desc">Dema ku Tora Socket ve girêdayî ye, bişkojka Run dê êrîşê dest pê bike.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Developer</string>
+    <string name="settings_version_title">Awa</string>
+    <string name="settings_arch_title">Avakarî</string>
+    <string name="settings_lic_title">Îcaze</string>
+    <string name="settings_support">Alîkarî</string>
+    <string name="settings_git_title">Pirsgirêkên GitHub</string>
+    <string name="settings_git_desc">Bikirtînin da ku pirsgirêk an daxwaziya taybetmendiyê zêde bikin.</string>
+    <string name="settings_locale_title">Herêmîkirin</string>
+    <string name="settings_locale_desc">Beşdarî herêmîkirina sepanê bibin.</string>
+    <string name="release">Belavkirinî</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Weşandina GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Serlêdana Ne Piştevanî</string>
+    <string name="btn_cancel">Bişûndekirin</string>
+    <string name="btn_save">Rizgarkirin</string>
+    <string name="file_saved">xilas kirin</string>
+    <string name="title_open_file">Pelê vekin</string>
+    <string name="title_delete_file">Pelê jêbirin</string>
+    <string name="file_deleted">jêbirin</string>
+    <string name="file_name">Navê Pelê</string>
+    <string name="title_save_file">Pelê tomar bike</string>
+    <string name="hid_version">Versiyon: %d</string>
+    <string-array name="modes">
+        <item>Cable USB</item>
+        <item>Tora Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Îngilîzî ya Amerîkî</item>
+        <item>Tirkî</item>
+        <item>Swêdî</item>
+        <item>Slovenî</item>
+        <item>Rûsî</item>
+        <item>Portekizî</item>
+        <item>Norwêcî</item>
+        <item>Îtalî</item>
+        <item>Xirwatî</item>
+        <item>Keyaniya Yekbûyî English</item>
+        <item>Fransî</item>
+        <item>Fînlandî</item>
+        <item>Îspanyolî</item>
+        <item>Danîmarkî</item>
+        <item>Almanî</item>
+        <item>Fransî Kanadayî</item>
+        <item>Portekîziya Brezîlyayê</item>
+        <item>Belarûsî</item>
+        <item>Macarî</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Roj</item>
+        <item>Şev</item>
+    </string-array>
 </resources>

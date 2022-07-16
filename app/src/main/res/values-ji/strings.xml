@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">שטימען</string>
+    <string name="init_start">כאַק</string>
+    <string name="slideDesc1">קער דיין מיטל צו אַ ראַבער דוקקי!</string>
+    <string name="slideTitle2">וסב קאַבלע</string>
+    <string name="slideDesc2">וסב ווייערד צובינד פֿאַר לאָנטשינג באַפאַלן!</string>
+    <string name="slideTitle3">נעץ סאָקקעט</string>
+    <string name="slideDesc3">Wi-Fi באזירט כאָלעל ינטערפייסיז פֿאַר לאָנטשינג באַפאַלן דורך געשטיצט פונדרויסנדיק מכשירים!</string>
+    <string name="slideTitle4">אָפּלייקענונג</string>
+    <string name="slideDesc4">דער באַניצער פון די אַפּ איז בלויז פאַראַנטוואָרטלעך פֿאַר די שעדיקן געפֿירט. קיין אנדערע ענטיטי קענען זיין פאַראַנטוואָרטלעך פֿאַר די דאַמידזשיז מיט דעם אַפּ! פּראַקטיס וואָרענען ווען איר נוצן די אַפּ און טאָן ניט נוצן דעם צו שעדיקן אנדערע!</string>
+    <string name="slideTitle5">פּריוואַטקייט פּאָליטיק</string>
+    <string name="slideDesc5">קיין דאַטן פון קיין פאָרעם זענען געזאמלט, געוויינט און סאָלד! עטלעכע פּערמישאַנז וואָס קען כאַפּן פּריוואַטקייט קאַנסערנז זענען בלויז געבעטן פֿאַר די אַרבעט פון זיכער פֿעיִקייטן אין די אַפּ און זענען נישט צו זאַמלען דאַטן! דיין פּריוואַטקייט איז רעספּעקטעד!</string>
+    <string name="slideTitle6">אַפּ דערלויבעניש</string>
+    <string name="slideDesc6">ביטע געבן אַפּ די פארלאנגט דערלויבעניש צו אַרבעטן!</string>
     <!-- Update screen -->
+    <string name="update_new">ניו דערהייַנטיקן בנימצא ווערסיע:</string>
+    <string name="update_hash_error">טעקע סיגנאַטורע מיסמאַטש! קענען ניט דערהייַנטיקן.</string>
+    <string name="update_activity">ראַקי דערהייַנטיקן</string>
+    <string name="update_version">ווערסיע</string>
+    <string name="update_version_nightly">ניגהטלי ווערסיע</string>
+    <string name="update_changelog">טשאַנגעלאָג</string>
+    <string name="update_status">דערהייַנטיקן סטאַטוס</string>
+    <string name="update_action">אראפקאפיע און ינסטאַלירן דערהייַנטיקן</string>
+    <string name="update_downloading">דאַונלאָודינג דערהייַנטיקן</string>
+    <string name="install_update">אַפּלייינג דערהייַנטיקן</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">וואָלט איר ווי צו באַהאַלטן אָדער אַרויסגאַנג די אַפּ?</string>
+    <string name="btn_exit">אַרויסגאַנג</string>
+    <string name="btn_back">באַהאַלטן</string>
+    <string name="unlock">ופשליסן אַפּ</string>
+    <string name="auth">באַשטעטיקן אָטענטאַקיישאַן</string>
+    <string name="update">דערהייַנטיקן</string>
+    <string name="setting">סעטטינגס</string>
+    <string name="codeHint">טיפּ אָדער לאָדן גומע דוקקי סקריפּס דאָ</string>
+    <string name="loadBtn">מאַסע</string>
+    <string name="saveBtn">היט</string>
+    <string name="delBtn">ויסמעקן</string>
+    <string name="runBtn">לויפן</string>
+    <string name="confBtn">קאָנפיג</string>
+    <string name="btn_continue">פאָרזעצן</string>
+    <string name="root_err">וואָרצל אַקסעס פארלאנגט פֿאַר וסב קאַבלע אַטאַק!</string>
+    <string name="kernel_err">"קערנעל ניט געשטיצט פֿאַר וסב קאַבלע אַטאַק!"</string>
+    <string name="vm">ווירטועל סוויווע איז נישט געשטיצט!</string>
     <!-- Config screen -->
+    <string name="config_activity">טוויקס</string>
+    <string name="config_status_usb_on">וסב קאָננעקטעד</string>
+    <string name="config_status_usb_off">וסב דיסקאַנעקטיד</string>
+    <string name="config_status_net_on">נעץ סאָקקעט קאָננעקטעד</string>
+    <string name="config_status_net_off">נעץ סאָקקעט דיסקאַנעקטיד</string>
+    <string name="socket_address">אַרייַן די Socket IP און פּאָרט אַדרעס</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID קאָנפיג</string>
+    <string name="hid_download">אראפקאפיע</string>
+    <string name="hid_update">דערהייַנטיקן</string>
+    <string name="hid_edit">רעדאַגירן</string>
+    <string name="hid_delete">ויסמעקן</string>
     <!-- Keylist screen -->
+    <string name="key_title">שליסל נאָמען</string>
+    <string name="key_character">שליסל כאַראַקטער</string>
+    <string name="key_code">שליסל קאָד</string>
+    <string name="key_ctrl">קטרל שליסל</string>
+    <string name="key_alt">אַלט שליסל</string>
+    <string name="key_shift">שיפט שליסל</string>
+    <string name="key_meta">מעטאַ שליסל</string>
+    <string name="keycode">שליסל קאָד</string>
+    <string name="modcode">מאָדיפיער קאָד</string>
+    <string name="key_details">שליסל דעטאַילס</string>
     <!-- Setting screen -->
+    <string name="setting_general">אַלגעמיינע</string>
+    <string name="dark_theme_title">נאַכט מאָדע</string>
+    <string name="dark_theme_summary">שטעלן טונקל טעמע</string>
+    <string name="device_admin_title">מאַכן אַפּ מיטל באַזיצער</string>
+    <string name="device_admin_summary">וואָרצל פארלאנגט. דאָס איז צו בייפּאַס עטלעכע פון ​​די ריסטריקשאַנז אויף אַנדרויד.</string>
+    <string name="hide_icon_title">באַהאַלטן /דיסייבאַל לאַונטשער ייקאַן</string>
+    <string name="hide_icon_summary">רעדל *</string>
+    <string name="delete_dep_title">נעם אַוועק אַפּ</string>
+    <string name="delete_dep_summary">רייניקן און נעם אַוועק די אַפּלאַקיישאַן.</string>
+    <string name="settings_sec_title">שטייַגן זיכערהייַט</string>
+    <string name="settings_sec_desc">געבן סקריפּט טעקע ענקריפּשאַן און פאַרשטעלן שלאָס.</string>
+    <string name="setting_device">אַטאַק מאָדע סעטטינגס</string>
+    <string name="configfs_title">אַוטאָ קאַנפיגיער קאָנפיגפס</string>
+    <string name="configfs_summary">וועט קאַנפיגיער HID אויף ConfigFS שטיצט דעוויסעס. קען ברעכן די וסב באַשטעטיקן.</string>
+    <string name="hid_choice_title">קוסטאָמיזאַבלע HID</string>
+    <string name="hid_choice_summary">באַשטימען צווישן Legacy HID און Customizable HID</string>
+    <string name="hid_title">HID שפּראַך</string>
+    <string name="hid_summary">אראפקאפיע נאָך HID שפּראַכן אָדער פּלאַן נייַ HID לייאַוץ.</string>
+    <string name="settings_usb_title">וסב קאָננעקט קאַטער</string>
+    <string name="settings_usb_desc">לויפן קנעפּל וועט קאַטער באַפאַלן ווען וסב איז קאָננעקטעד.</string>
+    <string name="settings_net_title">נעטוואָרק סאָקקעט קאָננעקט קאַטער</string>
+    <string name="settings_net_desc">לויפן קנעפּל וועט קאַטער באַפאַלן ווען נעטוואָרק סאָקקעט איז קאָננעקטעד.</string>
+    <string name="setting_about">אינפֿאָרמאַציע</string>
+    <string name="setting_developer_title">דעוועלאָפּער</string>
+    <string name="settings_version_title">ווערסיע</string>
+    <string name="settings_arch_title">אַרטשיטעקטורע</string>
+    <string name="settings_lic_title">ליסענסע</string>
+    <string name="settings_support">שטיצן</string>
+    <string name="settings_git_title">GitHub ישוז</string>
+    <string name="settings_git_desc">דריקט צו לייגן ישוז אָדער שטריך בעטן.</string>
+    <string name="settings_locale_title">לאָקאַליזאַטיאָן</string>
+    <string name="settings_locale_desc">ביישטייערן צו אַפּ לאָוקאַלאַזיישאַן.</string>
+    <string name="release">פאַרשפּרייטונג</string>
+    <string name="releaseNetHunter">NetHunter אַפּ סטאָר</string>
+    <string name="releaseGitHub">GitHub מעלדונג</string>
+    <string name="releaseGitHubNightly">גיטהוב נייטלי</string>
+    <string name="releaseTest">דיבוג מעלדונג</string>
+    <string name="releaseOthers">ניט-סופּפּאָרטעד מעלדונג</string>
+    <string name="btn_cancel">באָטל מאַכן</string>
+    <string name="btn_save">היט</string>
+    <string name="file_saved">געראטעװעט</string>
+    <string name="title_open_file">עפֿענען טעקע</string>
+    <string name="title_delete_file">ויסמעקן טעקע</string>
+    <string name="file_deleted">אויסגעמעקט</string>
+    <string name="file_name">טעקע נאָמען</string>
+    <string name="title_save_file">היט טעקע</string>
+    <string name="hid_version">ווערסיע: %d</string>
+    <string-array name="modes">
+        <item>וסב קאַבלע</item>
+        <item>נעץ סאָקקעט</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>אמעריקאנער ענגליש</item>
+        <item>טערקיש</item>
+        <item>שוועדיש</item>
+        <item>סלאָוועניש</item>
+        <item>רוסיש</item>
+        <item>פּאָרטוגעזיש</item>
+        <item>נאָרוועגיש</item>
+        <item>איטאַליעניש</item>
+        <item>קראָאַטיש</item>
+        <item>פֿאַראייניקטע מלכות ענגליש</item>
+        <item>פראנצויזיש</item>
+        <item>פֿיניש</item>
+        <item>שפּאַניש</item>
+        <item>דאַניש</item>
+        <item>דײַטש</item>
+        <item>קאַנאַדיאַן פראנצויזיש</item>
+        <item>בראַזיליאַן פּאָרטוגעזיש</item>
+        <item>בעלאָרוסיש</item>
+        <item>אונגאַריש</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>אַוטאָ</item>
+        <item>טאָג</item>
+        <item>נאַכט</item>
+    </string-array>
 </resources>

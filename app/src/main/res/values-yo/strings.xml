@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ITELE</string>
+    <string name="init_skip">SILE</string>
+    <string name="init_agree">GBA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Yipada ẹrọ rẹ si Ducky Rubber kan!</string>
+    <string name="slideTitle2">Okun USB</string>
+    <string name="slideDesc2">Ni wiwo okun USB fun ifilọlẹ ikọlu!</string>
+    <string name="slideTitle3">Socket nẹtiwọki</string>
+    <string name="slideDesc3">Awọn atọkun iho orisun Wi-Fi fun ifilọlẹ ikọlu nipasẹ awọn irinṣẹ ita atilẹyin!</string>
+    <string name="slideTitle4">AlAIgBA</string>
+    <string name="slideDesc4">Olumulo ohun elo naa jẹ iduro nikan fun awọn ibajẹ ti o ṣẹlẹ. Ko si nkan miiran ti o le ṣe oniduro fun awọn bibajẹ ti o ṣe ni lilo ohun elo yii! Ṣọra nigba lilo app ati ma ṣe lo eyi lati fa ipalara si awọn miiran!</string>
+    <string name="slideTitle5">Asiri Afihan</string>
+    <string name="slideDesc5">Ko si data ti eyikeyi fọọmu ti a gba, lo ati ta! Diẹ ninu awọn igbanilaaye eyiti o le gbe awọn ifiyesi aṣiri dide nikan ni a beere fun iṣẹ awọn ẹya kan ninu ohun elo naa kii ṣe lati gba data! Aṣiri rẹ bọwọ fun!</string>
+    <string name="slideTitle6">Gbigbanilaaye App</string>
+    <string name="slideDesc6">Jọwọ fun app ni igbanilaaye ti o nilo lati ṣiṣẹ!</string>
     <!-- Update screen -->
+    <string name="update_new">Ẹya Titun Imudojuiwọn:</string>
+    <string name="update_hash_error">Ibamu Ibuwọlu Faili! Ko le ṣe imudojuiwọn.</string>
+    <string name="update_activity">Rucky imudojuiwọn</string>
+    <string name="update_version">Ẹya</string>
+    <string name="update_version_nightly">Version Nightly</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Ipo imudojuiwọn</string>
+    <string name="update_action">Ṣe igbasilẹ ati Fi imudojuiwọn sori ẹrọ</string>
+    <string name="update_downloading">Gbigba imudojuiwọn</string>
+    <string name="install_update">Ohun elo Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ṣe o fẹ lati tọju tabi jade kuro ni app naa?</string>
+    <string name="btn_exit">Jade</string>
+    <string name="btn_back">Tọju</string>
+    <string name="unlock">Ṣii App</string>
+    <string name="auth">Jẹrisi ìfàṣẹsí</string>
+    <string name="update">Imudojuiwọn</string>
+    <string name="setting">Ètò</string>
+    <string name="codeHint">Tẹ tabi fifuye awọn iwe afọwọkọ ducky roba nibi</string>
+    <string name="loadBtn">Fifuye</string>
+    <string name="saveBtn">Fipamọ</string>
+    <string name="delBtn">Paarẹ</string>
+    <string name="runBtn">Ṣiṣe</string>
+    <string name="confBtn">Iṣeto</string>
+    <string name="btn_continue">Tesiwaju</string>
+    <string name="root_err">Wiwọle Gbongbo Ti beere fun Ikọlu okun USB!</string>
+    <string name="kernel_err">"Kernel Ko Atilẹyin Fun Ikọlu okun USB!"</string>
+    <string name="vm">Ayika foju ko ni atilẹyin!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB ti sopọ</string>
+    <string name="config_status_usb_off">USB Ge asopọ</string>
+    <string name="config_status_net_on">Socket Nẹtiwọọki</string>
+    <string name="config_status_net_off">Nẹtiwọọki Socket Ge asopọ</string>
+    <string name="socket_address">Tẹ Socket IP ati adirẹsi ibudo</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID atunto</string>
+    <string name="hid_download">Gba lati ayelujara</string>
+    <string name="hid_update">Imudojuiwọn</string>
+    <string name="hid_edit">Ṣatunkọ</string>
+    <string name="hid_delete">Paarẹ</string>
     <!-- Keylist screen -->
+    <string name="key_title">Orukọ bọtini</string>
+    <string name="key_character">Ohun kikọ bọtini</string>
+    <string name="key_code">Koodu bọtini</string>
+    <string name="key_ctrl">Konturolu Konturolu</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Yi lọ yi bọ Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Koodu bọtini</string>
+    <string name="modcode">Ayipada koodu</string>
+    <string name="key_details">Awọn alaye bọtini</string>
     <!-- Setting screen -->
+    <string name="setting_general">Gbogboogbo</string>
+    <string name="dark_theme_title">Ipo Alẹ</string>
+    <string name="dark_theme_summary">Ṣeto akori dudu</string>
+    <string name="device_admin_title">Ṣe app ẹrọ eni</string>
+    <string name="device_admin_summary">Gbongbo beere. Eyi ni lati fori diẹ ninu awọn ihamọ lori Android.</string>
+    <string name="hide_icon_title">Tọju/Pa Aami Ifilọlẹ ṣiṣẹ</string>
+    <string name="hide_icon_summary">Tẹ*</string>
+    <string name="delete_dep_title">Yọ App kuro</string>
+    <string name="delete_dep_summary">Nu soke ki o si aifi si po app.</string>
+    <string name="settings_sec_title">Advance Aabo</string>
+    <string name="settings_sec_desc">Mu fifi ẹnọ kọ nkan faili iwe afọwọkọ ṣiṣẹ ati titiipa iboju.</string>
+    <string name="setting_device">Awọn Eto Ipo ikọlu</string>
+    <string name="configfs_title">Tunto Aifọwọyi ConfigFS</string>
+    <string name="configfs_summary">Yoo tunto HID lori awọn ẹrọ atilẹyin ConfigFS. Le fọ eto USB.</string>
+    <string name="hid_choice_title">HID asefara</string>
+    <string name="hid_choice_summary">Yipada laarin Legacy HID ati asefara HID</string>
+    <string name="hid_title">Èdè HID</string>
+    <string name="hid_summary">Ṣe igbasilẹ awọn ede HID afikun tabi ṣe apẹrẹ awọn ipalemo HID tuntun.</string>
+    <string name="settings_usb_title">Ifilọlẹ Asopọ USB</string>
+    <string name="settings_usb_desc">Bọtini ṣiṣe yoo ṣe ifilọlẹ ikọlu nigbati USB ti sopọ.</string>
+    <string name="settings_net_title">Ifilọlẹ Socket Socket Network</string>
+    <string name="settings_net_desc">Bọtini ṣiṣe yoo ṣe ifilọlẹ ikọlu nigbati Socket Nẹtiwọọki ti sopọ.</string>
+    <string name="setting_about">Alaye</string>
+    <string name="setting_developer_title">Olùgbéejáde</string>
+    <string name="settings_version_title">Ẹya</string>
+    <string name="settings_arch_title">Faaji</string>
+    <string name="settings_lic_title">Iwe-aṣẹ</string>
+    <string name="settings_support">Atilẹyin</string>
+    <string name="settings_git_title">Awọn ọrọ GitHub</string>
+    <string name="settings_git_desc">Tẹ lati ṣafikun awọn ọran tabi ibeere ẹya.</string>
+    <string name="settings_locale_title">Isọdibilẹ</string>
+    <string name="settings_locale_desc">Ṣe alabapin si isọdi ohun elo.</string>
+    <string name="release">Pinpin</string>
+    <string name="releaseNetHunter">NetHunter App itaja</string>
+    <string name="releaseGitHub">Itusilẹ GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Itusilẹ yokokoro</string>
+    <string name="releaseOthers">Itusilẹ ti kii ṣe atilẹyin</string>
+    <string name="btn_cancel">Fagilee</string>
+    <string name="btn_save">Fipamọ</string>
+    <string name="file_saved">ti o ti fipamọ</string>
+    <string name="title_open_file">Ṣii Faili</string>
+    <string name="title_delete_file">Pa Faili rẹ</string>
+    <string name="file_deleted">paarẹ</string>
+    <string name="file_name">Orukọ faili</string>
+    <string name="title_save_file">Fi faili pamọ</string>
+    <string name="hid_version">Ẹya: %d</string>
+    <string-array name="modes">
+        <item>Okun USB</item>
+        <item>Socket nẹtiwọki</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Tọki</item>
+        <item>Swedish</item>
+        <item>Slovenia</item>
+        <item>Russian</item>
+        <item>Portuguese</item>
+        <item>Norwegian</item>
+        <item>Itali</item>
+        <item>Ede Croatian</item>
+        <item>United Kingdom English</item>
+        <item>Faranse</item>
+        <item>Finnish</item>
+        <item>Ede Sipeeni</item>
+        <item>Danish</item>
+        <item>Jẹmánì</item>
+        <item>Canadian French</item>
+        <item>Portuguese Portuguese</item>
+        <item>Belarusian</item>
+        <item>Ede Hungarian</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Aifọwọyi</item>
+        <item>Ojo</item>
+        <item>Oru</item>
+    </string-array>
 </resources>

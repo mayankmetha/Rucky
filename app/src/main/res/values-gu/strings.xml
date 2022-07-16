@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">આગળ</string>
+    <string name="init_skip">છોડો</string>
+    <string name="init_agree">સંમત</string>
+    <string name="init_start">હેક</string>
+    <string name="slideDesc1">તમારા ઉપકરણને રબર ડકીમાં ફેરવો!</string>
+    <string name="slideTitle2">યુએસબી કેબલ</string>
+    <string name="slideDesc2">હુમલો શરૂ કરવા માટે યુએસબી વાયર્ડ ઈન્ટરફેસ!</string>
+    <string name="slideTitle3">નેટવર્ક સોકેટ</string>
+    <string name="slideDesc3">સમર્થિત બાહ્ય સાધનો દ્વારા હુમલો શરૂ કરવા માટે Wi-Fi આધારિત સોકેટ ઇન્ટરફેસ!</string>
+    <string name="slideTitle4">અસ્વીકરણ</string>
+    <string name="slideDesc4">એપના યુઝરને થયેલા નુકસાન માટે સંપૂર્ણપણે જવાબદાર છે. આ એપ્લિકેશનનો ઉપયોગ કરીને થયેલા નુકસાન માટે અન્ય કોઈ એન્ટિટીને જવાબદાર ઠેરવી શકાય નહીં! એપ્લિકેશનનો ઉપયોગ કરતી વખતે સાવચેતી રાખો અને અન્યને નુકસાન પહોંચાડવા માટે તેનો ઉપયોગ કરશો નહીં!</string>
+    <string name="slideTitle5">ગોપનીયતા નીતિ</string>
+    <string name="slideDesc5">કોઈપણ ફોર્મનો કોઈ ડેટા એકત્રિત, ઉપયોગ અને વેચવામાં આવતો નથી! કેટલીક પરવાનગીઓ જે ગોપનીયતાની ચિંતાઓ વધારી શકે છે તે ફક્ત એપ્લિકેશનમાં અમુક સુવિધાઓના કામ માટે પૂછવામાં આવે છે અને તે ડેટા એકત્રિત કરવા માટે નથી! તમારી ગોપનીયતા આદરણીય છે!</string>
+    <string name="slideTitle6">એપ્લિકેશન પરવાનગી</string>
+    <string name="slideDesc6">કૃપા કરીને એપ્લિકેશનને કામ કરવા માટે જરૂરી પરવાનગી આપો!</string>
     <!-- Update screen -->
+    <string name="update_new">નવું અપડેટ ઉપલબ્ધ સંસ્કરણ:</string>
+    <string name="update_hash_error">ફાઇલની સહી મેળ ખાતી નથી! અપડેટ કરી શકાતું નથી.</string>
+    <string name="update_activity">રકી અપડેટ</string>
+    <string name="update_version">સંસ્કરણ</string>
+    <string name="update_version_nightly">રાત્રિ સંસ્કરણ</string>
+    <string name="update_changelog">ચેન્જલોગ</string>
+    <string name="update_status">અપડેટ સ્ટેટસ</string>
+    <string name="update_action">અપડેટ ડાઉનલોડ કરો અને ઇન્સ્ટોલ કરો</string>
+    <string name="update_downloading">અપડેટ ડાઉનલોડ કરી રહ્યું છે</string>
+    <string name="install_update">અપડેટ લાગુ કરી રહ્યાં છીએ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">શું તમે એપ્લિકેશનને છુપાવવા અથવા બહાર નીકળવા માંગો છો?</string>
+    <string name="btn_exit">બહાર નીકળો</string>
+    <string name="btn_back">છુપાવો</string>
+    <string name="unlock">એપ્લિકેશન અનલોક કરો</string>
+    <string name="auth">પ્રમાણીકરણની પુષ્ટિ કરો</string>
+    <string name="update">અપડેટ કરો</string>
+    <string name="setting">સેટિંગ્સ</string>
+    <string name="codeHint">રબર ડકી સ્ક્રિપ્ટો અહીં ટાઇપ કરો અથવા લોડ કરો</string>
+    <string name="loadBtn">લોડ</string>
+    <string name="saveBtn">સાચવો</string>
+    <string name="delBtn">કાઢી નાખો</string>
+    <string name="runBtn">ચલાવો</string>
+    <string name="confBtn">રૂપરેખા</string>
+    <string name="btn_continue">ચાલુ રાખો</string>
+    <string name="root_err">યુએસબી કેબલ એટેક માટે રૂટ એક્સેસ જરૂરી છે!</string>
+    <string name="kernel_err">"USB કેબલ એટેક માટે કર્નલ સપોર્ટેડ નથી!"</string>
+    <string name="vm">વર્ચ્યુઅલ પર્યાવરણ સપોર્ટેડ નથી!</string>
     <!-- Config screen -->
+    <string name="config_activity">ટ્વિક્સ</string>
+    <string name="config_status_usb_on">યુએસબી કનેક્ટેડ</string>
+    <string name="config_status_usb_off">USB ડિસ્કનેક્ટ</string>
+    <string name="config_status_net_on">નેટવર્ક સોકેટ કનેક્ટેડ</string>
+    <string name="config_status_net_off">નેટવર્ક સૉકેટ ડિસ્કનેક્ટ થયું</string>
+    <string name="socket_address">સોકેટ IP અને પોર્ટ સરનામું દાખલ કરો</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID રૂપરેખા</string>
+    <string name="hid_download">ડાઉનલોડ કરો</string>
+    <string name="hid_update">અપડેટ કરો</string>
+    <string name="hid_edit">સંપાદિત કરો</string>
+    <string name="hid_delete">કાઢી નાખો</string>
     <!-- Keylist screen -->
+    <string name="key_title">કી નામ</string>
+    <string name="key_character">મુખ્ય પાત્ર</string>
+    <string name="key_code">કી કોડ</string>
+    <string name="key_ctrl">Ctrl કી</string>
+    <string name="key_alt">Alt કી</string>
+    <string name="key_shift">શિફ્ટ કી</string>
+    <string name="key_meta">મેટા કી</string>
+    <string name="keycode">કી કોડ</string>
+    <string name="modcode">મોડિફાયર કોડ</string>
+    <string name="key_details">મુખ્ય વિગતો</string>
     <!-- Setting screen -->
+    <string name="setting_general">જનરલ</string>
+    <string name="dark_theme_title">નાઇટ મોડ</string>
+    <string name="dark_theme_summary">ડાર્ક થીમ સેટ કરો</string>
+    <string name="device_admin_title">એપ્લિકેશન ઉપકરણ માલિક બનાવો</string>
+    <string name="device_admin_summary">રુટ જરૂરી. આ Android પરના કેટલાક પ્રતિબંધોને બાયપાસ કરવા માટે છે.</string>
+    <string name="hide_icon_title">લૉન્ચર આઇકન છુપાવો/અક્ષમ કરો</string>
+    <string name="hide_icon_summary">ડાયલ કરો *</string>
+    <string name="delete_dep_title">એપ્લિકેશન અનઇન્સ્ટોલ કરો</string>
+    <string name="delete_dep_summary">એપ્લિકેશનને સાફ કરો અને અનઇન્સ્ટોલ કરો.</string>
+    <string name="settings_sec_title">એડવાન્સ સુરક્ષા</string>
+    <string name="settings_sec_desc">સ્ક્રિપ્ટ ફાઇલ એન્ક્રિપ્શન અને સ્ક્રીન લૉક સક્ષમ કરો.</string>
+    <string name="setting_device">એટેક મોડ સેટિંગ્સ</string>
+    <string name="configfs_title">સ્વતઃ રૂપરેખાંકિત રૂપરેખાંકન</string>
+    <string name="configfs_summary">ConfigFS સમર્થિત ઉપકરણો પર HID ગોઠવશે. યુએસબી સેટિંગ તૂટી શકે છે.</string>
+    <string name="hid_choice_title">કસ્ટમાઇઝ HID</string>
+    <string name="hid_choice_summary">લેગસી HID અને કસ્ટમાઇઝ HID વચ્ચે સ્વિચ કરો</string>
+    <string name="hid_title">HID ભાષા</string>
+    <string name="hid_summary">વધારાની HID ભાષાઓ ડાઉનલોડ કરો અથવા નવા HID લેઆઉટ ડિઝાઇન કરો.</string>
+    <string name="settings_usb_title">યુએસબી કનેક્ટ લોંચ</string>
+    <string name="settings_usb_desc">USB કનેક્ટ થવા પર રન બટન એટેક શરૂ કરશે.</string>
+    <string name="settings_net_title">નેટવર્ક સોકેટ કનેક્ટ લોન્ચ</string>
+    <string name="settings_net_desc">નેટવર્ક સોકેટ કનેક્ટ થાય ત્યારે રન બટન એટેક શરૂ કરશે.</string>
+    <string name="setting_about">માહિતી</string>
+    <string name="setting_developer_title">વિકાસકર્તા</string>
+    <string name="settings_version_title">સંસ્કરણ</string>
+    <string name="settings_arch_title">આર્કિટેક્ચર</string>
+    <string name="settings_lic_title">લાઇસન્સ</string>
+    <string name="settings_support">આધાર</string>
+    <string name="settings_git_title">GitHub મુદ્દાઓ</string>
+    <string name="settings_git_desc">સમસ્યાઓ અથવા સુવિધાની વિનંતી ઉમેરવા માટે ક્લિક કરો.</string>
+    <string name="settings_locale_title">સ્થાનિકીકરણ</string>
+    <string name="settings_locale_desc">એપ્લિકેશન સ્થાનિકીકરણમાં યોગદાન આપો.</string>
+    <string name="release">વિતરણ</string>
+    <string name="releaseNetHunter">NetHunter એપ સ્ટોર</string>
+    <string name="releaseGitHub">GitHub રિલીઝ</string>
+    <string name="releaseGitHubNightly">GitHub નાઇટલી</string>
+    <string name="releaseTest">ડીબગ રિલીઝ</string>
+    <string name="releaseOthers">બિન-આધારિત પ્રકાશન</string>
+    <string name="btn_cancel">રદ કરો</string>
+    <string name="btn_save">સાચવો</string>
+    <string name="file_saved">સાચવેલ</string>
+    <string name="title_open_file">ફાઇલ ખોલો</string>
+    <string name="title_delete_file">ફાઇલ કાઢી નાખો</string>
+    <string name="file_deleted">કાઢી નાખ્યું</string>
+    <string name="file_name">ફાઈલનું નામ</string>
+    <string name="title_save_file">ફાઇલ સાચવો</string>
+    <string name="hid_version">સંસ્કરણ: %d</string>
+    <string-array name="modes">
+        <item>યુએસબી કેબલ</item>
+        <item>નેટવર્ક સોકેટ</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>અમેરિકન અંગ્રેજી</item>
+        <item>ટર્કિશ</item>
+        <item>સ્વીડિશ</item>
+        <item>સ્લોવેનિયન</item>
+        <item>રશિયન</item>
+        <item>પોર્ટુગીઝ</item>
+        <item>નોર્વેજીયન</item>
+        <item>ઇટાલિયન</item>
+        <item>ક્રોએશિયન</item>
+        <item>યુનાઇટેડ કિંગડમ અંગ્રેજી</item>
+        <item>ફ્રેન્ચ</item>
+        <item>ફિનિશ</item>
+        <item>સ્પૅનિશ</item>
+        <item>ડેનિશ</item>
+        <item>જર્મન</item>
+        <item>કેનેડિયન ફ્રેન્ચ</item>
+        <item>બ્રાઝિલિયન પોર્ટુગીઝ</item>
+        <item>બેલારુસિયન</item>
+        <item>હંગેરિયન</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ઓટો</item>
+        <item>દિવસ</item>
+        <item>રાત્રિ</item>
+    </string-array>
 </resources>

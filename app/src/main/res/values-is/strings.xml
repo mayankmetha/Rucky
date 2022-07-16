@@ -2,12 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">NÆST</string>
+    <string name="init_skip">SKIPPA</string>
+    <string name="init_agree">Sammála</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Breyttu tækinu þínu í Rubber Ducky!</string>
+    <string name="slideTitle2">USB snúru</string>
+    <string name="slideDesc2">USB hlerunartengi til að hefja árás!</string>
+    <string name="slideTitle3">Nettengi</string>
+    <string name="slideDesc3">Wi-Fi byggt falsviðmót til að hefja árás með studdum utanaðkomandi verkfærum!</string>
+    <string name="slideTitle4">Fyrirvari</string>
+    <string name="slideDesc4">Notandi appsins er einn ábyrgur fyrir tjóni af völdum. Enginn annar aðili getur borið ábyrgð á tjóni sem er gert með þessu forriti! Farðu varlega þegar þú notar appið og notaðu þetta ekki til að valda öðrum skaða!</string>
+    <string name="slideTitle5">Friðhelgisstefna</string>
+    <string name="slideDesc5">Engum gögnum af neinu tagi er safnað, notuð og seld! Sumar heimildir sem gætu vakið áhyggjur af friðhelgi einkalífsins eru aðeins beðnar um að tilteknir eiginleikar í appinu virki og eru ekki til að safna gögnum! Friðhelgi þín er virt!</string>
+    <string name="slideTitle6">App leyfi</string>
+    <string name="slideDesc6">Vinsamlegast veittu appinu tilskilið leyfi til að vinna!</string>
     <!-- Update screen -->
+    <string name="update_new">Ný uppfærsla tiltæk útgáfa:</string>
+    <string name="update_hash_error">Skráarundirskrift misræmist! Get ekki uppfært.</string>
+    <string name="update_activity">Rucky uppfærsla</string>
     <string name="update_version">Útgáfa</string>
+    <string name="update_version_nightly">Næturútgáfa</string>
+    <string name="update_changelog">Breytingaskrá</string>
+    <string name="update_status">Uppfæra stöðu</string>
+    <string name="update_action">Sækja og setja upp uppfærslu</string>
+    <string name="update_downloading">Að sækja uppfærslu</string>
+    <string name="install_update">Að sækja um uppfærslu</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Viltu fela eða loka forritinu?</string>
+    <string name="btn_exit">Hætta</string>
+    <string name="btn_back">Fela</string>
+    <string name="unlock">Opnaðu app</string>
+    <string name="auth">Staðfestu auðkenningu</string>
+    <string name="update">Uppfærsla</string>
+    <string name="setting">Stillingar</string>
+    <string name="codeHint">Sláðu inn eða hlaða inn gúmmí ducky skriftum hér</string>
+    <string name="loadBtn">Hlaða</string>
+    <string name="saveBtn">Vista</string>
+    <string name="delBtn">Eyða</string>
+    <string name="runBtn">Hlaupa</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Halda áfram</string>
+    <string name="root_err">Rótaraðgangur nauðsynlegur fyrir USB snúruárás!</string>
+    <string name="kernel_err">"Kjarni er ekki studdur fyrir USB snúruárás!"</string>
+    <string name="vm">Sýndarumhverfi er ekki stutt!</string>
     <!-- Config screen -->
+    <string name="config_activity">Klippingar</string>
+    <string name="config_status_usb_on">USB tengt</string>
+    <string name="config_status_usb_off">USB aftengt</string>
+    <string name="config_status_net_on">Nettengi tengdur</string>
+    <string name="config_status_net_off">Nettengi ótengdur</string>
+    <string name="socket_address">Sláðu inn Socket IP og Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID stillingar</string>
+    <string name="hid_download">Sækja</string>
+    <string name="hid_update">Uppfærsla</string>
+    <string name="hid_edit">Breyta</string>
+    <string name="hid_delete">Eyða</string>
     <!-- Keylist screen -->
+    <string name="key_title">Nafn lykils</string>
+    <string name="key_character">Lykilpersóna</string>
+    <string name="key_code">Lykilorð</string>
+    <string name="key_ctrl">Ctrl takki</string>
+    <string name="key_alt">Alt takki</string>
+    <string name="key_shift">Shift takki</string>
+    <string name="key_meta">Meta lykill</string>
+    <string name="keycode">Lykilorð</string>
+    <string name="modcode">Breytingarkóði</string>
+    <string name="key_details">Helstu upplýsingar</string>
     <!-- Setting screen -->
+    <string name="setting_general">Almennt</string>
+    <string name="dark_theme_title">Næturstilling</string>
+    <string name="dark_theme_summary">Stilltu dökkt þema</string>
+    <string name="device_admin_title">Gerðu app tæki til eiganda</string>
+    <string name="device_admin_summary">Root krafist. Þetta er til að komast framhjá sumum takmörkunum á Android.</string>
+    <string name="hide_icon_title">Fela/slökkva á ræsiforriti</string>
+    <string name="hide_icon_summary">Hringja *</string>
+    <string name="delete_dep_title">Fjarlægðu forritið</string>
+    <string name="delete_dep_summary">Hreinsaðu upp og fjarlægðu forritið.</string>
+    <string name="settings_sec_title">Fyrirfram öryggi</string>
+    <string name="settings_sec_desc">Virkjaðu dulkóðun skriftuskráa og skjálás.</string>
+    <string name="setting_device">Stillingar árásarhams</string>
+    <string name="configfs_title">Sjálfvirk stilla ConfigFS</string>
+    <string name="configfs_summary">Mun stilla HID á ConfigFS studdum tækjum. Getur rofið USB stillingu.</string>
+    <string name="hid_choice_title">Sérhannaðar HID</string>
+    <string name="hid_choice_summary">Skiptu á milli Legacy HID og Customizable HID</string>
+    <string name="hid_title">HID tungumál</string>
+    <string name="hid_summary">Sæktu fleiri HID tungumál eða hannaðu nýtt HID skipulag.</string>
+    <string name="settings_usb_title">Ræsa USB Connect</string>
+    <string name="settings_usb_desc">Hlaupa hnappur mun hefja árás þegar USB er tengt.</string>
+    <string name="settings_net_title">Network Socket Connect Ræsa</string>
+    <string name="settings_net_desc">Run hnappur mun hefja árás þegar Network Socket er tengdur.</string>
+    <string name="setting_about">Upplýsingar</string>
+    <string name="setting_developer_title">Hönnuður</string>
     <string name="settings_version_title">Útgáfa</string>
+    <string name="settings_arch_title">Arkitektúr</string>
+    <string name="settings_lic_title">Leyfi</string>
+    <string name="settings_support">Stuðningur</string>
+    <string name="settings_git_title">GitHub vandamál</string>
+    <string name="settings_git_desc">Smelltu til að bæta við vandamálum eða eiginleikabeiðni.</string>
+    <string name="settings_locale_title">Staðfærsla</string>
+    <string name="settings_locale_desc">Stuðla að staðfærslu forrita.</string>
+    <string name="release">Dreifing</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub útgáfu</string>
+    <string name="releaseGitHubNightly">GitHub á kvöldin</string>
+    <string name="releaseTest">Kembiútgáfu</string>
+    <string name="releaseOthers">Óstudd útgáfa</string>
+    <string name="btn_cancel">Hætta við</string>
+    <string name="btn_save">Vista</string>
+    <string name="file_saved">vistuð</string>
+    <string name="title_open_file">Opnaðu skrá</string>
+    <string name="title_delete_file">Eyða skrá</string>
+    <string name="file_deleted">eytt</string>
+    <string name="file_name">Skráarnafn</string>
+    <string name="title_save_file">Vista skrá</string>
+    <string name="hid_version">Útgáfa: %d</string>
+    <string-array name="modes">
+        <item>USB snúru</item>
+        <item>Nettengi</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>amerísk enska</item>
+        <item>tyrkneska</item>
+        <item>sænsku</item>
+        <item>slóvenska</item>
+        <item>rússneska, Rússi, rússneskur</item>
+        <item>portúgalska</item>
+        <item>norska</item>
+        <item>ítalska</item>
+        <item>króatíska</item>
+        <item>Bretland enska</item>
+        <item>franska</item>
+        <item>finnska</item>
+        <item>spænska, spænskt</item>
+        <item>danska</item>
+        <item>þýska, Þjóðverji, þýskur</item>
+        <item>kanadísk franska</item>
+        <item>Brasilísk portúgalska</item>
+        <item>hvítrússneska</item>
+        <item>ungverska, Ungverji, ungverskt</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Sjálfvirk</item>
+        <item>Dagur</item>
+        <item>Nótt</item>
+    </string-array>
 </resources>

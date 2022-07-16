@@ -3,28 +3,149 @@
     <!-- Splash screen -->
     <!-- Init Screen -->
     <string name="init_next">WAR-RAOK</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">AGREE</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Turn your device to a Rubber Ducky!</string>
+    <string name="slideTitle2">USB Cable</string>
+    <string name="slideDesc2">USB wired interface for launching attack!</string>
+    <string name="slideTitle3">Network Socket</string>
+    <string name="slideDesc3">Wi-Fi based socket interfaces for launching attack via supported external tools!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">User of the app is solely responsible for the damages caused. No other entity can be held liable for the damages done using this app! Practice caution when using the app and do not use this to cause harm to others!</string>
+    <string name="slideTitle5">Privacy Policy</string>
+    <string name="slideDesc5">No Data of any form is collected, used and sold! Some permissions which could raise privacy concerns are only asked for the working of certain features in the app and is not to collect data! Your privacy is respected!</string>
+    <string name="slideTitle6">App Permission</string>
+    <string name="slideDesc6">Please grant app the required permission to work!</string>
     <!-- Update screen -->
+    <string name="update_new">New Update Available Version:</string>
+    <string name="update_hash_error">File Signature Mismatch! Cannot Update.</string>
+    <string name="update_activity">Rucky Update</string>
     <string name="update_version">Stumm</string>
+    <string name="update_version_nightly">Nightly Version</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Update Status</string>
+    <string name="update_action">Download and Install Update</string>
+    <string name="update_downloading">Downloading Update</string>
+    <string name="install_update">Applying Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Would you like to hide or exit the app?</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_back">Hide</string>
+    <string name="unlock">Unlock App</string>
+    <string name="auth">Confirm authentication</string>
     <string name="update">Hizivaat</string>
     <string name="setting">Arventennoù</string>
     <string name="codeHint">Bizskrivit pe lañsit skriptoù rubber ducky amañ</string>
     <string name="loadBtn">Kargañ</string>
     <string name="saveBtn">Saveteiñ</string>
+    <string name="delBtn">Delete</string>
     <string name="runBtn">Lañsañ</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Continue</string>
+    <string name="root_err">Root Access Required For USB Cable Attack!</string>
+    <string name="kernel_err">"Kernel Not Supported For USB Cable Attack!"</string>
+    <string name="vm">Virtual environment is not supported!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Connected</string>
+    <string name="config_status_usb_off">USB Disconnected</string>
+    <string name="config_status_net_on">Network Socket Connected</string>
+    <string name="config_status_net_off">Network Socket Disconnected</string>
+    <string name="socket_address">Enter Socket IP and Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Download</string>
     <string name="hid_update">Hizivaat</string>
+    <string name="hid_edit">Edit</string>
+    <string name="hid_delete">Delete</string>
     <!-- Keylist screen -->
+    <string name="key_title">Key Name</string>
+    <string name="key_character">Key Character</string>
+    <string name="key_code">Key Code</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Key Code</string>
+    <string name="modcode">Modifier Code</string>
+    <string name="key_details">Key Details</string>
     <!-- Setting screen -->
     <string name="setting_general">Hollek</string>
+    <string name="dark_theme_title">Night Mode</string>
+    <string name="dark_theme_summary">Set dark theme</string>
+    <string name="device_admin_title">Make app device owner</string>
+    <string name="device_admin_summary">Root Required. This is to bypass some of the restrictions on Android.</string>
+    <string name="hide_icon_title">Hide/Disable Launcher Icon</string>
+    <string name="hide_icon_summary">Dial *</string>
     <string name="delete_dep_title">Distaliañ an arload</string>
     <string name="delete_dep_summary">Naetaat ha distaliañ an arload.</string>
+    <string name="settings_sec_title">Advance Security</string>
+    <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
+    <string name="setting_device">Attack Mode Settings</string>
+    <string name="configfs_title">Auto Configure ConfigFS</string>
+    <string name="configfs_summary">Will configure HID on ConfigFS supported devices. May break USB setting.</string>
+    <string name="hid_choice_title">Customisable HID</string>
+    <string name="hid_choice_summary">Switch between Legacy HID and Customisable HID</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">Download additional HID languages or design new HID layouts.</string>
+    <string name="settings_usb_title">USB Connect Launch</string>
+    <string name="settings_usb_desc">Run button will launch attack when USB is connected.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Run button will launch attack when Network Socket is connected.</string>
     <string name="setting_about">Titouroù</string>
     <string name="setting_developer_title">Diorroer</string>
     <string name="settings_version_title">Stumm</string>
     <string name="settings_arch_title">Frammañ</string>
     <string name="settings_lic_title">Aotre-implijout</string>
+    <string name="settings_support">Support</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">Click to add issues or feature request.</string>
     <string name="settings_locale_title">Lec\'hiadur</string>
+    <string name="settings_locale_desc">Contribute to app localization.</string>
+    <string name="release">Distribution</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Non Supported Release</string>
+    <string name="btn_cancel">Cancel</string>
     <string name="btn_save">Saveteiñ</string>
+    <string name="file_saved">saved</string>
+    <string name="title_open_file">Open File</string>
+    <string name="title_delete_file">Delete File</string>
+    <string name="file_deleted">deleted</string>
+    <string name="file_name">File Name</string>
+    <string name="title_save_file">Save File</string>
+    <string name="hid_version">Version: %d</string>
+    <string-array name="modes">
+        <item>USB Cable</item>
+        <item>Network Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turkish</item>
+        <item>Swedish</item>
+        <item>Slovenian</item>
+        <item>Russian</item>
+        <item>Portuguese</item>
+        <item>Norwegian</item>
+        <item>Italian</item>
+        <item>Croatian</item>
+        <item>United Kingdom English</item>
+        <item>French</item>
+        <item>Finnish</item>
+        <item>Spanish</item>
+        <item>Danish</item>
+        <item>German</item>
+        <item>Canadian French</item>
+        <item>Brazilian Portuguese</item>
+        <item>Belarusian</item>
+        <item>Hungarian</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Day</item>
+        <item>Night</item>
+    </string-array>
 </resources>
