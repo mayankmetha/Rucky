@@ -74,6 +74,8 @@
     <string name="setting_general">Allmänt</string>
     <string name="dark_theme_title">Natt läge</string>
     <string name="dark_theme_summary">Ange mörkt tema</string>
+    <string name="device_admin_title">Gör appenhetsägare</string>
+    <string name="device_admin_summary">Root krävs. Det här är att kringgå några av begränsningarna på Android.</string>
     <string name="hide_icon_title">Dölj/inaktivera Launcher ikon</string>
     <string name="hide_icon_summary">Slå *#*#78259#*#* för att starta. På Android 10 kommer ikonen att inaktiveras, men inte döljas.</string>
     <string name="delete_dep_title">Avinstallera appen</string>

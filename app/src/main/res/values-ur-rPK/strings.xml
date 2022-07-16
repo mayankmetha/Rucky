@@ -74,6 +74,8 @@
     <string name="setting_general">جنرل</string>
     <string name="dark_theme_title">نائٹ موڈ</string>
     <string name="dark_theme_summary">نیم تاریک تھیم</string>
+    <string name="device_admin_title">ایپ ڈیوائس کا مالک بنائیں</string>
+    <string name="device_admin_summary">روٹ نے دریافت کیا. یہ Android پر کچھ پابندیوں کو بائی پاس کرنا ہے.</string>
     <string name="hide_icon_title">ھیڈ/ڈس ایبل لاؤچر آئیکون</string>
     <string name="hide_icon_summary">Dial * ##78259* * * * * * شروع کرنے کے لیے * * * * لوڈ, اتارنا Android 10 کے بعد, آئیکن غیر فعال ہو جائے گا, لیکن چھپا نہیں.</string>
     <string name="delete_dep_title">انانسٹال ایپ</string>

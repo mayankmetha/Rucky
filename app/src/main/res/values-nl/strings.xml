@@ -74,6 +74,8 @@
     <string name="setting_general">Algemeen</string>
     <string name="dark_theme_title">Nacht modus</string>
     <string name="dark_theme_summary">Donker thema instellen</string>
+    <string name="device_admin_title">Eigenaar van app-apparaat maken</string>
+    <string name="device_admin_summary">Root vereist. Dit is om enkele van de beperkingen op Android te omzeilen.</string>
     <string name="hide_icon_title">Verberg/Uitschakelen Launcher-pictogram</string>
     <string name="hide_icon_summary">Dial *#*#78259#* om te starten. Op Android 10 wordt het pictogram uitgeschakeld, maar niet verborgen.</string>
     <string name="delete_dep_title">App verwijderen</string>

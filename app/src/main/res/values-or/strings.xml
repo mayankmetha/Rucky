@@ -2,18 +2,44 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_skip">ବାଦ୍ ଦିଅ</string>
+    <string name="slideTitle5">ଗୋପନୀୟତା ନୀତି</string>
     <!-- Update screen -->
     <string name="update_version">ସଂସ୍କରଣ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ଆପଣ ଆପ୍ ଲୁଚାଇବାକୁ କିମ୍ୱା ପ୍ରସ୍ଥାନ କରିବାକୁ ଚାହାଁନ୍ତି କି?</string>
+    <string name="btn_exit">ପ୍ରସ୍ଥାନ</string>
+    <string name="btn_back">ଲୁଚାଅ</string>
+    <string name="saveBtn">ସଞ୍ଚୟ କରନ୍ତୁ</string>
+    <string name="delBtn">ବିଲୋପ କରନ୍ତୁ</string>
+    <string name="runBtn">ଚଳାନ୍ତୁ</string>
     <!-- Config screen -->
     <!-- HID config screen -->
+    <string name="hid_edit">ସମ୍ପାଦନା</string>
+    <string name="hid_delete">ବିଲୋପ କରନ୍ତୁ</string>
     <!-- Keylist screen -->
     <!-- Setting screen -->
     <string name="dark_theme_title">ରାତ୍ରି ମୋଡ୍</string>
+    <string name="dark_theme_summary">ଗାଢ଼ ଥିମ୍ ସେଟ୍ କରିବା</string>
+    <string name="hide_icon_summary">ଲଞ୍ଚ କରିବାକୁ *#*#78259#*#* ଡାୟଲ୍ କରନ୍ତୁ। ଆଣ୍ଡ୍ରଏଡ୍ 10 ପରଠାରୁ, ଆଇକନ୍ ଅକ୍ଷମ ହେବ, କିନ୍ତୁ ଲୁକ୍କାୟିତ ନୁହେଁ।</string>
+    <string name="delete_dep_title">ଆପ୍ ଅନଇନଷ୍ଟଲ୍ କରିବା</string>
+    <string name="delete_dep_summary">ସଫା କରି ଆପ୍ ଅନଇନଷ୍ଟଲ୍ କରନ୍ତୁ।</string>
+    <string name="settings_sec_title">ଅଗ୍ରୀମ ସୁରକ୍ଷା</string>
+    <string name="hid_title">HID ଭାଷା</string>
     <string name="setting_about">ସୂଚନା</string>
+    <string name="setting_developer_title">ବିକାଶକାରୀ</string>
     <string name="settings_version_title">ସଂସ୍କରଣ</string>
+    <string name="settings_arch_title">ଶିଳ୍ପଶାସ୍ତ୍ର</string>
     <string name="settings_support">ସମର୍ଥନ</string>
+    <string name="settings_locale_title">ସ୍ଥାନୀୟକରଣ</string>
+    <string name="release">ବଣ୍ଟନ</string>
     <string name="btn_cancel">ବାତିଲ୍ କର</string>
+    <string name="btn_save">ସଞ୍ଚୟ କରନ୍ତୁ</string>
+    <string name="file_saved">ସଞ୍ଚିତ</string>
+    <string name="title_open_file">ଫାଇଲ୍ ଖୋଲନ୍ତୁ</string>
+    <string name="title_delete_file">ଫାଇଲ୍ ବିଲୋପ କରନ୍ତୁ</string>
+    <string name="file_deleted">ବିଲୋପିତ</string>
+    <string name="title_save_file">ଫାଇଲ୍ ସଞ୍ଚୟ କରନ୍ତୁ</string>
     <string name="hid_version">ସଂସ୍କରଣ: %d</string>
     <string-array name="dark_theme_list">
         <item>ସ୍ଵତଃ</item>

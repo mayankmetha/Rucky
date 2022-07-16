@@ -74,6 +74,8 @@
     <string name="setting_general">Jeneral</string>
     <string name="dark_theme_title">Mode Malam</string>
     <string name="dark_theme_summary">Set tema gelap</string>
+    <string name="device_admin_title">Buat pemilik perangkat aplikasi</string>
+    <string name="device_admin_summary">Akar Diperlukan. Hal ini untuk memotong beberapa pembatasan pada Android.</string>
     <string name="hide_icon_title">Sembunyikan/Matikan Ikon Peluncur</string>
     <string name="hide_icon_summary">Dial * #*#78259#*#* untuk diluncurkan. Pada Android 10 dan seterusnya, ikon akan dimatikan, tetapi tidak disembunyikan.</string>
     <string name="delete_dep_title">Hapus Instalasi Aplikasi</string>

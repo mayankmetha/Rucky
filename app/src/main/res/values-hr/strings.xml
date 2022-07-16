@@ -74,6 +74,8 @@
     <string name="setting_general">Općenito</string>
     <string name="dark_theme_title">Noćni način</string>
     <string name="dark_theme_summary">Postavi tamnu temu</string>
+    <string name="device_admin_title">Napravi vlasnika uređaja aplikacije</string>
+    <string name="device_admin_summary">Potreban Je Korijen. Ovo je zaobilaženje nekih ograničenja na Androidu.</string>
     <string name="hide_icon_title">Sakrij / Onemogući Ikonu Pokretača</string>
     <string name="hide_icon_summary">Biraj * #* *#78259#*#* za pokretanje. Na Android 10 onwards, ikona će biti onemogućena, ali nije skrivena.</string>
     <string name="delete_dep_title">Deinstaliraj Aplikaciju</string>

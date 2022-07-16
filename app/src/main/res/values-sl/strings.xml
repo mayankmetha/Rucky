@@ -74,6 +74,8 @@
     <string name="setting_general">Splošno</string>
     <string name="dark_theme_title">Nočni način</string>
     <string name="dark_theme_summary">Nastavi temno temo</string>
+    <string name="device_admin_title">Naredi lastnika naprave aplikacije</string>
+    <string name="device_admin_summary">Zahtevan Je Koren. To je, če želite zaobiti nekatere omejitve v sistemu Android.</string>
     <string name="hide_icon_title">Skrij / Onemogoci Ikono Zaganjalnika</string>
     <string name="hide_icon_summary">Zavrti * #*#78259#*#* za zagon. V sistemu Android 10 naprej bo ikona onemogota, vendar ne skrita.</string>
     <string name="delete_dep_title">Odstrani Namestitev Aplikacije</string>

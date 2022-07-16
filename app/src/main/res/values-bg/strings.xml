@@ -74,6 +74,8 @@
     <string name="setting_general">Общие положения</string>
     <string name="dark_theme_title">Нощен режим</string>
     <string name="dark_theme_summary">Задаване на тъмна тема</string>
+    <string name="device_admin_title">Направете собственика на устройство приложение</string>
+    <string name="device_admin_summary">Изисква се корен. Това е да се заобиколи някои от ограниченията за Android.</string>
     <string name="hide_icon_title">Скриване/деактивиране на иконата за стартиране</string>
     <string name="hide_icon_summary">Изберете * #*#78259#*#за стартиране. На Андроид 10 нататък, иконата ще бъде деактивирана, но не е скрита.</string>
     <string name="delete_dep_title">Удалить приложение</string>

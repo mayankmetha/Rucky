@@ -74,6 +74,8 @@
     <string name="setting_general">Almindelige bestemmelser</string>
     <string name="dark_theme_title">Nattilstand</string>
     <string name="dark_theme_summary">Sæt mørkt tema</string>
+    <string name="device_admin_title">Gør app-enhedsejer</string>
+    <string name="device_admin_summary">Root påkrævet. Dette er at omgå nogle af restriktionerne på Android.</string>
     <string name="hide_icon_title">Skjul/Deaktivér Launcher-Ikon</string>
     <string name="hide_icon_summary">Ring *#*#78259#*#* for at starte. På Android 10 og derover vil ikonet blive deaktiveret, men ikke skjult.</string>
     <string name="delete_dep_title">Fjern installation af program</string>

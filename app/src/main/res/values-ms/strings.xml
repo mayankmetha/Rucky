@@ -74,6 +74,8 @@
     <string name="setting_general">&amp; Umum</string>
     <string name="dark_theme_title">Mod Malam</string>
     <string name="dark_theme_summary">Tetapkan tema gelap</string>
+    <string name="device_admin_title">Buat aplikasi peranti aplikasi</string>
+    <string name="device_admin_summary">Root Diperlukan. Ini untuk melepaskan beberapa sekatan pada Android.</string>
     <string name="hide_icon_title">Sembunyi/Lumpuhkan Ikon Pelancar</string>
     <string name="hide_icon_summary">Dail * #*#78259#*#* untuk dilancarkan. Pada Android 10 onof, ikon akan dinyahaktifkan, tetapi tidak disembunyikan.</string>
     <string name="delete_dep_title">Nyahpasang App</string>

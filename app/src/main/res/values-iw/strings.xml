@@ -74,6 +74,8 @@
     <string name="setting_general">כללי</string>
     <string name="dark_theme_title">מצב לילה</string>
     <string name="dark_theme_summary">הגדרת נושא כהה</string>
+    <string name="device_admin_title">הפיכת הבעלים של התקן היישום</string>
+    <string name="device_admin_summary">דרוש יסוד. זה כדי לעקוף חלק מההגבלות על אנדרואיד.</string>
     <string name="hide_icon_title">הסתר/השבתה של איקון משגר</string>
     <string name="hide_icon_summary">חייג * #*#78259#*#* כדי להשיק. ב-Android 10 ואילך, האיקון יהיה מושבת, אך לא מוסתר.</string>
     <string name="delete_dep_title">הסרת התקנה של יישום</string>

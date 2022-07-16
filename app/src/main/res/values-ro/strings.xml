@@ -74,6 +74,8 @@
     <string name="setting_general">Generalități</string>
     <string name="dark_theme_title">Mod Noapte</string>
     <string name="dark_theme_summary">Setare temă întunecată</string>
+    <string name="device_admin_title">Face proprietarul dispozitivului de aplicații</string>
+    <string name="device_admin_summary">Rădăcină Necesară. Acest lucru este de a ocoli unele dintre restricțiile de pe Android.</string>
     <string name="hide_icon_title">Ascunde/Dezactivează pictograma Launcher</string>
     <string name="hide_icon_summary">Apelează *#*#78259#*#* de lansat. Începând cu Android 10, pictograma va fi dezactivată, dar nu ascunsă.</string>
     <string name="delete_dep_title">Dezinstalează aplicația</string>

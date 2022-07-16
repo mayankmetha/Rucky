@@ -10,14 +10,22 @@
     <string name="slideTitle2">USB ᱠᱮᱵᱩᱞ</string>
     <string name="slideTitle3"> ᱱᱮᱴᱣᱟᱨᱠ ᱥᱚᱠᱮᱴ</string>
     <string name="slideTitle4">ᱰᱤᱥᱠᱞᱮᱢᱟᱹᱨ</string>
+    <string name="slideTitle5">ᱯᱨᱟᱭᱤᱵᱷᱮᱥᱤ ᱯᱚᱞᱤᱥᱤ </string>
+    <string name="slideTitle6">ᱮᱯ ᱯᱟᱨᱢᱤᱥᱚᱱ </string>
+    <string name="slideDesc6">ᱫᱟᱭᱟᱠᱟᱛᱮ ᱮᱯᱞᱤᱠᱮᱥᱚᱱ ᱠᱟᱹᱢᱤ ᱚᱪᱚᱭᱟᱭ ᱞᱟᱹᱜᱤᱫ ᱞᱟᱹᱠᱛᱤᱭᱟᱱ ᱯᱟᱨᱢᱤᱥᱚᱱ ᱠᱚ ᱮᱢᱟᱭ ᱢᱮ!</string>
     <!-- Update screen -->
+    <string name="update_new">ᱱᱟᱣᱟ ᱟᱯᱰᱮᱴ ᱮᱵᱮᱞᱮᱵᱚᱞ ᱵᱷᱟᱨᱡᱚᱱ:</string>
+    <string name="update_hash_error">ᱯᱷᱟᱹᱭᱤᱞ ᱥᱤᱜᱽᱱᱮᱪᱟᱨ ᱵᱟᱝ ᱢᱮᱪᱚᱜ ᱠᱟᱱᱟ! ᱵᱟᱝ ᱟᱯᱰᱮᱴᱚᱜᱼᱟ ᱾</string>
     <string name="update_activity">Rucky ᱟᱹᱯᱰᱮᱴ</string>
     <string name="update_version">ᱵᱷᱟᱹᱨᱥᱚᱱ</string>
+    <string name="update_version_nightly">ᱧᱩᱛᱟᱹᱛ ᱵᱷᱟᱨᱡᱚᱱ </string>
     <string name="update_changelog">ᱵᱚᱫᱚᱞ ᱞᱟᱸᱜᱽ</string>
     <string name="update_status">ᱥᱴᱮᱴᱟᱹᱥ ᱟᱹᱯᱰᱮᱴ</string>
+    <string name="update_action">ᱟᱯᱰᱮᱴ ᱰᱟᱭᱩᱱᱞᱚᱰ ᱟᱨ ᱤᱱᱥᱴᱟᱞ ᱢᱮ </string>
     <string name="update_downloading">ᱟᱹᱯᱰᱮᱴ ᱰᱟᱩᱱᱞᱳᱰᱚᱜ ᱠᱟᱱᱟ </string>
     <string name="install_update">ᱟᱹᱯᱰᱮᱴ ᱮᱢ ᱪᱷᱚᱜ ᱠᱟᱱᱟ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ᱪᱮᱫ ᱟᱢ ᱮᱯ ᱩᱠᱩ ᱟᱨᱵᱟᱝ ᱚᱰᱚᱠᱚᱜ ᱥᱟᱱᱟ ᱮᱫ ᱢᱤᱭᱟᱸ?</string>
     <string name="btn_exit">ᱵᱟᱹᱰ</string>
     <string name="btn_back">ᱩᱠᱩ</string>
     <string name="unlock">ᱮᱯ ᱠᱷᱩᱞᱟᱹᱭ ᱢᱮ</string>
@@ -31,21 +39,44 @@
     <string name="confBtn">ᱠᱚᱱᱯᱷᱤᱜᱽ</string>
     <string name="btn_continue">ᱞᱟᱦᱟ</string>
     <string name="root_err">USB ᱠᱮᱵᱟᱹᱞ ᱟᱠᱨᱚᱢᱚᱬ ᱠᱟᱹᱜᱤᱫ ᱨᱩᱩᱴ ᱚᱫᱮᱨ ᱫᱚᱨᱠᱟᱨ!</string>
+    <string name="vm">ᱵᱷᱟᱨᱪᱩᱭᱟᱞ ᱤᱱᱵᱷᱟᱨᱢᱮᱸᱴ ᱵᱟᱭ ᱥᱟᱯᱚᱴᱮᱫᱼᱟ!</string>
     <!-- Config screen -->
     <string name="config_activity">ᱴᱣᱤᱠ</string>
     <string name="config_status_usb_on">USB Connected</string>
+    <string name="config_status_usb_off">USB ᱰᱤᱥᱠᱚᱱᱮᱠᱴᱮᱰ</string>
+    <string name="config_status_net_on">ᱱᱮᱴᱣᱟᱨᱠ ᱥᱚᱠᱠᱮᱴ ᱠᱚᱱᱮᱠᱴᱮᱰ </string>
+    <string name="config_status_net_off">ᱱᱮᱴᱣᱟᱨᱠ ᱥᱚᱠᱠᱮᱴ ᱰᱤᱥᱠᱚᱱᱮᱠᱴᱮᱰ </string>
+    <string name="socket_address">ᱥᱚᱠᱠᱮᱴ IP ᱟᱨ ᱯᱳᱨᱴ ᱮᱰᱨᱮᱥ ᱮᱱᱴᱟᱨ ᱢᱮ</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID ᱠᱳᱱᱯᱷᱤᱝ</string>
+    <string name="hid_download">ᱰᱟᱭᱩᱱᱞᱚᱰ ᱢᱮ </string>
     <string name="hid_update">ᱟ.ᱯᱰᱮᱴ</string>
     <string name="hid_edit">ᱥᱟᱯᱲᱟᱣ</string>
     <string name="hid_delete">ᱜᱮᱫ ᱜᱤᱰᱤ</string>
     <!-- Keylist screen -->
     <string name="key_title">ᱪᱟᱹᱵᱤ ᱧᱤᱛᱩᱢ</string>
+    <string name="key_character">ᱠᱤ ᱪᱟᱨᱠᱴᱟᱨ</string>
+    <string name="key_code">ᱠᱤ ᱠᱳᱰ</string>
+    <string name="key_ctrl">Ctrl ᱠᱤ</string>
+    <string name="key_alt">Alt ᱠᱤ</string>
+    <string name="key_shift">Shift ᱠᱤ</string>
+    <string name="key_meta">ᱢᱮᱴᱟ ᱠᱤ</string>
+    <string name="keycode">ᱠᱤ ᱠᱳᱰ</string>
+    <string name="modcode">ᱢᱳᱰᱤᱯᱷᱟᱭᱟᱨ ᱠᱳᱰ</string>
+    <string name="key_details">ᱠᱤ ᱰᱤᱴᱮᱞᱥ </string>
     <!-- Setting screen -->
     <string name="setting_general">ᱡᱮᱱᱨᱟᱞ</string>
     <string name="dark_theme_title">ᱧᱤᱛ ᱢᱳᱰ</string>
+    <string name="dark_theme_summary">ᱧᱩᱛᱟᱹᱛ ᱛᱷᱤᱢ ᱥᱮᱴ ᱢᱮ </string>
+    <string name="hide_icon_title">ᱞᱚᱱᱪᱚᱨ ᱟᱭᱤᱠᱚᱱ ᱩᱠᱩᱭ ᱢᱮ/ᱰᱤᱥᱟᱵᱞ ᱢᱮ </string>
+    <string name="hide_icon_summary">ᱞᱚᱸᱪ ᱞᱟᱹᱜᱤᱫ *#*#78259#*#* ᱰᱟᱭᱮᱞ ᱢᱮ ᱾ ᱮᱱᱰᱨᱚᱭᱮᱰ 10 ᱛᱟᱭᱚᱢ, ᱟᱭᱤᱠᱚᱱ ᱦᱚᱸᱧᱟᱜᱼᱟ ᱢᱮᱱᱠᱷᱟᱱ ᱵᱟᱝ ᱩᱠᱩᱱᱟ ᱾</string>
     <string name="delete_dep_title">ᱮᱯᱯ ᱚᱲᱚᱠ ᱢᱮ</string>
     <string name="delete_dep_summary">ᱮᱯᱯ ᱠᱚ ᱥᱟᱯᱷᱟ ᱟᱨ ᱚᱲᱚᱠ ᱢᱮ ᱾</string>
     <string name="settings_sec_title">ᱮᱰᱵᱷᱟᱱᱥ ᱥᱮᱠᱭᱚᱨᱴᱤ</string>
+    <string name="setting_device">ᱟᱴᱟᱠ ᱢᱳᱰ ᱥᱮᱴᱤᱝᱥ</string>
+    <string name="hid_title">HID ᱯᱟᱹᱨᱥᱤ </string>
+    <string name="hid_summary">ᱱᱟᱣᱟ HID ᱞᱮᱟᱭᱩᱴᱥ ᱰᱤᱡᱟᱭᱤᱱ ᱢᱮ ᱟᱨᱵᱟᱝ ᱮᱰᱤᱥᱱᱟᱞ HID ᱯᱟᱹᱨᱥᱤ ᱠᱚ ᱰᱟᱭᱩᱱᱞᱚᱰ ᱢᱮ ᱾</string>
+    <string name="settings_usb_title">USB ᱠᱚᱱᱮᱠᱴᱮᱰ ᱞᱚᱸᱪ </string>
     <string name="setting_about">ᱤᱱᱯᱷᱚ</string>
     <string name="setting_developer_title">ᱰᱮᱵᱷᱞᱚᱯᱟᱹᱨ</string>
     <string name="settings_version_title">ᱵᱷᱟᱹᱨᱥᱚᱱ</string>
@@ -63,6 +94,7 @@
     <string name="file_saved">ᱥᱟᱸᱪᱟᱣ</string>
     <string name="file_deleted">ᱜᱮᱫ ᱜᱤᱰᱤ ᱠᱮᱟᱢ</string>
     <string name="file_name">ᱨᱮᱫ ᱧᱩᱛᱩᱢ</string>
+    <string name="title_save_file">ᱯᱷᱟᱹᱭᱤᱞ ᱥᱮᱵᱽ ᱢᱮ </string>
     <string-array name="modes">
         <item>USB ᱠᱮᱵᱩᱞ</item>
         <item> ᱱᱮᱴᱣᱟᱨᱠ ᱥᱚᱠᱮᱴ</item>

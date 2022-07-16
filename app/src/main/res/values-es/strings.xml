@@ -74,6 +74,8 @@
     <string name="setting_general">General</string>
     <string name="dark_theme_title">Modo nocturno</string>
     <string name="dark_theme_summary">Establecer tema oscuro</string>
+    <string name="device_admin_title">Hacer propietario del dispositivo de aplicación</string>
+    <string name="device_admin_summary">Raíz necesaria. Esto es para eludir algunas de las restricciones en Android.</string>
     <string name="hide_icon_title">Ocultar/Desactivar icono del lanzador</string>
     <string name="hide_icon_summary">Marcar *#*#78259#*#* para lanzar. En Android 10 en adelante, el icono será deshabilitado, pero no oculto.</string>
     <string name="delete_dep_title">Desinstalar App</string>

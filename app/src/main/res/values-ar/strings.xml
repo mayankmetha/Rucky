@@ -74,6 +74,8 @@
     <string name="setting_general">عام</string>
     <string name="dark_theme_title">الوضع الليلي</string>
     <string name="dark_theme_summary">تعيين السمة المظلمة</string>
+    <string name="device_admin_title">جعل مالك جهاز التطبيق</string>
+    <string name="device_admin_summary">الأصل مطلوب. هذا لتجاوز بعض القيود على أندرويد</string>
     <string name="hide_icon_title">إخفاء/تعطيل أيقونة المشغل</string>
     <string name="hide_icon_summary">اطلب *#*#78259#*#* للتشغيل. عند اندرويد 10 فصاعدا، سيتم تعطيل أيقونة ، ولكن ليس مخفيا.</string>
     <string name="delete_dep_title">تطبيق الغاء التركيب</string>

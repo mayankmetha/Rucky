@@ -74,6 +74,8 @@
     <string name="setting_general">A. 概况</string>
     <string name="dark_theme_title">夜间模式</string>
     <string name="dark_theme_summary">设置暗色主题</string>
+    <string name="device_admin_title">使应用程序设备所有者</string>
+    <string name="device_admin_summary">需要 root 用户。 这是为了绕过 Android上的一些限制。</string>
     <string name="hide_icon_title">隐藏/禁用启动器图标</string>
     <string name="hide_icon_summary">拨打*#78259#*#*#*来启动。在 Android 10 后，图标将被禁用，但不会隐藏。</string>
     <string name="delete_dep_title">卸载应用</string>

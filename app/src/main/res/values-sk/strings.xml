@@ -74,6 +74,8 @@
     <string name="setting_general">Všeobecné</string>
     <string name="dark_theme_title">Nočný režim</string>
     <string name="dark_theme_summary">Nastaviť tmavý motív</string>
+    <string name="device_admin_title">Urobiť z aplikácie vlastníka zariadenia</string>
+    <string name="device_admin_summary">Vyžaduje sa root. Tým sa obchádzajú niektoré obmedzenia systému Android.</string>
     <string name="hide_icon_title">Skryť/Zakázať ikonu spúšťača</string>
     <string name="hide_icon_summary">Pre spustenie vytočte *#*#78259#*#*. Na Androide 10 a novších bude ikona deaktivovaná, ale nie skrytá.</string>
     <string name="delete_dep_title">Odinštalovať Aplikáciu</string>

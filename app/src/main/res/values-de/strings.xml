@@ -76,6 +76,8 @@ Ihre Privatsphäre wird respektiert.</string>
     <string name="setting_general">Allgemein</string>
     <string name="dark_theme_title">Nachtmodus</string>
     <string name="dark_theme_summary">Dunkles Design setzen</string>
+    <string name="device_admin_title">Eigner der App-Einheit machen</string>
+    <string name="device_admin_summary">Root erforderlich. Dies ist, einige der Einschränkungen auf Android zu umgehen.</string>
     <string name="hide_icon_title">Launcher-Icon ausblenden/deaktivieren</string>
     <string name="hide_icon_summary">Wählen Sie *#*#78259#*#* um zu starten. Auf Android 10 wird das Symbol deaktiviert, aber nicht versteckt.</string>
     <string name="delete_dep_title">App deinstallieren</string>

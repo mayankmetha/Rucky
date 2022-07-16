@@ -4,11 +4,36 @@
     <!-- Init Screen -->
     <string name="init_next">KÖVETKEZŐ</string>
     <string name="init_skip">SKIP</string>
+    <string name="init_agree">AGREE</string>
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Fordítsd el a szerkezetet egy gumikacinak!</string>
+    <string name="slideTitle2">USB kábel</string>
+    <string name="slideDesc2">USB csatlakozóinterfész a támadáshoz!</string>
+    <string name="slideTitle3">Hálózati socket</string>
+    <string name="slideDesc3">Wi-Fi alapú socket felületek a támadás indítására támogatott külső eszközökkel!</string>
+    <string name="slideTitle4">Jognyilatkozat</string>
+    <string name="slideDesc4">Az alkalmazás felhasználói kizárólag az okozott károkért felelősek. Az alkalmazás használatával végzett károkért nem lehet más szervezetet felelősségre vonni! Az alkalmazás használata során óvatosan járjon el, és ne használja ezt arra, hogy másoknak kárt okozzon!</string>
+    <string name="slideTitle5">Adatvédelmi politika</string>
+    <string name="slideDesc5">Semmilyen adatot nem gyűjtenek és nem adnak el! Néhány olyan engedély, amely adatvédelmi aggályokat vethet fel, csak bizonyos szolgáltatások munkáját kéri az alkalmazásban, és nem gyűjt adatokat! Tiszteletben tartom a magánéletét!</string>
+    <string name="slideTitle6">Alkalmazás engedély</string>
+    <string name="slideDesc6">Adja meg a munkához szükséges engedélyt.</string>
     <!-- Update screen -->
+    <string name="update_new">Új frissítés elérhető változat: </string>
+    <string name="update_hash_error">Fájl aláírás eltérés! Nem lehet frissíteni.</string>
+    <string name="update_activity">Rucky frissítés</string>
     <string name="update_version">Változat</string>
+    <string name="update_version_nightly">Éjszakai változat</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Állapot frissítése</string>
+    <string name="update_action">Frissítés letöltése és telepítése</string>
+    <string name="update_downloading">Frissítés letöltése</string>
+    <string name="install_update">Frissítés alkalmazása</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Elbújna vagy kilépne az alkalmazásból?</string>
+    <string name="btn_exit">Kilép</string>
+    <string name="btn_back">Elrejtés</string>
+    <string name="unlock">Eltávolítás alkalmazás</string>
+    <string name="auth">Hitelesítés megerősítése</string>
     <string name="update">Frissítés</string>
     <string name="setting">Beállítások</string>
     <string name="codeHint">Itt írja be vagy töltse be a gumikacsákat</string>
@@ -16,17 +41,58 @@
     <string name="saveBtn">Mentés</string>
     <string name="delBtn">Törlés</string>
     <string name="runBtn">Futtatás</string>
+    <string name="confBtn">Konfiguráció</string>
+    <string name="btn_continue">Folytatás</string>
+    <string name="root_err">Root hozzáférés szükséges USB kábel csatlakozáshoz!</string>
+    <string name="kernel_err">"Az USB kábel nem támogatott!"</string>
+    <string name="vm">A virtuális környezet nem támogatott!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweak</string>
+    <string name="config_status_usb_on">USB csatlakoztatva</string>
+    <string name="config_status_usb_off">USB csatlakoztatva</string>
+    <string name="config_status_net_on">Hálózati socket kapcsolat</string>
+    <string name="config_status_net_off">Hálózati socket szétkapcsolása</string>
+    <string name="socket_address">Socket IP és port cím megadása</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID konfiguráció</string>
+    <string name="hid_download">Letöltés</string>
     <string name="hid_update">Frissítés</string>
+    <string name="hid_edit">Szerkesztés</string>
     <string name="hid_delete">Törlés</string>
     <!-- Keylist screen -->
+    <string name="key_title">Kulcs neve</string>
+    <string name="key_character">Kulcs karakter</string>
+    <string name="key_code">Kulcskód</string>
+    <string name="key_ctrl">Ctrl billentyű</string>
+    <string name="key_alt">Alt kulcs</string>
+    <string name="key_shift">Shift billentyű</string>
+    <string name="key_meta">Meta kulcs</string>
+    <string name="keycode">Kulcskód</string>
+    <string name="modcode">Módosító kód</string>
+    <string name="key_details">Kulcs részletei</string>
     <!-- Setting screen -->
     <string name="setting_general">Általános</string>
+    <string name="dark_theme_title">Éjszakai mód</string>
+    <string name="dark_theme_summary">Sötét téma beállítása</string>
+    <string name="device_admin_title">Alkalmazáseszköz tulajdonosa</string>
+    <string name="device_admin_summary">Root Kötelező. Ezzel megkerüljük az Android egyes korlátozásait.</string>
+    <string name="hide_icon_title">Launcher Ikon elrejtése/letiltása</string>
+    <string name="hide_icon_summary">Dial * #*#78259#*#* a indításához. Android 10 esetén az ikon le lesz tiltva, de nem rejtett.</string>
     <string name="delete_dep_title">Alkalmazás eltávolítása</string>
     <string name="delete_dep_summary">Az alkalmazás törlése és eltávolítása.</string>
     <string name="settings_sec_title">Előzetes biztonság</string>
     <string name="settings_sec_desc">Engedélyezze a parancsfájl titkosítását és a képernyőzárolást.</string>
+    <string name="setting_device">Támadási mód beállításai</string>
+    <string name="configfs_title">ConfigFS automatikus konfigurálása</string>
+    <string name="configfs_summary">HID beállítása a ConfigFS támogatott eszközökön. Talán feltöri az USB beállítást.</string>
+    <string name="hid_choice_title">Személyre szabható HID</string>
+    <string name="hid_choice_summary">Váltás Legacy HID és Customisable HID között</string>
+    <string name="hid_title">HID nyelv</string>
+    <string name="hid_summary">További HID nyelvek letöltése vagy új HID elrendezések tervezése.</string>
+    <string name="settings_usb_title">USB csatlakozás indítása</string>
+    <string name="settings_usb_desc">A Futtatás gomb elindítja a támadást, amikor USB csatlakoztatva van.</string>
+    <string name="settings_net_title">Hálózati socket kapcsolat indítása</string>
+    <string name="settings_net_desc">A Futtatás gomb elindítja a támadást, ha a hálózati socket csatlakoztatva van.</string>
     <string name="setting_about">Információ</string>
     <string name="setting_developer_title">Fejlesztő</string>
     <string name="settings_version_title">Változat</string>
@@ -36,9 +102,50 @@
     <string name="settings_git_title">GitHub problémák</string>
     <string name="settings_git_desc">Kattintson ide kérdés vagy szolgáltatás kérés hozzáadásához.</string>
     <string name="settings_locale_title">Honosítás</string>
+    <string name="settings_locale_desc">Átalakítás az alkalmazás honosításához.</string>
+    <string name="release">Megoszlás</string>
     <string name="releaseNetHunter">NetHunter App Store</string>
     <string name="releaseGitHub">GitHub kiadás</string>
+    <string name="releaseGitHubNightly">GitHub éjszakánként</string>
     <string name="releaseTest">Hibakeresési kiadás</string>
     <string name="releaseOthers">Nem támogatott kiadás</string>
+    <string name="btn_cancel">Mégse</string>
     <string name="btn_save">Mentés</string>
+    <string name="file_saved">Mentve</string>
+    <string name="title_open_file">Fájl megnyitása</string>
+    <string name="title_delete_file">Fájl törlése</string>
+    <string name="file_deleted">Törölve</string>
+    <string name="file_name">Fájl neve</string>
+    <string name="title_save_file">Fájl mentése</string>
+    <string name="hid_version">Változat: %d</string>
+    <string-array name="modes">
+        <item>USB kábel</item>
+        <item>Hálózati socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikai angol</item>
+        <item>Török</item>
+        <item>Svéd</item>
+        <item>Szlovén</item>
+        <item>Orosz</item>
+        <item>Portugál</item>
+        <item>Norvég</item>
+        <item>Olasz</item>
+        <item>Horvát</item>
+        <item>Egyesült Királyság</item>
+        <item>Francia</item>
+        <item>Finn</item>
+        <item>Spanyol</item>
+        <item>Dán</item>
+        <item>Német</item>
+        <item>Kanadai francia</item>
+        <item>Brazil portugál</item>
+        <item>Belarusz</item>
+        <item>Magyar</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automatikus</item>
+        <item>Nap</item>
+        <item>Éjszaka</item>
+    </string-array>
 </resources>

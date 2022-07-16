@@ -74,6 +74,8 @@
     <string name="setting_general">ทั่วไป</string>
     <string name="dark_theme_title">โหมดกลางคืน</string>
     <string name="dark_theme_summary">ตั้งค่าธีมสีเข้ม</string>
+    <string name="device_admin_title">ทำให้เจ้าของอุปกรณ์แอ็พ</string>
+    <string name="device_admin_summary">จำเป็นต้องมีรูท ซึ่งจะเป็นการข้ามข้อจำกัดบางอย่างบน Androidไปแล้ว</string>
     <string name="hide_icon_title">ซ่อน/ปิดใช้งานไอคอน Launcher</string>
     <string name="hide_icon_summary">โทร *# *#78259# * * เพื่อเรียกใช้งาน บน Android 10 เป็นต้นไปไอคอนจะถูกปิดใช้งานแต่ไม่ถูกซ่อน</string>
     <string name="delete_dep_title">ถอนการติดตั้งแอ็พ</string>

@@ -74,6 +74,8 @@
     <string name="setting_general">將軍</string>
     <string name="dark_theme_title">夜間模式</string>
     <string name="dark_theme_summary">設定暗主題</string>
+    <string name="device_admin_title">讓應用程式裝置擁有者</string>
+    <string name="device_admin_summary">Root 需要。 這是要略過 Android上的部分限制。</string>
     <string name="hide_icon_title">隱藏/停用啟動程式圖示</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* 要啟動。 在 Android 10 之後，圖示會停用，但不會隱藏。</string>
     <string name="delete_dep_title">解除安裝應用程式</string>

@@ -37,7 +37,7 @@ for _ in filename_mapping:
         status = "✅"
     else:
         status = "🚧"
-    fout.write("{:1}|{:10}|{:20}|{}%\n".format(status,_.replace("values-",""),name_mapping[_],com_count))
+    fout.write("|{:^8}|{:^11}|{:^21}|{:^12}|\n".format(status,_.replace("values-",""),name_mapping[_],str(com_count)+"%"))
 fout.close()
 os.system("rm -rf tmp/")
 print("Total: "+str(len(filename_mapping)))

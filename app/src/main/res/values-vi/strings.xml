@@ -74,6 +74,8 @@
     <string name="setting_general">Cài đặt chung</string>
     <string name="dark_theme_title">Chế độ đêm</string>
     <string name="dark_theme_summary">Giao dien toi</string>
+    <string name="device_admin_title">Làm chủ thiết bị ứng dụng</string>
+    <string name="device_admin_summary">Yêu Cầu Gốc. Điều này là bỏ qua một số hạn chế trên Android.</string>
     <string name="hide_icon_title">Vô hiệu hóa biểu tượng launcher</string>
     <string name="hide_icon_summary">Dial * #*#78259#*#* để khởi động. Trên Android 10 trở đi, biểu tượng sẽ bị vô hiệu hóa, nhưng không bị ẩn.</string>
     <string name="delete_dep_title">Gỡ cài đặt ứng dụng</string>

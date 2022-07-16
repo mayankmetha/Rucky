@@ -1,4 +1,4 @@
-# Rucky
+# Rucky 
 [![GitHub](https://img.shields.io/github/license/mayankmetha/Rucky)](https://github.com/mayankmetha/Rucky/blob/master/LICENSE)
 [![Crowdin](https://badges.crowdin.net/rucky/localized.svg)](https://crwd.in/rucky)
 [![Android](https://img.shields.io/badge/android-6.x%2B-lightgrey)](https://github.com/mayankmetha/Rucky)
@@ -297,13 +297,13 @@ All mouse/pointer commands will start with this command. REPEAT command and DELA
 
 <b>Note:</b>
 1. In parameter field `[button]`, which emulates a mouse button action and can have the following value:
-   - LEFT
-   - RIGHT
-   - MIDDLE
+    - LEFT
+    - RIGHT
+    - MIDDLE
 2. In parameter field `[x]` and `[y]`, which emulates mouse movement action and can have the value range from -127 to 127. This represents pixels and is relative to where the mouse currently is. If you are at the point (150,150) then you can move the mouse to (127,127) pixels of this point followed by (23,23). Therefore, if the mouse is at (0,0) [top left corner] and you want to move to (1920, 1080) [bottom right corner, assuming a 1080p display], then you would need to move the mouse a few times 127 pixels at a time (or less) in either direction.
 3. In parameter field `[scroll]`, which emulates mouse scroll whell action and can have the following value:
-   - UP
-   - DOWN
+    - UP
+    - DOWN
 4. In parameters `[num]` represents a number. This is used to repeat the action. Alternatively, REPEAT command can be used.
 
 <b>Syntax:</b>
@@ -354,9 +354,9 @@ REPEAT 1
 |   ❌    |   b+bal   |       Balochi       |     0%     |
 |   ❌    |    bm     |       Bambara       |     0%     |
 |   ❌    |    ba     |       Bashkir       |     0%     |
-|   🚧   |    eu     |       Basque        |     7%     |
+|   ✅    |    eu     |       Basque        |    100%    |
 |   ❌    |    be     |     Belarusian      |     0%     |
-|   ❌    |    bn     |       Bengali       |     0%     |
+|   ✅    |    bn     |       Bengali       |    100%    |
 |   🚧   |   b+ber   |       Berber        |    41%     |
 |   ❌    |    bh     |       Bihari        |     0%     |
 |   ❌    |    bi     |       Bislama       |     0%     |
@@ -413,7 +413,7 @@ REPEAT 1
 |   ✅    |    hi     |        Hindi        |    100%    |
 |   ❌    |    ho     |      Hiri Motu      |     0%     |
 |   ❌    |   b+hmn   |        Hmong        |     0%     |
-|   🚧   |    hu     |      Hungarian      |    25%     |
+|   ✅    |    hu     |      Hungarian      |    100%    |
 |   🚧   |    is     |      Icelandic      |     1%     |
 |   ❌    |    io     |         Ido         |     0%     |
 |   ❌    |    ig     |        Igbo         |     0%     |
@@ -475,14 +475,14 @@ REPEAT 1
 |   ✅    |    nb     |  Norwegian Bokmal   |    100%    |
 |   ✅    |    nn     |  Norwegian Nynorsk  |    100%    |
 |   ❌    |    oc     |       Occitan       |     0%     |
-|   🚧   |    or     |        Odia         |     7%     |
+|   🚧   |    or     |        Odia         |    26%     |
 |   ❌    |    oj     |       Ojibwe        |     0%     |
 |   ❌    |    om     |        Oromo        |     0%     |
 |   ❌    |    os     |      Ossetian       |     0%     |
 |   ❌    |    pi     |        Pali         |     0%     |
 |   ❌    |   b+pap   |     Papiamento      |     0%     |
 |   ❌    |    ps     |       Pashto        |     0%     |
-|   🚧   |    fa     |       Persian       |     9%     |
+|   🚧   |    fa     |       Persian       |     8%     |
 |   ✅    |    pl     |       Polish        |    100%    |
 |   ✅    |    pt     |     Portuguese      |    100%    |
 |   ❌    |    pa     |       Punjabi       |     0%     |
@@ -493,11 +493,11 @@ REPEAT 1
 |   ✅    |    ru     |       Russian       |    100%    |
 |   ❌    |    sg     |        Sango        |     0%     |
 |   ❌    |    sa     |      Sanskrit       |     0%     |
-|   🚧   |   b+sat   |       Santali       |    57%     |
+|   🚧   |   b+sat   |       Santali       |    80%     |
 |   ❌    |    sc     |      Sardinian      |     0%     |
 |   ❌    |   b+sco   |        Scots        |     0%     |
 |   ❌    |    gd     |   Scottish Gaelic   |     0%     |
-|   ❌    |    sr     | Serbian (Cyrillic)  |     0%     |
+|   ✅    |    sr     | Serbian (Cyrillic)  |    100%    |
 |   ❌    | b+sr+Latn |   Serbian (Latin)   |     0%     |
 |   ❌    |    sn     |        Shona        |     0%     |
 |   ❌    |    ii     |     Sichuan Yi      |     0%     |

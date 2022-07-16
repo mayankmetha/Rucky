@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">পরবর্তী</string>
+    <string name="init_skip">স্কিপ</string>
+    <string name="init_agree">গ্রহাণু</string>
+    <string name="init_start">হ্যাক</string>
+    <string name="slideDesc1">আপনার ডিভাইস রুবার ডকির দিকে ঘোরাও!</string>
+    <string name="slideTitle2">USB ক্যাবল</string>
+    <string name="slideDesc2">আক্রমণের জন্য ইউএসবি ওয়্যারড ইন্টারফেস!</string>
+    <string name="slideTitle3">নেটওয়ার্ক সকেট</string>
+    <string name="slideDesc3">সমর্থিত বাহ্যিক সরঞ্জামের মাধ্যমে আক্রমণ শুরু করার জন্য ওয়াই-ফাই ভিত্তিক সকেট ইন্টারফেস!</string>
+    <string name="slideTitle4">ডিসক্লেমার</string>
+    <string name="slideDesc4">এই অ্যাপ্লিকেশটির ব্যবহারকারীই ক্ষতিপূরণের জন্য এককভাবে দায়ী. এই অ্যাপ্লিকেশন ব্যবহার করে করা ক্ষতিপূরণের জন্য অন্য কোন সত্তা থাকতে পারে না! অ্যাপ্লিকেশন ব্যবহার করার সময় সতর্কতা অনুশীলন করুন এবং অন্যদের ক্ষতি করার জন্য এটি ব্যবহার করবেন না!</string>
+    <string name="slideTitle5">প্রাইভেসি পলিসি</string>
+    <string name="slideDesc5">কোন ফর্মের কোন তথ্য সংগ্রহ করা হয় না, ব্যবহার করা হয় এবং বিক্রি করা হয়! কিছু অনুমতি যা গোপনীয়তার উদ্বেগ বাড়াতে পারে শুধুমাত্র অ্যাপ্লিকেশনে নির্দিষ্ট বৈশিষ্ট্যের কাজ করার জন্য বলা হয় এবং তথ্য সংগ্রহ করা হয় না! তোমার গোপনীয়তা শ্রদ্ধা!</string>
+    <string name="slideTitle6">অ্যাপ পারমিশন</string>
+    <string name="slideDesc6">অনুগ্রহ করে অ্যাপ্লিকেশন অনুগ্রহ করে কাজ করার জন্য প্রয়োজনীয় অনুমতি প্রদান করুন!</string>
     <!-- Update screen -->
+    <string name="update_new">নতুন হালনাগাদ বিদ্যমান সংস্করণ: </string>
+    <string name="update_hash_error">ফাইল স্বাক্ষর মিসম্যাচ! হালনাগাদ করা যাচ্ছে না.</string>
+    <string name="update_activity">রকি আপডেট</string>
+    <string name="update_version">সংস্করণ</string>
+    <string name="update_version_nightly">Nightly সংস্করণ</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">অবস্থা হালনাগাদ করা হবে</string>
+    <string name="update_action">ডাউনলোড এবং ইনস্টল আপডেট করুন</string>
+    <string name="update_downloading">আপডেট ডাউনলোড করা হচ্ছে</string>
+    <string name="install_update">আপডেট প্রয়োগ করা হচ্ছে</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">আপনি কি অ্যাপটি লুকিয়ে বা বের করতে চান?</string>
+    <string name="btn_exit">এক্সিট</string>
+    <string name="btn_back">আড়াল করো</string>
+    <string name="unlock">অ্যাপ আনলক করো</string>
+    <string name="auth">অনুমোদন অনুমোদন করো</string>
+    <string name="update">আপডেট</string>
+    <string name="setting">সেটিংস</string>
+    <string name="codeHint">এখানে রাবার ডাকি স্ক্রিপ্ট টাইপ অথবা লোড করো</string>
+    <string name="loadBtn">লোড করো</string>
+    <string name="saveBtn">সংরক্ষণ করো</string>
+    <string name="delBtn">মুছে ফেলো</string>
+    <string name="runBtn">চালাও</string>
+    <string name="confBtn">কনফিগ</string>
+    <string name="btn_continue">\@ title: group</string>
+    <string name="root_err">ইউএসবি ক্যাবল অ্যাটাকের জন্য রুট অ্যাক্সেস প্রয়োজন!</string>
+    <string name="kernel_err">"কার্নেল সমর্থিত নয় USB ক্যাবল অ্যাটাকের জন্য!"</string>
+    <string name="vm">ভার্চুয়াল পরিবেশ সমর্থিত নয়!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB সংযুক্ত</string>
+    <string name="config_status_usb_off">USB সংযোগ বিচ্ছিন্ন করা হয়েছে</string>
+    <string name="config_status_net_on">নেটওয়ার্ক সকেট সংযুক্ত</string>
+    <string name="config_status_net_off">নেটওয়ার্ক সকেট বিচ্ছিন্ন</string>
+    <string name="socket_address">সকেট আইপি এবং পোর্ট ঠিকানা লিখুন</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID কনফিগ</string>
+    <string name="hid_download">ডাউনলোড করুন</string>
+    <string name="hid_update">আপডেট</string>
+    <string name="hid_edit">সম্পাদনা</string>
+    <string name="hid_delete">মুছে ফেলো</string>
     <!-- Keylist screen -->
+    <string name="key_title">কী\'র নাম</string>
+    <string name="key_character">কী অক্ষর</string>
+    <string name="key_code">কী কোড</string>
+    <string name="key_ctrl">Ctrl কী</string>
+    <string name="key_alt">Alt কী</string>
+    <string name="key_shift">Shift কী</string>
+    <string name="key_meta">মেটা কী</string>
+    <string name="keycode">কী কোড</string>
+    <string name="modcode">পরিবর্তক কোড</string>
+    <string name="key_details">কী\'র বিস্তারিত</string>
     <!-- Setting screen -->
+    <string name="setting_general">সাধারণ</string>
+    <string name="dark_theme_title">রাতের মোড</string>
+    <string name="dark_theme_summary">অন্ধকার থিম নির্ধারণ করুন</string>
+    <string name="device_admin_title">অ্যাপ ডিভাইস মালিক তৈরি করো</string>
+    <string name="device_admin_summary">রুট প্রয়োজন. এটি অ্যানড্রয়েডের কিছু সীমাবদ্ধতা বাইপাস করা.</string>
+    <string name="hide_icon_title">লঞ্চার আইকন আড়াল করো</string>
+    <string name="hide_icon_summary">#*#78259#* #* #* #* #* #* #* #* #* #* #* #* #* #* #* #* অ্যানড্রয়েড ১০-এ, আইকন নিষ্ক্রিয় করা হবে, কিন্তু লুকানো নয়.</string>
+    <string name="delete_dep_title">অ্যাপ ইনস্টল করা হবে</string>
+    <string name="delete_dep_summary">পরিস্কার এবং অইনস্টল অ্যাপ্লিকেশন.</string>
+    <string name="settings_sec_title">অগ্রগতির নিরাপত্তা</string>
+    <string name="settings_sec_desc">স্ক্রিপ্ট ফাইল এনক্রিপশন এবং স্ক্রিন লক সক্রিয় করো.</string>
+    <string name="setting_device">অ্যাটাক মোড সেটিংস</string>
+    <string name="configfs_title">স্বয়ংক্রিয় কনফিগারেশন</string>
+    <string name="configfs_summary">ConfigFS সমর্থিত ডিভাইসে HID কনফিগার করা হবে. ইউএসবি সেটিং ভেঙ্গে দিবে.</string>
+    <string name="hid_choice_title">Customisable HID</string>
+    <string name="hid_choice_summary">Legacy HID এবং Customisable HID মধ্যে পরিবর্তন</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">অতিরিক্ত এইচআইডি ভাষা ডাউনলোড করুন অথবা নতুন HID বিন্যাস ডিজাইন করুন.</string>
+    <string name="settings_usb_title">USB কানেক্ট লঞ্চ</string>
+    <string name="settings_usb_desc">ইউএসবি সংযুক্ত হলে চালানো বাটন আক্রমণ হবে.</string>
+    <string name="settings_net_title">নেটওয়ার্ক সকেট সংযুক্ত লঞ্চ</string>
+    <string name="settings_net_desc">নেটওয়ার্ক সকেট সংযুক্ত হলে চালানো বাটন আক্রমণ হবে.</string>
+    <string name="setting_about">তথ্যName</string>
+    <string name="setting_developer_title">ডেভেলপার</string>
+    <string name="settings_version_title">সংস্করণ</string>
+    <string name="settings_arch_title">আর্কিটেকচার</string>
+    <string name="settings_lic_title">লাইসেন্স</string>
+    <string name="settings_support">সহায়তা</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">সমস্যা বা বৈশিষ্ট্য যোগ করার জন্য ক্লিক করুন.</string>
+    <string name="settings_locale_title">স্থানীয়করণ</string>
+    <string name="settings_locale_desc">অ্যাপ স্থানীয়করণের প্রতি শ্রদ্ধা.</string>
+    <string name="release">বিতরণ</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">গিটহাব রিলিজ</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">ডিবাগ রিলিজ</string>
+    <string name="releaseOthers">অসমর্থিত রিলিজ</string>
+    <string name="btn_cancel">বাতিল করো</string>
+    <string name="btn_save">সংরক্ষণ করো</string>
+    <string name="file_saved">সংরক্ষণ করা হয়েছে</string>
+    <string name="title_open_file">ফাইল খুলুন</string>
+    <string name="title_delete_file">ফাইল মুছে ফেলুন</string>
+    <string name="file_deleted">মুছে ফেলা হয়েছে</string>
+    <string name="file_name">ফাইলের নাম</string>
+    <string name="title_save_file">ফাইল সংরক্ষণ করো</string>
+    <string name="hid_version">সংস্করণ: %d</string>
+    <string-array name="modes">
+        <item>USB ক্যাবল</item>
+        <item>নেটওয়ার্ক সকেট</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>আমেরিকান ইংরেজী</item>
+        <item>তুর্কি</item>
+        <item>সুইডিশ</item>
+        <item>স্লোভেনিয়াName</item>
+        <item>রাশিয়াName</item>
+        <item>পর্তুগীজ</item>
+        <item>নরওয়েজিয়ান</item>
+        <item>ইতালীয়</item>
+        <item>ক্রোয়েশিয়ান</item>
+        <item>যুক্তরাজ্য ইংলিশ</item>
+        <item>ফরাসী</item>
+        <item>ফিনিশ</item>
+        <item>স্প্যানিশ</item>
+        <item>ড্যানিশ</item>
+        <item>জার্মান</item>
+        <item>কানাডিয়ান ফ্রেঞ্চ</item>
+        <item>ব্রাজিলিয়ান পর্তুগীজ</item>
+        <item>বেলারুশName</item>
+        <item>হাঙ্গেরিয়ান</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>স্বয়ংক্রিয়</item>
+        <item>দিন</item>
+        <item>নাইট</item>
+    </string-array>
 </resources>

@@ -74,6 +74,8 @@
     <string name="setting_general">Ogólny</string>
     <string name="dark_theme_title">Tryb nocny</string>
     <string name="dark_theme_summary">Ustaw ciemny motyw</string>
+    <string name="device_admin_title">Ustaw właściciela urządzenia aplikacji</string>
+    <string name="device_admin_summary">Element główny jest wymagany. Ma to na celu ominięcie niektórych ograniczeń w systemie Android.</string>
     <string name="hide_icon_title">Ukryj/Wyłącz ikonę Launcher</string>
     <string name="hide_icon_summary">Wybieraj *#*#78259#*#* aby uruchomić. Na Androidzie 10 ikona zostanie wyłączona, ale nie ukryta.</string>
     <string name="delete_dep_title">Odinstaluj aplikację</string>

@@ -74,6 +74,8 @@
     <string name="setting_general">Ümumi</string>
     <string name="dark_theme_title">Gecə rejimi</string>
     <string name="dark_theme_summary">Tünd temanı tənzimlə</string>
+    <string name="device_admin_title">Proqram cihaz sahibi olun</string>
+    <string name="device_admin_summary">Kök Tələb olunur. Bu, Android-də bəzi məhdudiyyətləri keçmək üçündür.</string>
     <string name="hide_icon_title">Başladıcı nişanını gizlət/sıradan çıxart</string>
     <string name="hide_icon_summary">Başlatmaq üçün *#*#78259#*#* yığın. Android 10-dan etibarən nişan sıradan çıxarılacaq, ancaq gizlədilməyəcək.</string>
     <string name="delete_dep_title">Tətbiqi sil</string>

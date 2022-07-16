@@ -74,6 +74,8 @@
     <string name="setting_general">Generale</string>
     <string name="dark_theme_title">Modalità Notturna</string>
     <string name="dark_theme_summary">Imposta tema scuro</string>
+    <string name="device_admin_title">Rendi proprietario dispositivo app</string>
+    <string name="device_admin_summary">Root obbligatorio. Questo per bypassare alcune limitazioni su Android.</string>
     <string name="hide_icon_title">Nascondi/Disabilita Icona Di Lancio</string>
     <string name="hide_icon_summary">Componi *#*#78259#*#* per lanciare. Su Android 10 in poi, l\'icona sarà disabilitata, ma non nascosta.</string>
     <string name="delete_dep_title">Disinstalla app</string>

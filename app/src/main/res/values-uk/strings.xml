@@ -74,6 +74,8 @@
     <string name="setting_general">Загальні налаштування</string>
     <string name="dark_theme_title">Нічний режим</string>
     <string name="dark_theme_summary">Встановити темну тему</string>
+    <string name="device_admin_title">Зробити програму власником пристрою</string>
+    <string name="device_admin_summary">Потрібен корінь. Це буде обходити деякі обмеження на Android.</string>
     <string name="hide_icon_title">Приховати/вимкнути іконку лаунчера</string>
     <string name="hide_icon_summary">Набрати *#*#78259#*#* для запуску. На Android 10 onwards буде вимкнуто піктограму, але не приховано.</string>
     <string name="delete_dep_title">Видалити додаток</string>

@@ -74,6 +74,8 @@
     <string name="setting_general">सामान्य</string>
     <string name="dark_theme_title">रात्रि मोड</string>
     <string name="dark_theme_summary">गहरा प्रसंग सेट करें</string>
+    <string name="device_admin_title">एप्लिकेशन उपकरण मालिक बनाएँ</string>
+    <string name="device_admin_summary">रूट आवश्यक है. यह एंड्रॉयड पर कुछ प्रतिबंधों को बाइपास करने के लिए है.</string>
     <string name="hide_icon_title">लॉचर प्रतीक छुपाएँ/निष्क्रिय करें</string>
     <string name="hide_icon_summary">डायल *#*#78259#*#* पर लॉन्च करने के लिए. एंड्रॉयड 10 के बाद, आइकन अक्षम किया जाएगा, लेकिन छुपा नहीं है.</string>
     <string name="delete_dep_title">एप्लिकेशन अनइंस्टॉल करें</string>

@@ -74,6 +74,8 @@
     <string name="setting_general">Γενικά</string>
     <string name="dark_theme_title">Νυχτερινή Λειτουργία</string>
     <string name="dark_theme_summary">Ορισμός σκοτεινού θέματος</string>
+    <string name="device_admin_title">Ορισμός κατόχου συσκευής εφαρμογής</string>
+    <string name="device_admin_summary">Απαιτείται Ρίζα. Αυτό είναι να παρακάμψει ορισμένους από τους περιορισμούς στο Android.</string>
     <string name="hide_icon_title">Απόκρυψη/Απενεργοποίηση Εικονιδίου Εκκινητή</string>
     <string name="hide_icon_summary">Κλήση *#*#78259#*#* για εκκίνηση. Στο Android 10 και μετά, το εικονίδιο θα απενεργοποιηθεί, αλλά δεν θα κρυφτεί.</string>
     <string name="delete_dep_title">Απεγκατάσταση Εφαρμογής</string>

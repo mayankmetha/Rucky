@@ -74,6 +74,8 @@
     <string name="setting_general">Normal</string>
     <string name="dark_theme_title">Natt modus</string>
     <string name="dark_theme_summary">Angi mørkt tema</string>
+    <string name="device_admin_title">Gjør app enhets eier</string>
+    <string name="device_admin_summary">Root krever. Dette er å omgå noen av restriksjonene på Android.</string>
     <string name="hide_icon_title">Skjul/deaktiver Launcher-ikon</string>
     <string name="hide_icon_summary">Dial *#*#78259#*#* for å starte. På Android 10 fremover, blir ikonet deaktivert, men ikke skjult.</string>
     <string name="delete_dep_title">Avinstaller appen</string>

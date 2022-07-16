@@ -74,6 +74,8 @@
     <string name="setting_general">일반적인</string>
     <string name="dark_theme_title">야간 모드</string>
     <string name="dark_theme_summary">짙은 테마 설정하기</string>
+    <string name="device_admin_title">애플리케이션 디바이스 소유자 만들기</string>
+    <string name="device_admin_summary">루트 필수. 이는 Android에 대한 일부 제한사항을 무시하기 위한 것입니다.</string>
     <string name="hide_icon_title">실행 프로그램 아이콘 숨기기/사용 안함</string>
     <string name="hide_icon_summary">시작 * #*#78259#*#* 가 실행됩니다. Android 10이상에서는 아이콘을 사용하지 않지만 숨길 수는 없습니다.</string>
     <string name="delete_dep_title">애플리케이션 제거하기</string>

@@ -74,6 +74,8 @@
     <string name="setting_general">一般</string>
     <string name="dark_theme_title">夜間モード</string>
     <string name="dark_theme_summary">ダークテーマを設定</string>
+    <string name="device_admin_title">アプリ・デバイスの所有者</string>
+    <string name="device_admin_summary">ルートが必要です。 これは、 Androidに関する制約事項の一部を迂回するためです。</string>
     <string name="hide_icon_title">ランチャーアイコンの非表示/無効化</string>
     <string name="hide_icon_summary">起動するには*#*#78259#*#*をダイヤルしてください。Android 10以降ではアイコンは無効になりますが、非表示にはなりません。</string>
     <string name="delete_dep_title">アプリをアンインストール</string>

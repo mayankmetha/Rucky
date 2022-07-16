@@ -74,6 +74,8 @@
     <string name="setting_general">Общие сведения</string>
     <string name="dark_theme_title">Ночной режим</string>
     <string name="dark_theme_summary">Установить темную тему</string>
+    <string name="device_admin_title">Сделать приложение администратором</string>
+    <string name="device_admin_summary">Требуется root. Это для того, чтобы обойти некоторые ограничения на Android.</string>
     <string name="hide_icon_title">Скрыть/отключить значок</string>
     <string name="hide_icon_summary">Наберите *#*#78259#*#* для запуска. Начиная с Android 10, значок будет отключен, но не скрыт.</string>
     <string name="delete_dep_title">Удалить приложение</string>

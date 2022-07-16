@@ -74,6 +74,8 @@
     <string name="setting_general">Vispārīgi noteikumi</string>
     <string name="dark_theme_title">Nakts režīms</string>
     <string name="dark_theme_summary">Iestatīt tumšo tēmu</string>
+    <string name="device_admin_title">Padarīt lietotnes ierīces īpašnieku</string>
+    <string name="device_admin_summary">Nepieciešama sakne. Tas ir paredzēts, lai apietu dažus Android ierobežojumus.</string>
     <string name="hide_icon_title">Slēpt/izslēgt palaišanas ikonu</string>
     <string name="hide_icon_summary">Dial * #*#78259#*#* lai uzsāktu. Uz Android 10 un turpmāk, ikona tiks atslēgts, bet ne slēpta.</string>
     <string name="delete_dep_title">Atinstalēt App</string>

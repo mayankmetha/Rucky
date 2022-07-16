@@ -74,6 +74,8 @@
     <string name="setting_general">Général</string>
     <string name="dark_theme_title">Mode Nuit</string>
     <string name="dark_theme_summary">Définir le thème sombre</string>
+    <string name="device_admin_title">Rendre le propriétaire de l\'unité d\'application</string>
+    <string name="device_admin_summary">Racine requise. Cela permet de contourner certaines des restrictions sur Android.</string>
     <string name="hide_icon_title">Cacher/Désactiver l\'icône de l\'appli</string>
     <string name="hide_icon_summary">Composer *#*#78259#*#* pour démarrer. À partir d\'Android 10, l\'icône sera désactivée, mais non cachée.</string>
     <string name="delete_dep_title">Désinstaller l\'application</string>

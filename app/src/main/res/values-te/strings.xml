@@ -18,7 +18,7 @@
     <string name="slideTitle6">ఆప్ పెర్మిషన్</string>
     <string name="slideDesc6">పని చేయడానికి అవసరమైన అనుమతి దయచేసి అనుమతి చేయండి!</string>
     <!-- Update screen -->
-    <string name="update_new">\@ title: window </string>
+    <string name="update_new">కొత్త అప్‌డేట్ అందుబాటులో ఉన్న వెర్షన్:</string>
     <string name="update_hash_error">దస్త్రపు సిగ్ప్రెస్ మిస్పోల్! నవీకరణ చేయలేరు.</string>
     <string name="update_activity">రక్కీ నవీకరణ</string>
     <string name="update_version">వెర్షన్</string>
@@ -74,6 +74,8 @@
     <string name="setting_general">జనరల్</string>
     <string name="dark_theme_title">రాత్రి విధి</string>
     <string name="dark_theme_summary">చీకటి థీమ్ అమర్చు</string>
+    <string name="device_admin_title">యాప్ పరికరం యజమాని చేయి</string>
+    <string name="device_admin_summary">రౌట్ అవసరం. ఇది ఆండ్రాయిడ్ మీద కొన్ని నియంత్రణలను బదిలించుకోవాలి.</string>
     <string name="hide_icon_title">లాన్చర్ Icon అచేతనం/అచేతనంచేయి</string>
     <string name="hide_icon_summary">Dial * #*#78259ప్రారంభం. ఆండ్రాయిడ్ 10 onwards, icon will be disabled, but not hidden.</string>
     <string name="delete_dep_title">అప్ను స్థాపించుము</string>

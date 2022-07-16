@@ -74,6 +74,8 @@
     <string name="setting_general">பொதுவான</string>
     <string name="dark_theme_title">இரவு வகை</string>
     <string name="dark_theme_summary">கருவியின் தலைப்பை அமை</string>
+    <string name="device_admin_title">பயன்பாடு சாதனை உரிமையாளர்</string>
+    <string name="device_admin_summary">Root தேவைப்படுகிறது. இது ஆராய்ட்ரானில் சில கட்டுப்பாடுகளைக் கைப்பற்றுவது.</string>
     <string name="hide_icon_title">QShortcut</string>
     <string name="hide_icon_summary">Dial * #*#78259#* #* #* #* #* அறிவிப்பு. Android 10 onwards, icon will be disabled, but not hidden.</string>
     <string name="delete_dep_title">ஆப்ப நிறுவுதலை</string>

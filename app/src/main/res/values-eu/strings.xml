@@ -8,16 +8,144 @@
     <string name="init_start">HACK</string>
     <string name="slideDesc1">Bihurtu zure gailua Rubber Ducky!</string>
     <string name="slideTitle2">USB kablea</string>
+    <string name="slideDesc2">Erasoa abiarazteko USB kable bidezko interfazea!</string>
+    <string name="slideTitle3">Sare Socketa</string>
+    <string name="slideDesc3">Wi-Fi oinarritutako socket interfazeak erasoa abiarazteko onartzen diren kanpoko tresnen bidez!</string>
+    <string name="slideTitle4">Ezespena</string>
+    <string name="slideDesc4">Aplikazioaren erabiltzailea da eragindako kalteen erantzule bakarra. Beste entitate batek ezin du aplikazio hau erabiliz egindako kalteen erantzule izan! Kontuz ibili aplikazioa erabiltzean eta ez erabili hau besteei kalte egiteko!</string>
+    <string name="slideTitle5">Pribautasun Agiriak</string>
+    <string name="slideDesc5">Ez da inolako daturik biltzen, erabiltzen eta saltzen! Pribatutasun-arazoak sor ditzaketen baimen batzuk aplikazioko funtzio batzuen funtzionamendurako soilik eskatzen dira eta ez dira datuak biltzeko! Zure pribatutasuna errespetatzen da!</string>
+    <string name="slideTitle6">Aplikazioaren baimena</string>
+    <string name="slideDesc6">Mesedez, eman aplikazioari lan egiteko beharrezko baimena!</string>
     <!-- Update screen -->
+    <string name="update_new">Eguneratze berria eskuragarri dagoen bertsioa:</string>
+    <string name="update_hash_error">Fitxategiaren sinadurak ez datoz bat! Ezin da eguneratu.</string>
+    <string name="update_activity">Rucky eguneratzea</string>
+    <string name="update_version">Bertsioa</string>
+    <string name="update_version_nightly">Gaueko Bertsioa</string>
+    <string name="update_changelog">Aldaketen erregistroa</string>
+    <string name="update_status">Eguneratu egoera</string>
+    <string name="update_action">Deskargatu eta instalatu eguneratzea</string>
+    <string name="update_downloading">Deskargatu eta instalatu eguneratzea</string>
+    <string name="install_update">Eguneraketa aplikatzen</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Aplikaziotik ezkutatu edo irten nahi duzu?</string>
+    <string name="btn_exit">Irten</string>
+    <string name="btn_back">Ezkutatu</string>
     <string name="unlock">Desblokeatu aplikazioa</string>
     <string name="auth">Autentifikazioa baieztatu</string>
+    <string name="update">Eguneratu</string>
+    <string name="setting">Ezarpenak</string>
+    <string name="codeHint">Idatzi edo kargatu gomazko ahatearen gidoiak hemen</string>
+    <string name="loadBtn">Kargatu</string>
+    <string name="saveBtn">Gorde</string>
+    <string name="delBtn">Ezabatu</string>
+    <string name="runBtn">Exekutatu</string>
+    <string name="confBtn">Konfig</string>
+    <string name="btn_continue">Jarraitu</string>
+    <string name="root_err">Erro sarbidea behar da USB kablearen erasorako!</string>
+    <string name="kernel_err">"Kernel ez da onartzen USB kablearen erasorako!"</string>
+    <string name="vm">Ingurune birtuala ez da onartzen!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB konektatuta</string>
+    <string name="config_status_usb_off">USB deskonektatua</string>
+    <string name="config_status_net_on">Sareko entxufea konektatuta</string>
+    <string name="config_status_net_off">Sare socket deskonektatuta</string>
+    <string name="socket_address">Sartu socket IP eta Portuaren helbidea</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID konfigurazioa</string>
+    <string name="hid_download">Deskargatu</string>
+    <string name="hid_update">Eguneratu</string>
+    <string name="hid_edit">Editatu</string>
+    <string name="hid_delete">Ezabatu</string>
     <!-- Keylist screen -->
+    <string name="key_title">Gakoaren izena</string>
+    <string name="key_character">Pertsonaia gakoa</string>
+    <string name="key_code">Gako kodea</string>
+    <string name="key_ctrl">Ktrl tekla</string>
+    <string name="key_alt">Alt tekla</string>
+    <string name="key_shift">Maius tekla</string>
+    <string name="key_meta">Meta Gakoa</string>
+    <string name="keycode">Gako kodea</string>
+    <string name="modcode">Kode aldatzailea</string>
+    <string name="key_details">Funtsezko xehetasunak</string>
     <!-- Setting screen -->
+    <string name="setting_general">Orokorra</string>
+    <string name="dark_theme_title">Gaueko modua</string>
+    <string name="dark_theme_summary">Ezarri gai iluna</string>
+    <string name="device_admin_title">Egin aplikazioaren gailuaren jabe</string>
+    <string name="device_admin_summary">Erroa Beharrezkoa. Hau Android-en murrizketa batzuk saihesteko da.</string>
+    <string name="hide_icon_title">Ezkutatu/Desgaitu Abiarazlearen ikonoa</string>
+    <string name="hide_icon_summary">Markatu *#*#78259#*#* abiarazteko. Android 10etik aurrera, ikonoa desgaitu egingo da, baina ez da ezkutatuta.</string>
+    <string name="delete_dep_title">Desinstalatu aplikazioa</string>
+    <string name="delete_dep_summary">Garbitu eta desinstalatu aplikazioa.</string>
+    <string name="settings_sec_title">Aurretik Segurtasuna</string>
+    <string name="settings_sec_desc">Gaitu script-fitxategien enkriptatzea eta pantailaren blokeoa.</string>
+    <string name="setting_device">Eraso moduaren ezarpenak</string>
+    <string name="configfs_title">Konfiguratu automatikoki ConfigFS</string>
+    <string name="configfs_summary">HID konfiguratuko du ConfigFS onartzen dituen gailuetan. Baliteke USB ezarpena hautsi.</string>
+    <string name="hid_choice_title">HID pertsonalizagarria</string>
+    <string name="hid_choice_summary">Aldatu Legacy HID eta pertsonalizagarria den HID artean</string>
+    <string name="hid_title">HID hizkuntza</string>
+    <string name="hid_summary">Deskargatu HID hizkuntza gehiago edo diseinatu HID diseinu berriak.</string>
+    <string name="settings_usb_title">USB konexioa abiarazteko</string>
+    <string name="settings_usb_desc">USB konexioa abiarazteko</string>
+    <string name="settings_net_title">Sare Socket Connect abiarazte</string>
+    <string name="settings_net_desc">Exekutatu botoiak erasoa abiaraziko du Network Socket konektatuta dagoenean.</string>
+    <string name="setting_about">Informazioa</string>
+    <string name="setting_developer_title">Garatzailea</string>
+    <string name="settings_version_title">Bertsioa</string>
+    <string name="settings_arch_title">Arkitektura</string>
+    <string name="settings_lic_title">Lizentzia</string>
+    <string name="settings_support">Laguntza</string>
+    <string name="settings_git_title">GitHub arazoak</string>
+    <string name="settings_git_desc">Egin klik arazoak edo eginbide eskaera gehitzeko.</string>
+    <string name="settings_locale_title">Kokapena</string>
+    <string name="settings_locale_desc">Aplikazioen lokalizazioan lagundu.</string>
+    <string name="release">Banaketa</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Onartu gabeko bertsioa</string>
+    <string name="btn_cancel">Ezeztatu</string>
+    <string name="btn_save">Gorde</string>
+    <string name="file_saved">gordeta</string>
+    <string name="title_open_file">Ireki Fitxategia</string>
+    <string name="title_delete_file">Ezabatu Fitxategia</string>
+    <string name="file_deleted">ezabatua</string>
+    <string name="file_name">Fitxategi izena</string>
+    <string name="title_save_file">Gorde fitxategia</string>
+    <string name="hid_version">Bertsioa: %d</string>
     <string-array name="modes">
         <item>USB kablea</item>
-        <item>Network Socket</item>
+        <item>Sare Socketa</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Ameriketako ingelesa</item>
+        <item>Turkiera</item>
+        <item>Suediera</item>
+        <item>Esloveniera</item>
+        <item>Errusiera</item>
+        <item>Portugesa</item>
+        <item>Norvegiera</item>
+        <item>Italiera</item>
+        <item>Kroaziera</item>
+        <item>Erresuma Batuko ingelesa</item>
+        <item>Frantsesa</item>
+        <item>Finlandiera</item>
+        <item>Gaztelera</item>
+        <item>Daniera</item>
+        <item>Alemana</item>
+        <item>Kanadako frantsesa</item>
+        <item>Brasilgo portugesa</item>
+        <item>Bielorrusiera</item>
+        <item>Hungariera</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Autoa</item>
+        <item>Eguna</item>
+        <item>Gaua</item>
     </string-array>
 </resources>

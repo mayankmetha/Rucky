@@ -74,6 +74,8 @@
     <string name="setting_general">Üldine</string>
     <string name="dark_theme_title">Öörežiim</string>
     <string name="dark_theme_summary">Tumeda teema määramine</string>
+    <string name="device_admin_title">Rakenduse seadme omaniku kasutamine</string>
+    <string name="device_admin_summary">Juur Nõutav. See on ümbersõit mõned piirangud Android.</string>
     <string name="hide_icon_title">Peida/keela käivitaja ikoon</string>
     <string name="hide_icon_summary">Dial * #*#78259# #* käivitada. Sees Android 10, ikoon on keelatud, kuid ei ole peidetud.</string>
     <string name="delete_dep_title">Eemalda App</string>
