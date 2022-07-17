@@ -2,6 +2,9 @@ if [ "$1" = "release" ]; then
     openssl sha512 ./release/rucky.apk | cut -d"=" -f2 | cut -d" " -f2 > ./release/rucky.sha512
     echo "$2" > ./release/rucky.cfg
     echo "$(($(git rev-list HEAD --count master)+1))" >> ./nightly/rucky.cfg
+    cp ./release/rucky-nightly.apk ../magisk/system/priv-app/rucky.apk
+    cd ../magisk/
+    zip -r ../release/rucky.zip .
 elif [ "$1" = "nightly" ]; then
     read -p "Commit Msg:" commitMsg
     cp ./nightly/rucky-nightly.apk ../nightly/rucky-nightly.apk
@@ -13,6 +16,10 @@ elif [ "$1" = "nightly" ]; then
     git log --oneline -$((diffCommitCount)) -s --format='• %s' | uniq -iu | tail -r > ../nightly/Changelog
     echo "• $commitMsg" >> ../nightly/Changelog
     git add -f ../nightly/rucky-nightly.apk ../nightly/rucky.cfg ../nightly/rucky.sha512 ../nightly/Changelog
+    cp ./nightly/rucky-nightly.apk ../magisk/system/priv-app/rucky.apk
+    cd ../magisk/
+    zip -r ../nightly/rucky.zip .
+    git add ../nightly/rucky.zip
     git commit -m "$commitMsg"
     git push
 fi
