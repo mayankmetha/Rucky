@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">QATIQ</string>
+    <string name="init_skip">PAWAY</string>
+    <string name="init_agree">UYAKUY</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">¡Aparatoykita huk Pato de Goma nisqaman tikray!</string>
+    <string name="slideTitle2">Cable USB nisqa</string>
+    <string name="slideDesc2">¡USB alambrada interfaz ataqueta qallarichinapaq!</string>
+    <string name="slideTitle3">Llika Socket</string>
+    <string name="slideDesc3">Wi-Fi kaqpi ruwasqa socket interfaces kaqmanta ataque qallariypaq yanapasqa hawa yanapakuykuna kaqnintakama!</string>
+    <string name="slideTitle4">Descargo de responsabilidad</string>
+    <string name="slideDesc4">Usuario de la aplicación sapallan responsable kanqa chay daños ruwasqamanta. ¡Manan huk entidadqa kay app llamk\'achispa ruwasqa dañokunamanta responsable kayta atinchu! !</string>
+    <string name="slideTitle5">Política de Privacidad nisqamanta</string>
+    <string name="slideDesc5">¡Manan ima Datospas ima formapipas huñusqachu, llank’akunchu, qhatukunchu! Wakin permisokuna mayqinkunachus sapalla willaymanta llakikuykunata hatarichiyta atinkuman wakin ruwanakuna app kaqpi llamk\'anapaqlla mañasqa kanku chaymanta mana datokuna huñunapaqchu! ¡Privacidadniykiqa respetasqam!</string>
+    <string name="slideTitle6">Permiso de App</string>
+    <string name="slideDesc6">Ama hina kaspa, app llamk\'ananpaq kamachisqa permisota quy!</string>
     <!-- Update screen -->
+    <string name="update_new">Musuq Kunanchay Kaq Laya:</string>
+    <string name="update_hash_error">¡Archivo Firma Mana tupanchu! Mana Kunanchayta atinchu.</string>
+    <string name="update_activity">Rucky Actualización</string>
+    <string name="update_version">Ima niraq</string>
+    <string name="update_version_nightly">Versión de Noche</string>
+    <string name="update_changelog">Cambio de registro</string>
+    <string name="update_status">Estadomanta musuqyachiy</string>
+    <string name="update_action">Descargar y Instalar Actualización</string>
+    <string name="update_downloading">Actualización nisqa uraykachiy</string>
+    <string name="install_update">Actualización nisqa churay</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">¿Munawaqchu pakayta utaq lluqsiyta chay appmanta?</string>
+    <string name="btn_exit">Lluqsina</string>
+    <string name="btn_back">Pakay</string>
+    <string name="unlock">Desbloquear App</string>
+    <string name="auth">Chiqapchayta takyachiy</string>
+    <string name="update">Kunanyachiy</string>
+    <string name="setting">Ajustes</string>
+    <string name="codeHint">Kaypi caucho anka qillqakunata qillqay utaq kargay</string>
+    <string name="loadBtn">Churkuy</string>
+    <string name="saveBtn">Waqaychay</string>
+    <string name="delBtn">Chinkachiy</string>
+    <string name="runBtn">Paway</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Qatiq</string>
+    <string name="root_err">!</string>
+    <string name="kernel_err">"Kernel mana yanapasqachu USB cable ataquepaq!"</string>
+    <string name="vm">¡Virtual pachaqa manam yanapasqachu!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB nisqawan tinkisqa</string>
+    <string name="config_status_usb_off">USB T\'inkisqa</string>
+    <string name="config_status_net_on">Llika Socket T\'inkisqa</string>
+    <string name="config_status_net_off">Llika Socket T\'inkisqa</string>
+    <string name="socket_address">Socket IP chaymanta Puerto Dirección nisqa qillqay</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID nisqa Config</string>
+    <string name="hid_download">Uraykachiy</string>
+    <string name="hid_update">Kunanyachiy</string>
+    <string name="hid_edit">Ruwapay</string>
+    <string name="hid_delete">Chinkachiy</string>
     <!-- Keylist screen -->
+    <string name="key_title">Llave Nombre</string>
+    <string name="key_character">Personaje Clave</string>
+    <string name="key_code">Código Llave</string>
+    <string name="key_ctrl">Ctrl Llave</string>
+    <string name="key_alt">Alt Llave</string>
+    <string name="key_shift">Llave de Mayúsculas</string>
+    <string name="key_meta">Meta Llave</string>
+    <string name="keycode">Código Llave</string>
+    <string name="modcode">Código Modificador nisqa</string>
+    <string name="key_details">Detalles Clave nisqa</string>
     <!-- Setting screen -->
+    <string name="setting_general">Llapan</string>
+    <string name="dark_theme_title">Modo de Noche</string>
+    <string name="dark_theme_summary">Tutayaq tema churay</string>
+    <string name="device_admin_title">App dispositivo dueñota ruway</string>
+    <string name="device_admin_summary">Saphi Requerido. Kayqa Android kaqpi wakin hark\'akuykunata huk ladoman qhawanapaqmi.</string>
+    <string name="hide_icon_title">Pakay/Mana llamk\'achiy Lanzador Icono</string>
+    <string name="hide_icon_summary">Markachiy * .</string>
+    <string name="delete_dep_title">App nisqamanta hurquy</string>
+    <string name="delete_dep_summary">Appta pichay hinaspa chinkachiy.</string>
+    <string name="settings_sec_title">Seguridad Anticipada nisqa</string>
+    <string name="settings_sec_desc">Script willañiqi chirmayta chaymanta pantalla wichq\'ayta atichiy.</string>
+    <string name="setting_device">Ajustes de Modo de Ataque</string>
+    <string name="configfs_title">Kikinmanta ConfigFS nisqa ruway</string>
+    <string name="configfs_summary">HID ConfigFS yanapasqa dispositivokunapi ruwanqa. USB churayta pakinman.</string>
+    <string name="hid_choice_title">HID personalizable</string>
+    <string name="hid_choice_summary">Cambiar entre HID Legado y HID Personalizable</string>
+    <string name="hid_title">HID Simi</string>
+    <string name="hid_summary">Huk HID simikunata uraykachiy utaq musuq HID churanakunata ruway.</string>
+    <string name="settings_usb_title">USB T\'inkisqa qallariy</string>
+    <string name="settings_usb_desc">Run botón ataqueta qallarinqa mayk\'aq USB tinkisqa kachkan.</string>
+    <string name="settings_net_title">Llika Socket T\'inkisqa qallariy</string>
+    <string name="settings_net_desc">Run botón ataqueta qallarinqa mayk\'aq Llika Socket tinkisqa kachkan.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Paqarichiq</string>
+    <string name="settings_version_title">Ima niraq</string>
+    <string name="settings_arch_title">Arquitectura</string>
+    <string name="settings_lic_title">Licencia nisqa</string>
+    <string name="settings_support">Yanapakuy</string>
+    <string name="settings_git_title">GitHub nisqamanta sasachakuykuna</string>
+    <string name="settings_git_desc">Sasachakuykunata utaq ruwana mañakuyta yapanaykipaq ñit\'iy.</string>
+    <string name="settings_locale_title">Localización nisqa</string>
+    <string name="settings_locale_desc">Yanapakuy app localización nisqaman.</string>
+    <string name="release">Aypuy</string>
+    <string name="releaseNetHunter">NetHunter nisqa app Tienda</string>
+    <string name="releaseGitHub">GitHub Kacharisqa</string>
+    <string name="releaseGitHubNightly">GitHub Tutamanta</string>
+    <string name="releaseTest">Debug Kachariy</string>
+    <string name="releaseOthers">Mana Yanapasqa Kachariy</string>
+    <string name="btn_cancel">Sayachiy</string>
+    <string name="btn_save">Waqaychay</string>
+    <string name="file_saved">qespichisqa</string>
+    <string name="title_open_file">Archivo nisqa kichay</string>
+    <string name="title_delete_file">Archivota chinkachiy</string>
+    <string name="file_deleted">qullusqa</string>
+    <string name="file_name">Archivo Suti</string>
+    <string name="title_save_file">Archivota waqaychay</string>
+    <string name="hid_version">Versión: %d</string>
+    <string-array name="modes">
+        <item>Cable USB nisqa</item>
+        <item>Llika Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Inglés americano</item>
+        <item>Turku simi</item>
+        <item>Suecia simi</item>
+        <item>Eslovenia simi</item>
+        <item>Rusia simi</item>
+        <item>Portugués simi</item>
+        <item>Noruega simi</item>
+        <item>Italiano simi</item>
+        <item>Croata simi</item>
+        <item>Hukllachasqa Qhapaq Suyu Inglés</item>
+        <item>Francés simi</item>
+        <item>Finlandés simi</item>
+        <item>Español</item>
+        <item>Danés</item>
+        <item>Alemán simipi</item>
+        <item>Kanadamanta Ransiya simi</item>
+        <item>Brasilmanta Purtuyis simi</item>
+        <item>Bielorrusiamanta</item>
+        <item>Hungría simi</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Punchaw</item>
+        <item>Tuta</item>
+    </string-array>
 </resources>

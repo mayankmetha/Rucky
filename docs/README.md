@@ -444,50 +444,50 @@ REPEAT 1
 |   ✅    |    la     |          Latin          |    100%    |
 |   ✅    |    lv     |         Latvian         |    100%    |
 |   ❌    |    li     |       Limburgish        |     0%     |
-|   ❌    |    ln     |         Lingala         |     0%     |
+|   ✅    |    ln     |         Lingala         |    100%    |
 |   ✅    |    lt     |       Lithuanian        |    100%    |
 |   ❌    |   b+jbo   |         Lojban          |     0%     |
 |   ❌    |   b+nds   |       Low German        |     0%     |
 |   ❌    |   b+dsb   |      Lower Sorbian      |     0%     |
-|   ❌    |    lg     |         Luganda         |     0%     |
+|   ✅    |    lg     |         Luganda         |    100%    |
 |   ❌    |   b+luy   |          Luhya          |     0%     |
 |   ❌    |    lb     |      Luxembourgish      |     0%     |
-|   ❌    |    mk     |       Macedonian        |     0%     |
+|   ✅    |    mk     |       Macedonian        |    100%    |
 |   ❌    |   b+mai   |        Maithili         |     0%     |
-|   ❌    |    mg     |        Malagasy         |     0%     |
+|   ✅    |    mg     |        Malagasy         |    100%    |
 |   ✅    |    ms     |          Malay          |    100%    |
 |   ✅    |    ml     |        Malayalam        |    100%    |
-|   ❌    |    mt     |         Maltese         |     0%     |
+|   ✅    |    mt     |         Maltese         |    100%    |
 |   ❌    |    gv     |          Manx           |     0%     |
-|   ❌    |    mi     |          Maori          |     0%     |
+|   ✅    |    mi     |          Maori          |    100%    |
 |   ❌    |   b+arn   |       Mapudungun        |     0%     |
 |   ✅    |    mr     |         Marathi         |    100%    |
 |   ❌    |    mh     |       Marshallese       |     0%     |
 |   ❌    |   b+moh   |         Mohawk          |     0%     |
-|   ❌    |    mn     |        Mongolian        |     0%     |
+|   ✅    |    mn     |        Mongolian        |    100%    |
 |   ❌    |   b+mos   |          Mossi          |     0%     |
 |   ❌    |    na     |          Nauru          |     0%     |
 |   ❌    |    ng     |         Ndonga          |     0%     |
-|   ❌    |    ne     |         Nepali          |     0%     |
+|   ✅    |    ne     |         Nepali          |    100%    |
 |   ❌    |    se     |      Northern Sami      |     0%     |
-|   ❌    |   b+nso   |     Northern Sotho      |     0%     |
+|   ✅    |   b+nso   |     Northern Sotho      |    100%    |
 |   ✅    |    no     |        Norwegian        |    100%    |
 |   ✅    |    nb     |    Norwegian Bokmal     |    100%    |
 |   ✅    |    nn     |    Norwegian Nynorsk    |    100%    |
 |   ❌    |    oc     |         Occitan         |     0%     |
 |   🚧   |    or     |          Odia           |    26%     |
 |   ❌    |    oj     |         Ojibwe          |     0%     |
-|   ❌    |    om     |          Oromo          |     0%     |
+|   ✅    |    om     |          Oromo          |    100%    |
 |   ❌    |    os     |        Ossetian         |     0%     |
 |   ❌    |    pi     |          Pali           |     0%     |
 |   ❌    |   b+pap   |       Papiamento        |     0%     |
-|   ❌    |    ps     |         Pashto          |     0%     |
+|   ✅    |    ps     |         Pashto          |    100%    |
 |   ✅    |    fa     |         Persian         |    100%    |
 |   ✅    |    pl     |         Polish          |    100%    |
 |   ✅    |    pt     |     Portuguese (PT)     |    100%    |
 |   ✅    |  pt-rBR   |     Portuguese (BR)     |    100%    |
 |   ✅    |    pa     |         Punjabi         |    100%    |
-|   ❌    |    qu     |         Quechua         |     0%     |
+|   ✅    |    qu     |         Quechua         |    100%    |
 |   ✅    |    ro     |        Romanian         |    100%    |
 |   ❌    |    rm     |         Romansh         |     0%     |
 |   ❌    |    rn     |          Rundi          |     0%     |
@@ -497,40 +497,40 @@ REPEAT 1
 |   🚧   |   b+sat   |         Santali         |    80%     |
 |   ❌    |    sc     |        Sardinian        |     0%     |
 |   ❌    |   b+sco   |          Scots          |     0%     |
-|   ❌    |    gd     |     Scottish Gaelic     |     0%     |
+|   ✅    |    gd     |     Scottish Gaelic     |    100%    |
 |   ✅    |    sr     |   Serbian (Cyrillic)    |    100%    |
 |   ❌    | b+sr+Latn |     Serbian (Latin)     |     0%     |
-|   ❌    |    sn     |          Shona          |     0%     |
+|   ✅    |    sn     |          Shona          |    100%    |
 |   ❌    |    ii     |       Sichuan Yi        |     0%     |
 |   ✅    |    sd     |         Sindhi          |    100%    |
-|   ❌    |    si     |         Sinhala         |     0%     |
+|   ✅    |    si     |         Sinhala         |    100%    |
 |   ✅    |    sk     |         Slovak          |    100%    |
 |   ✅    |    sl     |        Slovenian        |    100%    |
-|   ❌    |    so     |         Somali          |     0%     |
+|   ✅    |    so     |         Somali          |    100%    |
 |   ❌    |   b+son   |         Songhay         |     0%     |
 |   ❌    |    nr     |    Southern Ndebele     |     0%     |
 |   ❌    |   b+sma   |      Southern Sami      |     0%     |
 |   ❌    |    st     |     Southern Sotho      |     0%     |
 |   ✅    |    es     |      Spanish (ES)       |    100%    |
 |   ✅    | b+es+419  | Spanish (Latin America) |    100%    |
-|   ❌    |    su     |        Sundanese        |     0%     |
-|   ❌    |    sw     |         Swahili         |     0%     |
+|   ✅    |    su     |        Sundanese        |    100%    |
+|   ✅    |    sw     |         Swahili         |    100%    |
 |   ❌    |    ss     |          Swati          |     0%     |
 |   ✅    |    sv     |         Swedish         |    100%    |
 |   ❌    |   b+syc   |         Syriac          |     0%     |
 |   ❌    |    tl     |         Tagalog         |     0%     |
 |   ❌    |    ty     |        Tahitian         |     0%     |
-|   ❌    |    tg     |          Tajik          |     0%     |
+|   ✅    |    tg     |          Tajik          |    100%    |
 |   ✅    |    ta     |          Tamil          |    100%    |
-|   ❌    |    tt     |          Tatar          |     0%     |
+|   ✅    |    tt     |          Tatar          |    100%    |
 |   ✅    |    te     |         Telugu          |    100%    |
 |   ✅    |    th     |          Thai           |    100%    |
 |   ❌    |    bo     |         Tibetan         |     0%     |
-|   ❌    |    ti     |        Tigrinya         |     0%     |
+|   ✅    |    ti     |        Tigrinya         |    100%    |
 |   ❌    |    ts     |         Tsonga          |     0%     |
 |   ❌    |    tn     |         Tswana          |     0%     |
 |   ✅    |    tr     |         Turkish         |    100%    |
-|   ❌    |    tk     |         Turkmen         |     0%     |
+|   ✅    |    tk     |         Turkmen         |    100%    |
 |   ✅    |    uk     |        Ukrainian        |    100%    |
 |   ❌    |   b+hsb   |      Upper Sorbian      |     0%     |
 |   ✅    |  ur-rIN   |        Urdu (IN)        |    100%    |

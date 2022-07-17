@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">Indiki</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">YLALAŞYK</string>
+    <string name="init_start">HAK</string>
+    <string name="slideDesc1">Enjamyňyzy rezin bagtyna öwüriň!</string>
+    <string name="slideTitle2">USB kabeli</string>
+    <string name="slideDesc2">Hüjüm başlamak üçin USB simli interfeýs!</string>
+    <string name="slideTitle3">Tor rozetkasy</string>
+    <string name="slideDesc3">Goldaw berilýän daşarky gurallar arkaly hüjüme başlamak üçin Wi-Fi esasly rozetka interfeýsleri!</string>
+    <string name="slideTitle4">Düşündiriş</string>
+    <string name="slideDesc4">Programmanyň ulanyjysy ýetirilen zyýan üçin diňe jogapkärçilik çekýär. Bu programmany ulanmak bilen ýetirilen zyýan üçin başga hiç bir jogapkärçilik çekip bolmaz! Programmany ulananyňyzda seresap boluň we beýlekilere zyýan bermek üçin ulanmaň!</string>
+    <string name="slideTitle5">Gizlinlik syýasaty</string>
+    <string name="slideDesc5">Hiç hili maglumat ýygnalmaýar, ulanylmaýar we satylmaýar! Şahsy durmuşyň eldegrilmesizligini ýokarlandyryp biljek käbir rugsatlar diňe programmada käbir aýratynlyklaryň işlemegi üçin soralýar we maglumat ýygnamak däl! Şahsy durmuşyňyza hormat goýulýar!</string>
+    <string name="slideTitle6">Programma rugsady</string>
+    <string name="slideDesc6">Programma işlemek üçin zerur rugsady bermegiňizi haýyş edýäris!</string>
     <!-- Update screen -->
+    <string name="update_new">Täze täzelenme elýeterli wersiýasy:</string>
+    <string name="update_hash_error">Faýl golunyň gabat gelmezligi! Täzelenip bolmaýar</string>
+    <string name="update_activity">Bagtyýar täzelenme</string>
+    <string name="update_version">Wersiýa</string>
+    <string name="update_version_nightly">Gijeki wersiýa</string>
+    <string name="update_changelog">Çangelog</string>
+    <string name="update_status">Statusagdaýy täzeläň</string>
+    <string name="update_action">Täzelenmäni göçürip alyň</string>
+    <string name="update_downloading">Täzelenme</string>
+    <string name="install_update">Täzelenmäni ulanmak</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Programmany gizlemek ýa-da çykmak isleýärsiňizmi?</string>
+    <string name="btn_exit">Çyk</string>
+    <string name="btn_back">Gizle</string>
+    <string name="unlock">Programmany açmak</string>
+    <string name="auth">Hakyky tassyklamany tassyklaň</string>
+    <string name="update">Täzelen</string>
+    <string name="setting">Sazlamalar</string>
+    <string name="codeHint">Kauçuk şowly skriptleri ýazyň ýa-da ýükläň</string>
+    <string name="loadBtn">.Ük</string>
+    <string name="saveBtn">Saklaň</string>
+    <string name="delBtn">Öçür</string>
+    <string name="runBtn">Ylga</string>
+    <string name="confBtn">Sazlamak</string>
+    <string name="btn_continue">Dowam et</string>
+    <string name="root_err">USB kabel hüjümi üçin kök ygtyýary gerek!</string>
+    <string name="kernel_err">"USB kabel hüjümi üçin ýadro goldanylmaýar!"</string>
+    <string name="vm">Wirtual gurşaw goldanylmaýar!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB birikdirildi</string>
+    <string name="config_status_usb_off">USB kesildi</string>
+    <string name="config_status_net_on">Tor rozetkasy birikdirildi</string>
+    <string name="config_status_net_off">Tor rozetkasy kesildi</string>
+    <string name="socket_address">Socket IP we Port salgysyny giriziň</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Gizläň</string>
+    <string name="hid_download">Göçürip al</string>
+    <string name="hid_update">Täzelen</string>
+    <string name="hid_edit">Redaktirläň</string>
+    <string name="hid_delete">Öçür</string>
     <!-- Keylist screen -->
+    <string name="key_title">Açar ady</string>
+    <string name="key_character">Esasy nyşan</string>
+    <string name="key_code">Açar kod</string>
+    <string name="key_ctrl">Ctrl açary</string>
+    <string name="key_alt">Alt açary</string>
+    <string name="key_shift">Shift açary</string>
+    <string name="key_meta">Meta açary</string>
+    <string name="keycode">Açar kod</string>
+    <string name="modcode">Üýtgediji kody</string>
+    <string name="key_details">Esasy maglumatlar</string>
     <!-- Setting screen -->
+    <string name="setting_general">General</string>
+    <string name="dark_theme_title">Gijeki tertip</string>
+    <string name="dark_theme_summary">Garaňky tema düzüň</string>
+    <string name="device_admin_title">Programma enjamynyň eýesi ediň</string>
+    <string name="device_admin_summary">Kök gerek. Bu, “Android” -iň käbir çäklendirmelerinden geçmekdir.</string>
+    <string name="hide_icon_title">Başlaýjy nyşany gizläň /öçüriň</string>
+    <string name="hide_icon_summary">* Jaň</string>
+    <string name="delete_dep_title">Programmany aýyryň</string>
+    <string name="delete_dep_summary">Programmany arassalaň we aýyryň.</string>
+    <string name="settings_sec_title">Howpsuzlyk</string>
+    <string name="settings_sec_desc">Skript faýl şifrlemesini we ekran gulpuny açyň.</string>
+    <string name="setting_device">Hüjüm tertibi sazlamalary</string>
+    <string name="configfs_title">ConfigFS-i awtomatiki düzüň</string>
+    <string name="configfs_summary">ConfigFS goldaýan enjamlarda HID-i düzer. USB sazlamasyny bozup biler.</string>
+    <string name="hid_choice_title">Düzülip bilinýän HID</string>
+    <string name="hid_choice_summary">“Legacy HID” we “Customizable HID” arasynda geçiň</string>
+    <string name="hid_title">Gizlin dil</string>
+    <string name="hid_summary">Goşmaça HID dillerini göçürip alyň ýa-da täze HID düzülişlerini düzüň.</string>
+    <string name="settings_usb_title">USB birikdirmesi</string>
+    <string name="settings_usb_desc">Işletmek düwmesi USB birikdirilende hüjüme başlar.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Network Socket birikdirilende işlet düwmesi hüjüme başlar.</string>
+    <string name="setting_about">Maglumat</string>
+    <string name="setting_developer_title">Öndüriji</string>
+    <string name="settings_version_title">Wersiýa</string>
+    <string name="settings_arch_title">Binagärlik</string>
+    <string name="settings_lic_title">Ygtyýarnama</string>
+    <string name="settings_support">Goldaw</string>
+    <string name="settings_git_title">GitHub meseleleri</string>
+    <string name="settings_git_desc">Meseleleri ýa-da aýratynlyk haýyşyny goşmak üçin basyň.</string>
+    <string name="settings_locale_title">Lokalizasiýa</string>
+    <string name="settings_locale_desc">Programmanyň lokalizasiýasyna goşant goşuň.</string>
+    <string name="release">Paýlamak</string>
+    <string name="releaseNetHunter">NetHunter programma dükany</string>
+    <string name="releaseGitHub">GitHub goýberildi</string>
+    <string name="releaseGitHubNightly">GitHub</string>
+    <string name="releaseTest">Düzediş</string>
+    <string name="releaseOthers">Goldanmaýan goýberiş</string>
+    <string name="btn_cancel">Elatyr</string>
+    <string name="btn_save">Saklaň</string>
+    <string name="file_saved">halas edildi</string>
+    <string name="title_open_file">Faýly açyň</string>
+    <string name="title_delete_file">Faýly poz</string>
+    <string name="file_deleted">öçürildi</string>
+    <string name="file_name">Faýlyň ady</string>
+    <string name="title_save_file">Faýly ýazdyryň</string>
+    <string name="hid_version">Wersiýa: %d</string>
+    <string-array name="modes">
+        <item>USB kabeli</item>
+        <item>Tor rozetkasy</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikan Iňlis</item>
+        <item>Türk</item>
+        <item>Şwes</item>
+        <item>Sloweniýa</item>
+        <item>Rus</item>
+        <item>Portugaliýa</item>
+        <item>Norweg</item>
+        <item>Italýan</item>
+        <item>Horwatiýa</item>
+        <item>Angliýa Iňlis</item>
+        <item>Fransuz</item>
+        <item>Fin</item>
+        <item>Ispan</item>
+        <item>Daniýaly</item>
+        <item>Nemes</item>
+        <item>Kanadaly fransuz</item>
+        <item>Braziliýaly Portugaliýa</item>
+        <item>Belarus</item>
+        <item>Wenger</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Awto</item>
+        <item>Gün</item>
+        <item>Gije</item>
+    </string-array>
 </resources>

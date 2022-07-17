@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">EKIDDAKO</string>
+    <string name="init_skip">OKUBUUKA</string>
+    <string name="init_agree">OKUKKIRIZA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Kyuusa ekyuma kyo kibeere Rubber Ducky!</string>
+    <string name="slideTitle2">Kaabuyonjo ya USB</string>
+    <string name="slideDesc2">USB wired interface okutongoza olulumba!</string>
+    <string name="slideTitle3">Socket ya Network</string>
+    <string name="slideDesc3">Wi-Fi based socket interfaces okutandika olulumba nga oyita mu bikozesebwa eby\'ebweru ebiwagirwa!</string>
+    <string name="slideTitle4">Okwewala obuvunaanyizibwa</string>
+    <string name="slideDesc4">Omukozesa wa app y’avunaanyizibwa yekka ku byonooneddwa. Tewali kitongole kirala kiyinza kuvunaanibwa olw\'ebyonoonese ebikoleddwa nga tukozesa app eno! Weegezeemu okwegendereza ng’okozesa app era kino tokikozesa kutuusa bulabe ku balala!</string>
+    <string name="slideTitle5">Enkola y’Ebyama</string>
+    <string name="slideDesc5">Tewali Data ya ngeri yonna ekuŋŋaanyizibwa, ekozesebwa era etundibwa! Olukusa olumu oluyinza okuleeta okweraliikirira ku by’ekyama lusabibwa okukola kw’ebintu ebimu byokka mu app era si kukungaanya data! Eby\'ekyama byo biweebwa ekitiibwa!</string>
+    <string name="slideTitle6">Olukusa lwa App</string>
+    <string name="slideDesc6">Nsaba okuwa app olukusa olwetaagisa okukola!</string>
     <!-- Update screen -->
+    <string name="update_new">Ebipya Ebipya Ebiriwo Enkyusa:</string>
+    <string name="update_hash_error">Fayiro Omukono Tegukwatagana! Tesobola Kulongoosa.</string>
+    <string name="update_activity">Rucky Ebipya</string>
+    <string name="update_version">Ekika</string>
+    <string name="update_version_nightly">Enkyusa ey’ekiro</string>
+    <string name="update_changelog">Enkyukakyuka mu biwandiiko</string>
+    <string name="update_status">Okulongoosa Embeera</string>
+    <string name="update_action">Wano wefunire n\'okuteeka Update</string>
+    <string name="update_downloading">Okuwanula Ebipya</string>
+    <string name="install_update">Okukozesa Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Wandyagadde okukweka oba okufuluma app?</string>
+    <string name="btn_exit">Fuluma</string>
+    <string name="btn_back">Okweekweeka</string>
+    <string name="unlock">Sumulula App</string>
+    <string name="auth">Kakasa okukakasa</string>
+    <string name="update">Okututegeza</string>
+    <string name="setting">Enteekateeka</string>
+    <string name="codeHint">Wandiika oba tikka ebiwandiiko bya rubber ducky wano</string>
+    <string name="loadBtn">Okutikka</string>
+    <string name="saveBtn">Okununula</string>
+    <string name="delBtn">Okusiimuula</string>
+    <string name="runBtn">Okudduka</string>
+    <string name="confBtn">Okusengeka</string>
+    <string name="btn_continue">Eeyongera</string>
+    <string name="root_err">Root Access Yeetaagibwa Ku USB Cable Attack!</string>
+    <string name="kernel_err">"Kernel Tewagirwa Ku Lulumba lwa USB Cable!"</string>
+    <string name="vm">Virtual environment tewagirwa!</string>
     <!-- Config screen -->
+    <string name="config_activity">Okulongoosa</string>
+    <string name="config_status_usb_on">USB Eyungiddwako</string>
+    <string name="config_status_usb_off">USB Ekutuddwako</string>
+    <string name="config_status_net_on">Socket ya Network Eyungiddwa</string>
+    <string name="config_status_net_off">Socket ya Network Ekutuddwako</string>
+    <string name="socket_address">Yingiza Socket IP ne Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Ensengeka ya HID</string>
+    <string name="hid_download">Okufuna</string>
+    <string name="hid_update">Okututegeza</string>
+    <string name="hid_edit">Okugolola</string>
+    <string name="hid_delete">Okusiimuula</string>
     <!-- Keylist screen -->
+    <string name="key_title">Erinnya Ekikulu</string>
+    <string name="key_character">Empisa Ekikulu</string>
+    <string name="key_code">Koodi y’Ekisumuluzo</string>
+    <string name="key_ctrl">Ekisumuluzo kya Ctrl</string>
+    <string name="key_alt">Alt Ekisumuluzo</string>
+    <string name="key_shift">Ekisumuluzo kya Shift</string>
+    <string name="key_meta">Ekisumuluzo kya Meta</string>
+    <string name="keycode">Koodi y’Ekisumuluzo</string>
+    <string name="modcode">Koodi y’Ekikyusa</string>
+    <string name="key_details">Ebikulu Ebisingawo</string>
     <!-- Setting screen -->
+    <string name="setting_general">Okutwaaliza awamu</string>
+    <string name="dark_theme_title">Mode y’ekiro</string>
+    <string name="dark_theme_summary">Teeka omulamwa omuddugavu</string>
+    <string name="device_admin_title">Fuula app device nnannyini</string>
+    <string name="device_admin_summary">Ekikolo Kyetaagisa. Kino kikoleddwa okuyita ku bimu ku bukwakkulizo obuli ku Android.</string>
+    <string name="hide_icon_title">Kweka/Lemesa Akabonero k\'Ekitongoza</string>
+    <string name="hide_icon_summary">Kuba * .</string>
+    <string name="delete_dep_title">Ggyawo App ku kompyuta</string>
+    <string name="delete_dep_summary">Okwoza n\'okuggyawo app.</string>
+    <string name="settings_sec_title">Obukuumi obw\'omu maaso</string>
+    <string name="settings_sec_desc">Ssobozesa okusiba fayiro ya script n\'okusiba screen.</string>
+    <string name="setting_device">Enteekateeka za Mode y’Okulumba</string>
+    <string name="configfs_title">Auto Okutegeka ConfigFS</string>
+    <string name="configfs_summary">Ajja kutegeka HID ku byuma ebiwagirwa ConfigFS. Ayinza okumenya ensengeka ya USB.</string>
+    <string name="hid_choice_title">HID esobola okukyusibwakyusibwa</string>
+    <string name="hid_choice_summary">Kyusa wakati wa Legacy HID ne Customizable HID</string>
+    <string name="hid_title">Olulimi lwa HID</string>
+    <string name="hid_summary">Wano wefunire ennimi endala eza HID oba okukola ensengeka empya eza HID.</string>
+    <string name="settings_usb_title">USB Connect Okutongoza</string>
+    <string name="settings_usb_desc">Run button ejja kutandika olulumba nga USB eyungiddwa.</string>
+    <string name="settings_net_title">Okutongoza Network Socket Connect</string>
+    <string name="settings_net_desc">Run button ejja kutandika olulumba nga Network Socket eyungiddwa.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Omukugu mu kukola</string>
+    <string name="settings_version_title">Ekika</string>
+    <string name="settings_arch_title">Ebizimbe</string>
+    <string name="settings_lic_title">Layisinsi</string>
+    <string name="settings_support">Okuwagira</string>
+    <string name="settings_git_title">Ensonga za GitHub</string>
+    <string name="settings_git_desc">Nyiga okugattako ensonga oba okusaba ebikozesebwa.</string>
+    <string name="settings_locale_title">Okuteeka mu kitundu</string>
+    <string name="settings_locale_desc">Waayo ku app localization.</string>
+    <string name="release">Okusaansaanya</string>
+    <string name="releaseNetHunter">NetHunter Edduuka lya App</string>
+    <string name="releaseGitHub">GitHub Efulumiziddwa</string>
+    <string name="releaseGitHubNightly">GitHub Buli kiro</string>
+    <string name="releaseTest">Okufulumya Debug</string>
+    <string name="releaseOthers">Okufulumya Okutawagirwa</string>
+    <string name="btn_cancel">okusazaamu</string>
+    <string name="btn_save">Okununula</string>
+    <string name="file_saved">yalokolebwa</string>
+    <string name="title_open_file">Ggulawo Fayiro</string>
+    <string name="title_delete_file">Ssaako Fayiro</string>
+    <string name="file_deleted">esaziddwamu</string>
+    <string name="file_name">Erinnya lya Fayiro</string>
+    <string name="title_save_file">Teeka Fayiro</string>
+    <string name="hid_version">Enkyusa: %d</string>
+    <string-array name="modes">
+        <item>Kaabuyonjo ya USB</item>
+        <item>Socket ya Network</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Olungereza lw’Amerika</item>
+        <item>Olutuluuki</item>
+        <item>Oluswedi</item>
+        <item>Omuslovenia</item>
+        <item>Olurussia</item>
+        <item>Olupotugo</item>
+        <item>Omunorway</item>
+        <item>Omuyitale</item>
+        <item>Omucroatia</item>
+        <item>Bungereza Luganda</item>
+        <item>Olufaransa</item>
+        <item>Olufinishi</item>
+        <item>Olusupeyini</item>
+        <item>Oludansi</item>
+        <item>Omugirimaani</item>
+        <item>Olufaransa olw’e Canada</item>
+        <item>Omupotugali ow’e Brazil</item>
+        <item>Omubelarus</item>
+        <item>Omuhungary</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Olunaku</item>
+        <item>Ekiro</item>
+    </string-array>
 </resources>

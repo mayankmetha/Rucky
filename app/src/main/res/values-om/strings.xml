@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">KAN ITTI AANU</string>
+    <string name="init_skip">IRRA DARBUU</string>
+    <string name="init_agree">WALIIGALUU</string>
+    <string name="init_start">HACK jedhamuun beekama</string>
+    <string name="slideDesc1">Meeshaa keessan gara Rubber Ducky tti jijjiiraa!</string>
+    <string name="slideTitle2">Keebilii USB</string>
+    <string name="slideDesc2">USB wired interface haleellaa jalqabuuf!</string>
+    <string name="slideTitle3">Sokeetii Neetwork</string>
+    <string name="slideDesc3">Wi-Fi irratti hundaa\'uun socket interfaces karaa meeshaalee alaa deeggaramaniin haleellaa jalqabuuf!</string>
+    <string name="slideTitle4">Itti gaafatamummaa</string>
+    <string name="slideDesc4">Miidhaa qaqqabuuf itti gaafatamummaa kan fudhatu fayyadamaan appii kanaa qofaadha. Appii kana fayyadamuun miidhaa qaqqabuuf qaamni biraa itti gaafatamummaa fudhachuu hin danda\'u! Yeroo app fayyadamtan of eeggannoo shaakali kanas namoota biroo irratti miidhaa geessisuuf hin fayyadaminaa!</string>
+    <string name="slideTitle5">Imaammata Dhuunfaa</string>
+    <string name="slideDesc5">Daataan bifa kamiinuu walitti qabamee, itti fayyadamee fi hin gurguramu! Hayyamni tokko tokko kan yaaddoo dhuunfaa kaasuu danda\'u kan gaafataman hojii amaloota murtaa\'an app keessatti qofaaf malee daataa walitti qabuuf miti! Iccitiin keessan kabajamaadha!</string>
+    <string name="slideTitle6">Hayyama App</string>
+    <string name="slideDesc6">Mee app hojjechuuf hayyama barbaachisu kennaa!</string>
     <!-- Update screen -->
+    <string name="update_new">Fooyya\'iinsa Haaraa Argamu Version:</string>
+    <string name="update_hash_error">Mallattoo Faayilii Wal-hinsimne! Update Hin Danda\'u.</string>
+    <string name="update_activity">Rucky Update jedhu</string>
+    <string name="update_version">Gosa</string>
+    <string name="update_version_nightly">Version Halkanii</string>
+    <string name="update_changelog">Jijjiirraa galmee</string>
+    <string name="update_status">Haala Fooyyessi</string>
+    <string name="update_action">Update buufadhaatii Install godhaa</string>
+    <string name="update_downloading">Update Buufachaa Jiru</string>
+    <string name="install_update">Update Hojiirra Oolchuu</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Appicha dhoksuu ykn keessaa bahuu barbaadduu?</string>
+    <string name="btn_exit">Ba\'uu</string>
+    <string name="btn_back">Dhoksuu</string>
+    <string name="unlock">Appilikeeshiniin Qulqulleessuu</string>
+    <string name="auth">Mirkaneessuu mirkaneessi</string>
+    <string name="update">Odeeffannoo dhiyeenyaa</string>
+    <string name="setting">Sajoolee</string>
+    <string name="codeHint">Iskiriiptii ducky laastikaa asitti barreessi ykn fe\'i</string>
+    <string name="loadBtn">Ba\'aa</string>
+    <string name="saveBtn">Qusachuu</string>
+    <string name="delBtn">Haquu</string>
+    <string name="runBtn">Fiiguu</string>
+    <string name="confBtn">Qindeessituu</string>
+    <string name="btn_continue">Itti fufuu</string>
+    <string name="root_err">Haleellaa USB Cable\'f Root Access Barbaachisa!</string>
+    <string name="kernel_err">"Kernel Haleellaa Keebilii USB'f Hin Deeggaramne!"</string>
+    <string name="vm">Naannoo Virtual hin deeggaramu!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks ta\'a</string>
+    <string name="config_status_usb_on">USB Walitti Hidhame</string>
+    <string name="config_status_usb_off">USBn addaan citeera</string>
+    <string name="config_status_net_on">Socket Network Walitti Hidhame</string>
+    <string name="config_status_net_off">Socket Network Addaan Baafame</string>
+    <string name="socket_address">Socket IP fi Port Address galchi</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Qindeessituu HID</string>
+    <string name="hid_download">Buusuu</string>
+    <string name="hid_update">Odeeffannoo dhiyeenyaa</string>
+    <string name="hid_edit">Gulaaluu</string>
+    <string name="hid_delete">Haquu</string>
     <!-- Keylist screen -->
+    <string name="key_title">Maqaa Furtuu</string>
+    <string name="key_character">Amala Furtuu</string>
+    <string name="key_code">Koodii Furtuu</string>
+    <string name="key_ctrl">Furtuu Ctrl</string>
+    <string name="key_alt">Alt Furtuu</string>
+    <string name="key_shift">Furtuu Shift</string>
+    <string name="key_meta">Meetaa Furtuu</string>
+    <string name="keycode">Koodii Furtuu</string>
+    <string name="modcode">Koodii Fooyyessituu</string>
+    <string name="key_details">Bal\'ina Ijoo</string>
     <!-- Setting screen -->
+    <string name="setting_general">Waliigala</string>
+    <string name="dark_theme_title">Haala Halkanii</string>
+    <string name="dark_theme_summary">Mata duree dukkanaa\'aa kaa\'i</string>
+    <string name="device_admin_title">Abbaa meeshaa app gochuu</string>
+    <string name="device_admin_summary">Hundee Barbaachisaadha. Kunis daangaawwan Andirooyidii irratti kaa\'aman tokko tokko bira darbuuf.</string>
+    <string name="hide_icon_title">Mallattoo Eebbaa Dhoksi/Dhiisi</string>
+    <string name="hide_icon_summary">* Bilbilaa.</string>
+    <string name="delete_dep_title">App irraa uninstall gochuu</string>
+    <string name="delete_dep_summary">App qulqulleessuun uninstall gochuu.</string>
+    <string name="settings_sec_title">Nageenya Dursaa</string>
+    <string name="settings_sec_desc">Icciitii faayilii iskiriiptii fi qulfii iskiriinii dandeessisi.</string>
+    <string name="setting_device">Sajoo Haala Haleellaa</string>
+    <string name="configfs_title">Ofiin Qindeessi ConfigFS</string>
+    <string name="configfs_summary">Meeshaalee ConfigFS deeggaraman irratti HID ni qindeessa. Sajoo USB cabsuu danda\'a.</string>
+    <string name="hid_choice_title">HID kan haala barbaadamuun jijjiiramuu danda\'u</string>
+    <string name="hid_choice_summary">Legacy HID fi Customizable HID gidduutti jijjiiri</string>
+    <string name="hid_title">Afaan HID</string>
+    <string name="hid_summary">Afaanota HID dabalataa buufadhu ykn haalata HID haaraa dizaayinii gochuu.</string>
+    <string name="settings_usb_title">USB Connect Eegaluu</string>
+    <string name="settings_usb_desc">Run button yeroo USB walqabsiifamu haleellaa ni jalqaba.</string>
+    <string name="settings_net_title">Network Socket Connect Eegaluu</string>
+    <string name="settings_net_desc">Run button yeroo Network Socket walqabatu haleellaa ni jalqaba.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Misoomsaa</string>
+    <string name="settings_version_title">Gosa</string>
+    <string name="settings_arch_title">Arkiteekchara</string>
+    <string name="settings_lic_title">Hayyama</string>
+    <string name="settings_support">Deeggarsa</string>
+    <string name="settings_git_title">Dhimmoota GitHub</string>
+    <string name="settings_git_desc">Dhimmoota ykn gaaffii amala dabaluudhaaf cuqaasi.</string>
+    <string name="settings_locale_title">Localization</string>
+    <string name="settings_locale_desc">App localization irratti gumaachaa.</string>
+    <string name="release">Raabsaa</string>
+    <string name="releaseNetHunter">App Store NetHunter jedhamuun beekama</string>
+    <string name="releaseGitHub">GitHub Gadi Lakkifame</string>
+    <string name="releaseGitHubNightly">GitHub Halkan Halkan</string>
+    <string name="releaseTest">Debug Gadhiifamu</string>
+    <string name="releaseOthers">Gadhiifamuu Hin Deeggaramne</string>
+    <string name="btn_cancel">Haquu</string>
+    <string name="btn_save">Qusachuu</string>
+    <string name="file_saved">fayye</string>
+    <string name="title_open_file">Faayilii banaa</string>
+    <string name="title_delete_file">Faayilii Haquu</string>
+    <string name="file_deleted">haqameera</string>
+    <string name="file_name">Maqaa Faayilii</string>
+    <string name="title_save_file">Faayilii Save gochuu</string>
+    <string name="hid_version">Vershinii: %d</string>
+    <string-array name="modes">
+        <item>Keebilii USB</item>
+        <item>Sokeetii Neetwork</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Afaan Ingilizii Ameerikaa</item>
+        <item>Afaan Turkii</item>
+        <item>Afaan Siwiidin</item>
+        <item>Afaan Islooveeniyaa</item>
+        <item>Afaan Raashiyaa</item>
+        <item>Afaan Poortugaal</item>
+        <item>Afaan Noorweey</item>
+        <item>Afaan Xaaliyaanii</item>
+        <item>Afaan Kirooshiyaa</item>
+        <item>Yunaayitid Kingidam Afaan Oromoo</item>
+        <item>Faransaayii</item>
+        <item>Finfinnee</item>
+        <item>Ispaanishii</item>
+        <item>Danish</item>
+        <item>Jarmanii</item>
+        <item>Faransaayii Kanaadaa</item>
+        <item>Afaan Poortugaal Biraazil</item>
+        <item>Lammii Beelaaruus</item>
+        <item>Lammii Haangaarii</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Guyyaa</item>
+        <item>Halkan</item>
+    </string-array>
 </resources>

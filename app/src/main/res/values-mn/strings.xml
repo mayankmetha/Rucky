@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ДАРААЧИЙН</string>
+    <string name="init_skip">АЛГАСАХ</string>
+    <string name="init_agree">ЗӨВШИН БАЙНА</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Төхөөрөмжөө Rubber Ducky болгон хувиргаарай!</string>
+    <string name="slideTitle2">USB кабель</string>
+    <string name="slideDesc2">Халдлагыг эхлүүлэх USB утастай интерфейс!</string>
+    <string name="slideTitle3">Сүлжээний залгуур</string>
+    <string name="slideDesc3">Дэмжигдсэн гадны хэрэгслээр дамжуулан халдлага үйлдэхэд зориулагдсан Wi-Fi залгуур интерфэйсүүд!</string>
+    <string name="slideTitle4">Хариуцлага</string>
+    <string name="slideDesc4">Програмын хэрэглэгч учирсан хохирлыг дангаараа хариуцна. Энэ програмыг ашиглан учруулсан хохирлыг өөр ямар ч байгууллага хариуцахгүй! Аппликешныг ашиглахдаа болгоомжтой байгаарай, бусдад хор хөнөөл учруулахгүй байх!</string>
+    <string name="slideTitle5">Нууцлалын бодлого</string>
+    <string name="slideDesc5">Ямар ч хэлбэрийн өгөгдөл цуглуулж, ашиглаж, зардаггүй! Нууцлалын асуудал үүсгэж болзошгүй зарим зөвшөөрлийг зөвхөн апп доторх зарим функцийг ажиллуулахын тулд асуудаг бөгөөд өгөгдөл цуглуулахгүй! Таны хувийн нууцыг хүндэтгэдэг!</string>
+    <string name="slideTitle6">Аппликешны зөвшөөрөл</string>
+    <string name="slideDesc6">Апп-д ажиллахад шаардлагатай зөвшөөрлийг өгнө үү!</string>
     <!-- Update screen -->
+    <string name="update_new">Шинэ шинэчлэлт боломжтой хувилбар:</string>
+    <string name="update_hash_error">Файлын гарын үсэг таарахгүй байна! Шинэчлэх боломжгүй.</string>
+    <string name="update_activity">Rucky шинэчлэлт</string>
+    <string name="update_version">Хувилбар</string>
+    <string name="update_version_nightly">Шөнийн хувилбар</string>
+    <string name="update_changelog">Өөрчлөлтийн бүртгэл</string>
+    <string name="update_status">Статусыг шинэчлэх</string>
+    <string name="update_action">Шинэчлэлтийг татаж аваад суулгана уу</string>
+    <string name="update_downloading">Шинэчлэлтийг татаж байна</string>
+    <string name="install_update">Шинэчлэлтийг ашиглаж байна</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Та програмыг нуух эсвэл гарахыг хүсэж байна уу?</string>
+    <string name="btn_exit">гарах</string>
+    <string name="btn_back">Нуух</string>
+    <string name="unlock">Програмын түгжээг тайлах</string>
+    <string name="auth">Баталгаажуулалтыг баталгаажуулна уу</string>
+    <string name="update">Шинэчлэх</string>
+    <string name="setting">Тохиргоо</string>
+    <string name="codeHint">Резин нугастай скриптүүдийг энд бичиж эсвэл ачаална уу</string>
+    <string name="loadBtn">Ачаалал</string>
+    <string name="saveBtn">Хадгалах</string>
+    <string name="delBtn">Устгах</string>
+    <string name="runBtn">Гүй</string>
+    <string name="confBtn">Тохиргоо</string>
+    <string name="btn_continue">Үргэлжлүүлэх</string>
+    <string name="root_err">USB кабелийн халдлагад root хандалт шаардлагатай!</string>
+    <string name="kernel_err">"Цөмийг USB кабелийн довтолгоонд дэмждэггүй!"</string>
+    <string name="vm">Виртуал орчин дэмжигдээгүй!</string>
     <!-- Config screen -->
+    <string name="config_activity">Тохируулах</string>
+    <string name="config_status_usb_on">USB холбогдсон</string>
+    <string name="config_status_usb_off">USB салгагдсан</string>
+    <string name="config_status_net_on">Сүлжээний залгуур холбогдсон</string>
+    <string name="config_status_net_off">Сүлжээний залгуур салгагдсан</string>
+    <string name="socket_address">Сокет IP болон портын хаягийг оруулна уу</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID тохиргоо</string>
+    <string name="hid_download">Татаж авах</string>
+    <string name="hid_update">Шинэчлэх</string>
+    <string name="hid_edit">Засварлах</string>
+    <string name="hid_delete">Устгах</string>
     <!-- Keylist screen -->
+    <string name="key_title">Түлхүүр нэр</string>
+    <string name="key_character">Гол дүр</string>
+    <string name="key_code">Түлхүүр код</string>
+    <string name="key_ctrl">Ctrl товчлуур</string>
+    <string name="key_alt">Alt товчлуур</string>
+    <string name="key_shift">Shift товчлуур</string>
+    <string name="key_meta">Мета түлхүүр</string>
+    <string name="keycode">Түлхүүр код</string>
+    <string name="modcode">Өөрчлөгч код</string>
+    <string name="key_details">Гол дэлгэрэнгүй мэдээлэл</string>
     <!-- Setting screen -->
+    <string name="setting_general">Генерал</string>
+    <string name="dark_theme_title">Шөнийн горим</string>
+    <string name="dark_theme_summary">Харанхуй загварыг тохируулах</string>
+    <string name="device_admin_title">Апп төхөөрөмж эзэмшигч болгох</string>
+    <string name="device_admin_summary">Root шаардлагатай. Энэ нь Android дээрх зарим хязгаарлалтыг тойрч гарах явдал юм.</string>
+    <string name="hide_icon_title">Эхлүүлэгчийн дүрсийг нуух/идэвхгүй болгох</string>
+    <string name="hide_icon_summary">залгах *</string>
+    <string name="delete_dep_title">Програмыг устгах</string>
+    <string name="delete_dep_summary">Програмыг цэвэрлэж, устгана уу.</string>
+    <string name="settings_sec_title">Дэвшилтэт аюулгүй байдал</string>
+    <string name="settings_sec_desc">Скрипт файлын шифрлэлт болон дэлгэцийн түгжээг идэвхжүүлнэ.</string>
+    <string name="setting_device">Довтолгооны горимын тохиргоо</string>
+    <string name="configfs_title">ConfigFS-ийг автоматаар тохируулах</string>
+    <string name="configfs_summary">ConfigFS дэмждэг төхөөрөмжүүд дээр HID-г тохируулах болно. USB тохиргоог эвдэж болзошгүй.</string>
+    <string name="hid_choice_title">Тохируулах боломжтой HID</string>
+    <string name="hid_choice_summary">Хуучин HID болон Тохируулах боломжтой HID хооронд сэлгэх</string>
+    <string name="hid_title">HID хэл</string>
+    <string name="hid_summary">Нэмэлт HID хэлүүдийг татаж авах эсвэл шинэ HID бүдүүвчийг зохион бүтээх.</string>
+    <string name="settings_usb_title">USB холболтыг эхлүүлнэ</string>
+    <string name="settings_usb_desc">Run товчлуур нь USB холбогдсон үед халдлагыг эхлүүлэх болно.</string>
+    <string name="settings_net_title">Сүлжээний сокет холболтыг эхлүүлнэ</string>
+    <string name="settings_net_desc">Run товчлуур нь Network Socket холбогдсон үед халдлагыг эхлүүлэх болно.</string>
+    <string name="setting_about">Мэдээлэл</string>
+    <string name="setting_developer_title">Хөгжүүлэгч</string>
+    <string name="settings_version_title">Хувилбар</string>
+    <string name="settings_arch_title">Архитектур</string>
+    <string name="settings_lic_title">Тусгай зөвшөөрөл</string>
+    <string name="settings_support">Дэмжлэг</string>
+    <string name="settings_git_title">GitHub-ийн асуудлууд</string>
+    <string name="settings_git_desc">Асуудал эсвэл онцлог хүсэлт нэмэхийн тулд товшино уу.</string>
+    <string name="settings_locale_title">Локалчлал</string>
+    <string name="settings_locale_desc">Програмыг нутагшуулахад хувь нэмэр оруулна уу.</string>
+    <string name="release">Хуваарилалт</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub хувилбар</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Дибаг хийх хувилбар</string>
+    <string name="releaseOthers">Дэмжигдээгүй хувилбар</string>
+    <string name="btn_cancel">Цуцлах</string>
+    <string name="btn_save">Хадгалах</string>
+    <string name="file_saved">хадгалсан</string>
+    <string name="title_open_file">Файлыг нээх</string>
+    <string name="title_delete_file">Файл устгах</string>
+    <string name="file_deleted">устгасан</string>
+    <string name="file_name">Файлын нэр</string>
+    <string name="title_save_file">Файлыг хадгалах</string>
+    <string name="hid_version">Хувилбар: %d</string>
+    <string-array name="modes">
+        <item>USB кабель</item>
+        <item>Сүлжээний залгуур</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Америкийн англи хэл</item>
+        <item>турк</item>
+        <item>швед</item>
+        <item>Словен</item>
+        <item>орос</item>
+        <item>португал</item>
+        <item>Норвеги</item>
+        <item>итали</item>
+        <item>Хорват</item>
+        <item>Их Британи Англи</item>
+        <item>Франц</item>
+        <item>Финланд</item>
+        <item>Испани</item>
+        <item>Дани</item>
+        <item>Герман</item>
+        <item>Канадын франц</item>
+        <item>Бразилийн португал хэл</item>
+        <item>Беларусь</item>
+        <item>Унгар</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Автомат</item>
+        <item>Өдөр</item>
+        <item>Шөнө</item>
+    </string-array>
 </resources>

@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">LI JMISS</string>
+    <string name="init_skip">AQBEŻ</string>
+    <string name="init_agree">JAQBLU</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Dawwar it-tagħmir tiegħek għal Rubber Ducky!</string>
+    <string name="slideTitle2">Cable USB</string>
+    <string name="slideDesc2">Interfaċċja bil-fili USB għat-tnedija ta \'attakk!</string>
+    <string name="slideTitle3">Socket tan-Netwerk</string>
+    <string name="slideDesc3">Socket interfaces ibbażati fuq Wi-Fi għat-tnedija ta \'attakk permezz ta\' għodod esterni appoġġjati!</string>
+    <string name="slideTitle4">Ċaħda</string>
+    <string name="slideDesc4">L-utent tal-app huwa unikament responsabbli għad-danni kkawżati. L-ebda entità oħra ma tista\' tinżamm responsabbli għad-danni li saru bl-użu ta\' din l-app! Ipprattika l-kawtela meta tuża l-app u tużax dan biex tikkawża ħsara lil ħaddieħor!</string>
+    <string name="slideTitle5">Regoli tal-privatezza</string>
+    <string name="slideDesc5">L-ebda Data ta\' kwalunkwe forma ma tinġabar, tintuża u tinbiegħ! Xi permessi li jistgħu jqajmu tħassib dwar il-privatezza huma mitluba biss għall-ħidma ta \'ċerti karatteristiċi fl-app u mhux biex jiġbru data! Il-privatezza tiegħek hija rispettata!</string>
+    <string name="slideTitle6">Permess għall-App</string>
+    <string name="slideDesc6">Jekk jogħġbok agħti lill-app il-permess meħtieġ biex taħdem!</string>
     <!-- Update screen -->
+    <string name="update_new">Aġġornament ġdid Verżjoni Disponibbli:</string>
+    <string name="update_hash_error">Firma tal-Fajl Ma Tqabbilx! Ma tistax Taġġorna.</string>
+    <string name="update_activity">Aġġornament Rucky</string>
+    <string name="update_version">Verżjoni</string>
+    <string name="update_version_nightly">Verżjoni filgħaxija</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Aġġorna l-Istatus</string>
+    <string name="update_action">Niżżel u Installa Aġġornament</string>
+    <string name="update_downloading">Tniżżil ta\' Aġġornament</string>
+    <string name="install_update">Applikazzjoni ta\' Aġġornament</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Tixtieq taħbi jew toħroġ mill-app?</string>
+    <string name="btn_exit">Ħruġ</string>
+    <string name="btn_back">Aħbi</string>
+    <string name="unlock">Nisfrutta l-App</string>
+    <string name="auth">Ikkonferma l-awtentikazzjoni</string>
+    <string name="update">Aġġornament</string>
+    <string name="setting">Settings</string>
+    <string name="codeHint">Ittajpja jew tagħbija skripts tal-ducky tal-gomma hawn</string>
+    <string name="loadBtn">Tagħbija</string>
+    <string name="saveBtn">Ħlief</string>
+    <string name="delBtn">Ħassar</string>
+    <string name="runBtn">Mexxi</string>
+    <string name="confBtn">Konfigurazzjoni</string>
+    <string name="btn_continue">Kompli</string>
+    <string name="root_err">Aċċess għall-Għeruq Meħtieġa Għall-Attakk tal-Cable USB!</string>
+    <string name="kernel_err">"Kernel Mhux Sostnut Għall-Attakk tal-Cable USB!"</string>
+    <string name="vm">L-ambjent virtwali mhuwiex appoġġjat!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Konnessi</string>
+    <string name="config_status_usb_off">USB Skonnettjat</string>
+    <string name="config_status_net_on">Socket tan-Netwerk Konness</string>
+    <string name="config_status_net_off">Socket tan-Netwerk Skonnettjat</string>
+    <string name="socket_address">Daħħal Socket IP u Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Konfigurazzjoni HID</string>
+    <string name="hid_download">Niżżel</string>
+    <string name="hid_update">Aġġornament</string>
+    <string name="hid_edit">Editja</string>
+    <string name="hid_delete">Ħassar</string>
     <!-- Keylist screen -->
+    <string name="key_title">Isem Ewlenin</string>
+    <string name="key_character">Karattru Ewlenin</string>
+    <string name="key_code">Kodiċi Ewlenin</string>
+    <string name="key_ctrl">Ċavetta Ctrl</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Kodiċi Ewlenin</string>
+    <string name="modcode">Kodiċi Modifikatur</string>
+    <string name="key_details">Dettalji Ewlenin</string>
     <!-- Setting screen -->
+    <string name="setting_general">Ġenerali</string>
+    <string name="dark_theme_title">Modalità bil-lejl</string>
+    <string name="dark_theme_summary">Issettja tema skura</string>
+    <string name="device_admin_title">Agħmel is-sid tat-tagħmir tal-app</string>
+    <string name="device_admin_summary">Root Meħtieġa. Dan biex tevita xi wħud mir-restrizzjonijiet fuq Android.</string>
+    <string name="hide_icon_title">Aħbi/Iżkonnettja l-Ikona tal-Llanċjar</string>
+    <string name="hide_icon_summary">Ċempel *</string>
+    <string name="delete_dep_title">Iddiżinstalla l-App</string>
+    <string name="delete_dep_summary">Naddaf u ddiżinstalla l-app.</string>
+    <string name="settings_sec_title">Sigurtà bil-quddiem</string>
+    <string name="settings_sec_desc">Ippermetti l-kriptaġġ tal-fajl tal-iskript u l-illokkjar tal-iskrin.</string>
+    <string name="setting_device">Settings tal-Modalità tal-Attakk</string>
+    <string name="configfs_title">Konfigurazzjoni Awtomatika tal-Konfigurazzjoni</string>
+    <string name="configfs_summary">Se tikkonfigura HID fuq apparati appoġġjati minn ConfigFS. Jista \'jkisser l-issettjar tal-USB.</string>
+    <string name="hid_choice_title">HID customizable</string>
+    <string name="hid_choice_summary">Aqleb bejn Legacy HID u HID Customizable</string>
+    <string name="hid_title">Lingwa HID</string>
+    <string name="hid_summary">Niżżel lingwi HID addizzjonali jew iddisinja layouts HID ġodda.</string>
+    <string name="settings_usb_title">Tnedija tal-USB Connect</string>
+    <string name="settings_usb_desc">Mexxi buttuna se tniedi attakk meta USB huwa konness.</string>
+    <string name="settings_net_title">Tnedija tal-Konness tas-Socket tan-Netwerk</string>
+    <string name="settings_net_desc">Mexxi buttuna se tniedi attakk meta Network Socket huwa konness.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Żviluppatur</string>
+    <string name="settings_version_title">Verżjoni</string>
+    <string name="settings_arch_title">Arkitettura</string>
+    <string name="settings_lic_title">Liċenzja</string>
+    <string name="settings_support">Appoġġ</string>
+    <string name="settings_git_title">Kwistjonijiet ta\' GitHub</string>
+    <string name="settings_git_desc">Ikklikkja biex iżżid kwistjonijiet jew talba għall-karatteristika.</string>
+    <string name="settings_locale_title">Lokalizzazzjoni</string>
+    <string name="settings_locale_desc">Ikkontribwixxi għall-lokalizzazzjoni tal-app.</string>
+    <string name="release">Distribuzzjoni</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Rilaxx ta\' GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Filgħaxija</string>
+    <string name="releaseTest">Debug Rilaxx</string>
+    <string name="releaseOthers">Rilaxx Mhux Appoġġjat</string>
+    <string name="btn_cancel">Ikkanċella</string>
+    <string name="btn_save">Ħlief</string>
+    <string name="file_saved">salvati</string>
+    <string name="title_open_file">Iftaħ Fajl</string>
+    <string name="title_delete_file">Ħassar Fajl</string>
+    <string name="file_deleted">imħassra</string>
+    <string name="file_name">Isem tal-fajl</string>
+    <string name="title_save_file">Save File</string>
+    <string name="hid_version">Verżjoni: %d</string>
+    <string-array name="modes">
+        <item>Cable USB</item>
+        <item>Socket tan-Netwerk</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Ingliż Amerikan</item>
+        <item>Tork</item>
+        <item>Svediż</item>
+        <item>Sloven</item>
+        <item>Russu</item>
+        <item>Portugiż</item>
+        <item>Norveġiż</item>
+        <item>Taljan</item>
+        <item>Kroat</item>
+        <item>Renju Unit Ingliż</item>
+        <item>Franċiż</item>
+        <item>Finlandiż</item>
+        <item>Spanjol</item>
+        <item>Daniż</item>
+        <item>Ġermaniż</item>
+        <item>Franċiż Kanadiż</item>
+        <item>Portugiż Brażiljan</item>
+        <item>Belarussu</item>
+        <item>Ungeriż</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Jum</item>
+        <item>Lejl</item>
+    </string-array>
 </resources>

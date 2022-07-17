@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">АЛГА</string>
+    <string name="init_skip">СКИП</string>
+    <string name="init_agree">Килешү</string>
+    <string name="init_start">ХАК</string>
+    <string name="slideDesc1">Deviceайланмагызны каучук бәхетлегә әйләндерегез!</string>
+    <string name="slideTitle2">USB кабель</string>
+    <string name="slideDesc2">USB чыбыклы интерфейс!</string>
+    <string name="slideTitle3">Челтәр сокеты</string>
+    <string name="slideDesc3">Тышкы кораллар ярдәмендә һөҗүм башлау өчен Wi-Fi нигезендә сокет интерфейслары!</string>
+    <string name="slideTitle4">Аннан баш тарту</string>
+    <string name="slideDesc4">Кушымта кулланучы китергән зыян өчен җаваплы. Бу кушымтаны кулланып китерелгән зыян өчен бүтән оешма җаваплылыкка тартылмый! Кушымтаны кулланганда сак булыгыз һәм моны башкаларга зыян китерү өчен кулланмагыз!</string>
+    <string name="slideTitle5">Шәхсилек сәясәте</string>
+    <string name="slideDesc5">Төрле формадагы мәгълүматлар җыелмый, кулланыла һәм сатылмый! Хосусыйлык проблемаларын күтәрә алган кайбер рөхсәтләр кушымтадагы кайбер функцияләрне эшләүне сорыйлар һәм мәгълүмат җыю түгел! Сезнең хосусыйлыгыгыз хөрмәт ителә!</string>
+    <string name="slideTitle6">Кушымта рөхсәте</string>
+    <string name="slideDesc6">Зинһар, кушымтага эшләргә рөхсәт бирегез!</string>
     <!-- Update screen -->
+    <string name="update_new">Яңа яңарту мөмкинлеге:</string>
+    <string name="update_hash_error">Файл имзасы туры килмәү! Яңартып булмый.</string>
+    <string name="update_activity">Бәхетле яңарту</string>
+    <string name="update_version">Вариант</string>
+    <string name="update_version_nightly">Төнге версия</string>
+    <string name="update_changelog">Чангелог</string>
+    <string name="update_status">Статусны яңарту</string>
+    <string name="update_action">Яңартуны йөкләү һәм урнаштыру</string>
+    <string name="update_downloading">Яңартуны йөкләү</string>
+    <string name="install_update">Яңартуны куллану</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Кушымтаны яшерергә яки чыгарга телисезме?</string>
+    <string name="btn_exit">Чыгу</string>
+    <string name="btn_back">Яшер</string>
+    <string name="unlock">Кушымтаны ачу</string>
+    <string name="auth">Аутентификацияне раслагыз</string>
+    <string name="update">Яңарту</string>
+    <string name="setting">Көйләүләр</string>
+    <string name="codeHint">Резин бәхетле сценарийларны языгыз яки йөкләгез</string>
+    <string name="loadBtn">Йөкләү</string>
+    <string name="saveBtn">Саклагыз</string>
+    <string name="delBtn">Бетерү</string>
+    <string name="runBtn">Йөгер</string>
+    <string name="confBtn">Конфигурация</string>
+    <string name="btn_continue">Дәвам итегез</string>
+    <string name="root_err">USB кабель һөҗүме өчен тамыр керү кирәк!</string>
+    <string name="kernel_err">"Ядро USB кабель һөҗүме өчен булышмый!"</string>
+    <string name="vm">Виртуаль мохит ярдәм итми!</string>
     <!-- Config screen -->
+    <string name="config_activity">Тваклар</string>
+    <string name="config_status_usb_on">USB тоташтырылган</string>
+    <string name="config_status_usb_off">USB өзелгән</string>
+    <string name="config_status_net_on">Челтәр сокеты тоташтырылган</string>
+    <string name="config_status_net_off">Челтәр розеткасы өзелгән</string>
+    <string name="socket_address">Сокет IP һәм порт адресын кертегез</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Яшерен конфигурация</string>
+    <string name="hid_download">Йөкләү</string>
+    <string name="hid_update">Яңарту</string>
+    <string name="hid_edit">Редакцияләү</string>
+    <string name="hid_delete">Бетерү</string>
     <!-- Keylist screen -->
+    <string name="key_title">Төп исем</string>
+    <string name="key_character">Төп характер</string>
+    <string name="key_code">Төп код</string>
+    <string name="key_ctrl">Ctrl ачкычы</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Мета ачкычы</string>
+    <string name="keycode">Төп код</string>
+    <string name="modcode">Модификатор коды</string>
+    <string name="key_details">Төп мәгълүмат</string>
     <!-- Setting screen -->
+    <string name="setting_general">Генерал</string>
+    <string name="dark_theme_title">Төнге режим</string>
+    <string name="dark_theme_summary">Караңгы тема куегыз</string>
+    <string name="device_admin_title">Кушымта җайланмасы хуҗасы ит</string>
+    <string name="device_admin_summary">Тамыр кирәк. Бу Androidдагы кайбер чикләүләрне узып китү.</string>
+    <string name="hide_icon_title">Эшләткеч иконасын яшерү /сүндерү</string>
+    <string name="hide_icon_summary">* Терегез</string>
+    <string name="delete_dep_title">Кушымтаны бетерү</string>
+    <string name="delete_dep_summary">Кушымтаны чистарту һәм бетерү.</string>
+    <string name="settings_sec_title">Алдынгы куркынычсызлык</string>
+    <string name="settings_sec_desc">Скрипт файлларын шифрлау һәм экран йозакны кушу.</string>
+    <string name="setting_device">Attack Mode көйләүләренә</string>
+    <string name="configfs_title">ConfigFS-ны автоматик конфигурацияләү</string>
+    <string name="configfs_summary">ConfigFS ярдәмендә җайланмаларда HID конфигурациясе булачак. USB көйләнешен өзәргә мөмкин.</string>
+    <string name="hid_choice_title">Көйләнә торган HID</string>
+    <string name="hid_choice_summary">Мирас HID белән көйләнә торган HID арасында күчү</string>
+    <string name="hid_title">Яшерен тел</string>
+    <string name="hid_summary">Өстәмә HID телләрен йөкләү яки яңа HID макетларын проектлау.</string>
+    <string name="settings_usb_title">USB тоташтыру</string>
+    <string name="settings_usb_desc">Йөгерү төймәсе USB тоташканда һөҗүм башлый.</string>
+    <string name="settings_net_title">Челтәр сокетын тоташтыру</string>
+    <string name="settings_net_desc">Челтәр Сокеты тоташканда йөгерү төймәсе һөҗүмне башлап җибәрәчәк.</string>
+    <string name="setting_about">Мәгълүмат</string>
+    <string name="setting_developer_title">Төзүче</string>
+    <string name="settings_version_title">Вариант</string>
+    <string name="settings_arch_title">Архитектура</string>
+    <string name="settings_lic_title">Лицензия</string>
+    <string name="settings_support">Ярдәм</string>
+    <string name="settings_git_title">GitHub проблемалары</string>
+    <string name="settings_git_desc">Проблемалар яки функция соравы өстәү өчен басыгыз.</string>
+    <string name="settings_locale_title">Локальләштерү</string>
+    <string name="settings_locale_desc">Кушымта локализациясенә өлеш кертү.</string>
+    <string name="release">Таркату</string>
+    <string name="releaseNetHunter">NetHunter кушымтасы кибете</string>
+    <string name="releaseGitHub">GitHub чыгарылышы</string>
+    <string name="releaseGitHubNightly">GitHub</string>
+    <string name="releaseTest">Чишү</string>
+    <string name="releaseOthers">Ярдәм ителмәгән чыгарылыш</string>
+    <string name="btn_cancel">Баш тарту</string>
+    <string name="btn_save">Саклагыз</string>
+    <string name="file_saved">сакланган</string>
+    <string name="title_open_file">Ачык файл</string>
+    <string name="title_delete_file">Файлны бетерү</string>
+    <string name="file_deleted">бетерелде</string>
+    <string name="file_name">Файл исеме</string>
+    <string name="title_save_file">Файлны саклагыз</string>
+    <string name="hid_version">Вариант: %d</string>
+    <string-array name="modes">
+        <item>USB кабель</item>
+        <item>Челтәр сокеты</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Америка Инглиз</item>
+        <item>Төрек</item>
+        <item>Швед</item>
+        <item>Словения</item>
+        <item>Рус</item>
+        <item>Португал</item>
+        <item>Норвегия</item>
+        <item>Италия</item>
+        <item>Хорватия</item>
+        <item>Бөекбритания Инглиз</item>
+        <item>Француз</item>
+        <item>Фин</item>
+        <item>Испан</item>
+        <item>Дания</item>
+        <item>Немец</item>
+        <item>Канада французлары</item>
+        <item>Бразилия Португалия</item>
+        <item>Беларусия</item>
+        <item>Венгр</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Авто</item>
+        <item>Көн</item>
+        <item>Төн</item>
+    </string-array>
 </resources>

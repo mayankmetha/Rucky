@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">अर्को</string>
+    <string name="init_skip">छोड्नुहोस्</string>
+    <string name="init_agree">सहमत</string>
+    <string name="init_start">ह्याक</string>
+    <string name="slideDesc1">आफ्नो यन्त्रलाई रबर डकीमा बदल्नुहोस्!</string>
+    <string name="slideTitle2">USB केबल</string>
+    <string name="slideDesc2">आक्रमण सुरु गर्न USB वायर्ड इन्टरफेस!</string>
+    <string name="slideTitle3">नेटवर्क सकेट</string>
+    <string name="slideDesc3">समर्थित बाह्य उपकरणहरू मार्फत आक्रमण सुरु गर्नका लागि Wi-Fi आधारित सकेट इन्टरफेसहरू!</string>
+    <string name="slideTitle4">अस्वीकरण</string>
+    <string name="slideDesc4">एपको प्रयोगकर्ताले गरेको क्षतिको लागि मात्र जिम्मेवार छ। यो एप प्रयोग गरेर भएको क्षतिको लागि कुनै पनि अन्य निकायलाई जिम्मेवार ठहराउन सकिँदैन! एप प्रयोग गर्दा सावधानी अपनाउनुहोस् र अरूलाई हानि पुर्‍याउन यसलाई प्रयोग नगर्नुहोस्!</string>
+    <string name="slideTitle5">गोपनीयता नीति</string>
+    <string name="slideDesc5">कुनै पनि फारमको कुनै डाटा संकलन, प्रयोग र बिक्री गरिएको छैन! गोपनीयता चिन्ताहरू बढाउन सक्ने केही अनुमतिहरू एपमा केही सुविधाहरूको कामको लागि मात्र सोधिन्छन् र डाटा सङ्कलन गर्न होइन! तपाईंको गोपनीयता सम्मान छ!</string>
+    <string name="slideTitle6">एप अनुमति</string>
+    <string name="slideDesc6">कृपया अनुप्रयोगलाई काम गर्न आवश्यक अनुमति दिनुहोस्!</string>
     <!-- Update screen -->
+    <string name="update_new">नयाँ अपडेट उपलब्ध संस्करण:</string>
+    <string name="update_hash_error">फाइल हस्ताक्षर बेमेल! अद्यावधिक गर्न सकिँदैन।</string>
+    <string name="update_activity">रुकी अपडेट</string>
+    <string name="update_version">संस्करण</string>
+    <string name="update_version_nightly">राती संस्करण</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">स्थिति अद्यावधिक गर्नुहोस्</string>
+    <string name="update_action">अपडेट डाउनलोड र स्थापना गर्नुहोस्</string>
+    <string name="update_downloading">अपडेट डाउनलोड गर्दै</string>
+    <string name="install_update">अद्यावधिक लागू गर्दै</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">के तपाइँ एप लुकाउन वा बाहिर निस्कन चाहनुहुन्छ?</string>
+    <string name="btn_exit">बाहिर निस्कनुहोस्</string>
+    <string name="btn_back">लुकाउनुहोस्</string>
+    <string name="unlock">एप अनलक गर्नुहोस्</string>
+    <string name="auth">प्रमाणीकरण पुष्टि गर्नुहोस्</string>
+    <string name="update">अपडेट गर्नुहोस्</string>
+    <string name="setting">सेटिङहरू</string>
+    <string name="codeHint">यहाँ रबर डकी लिपिहरू टाइप गर्नुहोस् वा लोड गर्नुहोस्</string>
+    <string name="loadBtn">लोड</string>
+    <string name="saveBtn">बचत गर्नुहोस्</string>
+    <string name="delBtn">मेटाउन</string>
+    <string name="runBtn">दौड्नुहोस्</string>
+    <string name="confBtn">कन्फिगरेसन</string>
+    <string name="btn_continue">जारी राख्नुहोस्</string>
+    <string name="root_err">USB केबल आक्रमणको लागि रूट पहुँच आवश्यक छ!</string>
+    <string name="kernel_err">"USB केबल आक्रमणको लागि कर्नेल समर्थित छैन!"</string>
+    <string name="vm">भर्चुअल वातावरण समर्थित छैन!</string>
     <!-- Config screen -->
+    <string name="config_activity">ट्वीक्स</string>
+    <string name="config_status_usb_on">USB जडान भयो</string>
+    <string name="config_status_usb_off">USB विच्छेद भयो</string>
+    <string name="config_status_net_on">नेटवर्क सकेट जडान भयो</string>
+    <string name="config_status_net_off">नेटवर्क सकेट विच्छेद भयो</string>
+    <string name="socket_address">सकेट आईपी र पोर्ट ठेगाना प्रविष्ट गर्नुहोस्</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID कन्फिगरेसन</string>
+    <string name="hid_download">डाउनलोड गर्नुहोस्</string>
+    <string name="hid_update">अपडेट गर्नुहोस्</string>
+    <string name="hid_edit">सम्पादन गर्नुहोस्</string>
+    <string name="hid_delete">मेटाउन</string>
     <!-- Keylist screen -->
+    <string name="key_title">कुञ्जी नाम</string>
+    <string name="key_character">मुख्य चरित्र</string>
+    <string name="key_code">कुञ्जी कोड</string>
+    <string name="key_ctrl">Ctrl कुञ्जी</string>
+    <string name="key_alt">Alt कुञ्जी</string>
+    <string name="key_shift">शिफ्ट कुञ्जी</string>
+    <string name="key_meta">मेटा कुञ्जी</string>
+    <string name="keycode">कुञ्जी कोड</string>
+    <string name="modcode">परिमार्जक कोड</string>
+    <string name="key_details">प्रमुख विवरणहरू</string>
     <!-- Setting screen -->
+    <string name="setting_general">सामान्य</string>
+    <string name="dark_theme_title">नाइट मोड</string>
+    <string name="dark_theme_summary">गाढा विषयवस्तु सेट गर्नुहोस्</string>
+    <string name="device_admin_title">एप यन्त्र मालिक बनाउनुहोस्</string>
+    <string name="device_admin_summary">रूट आवश्यक छ। यो एन्ड्रोइडमा केही प्रतिबन्धहरू बाइपास गर्न हो।</string>
+    <string name="hide_icon_title">लन्चर आइकन लुकाउनुहोस्/असक्षम गर्नुहोस्</string>
+    <string name="hide_icon_summary">डायल*</string>
+    <string name="delete_dep_title">एप अनइन्स्टल गर्नुहोस्</string>
+    <string name="delete_dep_summary">एप सफा गर्नुहोस् र स्थापना रद्द गर्नुहोस्।</string>
+    <string name="settings_sec_title">अग्रिम सुरक्षा</string>
+    <string name="settings_sec_desc">स्क्रिप्ट फाइल इन्क्रिप्सन र स्क्रिन लक सक्षम गर्नुहोस्।</string>
+    <string name="setting_device">आक्रमण मोड सेटिङहरू</string>
+    <string name="configfs_title">स्वत: कन्फिगर कन्फिगर एफएस</string>
+    <string name="configfs_summary">कन्फिगएफएस समर्थित यन्त्रहरूमा HID कन्फिगर गर्नेछ। USB सेटिङ तोड्न सक्छ।</string>
+    <string name="hid_choice_title">अनुकूलन HID</string>
+    <string name="hid_choice_summary">लिगेसी HID र अनुकूलन योग्य HID बीच स्विच गर्नुहोस्</string>
+    <string name="hid_title">HID भाषा</string>
+    <string name="hid_summary">थप HID भाषाहरू डाउनलोड गर्नुहोस् वा नयाँ HID लेआउटहरू डिजाइन गर्नुहोस्।</string>
+    <string name="settings_usb_title">USB जडान लन्च</string>
+    <string name="settings_usb_desc">USB जडान हुँदा रन बटनले आक्रमण सुरु गर्नेछ।</string>
+    <string name="settings_net_title">नेटवर्क सकेट जडान लन्च</string>
+    <string name="settings_net_desc">नेटवर्क सकेट जडान हुँदा रन बटनले आक्रमण सुरु गर्नेछ।</string>
+    <string name="setting_about">जानकारी</string>
+    <string name="setting_developer_title">विकासकर्ता</string>
+    <string name="settings_version_title">संस्करण</string>
+    <string name="settings_arch_title">वास्तुकला</string>
+    <string name="settings_lic_title">इजाजतपत्र</string>
+    <string name="settings_support">समर्थन</string>
+    <string name="settings_git_title">GitHub मुद्दाहरू</string>
+    <string name="settings_git_desc">मुद्दाहरू वा सुविधा अनुरोध थप्न क्लिक गर्नुहोस्।</string>
+    <string name="settings_locale_title">स्थानीयकरण</string>
+    <string name="settings_locale_desc">एप स्थानीयकरणमा योगदान गर्नुहोस्।</string>
+    <string name="release">वितरण</string>
+    <string name="releaseNetHunter">NetHunter एप स्टोर</string>
+    <string name="releaseGitHub">GitHub रिलीज</string>
+    <string name="releaseGitHubNightly">GitHub रात्रि</string>
+    <string name="releaseTest">डिबग रिलीज</string>
+    <string name="releaseOthers">गैर-समर्थित रिलीज</string>
+    <string name="btn_cancel">रद्द गर्नुहोस्</string>
+    <string name="btn_save">बचत गर्नुहोस्</string>
+    <string name="file_saved">बचत गरियो</string>
+    <string name="title_open_file">फाइल खोल्नुहोस्</string>
+    <string name="title_delete_file">फाइल मेटाउनुहोस्</string>
+    <string name="file_deleted">मेटाइयो</string>
+    <string name="file_name">फाइल नाम</string>
+    <string name="title_save_file">फाइल बचत गर्नुहोस्</string>
+    <string name="hid_version">संस्करण: %d</string>
+    <string-array name="modes">
+        <item>USB केबल</item>
+        <item>नेटवर्क सकेट</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>अमेरिकी अंग्रेजी</item>
+        <item>टर्की</item>
+        <item>स्विडेनी</item>
+        <item>स्लोभेनियाली</item>
+        <item>रुसी</item>
+        <item>पोर्चुगिज</item>
+        <item>नर्वेजियन</item>
+        <item>इटालियन</item>
+        <item>क्रोएसियाली</item>
+        <item>युनाइटेड किंगडम अंग्रेजी</item>
+        <item>फ्रान्सेली</item>
+        <item>फिनिस</item>
+        <item>स्पेनिस</item>
+        <item>डेनिस</item>
+        <item>जर्मन</item>
+        <item>क्यानेडियन फ्रान्सेली</item>
+        <item>ब्राजिलियन पोर्चुगिज</item>
+        <item>बेलारूसी</item>
+        <item>हंगेरी</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>अटो</item>
+        <item>दिन</item>
+        <item>रात</item>
+    </string-array>
 </resources>

@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">INAYOFUATA</string>
+    <string name="init_skip">RUKA</string>
+    <string name="init_agree">KUBALI</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Geuza kifaa chako kuwa Bata la Mpira!</string>
+    <string name="slideTitle2">Kebo ya USB</string>
+    <string name="slideDesc2">Kiolesura cha waya cha USB cha kuzindua shambulio!</string>
+    <string name="slideTitle3">Soketi ya Mtandao</string>
+    <string name="slideDesc3">Miingiliano ya tundu ya Wi-Fi ya kuzindua shambulio kupitia zana za nje zinazotumika!</string>
+    <string name="slideTitle4">Kanusho</string>
+    <string name="slideDesc4">Mtumiaji wa programu atawajibika kwa uharibifu uliosababishwa. Hakuna huluki nyingine inayoweza kuwajibika kwa uharibifu uliofanywa kwa kutumia programu hii! Jifunze kuwa waangalifu unapotumia programu na usitumie hii kusababisha madhara kwa wengine!</string>
+    <string name="slideTitle5">Sera ya Faragha</string>
+    <string name="slideDesc5">Hakuna Data ya aina yoyote inayokusanywa, kutumika na kuuzwa! Baadhi ya ruhusa ambazo zinaweza kuibua masuala ya faragha zinaombwa tu kwa ajili ya kufanya kazi kwa vipengele fulani kwenye programu na sio kukusanya data! Faragha yako inaheshimiwa!</string>
+    <string name="slideTitle6">Ruhusa ya Programu</string>
+    <string name="slideDesc6">Tafadhali ipe programu kibali kinachohitajika kufanya kazi!</string>
     <!-- Update screen -->
+    <string name="update_new">Toleo Jipya Lililopatikana:</string>
+    <string name="update_hash_error">Kutolingana kwa Sahihi ya Faili! Haiwezi Kusasisha.</string>
+    <string name="update_activity">Sasisho la Rucky</string>
+    <string name="update_version">Toleo</string>
+    <string name="update_version_nightly">Toleo la Usiku</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Sasisha Hali</string>
+    <string name="update_action">Pakua na Sakinisha Sasisho</string>
+    <string name="update_downloading">Inapakua Sasisho</string>
+    <string name="install_update">Inatumia Sasisho</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Je, ungependa kuficha au kuondoka kwenye programu?</string>
+    <string name="btn_exit">Utgång</string>
+    <string name="btn_back">Ficha</string>
+    <string name="unlock">Fungua Programu</string>
+    <string name="auth">Thibitisha uthibitishaji</string>
+    <string name="update">Sasisha</string>
+    <string name="setting">Mipangilio</string>
+    <string name="codeHint">Chapa au pakia hati za mpira hapa</string>
+    <string name="loadBtn">Mzigo</string>
+    <string name="saveBtn">Hifadhi</string>
+    <string name="delBtn">Futa</string>
+    <string name="runBtn">Kimbia</string>
+    <string name="confBtn">Sanidi</string>
+    <string name="btn_continue">Endelea</string>
+    <string name="root_err">Ufikiaji wa Mizizi Unahitajika kwa Shambulio la Cable ya USB!</string>
+    <string name="kernel_err">"Kernel Haitumiki kwa Mashambulizi ya Kebo ya USB!"</string>
+    <string name="vm">Mazingira ya mtandaoni hayatumiki!</string>
     <!-- Config screen -->
+    <string name="config_activity">Marekebisho</string>
+    <string name="config_status_usb_on">USB Imeunganishwa</string>
+    <string name="config_status_usb_off">USB Imetenganishwa</string>
+    <string name="config_status_net_on">Soketi ya Mtandao Imeunganishwa</string>
+    <string name="config_status_net_off">Soketi ya Mtandao Imetenganishwa</string>
+    <string name="socket_address">Ingiza Soketi ya IP na Anwani ya Bandari</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Usanidi wa HID</string>
+    <string name="hid_download">Pakua</string>
+    <string name="hid_update">Sasisha</string>
+    <string name="hid_edit">Hariri</string>
+    <string name="hid_delete">Futa</string>
     <!-- Keylist screen -->
+    <string name="key_title">Jina Muhimu</string>
+    <string name="key_character">Tabia Muhimu</string>
+    <string name="key_code">Kanuni muhimu</string>
+    <string name="key_ctrl">Kitufe cha Ctrl</string>
+    <string name="key_alt">Kitufe cha Alt</string>
+    <string name="key_shift">Kitufe cha Shift</string>
+    <string name="key_meta">Ufunguo wa Meta</string>
+    <string name="keycode">Kanuni muhimu</string>
+    <string name="modcode">Msimbo wa Kirekebishaji</string>
+    <string name="key_details">Maelezo Muhimu</string>
     <!-- Setting screen -->
+    <string name="setting_general">Mkuu</string>
+    <string name="dark_theme_title">Hali ya Usiku</string>
+    <string name="dark_theme_summary">Weka mandhari meusi</string>
+    <string name="device_admin_title">Fanya mmiliki wa kifaa cha programu</string>
+    <string name="device_admin_summary">Mizizi Inahitajika. Hii ni kukwepa baadhi ya vikwazo kwenye Android.</string>
+    <string name="hide_icon_title">Ficha/Zima Aikoni ya Kizinduzi</string>
+    <string name="hide_icon_summary">Piga *</string>
+    <string name="delete_dep_title">Sanidua Programu</string>
+    <string name="delete_dep_summary">Safisha na uondoe programu.</string>
+    <string name="settings_sec_title">Usalama wa mapema</string>
+    <string name="settings_sec_desc">Washa usimbaji fiche wa faili ya hati na kufunga skrini.</string>
+    <string name="setting_device">Mipangilio ya Hali ya Mashambulizi</string>
+    <string name="configfs_title">Sanidi ConfigFS Kiotomatiki</string>
+    <string name="configfs_summary">Itasanidi HID kwenye vifaa vinavyotumika vya ConfigFS. Inaweza kuvunja mpangilio wa USB.</string>
+    <string name="hid_choice_title">HID inayoweza kubinafsishwa</string>
+    <string name="hid_choice_summary">Badilisha kati ya HID ya Urithi na HID Inayoweza Kubinafsishwa</string>
+    <string name="hid_title">Lugha iliyojificha</string>
+    <string name="hid_summary">Pakua lugha za ziada za HID au ubuni miundo mipya ya HID.</string>
+    <string name="settings_usb_title">Uzinduzi wa Unganisho la USB</string>
+    <string name="settings_usb_desc">Kitufe cha Run kitaanzisha shambulio wakati USB imeunganishwa.</string>
+    <string name="settings_net_title">Uzinduzi wa Kuunganisha Soketi ya Mtandao</string>
+    <string name="settings_net_desc">Kitufe cha Run kitazindua shambulio wakati Soketi ya Mtandao imeunganishwa.</string>
+    <string name="setting_about">Habari</string>
+    <string name="setting_developer_title">Msanidi</string>
+    <string name="settings_version_title">Toleo</string>
+    <string name="settings_arch_title">Usanifu</string>
+    <string name="settings_lic_title">Leseni</string>
+    <string name="settings_support">Msaada</string>
+    <string name="settings_git_title">Masuala ya GitHub</string>
+    <string name="settings_git_desc">Bofya ili kuongeza masuala au ombi la kipengele.</string>
+    <string name="settings_locale_title">Ujanibishaji</string>
+    <string name="settings_locale_desc">Changia katika ujanibishaji wa programu.</string>
+    <string name="release">Usambazaji</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Kutolewa kwa GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Usiku</string>
+    <string name="releaseTest">Toleo la Tatua</string>
+    <string name="releaseOthers">Toleo Lisilotumika</string>
+    <string name="btn_cancel">Ghairi</string>
+    <string name="btn_save">Hifadhi</string>
+    <string name="file_saved">kuokolewa</string>
+    <string name="title_open_file">Fungua Faili</string>
+    <string name="title_delete_file">Futa Faili</string>
+    <string name="file_deleted">imefutwa</string>
+    <string name="file_name">Jina la faili</string>
+    <string name="title_save_file">Hifadhi Faili</string>
+    <string name="hid_version">Toleo: %d</string>
+    <string-array name="modes">
+        <item>Kebo ya USB</item>
+        <item>Soketi ya Mtandao</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Kiingereza cha Amerika</item>
+        <item>Kituruki</item>
+        <item>Kiswidi</item>
+        <item>Kislovenia</item>
+        <item>Kirusi</item>
+        <item>Kireno</item>
+        <item>Kinorwe</item>
+        <item>Kiitaliano</item>
+        <item>Kikroeshia</item>
+        <item>Uingereza Kiingereza</item>
+        <item>Kifaransa</item>
+        <item>Kifini</item>
+        <item>Kihispania</item>
+        <item>Kideni</item>
+        <item>Kijerumani</item>
+        <item>Mfaransa wa Kanada</item>
+        <item>Kireno cha Brazil</item>
+        <item>Kibelarusi</item>
+        <item>Kihungaria</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Otomatiki</item>
+        <item>Siku</item>
+        <item>Usiku</item>
+    </string-array>
 </resources>

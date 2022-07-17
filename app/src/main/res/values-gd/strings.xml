@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ATHAIR</string>
+    <string name="init_skip">SGIIP</string>
+    <string name="init_agree">AONTAICH</string>
+    <string name="init_start">HACH</string>
+    <string name="slideDesc1">Tionndaidh an inneal agad gu Rubber Ducky!</string>
+    <string name="slideTitle2">Càball USB</string>
+    <string name="slideDesc2">Eadar-aghaidh le sreang USB airson ionnsaigh a chuir air bhog!</string>
+    <string name="slideTitle3">Socaid lìonraidh</string>
+    <string name="slideDesc3">Eadar-aghaidh socaid stèidhichte air Wi-Fi airson ionnsaigh a chuir air bhog tro innealan taobh a-muigh le taic!</string>
+    <string name="slideTitle4">Àicheadh</string>
+    <string name="slideDesc4">Tha uallach air neach-cleachdaidh na h-aplacaid a-mhàin airson na milleadh a chaidh a dhèanamh. Chan urrainn eintiteas sam bith eile a bhith cunntachail airson na milleadh a chaidh a dhèanamh leis an aplacaid seo! Bi faiceallach nuair a bhios tu a’ cleachdadh an aplacaid agus na cleachd seo gus cron a dhèanamh air daoine eile!</string>
+    <string name="slideTitle5">Poileasaidh Dìomhaireachd</string>
+    <string name="slideDesc5">Chan eil dàta de chruth sam bith air a chruinneachadh, air a chleachdadh agus air a reic! Chan eilear ag iarraidh cuid de cheadan a dh’ fhaodadh draghan prìobhaideachd a thogail ach airson cuid de fheartan san app obrachadh agus chan ann airson dàta a chruinneachadh! Thathas a’ toirt urram do dhìomhaireachd!</string>
+    <string name="slideTitle6">Cead App</string>
+    <string name="slideDesc6">Feuch an toir thu cead don app a bhith ag obair!</string>
     <!-- Update screen -->
+    <string name="update_new">Tionndadh Ùrachaidh Ùr ri fhaighinn:</string>
+    <string name="update_hash_error">Mì-chothromachadh ainm-sgrìobhte an fhaidhle! Chan urrainn ùrachadh.</string>
+    <string name="update_activity">Ùrachadh luath air ìre Rucky</string>
+    <string name="update_version">Tionndadh</string>
+    <string name="update_version_nightly">Tionndadh oidhche</string>
+    <string name="update_changelog">Clàr-atharrachaidh</string>
+    <string name="update_status">Inbhe ùrachadh</string>
+    <string name="update_action">Luchdaich a-nuas is a stàladh Update</string>
+    <string name="update_downloading">A luchdadh a-nuas</string>
+    <string name="install_update">A\' cur an sàs Ùrachadh</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Am bu toil leat an aplacaid fhalach no fhàgail?</string>
+    <string name="btn_exit">Ar-a-mach</string>
+    <string name="btn_back">Falaich</string>
+    <string name="unlock">Fuasgladh App</string>
+    <string name="auth">Dearbhaich dearbhadh</string>
+    <string name="update">Ùraich</string>
+    <string name="setting">Suidhichidhean</string>
+    <string name="codeHint">Taidhp a-steach no luchdaich sgriobtaichean lachan rubair an seo</string>
+    <string name="loadBtn">Luchdaich</string>
+    <string name="saveBtn">Sàbhail</string>
+    <string name="delBtn">Sguab às</string>
+    <string name="runBtn">Ruith</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Lean air adhart</string>
+    <string name="root_err">Ruigsinneachd freumh a dhìth airson ionnsaigh càball USB!</string>
+    <string name="kernel_err">"msgstr \"Chan eil taic aig kernel airson ionnsaigh càball USB!\""</string>
+    <string name="vm">Chan eil taic ri àrainneachd mas-fhìor!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB ceangailte</string>
+    <string name="config_status_usb_off">USB air a dhì-cheangal</string>
+    <string name="config_status_net_on">Socaid lìonra ceangailte</string>
+    <string name="config_status_net_off">Socaid lìonra air a dhì-cheangal</string>
+    <string name="socket_address">Cuir a-steach Socket IP agus Port Seòladh</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Luchdaich sìos</string>
+    <string name="hid_update">Ùraich</string>
+    <string name="hid_edit">Deasaich</string>
+    <string name="hid_delete">Sguab às</string>
     <!-- Keylist screen -->
+    <string name="key_title">Prìomh Ainm</string>
+    <string name="key_character">Prìomh charactar</string>
+    <string name="key_code">Còd prìomh</string>
+    <string name="key_ctrl">Ctrl iuchair</string>
+    <string name="key_alt">Alt iuchair</string>
+    <string name="key_shift">Iuchrach Shift</string>
+    <string name="key_meta">Meta iuchair</string>
+    <string name="keycode">Còd prìomh</string>
+    <string name="modcode">Còd mion-atharrachaidh</string>
+    <string name="key_details">Prìomh fhiosrachadh</string>
     <!-- Setting screen -->
+    <string name="setting_general">Coitcheann</string>
+    <string name="dark_theme_title">Modh oidhche</string>
+    <string name="dark_theme_summary">Suidhich cuspair dorcha</string>
+    <string name="device_admin_title">Dèan sealbhadair inneal app</string>
+    <string name="device_admin_summary">Root a dhìth. Tha seo gus faighinn seachad air cuid de na cuingeachaidhean air Android.</string>
+    <string name="hide_icon_title">Falaich /cuir à comas Ìomhaigh Launcher</string>
+    <string name="hide_icon_summary">Dial *</string>
+    <string name="delete_dep_title">Dì-stàlaich an aplacaid</string>
+    <string name="delete_dep_summary">Glan suas is dì-stàlaich an aplacaid.</string>
+    <string name="settings_sec_title">Tèarainteachd ro-làimh</string>
+    <string name="settings_sec_desc">Dèan comas air crioptachadh faidhle sgriobt agus glasadh sgrion.</string>
+    <string name="setting_device">Suidhichidhean modh ionnsaigh</string>
+    <string name="configfs_title">Dèan rèiteachadh fèin-ghluasadach air ConfigFS</string>
+    <string name="configfs_summary">Cumaidh e HID air innealan le taic ConfigFS. Dh’ fhaodadh suidheachadh USB a bhriseadh.</string>
+    <string name="hid_choice_title">HID gnàthaichte</string>
+    <string name="hid_choice_summary">Atharraich eadar Legacy HID agus Customizable HID</string>
+    <string name="hid_title">Cànan HID</string>
+    <string name="hid_summary">Luchdaich sìos cànanan HID a bharrachd no dealbhaich cruth HID ùr.</string>
+    <string name="settings_usb_title">Cur air bhog Ceangal USB</string>
+    <string name="settings_usb_desc">Cuiridh am putan ruith ionnsaigh air bhog nuair a tha USB ceangailte.</string>
+    <string name="settings_net_title">Cur air bhog Network Socket Connect</string>
+    <string name="settings_net_desc">Cuiridh am putan ruith ionnsaigh air bhog nuair a tha Network Socket ceangailte.</string>
+    <string name="setting_about">Fiosrachadh</string>
+    <string name="setting_developer_title">Leasaiche</string>
+    <string name="settings_version_title">Tionndadh</string>
+    <string name="settings_arch_title">Ailtireachd</string>
+    <string name="settings_lic_title">Cead</string>
+    <string name="settings_support">Taic</string>
+    <string name="settings_git_title">Cùisean GitHub</string>
+    <string name="settings_git_desc">Cliog gus cùisean no iarrtas feart a chuir ris.</string>
+    <string name="settings_locale_title">Ionadail</string>
+    <string name="settings_locale_desc">Cuir ri sgìreachadh app.</string>
+    <string name="release">Sgaoileadh</string>
+    <string name="releaseNetHunter">Stòr App NetHunter</string>
+    <string name="releaseGitHub">Sgaoileadh GitHub</string>
+    <string name="releaseGitHubNightly">GitHub gach oidhche</string>
+    <string name="releaseTest">Sgaoileadh Debug</string>
+    <string name="releaseOthers">Sgaoileadh gun taic</string>
+    <string name="btn_cancel">Sguir dheth</string>
+    <string name="btn_save">Sàbhail</string>
+    <string name="file_saved">sàbhaladh</string>
+    <string name="title_open_file">Fosgail File</string>
+    <string name="title_delete_file">Sguab às File</string>
+    <string name="file_deleted">air a sguabadh às</string>
+    <string name="file_name">Ainm faidhle</string>
+    <string name="title_save_file">Sàbhail Faidhle</string>
+    <string name="hid_version">Tionndadh: %d</string>
+    <string-array name="modes">
+        <item>Càball USB</item>
+        <item>Socaid lìonraidh</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Beurla Ameireaganach</item>
+        <item>Turcach</item>
+        <item>Suaineach</item>
+        <item>Slobhenianach</item>
+        <item>Ruiseanach</item>
+        <item>Portugalach</item>
+        <item>Lochlannach</item>
+        <item>Eadailteach</item>
+        <item>Croatianach</item>
+        <item>Beurla na Rìoghachd Aonaichte</item>
+        <item>Frangach</item>
+        <item>Fionnlaineach</item>
+        <item>Spàinneach</item>
+        <item>Dànach</item>
+        <item>Gearmailteach</item>
+        <item>Frangach Chanada</item>
+        <item>Portuguese Brazilach</item>
+        <item>Belarusianach</item>
+        <item>Hungàrianach</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Latha</item>
+        <item>Oidhche</item>
+    </string-array>
 </resources>

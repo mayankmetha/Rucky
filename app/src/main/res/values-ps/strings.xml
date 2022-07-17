@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">بل</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">موافقه وکړه</string>
+    <string name="init_start">هیک</string>
+    <string name="slideDesc1">خپل وسیله د ربړ ډیکي ته واړوئ!</string>
+    <string name="slideTitle2">USB کیبل</string>
+    <string name="slideDesc2">د برید پیل کولو لپاره د USB وایرډ انٹرفیس!</string>
+    <string name="slideTitle3">د شبکې ساکټ</string>
+    <string name="slideDesc3">د ملاتړ شوي بهرني وسیلو له لارې د برید پیل کولو لپاره د Wi-Fi پراساس ساکټ انٹرفیسونه!</string>
+    <string name="slideTitle4">ردول</string>
+    <string name="slideDesc4">د ایپ کارونکي یوازې د رامینځته شوي زیانونو لپاره مسؤل دي. هیڅ بل اداره نشي کولی د دې اپلیکیشن په کارولو سره ترسره شوي زیانونو لپاره مسؤل وي! د اپلیکیشن کارولو پر مهال احتیاط وکړئ او نورو ته د زیان رسولو لپاره یې مه کاروئ!</string>
+    <string name="slideTitle5">د پټتیا تګلاره</string>
+    <string name="slideDesc5">هیڅ ډول معلومات نه راټولیږي، کارول کیږي او پلورل کیږي! ځینې ​​اجازې چې کولی شي د محرمیت اندیښنې راپورته کړي یوازې په ایپ کې د ځینې ځانګړتیاو کار کولو لپاره غوښتل شوي او د معلوماتو راټولولو لپاره ندي! ستاسو محرمیت ته درناوی کیږي!</string>
+    <string name="slideTitle6">د اپلیکیشن اجازه</string>
+    <string name="slideDesc6">مهرباني وکړئ ایپ ته د کار کولو لپاره اړین اجازه ورکړئ!</string>
     <!-- Update screen -->
+    <string name="update_new">نوی تازه نسخه شتون لري:</string>
+    <string name="update_hash_error">د دوتنې لاسلیک بې توپیره! تازه نشي.</string>
+    <string name="update_activity">د ریکی تازه معلومات</string>
+    <string name="update_version">نسخه</string>
+    <string name="update_version_nightly">د شپې نسخه</string>
+    <string name="update_changelog">بدلون</string>
+    <string name="update_status">تازه حالت</string>
+    <string name="update_action">تازه ډاونلوډ او نصب کړئ</string>
+    <string name="update_downloading">ډاونلوډ کول تازه کول</string>
+    <string name="install_update">د اپلیکشن تازه کول</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ایا تاسو غواړئ چې اپلیکیشن پټ کړئ یا بهر شئ؟</string>
+    <string name="btn_exit">وتون</string>
+    <string name="btn_back">پټول</string>
+    <string name="unlock">اپلیکیشن خلاص کړئ</string>
+    <string name="auth">تصدیق تایید کړئ</string>
+    <string name="update">تازه کول</string>
+    <string name="setting">ترتیبات</string>
+    <string name="codeHint">دلته د ربړ بتکي سکریپټونه ټایپ یا بار کړئ</string>
+    <string name="loadBtn">بار</string>
+    <string name="saveBtn">خوندي کړئ</string>
+    <string name="delBtn">ړنګول</string>
+    <string name="runBtn">منډه کړه</string>
+    <string name="confBtn">ترتیب</string>
+    <string name="btn_continue">ادامه ورکړئ</string>
+    <string name="root_err">د USB کیبل برید لپاره د روټ لاسرسي ته اړتیا ده!</string>
+    <string name="kernel_err">"کرنل د USB کیبل برید لپاره نه ملاتړ کیږي!"</string>
+    <string name="vm">مجازی چاپیریال نه ملاتړ کیږي!</string>
     <!-- Config screen -->
+    <string name="config_activity">ټیکونه</string>
+    <string name="config_status_usb_on">USB نښلول شوی</string>
+    <string name="config_status_usb_off">USB ونښلول شو</string>
+    <string name="config_status_net_on">د شبکې ساکټ وصل شوی</string>
+    <string name="config_status_net_off">د شبکې ساکټ وصل شو</string>
+    <string name="socket_address">د ساکټ IP او پورټ پته دننه کړئ</string>
     <!-- HID config screen -->
+    <string name="hid_activity">د HID تشکیل</string>
+    <string name="hid_download">ډاونلوډ کړئ</string>
+    <string name="hid_update">تازه کول</string>
+    <string name="hid_edit">سمون</string>
+    <string name="hid_delete">ړنګول</string>
     <!-- Keylist screen -->
+    <string name="key_title">کلیدي نوم</string>
+    <string name="key_character">کلیدي کرکټر</string>
+    <string name="key_code">کلیدي کوډ</string>
+    <string name="key_ctrl">د Ctrl کیلي</string>
+    <string name="key_alt">Alt کلید</string>
+    <string name="key_shift">د شفټ کیلي</string>
+    <string name="key_meta">میټا کیلي</string>
+    <string name="keycode">کلیدي کوډ</string>
+    <string name="modcode">د بدلون کوډ</string>
+    <string name="key_details">کلیدي توضیحات</string>
     <!-- Setting screen -->
+    <string name="setting_general">جنرال</string>
+    <string name="dark_theme_title">د شپې حالت</string>
+    <string name="dark_theme_summary">تیاره موضوع تنظیم کړئ</string>
+    <string name="device_admin_title">د اپلیکیشن وسیله مالک جوړ کړئ</string>
+    <string name="device_admin_summary">روټ ته اړتیا ده. دا په Android کې د ځینې محدودیتونو له مینځه وړلو لپاره دی.</string>
+    <string name="hide_icon_title">د لانچر آیکون پټ کړئ /غیر فعال کړئ</string>
+    <string name="hide_icon_summary">ډایل کړئ *</string>
+    <string name="delete_dep_title">اپلیکیشن غیر نصب کړئ</string>
+    <string name="delete_dep_summary">اپلیکیشن پاک او غیر نصب کړئ.</string>
+    <string name="settings_sec_title">مخکی امنیت</string>
+    <string name="settings_sec_desc">د سکریپټ فایل کوډ کول او د سکرین لاک فعال کړئ.</string>
+    <string name="setting_device">د برید حالت ترتیبات</string>
+    <string name="configfs_title">د اتوماتیک تنظیم تنظیم کول</string>
+    <string name="configfs_summary">HID به د ConfigFS ملاتړ شوي وسیلو کې تنظیم کړي. کیدای شي د USB ترتیب مات کړي.</string>
+    <string name="hid_choice_title">د اصلاح وړ HID</string>
+    <string name="hid_choice_summary">د میراث HID او مطلوب HID ترمینځ تیر کړئ</string>
+    <string name="hid_title">HID ژبه</string>
+    <string name="hid_summary">اضافي HID ژبې ډاونلوډ کړئ یا نوي HID ترتیبونه ډیزاین کړئ.</string>
+    <string name="settings_usb_title">د USB نښلول پیل</string>
+    <string name="settings_usb_desc">د چلولو تڼۍ به برید پیل کړي کله چې USB وصل شي.</string>
+    <string name="settings_net_title">د شبکې ساکټ نښلول پیل کول</string>
+    <string name="settings_net_desc">د چلولو تڼۍ به برید پیل کړي کله چې د شبکې ساکټ وصل وي.</string>
+    <string name="setting_about">معلومات</string>
+    <string name="setting_developer_title">پرمخ وړونکی</string>
+    <string name="settings_version_title">نسخه</string>
+    <string name="settings_arch_title">معمارۍ</string>
+    <string name="settings_lic_title">جواز</string>
+    <string name="settings_support">ملاتړ</string>
+    <string name="settings_git_title">د GitHub مسلې</string>
+    <string name="settings_git_desc">د مسلو یا فیچر غوښتنه اضافه کولو لپاره کلیک وکړئ.</string>
+    <string name="settings_locale_title">سیمه ایز کول</string>
+    <string name="settings_locale_desc">د اپلیکیشن ځایی کولو کې مرسته وکړئ.</string>
+    <string name="release">ویش</string>
+    <string name="releaseNetHunter">د NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub خوشې کول</string>
+    <string name="releaseGitHubNightly">GitHub شپه</string>
+    <string name="releaseTest">ډیبګ خوشې کول</string>
+    <string name="releaseOthers">غیر ملاتړ شوی خوشې کول</string>
+    <string name="btn_cancel">لغوه کړئ</string>
+    <string name="btn_save">خوندي کړئ</string>
+    <string name="file_saved">خوندي شوی</string>
+    <string name="title_open_file">فایل خلاص کړئ</string>
+    <string name="title_delete_file">فایل ړنګ کړئ</string>
+    <string name="file_deleted">حذف شوی</string>
+    <string name="file_name">د دوتنې نوم</string>
+    <string name="title_save_file">فایل خوندي کړئ</string>
+    <string name="hid_version">نسخه: %d</string>
+    <string-array name="modes">
+        <item>USB کیبل</item>
+        <item>د شبکې ساکټ</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>امریکایی انګلیسي</item>
+        <item>ترکي</item>
+        <item>سویډیش یا سویډني</item>
+        <item>سلوانیایی</item>
+        <item>روسي</item>
+        <item>پورتګالي</item>
+        <item>نارویژي</item>
+        <item>ایټالیوي</item>
+        <item>کرواسین</item>
+        <item>د انګلستان انګلستان</item>
+        <item>فرانسوي</item>
+        <item>فنلینډي</item>
+        <item>هسپانیه ایی</item>
+        <item>دنمارکي</item>
+        <item>جرمني</item>
+        <item>کاناډایی فرانسوی</item>
+        <item>برازیلی پرتګالی</item>
+        <item>بلاروسي</item>
+        <item>هنګري</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>اتومات</item>
+        <item>ورځ</item>
+        <item>شپه</item>
+    </string-array>
 </resources>

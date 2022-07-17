@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">СЛЕДНО</string>
+    <string name="init_skip">ПРЕСКОКНИ</string>
+    <string name="init_agree">СЕ СОГЛАСУВААТ</string>
+    <string name="init_start">ХАКИРАЊЕ</string>
+    <string name="slideDesc1">Претворете го вашиот уред во Rubber Ducky!</string>
+    <string name="slideTitle2">USB кабел</string>
+    <string name="slideDesc2">УСБ-жичен интерфејс за започнување напад!</string>
+    <string name="slideTitle3">Мрежен приклучок</string>
+    <string name="slideDesc3">Сокет интерфејси базирани на Wi-Fi за започнување напад преку поддржани надворешни алатки!</string>
+    <string name="slideTitle4">Одрекување</string>
+    <string name="slideDesc4">Корисникот на апликацијата е единствено одговорен за предизвиканите штети. Ниту еден друг субјект не може да биде одговорен за штетите направени со помош на оваа апликација! Бидете внимателни кога ја користите апликацијата и не користете ја за да им наштетите на другите!</string>
+    <string name="slideTitle5">Политика за приватност</string>
+    <string name="slideDesc5">Не се собираат, користат и продаваат никакви податоци од која било форма! Некои дозволи кои би можеле да предизвикаат загриженост за приватноста се бараат само за работа на одредени функции во апликацијата и не се за собирање податоци! Вашата приватност се почитува!</string>
+    <string name="slideTitle6">Дозвола за апликација</string>
+    <string name="slideDesc6">Ве молиме дајте ѝ ја на апликацијата потребната дозвола за работа!</string>
     <!-- Update screen -->
+    <string name="update_new">Достапна верзија на ново ажурирање:</string>
+    <string name="update_hash_error">Несовпаѓање на потписот на датотеката! Не може да се ажурира.</string>
+    <string name="update_activity">Руки Ажурирање</string>
+    <string name="update_version">Верзија</string>
+    <string name="update_version_nightly">Ноќна верзија</string>
+    <string name="update_changelog">Промена</string>
+    <string name="update_status">Ажурирајте го статусот</string>
+    <string name="update_action">Преземете и инсталирајте го ажурирањето</string>
+    <string name="update_downloading">Се презема ажурирање</string>
+    <string name="install_update">Примена на ажурирање</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Дали сакате да се скриете или да излезете од апликацијата?</string>
+    <string name="btn_exit">Излезете</string>
+    <string name="btn_back">Крие</string>
+    <string name="unlock">Отклучете ја апликацијата</string>
+    <string name="auth">Потврдете ја автентикацијата</string>
+    <string name="update">Ажурирање</string>
+    <string name="setting">Поставки</string>
+    <string name="codeHint">Внесете или вчитајте гумени скрипти за пикање овде</string>
+    <string name="loadBtn">Вчитај</string>
+    <string name="saveBtn">Зачувај</string>
+    <string name="delBtn">Избриши</string>
+    <string name="runBtn">Трчај</string>
+    <string name="confBtn">Конфигурација</string>
+    <string name="btn_continue">Продолжи</string>
+    <string name="root_err">Потребен е root пристап за напад на USB кабел!</string>
+    <string name="kernel_err">"Јадрото не е поддржано за напад на USB кабел!"</string>
+    <string name="vm">Виртуелната околина не е поддржана!</string>
     <!-- Config screen -->
+    <string name="config_activity">Дотерување</string>
+    <string name="config_status_usb_on">Поврзан со USB</string>
+    <string name="config_status_usb_off">УСБ е исклучен</string>
+    <string name="config_status_net_on">Поврзан е мрежен приклучок</string>
+    <string name="config_status_net_off">Мрежниот приклучок е исклучен</string>
+    <string name="socket_address">Внесете IP на сокетот и адресата на портата</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Преземи</string>
+    <string name="hid_update">Ажурирање</string>
+    <string name="hid_edit">Уредување</string>
+    <string name="hid_delete">Избриши</string>
     <!-- Keylist screen -->
+    <string name="key_title">Име на клучот</string>
+    <string name="key_character">Клучен лик</string>
+    <string name="key_code">Клучен код</string>
+    <string name="key_ctrl">Копче Ctrl</string>
+    <string name="key_alt">Алт клуч</string>
+    <string name="key_shift">Копче Shift</string>
+    <string name="key_meta">Мета клуч</string>
+    <string name="keycode">Клучен код</string>
+    <string name="modcode">Код на модификатор</string>
+    <string name="key_details">Клучни детали</string>
     <!-- Setting screen -->
+    <string name="setting_general">Општо</string>
+    <string name="dark_theme_title">Ноќен режим</string>
+    <string name="dark_theme_summary">Поставете темна тема</string>
+    <string name="device_admin_title">Направете сопственик на уредот со апликација</string>
+    <string name="device_admin_summary">Потребен е корен. Ова е за да се заобиколат некои од ограничувањата на Android.</string>
+    <string name="hide_icon_title">Скриј/оневозможи икона за стартер</string>
+    <string name="hide_icon_summary">Бирајте *</string>
+    <string name="delete_dep_title">Деинсталирајте ја апликацијата</string>
+    <string name="delete_dep_summary">Исчистете ја и деинсталирајте ја апликацијата.</string>
+    <string name="settings_sec_title">Напредна безбедност</string>
+    <string name="settings_sec_desc">Овозможете шифрирање на датотеки со скрипти и заклучување на екранот.</string>
+    <string name="setting_device">Поставки за режим на напад</string>
+    <string name="configfs_title">Автоматско конфигурирање на ConfigFS</string>
+    <string name="configfs_summary">Ќе го конфигурира HID на уредите поддржани од ConfigFS. Може да ја прекине поставката за USB.</string>
+    <string name="hid_choice_title">Прилагодлив HID</string>
+    <string name="hid_choice_summary">Префрлете се помеѓу Legacy HID и Customizable HID</string>
+    <string name="hid_title">HID Јазик</string>
+    <string name="hid_summary">Преземете дополнителни HID јазици или дизајнирајте нови HID распореди.</string>
+    <string name="settings_usb_title">Стартување на USB Connect</string>
+    <string name="settings_usb_desc">Копчето Стартувај ќе започне напад кога ќе се поврзе USB.</string>
+    <string name="settings_net_title">Стартување на Network Socket Connect</string>
+    <string name="settings_net_desc">Копчето Стартувај ќе започне напад кога ќе се поврзе мрежниот приклучок.</string>
+    <string name="setting_about">Инфо</string>
+    <string name="setting_developer_title">Програмер</string>
+    <string name="settings_version_title">Верзија</string>
+    <string name="settings_arch_title">Архитектура</string>
+    <string name="settings_lic_title">Лиценца</string>
+    <string name="settings_support">Поддршка</string>
+    <string name="settings_git_title">Проблеми со GitHub</string>
+    <string name="settings_git_desc">Кликнете за да додадете проблеми или барање за функција.</string>
+    <string name="settings_locale_title">Локализација</string>
+    <string name="settings_locale_desc">Придонесете за локализација на апликацијата.</string>
+    <string name="release">Дистрибуција</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Издание на GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Отстранување грешки</string>
+    <string name="releaseOthers">Неподдржано издание</string>
+    <string name="btn_cancel">Откажи</string>
+    <string name="btn_save">Зачувај</string>
+    <string name="file_saved">зачувани</string>
+    <string name="title_open_file">Отвори Датотека</string>
+    <string name="title_delete_file">Избриши датотека</string>
+    <string name="file_deleted">избришани</string>
+    <string name="file_name">Име на датотека</string>
+    <string name="title_save_file">Зачувај датотека</string>
+    <string name="hid_version">Верзија: %d</string>
+    <string-array name="modes">
+        <item>USB кабел</item>
+        <item>Мрежен приклучок</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>американски англиски</item>
+        <item>турски</item>
+        <item>шведски</item>
+        <item>словенечки</item>
+        <item>руски</item>
+        <item>португалски</item>
+        <item>норвешки</item>
+        <item>италијански</item>
+        <item>хрватски</item>
+        <item>Обединетото Кралство англиски</item>
+        <item>француски</item>
+        <item>фински</item>
+        <item>шпански</item>
+        <item>дански</item>
+        <item>германски</item>
+        <item>канадски француски</item>
+        <item>Бразилски Португалец</item>
+        <item>белоруски</item>
+        <item>унгарски</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Автоматски</item>
+        <item>Ден</item>
+        <item>Ноќ</item>
+    </string-array>
 </resources>

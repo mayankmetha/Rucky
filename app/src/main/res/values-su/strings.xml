@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">TERAS</string>
+    <string name="init_skip">LEWAT</string>
+    <string name="init_agree">satuju</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Hurungkeun alat anjeun ka Bebek Karét!</string>
+    <string name="slideTitle2">Kabel USB</string>
+    <string name="slideDesc2">Antarbeungeut kabel USB pikeun ngaluncurkeun serangan!</string>
+    <string name="slideTitle3">Socket jaringan</string>
+    <string name="slideDesc3">Antarbeungeut stop kontak dumasar Wi-Fi pikeun ngaluncurkeun serangan liwat alat éksternal anu dirojong!</string>
+    <string name="slideTitle4">Bantahan</string>
+    <string name="slideDesc4">Pamaké aplikasi éta ngan tanggung jawab pikeun karusakan anu disababkeun. Teu aya éntitas sanés anu tiasa nanggung jawab pikeun karusakan anu dilakukeun ku aplikasi ieu! Prakték ati-ati nalika nganggo aplikasi sareng ulah nganggo ieu pikeun ngarugikeun batur!</string>
+    <string name="slideTitle5">kabijakan privasi</string>
+    <string name="slideDesc5">Henteu aya Data tina bentuk naon waé anu dikumpulkeun, dianggo sareng dijual! Sababaraha idin anu tiasa nyababkeun masalah privasi ngan ukur dipénta pikeun ngerjakeun sababaraha fitur dina aplikasi sareng sanés pikeun ngumpulkeun data! Privasi anjeun dihormat!</string>
+    <string name="slideTitle6">Idin App</string>
+    <string name="slideDesc6">Punten pasihan aplikasi idin anu diperyogikeun pikeun damel!</string>
     <!-- Update screen -->
+    <string name="update_new">Apdet Anyar Vérsi Sadia:</string>
+    <string name="update_hash_error">File Signature Mmatch! Teu Bisa Ngamutahirkeun.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Vérsi</string>
+    <string name="update_version_nightly">Vérsi Nightly</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Update Status</string>
+    <string name="update_action">Unduh sareng Pasang Apdet</string>
+    <string name="update_downloading">Ngundeur Update</string>
+    <string name="install_update">Nerapkeun Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Naha anjeun badé nyumput atanapi kaluar tina aplikasi?</string>
+    <string name="btn_exit">Kaluar</string>
+    <string name="btn_back">Sumputkeun</string>
+    <string name="unlock">Buka konci App</string>
+    <string name="auth">Konfirmasi auténtikasi</string>
+    <string name="update">Pembaruan</string>
+    <string name="setting">Setélan</string>
+    <string name="codeHint">Ketik atanapi muatkeun skrip bebek karét di dieu</string>
+    <string name="loadBtn">ngamuat</string>
+    <string name="saveBtn">Simpen</string>
+    <string name="delBtn">Mupus</string>
+    <string name="runBtn">Lumpat</string>
+    <string name="confBtn">Konfigurasi</string>
+    <string name="btn_continue">Teraskeun</string>
+    <string name="root_err">Aksés Akar Diperlukeun Pikeun Serangan Kabel USB!</string>
+    <string name="kernel_err">"Kernel Henteu Dirojong Pikeun Serangan Kabel USB!"</string>
+    <string name="vm">Lingkungan virtual henteu didukung!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Nyambung</string>
+    <string name="config_status_usb_off">USB Dipegatkeun</string>
+    <string name="config_status_net_on">Jaringan Socket Dihubungkeun</string>
+    <string name="config_status_net_off">Socket jaringan dipegatkeun</string>
+    <string name="socket_address">Lebetkeun Socket IP sareng Alamat Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Konfigurasi HID</string>
+    <string name="hid_download">Ngundeur</string>
+    <string name="hid_update">Pembaruan</string>
+    <string name="hid_edit">Édit</string>
+    <string name="hid_delete">Mupus</string>
     <!-- Keylist screen -->
+    <string name="key_title">Ngaran konci</string>
+    <string name="key_character">Karakter konci</string>
+    <string name="key_code">Kodeu konci</string>
+    <string name="key_ctrl">Ctrl konci</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Kodeu konci</string>
+    <string name="modcode">Kodeu Modifier</string>
+    <string name="key_details">Rincian konci</string>
     <!-- Setting screen -->
+    <string name="setting_general">Umum</string>
+    <string name="dark_theme_title">Modeu Peuting</string>
+    <string name="dark_theme_summary">Setel téma poék</string>
+    <string name="device_admin_title">Jieun nu boga alat aplikasi</string>
+    <string name="device_admin_summary">Akar Diperlukeun. Ieu pikeun ngaliwat sababaraha larangan dina Android.</string>
+    <string name="hide_icon_title">Sumputkeun /Pareuman Launcher Ikon</string>
+    <string name="hide_icon_summary">Telepon *</string>
+    <string name="delete_dep_title">Uninstall App</string>
+    <string name="delete_dep_summary">Ngabersihan sareng cabut pamasangan aplikasi.</string>
+    <string name="settings_sec_title">Kaamanan sateuacanna</string>
+    <string name="settings_sec_desc">Aktipkeun énkripsi file skrip sareng konci layar.</string>
+    <string name="setting_device">Setélan Mode Serangan</string>
+    <string name="configfs_title">Otomatis Konpigurasikeun ConfigFS</string>
+    <string name="configfs_summary">Bakal ngonpigurasikeun HID dina alat anu dirojong ku ConfigFS. Bisa megatkeun setélan USB.</string>
+    <string name="hid_choice_title">HID customizable</string>
+    <string name="hid_choice_summary">Pindah antara Legacy HID sareng Customizable HID</string>
+    <string name="hid_title">Basa HID</string>
+    <string name="hid_summary">Unduh basa HID tambahan atanapi rancang perenah HID énggal.</string>
+    <string name="settings_usb_title">USB Connect peluncuran</string>
+    <string name="settings_usb_desc">Tombol Run bakal ngajalankeun serangan nalika USB disambungkeun.</string>
+    <string name="settings_net_title">Network stop kontak Connect peluncuran</string>
+    <string name="settings_net_desc">Tombol Run bakal ngajalankeun serangan nalika Network Socket disambungkeun.</string>
+    <string name="setting_about">Inpo</string>
+    <string name="setting_developer_title">pamekar</string>
+    <string name="settings_version_title">Vérsi</string>
+    <string name="settings_arch_title">Arsitéktur</string>
+    <string name="settings_lic_title">Lisensi</string>
+    <string name="settings_support">Ngarojong</string>
+    <string name="settings_git_title">Masalah GitHub</string>
+    <string name="settings_git_desc">Klik pikeun nambahkeun masalah atawa pamundut fitur.</string>
+    <string name="settings_locale_title">Lokalisasi</string>
+    <string name="settings_locale_desc">Kontribusi kana lokalisasi aplikasi.</string>
+    <string name="release">Distribusi</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Kaluaran GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Kaluaran Henteu Dirojong</string>
+    <string name="btn_cancel">Ngabolaykeun</string>
+    <string name="btn_save">Simpen</string>
+    <string name="file_saved">disimpen</string>
+    <string name="title_open_file">Buka File</string>
+    <string name="title_delete_file">Pupus File</string>
+    <string name="file_deleted">dipupus</string>
+    <string name="file_name">Nami file</string>
+    <string name="title_save_file">Simpen File</string>
+    <string name="hid_version">Vérsi: %d</string>
+    <string-array name="modes">
+        <item>Kabel USB</item>
+        <item>Socket jaringan</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amérika Inggris</item>
+        <item>Turki</item>
+        <item>Swédia</item>
+        <item>Slovénia</item>
+        <item>Rusia</item>
+        <item>Portugis</item>
+        <item>Norwegia</item>
+        <item>Italia</item>
+        <item>Kroasia</item>
+        <item>Inggris Raya</item>
+        <item>Perancis</item>
+        <item>Finlandia</item>
+        <item>Spanyol</item>
+        <item>Denmark</item>
+        <item>Jerman</item>
+        <item>Perancis Kanada</item>
+        <item>Portugis Brasil</item>
+        <item>Bélarus</item>
+        <item>Hungaria</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Otomatis</item>
+        <item>Dinten</item>
+        <item>Peuting</item>
+    </string-array>
 </resources>

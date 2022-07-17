@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">LATELAGO</string>
+    <string name="init_skip">TSHELA</string>
+    <string name="init_agree">DUMELA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Fetolela sedirišwa sa gago go Rubber Ducky!</string>
+    <string name="slideTitle2">Thapo ya USB</string>
+    <string name="slideDesc2">USB wired segokanyimmediamentsi sa sebolokigolo bakeng sa qala tlhaselo!</string>
+    <string name="slideTitle3">Soketeng ya Neteweke</string>
+    <string name="slideDesc3">Wi-Fi thehiloeng soketeng segokanyimmediamentsi sa sebolokigolo bakeng sa ho qala tlhaselo ka tšehetsoa lisebelisoa tsa ka ntle!</string>
+    <string name="slideTitle4">Tlhaloso ya boikarabelo</string>
+    <string name="slideDesc4">Modiriši wa tirišo o na le maikarabelo a nnoši a tshenyo yeo e bakilwego. Ga go na mokgatlo o mongwe wo o ka rwelego maikarabelo a tshenyo yeo e dirilwego ka go diriša tirišo ye! Itlwaetše go ba šedi ge o diriša tirišo gomme o se ke wa diriša se go baka kotsi go ba bangwe!</string>
+    <string name="slideTitle5">Pholisi ya Sephiri</string>
+    <string name="slideDesc5">Ga go na Data ya foromo efe goba efe yeo e kgoboketšwago, e šomišwago le go rekišwa! Ba bang ba ditumelelo e leng ka tsosa matshwenyeho sephiri ba feela kōptjoa bakeng sa ho sebetsa ha litšobotsi tse itseng ka tiriso ye gomme ga se go kgoboketša ya data! Sephiri sa gago se a hlompšha!</string>
+    <string name="slideTitle6">Tumelelo ya App</string>
+    <string name="slideDesc6">Hle fa app tumelelo ye e nyakegago ya go šoma!</string>
     <!-- Update screen -->
+    <string name="update_new">Mpshafatšo e Mpsha e Fumanehang Phetolelo:</string>
+    <string name="update_hash_error">Go se swane ga Mosaeno wa Faele! Ga e kgone go Mpshafatša.</string>
+    <string name="update_activity">Rucky Ntšhwafatšo</string>
+    <string name="update_version">Bešene</string>
+    <string name="update_version_nightly">Phetolelo ya Bošego</string>
+    <string name="update_changelog">Lengwalo la diphetogo</string>
+    <string name="update_status">Mpshafatša Maemo</string>
+    <string name="update_action">Download le Kenya Update</string>
+    <string name="update_downloading">Go taonelouta Mpshafatšo</string>
+    <string name="install_update">Go diriša Mpshafatšo</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Na o ka rata go uta goba go tšwa go tirišo?</string>
+    <string name="btn_exit">Tšwa</string>
+    <string name="btn_back">Fihla</string>
+    <string name="unlock">Notlolla App</string>
+    <string name="auth">Netefatša netefatšo</string>
+    <string name="update">Mpshafatša</string>
+    <string name="setting">Dipeakanyo</string>
+    <string name="codeHint">Thaepa goba o laetše dingwalwa tša raba tša letata mo</string>
+    <string name="loadBtn">Morwalo</string>
+    <string name="saveBtn">Boloka</string>
+    <string name="delBtn">Phumola</string>
+    <string name="runBtn">Kitima</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Tšwela pele</string>
+    <string name="root_err">Phihlelelo ya Modu e Nyakega Bakeng sa Tlhaselo ya Thapo ya USB!</string>
+    <string name="kernel_err">"Kernel Ga e Thekgwe Bakeng sa Tlhaselo ya Thapo ya USB!"</string>
+    <string name="vm">Tikologo ya go bonagala ga e thekgwe!</string>
     <!-- Config screen -->
+    <string name="config_activity">Di-Tweak</string>
+    <string name="config_status_usb_on">USB e Kgokagantšwe</string>
+    <string name="config_status_usb_off">USB E kgaotšwe</string>
+    <string name="config_status_net_on">Soketeng ya Neteweke e Kgokagantšwe</string>
+    <string name="config_status_net_off">Soketeng ya Neteweke e Kgaotšwe</string>
+    <string name="socket_address">Kenya Socket IP le Port Aterese</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Taonelouta</string>
+    <string name="hid_update">Mpshafatša</string>
+    <string name="hid_edit">Rulaganya</string>
+    <string name="hid_delete">Phumola</string>
     <!-- Keylist screen -->
+    <string name="key_title">Leina la Senotlolo</string>
+    <string name="key_character">Moanegwa wa Senotlolo</string>
+    <string name="key_code">Khoutu ya Senotlolo</string>
+    <string name="key_ctrl">Senotlolo sa Ctrl</string>
+    <string name="key_alt">Senotlolo sa Alt</string>
+    <string name="key_shift">Senotlolo sa Shift</string>
+    <string name="key_meta">Senotlolo sa Meta</string>
+    <string name="keycode">Khoutu ya Senotlolo</string>
+    <string name="modcode">Khoutu ya Mofetoši</string>
+    <string name="key_details">Dintlha tše Bohlokwa</string>
     <!-- Setting screen -->
+    <string name="setting_general">Kakaretšo</string>
+    <string name="dark_theme_title">Mokgwa wa Bosiu</string>
+    <string name="dark_theme_summary">Beha sehlooho se lefifi</string>
+    <string name="device_admin_title">Dira mong wa sedirišwa sa tirišo</string>
+    <string name="device_admin_summary">Modu o a Nyakega. Se ke go tlola tše dingwe tša dithibelo go Android.</string>
+    <string name="hide_icon_title">Pata/thibela Letshwao la Launcher</string>
+    <string name="hide_icon_summary">Daela * .</string>
+    <string name="delete_dep_title">Tloša App</string>
+    <string name="delete_dep_summary">Hlwekisa le uninstall tiriso ye.</string>
+    <string name="settings_sec_title">Tšhireletšo ya Pele</string>
+    <string name="settings_sec_desc">Kgontšha go šitiša faele ya sengwalwa le go notlela skrine.</string>
+    <string name="setting_device">Dipeakanyo tša Mokgwa wa Tlhaselo</string>
+    <string name="configfs_title">Beakanya ka go itiriša ConfigFS</string>
+    <string name="configfs_summary">Tla hlophisa HID ka ConfigFS tšehetsoa disebediswa. E ka roba peakanyo ya USB.</string>
+    <string name="hid_choice_title">HID yeo e ka fetošwago</string>
+    <string name="hid_choice_summary">Fetola pakeng tsa Lefa HID le Customizable HID</string>
+    <string name="hid_title">HID Polelo</string>
+    <string name="hid_summary">Taonelouta maleme a tlaleletšo a HID goba o hlame dipeakanyo tše mpsha tša HID.</string>
+    <string name="settings_usb_title">USB Kgokagano Launch</string>
+    <string name="settings_usb_desc">Matha konopo tla qala tlhaselo ha USB e amanang.</string>
+    <string name="settings_net_title">Neteweke Soketeng Kgokaganya Thoma</string>
+    <string name="settings_net_desc">Matha konopo tla qala tlhaselo ha Network Socket e amanang.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Mohlami</string>
+    <string name="settings_version_title">Bešene</string>
+    <string name="settings_arch_title">Thutaboagi</string>
+    <string name="settings_lic_title">Laesense</string>
+    <string name="settings_support">Thekga</string>
+    <string name="settings_git_title">Ditaba tša GitHub</string>
+    <string name="settings_git_desc">Klika go oketša ditaba goba kgopelo ya tšobotsi.</string>
+    <string name="settings_locale_title">Go bewa ga selegae</string>
+    <string name="settings_locale_desc">Tsenya letsogo go go dira gore tirišo e be ya selegae.</string>
+    <string name="release">Phatlalatšo</string>
+    <string name="releaseNetHunter">Lebenkele la Ditirišo la NetHunter</string>
+    <string name="releaseGitHub">Tokollo ya GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Bošego le Bošego</string>
+    <string name="releaseTest">Tokollo ya Debug</string>
+    <string name="releaseOthers">Tokollo yeo e sa Thekgwego</string>
+    <string name="btn_cancel">Khansela</string>
+    <string name="btn_save">Boloka</string>
+    <string name="file_saved">e bolokilwe</string>
+    <string name="title_open_file">Bula Faele</string>
+    <string name="title_delete_file">Phimola Faele</string>
+    <string name="file_deleted">e phumotšwe</string>
+    <string name="file_name">Leina la Faele</string>
+    <string name="title_save_file">Boloka Faele</string>
+    <string name="hid_version">Phetolelo:  %d</string>
+    <string-array name="modes">
+        <item>Thapo ya USB</item>
+        <item>Soketeng ya Neteweke</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Seisemane sa Amerika</item>
+        <item>Se-Turkey</item>
+        <item>Sesweden</item>
+        <item>Seslovenia</item>
+        <item>Se-Russia</item>
+        <item>Sepotokisi</item>
+        <item>Se-Norway</item>
+        <item>Setaliana</item>
+        <item>Secroatia sa Secroatia</item>
+        <item>United Kingdom Sesotho sa Leboa</item>
+        <item>Sefora</item>
+        <item>Sefinnishe</item>
+        <item>Sepeniši</item>
+        <item>Sedanishe</item>
+        <item>Sejeremane</item>
+        <item>Sefora sa Canada</item>
+        <item>Sepotokisi sa Brazil</item>
+        <item>Se-Belarus</item>
+        <item>Sehungary</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Letšatši</item>
+        <item>Bošego</item>
+    </string-array>
 </resources>

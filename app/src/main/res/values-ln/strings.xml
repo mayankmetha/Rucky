@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">OYO ELANDI</string>
+    <string name="init_skip">KOKIPE TE</string>
+    <string name="init_agree">KONDIMA</string>
+    <string name="init_start">HACK YA MBOKA</string>
+    <string name="slideDesc1">Bobongola appareil na bino na Rubber Ducky!</string>
+    <string name="slideTitle2">Câble USB</string>
+    <string name="slideDesc2">Interface filaire USB pona ko lancer attaque!</string>
+    <string name="slideTitle3">Socket ya Réseau</string>
+    <string name="slideDesc3">Ba interfaces ya socket basés na Wi-Fi pona ko lancer attaque via ba outils externes soutenus!</string>
+    <string name="slideTitle4">Koboya kozwa mokumba</string>
+    <string name="slideDesc4">Moto oyo azali kosalela programɛ yango nde azali na mokumba ya kobebisa yango. Entité mosusu te ekoki kozala responsable ya ba dégâts oyo esalemi na nzela ya app oyo! Meká kozala na bokɛngi ntango ozali kosalela programɛ yango mpe kosalela yango te mpo na kosala bato mosusu mabe!</string>
+    <string name="slideTitle5">Mibeko ya kobatela makambo ya moto ye moko</string>
+    <string name="slideDesc5">Ba Données ya forme moko te esangisi, esalelami pe etekamaka! Ba permissions mosusu oyo ekokaki kobimisa ba soucis ya vie privée esengami kaka pona fonctionnement ya certains fonctionnalités na app et ezali te pona ko ramasser ba données! Bomoto na yo ezali na limemya!</string>
+    <string name="slideTitle6">Ndingisa ya App</string>
+    <string name="slideDesc6">Svp bopesa app ndingisa oyo esengeli mpo na kosala!</string>
     <!-- Update screen -->
+    <string name="update_new">Mikolo oyo ya sika ezali Version:</string>
+    <string name="update_hash_error">Boyokani te ya Signature ya Dossier! Ekoki Kosala Mikolo Te.</string>
+    <string name="update_activity">Rucky Mikolo oyo</string>
+    <string name="update_version">Ya</string>
+    <string name="update_version_nightly">Version ya butu</string>
+    <string name="update_changelog">Mokanda ya mbongwana</string>
+    <string name="update_status">Mikolo oyo Ezalela</string>
+    <string name="update_action">Télécharger mpe Installer Mikolo oyo</string>
+    <string name="update_downloading">Kozwa Mikolo oyo</string>
+    <string name="install_update">Kosalela Mikolo oyo</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Olingi kobomba to kobima na programɛ yango?</string>
+    <string name="btn_exit">Kobima</string>
+    <string name="btn_back">Kobombana</string>
+    <string name="unlock">Débloquer App ya kosala</string>
+    <string name="auth">Ndimá bondimi ya kondimama</string>
+    <string name="update">Ya sika</string>
+    <string name="setting">Ba paramètres</string>
+    <string name="codeHint">Type to charger ba scripts ya ducky ya caoutchouc awa</string>
+    <string name="loadBtn">Kokotisa biloko</string>
+    <string name="saveBtn">Kobikisa</string>
+    <string name="delBtn">Boma</string>
+    <string name="runBtn">Kopota mbango</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Kokoba</string>
+    <string name="root_err">Accès Root Esengeli Pona Attaque Ya Câble USB!</string>
+    <string name="kernel_err">"Kernel esimbami te mpo na attaque ya câble USB!"</string>
+    <string name="vm">Environnement virtuel ezali soutenu te!</string>
     <!-- Config screen -->
+    <string name="config_activity">Ba tweaks</string>
+    <string name="config_status_usb_on">USB Ezali na boyokani</string>
+    <string name="config_status_usb_off">USB Ekabwani na boyokani</string>
+    <string name="config_status_net_on">Socket ya Réseau ekangami</string>
+    <string name="config_status_net_off">Prise ya Réseau Ekabwani</string>
+    <string name="socket_address">Tyá IP ya Socket mpe Addresse ya Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Bobombami ya Config</string>
+    <string name="hid_download">Kozwa</string>
+    <string name="hid_update">Ya sika</string>
+    <string name="hid_edit">Kokoma</string>
+    <string name="hid_delete">Boma</string>
     <!-- Keylist screen -->
+    <string name="key_title">Kombo ya ntina</string>
+    <string name="key_character">Moto ya ntina</string>
+    <string name="key_code">Code ya ntina</string>
+    <string name="key_ctrl">Ctrl Fungola</string>
+    <string name="key_alt">Alt Fungola</string>
+    <string name="key_shift">Fungola ya Shift</string>
+    <string name="key_meta">Meta Fungola</string>
+    <string name="keycode">Code ya ntina</string>
+    <string name="modcode">Code ya Modificateur</string>
+    <string name="key_details">Makambo ya ntina</string>
     <!-- Setting screen -->
+    <string name="setting_general">Mbala mingi</string>
+    <string name="dark_theme_title">Mode ya butu</string>
+    <string name="dark_theme_summary">Set thème ya molili</string>
+    <string name="device_admin_title">Sala app appareil propriétaire</string>
+    <string name="device_admin_summary">Mosisa Esengeli. Yango ezali mpo na koleka mwa bipekiseli oyo ezali na Android.</string>
+    <string name="hide_icon_title">Bomba/Desactiver Icône ya Lanceur</string>
+    <string name="hide_icon_summary">Benga na * .</string>
+    <string name="delete_dep_title">Longola App na esika na yango</string>
+    <string name="delete_dep_summary">Bopeto mpe bolongola app.</string>
+    <string name="settings_sec_title">Bobateli ya liboso</string>
+    <string name="settings_sec_desc">Activer encryption ya fichier script na blocage ya écran.</string>
+    <string name="setting_device">Paramètres ya Mode ya Attaque</string>
+    <string name="configfs_title">Auto Configère ya ConfigFS</string>
+    <string name="configfs_summary">Eko configurer HID na ba appareils oyo ConfigFS esungami. Ekoki kobuka paramètre ya USB.</string>
+    <string name="hid_choice_title">HID oyo ekoki ko personnaliser</string>
+    <string name="hid_choice_summary">Bobongola kati na HID ya kala mpe HID oyo ekoki kobongisama</string>
+    <string name="hid_title">HID Monoko</string>
+    <string name="hid_summary">Télécharger ba langues HID ya kobakisa to sala ba layouts ya sika ya HID.</string>
+    <string name="settings_usb_title">Lancement ya Connect USB</string>
+    <string name="settings_usb_desc">Bouton ya kosala eko lancer attaque tango USB ezali connecté.</string>
+    <string name="settings_net_title">Lancement ya Connexion ya Socket ya Réseau</string>
+    <string name="settings_net_desc">Bouton ya kosala eko lancer attaque tango Socket ya Réseau ekozala connecté.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Moto oyo azali kosala yango</string>
+    <string name="settings_version_title">Ya</string>
+    <string name="settings_arch_title">Architecture</string>
+    <string name="settings_lic_title">Licence ya kopesa ndingisa</string>
+    <string name="settings_support">Lisungi</string>
+    <string name="settings_git_title">Makambo ya GitHub</string>
+    <string name="settings_git_desc">Finá mpo na kobakisa makambo to bosengi ya makambo.</string>
+    <string name="settings_locale_title">Localisation ya esika</string>
+    <string name="settings_locale_desc">Contribuer na localisation ya app.</string>
+    <string name="release">Kokabola</string>
+    <string name="releaseNetHunter">NetHunter Magasin ya ba apps</string>
+    <string name="releaseGitHub">Bobimisi ya GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Butu na butu</string>
+    <string name="releaseTest">Bobimisi ya Debug</string>
+    <string name="releaseOthers">Bobimisi oyo esungami te</string>
+    <string name="btn_cancel">Kolongola</string>
+    <string name="btn_save">Kobikisa</string>
+    <string name="file_saved">ebikisami</string>
+    <string name="title_open_file">Fungola Fichier</string>
+    <string name="title_delete_file">Bolongola Fichier</string>
+    <string name="file_deleted">elongolami</string>
+    <string name="file_name">Kombo ya Fisyé</string>
+    <string name="title_save_file">Bomba Fisyé</string>
+    <string name="hid_version">Version: %d</string>
+    <string-array name="modes">
+        <item>Câble USB</item>
+        <item>Socket ya Réseau</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Lingelesi ya Amerika</item>
+        <item>Turquie</item>
+        <item>Suédois</item>
+        <item>Bato ya Slovénie</item>
+        <item>Moto ya Russie</item>
+        <item>Portugais</item>
+        <item>Moto ya Norvège</item>
+        <item>Italien</item>
+        <item>Moto ya Croatie</item>
+        <item>Royaume-Uni Lingala</item>
+        <item>Lifalanse</item>
+        <item>Finnois</item>
+        <item>Espagnole</item>
+        <item>Danois</item>
+        <item>Allemand</item>
+        <item>Lifalanse ya Canada</item>
+        <item>Portugais ya Brésil</item>
+        <item>Moto ya Biélorussie</item>
+        <item>Moto ya Hongrie</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Mokolo</item>
+        <item>Butu</item>
+    </string-array>
 </resources>

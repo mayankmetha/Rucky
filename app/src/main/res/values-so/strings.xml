@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">Xiga</string>
+    <string name="init_skip">GUDUB</string>
+    <string name="init_agree">HESHIISKA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">U rog qalabkaaga caag ducky ah!</string>
+    <string name="slideTitle2">Cable USB</string>
+    <string name="slideDesc2">Interface-ka fiilo USB-ga ah si loo bilaabo weerarka!</string>
+    <string name="slideTitle3">Shabakadda Socket</string>
+    <string name="slideDesc3">Wi-Fi-ku-saldhigyada godadka ku salaysan ee weerarka lagu qaadayo agab dibadda ah oo la taageeray!</string>
+    <string name="slideTitle4">Afeef</string>
+    <string name="slideDesc4">Isticmaalaha abka ayaa kaligii mas\'uul ka ah waxyeelada uu geystay Ma jirto cid kale oo mas\'uul ka noqon karta waxyeelada loo geystay abkan! Ku celceli taxaddar markaad isticmaalayso app-ka oo ha u isticmaalin tan si aad waxyeelo u gaadhsiiso dadka kale!</string>
+    <string name="slideTitle5">Qaanuunka Arrimaha Khaaska ah</string>
+    <string name="slideDesc5">Wax xog ah oo foom ah lama ururiyo, la isticmaalo oo la iibiyo! Qaar ka mid ah oggolaanshaha kuwaas oo kor u qaadi kara walaacyada gaarka ah ayaa kaliya la waydiistaa shaqada sifooyinka qaarkood ee abka mana aha in la ururiyo xogta! Qarsoodigaaga waa la ixtiraamaa!</string>
+    <string name="slideTitle6">Oggolaanshaha App</string>
+    <string name="slideDesc6">Fadlan sii app-ka ogolaanshaha loo baahan yahay si uu u shaqeeyo!</string>
     <!-- Update screen -->
+    <string name="update_new">Cusboonaysiinta Cusub ee La Heli karo:</string>
+    <string name="update_hash_error">Saxeexa Faylka Ismaqqdin! Lama cusbooneysiin karo</string>
+    <string name="update_activity">Cusbooneysii Rucky</string>
+    <string name="update_version">Nooca</string>
+    <string name="update_version_nightly">Nooca Habeenka</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Cusbooneysii Xaaladda</string>
+    <string name="update_action">Soo deji oo ku rakib Cusbooneysii</string>
+    <string name="update_downloading">Soo dejinta Cusbooneysii</string>
+    <string name="install_update">Codsashada Cusboonaysiinta</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ma jeclaan lahayd inaad qariso ama ka baxdo abka?</string>
+    <string name="btn_exit">Ka bax</string>
+    <string name="btn_back">Qari</string>
+    <string name="unlock">Fur App</string>
+    <string name="auth">Xaqiiji xaqiijinta</string>
+    <string name="update">Cusbooneysii</string>
+    <string name="setting">Dejinta</string>
+    <string name="codeHint">Halkan ku qor ama ku shub qoraalada caagga ah ee ducky</string>
+    <string name="loadBtn">raran</string>
+    <string name="saveBtn">Badbaadin</string>
+    <string name="delBtn">Tirtir</string>
+    <string name="runBtn">Orod</string>
+    <string name="confBtn">Isku xidh</string>
+    <string name="btn_continue">Sii wad</string>
+    <string name="root_err">Helitaanka Xididka Ayaa Looga Baahan Yahay Weerarka Cable-ka USB!</string>
+    <string name="kernel_err">"Kernel Looma Taageero Weerarka Cable USB!"</string>
+    <string name="vm">Deegaanka dhabta ah lama taageero!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB ku xiran</string>
+    <string name="config_status_usb_off">USB ayaa go\'ay</string>
+    <string name="config_status_net_on">Shabakadda Socket ku xidhan</string>
+    <string name="config_status_net_off">Shabakadda Socket-ka ayaa go\'ay</string>
+    <string name="socket_address">Geli Socket IP iyo cinwaanka Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Download</string>
+    <string name="hid_update">Cusbooneysii</string>
+    <string name="hid_edit">Wax ka beddel</string>
+    <string name="hid_delete">Tirtir</string>
     <!-- Keylist screen -->
+    <string name="key_title">Magaca Furaha</string>
+    <string name="key_character">Dabeecada Furaha</string>
+    <string name="key_code">Furaha Koodhka</string>
+    <string name="key_ctrl">Ctrl Furaha</string>
+    <string name="key_alt">Furaha Alt</string>
+    <string name="key_shift">Furaha Shift</string>
+    <string name="key_meta">Furaha Meta</string>
+    <string name="keycode">Furaha Koodhka</string>
+    <string name="modcode">Koodhka wax ka beddelka</string>
+    <string name="key_details">Faahfaahinta Muhiimka ah</string>
     <!-- Setting screen -->
+    <string name="setting_general">Guud ahaan</string>
+    <string name="dark_theme_title">Habka Habeenka</string>
+    <string name="dark_theme_summary">Deji mawduuc madow</string>
+    <string name="device_admin_title">Samee milkiilaha abka</string>
+    <string name="device_admin_summary">Xidid Loo Baahan Yahay. Tani waa in laga gudbo qaar ka mid ah xannibaadaha Android.</string>
+    <string name="hide_icon_title">Qari/Dami Astaanta Launcher</string>
+    <string name="hide_icon_summary">garaac *</string>
+    <string name="delete_dep_title">Uninstall App</string>
+    <string name="delete_dep_summary">Nadiifi oo ka saar abka</string>
+    <string name="settings_sec_title">Amniga Hore</string>
+    <string name="settings_sec_desc">Daar sirta faylka qoraalka iyo qufulka shaashadda.</string>
+    <string name="setting_device">Dejinta Habka Weerarka</string>
+    <string name="configfs_title">Si otomaatig ah u habee ConfigFS</string>
+    <string name="configfs_summary">Waxay ku habeyn doontaa HID aaladaha ay taageerto ConfigFS. Waxa laga yaabaa inuu jabiyo dejinta USB</string>
+    <string name="hid_choice_title">HID la beddeli karo</string>
+    <string name="hid_choice_summary">U beddelo HID Legacy iyo HID la beddeli karo</string>
+    <string name="hid_title">Luuqadda HID</string>
+    <string name="hid_summary">Soo deji luqado dheeraad ah oo HID ah ama naqshadee qaabab cusub oo HID ah.</string>
+    <string name="settings_usb_title">Daahfurka isku xirka USB</string>
+    <string name="settings_usb_desc">Run badhanka wuxuu bilaabi doonaa weerar marka USB la xiro.</string>
+    <string name="settings_net_title">Daahfurka Xidhiidhka Socket Network</string>
+    <string name="settings_net_desc">Badhanka orod waxa uu bilaabi doona weerarka marka Network Socket la xidho.</string>
+    <string name="setting_about">Xog</string>
+    <string name="setting_developer_title">Horumariye</string>
+    <string name="settings_version_title">Nooca</string>
+    <string name="settings_arch_title">Dhismaha</string>
+    <string name="settings_lic_title">Shatiga</string>
+    <string name="settings_support">Taageero</string>
+    <string name="settings_git_title">Arrimaha GitHub</string>
+    <string name="settings_git_desc">Guji si aad ugu darto arimaha ama codsiga sifada</string>
+    <string name="settings_locale_title">Degenaansho</string>
+    <string name="settings_locale_desc">Wax ku darso meelaynta abka</string>
+    <string name="release">Qaybinta</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Siidaynta GitHub</string>
+    <string name="releaseGitHubNightly">Habeenka GitHub</string>
+    <string name="releaseTest">Siidaynta khaladka</string>
+    <string name="releaseOthers">Siidaynta Aan La Taageerin</string>
+    <string name="btn_cancel">Jooji</string>
+    <string name="btn_save">Badbaadin</string>
+    <string name="file_saved">badbaadiyey</string>
+    <string name="title_open_file">Fur faylka</string>
+    <string name="title_delete_file">Tirtir Faylka</string>
+    <string name="file_deleted">tirtiray</string>
+    <string name="file_name">Magaca faylka</string>
+    <string name="title_save_file">Kaydi faylka</string>
+    <string name="hid_version">Nooca: %d</string>
+    <string-array name="modes">
+        <item>Cable USB</item>
+        <item>Shabakadda Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Ingiriisi Maraykan ah</item>
+        <item>Turki</item>
+        <item>Iswidish</item>
+        <item>Islovenian</item>
+        <item>Ruush</item>
+        <item>Boortaqiis</item>
+        <item>Noorwiiji</item>
+        <item>Talyaani</item>
+        <item>Croatian</item>
+        <item>Ingiriiska Ingiriiska</item>
+        <item>Faransiis</item>
+        <item>Finnish</item>
+        <item>Isbaanish</item>
+        <item>Danish</item>
+        <item>Jarmal</item>
+        <item>Faransiiska Canadian</item>
+        <item>Boortaqiiskii Brazil</item>
+        <item>Belarusiyaanka</item>
+        <item>Hungarian</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Baabuur</item>
+        <item>Maalinta</item>
+        <item>Habeenkii</item>
+    </string-array>
 </resources>

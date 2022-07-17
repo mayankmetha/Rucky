@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ඊළඟ</string>
+    <string name="init_skip">මඟ හරින්න</string>
+    <string name="init_agree">එකඟයි</string>
+    <string name="init_start">හැක් කරන්න</string>
+    <string name="slideDesc1">ඔබගේ උපාංගය රබර් තාරාවෙකු බවට පත් කරන්න!</string>
+    <string name="slideTitle2">USB කේබලය</string>
+    <string name="slideDesc2">ප්රහාරය දියත් කිරීම සඳහා USB රැහැන් අතුරු මුහුණත!</string>
+    <string name="slideTitle3">ජාල සොකට්</string>
+    <string name="slideDesc3">සහාය දක්වන බාහිර මෙවලම් හරහා ප්‍රහාරය දියත් කිරීම සඳහා Wi-Fi පදනම් වූ සොකට් අතුරුමුහුණත්!</string>
+    <string name="slideTitle4">වියාචනය</string>
+    <string name="slideDesc4">යෙදුමේ පරිශීලකයා සිදු වූ හානිය සඳහා සම්පූර්ණයෙන්ම වගකිව යුතුය. මෙම යෙදුම භාවිතයෙන් සිදුවන හානි සඳහා වෙනත් කිසිදු ආයතනයකට වගකියනු නොලැබේ! යෙදුම භාවිතා කිරීමේදී ප්‍රවේශම් වන්න සහ අන් අයට හානියක් කිරීමට මෙය භාවිතා නොකරන්න!</string>
+    <string name="slideTitle5">රහස්යතා ප්රතිපත්තිය</string>
+    <string name="slideDesc5">කිසිදු ආකාරයක දත්ත රැස් කිරීම, භාවිතා කිරීම සහ විකිණීම සිදු නොකෙරේ! පුද්ගලිකත්ව ගැටළු මතු කළ හැකි සමහර අවසරයන් ඉල්ලා සිටින්නේ යෙදුමේ ඇතැම් විශේෂාංග ක්‍රියා කිරීම සඳහා පමණක් වන අතර එය දත්ත රැස් කිරීමට නොවේ! ඔබේ පෞද්ගලිකත්වයට ගරු කරනු ලැබේ!</string>
+    <string name="slideTitle6">යෙදුම් අවසරය</string>
+    <string name="slideDesc6">කරුණාකර යෙදුමට වැඩ කිරීමට අවශ්‍ය අවසරය ලබා දෙන්න!</string>
     <!-- Update screen -->
+    <string name="update_new">නව යාවත්කාලීන ලබා ගත හැකි අනුවාදය:</string>
+    <string name="update_hash_error">ගොනු අත්සන නොගැලපේ! යාවත්කාලීන කළ නොහැක.</string>
+    <string name="update_activity">රකී යාවත්කාලීන කිරීම</string>
+    <string name="update_version">පිටපත</string>
+    <string name="update_version_nightly">රාත්රී අනුවාදය</string>
+    <string name="update_changelog">චේන්ජ්ලොග්</string>
+    <string name="update_status">තත්ත්වය යාවත්කාලීන කරන්න</string>
+    <string name="update_action">යාවත්කාලීන බාගත කර ස්ථාපනය කරන්න</string>
+    <string name="update_downloading">යාවත්කාලීන බාගත කිරීම</string>
+    <string name="install_update">යාවත්කාලීන අයදුම් කිරීම</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ඔබ යෙදුමෙන් සැඟවීමට හෝ පිටවීමට කැමතිද?</string>
+    <string name="btn_exit">පිටවීම</string>
+    <string name="btn_back">සඟවන්න</string>
+    <string name="unlock">යෙදුම අගුළු හරින්න</string>
+    <string name="auth">සත්‍යාපනය තහවුරු කරන්න</string>
+    <string name="update">යාවත්කාලීන කරන්න</string>
+    <string name="setting">සැකසුම්</string>
+    <string name="codeHint">මෙහි රබර් තාරා ස්ක්‍රිප්ට් ටයිප් කරන්න හෝ පූරණය කරන්න</string>
+    <string name="loadBtn">පැටවීම</string>
+    <string name="saveBtn">සුරකින්න</string>
+    <string name="delBtn">මකන්න</string>
+    <string name="runBtn">දුවන්න</string>
+    <string name="confBtn">වින්යාසය</string>
+    <string name="btn_continue">දිගටම කරගෙන යන්න</string>
+    <string name="root_err">USB කේබල් ප්‍රහාරය සඳහා මූල ප්‍රවේශය අවශ්‍යයි!</string>
+    <string name="kernel_err">"USB කේබල් ප්‍රහාරය සඳහා කර්නලය සහාය නොදක්වයි!"</string>
+    <string name="vm">අතථ්‍ය පරිසරයට සහය නොදක්වයි!</string>
     <!-- Config screen -->
+    <string name="config_activity">tweaks</string>
+    <string name="config_status_usb_on">USB සම්බන්ධ කර ඇත</string>
+    <string name="config_status_usb_off">USB විසන්ධි විය</string>
+    <string name="config_status_net_on">ජාල සොකට් සම්බන්ධ කර ඇත</string>
+    <string name="config_status_net_off">ජාල සොකට් විසන්ධි විය</string>
+    <string name="socket_address">Socket IP සහ Port Address ඇතුලත් කරන්න</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID වින්‍යාසය</string>
+    <string name="hid_download">බාගත</string>
+    <string name="hid_update">යාවත්කාලීන කරන්න</string>
+    <string name="hid_edit">සංස්කරණය කරන්න</string>
+    <string name="hid_delete">මකන්න</string>
     <!-- Keylist screen -->
+    <string name="key_title">ප්රධාන නම</string>
+    <string name="key_character">ප්රධාන චරිතය</string>
+    <string name="key_code">ප්රධාන කේතය</string>
+    <string name="key_ctrl">Ctrl යතුර</string>
+    <string name="key_alt">Alt යතුර</string>
+    <string name="key_shift">Shift යතුර</string>
+    <string name="key_meta">මෙටා යතුර</string>
+    <string name="keycode">ප්රධාන කේතය</string>
+    <string name="modcode">විකරණය කිරීමේ කේතය</string>
+    <string name="key_details">ප්රධාන විස්තර</string>
     <!-- Setting screen -->
+    <string name="setting_general">ජනරාල්</string>
+    <string name="dark_theme_title">රාත්රී මාදිලිය</string>
+    <string name="dark_theme_summary">අඳුරු තේමාව සකසන්න</string>
+    <string name="device_admin_title">යෙදුම් උපාංග හිමිකරු කරන්න</string>
+    <string name="device_admin_summary">Root අවශ්යයි. මෙය ඇන්ඩ්‍රොයිඩ් හි සමහර සීමාවන් මඟ හැරීමයි.</string>
+    <string name="hide_icon_title">Launcher Icon සඟවන්න/අබල කරන්න</string>
+    <string name="hide_icon_summary">අමතන්න *</string>
+    <string name="delete_dep_title">යෙදුම අස්ථාපනය කරන්න</string>
+    <string name="delete_dep_summary">යෙදුම පිරිසිදු කර අස්ථාපනය කරන්න.</string>
+    <string name="settings_sec_title">අත්තිකාරම් ආරක්ෂාව</string>
+    <string name="settings_sec_desc">ස්ක්‍රිප්ට් ගොනු සංකේතනය සහ තිර අගුල සබල කරන්න.</string>
+    <string name="setting_device">ප්රහාරක මාදිලියේ සැකසුම්</string>
+    <string name="configfs_title">configFS ස්වයංක්‍රීයව වින්‍යාස කරන්න</string>
+    <string name="configfs_summary">ConfigFS සහාය දක්වන උපාංග මත HID වින්‍යාස කරනු ඇත. USB සැකසුම බිඳ දැමිය හැක.</string>
+    <string name="hid_choice_title">අභිරුචිකරණය කළ හැකි HID</string>
+    <string name="hid_choice_summary">Legacy HID සහ Customisable HID අතර මාරු වන්න</string>
+    <string name="hid_title">HID භාෂාව</string>
+    <string name="hid_summary">අතිරේක HID භාෂා බාගන්න හෝ නව HID පිරිසැලසුම් සැලසුම් කරන්න.</string>
+    <string name="settings_usb_title">USB සම්බන්ධක දියත් කිරීම</string>
+    <string name="settings_usb_desc">USB සම්බන්ධ වූ විට ධාවන බොත්තම ප්‍රහාරය දියත් කරයි.</string>
+    <string name="settings_net_title">Network Socket Connect දියත් කිරීම</string>
+    <string name="settings_net_desc">ජාල සොකට් සම්බන්ධ වූ විට ධාවන බොත්තම ප්‍රහාරය දියත් කරයි.</string>
+    <string name="setting_about">තොරතුරු</string>
+    <string name="setting_developer_title">සංවර්ධකයා</string>
+    <string name="settings_version_title">පිටපත</string>
+    <string name="settings_arch_title">නිර්මාණ ශිල්පය</string>
+    <string name="settings_lic_title">බලපත්රය</string>
+    <string name="settings_support">සහාය</string>
+    <string name="settings_git_title">GitHub ගැටළු</string>
+    <string name="settings_git_desc">ගැටළු හෝ විශේෂාංග ඉල්ලීම එක් කිරීමට ක්ලික් කරන්න.</string>
+    <string name="settings_locale_title">ප්රාදේශීයකරණය</string>
+    <string name="settings_locale_desc">යෙදුම් ප්‍රාදේශීයකරණයට දායක වන්න.</string>
+    <string name="release">බෙදා හැරීම</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub නිකුතුව</string>
+    <string name="releaseGitHubNightly">GitHub රාත්‍රිය</string>
+    <string name="releaseTest">නිදොස්කරණය නිකුතුව</string>
+    <string name="releaseOthers">සහාය නොදක්වන මුදා හැරීම</string>
+    <string name="btn_cancel">අවලංගු කරන්න</string>
+    <string name="btn_save">සුරකින්න</string>
+    <string name="file_saved">ගැලෙව්වා</string>
+    <string name="title_open_file">ගොනුව අරින්න</string>
+    <string name="title_delete_file">ගොනුව මකා</string>
+    <string name="file_deleted">මකා දමන ලදී</string>
+    <string name="file_name">ගොනුවේ නම</string>
+    <string name="title_save_file">ගොනුව සුරකින්න</string>
+    <string name="hid_version">අනුවාදය: %d</string>
+    <string-array name="modes">
+        <item>USB කේබලය</item>
+        <item>ජාල සොකට්</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>ඇමරිකානු ඉංග්රීසි</item>
+        <item>තුර්කි</item>
+        <item>ස්වීඩන්</item>
+        <item>ස්ලෝවේනියානු</item>
+        <item>රුසියානු</item>
+        <item>පෘතුගීසි</item>
+        <item>නෝර්වීජියානු</item>
+        <item>ඉතාලි</item>
+        <item>ක්රොඒෂියානු</item>
+        <item>එක්සත් රාජධානිය ඉංග්රීසි</item>
+        <item>ප්රංශ</item>
+        <item>ෆින්ලන්ත</item>
+        <item>ස්පාඤ්ඤ</item>
+        <item>ඩෙන්මාර්ක</item>
+        <item>ජර්මානු</item>
+        <item>කැනේඩියානු ප්රංශ</item>
+        <item>බ්රසීලියානු පෘතුගීසි</item>
+        <item>බෙලරුසියානු</item>
+        <item>හංගේරියානු</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ඔටෝ</item>
+        <item>දින</item>
+        <item>රෑ</item>
+    </string-array>
 </resources>

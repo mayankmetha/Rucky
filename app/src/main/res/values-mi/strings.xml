@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">KAUPAPA</string>
+    <string name="init_skip">HUKU</string>
+    <string name="init_agree">Whakaae</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Hurihia to taputapu ki te Rubber Ducky!</string>
+    <string name="slideTitle2">Tauira USB</string>
+    <string name="slideDesc2">Atanga waea USB mo te whakarewa i te whakaeke!</string>
+    <string name="slideTitle3">Putunga Whatunga</string>
+    <string name="slideDesc3">Nga atanga turanga Wi-Fi mo te whakarewa i te whakaeke ma nga taputapu o waho e tautokohia ana!</string>
+    <string name="slideTitle4">Whakakahoretanga</string>
+    <string name="slideDesc4">Ko te Kaiwhakamahi o te taupānga anake te kawenga mo nga pakaru i puta. Karekau he hinonga kee e ahei te mau mo nga kino i mahia ma te whakamahi i tenei taupānga! Kia tupato i te wa e whakamahi ana i te taupānga, kaua hoki e whakamahi hei whakararu i etahi atu!</string>
+    <string name="slideTitle5">Kaupapahere Tūmataiti</string>
+    <string name="slideDesc5">Kaore he Raraunga o tetahi ahua ka kohia, ka whakamahia, ka hokona! Ko etahi whakaaetanga ka puta ake he awangawanga mo te noho muna ka tonohia mo te mahi o etahi ahuatanga kei roto i te taupānga, kaua ko te kohi raraunga! Ka whakanuia to tūmataiti!</string>
+    <string name="slideTitle6">Whakaaetanga Taupānga</string>
+    <string name="slideDesc6">Tena koa tukuna mai te whakaaetanga e hiahiatia ana kia mahi!</string>
     <!-- Update screen -->
+    <string name="update_new">Whakahōu Hōu Putanga Wātea:</string>
+    <string name="update_hash_error">Waitohu Kōnae Hererite! Kāore e taea te whakahōu.</string>
+    <string name="update_activity">Rucky Whakahou</string>
+    <string name="update_version">Putanga</string>
+    <string name="update_version_nightly">Putanga Po</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Whakahōu Tūnga</string>
+    <string name="update_action">Tikiake me te Tāuta Whakahōu</string>
+    <string name="update_downloading">Tikiake ana i te Whakahōu</string>
+    <string name="install_update">Te tono Whakahoutanga</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Kei te pirangi koe ki te huna, ki te puta ranei i te taupānga?</string>
+    <string name="btn_exit">Putaatu</string>
+    <string name="btn_back">Huna</string>
+    <string name="unlock">Wewete App</string>
+    <string name="auth">Whakaū motuhēhēnga</string>
+    <string name="update">Whakahou</string>
+    <string name="setting">Tautuhinga</string>
+    <string name="codeHint">Patohia, utaina ranei nga tuhinga rapa parera ki konei</string>
+    <string name="loadBtn">Utaina</string>
+    <string name="saveBtn">Tiaki</string>
+    <string name="delBtn">Mukua</string>
+    <string name="runBtn">Rere</string>
+    <string name="confBtn">Whirihora</string>
+    <string name="btn_continue">Haere tonu</string>
+    <string name="root_err">E hiahiatia ana te uru pakiaka mo te whakaeke i te taura USB!</string>
+    <string name="kernel_err">"Kaore i te tautokona te Kernel mo te whakaeke taura USB!"</string>
+    <string name="vm">Kaore i te tautokohia te taiao mariko!</string>
     <!-- Config screen -->
+    <string name="config_activity">Takawiri</string>
+    <string name="config_status_usb_on">USB Honoa</string>
+    <string name="config_status_usb_off">USB Momotu</string>
+    <string name="config_status_net_on">Tuhono Whatunga</string>
+    <string name="config_status_net_off">Kua Momotuhia te Waea Whatunga</string>
+    <string name="socket_address">Whakauruhia te IP Socket me te Wāhitau Tauranga</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Whirihora</string>
+    <string name="hid_download">Tikiake</string>
+    <string name="hid_update">Whakahou</string>
+    <string name="hid_edit">Whakatikatika</string>
+    <string name="hid_delete">Mukua</string>
     <!-- Keylist screen -->
+    <string name="key_title">Ingoa Matua</string>
+    <string name="key_character">Pūāhua Matua</string>
+    <string name="key_code">Waehere Matua</string>
+    <string name="key_ctrl">Kī Ctrl</string>
+    <string name="key_alt">Kī Alt</string>
+    <string name="key_shift">Kī Neke</string>
+    <string name="key_meta">Kī Meta</string>
+    <string name="keycode">Waehere Matua</string>
+    <string name="modcode">Waehere Whakarerekē</string>
+    <string name="key_details">Nga korero matua</string>
     <!-- Setting screen -->
+    <string name="setting_general">Whānui</string>
+    <string name="dark_theme_title">Aratau Po</string>
+    <string name="dark_theme_summary">Tautuhi kaupapa pouri</string>
+    <string name="device_admin_title">Hangaia te kaipupuri taputapu taupānga</string>
+    <string name="device_admin_summary">E hiahiatia ana te Root. Ko tenei ki te karo i etahi o nga here i runga i te Android.</string>
+    <string name="hide_icon_title">Huna/Monohia te Tohu Whakarewa</string>
+    <string name="hide_icon_summary">Waea *</string>
+    <string name="delete_dep_title">Wetetāuta App</string>
+    <string name="delete_dep_summary">Whakapai me te tango i te taupānga.</string>
+    <string name="settings_sec_title">Haumarutanga whakamua</string>
+    <string name="settings_sec_desc">Whakahohea te whakamunatanga konae tuhinga me te maukati mata.</string>
+    <string name="setting_device">Tautuhinga Aratau Whakaeke</string>
+    <string name="configfs_title">Whirihora Aunoa ConfigFS</string>
+    <string name="configfs_summary">Ka whirihora HID i runga i nga taputapu tautoko a ConfigFS. Ka pakaru te tautuhinga USB.</string>
+    <string name="hid_choice_title">HID Whakaritea</string>
+    <string name="hid_choice_summary">Hurihia i waenga i te HID tuku iho me te HID Whakaritea</string>
+    <string name="hid_title">Reo HID</string>
+    <string name="hid_summary">Tangohia etahi atu reo HID, hoahoa ranei i nga whakatakotoranga HID hou.</string>
+    <string name="settings_usb_title">Whakarewa USB Hono</string>
+    <string name="settings_usb_desc">Ko te paatene Whakahaere ka whakarewahia te whakaeke ina hono ana te USB.</string>
+    <string name="settings_net_title">Whakarewa Whatunga Hononga Hononga</string>
+    <string name="settings_net_desc">Ka whakarewahia e te patene oma te whakaeke ina hono ana te Tupapa Whatunga.</string>
+    <string name="setting_about">Nga korero</string>
+    <string name="setting_developer_title">Kaihanga</string>
+    <string name="settings_version_title">Putanga</string>
+    <string name="settings_arch_title">Hangahanga</string>
+    <string name="settings_lic_title">Raihana</string>
+    <string name="settings_support">Tautoko</string>
+    <string name="settings_git_title">Nga Take a GitHub</string>
+    <string name="settings_git_desc">Pāwhiri ki te tāpiri take, tono āhuatanga ranei.</string>
+    <string name="settings_locale_title">Whakatakinga</string>
+    <string name="settings_locale_desc">Toha ki te whakawhiwhinga taupānga.</string>
+    <string name="release">Tohanga</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Tukunga GitHub</string>
+    <string name="releaseGitHubNightly">GitHub ia po</string>
+    <string name="releaseTest">Tuku Patuiro</string>
+    <string name="releaseOthers">Kore Tautoko Tuku</string>
+    <string name="btn_cancel">Whakakore</string>
+    <string name="btn_save">Tiaki</string>
+    <string name="file_saved">kua ora</string>
+    <string name="title_open_file">Whakatuwhera Kōnae</string>
+    <string name="title_delete_file">Muku Kōnae</string>
+    <string name="file_deleted">kua mukua</string>
+    <string name="file_name">Ingoa Kōnae</string>
+    <string name="title_save_file">Tiaki Kōnae</string>
+    <string name="hid_version">Putanga: %d</string>
+    <string-array name="modes">
+        <item>Tauira USB</item>
+        <item>Putunga Whatunga</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turiki</item>
+        <item>Huitene</item>
+        <item>Slovenian</item>
+        <item>Ruhia</item>
+        <item>Potiti</item>
+        <item>Norewai</item>
+        <item>Itariana</item>
+        <item>Koroatiana</item>
+        <item>United Kingdom English</item>
+        <item>Wīwī</item>
+        <item>Finnish</item>
+        <item>Paniora</item>
+        <item>Teniana</item>
+        <item>Tiamana</item>
+        <item>French French</item>
+        <item>Potiti Brazilia</item>
+        <item>Belarusian</item>
+        <item>Hungarian</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Aunoa</item>
+        <item>Ra</item>
+        <item>Po</item>
+    </string-array>
 </resources>

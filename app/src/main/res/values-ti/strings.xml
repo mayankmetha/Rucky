@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ቀፃሊ</string>
+    <string name="init_skip">ዝለል</string>
+    <string name="init_agree">ተስማዕማዕ</string>
+    <string name="init_start">HACK ዝብል ጽሑፍ ኣሎ።</string>
+    <string name="slideDesc1">መሳርሒኻ ናብ ላስቲክ ዳኪ ቀይሮ!</string>
+    <string name="slideTitle2">USB ገመድ</string>
+    <string name="slideDesc2">መጥቃዕቲ ንምጅማር ዝሕግዝ USB ገመድ ዘለዎ መተሓላለፊ!</string>
+    <string name="slideTitle3">ኔትወርክ ሶኬት</string>
+    <string name="slideDesc3">ብመንገዲ ዝድገፉ ናይ ደገ መሳርሒታት መጥቃዕቲ ንምጅማር ዝሕግዙ ዋይ-ፋይ ዝተመርኮሱ ሶኬት መተሓላለፍቲ!</string>
+    <string name="slideTitle4">ሓላፍነት ምውሳድ</string>
+    <string name="slideDesc4">ተጠቃሚ ናይቲ ኣፕ ንዝበጽሖ ጉድኣት ተሓታቲ ጥራይ እዩ። ነዚ ኣፕ ተጠቒሙ ንዝበፅሕ ጉድኣት ካልእ ኣካል ተሓታቲ ክኸውን ኣይኽእልን! ነቲ ኣፕ ክትጥቀመሉ ከለኻ ጥንቃቐ ተለማመድ እሞ ነዚ ኣብ ልዕሊ ካልኦት ጉድኣት ከተብጽሕ ኣይትጠቐመሉ!</string>
+    <string name="slideTitle5">ፖሊሲ ውልቃዊ ሓበሬታ</string>
+    <string name="slideDesc5">ዝኾነ ይኹን መልክዕ ዘለዎ Data ኣይእከብን ኣብ ጥቕሚ ኣይውዕልን ኣይሽየጥን! ገለ ፍቓዳት ስክፍታታት ብሕታዊነት ከልዕል ዝኽእል ንኣሰራርሓ ዝተወሰኑ ባህርያት ኣብቲ ኣፕ ጥራይ እዩ ዝሕተት እምበር ዳታ ንምእካብ ኣይኮነን! ብሕትውናኻ ይኽበር!</string>
+    <string name="slideTitle6">ፍቓድ ኣፕ</string>
+    <string name="slideDesc6">በጃኹም ንኣፕ ንኽሰርሕ ዘድሊ ፍቓድ ሃቡ!</string>
     <!-- Update screen -->
+    <string name="update_new">ሓድሽ እዋናዊ ሓበሬታ ኣሎ ስሪት:</string>
+    <string name="update_hash_error">ፋይል ፊርማ ዘይምስምማዕ! Update ኣይከኣልን እዩ።</string>
+    <string name="update_activity">ሩኪ ኣፕዴት</string>
+    <string name="update_version">ሕታም</string>
+    <string name="update_version_nightly">ናይ ለይቲ ቅዳሕ</string>
+    <string name="update_changelog">ለውጢ ምዝገባ</string>
+    <string name="update_status">ኩነታት ምዕባለ</string>
+    <string name="update_action">Update ኣውሪድካ ምትካል</string>
+    <string name="update_downloading">ዳውንሎድ ምግባር Update</string>
+    <string name="install_update">ኣፕዴት ምትግባር</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ካብቲ ኣፕ ክትሓብእ ወይ ክትወጽእ ትደሊ ዲኻ?</string>
+    <string name="btn_exit">መውፅኢ</string>
+    <string name="btn_back">ተሓባእ</string>
+    <string name="unlock">App ምኽፋት</string>
+    <string name="auth">ምርግጋጽ ምርግጋጽ ኣረጋግጽ</string>
+    <string name="update">ኣዘምን</string>
+    <string name="setting">ቅጥዕታት</string>
+    <string name="codeHint">ኣብዚ ናይ ጎማ ኣንጭዋ ስክሪፕት ጽሓፍ ወይ ጽዓን።</string>
+    <string name="loadBtn">ጽዕነት</string>
+    <string name="saveBtn">ምቑጣብ</string>
+    <string name="delBtn">ምድምሳስ</string>
+    <string name="runBtn">ጉየ</string>
+    <string name="confBtn">ምውቃር</string>
+    <string name="btn_continue">ቀፃሊ</string>
+    <string name="root_err">ንመጥቃዕቲ USB Cable Root Access የድሊ!</string>
+    <string name="kernel_err">"ከርነል ንመጥቃዕቲ USB ገመድ ኣይድገፍን!"</string>
+    <string name="vm">ቨርቹዋል ሃዋህው ኣይድገፍን እዩ!</string>
     <!-- Config screen -->
+    <string name="config_activity">ትዊክስ ይገብር</string>
+    <string name="config_status_usb_on">USB ተተሓሒዙ ኣሎ።</string>
+    <string name="config_status_usb_off">USB ተቛሪጹ ኣሎ።</string>
+    <string name="config_status_net_on">ኔትወርክ ሶኬት ተተሓሒዙ</string>
+    <string name="config_status_net_off">ኔትወርክ ሶኬት ተቛሪጹ</string>
+    <string name="socket_address">ሶኬት IPን ፖርት ኣድራሻን ኣእትዉ</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config ዝብል ጽሑፍ ኣሎ።</string>
+    <string name="hid_download">ምውራድ</string>
+    <string name="hid_update">ኣዘምን</string>
+    <string name="hid_edit">ምዕራይ</string>
+    <string name="hid_delete">ምድምሳስ</string>
     <!-- Keylist screen -->
+    <string name="key_title">ቁልፊ ስም</string>
+    <string name="key_character">ቁልፊ ገጸ ባህሪ</string>
+    <string name="key_code">ቁልፊ ኮድ</string>
+    <string name="key_ctrl">Ctrl መፍትሕ</string>
+    <string name="key_alt">ኣልት ኪይ</string>
+    <string name="key_shift">ሽፍት መፍትሕ</string>
+    <string name="key_meta">ሜታ ቁልፊ</string>
+    <string name="keycode">ቁልፊ ኮድ</string>
+    <string name="modcode">መቐየሪ ኮድ</string>
+    <string name="key_details">ቁልፊ ዝርዝራት</string>
     <!-- Setting screen -->
+    <string name="setting_general">ሓፈሻዊ</string>
+    <string name="dark_theme_title">ናይ ለይቲ ሞድ</string>
+    <string name="dark_theme_summary">ጸሊም ቴማ ኣቐምጥ</string>
+    <string name="device_admin_title">ወናኒ መሳርሒ ኣፕ ግበሮ</string>
+    <string name="device_admin_summary">ሱር የድሊ። እዚ ድማ ገለ ካብቲ ኣብ ኣንድሮይድ ዘሎ ገደባት ንምሕላፍ እዩ።</string>
+    <string name="hide_icon_title">ምልክት ላንቸር ምሕባእ/ምዕጻው</string>
+    <string name="hide_icon_summary">* ምድዋል ።</string>
+    <string name="delete_dep_title">App ምእላይ</string>
+    <string name="delete_dep_summary">ኣፕ ምጽራይን ምእላይን።</string>
+    <string name="settings_sec_title">ኣድቫንስ ሴኩሪቲ</string>
+    <string name="settings_sec_desc">ስክሪፕት ፋይል ኢንክሪፕሽንን ስክሪን ሎክን ኣንቅሕ።</string>
+    <string name="setting_device">ቅጥዕታት ሞድ መጥቃዕቲ</string>
+    <string name="configfs_title">ኣውቶማቲክ ConfigFS ምውቃር</string>
+    <string name="configfs_summary">ኣብ ConfigFS ዝድገፉ መሳርሒታት HID ክውቅሮ እዩ። ንናይ USB ቅጥዒ ክሰብር ይኽእል።</string>
+    <string name="hid_choice_title">ብዓይነት ዝዳሎ HID</string>
+    <string name="hid_choice_summary">ኣብ መንጎ Legacy HIDን Customizable HIDን ምቕያር</string>
+    <string name="hid_title">ቋንቋ HID</string>
+    <string name="hid_summary">ተወሳኺ ቋንቋታት HID ኣውርድ ወይ ሓደስቲ ኣቀማምጣ HID ዲዛይን ግበር።</string>
+    <string name="settings_usb_title">USB ምትእስሳር ምጅማር</string>
+    <string name="settings_usb_desc">Run button USB ምስ ተተሓሓዘ መጥቃዕቲ ክጅምር እዩ።</string>
+    <string name="settings_net_title">ኔትወርክ ሶኬት ምትእስሳር ምጅማር</string>
+    <string name="settings_net_desc">Run button Network Socket ምስ ተተሓሓዘ መጥቃዕቲ ክጅምር እዩ።</string>
+    <string name="setting_about">ሓበሬታ</string>
+    <string name="setting_developer_title">መማዕበሊ</string>
+    <string name="settings_version_title">ሕታም</string>
+    <string name="settings_arch_title">ኣርክቴክቸር</string>
+    <string name="settings_lic_title">ፍቓድ ምሃብ</string>
+    <string name="settings_support">ሓገዝ</string>
+    <string name="settings_git_title">ናይ GitHub ጉዳያት</string>
+    <string name="settings_git_desc">ጉዳያት ወይ ናይ ባህሪ ሕቶ ንምውሳኽ ጠውቕ።</string>
+    <string name="settings_locale_title">ሎካላይዜሽን</string>
+    <string name="settings_locale_desc">ኣብ ኣፕ ሎካላይዜሽን ኣበርክቶ ግበሩ።</string>
+    <string name="release">ምክፍፋል</string>
+    <string name="releaseNetHunter">ኔትሃንተር ኣፕ ስቶር</string>
+    <string name="releaseGitHub">GitHub ምውጻእ እዩ።</string>
+    <string name="releaseGitHubNightly">GitHub ለይታዊ ትልሂት።</string>
+    <string name="releaseTest">ምእራም ምፍታሕ</string>
+    <string name="releaseOthers">ዘይተደገፈ ምፍናው</string>
+    <string name="btn_cancel">ሰርዝ</string>
+    <string name="btn_save">ምቑጣብ</string>
+    <string name="file_saved">ድሒኑ</string>
+    <string name="title_open_file">ፋይል ክፈት</string>
+    <string name="title_delete_file">ፋይል ምድምሳስ</string>
+    <string name="file_deleted">ተደምሲሱ</string>
+    <string name="file_name">ስም ፋይል</string>
+    <string name="title_save_file">ፋይል ምዕቃብ</string>
+    <string name="hid_version">ስሪት: %d</string>
+    <string-array name="modes">
+        <item>USB ገመድ</item>
+        <item>ኔትወርክ ሶኬት</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>ኣሜሪካዊ እንግሊዝኛ</item>
+        <item>ቱርካዊ</item>
+        <item>ሽወደንኛ</item>
+        <item>ስሎቨንያዊ</item>
+        <item>ሩስያዊ እዩ።</item>
+        <item>ፖርቱጋልኛ</item>
+        <item>ኖርወጃዊ እዩ።</item>
+        <item>ጣልያንኛ</item>
+        <item>ክሮኤሽያዊ እዩ።</item>
+        <item>ዓባይ ብሪጣንያ እንግሊዝኛ</item>
+        <item>ፈረንሳዊ</item>
+        <item>ፊንላንድኛ</item>
+        <item>ስጳኛ</item>
+        <item>ዴንማርክ</item>
+        <item>ጀርመንኛ</item>
+        <item>ካናዳዊ ፈረንሳዊ</item>
+        <item>ብራዚላዊ ፖርቱጋላዊ</item>
+        <item>ቤላሩስያዊ</item>
+        <item>ሃንጋርያዊ</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ኣውቶማቲክ</item>
+        <item>መዓልቲ</item>
+        <item>ምሸት</item>
+    </string-array>
 </resources>

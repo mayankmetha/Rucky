@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">БАЪДӢ</string>
+    <string name="init_skip">ГУЗАРЕД</string>
+    <string name="init_agree">розй шавед</string>
+    <string name="init_start">ХАК</string>
+    <string name="slideDesc1">Дастгоҳи худро ба Rubber Ducky табдил диҳед!</string>
+    <string name="slideTitle2">Сими USB</string>
+    <string name="slideDesc2">Интерфейси сими USB барои оғози ҳамла!</string>
+    <string name="slideTitle3">Сокети шабакавӣ</string>
+    <string name="slideDesc3">Интерфейсҳои васлаки Wi-Fi барои оғози ҳамла тавассути абзорҳои берунаи дастгирӣшаванда!</string>
+    <string name="slideTitle4">Радди масъулият</string>
+    <string name="slideDesc4">Корбари барнома барои зарари расонидашуда танҳо масъул аст. Ҳеҷ як шахси дигар наметавонад барои зараре, ки бо истифода аз ин барнома расонида шудааст, ҷавобгар бошад! Ҳангоми истифодаи барнома эҳтиёткор бошед ва аз ин истифода набаред, то ба дигарон зарар расонад!</string>
+    <string name="slideTitle5">Сиёсати Корбурди Маълумоти Шахсӣ</string>
+    <string name="slideDesc5">Ҳеҷ гуна маълумот дар ягон шакл ҷамъоварӣ, истифода ва фурӯхта намешавад! Баъзе иҷозатҳое, ки метавонанд нигарониҳои махфиятро ба вуҷуд оранд, танҳо барои кори баъзе хусусиятҳои барнома дархост карда мешаванд ва барои ҷамъоварии маълумот нест! Махфияти шумо эҳтиром карда мешавад!</string>
+    <string name="slideTitle6">Иҷозати барнома</string>
+    <string name="slideDesc6">Лутфан ба барнома иҷозати заруриро барои кор диҳед!</string>
     <!-- Update screen -->
+    <string name="update_new">Версияи нави навсозии дастрас:</string>
+    <string name="update_hash_error">Мутобиқати имзои файл! Навсозӣ карда намешавад.</string>
+    <string name="update_activity">Навсозии Rucky</string>
+    <string name="update_version">Версия</string>
+    <string name="update_version_nightly">Версияи шабона</string>
+    <string name="update_changelog">Тағйирот</string>
+    <string name="update_status">Ҳолати навсозӣ</string>
+    <string name="update_action">Навсозиро зеркашӣ ва насб кунед</string>
+    <string name="update_downloading">Зеркашӣ кардани Навсозӣ</string>
+    <string name="install_update">Татбиқи Навсозӣ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Оё шумо мехоҳед аз барнома пинҳон кунед ё аз он хориҷ шавед?</string>
+    <string name="btn_exit">Баромадгоҳ</string>
+    <string name="btn_back">Пинҳон кардан</string>
+    <string name="unlock">Кушодани барнома</string>
+    <string name="auth">Тасдиқи аутентификатсия</string>
+    <string name="update">Навсозӣ</string>
+    <string name="setting">Танзимотҳо</string>
+    <string name="codeHint">Дар ин ҷо скриптҳои резинии дукиро нависед ё бор кунед</string>
+    <string name="loadBtn">Бор кардан</string>
+    <string name="saveBtn">Захира кунед</string>
+    <string name="delBtn">Нобуд кунед</string>
+    <string name="runBtn">Давидан</string>
+    <string name="confBtn">Конфигуратсия</string>
+    <string name="btn_continue">Давом додан</string>
+    <string name="root_err">Барои ҳамла ба кабели USB дастрасии реша лозим аст!</string>
+    <string name="kernel_err">"Ядро барои ҳамлаи кабели USB дастгирӣ намешавад!"</string>
+    <string name="vm">Муҳити виртуалӣ дастгирӣ намешавад!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB пайваст</string>
+    <string name="config_status_usb_off">USB ҷудо карда шудааст</string>
+    <string name="config_status_net_on">Васлаки шабакавӣ</string>
+    <string name="config_status_net_off">Васлаки шабакавӣ ҷудо карда шуд</string>
+    <string name="socket_address">IP ва суроғаи портро ворид кунед</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Танзимоти HID</string>
+    <string name="hid_download">Зеркашӣ кунед</string>
+    <string name="hid_update">Навсозӣ</string>
+    <string name="hid_edit">Таҳрир</string>
+    <string name="hid_delete">Нобуд кунед</string>
     <!-- Keylist screen -->
+    <string name="key_title">Номи калидӣ</string>
+    <string name="key_character">Аломати асосӣ</string>
+    <string name="key_code">Рамзи калидӣ</string>
+    <string name="key_ctrl">Тугмаи Ctrl</string>
+    <string name="key_alt">Калиди Alt</string>
+    <string name="key_shift">Тугмаи Shift</string>
+    <string name="key_meta">Мета калид</string>
+    <string name="keycode">Рамзи калидӣ</string>
+    <string name="modcode">Рамзи тағирдиҳанда</string>
+    <string name="key_details">Тафсилоти асосӣ</string>
     <!-- Setting screen -->
+    <string name="setting_general">Генерал</string>
+    <string name="dark_theme_title">Режими шабона</string>
+    <string name="dark_theme_summary">Мавзӯи торикро таъин кунед</string>
+    <string name="device_admin_title">Соҳиби дастгоҳи барнома созед</string>
+    <string name="device_admin_summary">Реша талаб карда мешавад. Ин барои гузаштан аз баъзе маҳдудиятҳо дар Android аст.</string>
+    <string name="hide_icon_title">Пинҳон /Хомӯш кардани нишонаи оғозкунанда</string>
+    <string name="hide_icon_summary">Занг *</string>
+    <string name="delete_dep_title">Барномаро нест кунед</string>
+    <string name="delete_dep_summary">Барномаро тоза ва нест кунед.</string>
+    <string name="settings_sec_title">Амнияти пешакӣ</string>
+    <string name="settings_sec_desc">Рамзгузории файли скрипт ва қулфи экранро фаъол созед.</string>
+    <string name="setting_device">Танзимоти режими ҳамла</string>
+    <string name="configfs_title">Configure худкор ConfigFS</string>
+    <string name="configfs_summary">HID-ро дар дастгоҳҳои дастгирӣшудаи ConfigFS танзим мекунад. Метавонад танзимоти USB-ро вайрон кунад.</string>
+    <string name="hid_choice_title">HID-и танзимшаванда</string>
+    <string name="hid_choice_summary">Гузариш байни HID-и меросӣ ва HID фармоишӣ</string>
+    <string name="hid_title">Забони HID</string>
+    <string name="hid_summary">Забонҳои иловагии HID-ро зеркашӣ кунед ё тарҳҳои нави HID-ро тарроҳӣ кунед.</string>
+    <string name="settings_usb_title">Оғози пайвасти USB</string>
+    <string name="settings_usb_desc">Вақте ки USB пайваст мешавад, тугмаи иҷро ҳамларо оғоз мекунад.</string>
+    <string name="settings_net_title">Оғози пайвастшавӣ ба шабака</string>
+    <string name="settings_net_desc">Тугмаи Иҷроиш ҳамларо ҳангоми пайваст шудани васлаки шабакавӣ оғоз мекунад.</string>
+    <string name="setting_about">Маълумот</string>
+    <string name="setting_developer_title">Таҳиягар</string>
+    <string name="settings_version_title">Версия</string>
+    <string name="settings_arch_title">Архитектура</string>
+    <string name="settings_lic_title">Иҷозатнома</string>
+    <string name="settings_support">Дастгирӣ</string>
+    <string name="settings_git_title">Масъалаҳои GitHub</string>
+    <string name="settings_git_desc">Барои илова кардани мушкилот ё дархости хусусият клик кунед.</string>
+    <string name="settings_locale_title">Маҳаллисозӣ</string>
+    <string name="settings_locale_desc">Дар маҳаллисозии барнома саҳм гузоред.</string>
+    <string name="release">Тақсим</string>
+    <string name="releaseNetHunter">Дӯкони барномаҳои NetHunter</string>
+    <string name="releaseGitHub">Варақаи GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Нашри ислоҳ</string>
+    <string name="releaseOthers">Нашри дастгирӣнашаванда</string>
+    <string name="btn_cancel">Бекор кардан</string>
+    <string name="btn_save">Захира кунед</string>
+    <string name="file_saved">наҷот дод</string>
+    <string name="title_open_file">Файлро кушоед</string>
+    <string name="title_delete_file">Файлро нест кунед</string>
+    <string name="file_deleted">нест карда шуд</string>
+    <string name="file_name">Номи парванда</string>
+    <string name="title_save_file">Файлро захира кунед</string>
+    <string name="hid_version">Версия: %d</string>
+    <string-array name="modes">
+        <item>Сими USB</item>
+        <item>Сокети шабакавӣ</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Англиси амрикоӣ</item>
+        <item>туркӣ</item>
+        <item>шведӣ</item>
+        <item>словенӣ</item>
+        <item>русӣ</item>
+        <item>португалӣ</item>
+        <item>норвегӣ</item>
+        <item>Италия</item>
+        <item>хорватӣ</item>
+        <item>Британияи Кабир забони англисӣ</item>
+        <item>фаронсавӣ</item>
+        <item>финландӣ</item>
+        <item>испанӣ</item>
+        <item>Дания</item>
+        <item>олмонӣ</item>
+        <item>Фаронсавии Канада</item>
+        <item>Португалии Бразилия</item>
+        <item>белорус</item>
+        <item>Венгрия</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Авто</item>
+        <item>рӯз</item>
+        <item>Шаб</item>
+    </string-array>
 </resources>

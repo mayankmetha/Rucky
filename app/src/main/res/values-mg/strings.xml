@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">MANARAKA</string>
+    <string name="init_skip">Mifohaza</string>
+    <string name="init_agree">manaiky</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Avereno ho Ducky Fingotra ny fitaovanao!</string>
+    <string name="slideTitle2">USB Cable</string>
+    <string name="slideDesc2">USB tariby interface tsara ho an\'ny fandefasana fanafihana!</string>
+    <string name="slideTitle3">Socket Network</string>
+    <string name="slideDesc3">Fifandraisana socket mifototra amin\'ny Wi-Fi hanombohana fanafihana amin\'ny alàlan\'ny fitaovana ivelany tohana!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">Ny mpampiasa ny fampiharana dia tompon\'andraikitra amin\'ny fahavoazana naterak\'izany. Tsy misy orinasa hafa azo raisina ho tompon\'andraikitra amin\'ny fahavoazana natao tamin\'ny fampiasana ity fampiharana ity! Mitandrema rehefa mampiasa ny fampiharana ary aza mampiasa izany hanisy ratsy ny hafa!</string>
+    <string name="slideTitle5">politika fiarovana fiainan\'olona</string>
+    <string name="slideDesc5">Tsy misy angona angonina, ampiasaina ary amidy! Ny fahazoan-dàlana sasany mety hiteraka olana momba ny fiainana manokana dia angatahina fotsiny amin\'ny fiasan\'ny endri-javatra sasany ao amin\'ny fampiharana fa tsy ny fanangonana angon-drakitra! Voahaja ny fiainanao manokana!</string>
+    <string name="slideTitle6">Fahazoan-dàlana amin\'ny fampiharana</string>
+    <string name="slideDesc6">Omeo app ny fahazoan-dàlana ilaina hiasa!</string>
     <!-- Update screen -->
+    <string name="update_new">Dikan-teny misy fanavaozana vaovao:</string>
+    <string name="update_hash_error">Tsy mifanaraka amin\'ny sonia rakitra! Tsy afaka Update.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Malagasy Bible</string>
+    <string name="update_version_nightly">Nightly Version</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Fanavaozana ny sata</string>
+    <string name="update_action">Misintona sy mametraka ny Update</string>
+    <string name="update_downloading">Misintona ny Fanavaozana</string>
+    <string name="install_update">Mampihatra Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Te hanafina na hiala amin\'ny fampiharana ve ianao?</string>
+    <string name="btn_exit">Fivoahana</string>
+    <string name="btn_back">afeno ny</string>
+    <string name="unlock">Sokafy ny App</string>
+    <string name="auth">Hamafiso ny fanamarinana</string>
+    <string name="update">vaovao farany</string>
+    <string name="setting">Fikirana</string>
+    <string name="codeHint">Soraty na asio sora-baventy fingotra eto</string>
+    <string name="loadBtn">entana</string>
+    <string name="saveBtn">afa-tsy</string>
+    <string name="delBtn">Mamafa</string>
+    <string name="runBtn">mihazakazaka</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">hanohy</string>
+    <string name="root_err">Ilaina ny fidirana amin\'ny root amin\'ny fanafihana tariby USB!</string>
+    <string name="kernel_err">"Tsy tohana ny Kernel amin'ny fanafihana tariby USB!"</string>
+    <string name="vm">Ny tontolo virtoaly dia tsy tohanana!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB mifandray</string>
+    <string name="config_status_usb_off">USB tapaka</string>
+    <string name="config_status_net_on">Socket Network mifandray</string>
+    <string name="config_status_net_off">Tapaka ny Socket Network</string>
+    <string name="socket_address">Ampidiro ny Socket IP sy ny adiresy Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">DOWNLOAD</string>
+    <string name="hid_update">vaovao farany</string>
+    <string name="hid_edit">Ovay</string>
+    <string name="hid_delete">Mamafa</string>
     <!-- Keylist screen -->
+    <string name="key_title">Anarana fototra</string>
+    <string name="key_character">Toetra fototra</string>
+    <string name="key_code">Key Code</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Key Code</string>
+    <string name="modcode">Modifier Code</string>
+    <string name="key_details">Tsipiriany fototra</string>
     <!-- Setting screen -->
+    <string name="setting_general">General</string>
+    <string name="dark_theme_title">Night Mode</string>
+    <string name="dark_theme_summary">Mametraha lohahevitra maizina</string>
+    <string name="device_admin_title">Ataovy tompon\'ny fitaovana fampiharana</string>
+    <string name="device_admin_summary">Root ilaina. Izany dia ny handalo ny sasany amin\'ireo fameperana amin\'ny Android.</string>
+    <string name="hide_icon_title">Afeno/Atsaharo ny kisary mpandefa</string>
+    <string name="hide_icon_summary">Dial *</string>
+    <string name="delete_dep_title">Esory ny App</string>
+    <string name="delete_dep_summary">Diovy sy esory ny fampiharana.</string>
+    <string name="settings_sec_title">Advance Security</string>
+    <string name="settings_sec_desc">Alefaso ny fanafenana rakitra script sy ny hidin\'ny efijery.</string>
+    <string name="setting_device">Fanafihana Mode Fanafihana</string>
+    <string name="configfs_title">Auto Configure ConfigFS</string>
+    <string name="configfs_summary">Hanamboatra HID amin\'ny fitaovana tohanan\'ny ConfigFS. Mety handrava ny fikandrana USB.</string>
+    <string name="hid_choice_title">HID azo zahana</string>
+    <string name="hid_choice_summary">Mifindra eo amin\'ny Legacy HID sy Customizable HID</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">Misintona fiteny HID fanampiny na mamolavola drafitra HID vaovao.</string>
+    <string name="settings_usb_title">USB Connect fandefasana</string>
+    <string name="settings_usb_desc">Ny bokotra Run dia hanomboka fanafihana rehefa mifandray ny USB.</string>
+    <string name="settings_net_title">Network Socket Connect fandefasana</string>
+    <string name="settings_net_desc">Ny bokotra Run dia hanomboka fanafihana rehefa mifandray ny Socket Network.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Developer</string>
+    <string name="settings_version_title">Malagasy Bible</string>
+    <string name="settings_arch_title">Architecture</string>
+    <string name="settings_lic_title">Mombamomba ny mpanoratra</string>
+    <string name="settings_support">MANAMPY</string>
+    <string name="settings_git_title">Olana GitHub</string>
+    <string name="settings_git_desc">Kitiho raha te hanampy olana na fangatahana endri-javatra.</string>
+    <string name="settings_locale_title">Localisation</string>
+    <string name="settings_locale_desc">Mandraisa anjara amin\'ny fametrahana ny fampiharana.</string>
+    <string name="release">fizarana</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Famoahana tsy tohanana</string>
+    <string name="btn_cancel">hanafoana</string>
+    <string name="btn_save">afa-tsy</string>
+    <string name="file_saved">voavonjy</string>
+    <string name="title_open_file">Open File</string>
+    <string name="title_delete_file">Fafao ny rakitra</string>
+    <string name="file_deleted">nofafana</string>
+    <string name="file_name">Anaran\'ny fisie</string>
+    <string name="title_save_file">Save File</string>
+    <string name="hid_version">Version: %d</string>
+    <string-array name="modes">
+        <item>USB Cable</item>
+        <item>Socket Network</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Anglisy Amerikana</item>
+        <item>Tiorka</item>
+        <item>Anarana</item>
+        <item>Slovenianina</item>
+        <item>Rosiana</item>
+        <item>portogey</item>
+        <item>norvejiana</item>
+        <item>Italiana</item>
+        <item>Kroaty</item>
+        <item>anglisy anglisy</item>
+        <item>FRANTSAY</item>
+        <item>Anarana</item>
+        <item>Fikarohana</item>
+        <item>Danoà</item>
+        <item>Anarana</item>
+        <item>Frantsay kanadiana</item>
+        <item>Portiogey Breziliana</item>
+        <item>Belarusian</item>
+        <item>hongariana</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>fiara</item>
+        <item>Andro</item>
+        <item>alina</item>
+    </string-array>
 </resources>
