@@ -333,219 +333,220 @@ REPEAT 1
 ---
 
 # Localization
-| Status |   Code    |      Language       | Translated |
-|:------:|:---------:|:-------------------:|:----------:|
-|   ❌    |   b+ach   |       Acholi        |     0%     |
-|   ❌    |    aa     |        Afar         |     0%     |
-|   ❌    |    af     |      Afrikaans      |     0%     |
-|   ❌    |    ak     |        Akan         |     0%     |
-|   ❌    |    sq     |      Albanian       |     0%     |
-|   ❌    |    am     |       Amharic       |     0%     |
-|   ✅    |    ar     |       Arabic        |    100%    |
-|   ❌    |    an     |      Aragonese      |     0%     |
-|   ❌    |    hy     |      Armenian       |     0%     |
-|   ❌    |    as     |      Assamese       |     0%     |
-|   ❌    |   b+ast   |      Asturian       |     0%     |
-|   ❌    |    av     |       Avaric        |     0%     |
-|   ❌    |    ae     |       Avestan       |     0%     |
-|   ❌    |    ay     |       Aymara        |     0%     |
-|   ✅    |    az     |     Azerbaijani     |    100%    |
-|   ❌    |   b+ban   |      Balinese       |     0%     |
-|   ❌    |   b+bal   |       Balochi       |     0%     |
-|   ❌    |    bm     |       Bambara       |     0%     |
-|   ❌    |    ba     |       Bashkir       |     0%     |
-|   ✅    |    eu     |       Basque        |    100%    |
-|   ❌    |    be     |     Belarusian      |     0%     |
-|   ✅    |    bn     |       Bengali       |    100%    |
-|   🚧   |   b+ber   |       Berber        |    41%     |
-|   ❌    |    bh     |       Bihari        |     0%     |
-|   ❌    |    bi     |       Bislama       |     0%     |
-|   ❌    |    bs     |       Bosnian       |     0%     |
-|   ✅    |    br     |       Breton        |    100%    |
-|   ✅    |    bg     |      Bulgarian      |    100%    |
-|   ❌    |    my     |       Burmese       |     0%     |
-|   ❌    |    ca     |       Catalan       |     0%     |
-|   ❌    |   b+ceb   |       Cebuano       |     0%     |
-|   ❌    |    ch     |      Chamorro       |     0%     |
-|   ❌    |    ce     |       Chechen       |     0%     |
-|   ❌    |   b+chr   |      Cherokee       |     0%     |
-|   ❌    |    ny     |        Chewa        |     0%     |
-|   ✅    |  zh-rCN   | Chinese Simplified  |    100%    |
-|   ✅    |  zh-rTW   | Chinese Traditional |    100%    |
-|   ❌    |    cv     |       Chuvash       |     0%     |
-|   ❌    |    kw     |       Cornish       |     0%     |
-|   ❌    |    co     |      Corsican       |     0%     |
-|   ❌    |    cr     |        Cree         |     0%     |
-|   ✅    |    hr     |      Croatian       |    100%    |
-|   ✅    |    cs     |        Czech        |    100%    |
-|   ✅    |    da     |       Danish        |    100%    |
-|   ❌    |    dv     |       Dhivehi       |     0%     |
-|   ✅    |    nl     |        Dutch        |    100%    |
-|   ❌    |    dz     |      Dzongkha       |     0%     |
-|   ✅    |  en-rGB   |    English (UK)     |    100%    |
-|   ✅    |  en-rUS   |    English (US)     |    100%    |
-|   ❌    |    eo     |      Esperanto      |     0%     |
-|   ✅    |    et     |      Estonian       |    100%    |
-|   ❌    |    ee     |         Ewe         |     0%     |
-|   ❌    |    fo     |       Faroese       |     0%     |
-|   ❌    |    fj     |       Fijian        |     0%     |
-|   ❌    |   b+fil   |      Filipino       |     0%     |
-|   ✅    |    fi     |       Finnish       |    100%    |
-|   ✅    |    fr     |       French        |    100%    |
-|   ❌    |    fy     |       Frisian       |     0%     |
-|   ❌    |   b+fur   |      Friulian       |     0%     |
-|   ❌    |    ff     |        Fula         |     0%     |
-|   ❌    |   b+gaa   |         Ga          |     0%     |
-|   ❌    |    gl     |      Galician       |     0%     |
-|   ❌    |    ka     |      Georgian       |     0%     |
-|   ✅    |    de     |       German        |    100%    |
-|   ❌    |   b+got   |       Gothic        |     0%     |
-|   ✅    |    el     |        Greek        |    100%    |
-|   ❌    |    kl     |     Greenlandic     |     0%     |
-|   ❌    |    gn     |       Guarani       |     0%     |
-|   ✅    |    gu     |      Gujarati       |    100%    |
-|   ❌    |    ht     |   Haitian Creole    |     0%     |
-|   ❌    |    ha     |        Hausa        |     0%     |
-|   ❌    |   b+haw   |      Hawaiian       |     0%     |
-|   ✅    |    iw     |       Hebrew        |    100%    |
-|   ❌    |    hz     |       Herero        |     0%     |
-|   ❌    |   b+hil   |     Hiligaynon      |     0%     |
-|   ✅    |    hi     |        Hindi        |    100%    |
-|   ❌    |    ho     |      Hiri Motu      |     0%     |
-|   ❌    |   b+hmn   |        Hmong        |     0%     |
-|   ✅    |    hu     |      Hungarian      |    100%    |
-|   ✅    |    is     |      Icelandic      |    100%    |
-|   ❌    |    io     |         Ido         |     0%     |
-|   ❌    |    ig     |        Igbo         |     0%     |
-|   ❌    |   b+ilo   |       Ilokano       |     0%     |
-|   ✅    |    in     |     Indonesian      |    100%    |
-|   ❌    |    iu     |      Inuktitut      |     0%     |
-|   ❌    |    ga     |        Irish        |     0%     |
-|   ✅    |    it     |       Italian       |    100%    |
-|   ✅    |    ja     |      Japanese       |    100%    |
-|   ❌    |    jv     |      Javanese       |     0%     |
-|   ❌    |   b+kab   |       Kabyle        |     0%     |
-|   ✅    |    kn     |       Kannada       |    100%    |
-|   ❌    |   b+pam   |     Kapampangan     |     0%     |
-|   ❌    |    ks     |      Kashmiri       |     0%     |
-|   ❌    |   b+csb   |      Kashubian      |     0%     |
-|   ❌    |    kk     |       Kazakh        |     0%     |
-|   ❌    |    km     |        Khmer        |     0%     |
-|   ❌    |    rw     |     Kinyarwanda     |     0%     |
-|   ❌    |   b+tlh   |       Klingon       |     0%     |
-|   ❌    |    kv     |        Komi         |     0%     |
-|   ❌    |    kg     |        Kongo        |     0%     |
-|   ❌    |   b+kok   |       Konkani       |     0%     |
-|   ✅    |    ko     |       Korean        |    100%    |
-|   ✅    |    ku     |       Kurdish       |    100%    |
-|   ❌    |    kj     |      Kwanyama       |     0%     |
-|   ❌    |    ky     |       Kyrgyz        |     0%     |
-|   ❌    |    lo     |         Lao         |     0%     |
-|   ❌    |    la     |        Latin        |     0%     |
-|   ✅    |    lv     |       Latvian       |    100%    |
-|   ❌    |    li     |     Limburgish      |     0%     |
-|   ❌    |    ln     |       Lingala       |     0%     |
-|   ✅    |    lt     |     Lithuanian      |    100%    |
-|   ❌    |   b+jbo   |       Lojban        |     0%     |
-|   ❌    |   b+nds   |     Low German      |     0%     |
-|   ❌    |   b+dsb   |    Lower Sorbian    |     0%     |
-|   ❌    |    lg     |       Luganda       |     0%     |
-|   ❌    |   b+luy   |        Luhya        |     0%     |
-|   ❌    |    lb     |    Luxembourgish    |     0%     |
-|   ❌    |    mk     |     Macedonian      |     0%     |
-|   ❌    |   b+mai   |      Maithili       |     0%     |
-|   ❌    |    mg     |      Malagasy       |     0%     |
-|   ✅    |    ms     |        Malay        |    100%    |
-|   ✅    |    ml     |      Malayalam      |    100%    |
-|   ❌    |    mt     |       Maltese       |     0%     |
-|   ❌    |    gv     |        Manx         |     0%     |
-|   ❌    |    mi     |        Maori        |     0%     |
-|   ❌    |   b+arn   |     Mapudungun      |     0%     |
-|   ✅    |    mr     |       Marathi       |    100%    |
-|   ❌    |    mh     |     Marshallese     |     0%     |
-|   ❌    |   b+moh   |       Mohawk        |     0%     |
-|   ❌    |    mn     |      Mongolian      |     0%     |
-|   ❌    |   b+mos   |        Mossi        |     0%     |
-|   ❌    |    na     |        Nauru        |     0%     |
-|   ❌    |    ng     |       Ndonga        |     0%     |
-|   ❌    |    ne     |       Nepali        |     0%     |
-|   ❌    |    se     |    Northern Sami    |     0%     |
-|   ❌    |   b+nso   |   Northern Sotho    |     0%     |
-|   ✅    |    no     |      Norwegian      |    100%    |
-|   ✅    |    nb     |  Norwegian Bokmal   |    100%    |
-|   ✅    |    nn     |  Norwegian Nynorsk  |    100%    |
-|   ❌    |    oc     |       Occitan       |     0%     |
-|   🚧   |    or     |        Odia         |    26%     |
-|   ❌    |    oj     |       Ojibwe        |     0%     |
-|   ❌    |    om     |        Oromo        |     0%     |
-|   ❌    |    os     |      Ossetian       |     0%     |
-|   ❌    |    pi     |        Pali         |     0%     |
-|   ❌    |   b+pap   |     Papiamento      |     0%     |
-|   ❌    |    ps     |       Pashto        |     0%     |
-|   ✅    |    fa     |       Persian       |    100%    |
-|   ✅    |    pl     |       Polish        |    100%    |
-|   ✅    |    pt     |     Portuguese      |    100%    |
-|   ✅    |    pa     |       Punjabi       |    100%    |
-|   ❌    |    qu     |       Quechua       |     0%     |
-|   ✅    |    ro     |      Romanian       |    100%    |
-|   ❌    |    rm     |       Romansh       |     0%     |
-|   ❌    |    rn     |        Rundi        |     0%     |
-|   ✅    |    ru     |       Russian       |    100%    |
-|   ❌    |    sg     |        Sango        |     0%     |
-|   ❌    |    sa     |      Sanskrit       |     0%     |
-|   🚧   |   b+sat   |       Santali       |    80%     |
-|   ❌    |    sc     |      Sardinian      |     0%     |
-|   ❌    |   b+sco   |        Scots        |     0%     |
-|   ❌    |    gd     |   Scottish Gaelic   |     0%     |
-|   ✅    |    sr     | Serbian (Cyrillic)  |    100%    |
-|   ❌    | b+sr+Latn |   Serbian (Latin)   |     0%     |
-|   ❌    |    sn     |        Shona        |     0%     |
-|   ❌    |    ii     |     Sichuan Yi      |     0%     |
-|   ✅    |    sd     |       Sindhi        |    100%    |
-|   ❌    |    si     |       Sinhala       |     0%     |
-|   ✅    |    sk     |       Slovak        |    100%    |
-|   ✅    |    sl     |      Slovenian      |    100%    |
-|   ❌    |    so     |       Somali        |     0%     |
-|   ❌    |   b+son   |       Songhay       |     0%     |
-|   ❌    |    nr     |  Southern Ndebele   |     0%     |
-|   ❌    |   b+sma   |    Southern Sami    |     0%     |
-|   ❌    |    st     |   Southern Sotho    |     0%     |
-|   ✅    |    es     |       Spanish       |    100%    |
-|   ❌    |    su     |      Sundanese      |     0%     |
-|   ❌    |    sw     |       Swahili       |     0%     |
-|   ❌    |    ss     |        Swati        |     0%     |
-|   ✅    |    sv     |       Swedish       |    100%    |
-|   ❌    |   b+syc   |       Syriac        |     0%     |
-|   ❌    |    tl     |       Tagalog       |     0%     |
-|   ❌    |    ty     |      Tahitian       |     0%     |
-|   ❌    |    tg     |        Tajik        |     0%     |
-|   ✅    |    ta     |        Tamil        |    100%    |
-|   ❌    |    tt     |        Tatar        |     0%     |
-|   ✅    |    te     |       Telugu        |    100%    |
-|   ✅    |    th     |        Thai         |    100%    |
-|   ❌    |    bo     |       Tibetan       |     0%     |
-|   ❌    |    ti     |      Tigrinya       |     0%     |
-|   ❌    |    ts     |       Tsonga        |     0%     |
-|   ❌    |    tn     |       Tswana        |     0%     |
-|   ✅    |    tr     |       Turkish       |    100%    |
-|   ❌    |    tk     |       Turkmen       |     0%     |
-|   ✅    |    uk     |      Ukrainian      |    100%    |
-|   ❌    |   b+hsb   |    Upper Sorbian    |     0%     |
-|   ✅    |  ur-rIN   |      Urdu (IN)      |    100%    |
-|   ✅    |  ur-rPK   |      Urdu (PK)      |    100%    |
-|   ❌    |    ug     |       Uyghur        |     0%     |
-|   ✅    |    uz     |        Uzbek        |    100%    |
-|   ❌    |    ve     |        Venda        |     0%     |
-|   ✅    |    vi     |     Vietnamese      |    100%    |
-|   ❌    |    wa     |       Walloon       |     0%     |
-|   ✅    |    cy     |        Welsh        |    100%    |
-|   ❌    |    wo     |        Wolof        |     0%     |
-|   ✅    |    xh     |        Xhosa        |    100%    |
-|   ❌    |   b+sah   |     Yakut/Sakha     |     0%     |
-|   ✅    |    ji     |       Yiddish       |    100%    |
-|   ✅    |    yo     |       Yoruba        |    100%    |
-|   ✅    |    zu     |        Zulu         |    100%    |
-
+| Status |   Code    |        Language         | Translated |
+|:------:|:---------:|:-----------------------:|:----------:|
+|   ❌    |   b+ach   |         Acholi          |     0%     |
+|   ❌    |    aa     |          Afar           |     0%     |
+|   ✅    |    af     |        Afrikaans        |    100%    |
+|   ✅    |    ak     |          Akan           |    100%    |
+|   ✅    |    sq     |        Albanian         |    100%    |
+|   ✅    |    am     |         Amharic         |    100%    |
+|   ✅    |    ar     |         Arabic          |    100%    |
+|   ❌    |    an     |        Aragonese        |     0%     |
+|   ✅    |    hy     |        Armenian         |    100%    |
+|   ❌    |    as     |        Assamese         |     0%     |
+|   ❌    |   b+ast   |        Asturian         |     0%     |
+|   ❌    |    av     |         Avaric          |     0%     |
+|   ❌    |    ae     |         Avestan         |     0%     |
+|   ❌    |    ay     |         Aymara          |     0%     |
+|   ✅    |    az     |       Azerbaijani       |    100%    |
+|   ❌    |   b+ban   |        Balinese         |     0%     |
+|   ❌    |   b+bal   |         Balochi         |     0%     |
+|   ❌    |    bm     |         Bambara         |     0%     |
+|   ❌    |    ba     |         Bashkir         |     0%     |
+|   ✅    |    eu     |         Basque          |    100%    |
+|   ✅    |    be     |       Belarusian        |    100%    |
+|   ✅    |    bn     |         Bengali         |    100%    |
+|   🚧   |   b+ber   |         Berber          |    41%     |
+|   ❌    |    bh     |         Bihari          |     0%     |
+|   ❌    |    bi     |         Bislama         |     0%     |
+|   ✅    |    bs     |         Bosnian         |    100%    |
+|   ✅    |    br     |         Breton          |    100%    |
+|   ✅    |    bg     |        Bulgarian        |    100%    |
+|   ❌    |    my     |         Burmese         |     0%     |
+|   ✅    |    ca     |         Catalan         |    100%    |
+|   ❌    |   b+ceb   |         Cebuano         |     0%     |
+|   ❌    |    ch     |        Chamorro         |     0%     |
+|   ❌    |    ce     |         Chechen         |     0%     |
+|   ❌    |   b+chr   |        Cherokee         |     0%     |
+|   ✅    |    ny     |          Chewa          |    100%    |
+|   ✅    |  zh-rCN   |   Chinese Simplified    |    100%    |
+|   ✅    |  zh-rTW   |   Chinese Traditional   |    100%    |
+|   ❌    |    cv     |         Chuvash         |     0%     |
+|   ❌    |    kw     |         Cornish         |     0%     |
+|   ✅    |    co     |        Corsican         |    100%    |
+|   ❌    |    cr     |          Cree           |     0%     |
+|   ✅    |    hr     |        Croatian         |    100%    |
+|   ✅    |    cs     |          Czech          |    100%    |
+|   ✅    |    da     |         Danish          |    100%    |
+|   ❌    |    dv     |         Dhivehi         |     0%     |
+|   ✅    |    nl     |          Dutch          |    100%    |
+|   ❌    |    dz     |        Dzongkha         |     0%     |
+|   ✅    |  en-rGB   |      English (UK)       |    100%    |
+|   ✅    |  en-rUS   |      English (US)       |    100%    |
+|   ✅    |    eo     |        Esperanto        |    100%    |
+|   ✅    |    et     |        Estonian         |    100%    |
+|   ✅    |    ee     |           Ewe           |    100%    |
+|   ❌    |    fo     |         Faroese         |     0%     |
+|   ❌    |    fj     |         Fijian          |     0%     |
+|   ✅    |   b+fil   |        Filipino         |    100%    |
+|   ✅    |    fi     |         Finnish         |    100%    |
+|   ✅    |    fr     |         French          |    100%    |
+|   ✅    |    fy     |         Frisian         |    100%    |
+|   ❌    |   b+fur   |        Friulian         |     0%     |
+|   ❌    |    ff     |          Fula           |     0%     |
+|   ❌    |   b+gaa   |           Ga            |     0%     |
+|   ✅    |    gl     |        Galician         |    100%    |
+|   ✅    |    ka     |        Georgian         |    100%    |
+|   ✅    |    de     |         German          |    100%    |
+|   ❌    |   b+got   |         Gothic          |     0%     |
+|   ✅    |    el     |          Greek          |    100%    |
+|   ❌    |    kl     |       Greenlandic       |     0%     |
+|   ✅    |    gn     |         Guarani         |    100%    |
+|   ✅    |    gu     |        Gujarati         |    100%    |
+|   ✅    |    ht     |     Haitian Creole      |    100%    |
+|   ✅    |    ha     |          Hausa          |    100%    |
+|   ✅    |   b+haw   |        Hawaiian         |    100%    |
+|   ✅    |    iw     |         Hebrew          |    100%    |
+|   ❌    |    hz     |         Herero          |     0%     |
+|   ❌    |   b+hil   |       Hiligaynon        |     0%     |
+|   ✅    |    hi     |          Hindi          |    100%    |
+|   ❌    |    ho     |        Hiri Motu        |     0%     |
+|   ❌    |   b+hmn   |          Hmong          |     0%     |
+|   ✅    |    hu     |        Hungarian        |    100%    |
+|   ✅    |    is     |        Icelandic        |    100%    |
+|   ❌    |    io     |           Ido           |     0%     |
+|   ✅    |    ig     |          Igbo           |    100%    |
+|   ❌    |   b+ilo   |         Ilokano         |     0%     |
+|   ✅    |    in     |       Indonesian        |    100%    |
+|   ❌    |    iu     |        Inuktitut        |     0%     |
+|   ✅    |    ga     |          Irish          |    100%    |
+|   ✅    |    it     |         Italian         |    100%    |
+|   ✅    |    ja     |        Japanese         |    100%    |
+|   ✅    |    jv     |        Javanese         |    100%    |
+|   ❌    |   b+kab   |         Kabyle          |     0%     |
+|   ✅    |    kn     |         Kannada         |    100%    |
+|   ✅    |   b+pam   |       Kapampangan       |    100%    |
+|   ❌    |    ks     |        Kashmiri         |     0%     |
+|   ❌    |   b+csb   |        Kashubian        |     0%     |
+|   ✅    |    kk     |         Kazakh          |    100%    |
+|   ❌    |    km     |          Khmer          |     0%     |
+|   ✅    |    rw     |       Kinyarwanda       |    100%    |
+|   ❌    |   b+tlh   |         Klingon         |     0%     |
+|   ❌    |    kv     |          Komi           |     0%     |
+|   ❌    |    kg     |          Kongo          |     0%     |
+|   ❌    |   b+kok   |         Konkani         |     0%     |
+|   ✅    |    ko     |         Korean          |    100%    |
+|   ✅    |    ku     |         Kurdish         |    100%    |
+|   ❌    |    kj     |        Kwanyama         |     0%     |
+|   ✅    |    ky     |         Kyrgyz          |    100%    |
+|   ✅    |    lo     |           Lao           |    100%    |
+|   ✅    |    la     |          Latin          |    100%    |
+|   ✅    |    lv     |         Latvian         |    100%    |
+|   ❌    |    li     |       Limburgish        |     0%     |
+|   ❌    |    ln     |         Lingala         |     0%     |
+|   ✅    |    lt     |       Lithuanian        |    100%    |
+|   ❌    |   b+jbo   |         Lojban          |     0%     |
+|   ❌    |   b+nds   |       Low German        |     0%     |
+|   ❌    |   b+dsb   |      Lower Sorbian      |     0%     |
+|   ❌    |    lg     |         Luganda         |     0%     |
+|   ❌    |   b+luy   |          Luhya          |     0%     |
+|   ❌    |    lb     |      Luxembourgish      |     0%     |
+|   ❌    |    mk     |       Macedonian        |     0%     |
+|   ❌    |   b+mai   |        Maithili         |     0%     |
+|   ❌    |    mg     |        Malagasy         |     0%     |
+|   ✅    |    ms     |          Malay          |    100%    |
+|   ✅    |    ml     |        Malayalam        |    100%    |
+|   ❌    |    mt     |         Maltese         |     0%     |
+|   ❌    |    gv     |          Manx           |     0%     |
+|   ❌    |    mi     |          Maori          |     0%     |
+|   ❌    |   b+arn   |       Mapudungun        |     0%     |
+|   ✅    |    mr     |         Marathi         |    100%    |
+|   ❌    |    mh     |       Marshallese       |     0%     |
+|   ❌    |   b+moh   |         Mohawk          |     0%     |
+|   ❌    |    mn     |        Mongolian        |     0%     |
+|   ❌    |   b+mos   |          Mossi          |     0%     |
+|   ❌    |    na     |          Nauru          |     0%     |
+|   ❌    |    ng     |         Ndonga          |     0%     |
+|   ❌    |    ne     |         Nepali          |     0%     |
+|   ❌    |    se     |      Northern Sami      |     0%     |
+|   ❌    |   b+nso   |     Northern Sotho      |     0%     |
+|   ✅    |    no     |        Norwegian        |    100%    |
+|   ✅    |    nb     |    Norwegian Bokmal     |    100%    |
+|   ✅    |    nn     |    Norwegian Nynorsk    |    100%    |
+|   ❌    |    oc     |         Occitan         |     0%     |
+|   🚧   |    or     |          Odia           |    26%     |
+|   ❌    |    oj     |         Ojibwe          |     0%     |
+|   ❌    |    om     |          Oromo          |     0%     |
+|   ❌    |    os     |        Ossetian         |     0%     |
+|   ❌    |    pi     |          Pali           |     0%     |
+|   ❌    |   b+pap   |       Papiamento        |     0%     |
+|   ❌    |    ps     |         Pashto          |     0%     |
+|   ✅    |    fa     |         Persian         |    100%    |
+|   ✅    |    pl     |         Polish          |    100%    |
+|   ✅    |    pt     |     Portuguese (PT)     |    100%    |
+|   ✅    |  pt-rBR   |     Portuguese (BR)     |    100%    |
+|   ✅    |    pa     |         Punjabi         |    100%    |
+|   ❌    |    qu     |         Quechua         |     0%     |
+|   ✅    |    ro     |        Romanian         |    100%    |
+|   ❌    |    rm     |         Romansh         |     0%     |
+|   ❌    |    rn     |          Rundi          |     0%     |
+|   ✅    |    ru     |         Russian         |    100%    |
+|   ❌    |    sg     |          Sango          |     0%     |
+|   ❌    |    sa     |        Sanskrit         |     0%     |
+|   🚧   |   b+sat   |         Santali         |    80%     |
+|   ❌    |    sc     |        Sardinian        |     0%     |
+|   ❌    |   b+sco   |          Scots          |     0%     |
+|   ❌    |    gd     |     Scottish Gaelic     |     0%     |
+|   ✅    |    sr     |   Serbian (Cyrillic)    |    100%    |
+|   ❌    | b+sr+Latn |     Serbian (Latin)     |     0%     |
+|   ❌    |    sn     |          Shona          |     0%     |
+|   ❌    |    ii     |       Sichuan Yi        |     0%     |
+|   ✅    |    sd     |         Sindhi          |    100%    |
+|   ❌    |    si     |         Sinhala         |     0%     |
+|   ✅    |    sk     |         Slovak          |    100%    |
+|   ✅    |    sl     |        Slovenian        |    100%    |
+|   ❌    |    so     |         Somali          |     0%     |
+|   ❌    |   b+son   |         Songhay         |     0%     |
+|   ❌    |    nr     |    Southern Ndebele     |     0%     |
+|   ❌    |   b+sma   |      Southern Sami      |     0%     |
+|   ❌    |    st     |     Southern Sotho      |     0%     |
+|   ✅    |    es     |      Spanish (ES)       |    100%    |
+|   ✅    | b+es+419  | Spanish (Latin America) |    100%    |
+|   ❌    |    su     |        Sundanese        |     0%     |
+|   ❌    |    sw     |         Swahili         |     0%     |
+|   ❌    |    ss     |          Swati          |     0%     |
+|   ✅    |    sv     |         Swedish         |    100%    |
+|   ❌    |   b+syc   |         Syriac          |     0%     |
+|   ❌    |    tl     |         Tagalog         |     0%     |
+|   ❌    |    ty     |        Tahitian         |     0%     |
+|   ❌    |    tg     |          Tajik          |     0%     |
+|   ✅    |    ta     |          Tamil          |    100%    |
+|   ❌    |    tt     |          Tatar          |     0%     |
+|   ✅    |    te     |         Telugu          |    100%    |
+|   ✅    |    th     |          Thai           |    100%    |
+|   ❌    |    bo     |         Tibetan         |     0%     |
+|   ❌    |    ti     |        Tigrinya         |     0%     |
+|   ❌    |    ts     |         Tsonga          |     0%     |
+|   ❌    |    tn     |         Tswana          |     0%     |
+|   ✅    |    tr     |         Turkish         |    100%    |
+|   ❌    |    tk     |         Turkmen         |     0%     |
+|   ✅    |    uk     |        Ukrainian        |    100%    |
+|   ❌    |   b+hsb   |      Upper Sorbian      |     0%     |
+|   ✅    |  ur-rIN   |        Urdu (IN)        |    100%    |
+|   ✅    |  ur-rPK   |        Urdu (PK)        |    100%    |
+|   ❌    |    ug     |         Uyghur          |     0%     |
+|   ✅    |    uz     |          Uzbek          |    100%    |
+|   ❌    |    ve     |          Venda          |     0%     |
+|   ✅    |    vi     |       Vietnamese        |    100%    |
+|   ❌    |    wa     |         Walloon         |     0%     |
+|   ✅    |    cy     |          Welsh          |    100%    |
+|   ❌    |    wo     |          Wolof          |     0%     |
+|   ✅    |    xh     |          Xhosa          |    100%    |
+|   ❌    |   b+sah   |       Yakut/Sakha       |     0%     |
+|   ✅    |    ji     |         Yiddish         |    100%    |
+|   ✅    |    yo     |         Yoruba          |    100%    |
+|   ✅    |    zu     |          Zulu           |    100%    |
 
 ---
 
