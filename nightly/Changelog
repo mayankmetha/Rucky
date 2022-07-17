@@ -1,18 +1,26 @@
-• Bump preference from 1.2.0-rc01 to 1.2.0
-• Merge pull request #65 from mayankmetha/dependabot/gradle/androidx.preference-preference-1.2.0
-• Added Android Tiramisu monochrome launcher icon
-• Bump certificatetransparency-android from 1.0.0 to 1.1.0 (#67)
-• Bump certificatetransparency-android from 1.0.0 to 1.1.0 in /app (#66)
-• Added few locale templates
-• Updated locale
-• Updated Readme
-• Added locale template A-G
-• Added locale templates A-J,W-Z
-• Added locale templates A-L,W-Z
-• Added locale templates A-M,W-Z
-• Added locale templates A-O,W-Z
-• Added locale templates A-Q,W-Z
-• Added locale templates A-R,U-Z
-• Added locale templates A-S,U-Z
-• Supporting 210 locale.
-• Android 13 DP1 Support added
+• Bump material from 1.6.0-alpha02 to 1.6.0-alpha03 (#71)
+• Bump gradle from 7.1.1 to 7.1.2 (#70)
+• Rebuild Build environment
+• fixed translations
+• fix translation tool
+• Bump core-splashscreen from 1.0.0-beta01 to 1.0.0-beta02 (#74)
+• Bump material from 1.6.0-alpha03 to 1.6.0-beta01 (#73)
+• Upgrade dependencies
+• Added device owner option for bypassing Android 13 restrictions related to notifications and app updates.
+• Updated CodeQL Workflow
+• Updated Gradle Build
+• Create bandit_scan.yml
+• Update bandit_scan.yml
+• Delete bandit_scan.yml
+• Create bandit.yml
+• Delete bandit.yml
+• Create ossar.yml
+• Create dependency-review.yml
+• Create nowsecure.yml
+• Delete nowsecure.yml
+• Delete dependency-review.yml
+• Delete ossar.yml
+• Added Android 13 Notification Permission
+• Fixed warnings
+• Fixed broken build
+• Nightly 590
