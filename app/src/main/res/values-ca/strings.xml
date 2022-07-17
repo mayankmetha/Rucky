@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">PRÒXIM</string>
+    <string name="init_skip">OMET</string>
+    <string name="init_agree">ACORDAR</string>
+    <string name="init_start">COP DE DESTRAL</string>
+    <string name="slideDesc1">Converteix el teu dispositiu en un ànec de goma!</string>
+    <string name="slideTitle2">Cable USB</string>
+    <string name="slideDesc2">Interfície amb cable USB per llançar un atac!</string>
+    <string name="slideTitle3">Socket de xarxa</string>
+    <string name="slideDesc3">Interfícies de socket basades en Wi-Fi per llançar atacs mitjançant eines externes compatibles!</string>
+    <string name="slideTitle4">Exempció de responsabilitat</string>
+    <string name="slideDesc4">L\'usuari de l\'aplicació és l\'únic responsable dels danys causats. Cap altra entitat es pot fer responsable dels danys causats amb aquesta aplicació! Teniu precaució quan feu servir l\'aplicació i no la feu servir per fer mal a altres persones!</string>
+    <string name="slideTitle5">Política de privacitat</string>
+    <string name="slideDesc5">No es recull, s\'utilitza i es ven cap dada de cap forma! Alguns permisos que podrien plantejar problemes de privadesa només es demanen per al funcionament de determinades funcions de l\'aplicació i no per recollir dades. Es respecta la teva privadesa!</string>
+    <string name="slideTitle6">Permís de l\'aplicació</string>
+    <string name="slideDesc6">Si us plau, concediu a l\'aplicació el permís necessari per funcionar!</string>
     <!-- Update screen -->
+    <string name="update_new">Nova versió d\'actualització disponible:</string>
+    <string name="update_hash_error">La signatura del fitxer no coincideix! No es pot actualitzar.</string>
+    <string name="update_activity">Actualització de Rucky</string>
+    <string name="update_version">Versió</string>
+    <string name="update_version_nightly">Versió nocturna</string>
+    <string name="update_changelog">Registre de canvis</string>
+    <string name="update_status">Actualitza l\'estat</string>
+    <string name="update_action">Baixeu i instal·leu l\'actualització</string>
+    <string name="update_downloading">S\'està baixant l\'actualització</string>
+    <string name="install_update">Aplicant l\'actualització</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Voleu amagar o sortir de l\'aplicació?</string>
+    <string name="btn_exit">Sortida</string>
+    <string name="btn_back">Amaga</string>
+    <string name="unlock">Desbloqueja l\'aplicació</string>
+    <string name="auth">Confirmeu l\'autenticació</string>
+    <string name="update">Actualització</string>
+    <string name="setting">Configuració</string>
+    <string name="codeHint">Escriviu o carregueu scripts d\'ànec de goma aquí</string>
+    <string name="loadBtn">Carrega</string>
+    <string name="saveBtn">Desa</string>
+    <string name="delBtn">Suprimeix</string>
+    <string name="runBtn">Correr</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Continua</string>
+    <string name="root_err">Accés arrel necessari per a l\'atac del cable USB!</string>
+    <string name="kernel_err">"El nucli no és compatible amb l'atac del cable USB!"</string>
+    <string name="vm">L\'entorn virtual no és compatible!</string>
     <!-- Config screen -->
+    <string name="config_activity">Ajustos</string>
+    <string name="config_status_usb_on">Connectat per USB</string>
+    <string name="config_status_usb_off">USB desconnectat</string>
+    <string name="config_status_net_on">Socket de xarxa connectat</string>
+    <string name="config_status_net_off">Socket de xarxa desconnectat</string>
+    <string name="socket_address">Introduïu l\'IP del sòcol i l\'adreça del port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Configuració HID</string>
+    <string name="hid_download">descarregar</string>
+    <string name="hid_update">Actualització</string>
+    <string name="hid_edit">Edita</string>
+    <string name="hid_delete">Suprimeix</string>
     <!-- Keylist screen -->
+    <string name="key_title">Nom de la clau</string>
+    <string name="key_character">Personatge clau</string>
+    <string name="key_code">Clau</string>
+    <string name="key_ctrl">Tecla Ctrl</string>
+    <string name="key_alt">Tecla Alt</string>
+    <string name="key_shift">Tecla Maj</string>
+    <string name="key_meta">Meta Clau</string>
+    <string name="keycode">Clau</string>
+    <string name="modcode">Codi modificador</string>
+    <string name="key_details">Detalls clau</string>
     <!-- Setting screen -->
+    <string name="setting_general">General</string>
+    <string name="dark_theme_title">Mode nocturn</string>
+    <string name="dark_theme_summary">Estableix un tema fosc</string>
+    <string name="device_admin_title">Fer propietari del dispositiu de l\'aplicació</string>
+    <string name="device_admin_summary">Arrel requerit. Això és per evitar algunes de les restriccions d\'Android.</string>
+    <string name="hide_icon_title">Amaga/Desactiva la icona del llançador</string>
+    <string name="hide_icon_summary">Marca *</string>
+    <string name="delete_dep_title">Desinstal·la l\'aplicació</string>
+    <string name="delete_dep_summary">Neteja i desinstal·la l\'aplicació.</string>
+    <string name="settings_sec_title">Seguretat anticipada</string>
+    <string name="settings_sec_desc">Activa el xifratge de fitxers d\'script i el bloqueig de pantalla.</string>
+    <string name="setting_device">Configuració del mode d\'atac</string>
+    <string name="configfs_title">Configuració automàtica de ConfigFS</string>
+    <string name="configfs_summary">Configurarà HID als dispositius compatibles amb ConfigFS. Pot trencar la configuració USB.</string>
+    <string name="hid_choice_title">HID personalitzable</string>
+    <string name="hid_choice_summary">Canvia entre HID heretat i HID personalitzable</string>
+    <string name="hid_title">Llenguatge HID</string>
+    <string name="hid_summary">Baixeu idiomes HID addicionals o dissenyeu nous dissenys HID.</string>
+    <string name="settings_usb_title">Inici de connexió USB</string>
+    <string name="settings_usb_desc">El botó Executar llançarà un atac quan l\'USB estigui connectat.</string>
+    <string name="settings_net_title">Llançament de connexió de presa de xarxa</string>
+    <string name="settings_net_desc">El botó Executar llançarà un atac quan el connector de xarxa estigui connectat.</string>
+    <string name="setting_about">Informació</string>
+    <string name="setting_developer_title">Desenvolupador</string>
+    <string name="settings_version_title">Versió</string>
+    <string name="settings_arch_title">Arquitectura</string>
+    <string name="settings_lic_title">llicència</string>
+    <string name="settings_support">Suport</string>
+    <string name="settings_git_title">Problemes de GitHub</string>
+    <string name="settings_git_desc">Feu clic per afegir problemes o sol·licitud de funció.</string>
+    <string name="settings_locale_title">Localització</string>
+    <string name="settings_locale_desc">Contribuir a la localització d\'aplicacions.</string>
+    <string name="release">Distribució</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Versió de GitHub</string>
+    <string name="releaseGitHubNightly">GitHub cada nit</string>
+    <string name="releaseTest">Alliberament de depuració</string>
+    <string name="releaseOthers">Versió no compatible</string>
+    <string name="btn_cancel">Cancel · lar</string>
+    <string name="btn_save">Desa</string>
+    <string name="file_saved">guardat</string>
+    <string name="title_open_file">Arxiu obert</string>
+    <string name="title_delete_file">Esborrar Arxiu</string>
+    <string name="file_deleted">esborrat</string>
+    <string name="file_name">Nom de l\'arxiu</string>
+    <string name="title_save_file">Guardar arxiu</string>
+    <string name="hid_version">Versió: %d</string>
+    <string-array name="modes">
+        <item>Cable USB</item>
+        <item>Socket de xarxa</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>anglès americà</item>
+        <item>turc</item>
+        <item>suec</item>
+        <item>eslovè</item>
+        <item>rus</item>
+        <item>portuguès</item>
+        <item>noruec</item>
+        <item>italià</item>
+        <item>croat</item>
+        <item>Anglès del Regne Unit</item>
+        <item>francès</item>
+        <item>finès</item>
+        <item>espanyol</item>
+        <item>danès</item>
+        <item>alemany</item>
+        <item>francès canadenc</item>
+        <item>portuguès brasiler</item>
+        <item>Bielorús</item>
+        <item>hongarès</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automàtic</item>
+        <item>Dia</item>
+        <item>Nit</item>
+    </string-array>
 </resources>

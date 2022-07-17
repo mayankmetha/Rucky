@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ቀጣይ</string>
+    <string name="init_skip">ዝለል</string>
+    <string name="init_agree">ተስማማ</string>
+    <string name="init_start">ሀክ</string>
+    <string name="slideDesc1">መሳሪያዎን ወደ ጎማ ዳኪ ይለውጡት!</string>
+    <string name="slideTitle2">የዩኤስቢ ገመድ</string>
+    <string name="slideDesc2">ጥቃት ለመጀመር የዩኤስቢ ባለገመድ በይነገጽ!</string>
+    <string name="slideTitle3">የአውታረ መረብ ሶኬት</string>
+    <string name="slideDesc3">በሚደገፉ ውጫዊ መሳሪያዎች በኩል ጥቃት ለመጀመር በWi-Fi ላይ የተመሰረቱ የሶኬት በይነገጾች!</string>
+    <string name="slideTitle4">ማስተባበያ</string>
+    <string name="slideDesc4">ለደረሰው ጉዳት የመተግበሪያው ተጠቃሚ ብቻውን ተጠያቂ ነው። ይህን መተግበሪያ በመጠቀም ለደረሰው ጉዳት ሌላ አካል ተጠያቂ ሊሆን አይችልም! መተግበሪያውን ሲጠቀሙ ጥንቃቄን ይለማመዱ እና ይህንን በሌሎች ላይ ጉዳት ለማድረስ አይጠቀሙ!</string>
+    <string name="slideTitle5">የ ግል የሆነ</string>
+    <string name="slideDesc5">ምንም አይነት መረጃ አይሰበሰብም ፣ አይጠቀምም እና አይሸጥም! የግላዊነት ስጋቶችን ሊያሳድጉ የሚችሉ አንዳንድ ፈቃዶች የሚጠየቁት በመተግበሪያው ውስጥ የተወሰኑ ባህሪያት እንዲሰሩ ብቻ ነው እና ውሂብ ለመሰብሰብ አይደሉም! የእርስዎ ግላዊነት የተከበረ ነው!</string>
+    <string name="slideTitle6">የመተግበሪያ ፍቃድ</string>
+    <string name="slideDesc6">እባክዎን መተግበሪያ እንዲሰራ አስፈላጊውን ፍቃድ ይስጡት!</string>
     <!-- Update screen -->
+    <string name="update_new">አዲስ ዝማኔ የሚገኝ ሥሪት፡-</string>
+    <string name="update_hash_error">የፋይል ፊርማ አለመዛመድ! ማዘመን አልተቻለም።</string>
+    <string name="update_activity">ሩኪ ዝማኔ</string>
+    <string name="update_version">ሥሪት</string>
+    <string name="update_version_nightly">የምሽት ስሪት</string>
+    <string name="update_changelog">ለውጥ ሎግ</string>
+    <string name="update_status">ሁኔታን አዘምን</string>
+    <string name="update_action">ዝማኔን ያውርዱ እና ይጫኑ</string>
+    <string name="update_downloading">ዝመናን በማውረድ ላይ</string>
+    <string name="install_update">ዝማኔን በመተግበር ላይ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">መተግበሪያውን መደበቅ ወይም መውጣት ይፈልጋሉ?</string>
+    <string name="btn_exit">ውጣ</string>
+    <string name="btn_back">ደብቅ</string>
+    <string name="unlock">መተግበሪያን ክፈት</string>
+    <string name="auth">ማረጋገጥን ያረጋግጡ</string>
+    <string name="update">አዘምን</string>
+    <string name="setting">ቅንብሮች</string>
+    <string name="codeHint">የጎማ ዳክዬ ስክሪፕቶችን እዚህ ይተይቡ ወይም ይጫኑ</string>
+    <string name="loadBtn">ጫን</string>
+    <string name="saveBtn">አስቀምጥ</string>
+    <string name="delBtn">ሰርዝ</string>
+    <string name="runBtn">ሩጡ</string>
+    <string name="confBtn">አዋቅር</string>
+    <string name="btn_continue">ቀጥል</string>
+    <string name="root_err">ለUSB ገመድ ጥቃት ስርወ መዳረሻ ያስፈልጋል!</string>
+    <string name="kernel_err">"ከርነል ለዩኤስቢ ገመድ ጥቃት አይደገፍም!"</string>
+    <string name="vm">ምናባዊ አካባቢ አይደገፍም!</string>
     <!-- Config screen -->
+    <string name="config_activity">ማስተካከያዎች</string>
+    <string name="config_status_usb_on">ዩኤስቢ ተገናኝቷል።</string>
+    <string name="config_status_usb_off">የዩኤስቢ ግንኙነት ተቋርጧል</string>
+    <string name="config_status_net_on">የአውታረ መረብ ሶኬት ተገናኝቷል።</string>
+    <string name="config_status_net_off">የአውታረ መረብ ሶኬት ተቋርጧል</string>
+    <string name="socket_address">የሶኬት አይፒ እና የፖርት አድራሻ ያስገቡ</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID ውቅር</string>
+    <string name="hid_download">አውርድ</string>
+    <string name="hid_update">አዘምን</string>
+    <string name="hid_edit">አርትዕ</string>
+    <string name="hid_delete">ሰርዝ</string>
     <!-- Keylist screen -->
+    <string name="key_title">ቁልፍ ስም</string>
+    <string name="key_character">ቁልፍ ባህሪ</string>
+    <string name="key_code">ቁልፍ ኮድ</string>
+    <string name="key_ctrl">Ctrl ቁልፍ</string>
+    <string name="key_alt">Alt ቁልፍ</string>
+    <string name="key_shift">Shift ቁልፍ</string>
+    <string name="key_meta">ሜታ ቁልፍ</string>
+    <string name="keycode">ቁልፍ ኮድ</string>
+    <string name="modcode">የመቀየሪያ ኮድ</string>
+    <string name="key_details">ቁልፍ ዝርዝሮች</string>
     <!-- Setting screen -->
+    <string name="setting_general">አጠቃላይ</string>
+    <string name="dark_theme_title">የምሽት ሁነታ</string>
+    <string name="dark_theme_summary">ጨለማ ገጽታ አዘጋጅ</string>
+    <string name="device_admin_title">የመተግበሪያ መሣሪያ ባለቤት አድርግ</string>
+    <string name="device_admin_summary">ሥር ያስፈልጋል። ይህ በአንድሮይድ ላይ አንዳንድ ገደቦችን ማለፍ ነው።</string>
+    <string name="hide_icon_title">የማስጀመሪያ አዶን ደብቅ/አቦዝን</string>
+    <string name="hide_icon_summary">ደውል *</string>
+    <string name="delete_dep_title">መተግበሪያን አራግፍ</string>
+    <string name="delete_dep_summary">መተግበሪያን ያጽዱ እና ያራግፉ።</string>
+    <string name="settings_sec_title">የቅድሚያ ደህንነት</string>
+    <string name="settings_sec_desc">የስክሪፕት ፋይል ምስጠራን እና የስክሪን መቆለፊያን አንቃ።</string>
+    <string name="setting_device">የጥቃት ሁነታ ቅንብሮች</string>
+    <string name="configfs_title">ConfigFSን በራስ ሰር ያዋቅሩ</string>
+    <string name="configfs_summary">HID በ ConfigFS በሚደገፉ መሳሪያዎች ላይ ያዋቅራል። የዩኤስቢ ቅንብርን ሊሰብር ይችላል።</string>
+    <string name="hid_choice_title">ሊበጅ የሚችል HID</string>
+    <string name="hid_choice_summary">በLegacy HID እና ሊበጅ በሚችል HID መካከል ይቀያይሩ</string>
+    <string name="hid_title">HID ቋንቋ</string>
+    <string name="hid_summary">ተጨማሪ HID ቋንቋዎችን ያውርዱ ወይም አዲስ HID አቀማመጦችን ይንደፉ።</string>
+    <string name="settings_usb_title">የዩኤስቢ ግንኙነት ማስጀመር</string>
+    <string name="settings_usb_desc">የሩጫ ቁልፍ ዩኤስቢ ሲገናኝ ጥቃት ይጀምራል።</string>
+    <string name="settings_net_title">የአውታረ መረብ ሶኬት ግንኙነት ማስጀመር</string>
+    <string name="settings_net_desc">የአውታረ መረብ ሶኬት ሲገናኝ አሂድ ቁልፍ ጥቃት ይጀምራል።</string>
+    <string name="setting_about">መረጃ</string>
+    <string name="setting_developer_title">ገንቢ</string>
+    <string name="settings_version_title">ሥሪት</string>
+    <string name="settings_arch_title">አርክቴክቸር</string>
+    <string name="settings_lic_title">ፈቃድ</string>
+    <string name="settings_support">ድጋፍ</string>
+    <string name="settings_git_title">GitHub ጉዳዮች</string>
+    <string name="settings_git_desc">ጉዳዮችን ወይም የባህሪ ጥያቄን ለመጨመር ጠቅ ያድርጉ።</string>
+    <string name="settings_locale_title">አካባቢያዊነት</string>
+    <string name="settings_locale_desc">ለመተግበሪያ አካባቢያዊነት አስተዋፅዖ ያድርጉ።</string>
+    <string name="release">ስርጭት</string>
+    <string name="releaseNetHunter">NetHunter መተግበሪያ መደብር</string>
+    <string name="releaseGitHub">GitHub ልቀቅ</string>
+    <string name="releaseGitHubNightly">GitHub የምሽት</string>
+    <string name="releaseTest">የማረሚያ ልቀት።</string>
+    <string name="releaseOthers">የማይደገፍ ልቀት</string>
+    <string name="btn_cancel">ሰርዝ</string>
+    <string name="btn_save">አስቀምጥ</string>
+    <string name="file_saved">ተቀምጧል</string>
+    <string name="title_open_file">ክፍት ፋይል</string>
+    <string name="title_delete_file">ፋይል ሰርዝ</string>
+    <string name="file_deleted">ተሰርዟል።</string>
+    <string name="file_name">የመዝገብ ስም</string>
+    <string name="title_save_file">ፋይል አስቀምጥ</string>
+    <string name="hid_version">ስሪት፡ %d</string>
+    <string-array name="modes">
+        <item>የዩኤስቢ ገመድ</item>
+        <item>የአውታረ መረብ ሶኬት</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>የአሜሪካ እንግሊዝኛ</item>
+        <item>ቱሪክሽ</item>
+        <item>ስዊድንኛ</item>
+        <item>ስሎቬንያን</item>
+        <item>ራሺያኛ</item>
+        <item>ፖርቹጋልኛ</item>
+        <item>ኖርወይኛ</item>
+        <item>ጣሊያንኛ</item>
+        <item>ክሮኤሽያን</item>
+        <item>ዩናይትድ ኪንግደም እንግሊዝኛ</item>
+        <item>ፈረንሳይኛ</item>
+        <item>ፊኒሽ</item>
+        <item>ስፓንኛ</item>
+        <item>ዳኒሽ</item>
+        <item>ጀርመንኛ</item>
+        <item>የካናዳ ፈረንሳይኛ</item>
+        <item>የብራዚል ፖርቱጋልኛ</item>
+        <item>ቤላሩሲያን</item>
+        <item>ሃንጋሪያን</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>መኪና</item>
+        <item>ቀን</item>
+        <item>ለሊት</item>
+    </string-array>
 </resources>

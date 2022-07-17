@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">TJETËR</string>
+    <string name="init_skip">KAQ</string>
+    <string name="init_agree">PAJTOHET</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Kthejeni pajisjen tuaj në një Rubber Ducky!</string>
+    <string name="slideTitle2">Kabllo USB</string>
+    <string name="slideDesc2">Ndërfaqja me kabllo USB për nisjen e sulmit!</string>
+    <string name="slideTitle3">Priza e rrjetit</string>
+    <string name="slideDesc3">Ndërfaqet e prizës së bazuar në Wi-Fi për nisjen e sulmit nëpërmjet mjeteve të jashtme të mbështetura!</string>
+    <string name="slideTitle4">Mohim përgjegjësie</string>
+    <string name="slideDesc4">Përdoruesi i aplikacionit është i vetmi përgjegjës për dëmet e shkaktuara. Asnjë subjekt tjetër nuk mund të mbahet përgjegjës për dëmet e bëra duke përdorur këtë aplikacion! Tregoni kujdes kur përdorni aplikacionin dhe mos e përdorni këtë për të shkaktuar dëm te të tjerët!</string>
+    <string name="slideTitle5">Politika e privatësisë</string>
+    <string name="slideDesc5">Asnjë e dhënë e asnjë forme nuk mblidhet, përdoret dhe shitet! Disa leje që mund të ngrenë shqetësime për privatësinë kërkohen vetëm për funksionimin e disa veçorive në aplikacion dhe nuk është për të mbledhur të dhëna! Privatësia juaj respektohet!</string>
+    <string name="slideTitle6">Leja e aplikacionit</string>
+    <string name="slideDesc6">Ju lutemi jepni aplikacionit lejen e kërkuar për të punuar!</string>
     <!-- Update screen -->
+    <string name="update_new">Versioni i disponueshëm i përditësimit të ri:</string>
+    <string name="update_hash_error">Mospërputhje e nënshkrimit të skedarit! Nuk mund të përditësohet.</string>
+    <string name="update_activity">Përditësimi Rucky</string>
+    <string name="update_version">Version</string>
+    <string name="update_version_nightly">Versioni i natës</string>
+    <string name="update_changelog">Ndryshim</string>
+    <string name="update_status">Përditëso statusin</string>
+    <string name="update_action">Shkarkoni dhe instaloni përditësimin</string>
+    <string name="update_downloading">Përditësimi po shkarkohet</string>
+    <string name="install_update">Aplikimi i përditësimit</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Dëshironi të fshiheni apo të dilni nga aplikacioni?</string>
+    <string name="btn_exit">Dilni</string>
+    <string name="btn_back">Fshih</string>
+    <string name="unlock">Zhblloko aplikacionin</string>
+    <string name="auth">Konfirmo vërtetimin</string>
+    <string name="update">Përditëso</string>
+    <string name="setting">Cilësimet</string>
+    <string name="codeHint">Shkruani ose ngarkoni skriptet gome ducky këtu</string>
+    <string name="loadBtn">Ngarkoni</string>
+    <string name="saveBtn">Ruaj</string>
+    <string name="delBtn">Fshije</string>
+    <string name="runBtn">Vraponi</string>
+    <string name="confBtn">Konfigurimi</string>
+    <string name="btn_continue">Vazhdoni</string>
+    <string name="root_err">Kërkohet qasja në rrënjë për sulmin me kabllo USB!</string>
+    <string name="kernel_err">"Kerneli nuk mbështetet për sulmin me kabllo USB!"</string>
+    <string name="vm">Mjedisi virtual nuk mbështetet!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">U lidh USB</string>
+    <string name="config_status_usb_off">USB u shkëput</string>
+    <string name="config_status_net_on">Lidhja e prizës së rrjetit</string>
+    <string name="config_status_net_off">Priza e rrjetit është shkëputur</string>
+    <string name="socket_address">Futni IP të Socket dhe Adresën e Portit</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Konfigurimi i HID</string>
+    <string name="hid_download">Shkarko</string>
+    <string name="hid_update">Përditëso</string>
+    <string name="hid_edit">Redakto</string>
+    <string name="hid_delete">Fshije</string>
     <!-- Keylist screen -->
+    <string name="key_title">Emri kyç</string>
+    <string name="key_character">Karakteri kyç</string>
+    <string name="key_code">Kodi kyç</string>
+    <string name="key_ctrl">Tasti Ctrl</string>
+    <string name="key_alt">Tasti Alt</string>
+    <string name="key_shift">Tasti Shift</string>
+    <string name="key_meta">Çelësi Meta</string>
+    <string name="keycode">Kodi kyç</string>
+    <string name="modcode">Kodi i modifikuesit</string>
+    <string name="key_details">Detajet kryesore</string>
     <!-- Setting screen -->
+    <string name="setting_general">Gjeneral</string>
+    <string name="dark_theme_title">Modaliteti i natës</string>
+    <string name="dark_theme_summary">Vendos një temë të errët</string>
+    <string name="device_admin_title">Bëje zotërues të pajisjes së aplikacionit</string>
+    <string name="device_admin_summary">Kërkohet rrënjë. Kjo është për të anashkaluar disa nga kufizimet në Android.</string>
+    <string name="hide_icon_title">Fshih/Çaktivizo ikonën e nisësit</string>
+    <string name="hide_icon_summary">Telefono *</string>
+    <string name="delete_dep_title">Çinstaloni aplikacionin</string>
+    <string name="delete_dep_summary">Pastroni dhe çinstaloni aplikacionin.</string>
+    <string name="settings_sec_title">Sigurimi i avancuar</string>
+    <string name="settings_sec_desc">Aktivizo enkriptimin e skedarit të skriptit dhe kyçjen e ekranit.</string>
+    <string name="setting_device">Cilësimet e modalitetit të sulmit</string>
+    <string name="configfs_title">Konfiguro automatikisht ConfigFS</string>
+    <string name="configfs_summary">Do të konfigurojë HID në pajisjet e mbështetura nga ConfigFS. Mund të prishë cilësimin USB.</string>
+    <string name="hid_choice_title">HID i personalizueshëm</string>
+    <string name="hid_choice_summary">Kalo midis HID të trashëguar dhe HID të personalizueshëm</string>
+    <string name="hid_title">Gjuha e fshehtë</string>
+    <string name="hid_summary">Shkarkoni gjuhë të tjera HID ose dizajnoni paraqitje të reja HID.</string>
+    <string name="settings_usb_title">Nisja e lidhjes USB</string>
+    <string name="settings_usb_desc">Butoni Run do të nisë sulmin kur lidhet USB.</string>
+    <string name="settings_net_title">Nisja e lidhjes së prizës së rrjetit</string>
+    <string name="settings_net_desc">Butoni \"Run\" do të nisë sulmin kur lidhet Rrjeti Socket.</string>
+    <string name="setting_about">Informacion</string>
+    <string name="setting_developer_title">Zhvilluesi</string>
+    <string name="settings_version_title">Version</string>
+    <string name="settings_arch_title">Arkitekturë</string>
+    <string name="settings_lic_title">Liçensë</string>
+    <string name="settings_support">Mbështetje</string>
+    <string name="settings_git_title">Problemet e GitHub</string>
+    <string name="settings_git_desc">Klikoni për të shtuar probleme ose kërkesë për veçori.</string>
+    <string name="settings_locale_title">Lokalizimi</string>
+    <string name="settings_locale_desc">Kontribuoni në lokalizimin e aplikacionit.</string>
+    <string name="release">Shpërndarja</string>
+    <string name="releaseNetHunter">Dyqani i aplikacioneve NetHunter</string>
+    <string name="releaseGitHub">Publikimi i GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Publikimi i korrigjimit</string>
+    <string name="releaseOthers">Publikim i pambështetur</string>
+    <string name="btn_cancel">Anulo</string>
+    <string name="btn_save">Ruaj</string>
+    <string name="file_saved">i ruajtur</string>
+    <string name="title_open_file">Hap skedarin</string>
+    <string name="title_delete_file">Fshi Skedarin</string>
+    <string name="file_deleted">fshihet</string>
+    <string name="file_name">Emri i skedarit</string>
+    <string name="title_save_file">Ruaj dosjen</string>
+    <string name="hid_version">Versioni: %d</string>
+    <string-array name="modes">
+        <item>Kabllo USB</item>
+        <item>Priza e rrjetit</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>anglisht amerikane</item>
+        <item>turk</item>
+        <item>suedeze</item>
+        <item>slloven</item>
+        <item>rusisht</item>
+        <item>portugeze</item>
+        <item>norvegjeze</item>
+        <item>italisht</item>
+        <item>kroate</item>
+        <item>Mbretëria e Bashkuar Anglisht</item>
+        <item>frëngjisht</item>
+        <item>finlandez</item>
+        <item>Spanjisht</item>
+        <item>daneze</item>
+        <item>gjermanisht</item>
+        <item>Frëngjisht kanadeze</item>
+        <item>Portugez brazilian</item>
+        <item>bjellorusisht</item>
+        <item>hungareze</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Dita</item>
+        <item>Natën</item>
+    </string-array>
 </resources>

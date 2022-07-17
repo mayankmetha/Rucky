@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">LUMPATI</string>
+    <string name="init_agree">SETUJU</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Ganti piranti sampeyan dadi Bebek Karet!</string>
+    <string name="slideTitle2">Kabel USB</string>
+    <string name="slideDesc2">Antarmuka kabel USB kanggo miwiti serangan!</string>
+    <string name="slideTitle3">Soket Jaringan</string>
+    <string name="slideDesc3">Antarmuka soket adhedhasar Wi-Fi kanggo ngluncurake serangan liwat piranti eksternal sing didhukung!</string>
+    <string name="slideTitle4">Penafian</string>
+    <string name="slideDesc4">Pangguna app mung tanggung jawab kanggo karusakan sing disebabake. Ora ana entitas liyane sing bisa tanggung jawab kanggo kerusakan sing ditindakake nggunakake aplikasi iki! Laku ati-ati nalika nggunakake app lan aja nggunakake iki kanggo gawe piala kanggo wong liya!</string>
+    <string name="slideTitle5">Kebijakan Privasi</string>
+    <string name="slideDesc5">Ora ana Data apa wae sing diklumpukake, digunakake lan didol! Sawetara ijin sing bisa nyebabake keprihatinan privasi mung dijaluk kanggo fungsi tartamtu ing app lan ora kanggo ngumpulake data! Privasi sampeyan dihormati!</string>
+    <string name="slideTitle6">Izin App</string>
+    <string name="slideDesc6">Mangga wenehi app ijin sing dibutuhake kanggo bisa!</string>
     <!-- Update screen -->
+    <string name="update_new">Nganyari Anyar Versi kasedhiya:</string>
+    <string name="update_hash_error">File Signature Mmatch! Ora Bisa Nganyari.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Versi</string>
+    <string name="update_version_nightly">Versi wengi</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Nganyari Status</string>
+    <string name="update_action">Ngundhuh lan Instal Update</string>
+    <string name="update_downloading">Ngundhuh Update</string>
+    <string name="install_update">Nglamar Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Apa sampeyan pengin ndhelikake utawa metu saka app?</string>
+    <string name="btn_exit">metu</string>
+    <string name="btn_back">Singidaken</string>
+    <string name="unlock">Mbukak kunci App</string>
+    <string name="auth">Konfirmasi otentikasi</string>
+    <string name="update">Nganyari</string>
+    <string name="setting">Setelan</string>
+    <string name="codeHint">Ketik utawa muat skrip bebek karet ing kene</string>
+    <string name="loadBtn">Muatan</string>
+    <string name="saveBtn">Simpen</string>
+    <string name="delBtn">Mbusak</string>
+    <string name="runBtn">Mlayu</string>
+    <string name="confBtn">Konfigurasi</string>
+    <string name="btn_continue">Terus</string>
+    <string name="root_err">Akses Root Dibutuhake Kanggo Serangan Kabel USB!</string>
+    <string name="kernel_err">"Kernel Ora Didhukung Kanggo Serangan Kabel USB!"</string>
+    <string name="vm">Lingkungan virtual ora didhukung!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Disambungake</string>
+    <string name="config_status_usb_off">USB Pedhot</string>
+    <string name="config_status_net_on">Soket Jaringan Disambungake</string>
+    <string name="config_status_net_off">Soket Jaringan Pedhot</string>
+    <string name="socket_address">Ketik IP Soket lan Alamat Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Konfigurasi HID</string>
+    <string name="hid_download">Ngundhuh</string>
+    <string name="hid_update">Nganyari</string>
+    <string name="hid_edit">Sunting</string>
+    <string name="hid_delete">Mbusak</string>
     <!-- Keylist screen -->
+    <string name="key_title">Jeneng kunci</string>
+    <string name="key_character">Karakter Kunci</string>
+    <string name="key_code">Kode Kunci</string>
+    <string name="key_ctrl">Tombol Ctrl</string>
+    <string name="key_alt">Tombol Alt</string>
+    <string name="key_shift">Tombol Shift</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Kode Kunci</string>
+    <string name="modcode">Kode Modifier</string>
+    <string name="key_details">Rincian Kunci</string>
     <!-- Setting screen -->
+    <string name="setting_general">Umum</string>
+    <string name="dark_theme_title">Mode wengi</string>
+    <string name="dark_theme_summary">Setel tema peteng</string>
+    <string name="device_admin_title">Nggawe pamilik piranti app</string>
+    <string name="device_admin_summary">Root dibutuhake. Iki kanggo ngliwati sawetara watesan ing Android.</string>
+    <string name="hide_icon_title">Singidaken /Pateni Ikon Launcher</string>
+    <string name="hide_icon_summary">Telpon *</string>
+    <string name="delete_dep_title">Busak instal App</string>
+    <string name="delete_dep_summary">Ngresiki lan instal app.</string>
+    <string name="settings_sec_title">Keamanan Maju</string>
+    <string name="settings_sec_desc">Aktifake enkripsi file skrip lan kunci layar.</string>
+    <string name="setting_device">Setelan Mode Serangan</string>
+    <string name="configfs_title">Konfigurasi Otomatis ConfigFS</string>
+    <string name="configfs_summary">Bakal ngatur HID ing piranti sing didhukung ConfigFS. Bisa ngrusak setelan USB.</string>
+    <string name="hid_choice_title">HID sing bisa disesuaikan</string>
+    <string name="hid_choice_summary">Ngalih ing antarane Warisan HID lan Customizable HID</string>
+    <string name="hid_title">Basa HID</string>
+    <string name="hid_summary">Unduh basa HID tambahan utawa desain tata letak HID anyar.</string>
+    <string name="settings_usb_title">Bukak Sambungake USB</string>
+    <string name="settings_usb_desc">Tombol Run bakal miwiti serangan nalika USB disambungake.</string>
+    <string name="settings_net_title">Bukak Network Socket Connect</string>
+    <string name="settings_net_desc">Tombol Run bakal miwiti serangan nalika Soket Jaringan disambungake.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">pangembang</string>
+    <string name="settings_version_title">Versi</string>
+    <string name="settings_arch_title">Arsitektur</string>
+    <string name="settings_lic_title">Lisensi</string>
+    <string name="settings_support">Nyokong</string>
+    <string name="settings_git_title">Masalah GitHub</string>
+    <string name="settings_git_desc">Klik kanggo nambah masalah utawa panjalukan fitur.</string>
+    <string name="settings_locale_title">Lokalisasi</string>
+    <string name="settings_locale_desc">Kontribusi kanggo lokalisasi app.</string>
+    <string name="release">Distribusi</string>
+    <string name="releaseNetHunter">Toko Aplikasi NetHunter</string>
+    <string name="releaseGitHub">Rilis GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Rilis</string>
+    <string name="releaseOthers">Rilis Non Didhukung</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_save">Simpen</string>
+    <string name="file_saved">disimpen</string>
+    <string name="title_open_file">Buka berkas</string>
+    <string name="title_delete_file">Busak File</string>
+    <string name="file_deleted">dibusak</string>
+    <string name="file_name">Jeneng berkas</string>
+    <string name="title_save_file">Simpen File</string>
+    <string name="hid_version">Versi: %d</string>
+    <string-array name="modes">
+        <item>Kabel USB</item>
+        <item>Soket Jaringan</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Inggris Amérika</item>
+        <item>basa Turki</item>
+        <item>Swedia</item>
+        <item>basa Slovenia</item>
+        <item>Rusian</item>
+        <item>Portugis</item>
+        <item>basa Norwegia</item>
+        <item>basa Italia</item>
+        <item>basa Kroasia</item>
+        <item>Inggris Inggris</item>
+        <item>Prancis</item>
+        <item>basa Finlandia</item>
+        <item>Spanyol</item>
+        <item>Danish</item>
+        <item>Jerman</item>
+        <item>Prancis Kanada</item>
+        <item>Portugis Brasil</item>
+        <item>Belarusia</item>
+        <item>Hungaria</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>dina</item>
+        <item>wengi</item>
+    </string-array>
 </resources>

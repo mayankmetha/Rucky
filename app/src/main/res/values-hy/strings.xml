@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ՀԱՋՈՐԴ</string>
+    <string name="init_skip">ԲԱՑՆԵԼ</string>
+    <string name="init_agree">ՀԱՄԱՁԱՅՆՎԵԼ</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Ձեր սարքը դարձրեք ռետինե բադիկի:</string>
+    <string name="slideTitle2">USB մալուխ</string>
+    <string name="slideDesc2">USB լարային ինտերֆեյս հարձակում գործարկելու համար:</string>
+    <string name="slideTitle3">Ցանցային վարդակից</string>
+    <string name="slideDesc3">Wi-Fi-ի վրա հիմնված վարդակների միջերեսներ՝ աջակցվող արտաքին գործիքների միջոցով հարձակում գործարկելու համար:</string>
+    <string name="slideTitle4">Հրաժարում պատասխանատվությունից</string>
+    <string name="slideDesc4">Հավելվածի օգտագործողը բացառապես պատասխանատու է պատճառված վնասների համար: Ոչ մի այլ կազմակերպություն չի կարող պատասխանատվություն կրել այս հավելվածի միջոցով կատարված վնասների համար: Զգույշ եղեք հավելվածն օգտագործելիս և մի օգտագործեք այն ուրիշներին վնաս պատճառելու համար:</string>
+    <string name="slideTitle5">Գաղտնիության քաղաքականություն</string>
+    <string name="slideDesc5">Ոչ մի ձևի տվյալներ չեն հավաքվում, օգտագործվում և վաճառվում: Որոշ թույլտվություններ, որոնք կարող են գաղտնիության հետ կապված մտահոգություններ առաջացնել, խնդրվում են միայն հավելվածում որոշակի գործառույթների աշխատանքի համար և տվյալներ հավաքելու համար: Ձեր գաղտնիությունը հարգված է:</string>
+    <string name="slideTitle6">Հավելվածի թույլտվություն</string>
+    <string name="slideDesc6">Խնդրում ենք հավելվածին տրամադրել աշխատանքի համար անհրաժեշտ թույլտվությունը:</string>
     <!-- Update screen -->
+    <string name="update_new">Նոր թարմացման հասանելի տարբերակ՝</string>
+    <string name="update_hash_error">Ֆայլի ստորագրության անհամապատասխանություն: Հնարավոր չէ թարմացնել:</string>
+    <string name="update_activity">Rucky թարմացում</string>
+    <string name="update_version">Տարբերակ</string>
+    <string name="update_version_nightly">Գիշերային տարբերակ</string>
+    <string name="update_changelog">Փոփոխությունների օրագիր</string>
+    <string name="update_status">Թարմացնել կարգավիճակը</string>
+    <string name="update_action">Ներբեռնեք և տեղադրեք թարմացումը</string>
+    <string name="update_downloading">Թարմացումը ներբեռնվում է</string>
+    <string name="install_update">Թարմացման կիրառում</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ցանկանու՞մ եք թաքցնել կամ դուրս գալ հավելվածից:</string>
+    <string name="btn_exit">Ելք</string>
+    <string name="btn_back">Թաքցնել</string>
+    <string name="unlock">Բացել հավելվածը</string>
+    <string name="auth">Հաստատեք նույնականացումը</string>
+    <string name="update">Թարմացնել</string>
+    <string name="setting">Կարգավորումներ</string>
+    <string name="codeHint">Մուտքագրեք կամ բեռնեք ռետինե բադիկ սկրիպտներ այստեղ</string>
+    <string name="loadBtn">Բեռնել</string>
+    <string name="saveBtn">Պահպանել</string>
+    <string name="delBtn">Ջնջել</string>
+    <string name="runBtn">Վազիր</string>
+    <string name="confBtn">Կազմաձև</string>
+    <string name="btn_continue">Շարունակել</string>
+    <string name="root_err">USB մալուխի հարձակման համար անհրաժեշտ է արմատային մուտք:</string>
+    <string name="kernel_err">"«Միջուկը չի ապահովվում USB մալուխի հարձակման համար»:"</string>
+    <string name="vm">Վիրտուալ միջավայրը չի աջակցվում:</string>
     <!-- Config screen -->
+    <string name="config_activity">Կտրուկներ</string>
+    <string name="config_status_usb_on">USB միացված է</string>
+    <string name="config_status_usb_off">USB-ն անջատված է</string>
+    <string name="config_status_net_on">Ցանցի վարդակից միացված է</string>
+    <string name="config_status_net_off">Ցանցի վարդակից անջատված է</string>
+    <string name="socket_address">Մուտքագրեք Socket IP-ն և պորտի հասցեն</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Բեռնել</string>
+    <string name="hid_update">Թարմացնել</string>
+    <string name="hid_edit">Խմբագրել</string>
+    <string name="hid_delete">Ջնջել</string>
     <!-- Keylist screen -->
+    <string name="key_title">Բանալի անվանումը</string>
+    <string name="key_character">Հիմնական կերպար</string>
+    <string name="key_code">Բանալի կոդը</string>
+    <string name="key_ctrl">Ctrl բանալի</string>
+    <string name="key_alt">Alt բանալի</string>
+    <string name="key_shift">Shift ստեղնը</string>
+    <string name="key_meta">Մետա բանալի</string>
+    <string name="keycode">Բանալի կոդը</string>
+    <string name="modcode">Փոփոխիչի կոդը</string>
+    <string name="key_details">Հիմնական մանրամասներ</string>
     <!-- Setting screen -->
+    <string name="setting_general">Գեներալ</string>
+    <string name="dark_theme_title">Գիշերային ռեժիմ</string>
+    <string name="dark_theme_summary">Սահմանեք մուգ թեմա</string>
+    <string name="device_admin_title">Հավելվածի սարքի սեփականատեր դարձրեք</string>
+    <string name="device_admin_summary">Պահանջվում է արմատ: Սա Android-ի որոշ սահմանափակումներ շրջանցելու համար է:</string>
+    <string name="hide_icon_title">Թաքցնել/Անջատել Գործարկիչի պատկերակը</string>
+    <string name="hide_icon_summary">Հավաքեք *</string>
+    <string name="delete_dep_title">Տեղահանել հավելվածը</string>
+    <string name="delete_dep_summary">Մաքրել և հեռացնել հավելվածը:</string>
+    <string name="settings_sec_title">Advance Security</string>
+    <string name="settings_sec_desc">Միացնել սցենարի ֆայլի կոդավորումը և էկրանի կողպումը:</string>
+    <string name="setting_device">Հարձակման ռեժիմի կարգավորումներ</string>
+    <string name="configfs_title">Ավտոմատ կարգավորել ConfigFS-ը</string>
+    <string name="configfs_summary">HID-ը կկազմաձևի ConfigFS աջակցվող սարքերում: Կարող է կոտրել USB կարգավորումը:</string>
+    <string name="hid_choice_title">Կարգավորելի HID</string>
+    <string name="hid_choice_summary">Անցում Legacy HID-ի և Customizable HID-ի միջև</string>
+    <string name="hid_title">HID Լեզուն</string>
+    <string name="hid_summary">Ներբեռնեք լրացուցիչ HID լեզուներ կամ նախագծեք նոր HID դասավորություններ:</string>
+    <string name="settings_usb_title">USB միացման գործարկում</string>
+    <string name="settings_usb_desc">Run կոճակը կսկսի հարձակումը, երբ USB-ը միացված է:</string>
+    <string name="settings_net_title">Network Socket Connect-ի գործարկում</string>
+    <string name="settings_net_desc">Գործարկել կոճակը կսկսի հարձակումը, երբ ցանցային վարդակից միացված լինի:</string>
+    <string name="setting_about">Ինֆո</string>
+    <string name="setting_developer_title">Մշակող</string>
+    <string name="settings_version_title">Տարբերակ</string>
+    <string name="settings_arch_title">Ճարտարապետություն</string>
+    <string name="settings_lic_title">Լիցենզիա</string>
+    <string name="settings_support">Աջակցություն</string>
+    <string name="settings_git_title">GitHub-ի խնդիրներ</string>
+    <string name="settings_git_desc">Սեղմեք՝ խնդիրներ կամ գործառույթի հարցում ավելացնելու համար:</string>
+    <string name="settings_locale_title">Տեղայնացում</string>
+    <string name="settings_locale_desc">Նպաստել հավելվածների տեղայնացմանը:</string>
+    <string name="release">Բաշխում</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub թողարկում</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Վրիպազերծման թողարկում</string>
+    <string name="releaseOthers">Չաջակցվող թողարկում</string>
+    <string name="btn_cancel">Չեղարկել</string>
+    <string name="btn_save">Պահպանել</string>
+    <string name="file_saved">փրկված</string>
+    <string name="title_open_file">Բացել ֆայլը</string>
+    <string name="title_delete_file">Ջնջել Ֆայլը</string>
+    <string name="file_deleted">ջնջված է</string>
+    <string name="file_name">Ֆայլի անուն</string>
+    <string name="title_save_file">Պահպանել Ֆայլը</string>
+    <string name="hid_version">Տարբերակ՝ %d</string>
+    <string-array name="modes">
+        <item>USB մալուխ</item>
+        <item>Ցանցային վարդակից</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Ամերիկյան անգլերեն</item>
+        <item>թուրքական</item>
+        <item>շվեդ</item>
+        <item>սլովեներեն</item>
+        <item>ռուսերեն</item>
+        <item>պորտուգալերեն</item>
+        <item>նորվեգական</item>
+        <item>Իտալական</item>
+        <item>խորվաթերեն</item>
+        <item>Միացյալ Թագավորություն անգլերեն</item>
+        <item>ֆրանսերեն</item>
+        <item>Ֆիններեն</item>
+        <item>իսպաներեն</item>
+        <item>դանիերեն</item>
+        <item>գերմաներեն</item>
+        <item>Կանադական ֆրանսերեն</item>
+        <item>Բրազիլացի պորտուգալացի</item>
+        <item>բելառուս</item>
+        <item>հունգարերեն</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Ավտոմատ</item>
+        <item>Օր</item>
+        <item>Գիշեր</item>
+    </string-array>
 </resources>

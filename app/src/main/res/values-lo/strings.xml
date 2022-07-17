@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ຕໍ່ໄປ</string>
+    <string name="init_skip">ຂ້າມ</string>
+    <string name="init_agree">ຕົກລົງ</string>
+    <string name="init_start">ແຮກ</string>
+    <string name="slideDesc1">ປ່ຽນອຸປະກອນຂອງທ່ານເປັນ Rubber Ducky!</string>
+    <string name="slideTitle2">ສາຍ USB</string>
+    <string name="slideDesc2">ການໂຕ້ຕອບແບບມີສາຍ USB ສໍາລັບການໂຈມຕີ!</string>
+    <string name="slideTitle3">ເຕົ້າຮັບເຄືອຂ່າຍ</string>
+    <string name="slideDesc3">ອິນເຕີເຟດຊັອກເກັດທີ່ອີງໃສ່ Wi-Fi ສຳລັບການເປີດການໂຈມຕີຜ່ານເຄື່ອງມືພາຍນອກທີ່ຮອງຮັບ!</string>
+    <string name="slideTitle4">ປະຕິເສດຄວາມຮັບຜິດຊອບ</string>
+    <string name="slideDesc4">ຜູ້​ໃຊ້ app ໄດ້​ຮັບ​ຜິດ​ຊອບ sole ສໍາ​ລັບ​ຄວາມ​ເສຍ​ຫາຍ​ທີ່​ເກີດ​ຂຶ້ນ​. ບໍ່ມີໜ່ວຍງານອື່ນໃດສາມາດຮັບຜິດຊອບຕໍ່ຄວາມເສຍຫາຍທີ່ເຮັດໄດ້ໂດຍໃຊ້ແອັບນີ້! ປະຕິບັດ​ຄວາມ​ລະມັດລະວັງ​ໃນ​ການ​ໃຊ້​ແອັບ ແລະ​ຢ່າ​ໃຊ້​ອັນ​ນີ້​ໃຫ້​ເກີດ​ອັນຕະລາຍ​ຕໍ່​ຜູ້​ອື່ນ!</string>
+    <string name="slideTitle5">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="slideDesc5">ບໍ່​ມີ​ຂໍ້​ມູນ​ຂອງ​ຮູບ​ແບບ​ໃດ​ຖືກ​ເກັບ​ກໍາ​, ນໍາ​ໃຊ້​ແລະ​ຂາຍ​! ການອະນຸຍາດບາງຢ່າງທີ່ສາມາດເຮັດໃຫ້ເກີດຄວາມກັງວົນດ້ານຄວາມເປັນສ່ວນຕົວແມ່ນຂໍພຽງແຕ່ສໍາລັບການເຮັດວຽກຂອງຄຸນສົມບັດບາງຢ່າງໃນ app ແລະບໍ່ແມ່ນການເກັບກໍາຂໍ້ມູນ! ຄວາມເປັນສ່ວນຕົວຂອງເຈົ້າຖືກເຄົາລົບ!</string>
+    <string name="slideTitle6">ການອະນຸຍາດແອັບ</string>
+    <string name="slideDesc6">ກະ​ລຸ​ນາ​ໃຫ້ app ການ​ອະ​ນຸ​ຍາດ​ທີ່​ຈໍາ​ເປັນ​ເພື່ອ​ເຮັດ​ວຽກ​!</string>
     <!-- Update screen -->
+    <string name="update_new">ສະບັບປັບປຸງໃໝ່ທີ່ມີໃຫ້:</string>
+    <string name="update_hash_error">ໄຟລ໌ລາຍເຊັນບໍ່ກົງກັນ! ບໍ່ສາມາດອັບເດດໄດ້.</string>
+    <string name="update_activity">Rucky ອັບເດດ</string>
+    <string name="update_version">ຮຸ່ນ</string>
+    <string name="update_version_nightly">ສະບັບກາງຄືນ</string>
+    <string name="update_changelog">ບັນທຶກການປ່ຽນແປງ</string>
+    <string name="update_status">ອັບເດດສະຖານະ</string>
+    <string name="update_action">ດາວໂຫຼດ ແລະຕິດຕັ້ງອັບເດດ</string>
+    <string name="update_downloading">ກຳລັງດາວໂຫລດອັບເດດ</string>
+    <string name="install_update">ກຳລັງນຳໃຊ້ການອັບເດດ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">ທ່ານຕ້ອງການເຊື່ອງ ຫຼືອອກຈາກແອັບບໍ?</string>
+    <string name="btn_exit">ອອກໄປ</string>
+    <string name="btn_back">ເຊື່ອງ</string>
+    <string name="unlock">ປົດລັອກແອັບ</string>
+    <string name="auth">ຢືນຢັນການພິສູດຢືນຢັນ</string>
+    <string name="update">ອັບເດດ</string>
+    <string name="setting">ການຕັ້ງຄ່າ</string>
+    <string name="codeHint">ພິມ ຫຼື ໂຫຼດ script ducky ຢາງ ທີ່ນີ້</string>
+    <string name="loadBtn">ໂຫຼດ</string>
+    <string name="saveBtn">ບັນທຶກ</string>
+    <string name="delBtn">ລຶບ</string>
+    <string name="runBtn">ແລ່ນ</string>
+    <string name="confBtn">ກຳນົດຄ່າ</string>
+    <string name="btn_continue">ສືບຕໍ່</string>
+    <string name="root_err">ການ​ເຂົ້າ​ເຖິງ​ຮາກ​ທີ່​ຈໍາ​ເປັນ​ສໍາ​ລັບ​ການ​ໂຈມ​ຕີ​ສາຍ USB​!</string>
+    <string name="kernel_err">"Kernel ບໍ່ຮອງຮັບການໂຈມຕີສາຍ USB!"</string>
+    <string name="vm">ບໍ່ຮອງຮັບສະພາບແວດລ້ອມສະເໝືອນ!</string>
     <!-- Config screen -->
+    <string name="config_activity">ປັບປ່ຽນ</string>
+    <string name="config_status_usb_on">ເຊື່ອມຕໍ່ USB</string>
+    <string name="config_status_usb_off">ຕັດການເຊື່ອມຕໍ່ USB</string>
+    <string name="config_status_net_on">ເຊື່ອມຕໍ່ເຕົ້າຮັບເຄືອຂ່າຍ</string>
+    <string name="config_status_net_off">ຊ່ອງສຽບເຄືອຂ່າຍຖືກຕັດການເຊື່ອມຕໍ່</string>
+    <string name="socket_address">ໃສ່ Socket IP ແລະທີ່ຢູ່ Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">ການຕັ້ງຄ່າ HID</string>
+    <string name="hid_download">ດາວໂຫຼດ</string>
+    <string name="hid_update">ອັບເດດ</string>
+    <string name="hid_edit">ແກ້ໄຂ</string>
+    <string name="hid_delete">ລຶບ</string>
     <!-- Keylist screen -->
+    <string name="key_title">ຊື່ຄີ</string>
+    <string name="key_character">ລັກສະນະທີ່ສໍາຄັນ</string>
+    <string name="key_code">ລະຫັດຫຼັກ</string>
+    <string name="key_ctrl">ປຸ່ມ Ctrl</string>
+    <string name="key_alt">ປຸ່ມ Alt</string>
+    <string name="key_shift">ປຸ່ມ Shift</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">ລະຫັດຫຼັກ</string>
+    <string name="modcode">ລະຫັດຕົວແກ້ໄຂ</string>
+    <string name="key_details">ລາຍລະອຽດຫຼັກ</string>
     <!-- Setting screen -->
+    <string name="setting_general">ທົ່ວໄປ</string>
+    <string name="dark_theme_title">ໂໝດກາງຄືນ</string>
+    <string name="dark_theme_summary">ຕັ້ງຮູບແບບສີສັນມືດ</string>
+    <string name="device_admin_title">ເຮັດໃຫ້ເຈົ້າຂອງອຸປະກອນ app</string>
+    <string name="device_admin_summary">ຕ້ອງການຮາກ. ນີ້ແມ່ນເພື່ອຂ້າມຂໍ້ຈໍາກັດບາງຢ່າງໃນ Android.</string>
+    <string name="hide_icon_title">ເຊື່ອງ/ປິດການໃຊ້ງານໄອຄອນ Launcher</string>
+    <string name="hide_icon_summary">ໂທ *</string>
+    <string name="delete_dep_title">ຖອນການຕິດຕັ້ງແອັບ</string>
+    <string name="delete_dep_summary">ທໍາ​ຄວາມ​ສະ​ອາດ​ແລະ​ຖອນ​ການ​ຕິດ​ຕັ້ງ app​.</string>
+    <string name="settings_sec_title">ຄວາມປອດໄພລ່ວງໜ້າ</string>
+    <string name="settings_sec_desc">ເປີດໃຊ້ການເຂົ້າລະຫັດໄຟລ໌ສະຄຣິບ ແລະການລັອກໜ້າຈໍ.</string>
+    <string name="setting_device">ການຕັ້ງຄ່າໂຫມດການໂຈມຕີ</string>
+    <string name="configfs_title">ຕັ້ງຄ່າອັດຕະໂນມັດ ConfigFS</string>
+    <string name="configfs_summary">ຈະກຳນົດຄ່າ HID ໃນອຸປະກອນທີ່ຮອງຮັບ ConfigFS. ອາດຈະທໍາລາຍການຕັ້ງຄ່າ USB.</string>
+    <string name="hid_choice_title">HID ທີ່ສາມາດປັບແຕ່ງໄດ້</string>
+    <string name="hid_choice_summary">ສະຫຼັບລະຫວ່າງ Legacy HID ແລະ HID ທີ່ສາມາດປັບແຕ່ງໄດ້</string>
+    <string name="hid_title">ພາສາ HID</string>
+    <string name="hid_summary">ດາວໂຫຼດພາສາ HID ເພີ່ມເຕີມ ຫຼືອອກແບບຮູບແບບ HID ໃໝ່.</string>
+    <string name="settings_usb_title">ການເປີດຕົວເຊື່ອມຕໍ່ USB</string>
+    <string name="settings_usb_desc">ປຸ່ມແລ່ນຈະເປີດການໂຈມຕີເມື່ອເຊື່ອມຕໍ່ USB.</string>
+    <string name="settings_net_title">Network Socket Connect ການເປີດຕົວ</string>
+    <string name="settings_net_desc">ປຸ່ມ Run ຈະເປີດການໂຈມຕີເມື່ອ Network Socket ຖືກເຊື່ອມຕໍ່.</string>
+    <string name="setting_about">ຂໍ້ມູນ</string>
+    <string name="setting_developer_title">ນັກພັດທະນາ</string>
+    <string name="settings_version_title">ຮຸ່ນ</string>
+    <string name="settings_arch_title">ສະຖາປັດຕະຍະກໍາ</string>
+    <string name="settings_lic_title">ໃບອະນຸຍາດ</string>
+    <string name="settings_support">ສະຫນັບສະຫນູນ</string>
+    <string name="settings_git_title">ບັນຫາ GitHub</string>
+    <string name="settings_git_desc">ຄລິກເພື່ອເພີ່ມບັນຫາ ຫຼືການຮ້ອງຂໍຄຸນສົມບັດ.</string>
+    <string name="settings_locale_title">ທ້ອງຖິ່ນ</string>
+    <string name="settings_locale_desc">ປະກອບສ່ວນເຂົ້າໃນການແປແອັບ.</string>
+    <string name="release">ການແຜ່ກະຈາຍ</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">ການປ່ອຍ GitHub</string>
+    <string name="releaseGitHubNightly">GitHub ກາງຄືນ</string>
+    <string name="releaseTest">ປ່ອຍ Debug</string>
+    <string name="releaseOthers">ການປ່ອຍທີ່ບໍ່ຮອງຮັບ</string>
+    <string name="btn_cancel">ຍົກເລີກ</string>
+    <string name="btn_save">ບັນທຶກ</string>
+    <string name="file_saved">ບັນທຶກແລ້ວ</string>
+    <string name="title_open_file">ເປີດ File</string>
+    <string name="title_delete_file">ລຶບໄຟລ໌</string>
+    <string name="file_deleted">ລຶບແລ້ວ</string>
+    <string name="file_name">ຊື່​ເອ​ກະ​ສານ</string>
+    <string name="title_save_file">ບັນທຶກໄຟລ໌</string>
+    <string name="hid_version">ລຸ້ນ: %d</string>
+    <string-array name="modes">
+        <item>ສາຍ USB</item>
+        <item>ເຕົ້າຮັບເຄືອຂ່າຍ</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>ພາສາອັງກິດອາເມຣິກາ</item>
+        <item>ຕວກກີ</item>
+        <item>ຊູແອັດ</item>
+        <item>ສະໂລເວເນຍ</item>
+        <item>ພາສາລັດເຊຍ</item>
+        <item>ພາສາປອກຕຸຍການ</item>
+        <item>ນໍເວ</item>
+        <item>ອິຕາລຽນ</item>
+        <item>ໂຄຣເອເຊຍ</item>
+        <item>ອັງກິດ ອັງກິດ</item>
+        <item>ພາສາຝຣັ່ງ</item>
+        <item>ຟິນແລນ</item>
+        <item>ແອສປາໂຍນ</item>
+        <item>ເດັນມາກ</item>
+        <item>ເຢຍລະມັນ</item>
+        <item>ຝຣັ່ງ ການາດາ</item>
+        <item>Brazilian Portuguese</item>
+        <item>ເບລາຣຸດ</item>
+        <item>ຮັງກາຣີ</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ອັດຕະໂນມັດ</item>
+        <item>ມື້</item>
+        <item>ກາງຄືນ</item>
+    </string-array>
 </resources>

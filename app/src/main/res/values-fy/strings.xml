@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">FOLGJENDE</string>
+    <string name="init_skip">OERSLAAN</string>
+    <string name="init_agree">OERIENKOMME</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Feroarje jo apparaat nei in Rubber Ducky!</string>
+    <string name="slideTitle2">USB Kabel</string>
+    <string name="slideDesc2">USB-bedrade ynterface foar it lansearjen fan oanfal!</string>
+    <string name="slideTitle3">Netwurk Socket</string>
+    <string name="slideDesc3">Wi-Fi-basearre socket-ynterfaces foar it lansearjen fan oanfal fia stipe eksterne ark!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">Brûker fan \'e app is allinich ferantwurdlik foar de skea feroarsake. Gjin oare entiteit kin oanspraaklik steld wurde foar de skea dien mei dizze app! Oefenje foarsichtich by it brûken fan de app en brûk dit net om skea oan oaren te feroarsaakjen!</string>
+    <string name="slideTitle5">Privacybelied</string>
+    <string name="slideDesc5">Gjin gegevens fan hokker foarm wurde sammele, brûkt en ferkocht! Guon tagongsrjochten dy\'t soargen oer privacy kinne oproppe, wurde allinich frege foar it wurkjen fan bepaalde funksjes yn \'e app en is net om gegevens te sammeljen! Jo privacy wurdt respektearre!</string>
+    <string name="slideTitle6">App Tastimming</string>
+    <string name="slideDesc6">Jou app asjebleaft de fereaske tastimming om te wurkjen!</string>
     <!-- Update screen -->
+    <string name="update_new">Nije update beskikber ferzje:</string>
+    <string name="update_hash_error">File Signature Mismatch! Kin net bywurkje.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Ferzje</string>
+    <string name="update_version_nightly">Nightly Ferzje</string>
+    <string name="update_changelog">Feroaringslog</string>
+    <string name="update_status">Update Status</string>
+    <string name="update_action">Download en ynstallearje Update</string>
+    <string name="update_downloading">Ynladen Update</string>
+    <string name="install_update">Update tapasse</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Wolle jo de app ferbergje of ôfslute?</string>
+    <string name="btn_exit">Útgong</string>
+    <string name="btn_back">Ferstopje</string>
+    <string name="unlock">Untskoattelje App</string>
+    <string name="auth">Befêstigje autentikaasje</string>
+    <string name="update">Update</string>
+    <string name="setting">Ynstellings</string>
+    <string name="codeHint">Typ of laden rubberen ducky skripts hjir</string>
+    <string name="loadBtn">Lade</string>
+    <string name="saveBtn">Rêde</string>
+    <string name="delBtn">Wiskje</string>
+    <string name="runBtn">Run</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Trochgean</string>
+    <string name="root_err">Root tagong fereaske foar USB-kabel oanfal!</string>
+    <string name="kernel_err">"Kernel net stipe foar USB-kabeloanfal!"</string>
+    <string name="vm">Firtuele omjouwing wurdt net stipe!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Ferbûn</string>
+    <string name="config_status_usb_off">USB loskeppele</string>
+    <string name="config_status_net_on">Netwurk Socket Ferbûn</string>
+    <string name="config_status_net_off">Netwurk Socket Disconnected</string>
+    <string name="socket_address">Fier Socket IP en poarteadres yn</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID konfiguraasje</string>
+    <string name="hid_download">Download</string>
+    <string name="hid_update">Update</string>
+    <string name="hid_edit">Bewurkje</string>
+    <string name="hid_delete">Wiskje</string>
     <!-- Keylist screen -->
+    <string name="key_title">Key Namme</string>
+    <string name="key_character">Key Character</string>
+    <string name="key_code">Kaaikoade</string>
+    <string name="key_ctrl">Ctrl-toets</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Kaaikoade</string>
+    <string name="modcode">Modifier Code</string>
+    <string name="key_details">Key Details</string>
     <!-- Setting screen -->
+    <string name="setting_general">Algemien</string>
+    <string name="dark_theme_title">Nachtmodus</string>
+    <string name="dark_theme_summary">Stel tsjuster tema yn</string>
+    <string name="device_admin_title">Meitsje app apparaat eigner</string>
+    <string name="device_admin_summary">Root fereaske. Dit is om guon fan \'e beheiningen op Android te omgean.</string>
+    <string name="hide_icon_title">Launcher-ikoan ferbergje /útskeakelje</string>
+    <string name="hide_icon_summary">Dial*</string>
+    <string name="delete_dep_title">Uninstall App</string>
+    <string name="delete_dep_summary">App skjinmeitsje en ferwiderje.</string>
+    <string name="settings_sec_title">Advance Feiligens</string>
+    <string name="settings_sec_desc">Skeakelje skripttriemfersifering en skermbeskoattelje yn.</string>
+    <string name="setting_device">Ynstellings foar oanfalmodus</string>
+    <string name="configfs_title">Automatysk konfigurearje ConfigFS</string>
+    <string name="configfs_summary">Sil HID konfigurearje op ConfigFS-stipe apparaten. Kin USB-ynstelling brekke.</string>
+    <string name="hid_choice_title">Oanpasbere HID</string>
+    <string name="hid_choice_summary">Skeakelje tusken Legacy HID en Oanpasbere HID</string>
+    <string name="hid_title">HID Taal</string>
+    <string name="hid_summary">Download ekstra HID-talen of ûntwerp nije HID-yndielingen.</string>
+    <string name="settings_usb_title">USB Connect Launch</string>
+    <string name="settings_usb_desc">Run knop sil starte oanfal doe\'t USB is ferbûn.</string>
+    <string name="settings_net_title">Netwurk Socket Connect Launch</string>
+    <string name="settings_net_desc">Run knop sil starte oanfal doe\'t Network Socket is ferbûn.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Untwikkelder</string>
+    <string name="settings_version_title">Ferzje</string>
+    <string name="settings_arch_title">Boukunde</string>
+    <string name="settings_lic_title">Fergunning ferliene</string>
+    <string name="settings_support">Stypje</string>
+    <string name="settings_git_title">GitHub-problemen</string>
+    <string name="settings_git_desc">Klikje om problemen of funksjefersyk ta te foegjen.</string>
+    <string name="settings_locale_title">Lokalisaasje</string>
+    <string name="settings_locale_desc">Draach by oan app-lokalisaasje.</string>
+    <string name="release">Distribúsje</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Net-stipe release</string>
+    <string name="btn_cancel">Ofbrekke</string>
+    <string name="btn_save">Rêde</string>
+    <string name="file_saved">bewarre</string>
+    <string name="title_open_file">Iepen dokumint</string>
+    <string name="title_delete_file">Triem wiskje</string>
+    <string name="file_deleted">wiske</string>
+    <string name="file_name">Bestânsnamme</string>
+    <string name="title_save_file">Bestân opslaan</string>
+    <string name="hid_version">Ferzje: %d</string>
+    <string-array name="modes">
+        <item>USB Kabel</item>
+        <item>Netwurk Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikaansk Ingelsk</item>
+        <item>Turksk</item>
+        <item>Sweedsk</item>
+        <item>Sloveensk</item>
+        <item>Russysk</item>
+        <item>Portegeesk</item>
+        <item>Noarsk</item>
+        <item>Italiaansk</item>
+        <item>Kroatysk</item>
+        <item>Feriene Keninkryk Ingelsk</item>
+        <item>Frânsk</item>
+        <item>Finsk</item>
+        <item>Spaansk</item>
+        <item>Deensk</item>
+        <item>Dútsk</item>
+        <item>Kanadeesk Frânsk</item>
+        <item>Braziliaansk Portugeesk</item>
+        <item>Wytrussysk</item>
+        <item>Hongaarsk</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Dei</item>
+        <item>Nacht</item>
+    </string-array>
 </resources>

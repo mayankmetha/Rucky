@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">КИЙИНКИ</string>
+    <string name="init_skip">ӨТКӨРҮҮ</string>
+    <string name="init_agree">МАКУЛ</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Түзмөгүңүздү Rubber Duckyге айлантыңыз!</string>
+    <string name="slideTitle2">USB кабели</string>
+    <string name="slideDesc2">Кол салуу үчүн USB зымдуу интерфейс!</string>
+    <string name="slideTitle3">Network Socket</string>
+    <string name="slideDesc3">Колдоого алынган тышкы куралдар аркылуу чабуулду баштоо үчүн Wi-Fi негизиндеги розетка интерфейстери!</string>
+    <string name="slideTitle4">Жоопкерчиликтен баш тартуу</string>
+    <string name="slideDesc4">Колдонмонун колдонуучусу келтирилген зыян үчүн гана жооптуу. Бул колдонмону колдонуу менен келтирилген зыян үчүн эч кандай башка уюм жоопкерчилик тарта албайт! Колдонмону колдонууда этият болуңуз жана муну башкаларга зыян келтирүү үчүн колдонбоңуз!</string>
+    <string name="slideTitle5">Купуялык саясаты</string>
+    <string name="slideDesc5">Эч кандай формадагы маалыматтар чогултулбайт, пайдаланылбайт жана сатылбайт! Купуялык маселелерин козгой турган айрым уруксаттар колдонмодогу айрым функциялардын иштеши үчүн гана суралат жана маалыматтарды чогултуу үчүн эмес! Сиздин купуялыгыңыз урматталат!</string>
+    <string name="slideTitle6">Колдонмо уруксаты</string>
+    <string name="slideDesc6">Сураныч, колдонмого иштөө үчүн талап кылынган уруксатты бериңиз!</string>
     <!-- Update screen -->
+    <string name="update_new">Жаңы жаңыртуунун жеткиликтүү версиясы:</string>
+    <string name="update_hash_error">Файл кол тамгасы дал келбейт! Жаңыртуу мүмкүн эмес.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Версия</string>
+    <string name="update_version_nightly">Түнкү версия</string>
+    <string name="update_changelog">Өзгөртүү журналы</string>
+    <string name="update_status">Статусту жаңыртуу</string>
+    <string name="update_action">Жаңыртууну жүктөп алып, орнотуңуз</string>
+    <string name="update_downloading">Жаңыртуу жүктөлүүдө</string>
+    <string name="install_update">Жаңыртуу колдонулууда</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Жашырууну же колдонмодон чыгууну каалайсызбы?</string>
+    <string name="btn_exit">Чыгыңыз</string>
+    <string name="btn_back">Жашыруу</string>
+    <string name="unlock">Колдонмонун кулпусун ачуу</string>
+    <string name="auth">Аутентификацияны ырастоо</string>
+    <string name="update">Жаңыртуу</string>
+    <string name="setting">Орнотуулар</string>
+    <string name="codeHint">Бул жерде резина өрдөк скрипттерин териңиз же жүктөңүз</string>
+    <string name="loadBtn">Жүктөө</string>
+    <string name="saveBtn">Сактоо</string>
+    <string name="delBtn">Жок кылуу</string>
+    <string name="runBtn">чурка</string>
+    <string name="confBtn">Конфигурация</string>
+    <string name="btn_continue">Улантуу</string>
+    <string name="root_err">USB кабелдик чабуул үчүн тамырга кирүү талап кылынат!</string>
+    <string name="kernel_err">"USB кабелдик чабуул үчүн ядро ​​колдоого алынбайт!"</string>
+    <string name="vm">Виртуалдык чөйрө колдоого алынбайт!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB туташты</string>
+    <string name="config_status_usb_off">USB ажыратылды</string>
+    <string name="config_status_net_on">Network Socket Connected</string>
+    <string name="config_status_net_off">Тармак розеткасы ажыратылды</string>
+    <string name="socket_address">Сокеттин IP жана порт дарегин киргизиңиз</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Жүктөп алуу</string>
+    <string name="hid_update">Жаңыртуу</string>
+    <string name="hid_edit">Түзөтүү</string>
+    <string name="hid_delete">Жок кылуу</string>
     <!-- Keylist screen -->
+    <string name="key_title">Key Name</string>
+    <string name="key_character">Негизги каарман</string>
+    <string name="key_code">Key Code</string>
+    <string name="key_ctrl">Ctrl баскычы</string>
+    <string name="key_alt">Alt баскыч</string>
+    <string name="key_shift">Shift баскычы</string>
+    <string name="key_meta">Мета ачкычы</string>
+    <string name="keycode">Key Code</string>
+    <string name="modcode">Модификатор коду</string>
+    <string name="key_details">Негизги маалыматтар</string>
     <!-- Setting screen -->
+    <string name="setting_general">Генерал</string>
+    <string name="dark_theme_title">Түнкү режим</string>
+    <string name="dark_theme_summary">Караңгы теманы коюу</string>
+    <string name="device_admin_title">Колдонмонун түзмөгүнүн ээси кыл</string>
+    <string name="device_admin_summary">Root талап кылынат. Бул Android\'деги айрым чектөөлөрдү айланып өтүү үчүн.</string>
+    <string name="hide_icon_title">Ишке киргизгичтин сөлөкөтүн жашыруу/өчүрүү</string>
+    <string name="hide_icon_summary">терүү *</string>
+    <string name="delete_dep_title">Колдонмону алып салуу</string>
+    <string name="delete_dep_summary">Тазалоо жана колдонмону алып салуу.</string>
+    <string name="settings_sec_title">Алдын ала коопсуздук</string>
+    <string name="settings_sec_desc">Скрипт файлын шифрлөө жана экран кулпусун иштетүү.</string>
+    <string name="setting_device">Чабуул режиминин жөндөөлөрү</string>
+    <string name="configfs_title">ConfigFSди автоматтык түрдө конфигурациялоо</string>
+    <string name="configfs_summary">ConfigFS колдоого алынган түзмөктөрдө HID конфигурациялайт. USB жөндөөлөрүн бузушу мүмкүн.</string>
+    <string name="hid_choice_title">Ыңгайлаштырылган HID</string>
+    <string name="hid_choice_summary">Эски HID менен Настройкаланган HIDдин ортосунда которуштуруу</string>
+    <string name="hid_title">HID тили</string>
+    <string name="hid_summary">Кошумча HID тилдерин жүктөп алыңыз же жаңы HID макеттерин иштеп көрүңүз.</string>
+    <string name="settings_usb_title">USB Connect ишке киргизүү</string>
+    <string name="settings_usb_desc">Run баскычы USB туташтырылганда чабуулду баштайт.</string>
+    <string name="settings_net_title">Network Socket Connect ишке киргизүү</string>
+    <string name="settings_net_desc">Run баскычы Network Socket туташканда чабуулду баштайт.</string>
+    <string name="setting_about">Маалымат</string>
+    <string name="setting_developer_title">Иштеп чыгуучу</string>
+    <string name="settings_version_title">Версия</string>
+    <string name="settings_arch_title">Архитектура</string>
+    <string name="settings_lic_title">Лицензия</string>
+    <string name="settings_support">Колдоо</string>
+    <string name="settings_git_title">GitHub маселелери</string>
+    <string name="settings_git_desc">Маселелерди же өзгөчөлүк суроону кошуу үчүн чыкылдатыңыз.</string>
+    <string name="settings_locale_title">Локалдаштыруу</string>
+    <string name="settings_locale_desc">Колдонмонун локализациясына салым кошуңуз.</string>
+    <string name="release">Бөлүштүрүү</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub чыгаруу</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Мүчүлүштүктөрдү оңдоо</string>
+    <string name="releaseOthers">Колдоого алынбаган чыгаруу</string>
+    <string name="btn_cancel">Жокко чыгаруу</string>
+    <string name="btn_save">Сактоо</string>
+    <string name="file_saved">сакталган</string>
+    <string name="title_open_file">Файлды ач</string>
+    <string name="title_delete_file">Файлды өчүрүү</string>
+    <string name="file_deleted">жок кылынды</string>
+    <string name="file_name">Шилтемелер аты</string>
+    <string name="title_save_file">Файлды сактоо</string>
+    <string name="hid_version">Версия: %d</string>
+    <string-array name="modes">
+        <item>USB кабели</item>
+        <item>Network Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Америкалык англис</item>
+        <item>Түркчө</item>
+        <item>Шведче</item>
+        <item>Словенияча</item>
+        <item>Орусча</item>
+        <item>Португалча</item>
+        <item>Норвежче</item>
+        <item>Итальянча</item>
+        <item>Хорватча</item>
+        <item>Улуу Британия англис</item>
+        <item>Франсузча</item>
+        <item>Финче</item>
+        <item>Испанча</item>
+        <item>Датча</item>
+        <item>Немисче</item>
+        <item>Канадалык француз</item>
+        <item>Бразилиялык португалча</item>
+        <item>Беларусча</item>
+        <item>Венгерче</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Авто</item>
+        <item>Күн</item>
+        <item>Түн</item>
+    </string-array>
 </resources>

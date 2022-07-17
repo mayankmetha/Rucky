@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">DEƐ ƐDI HƆ</string>
+    <string name="init_skip">BƆ TRA</string>
+    <string name="init_agree">PENE</string>
+    <string name="init_start">HACK AKWANKYERƐ</string>
+    <string name="slideDesc1">Dane wo mfiri no kɔ Rubber Ducky so!</string>
+    <string name="slideTitle2">USB Nhama no</string>
+    <string name="slideDesc2">USB wired interface a wɔde fi ase ntua!</string>
+    <string name="slideTitle3">Netwɛk Socket</string>
+    <string name="slideDesc3">Wi-Fi a egyina socket interfaces a wɔde fi ntua ase denam abɔnten nnwinnade a wɔboa so!</string>
+    <string name="slideTitle4">Nsɛm a Wɔka Kyerɛ</string>
+    <string name="slideDesc4">Nea ɔde app no ​​di dwuma no nkutoo na ɔde nneɛma a asɛe no ho asodi to ne so. Adwumakuw foforo biara nni hɔ a wontumi mfa asodi nto nneɛma a asɛe a wɔde app yi adi dwuma no ho! Fa ahwɛyiye yɛ adwuma bere a wode app no ​​redi dwuma no na mfa eyi nni dwuma mfa mpira afoforo!</string>
+    <string name="slideTitle5">Nsɛm a Wɔde Di Dwuma Ho Nhyehyɛe</string>
+    <string name="slideDesc5">Data biara nni hɔ a ɛyɛ ɔkwan biara so a wɔboaboa ano, mfa nni dwuma na wɔntɔn! Ebinom tumi krataa a ebetumi ama kokoam nsɛm ho haw aba no, wobisa no sɛ nneɛma bi a ɛwɔ app no ​​mu no yɛ adwuma nkutoo na ɛnyɛ sɛ wɔbɛboaboa data ano! Wobu wo kokoam nsɛm!</string>
+    <string name="slideTitle6">App Hokwan a Wɔde Ma</string>
+    <string name="slideDesc6">Yɛsrɛ sɛ ma app no ​​kwan a wɔhwehwɛ sɛ ɛyɛ adwuma!</string>
     <!-- Update screen -->
+    <string name="update_new">Nsakraeɛ Foforo a Ɛwɔ Hɔ Version:</string>
+    <string name="update_hash_error">Fael Nsaano Nkyerɛwee a Ɛnhyia! Wontumi Nsakrae.</string>
+    <string name="update_activity">Rucky Nsɛm a Wɔka Kyerɛ</string>
+    <string name="update_version">Ɔfa</string>
+    <string name="update_version_nightly">Anadwo Nkyerɛase</string>
+    <string name="update_changelog">Nsakrae ho nsɛm</string>
+    <string name="update_status">Update Gyinabea</string>
+    <string name="update_action">Twe na Install Update</string>
+    <string name="update_downloading">Nsakrae a Woretwe</string>
+    <string name="install_update">Update a Wɔde Di Dwuma</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Wopɛ sɛ wode app no ​​sie anaa wufi mu?</string>
+    <string name="btn_exit">Firi</string>
+    <string name="btn_back">Tɛ</string>
+    <string name="unlock">Bue App no ​​ano</string>
+    <string name="auth">Si so dua sɛ woagye atom</string>
+    <string name="update">Sakra mu</string>
+    <string name="setting">Nsiesiei ahorow</string>
+    <string name="codeHint">Type anaa fa rɔba ducky scripts gu ha</string>
+    <string name="loadBtn">Adesoa</string>
+    <string name="saveBtn">Kora</string>
+    <string name="delBtn">Pepa</string>
+    <string name="runBtn">Dwane</string>
+    <string name="confBtn">Nhyehyɛe</string>
+    <string name="btn_continue">Toa so</string>
+    <string name="root_err">Root Access a Ɛhia Ma USB Cable Attack!</string>
+    <string name="kernel_err">"Kernel a Wɔmfa Mmoa mma USB Cable Ntuo!"</string>
+    <string name="vm">Virtual environment no ntumi mmoa!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks a wɔyɛ</string>
+    <string name="config_status_usb_on">USB a wɔde abɔ mu</string>
+    <string name="config_status_usb_off">USB a wɔatwa mu</string>
+    <string name="config_status_net_on">Network Socket a Wɔde Di Dwuma</string>
+    <string name="config_status_net_off">Network Socket no a wɔatwa mu</string>
+    <string name="socket_address">Hyehyɛ Socket IP ne Port Address no mu</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Nhyehyɛe</string>
+    <string name="hid_download">Twe</string>
+    <string name="hid_update">Sakra mu</string>
+    <string name="hid_edit">Sa mu</string>
+    <string name="hid_delete">Pepa</string>
     <!-- Keylist screen -->
+    <string name="key_title">Edin Titiriw</string>
+    <string name="key_character">Suban Titiriw</string>
+    <string name="key_code">Mmara Titiriw</string>
+    <string name="key_ctrl">Ctrl Safoa no</string>
+    <string name="key_alt">Alt Safoa no</string>
+    <string name="key_shift">Shift Safoa no</string>
+    <string name="key_meta">Meta Safoa no</string>
+    <string name="keycode">Mmara Titiriw</string>
+    <string name="modcode">Nsakraefo Mmara</string>
+    <string name="key_details">Nsɛm a Ɛho Hia</string>
     <!-- Setting screen -->
+    <string name="setting_general">Daa daa</string>
+    <string name="dark_theme_title">Anadwo Mode</string>
+    <string name="dark_theme_summary">Fa asɛmti a ɛyɛ sum si hɔ</string>
+    <string name="device_admin_title">Yɛ app device wura</string>
+    <string name="device_admin_summary">Ntini a Wɔhwehwɛ. Eyi yɛ sɛnea ɛbɛyɛ a wobetwa anohyeto ahorow a ɛwɔ Android so no bi ho.</string>
+    <string name="hide_icon_title">Hide/Sable Launcher Ahyɛnsode no</string>
+    <string name="hide_icon_summary">Dial * .</string>
+    <string name="delete_dep_title">Yi App no ​​fi so</string>
+    <string name="delete_dep_summary">Siesie na yi app no ​​fi so.</string>
+    <string name="settings_sec_title">Ahobammɔ a Edi Kan</string>
+    <string name="settings_sec_desc">Ma script fael encryption ne screen lock no nyɛ adwuma.</string>
+    <string name="setting_device">Attack Mode Nsiesiei ahorow</string>
+    <string name="configfs_title">Auto Nhyehyɛe ConfigFS</string>
+    <string name="configfs_summary">Ɛbɛhyehyɛ HID wɔ ConfigFS mfiri a wɔboa no so. Ebia abubu USB nhyehyɛe no.</string>
+    <string name="hid_choice_title">HID a wotumi sesa no</string>
+    <string name="hid_choice_summary">Sesa Legacy HID ne Customizable HID ntam</string>
+    <string name="hid_title">HID Kasa a Wɔka</string>
+    <string name="hid_summary">Twe HID kasa afoforo anaa yɛ HID nhyehyɛe foforo.</string>
+    <string name="settings_usb_title">USB Nkitahodi a Wɔde Fi Ase</string>
+    <string name="settings_usb_desc">Run button bɛfi ase ntua bere a USB abɔ mu no.</string>
+    <string name="settings_net_title">Network Socket Nkitahodi a Wɔde Fi Ase</string>
+    <string name="settings_net_desc">Run button no bɛfi ase ntua bere a Network Socket abɔ mu no.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Ɔdebɔfo</string>
+    <string name="settings_version_title">Ɔfa</string>
+    <string name="settings_arch_title">Dan nhyehyɛeɛ</string>
+    <string name="settings_lic_title">Tumi krataa</string>
+    <string name="settings_support">Mmoa</string>
+    <string name="settings_git_title">GitHub Nsɛm a Ɛfa Ho</string>
+    <string name="settings_git_desc">Klik so na fa nsɛm anaa feature request ka ho.</string>
+    <string name="settings_locale_title">Mpɔtam a ɛwɔ hɔ</string>
+    <string name="settings_locale_desc">Boa ma app no ​​yɛ localization.</string>
+    <string name="release">Akyekyɛ</string>
+    <string name="releaseNetHunter">NetHunter App Store a ɛwɔ hɔ no</string>
+    <string name="releaseGitHub">GitHub a Wɔayi no Adi</string>
+    <string name="releaseGitHubNightly">GitHub Anadwo biara</string>
+    <string name="releaseTest">Debug a Wɔayi no Adi</string>
+    <string name="releaseOthers">Non Supported a Wɔayi no Adi</string>
+    <string name="btn_cancel">Twam</string>
+    <string name="btn_save">Kora</string>
+    <string name="file_saved">wɔagye nkwa</string>
+    <string name="title_open_file">Bue Fael no</string>
+    <string name="title_delete_file">Popa Fael no</string>
+    <string name="file_deleted">wɔapopa no</string>
+    <string name="file_name">Fael Din</string>
+    <string name="title_save_file">Fa Fael no Sie</string>
+    <string name="hid_version">Nkyerɛase: %d</string>
+    <string-array name="modes">
+        <item>USB Nhama no</item>
+        <item>Netwɛk Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerika Engiresi kasa</item>
+        <item>Turkey kasa</item>
+        <item>Sweden kasa</item>
+        <item>Slovenia kasa</item>
+        <item>Russia kasa</item>
+        <item>Portugal kasa</item>
+        <item>Norway kasa mu</item>
+        <item>Italia kasa</item>
+        <item>Croatia kasa</item>
+        <item>United Kingdom Twi kasa mu</item>
+        <item>Franse kasa</item>
+        <item>Finland kasa</item>
+        <item>Spanish</item>
+        <item>Danish kasa</item>
+        <item>German kasa mu</item>
+        <item>Canadafo Fransefo kasa</item>
+        <item>Brazilfo Portugal kasa</item>
+        <item>Belarusfo kasa</item>
+        <item>Hungary kasa mu kasa</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Da</item>
+        <item>Anadwo</item>
+    </string-array>
 </resources>

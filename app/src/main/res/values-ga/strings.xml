@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">Ar Aghaidh</string>
+    <string name="init_skip">SCIPEÁIL</string>
+    <string name="init_agree">AONTAÍONN</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Cas ar do ghléas go Ducky Rubair!</string>
+    <string name="slideTitle2">Cábla USB</string>
+    <string name="slideDesc2">Comhéadan sreangaithe USB chun ionsaí a sheoladh!</string>
+    <string name="slideTitle3">Soicéad Líonra</string>
+    <string name="slideDesc3">Comhéadain soicéad bunaithe ar Wi-Fi chun ionsaí a sheoladh trí uirlisí seachtracha tacaithe!</string>
+    <string name="slideTitle4">Séanadh</string>
+    <string name="slideDesc4">Is é úsáideoir an aip amháin atá freagrach as na damáistí a dhéantar. Ní féidir aon eintiteas eile a bheith faoi dhliteanas i leith na ndamáistí a dhéantar leis an aip seo! Bí cúramach agus an aip in úsáid agat agus ná húsáid é seo chun dochar a dhéanamh do dhaoine eile!</string>
+    <string name="slideTitle5">Beartas Príobháideachais</string>
+    <string name="slideDesc5">Ní bhailítear, úsáidtear agus díoltar aon Sonraí de chineál ar bith! Ní iarrtar roinnt ceadanna a d’fhéadfadh imní faoi phríobháideachas a ardú ach chun gnéithe áirithe san aip a oibriú agus níl sé chun sonraí a bhailiú! Tá meas ar do phríobháideachas!</string>
+    <string name="slideTitle6">Cead App</string>
+    <string name="slideDesc6">Tabhair an cead oibre atá riachtanach don aip le do thoil!</string>
     <!-- Update screen -->
+    <string name="update_new">Leagan Nuashonraithe Nua Ar Fáil:</string>
+    <string name="update_hash_error">Mímheaitseáil Síniú Comhaid! Ní féidir Nuashonrú.</string>
+    <string name="update_activity">Nuashonrú Rucky</string>
+    <string name="update_version">Leagan</string>
+    <string name="update_version_nightly">Leagan Oíche</string>
+    <string name="update_changelog">Loga athrú</string>
+    <string name="update_status">Stádas Nuashonraithe</string>
+    <string name="update_action">Íoslódáil agus Suiteáil Nuashonrú</string>
+    <string name="update_downloading">Nuashonrú á nÍosluchtú</string>
+    <string name="install_update">Nuashonrú á Chur i bhFeidhm</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ar mhaith leat an aip a chur i bhfolach nó éirí as?</string>
+    <string name="btn_exit">An slí amach</string>
+    <string name="btn_back">Folaigh</string>
+    <string name="unlock">Díghlasáil App</string>
+    <string name="auth">Deimhnigh fíordheimhniú</string>
+    <string name="update">Nuashonrú</string>
+    <string name="setting">Socruithe</string>
+    <string name="codeHint">Clóscríobh nó lódaigh scripteanna lacha rubair anseo</string>
+    <string name="loadBtn">Luchtaigh</string>
+    <string name="saveBtn">Sábháil</string>
+    <string name="delBtn">Scrios</string>
+    <string name="runBtn">Rith</string>
+    <string name="confBtn">Cumraíocht</string>
+    <string name="btn_continue">Leanúint ar aghaidh</string>
+    <string name="root_err">Rochtain Fréamh Ag Teastáil Le haghaidh Ionsaí Cábla USB!</string>
+    <string name="kernel_err">"msgstr \"Ní Thacaítear leis an Eithne d'Ionsaí Cábla USB!\""</string>
+    <string name="vm">Ní thacaítear leis an timpeallacht fhíorúil!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Ceangailte</string>
+    <string name="config_status_usb_off">USB dícheangailte</string>
+    <string name="config_status_net_on">Soicéad Líonra Ceangailte</string>
+    <string name="config_status_net_off">Soicéad Líonra Dícheangailte</string>
+    <string name="socket_address">Cuir isteach Soicéad IP agus Seoladh Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Cumraíocht HID</string>
+    <string name="hid_download">Íosluchtaigh</string>
+    <string name="hid_update">Nuashonrú</string>
+    <string name="hid_edit">Cuir in eagar</string>
+    <string name="hid_delete">Scrios</string>
     <!-- Keylist screen -->
+    <string name="key_title">Ainm Eochair</string>
+    <string name="key_character">Príomhcharachtar</string>
+    <string name="key_code">Cóid eochair</string>
+    <string name="key_ctrl">Ctrl Eochair</string>
+    <string name="key_alt">Alt Eochair</string>
+    <string name="key_shift">Eochair Shift</string>
+    <string name="key_meta">Eochair Meta</string>
+    <string name="keycode">Cóid eochair</string>
+    <string name="modcode">Cód Mionathraithe</string>
+    <string name="key_details">Sonraí Eochair</string>
     <!-- Setting screen -->
+    <string name="setting_general">Ginearálta</string>
+    <string name="dark_theme_title">Mód Oíche</string>
+    <string name="dark_theme_summary">Socraigh téama dorcha</string>
+    <string name="device_admin_title">Déan úinéir gléas app</string>
+    <string name="device_admin_summary">Fréamh ag Teastáil. Tá sé seo chun cuid de na srianta ar Android a sheachbhóthar.</string>
+    <string name="hide_icon_title">Folaigh /Díchumasaigh Icon Tosaitheoir</string>
+    <string name="hide_icon_summary">Diailigh *</string>
+    <string name="delete_dep_title">Díshuiteáil App</string>
+    <string name="delete_dep_summary">Glan suas agus díshuiteáil an app.</string>
+    <string name="settings_sec_title">Réamhshlándáil</string>
+    <string name="settings_sec_desc">Cumasaigh criptiú comhaid scripte agus glas scáileáin.</string>
+    <string name="setting_device">Socruithe Mód Ionsaí</string>
+    <string name="configfs_title">Cumraigh Cumraigh Uathoibríoch</string>
+    <string name="configfs_summary">Cumróidh sé HID ar ghléasanna tacaithe ag ConfigFS. D\'fhéadfadh socrú USB a bhriseadh.</string>
+    <string name="hid_choice_title">HID saincheaptha</string>
+    <string name="hid_choice_summary">Athraigh idir Legacy HID agus Customizable HID</string>
+    <string name="hid_title">HID Teanga</string>
+    <string name="hid_summary">Íoslódáil teangacha HID breise nó dearadh leagan amach nua HID.</string>
+    <string name="settings_usb_title">Seoladh USB Connect</string>
+    <string name="settings_usb_desc">Seolfaidh an cnaipe Rith ionsaí nuair a bhíonn USB nasctha.</string>
+    <string name="settings_net_title">Seoladh Nasc Líonra Soicéad</string>
+    <string name="settings_net_desc">Seolfaidh an cnaipe Rith ionsaí nuair a bheidh Network Socket ceangailte.</string>
+    <string name="setting_about">Eolas</string>
+    <string name="setting_developer_title">Forbróir</string>
+    <string name="settings_version_title">Leagan</string>
+    <string name="settings_arch_title">Ailtireacht</string>
+    <string name="settings_lic_title">Ceadúnas</string>
+    <string name="settings_support">Tacaíocht</string>
+    <string name="settings_git_title">Saincheisteanna GitHub</string>
+    <string name="settings_git_desc">Cliceáil chun ceisteanna nó iarratas gné a chur leis.</string>
+    <string name="settings_locale_title">Logánú</string>
+    <string name="settings_locale_desc">Cuir le logánú aipeanna.</string>
+    <string name="release">Dáileadh</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Scaoileadh GitHub</string>
+    <string name="releaseGitHubNightly">GitHub go Oíche</string>
+    <string name="releaseTest">Scaoileadh Dífhabhtaithe</string>
+    <string name="releaseOthers">Eisiúint Neamhthacaithe</string>
+    <string name="btn_cancel">Cealaigh</string>
+    <string name="btn_save">Sábháil</string>
+    <string name="file_saved">shábháil</string>
+    <string name="title_open_file">Comhad a oscailt</string>
+    <string name="title_delete_file">Scrios Comhad</string>
+    <string name="file_deleted">scriosta</string>
+    <string name="file_name">Ainm comhaid</string>
+    <string name="title_save_file">Sábháil Comhad</string>
+    <string name="hid_version">Leagan: %d</string>
+    <string-array name="modes">
+        <item>Cábla USB</item>
+        <item>Soicéad Líonra</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Béarla Mheiriceá</item>
+        <item>Tuircis</item>
+        <item>Sualainnis</item>
+        <item>Slóivéinis</item>
+        <item>Rúisis</item>
+        <item>Portaingéilis</item>
+        <item>Ioruais</item>
+        <item>Iodálach</item>
+        <item>Cróitis</item>
+        <item>Béarla na Ríochta Aontaithe</item>
+        <item>Fraincis</item>
+        <item>Fionlainnis</item>
+        <item>Spainnis</item>
+        <item>Danmhairgis</item>
+        <item>Gearmáinis</item>
+        <item>Fraincis Cheanada</item>
+        <item>Portaingéilis na Brasaíle</item>
+        <item>Bealarúisis</item>
+        <item>Ungáiris</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Lá</item>
+        <item>Oíche</item>
+    </string-array>
 </resources>

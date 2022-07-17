@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">შემდეგი</string>
+    <string name="init_skip">გამოტოვება</string>
+    <string name="init_agree">ვეთანხმები</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">გადააქციეთ თქვენი მოწყობილობა რეზინის დუქისკენ!</string>
+    <string name="slideTitle2">USB კაბელი</string>
+    <string name="slideDesc2">USB სადენიანი ინტერფეისი თავდასხმის დასაწყებად!</string>
+    <string name="slideTitle3">ქსელის სოკეტი</string>
+    <string name="slideDesc3">Wi-Fi-ზე დაფუძნებული სოკეტის ინტერფეისები თავდასხმის დასაწყებად მხარდაჭერილი გარე ხელსაწყოების საშუალებით!</string>
+    <string name="slideTitle4">პასუხისმგებლობის უარყოფა</string>
+    <string name="slideDesc4">აპლიკაციის მომხმარებელი მხოლოდ პასუხისმგებელია მიყენებულ ზარალზე. არცერთი სხვა სუბიექტი არ შეიძლება იყოს პასუხისმგებელი ამ აპლიკაციის გამოყენებით მიყენებული ზიანისთვის! გამოიჩინეთ სიფრთხილე აპის გამოყენებისას და არ გამოიყენოთ ეს სხვებისთვის ზიანის მიყენებისთვის!</string>
+    <string name="slideTitle5">Კონფიდენციალურობის პოლიტიკა</string>
+    <string name="slideDesc5">არანაირი მონაცემები არ გროვდება, გამოიყენება და იყიდება! ზოგიერთი ნებართვა, რამაც შეიძლება გამოიწვიოს კონფიდენციალურობის შეშფოთება, ითხოვს მხოლოდ აპში გარკვეული ფუნქციების მუშაობას და არ არის მონაცემების შეგროვება! თქვენს კონფიდენციალურობას პატივს სცემენ!</string>
+    <string name="slideTitle6">აპის ნებართვა</string>
+    <string name="slideDesc6">გთხოვთ, მიანიჭოთ აპლიკაციას მუშაობისთვის საჭირო ნებართვა!</string>
     <!-- Update screen -->
+    <string name="update_new">ახალი განახლების ხელმისაწვდომი ვერსია:</string>
+    <string name="update_hash_error">ფაილის ხელმოწერის შეუსაბამობა! განახლება შეუძლებელია.</string>
+    <string name="update_activity">Rucky განახლება</string>
+    <string name="update_version">ვერსია</string>
+    <string name="update_version_nightly">ღამის ვერსია</string>
+    <string name="update_changelog">ცვლილებების ჟურნალი</string>
+    <string name="update_status">სტატუსის განახლება</string>
+    <string name="update_action">ჩამოტვირთეთ და დააინსტალირეთ განახლება</string>
+    <string name="update_downloading">მიმდინარეობს განახლების ჩამოტვირთვა</string>
+    <string name="install_update">განახლების გამოყენება</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">გსურთ დამალვა ან აპიდან გასვლა?</string>
+    <string name="btn_exit">გასვლა</string>
+    <string name="btn_back">დამალვა</string>
+    <string name="unlock">განბლოკეთ აპლიკაცია</string>
+    <string name="auth">დაადასტურეთ ავტორიზაცია</string>
+    <string name="update">განახლება</string>
+    <string name="setting">პარამეტრები</string>
+    <string name="codeHint">აკრიფეთ ან ჩატვირთეთ რეზინის დუკი სკრიპტები აქ</string>
+    <string name="loadBtn">ჩატვირთვა</string>
+    <string name="saveBtn">Გადარჩენა</string>
+    <string name="delBtn">წაშლა</string>
+    <string name="runBtn">გაიქეცი</string>
+    <string name="confBtn">კონფიგურაცია</string>
+    <string name="btn_continue">განაგრძეთ</string>
+    <string name="root_err">USB კაბელის შეტევისთვის საჭიროა Root Access!</string>
+    <string name="kernel_err">"კერნელი არ არის მხარდაჭერილი USB კაბელის შეტევისთვის!"</string>
+    <string name="vm">ვირტუალური გარემო არ არის მხარდაჭერილი!</string>
     <!-- Config screen -->
+    <string name="config_activity">შესწორებები</string>
+    <string name="config_status_usb_on">USB დაკავშირებული</string>
+    <string name="config_status_usb_off">USB გათიშულია</string>
+    <string name="config_status_net_on">ქსელის სოკეტი დაკავშირებულია</string>
+    <string name="config_status_net_off">ქსელის სოკეტი გათიშულია</string>
+    <string name="socket_address">შეიყვანეთ სოკეტის IP და პორტის მისამართი</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID კონფიგურაცია</string>
+    <string name="hid_download">ჩამოტვირთვა</string>
+    <string name="hid_update">განახლება</string>
+    <string name="hid_edit">რედაქტირება</string>
+    <string name="hid_delete">წაშლა</string>
     <!-- Keylist screen -->
+    <string name="key_title">გასაღების სახელი</string>
+    <string name="key_character">საკვანძო პერსონაჟი</string>
+    <string name="key_code">გასაღების კოდი</string>
+    <string name="key_ctrl">Ctrl გასაღები</string>
+    <string name="key_alt">Alt გასაღები</string>
+    <string name="key_shift">Shift გასაღები</string>
+    <string name="key_meta">მეტა გასაღები</string>
+    <string name="keycode">გასაღების კოდი</string>
+    <string name="modcode">მოდიფიკატორის კოდი</string>
+    <string name="key_details">ძირითადი დეტალები</string>
     <!-- Setting screen -->
+    <string name="setting_general">გენერალი</string>
+    <string name="dark_theme_title">Ღამის რეჟიმი</string>
+    <string name="dark_theme_summary">მუქი თემის დაყენება</string>
+    <string name="device_admin_title">გახადეთ აპლიკაციის მოწყობილობის მფლობელი</string>
+    <string name="device_admin_summary">საჭიროა ფესვი. ეს არის Android-ის ზოგიერთი შეზღუდვის გვერდის ავლით.</string>
+    <string name="hide_icon_title">დამალვა/გამორთვა გამშვების ხატულა</string>
+    <string name="hide_icon_summary">აკრიფეთ *</string>
+    <string name="delete_dep_title">აპის დეინსტალაცია</string>
+    <string name="delete_dep_summary">აპის გასუფთავება და დეინსტალაცია.</string>
+    <string name="settings_sec_title">წინასწარი უსაფრთხოება</string>
+    <string name="settings_sec_desc">ჩართეთ სკრიპტის ფაილის დაშიფვრა და ეკრანის დაბლოკვა.</string>
+    <string name="setting_device">შეტევის რეჟიმის პარამეტრები</string>
+    <string name="configfs_title">ავტომატური კონფიგურაცია ConfigFS</string>
+    <string name="configfs_summary">დაკონფიგურირებს HID-ს ConfigFS მხარდაჭერილ მოწყობილობებზე. შეიძლება დაირღვეს USB პარამეტრი.</string>
+    <string name="hid_choice_title">დააკონფიგურიროთ HID</string>
+    <string name="hid_choice_summary">გადართეთ Legacy HID-სა და Customizable HID-ს შორის</string>
+    <string name="hid_title">დამალული ენა</string>
+    <string name="hid_summary">ჩამოტვირთეთ დამატებითი HID ენები ან შეიმუშავეთ ახალი HID განლაგება.</string>
+    <string name="settings_usb_title">USB Connect გაშვება</string>
+    <string name="settings_usb_desc">Run ღილაკი დაიწყებს თავდასხმას USB კავშირის დროს.</string>
+    <string name="settings_net_title">ქსელის სოკეტის დაკავშირების გაშვება</string>
+    <string name="settings_net_desc">Run ღილაკი დაიწყებს შეტევას, როდესაც ქსელის სოკეტი იქნება დაკავშირებული.</string>
+    <string name="setting_about">ინფორმაცია</string>
+    <string name="setting_developer_title">დეველოპერი</string>
+    <string name="settings_version_title">ვერსია</string>
+    <string name="settings_arch_title">არქიტექტურა</string>
+    <string name="settings_lic_title">ლიცენზია</string>
+    <string name="settings_support">მხარდაჭერა</string>
+    <string name="settings_git_title">GitHub საკითხები</string>
+    <string name="settings_git_desc">დააწკაპუნეთ პრობლემების ან ფუნქციის მოთხოვნის დასამატებლად.</string>
+    <string name="settings_locale_title">ლოკალიზაცია</string>
+    <string name="settings_locale_desc">წვლილი შეიტანეთ აპის ლოკალიზაციაში.</string>
+    <string name="release">დისტრიბუცია</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub გამოშვება</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">გამართვის გამოშვება</string>
+    <string name="releaseOthers">მხარდაჭერილი გამოშვება</string>
+    <string name="btn_cancel">გაუქმება</string>
+    <string name="btn_save">Გადარჩენა</string>
+    <string name="file_saved">გადაარჩინა</string>
+    <string name="title_open_file">Გახსენი ფაილი</string>
+    <string name="title_delete_file">Ფაილის წაშლა</string>
+    <string name="file_deleted">წაშლილია</string>
+    <string name="file_name">Ფაილის სახელი</string>
+    <string name="title_save_file">ფაილის შენახვა</string>
+    <string name="hid_version">ვერსია: %d</string>
+    <string-array name="modes">
+        <item>USB კაბელი</item>
+        <item>ქსელის სოკეტი</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>ამერიკული ინგლისური</item>
+        <item>თურქული</item>
+        <item>შვედური</item>
+        <item>სლოვენური</item>
+        <item>რუსული</item>
+        <item>პორტუგალიური</item>
+        <item>ნორვეგიული</item>
+        <item>იტალიური</item>
+        <item>ხორვატული</item>
+        <item>გაერთიანებული სამეფო ინგლისური</item>
+        <item>ფრანგული</item>
+        <item>ფინური</item>
+        <item>ესპანური</item>
+        <item>დანიური</item>
+        <item>გერმანული</item>
+        <item>კანადური ფრანგული</item>
+        <item>ბრაზილიელი პორტუგალიელი</item>
+        <item>ბელორუსული</item>
+        <item>უნგრული</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>ავტო</item>
+        <item>Დღის</item>
+        <item>Ღამე</item>
+    </string-array>
 </resources>

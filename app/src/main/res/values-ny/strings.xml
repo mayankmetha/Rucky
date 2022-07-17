@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ENA</string>
+    <string name="init_skip">LUMANI</string>
+    <string name="init_agree">VOMEREZANI</string>
+    <string name="init_start">KUKHALA</string>
+    <string name="slideDesc1">Sinthani chipangizo chanu kukhala bakha la Rubber!</string>
+    <string name="slideTitle2">Chingwe cha USB</string>
+    <string name="slideDesc2">Mawonekedwe a waya a USB poyambitsa kuwukira!</string>
+    <string name="slideTitle3">Network Socket</string>
+    <string name="slideDesc3">Ma Wi-Fi okhala ndi socket interfaces poyambitsa kuwukira pogwiritsa ntchito zida zakunja zothandizidwa!</string>
+    <string name="slideTitle4">Chodzikanira</string>
+    <string name="slideDesc4">Wogwiritsa ntchito pulogalamuyi ndi amene ali ndi udindo pazowonongeka zomwe zachitika. Palibe bungwe lina lomwe lingayimbidwe mlandu pazowonongeka zomwe zachitika pogwiritsa ntchito pulogalamuyi! Khalani osamala mukamagwiritsa ntchito pulogalamuyi ndipo musagwiritse ntchito izi kuvulaza ena!</string>
+    <string name="slideTitle5">mfundo zazinsinsi</string>
+    <string name="slideDesc5">Palibe Deta yamtundu uliwonse yomwe imasonkhanitsidwa, kugwiritsidwa ntchito ndikugulitsidwa! Zilolezo zina zomwe zingadzutse nkhawa zachinsinsi zimangofunsidwa kuti zigwiritsidwe ntchito pazinthu zina mu pulogalamuyi osati kusonkhanitsa deta! Zinsinsi zanu zimalemekezedwa!</string>
+    <string name="slideTitle6">Chilolezo cha App</string>
+    <string name="slideDesc6">Chonde patsani pulogalamu chilolezo choti igwire ntchito!</string>
     <!-- Update screen -->
+    <string name="update_new">Mtundu Watsopano Ulipo:</string>
+    <string name="update_hash_error">Fayilo Siginecha Yosagwirizana! Sitingathe Kusintha.</string>
+    <string name="update_activity">Kusintha kwa Rucky</string>
+    <string name="update_version">Baibulo</string>
+    <string name="update_version_nightly">Nightly Version</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Kusintha Status</string>
+    <string name="update_action">Koperani ndi kukhazikitsa Update</string>
+    <string name="update_downloading">Kutsitsa Zosintha</string>
+    <string name="install_update">Kugwiritsa Ntchito Kusintha</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Kodi mungafune kubisa kapena kusiya pulogalamuyi?</string>
+    <string name="btn_exit">Potulukira</string>
+    <string name="btn_back">Bisani</string>
+    <string name="unlock">Tsegulani App</string>
+    <string name="auth">Tsimikizirani kutsimikizika</string>
+    <string name="update">Kusintha</string>
+    <string name="setting">Zokonda</string>
+    <string name="codeHint">Lembani kapena tsegulani zolemba za ducky apa</string>
+    <string name="loadBtn">Katundu</string>
+    <string name="saveBtn">Sungani</string>
+    <string name="delBtn">Chotsani</string>
+    <string name="runBtn">Thamangani</string>
+    <string name="confBtn">Konzani</string>
+    <string name="btn_continue">Pitirizani</string>
+    <string name="root_err">Kufikira Muzu Kufunika Pakuukira kwa Chingwe cha USB!</string>
+    <string name="kernel_err">"Kernel Siikuthandizidwa pa USB Cable Attack!"</string>
+    <string name="vm">Malo owoneka bwino sakuthandizidwa!</string>
     <!-- Config screen -->
+    <string name="config_activity">Zosintha</string>
+    <string name="config_status_usb_on">USB Yolumikizidwa</string>
+    <string name="config_status_usb_off">USB Yachotsedwa</string>
+    <string name="config_status_net_on">Network Socket Yolumikizidwa</string>
+    <string name="config_status_net_off">Network Socket Yachotsedwa</string>
+    <string name="socket_address">Lowetsani Socket IP ndi Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Kusintha kwa HID</string>
+    <string name="hid_download">Tsitsani</string>
+    <string name="hid_update">Kusintha</string>
+    <string name="hid_edit">Sinthani</string>
+    <string name="hid_delete">Chotsani</string>
     <!-- Keylist screen -->
+    <string name="key_title">Dzina Lofunika</string>
+    <string name="key_character">Khalidwe Lofunika</string>
+    <string name="key_code">Kodi Key</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Kodi Key</string>
+    <string name="modcode">Kodi Modifier</string>
+    <string name="key_details">Tsatanetsatane Wofunika</string>
     <!-- Setting screen -->
+    <string name="setting_general">General</string>
+    <string name="dark_theme_title">Night Mode</string>
+    <string name="dark_theme_summary">Khazikitsani mutu wakuda</string>
+    <string name="device_admin_title">Pangani eni ake chipangizo</string>
+    <string name="device_admin_summary">Muzu Wofunika. Izi ndi kuzilambalala zina zoletsa pa Android.</string>
+    <string name="hide_icon_title">Bisani/Letsani Chizindikiro cha Launcher</string>
+    <string name="hide_icon_summary">Imbani *</string>
+    <string name="delete_dep_title">Chotsani App</string>
+    <string name="delete_dep_summary">Yeretsani ndikuchotsa pulogalamu.</string>
+    <string name="settings_sec_title">Advance Security</string>
+    <string name="settings_sec_desc">Yambitsani kubisa kwa fayilo ya script ndi loko ya skrini.</string>
+    <string name="setting_device">Zokonda pa Attack Mode</string>
+    <string name="configfs_title">Konzani Auto ConfigFS</string>
+    <string name="configfs_summary">Ikonza HID pazida zothandizidwa ndi ConfigFS. Ikhoza kusokoneza makonzedwe a USB.</string>
+    <string name="hid_choice_title">Customizable HID</string>
+    <string name="hid_choice_summary">Sinthani pakati pa Legacy HID ndi Customizable HID</string>
+    <string name="hid_title">Chinenero chobisika</string>
+    <string name="hid_summary">Tsitsani zinenero zina za HID kapena pangani masanjidwe atsopano a HID.</string>
+    <string name="settings_usb_title">USB Connect Launch</string>
+    <string name="settings_usb_desc">Thamanga batani adzayambitsa kuwukira pamene USB chikugwirizana.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Run batani idzayambitsa kuwukira pomwe Network Socket ilumikizidwa.</string>
+    <string name="setting_about">Zambiri</string>
+    <string name="setting_developer_title">Wopanga Mapulogalamu</string>
+    <string name="settings_version_title">Baibulo</string>
+    <string name="settings_arch_title">Zomangamanga</string>
+    <string name="settings_lic_title">Chilolezo</string>
+    <string name="settings_support">Thandizo</string>
+    <string name="settings_git_title">Mavuto a GitHub</string>
+    <string name="settings_git_desc">Dinani kuti muwonjezere zovuta kapena zomwe mukufuna.</string>
+    <string name="settings_locale_title">Localization</string>
+    <string name="settings_locale_desc">Thandizani kuti pulogalamu yanu imasulidwe.</string>
+    <string name="release">Kugawa</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Kutulutsidwa kwa GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Usiku</string>
+    <string name="releaseTest">Kutulutsidwa kwa Debug</string>
+    <string name="releaseOthers">Kutulutsidwa Kosathandizidwa</string>
+    <string name="btn_cancel">Letsani</string>
+    <string name="btn_save">Sungani</string>
+    <string name="file_saved">opulumutsidwa</string>
+    <string name="title_open_file">Tsegulani Fayilo</string>
+    <string name="title_delete_file">Chotsani Fayilo</string>
+    <string name="file_deleted">zachotsedwa</string>
+    <string name="file_name">Dzina lafayilo</string>
+    <string name="title_save_file">Sungani Fayilo</string>
+    <string name="hid_version">Mtundu: %d</string>
+    <string-array name="modes">
+        <item>Chingwe cha USB</item>
+        <item>Network Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turkey</item>
+        <item>Chiswidishi</item>
+        <item>Chisiloveniya</item>
+        <item>Chirasha</item>
+        <item>Chipwitikizi</item>
+        <item>Chinorwe</item>
+        <item>Chitaliyana</item>
+        <item>Chikroatia</item>
+        <item>United Kingdom English</item>
+        <item>Chifalansa</item>
+        <item>Chifinishi</item>
+        <item>Chisipanishi</item>
+        <item>Chidanishi</item>
+        <item>Chijeremani</item>
+        <item>Canadian French</item>
+        <item>Chipwitikizi cha ku Brazil</item>
+        <item>Chibelarusi</item>
+        <item>Chihangare</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Zadzidzidzi</item>
+        <item>Tsiku</item>
+        <item>Usiku</item>
+    </string-array>
 </resources>

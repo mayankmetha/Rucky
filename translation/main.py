@@ -27,17 +27,26 @@ name_mapping = load_json('name_mapping.json')
 os.system("rm -rf app/ && mkdir app")
 
 fout = open("report.md","w")
+count1 = 0
+count2 = 0
+count3 = 0
 for _ in filename_mapping:
     os.system("cp -r tmp/"+filename_mapping[_]+" app/"+_+"")
     com_count = int((get_strings_count("app/"+_+"/strings.xml")/total_strings)*100)
     status = ""
     if com_count == 0:
         status = "❌"
+        count1 += 1
     elif com_count == 100:
         status = "✅"
+        count3 += 1
     else:
         status = "🚧"
+        count2 += 1
     fout.write("|{:^8}|{:^11}|{:^21}|{:^12}|\n".format(status,_.replace("values-",""),name_mapping[_],str(com_count)+"%"))
 fout.close()
 os.system("rm -rf tmp/")
 print("Total: "+str(len(filename_mapping)))
+print("❌ = "+str(count1))
+print("🚧 = "+str(count2))
+print("✅ = "+str(count3))

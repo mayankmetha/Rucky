@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">HIKI</string>
+    <string name="init_agree">aelike</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">E hoʻohuli i kāu kelepona i kahi Rubber Ducky!</string>
+    <string name="slideTitle2">Uea USB</string>
+    <string name="slideDesc2">USB uea interface no ka hoʻouka kaua!</string>
+    <string name="slideTitle3">Pūnaehana Pūnaewele</string>
+    <string name="slideDesc3">ʻO Wi-Fi pili kumu no ka hoʻomaka ʻana i ka hoʻouka kaua ma o nā mea hana waho i kākoʻo ʻia!</string>
+    <string name="slideTitle4">Hoʻolele</string>
+    <string name="slideDesc4">ʻO ka mea hoʻohana o ka app ke kuleana wale nō no nā poino i hana ʻia. ʻAʻole hiki ke hoʻopaʻa ʻia nā mea ʻē aʻe no nā pōʻino i hana ʻia me ka hoʻohana ʻana i kēia app! E hoʻomaʻamaʻa makaʻala i ka wā e hoʻohana ai i ka app a mai hoʻohana i kēia e hōʻeha i nā poʻe ʻē aʻe!</string>
+    <string name="slideTitle5">Kulekele pilikino</string>
+    <string name="slideDesc5">ʻAʻohe ʻikepili o kekahi ʻano i hōʻiliʻili ʻia, hoʻohana ʻia a kūʻai ʻia! ʻO kekahi mau ʻae i hiki ke hāpai i nā hopohopo pilikino e noi wale ʻia no ka hana ʻana o kekahi mau hiʻohiʻona i ka app a ʻaʻole ia e hōʻiliʻili i ka ʻikepili! Ua mahalo ʻia kāu pilikino!</string>
+    <string name="slideTitle6">ʻAe App</string>
+    <string name="slideDesc6">E ʻoluʻolu e hāʻawi i ka app i ka ʻae e pono ai e hana!</string>
     <!-- Update screen -->
+    <string name="update_new">Loaʻa ka Mana Hou Hou:</string>
+    <string name="update_hash_error">Kūlike ʻole ka pūlima waihona! ʻAʻole hiki ke hōʻano hou.</string>
+    <string name="update_activity">ʻO Rucky Update</string>
+    <string name="update_version">Manao</string>
+    <string name="update_version_nightly">Puka Po</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Kūlana Hou</string>
+    <string name="update_action">Hoʻoiho a hoʻouka hou</string>
+    <string name="update_downloading">Ke hoʻoiho nei i ka mea hou</string>
+    <string name="install_update">Ke noi nei i ka mea hou</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Makemake ʻoe e hūnā a haʻalele paha i ka polokalamu?</string>
+    <string name="btn_exit">Puka</string>
+    <string name="btn_back">Huna</string>
+    <string name="unlock">Wehe i ka App</string>
+    <string name="auth">E hōʻoia i ka hōʻoia</string>
+    <string name="update">Hōʻano hou</string>
+    <string name="setting">Nā hoʻonohonoho</string>
+    <string name="codeHint">E kikokiko a i ʻole e hoʻouka i nā ʻatikala ducky rubber ma aneʻi</string>
+    <string name="loadBtn">Hoʻouka</string>
+    <string name="saveBtn">Mālama</string>
+    <string name="delBtn">Holoi</string>
+    <string name="runBtn">Holo</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">E hoʻomau</string>
+    <string name="root_err">Pono ʻia ka ʻaʻa no ka hoʻouka ʻana i ke kelepona USB!</string>
+    <string name="kernel_err">"ʻAʻole i kākoʻo ʻia ke Kernel no ka hoʻouka ʻana i ke kelepona USB!"</string>
+    <string name="vm">ʻAʻole kākoʻo ʻia ke kaiapuni virtual!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">Hoʻopili USB</string>
+    <string name="config_status_usb_off">Hoʻokuʻu ʻia ke USB</string>
+    <string name="config_status_net_on">Hoʻopili ʻia ka Socket Network</string>
+    <string name="config_status_net_off">Hoʻokuʻu ʻia ke kumu o ka Pūnaewele</string>
+    <string name="socket_address">E hoʻokomo i ka Socket IP a me ka Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Hoʻoiho</string>
+    <string name="hid_update">Hōʻano hou</string>
+    <string name="hid_edit">Hoʻoponopono</string>
+    <string name="hid_delete">Holoi</string>
     <!-- Keylist screen -->
+    <string name="key_title">Inoa Nui</string>
+    <string name="key_character">ʻAno kī</string>
+    <string name="key_code">Code kī</string>
+    <string name="key_ctrl">Ki Ctrl</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Kī Hoʻololi</string>
+    <string name="key_meta">Kiʻi Meta</string>
+    <string name="keycode">Code kī</string>
+    <string name="modcode">Code Hoʻololi</string>
+    <string name="key_details">Nā kikoʻī koʻikoʻi</string>
     <!-- Setting screen -->
+    <string name="setting_general">Generala</string>
+    <string name="dark_theme_title">ʻAno pō</string>
+    <string name="dark_theme_summary">E hoʻonoho i ke kumuhana ʻeleʻele</string>
+    <string name="device_admin_title">Hana i ka mea nona ka polokalamu</string>
+    <string name="device_admin_summary">Pono ke kumu. ʻO kēia ke kaʻe ʻana i kekahi o nā kaohi i ka Android.</string>
+    <string name="hide_icon_title">Hūnā/Hoʻopau i ke kiʻi hoʻolaha</string>
+    <string name="hide_icon_summary">Kāhea *</string>
+    <string name="delete_dep_title">Wehe i ka App</string>
+    <string name="delete_dep_summary">Hoʻomaʻemaʻe a wehe i ka polokalamu.</string>
+    <string name="settings_sec_title">Palekana mua</string>
+    <string name="settings_sec_desc">E ho\'ā i ka hoʻopili ʻana i ka faila a me ka laka pale.</string>
+    <string name="setting_device">Hoʻonohonoho ʻano hoʻouka kaua</string>
+    <string name="configfs_title">Hoʻonohonoho ʻokoʻa ʻo ConfigFS</string>
+    <string name="configfs_summary">E hoʻonohonoho iā HID ma nā polokalamu i kākoʻo ʻia e ConfigFS. Hiki ke haki i ka hoʻonohonoho USB.</string>
+    <string name="hid_choice_title">HID hiki ke hana</string>
+    <string name="hid_choice_summary">E hoʻololi ma waena o ka Legacy HID a me ka Customizable HID</string>
+    <string name="hid_title">ʻŌlelo HID</string>
+    <string name="hid_summary">Hoʻoiho i nā ʻōlelo HID hou a i ʻole e hoʻolālā i nā hoʻolālā HID hou.</string>
+    <string name="settings_usb_title">Hoʻokuʻu ʻia ʻo USB Connect</string>
+    <string name="settings_usb_desc">E hoʻomaka ke pihi holo i ka hoʻouka ʻana i ka wā e pili ana ʻo USB.</string>
+    <string name="settings_net_title">Hoʻokuʻu ʻia ʻo Network Socket Connect</string>
+    <string name="settings_net_desc">E hoʻomaka ke pihi holo i ka hoʻouka ʻana i ka wā e hoʻopili ai ʻo Network Socket.</string>
+    <string name="setting_about">ʻIke</string>
+    <string name="setting_developer_title">Mea hoʻomohala</string>
+    <string name="settings_version_title">Manao</string>
+    <string name="settings_arch_title">Hoʻolālā</string>
+    <string name="settings_lic_title">Laikini</string>
+    <string name="settings_support">Kākoʻo</string>
+    <string name="settings_git_title">Nā pilikia GitHub</string>
+    <string name="settings_git_desc">Kaomi no ka hoʻohui ʻana i nā pilikia a i ʻole ke noi hiʻohiʻona.</string>
+    <string name="settings_locale_title">Ka hoʻokolo ʻana</string>
+    <string name="settings_locale_desc">Hāʻawi i ka hoʻopili ʻana i nā polokalamu.</string>
+    <string name="release">Hoʻolaha</string>
+    <string name="releaseNetHunter">Halekuai App NetHunter</string>
+    <string name="releaseGitHub">Hoʻokuʻu ʻia ʻo GitHub</string>
+    <string name="releaseGitHubNightly">GitHub i ka pō</string>
+    <string name="releaseTest">Hoʻokuʻu Debug</string>
+    <string name="releaseOthers">Hoʻokuʻu Kākoʻo ʻole</string>
+    <string name="btn_cancel">Hoʻopau</string>
+    <string name="btn_save">Mālama</string>
+    <string name="file_saved">hoopakeleia</string>
+    <string name="title_open_file">Wehe Kōnae</string>
+    <string name="title_delete_file">Holoi i ka waihona</string>
+    <string name="file_deleted">holoi ʻia</string>
+    <string name="file_name">Inoa faila</string>
+    <string name="title_save_file">Mālama i ka faila</string>
+    <string name="hid_version">Manaʻo: %d</string>
+    <string-array name="modes">
+        <item>Uea USB</item>
+        <item>Pūnaehana Pūnaewele</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Pelekane ʻAmelika</item>
+        <item>Tureke</item>
+        <item>Kuekene</item>
+        <item>Kolewenia</item>
+        <item>Lukia</item>
+        <item>Pukikī</item>
+        <item>Nolewai</item>
+        <item>Ikalia</item>
+        <item>Koalia</item>
+        <item>Pelekane Pelekane</item>
+        <item>Palani</item>
+        <item>Pinilana</item>
+        <item>Kepania</item>
+        <item>Kenemaka</item>
+        <item>Alemania</item>
+        <item>Palani Kanaka</item>
+        <item>Pukiki Palakila</item>
+        <item>ʻŌlelo Belarusa</item>
+        <item>Hunakalia</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Lā</item>
+        <item>Pō</item>
+    </string-array>
 </resources>

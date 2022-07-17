@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">VOLGENDE</string>
+    <string name="init_skip">HUPPEL</string>
+    <string name="init_agree">STEM IN</string>
+    <string name="init_start">HAK</string>
+    <string name="slideDesc1">Verander jou toestel na \'n Rubber Ducky!</string>
+    <string name="slideTitle2">USB kabel</string>
+    <string name="slideDesc2">USB bedrade koppelvlak om aanval te loods!</string>
+    <string name="slideTitle3">Netwerksok</string>
+    <string name="slideDesc3">Wi-Fi-gebaseerde sok-koppelvlakke om aanval te loods via ondersteunde eksterne gereedskap!</string>
+    <string name="slideTitle4">Vrywaring</string>
+    <string name="slideDesc4">Gebruiker van die toepassing is alleen verantwoordelik vir die skade wat veroorsaak word. Geen ander entiteit kan aanspreeklik gehou word vir die skade wat met hierdie toepassing aangerig is nie! Wees versigtig wanneer u die toepassing gebruik en moenie dit gebruik om ander skade te berokken nie!</string>
+    <string name="slideTitle5">Privaatheidsbeleid</string>
+    <string name="slideDesc5">Geen data van enige vorm word versamel, gebruik en verkoop nie! Sommige toestemmings wat kommer oor privaatheid kan veroorsaak, word slegs gevra vir die werking van sekere kenmerke in die toepassing en is nie om data in te samel nie! Jou privaatheid word gerespekteer!</string>
+    <string name="slideTitle6">Toestemming vir die toepassing</string>
+    <string name="slideDesc6">Gee asseblief aan app die vereiste toestemming om te werk!</string>
     <!-- Update screen -->
+    <string name="update_new">Nuwe opdatering beskikbaar weergawe:</string>
+    <string name="update_hash_error">Lêerhandtekening klop nie! Kan nie opdateer nie.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Weergawe</string>
+    <string name="update_version_nightly">Nagweergawe</string>
+    <string name="update_changelog">Veranderlogboek</string>
+    <string name="update_status">Opdateer toestand</string>
+    <string name="update_action">Laai af en installeer opdatering</string>
+    <string name="update_downloading">Laai tans opdatering af</string>
+    <string name="install_update">Pas tans opdatering toe</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Wil jy die toepassing versteek of verlaat?</string>
+    <string name="btn_exit">Verlaat</string>
+    <string name="btn_back">Versteek</string>
+    <string name="unlock">Ontsluit App</string>
+    <string name="auth">Bevestig stawing</string>
+    <string name="update">Opdateer</string>
+    <string name="setting">Instellings</string>
+    <string name="codeHint">Tik of laai rubber ducky-skrifte hier</string>
+    <string name="loadBtn">Laai</string>
+    <string name="saveBtn">Stoor</string>
+    <string name="delBtn">Vee uit</string>
+    <string name="runBtn">Hardloop</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Aanhou</string>
+    <string name="root_err">Worteltoegang benodig vir USB-kabelaanval!</string>
+    <string name="kernel_err">"Kern word nie ondersteun vir USB-kabelaanval nie!"</string>
+    <string name="vm">Virtuele omgewing word nie ondersteun nie!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB gekoppel</string>
+    <string name="config_status_usb_off">USB ontkoppel</string>
+    <string name="config_status_net_on">Netwerksok gekoppel</string>
+    <string name="config_status_net_off">Netwerksok ontkoppel</string>
+    <string name="socket_address">Voer Socket IP en Port Address in</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Aflaai</string>
+    <string name="hid_update">Opdateer</string>
+    <string name="hid_edit">Wysig</string>
+    <string name="hid_delete">Vee uit</string>
     <!-- Keylist screen -->
+    <string name="key_title">Sleutel Naam</string>
+    <string name="key_character">Sleutelkarakter</string>
+    <string name="key_code">Sleutelkode</string>
+    <string name="key_ctrl">Ctrl-sleutel</string>
+    <string name="key_alt">Alt-sleutel</string>
+    <string name="key_shift">Shift-sleutel</string>
+    <string name="key_meta">Meta Sleutel</string>
+    <string name="keycode">Sleutelkode</string>
+    <string name="modcode">Wysigingskode</string>
+    <string name="key_details">Sleutelbesonderhede</string>
     <!-- Setting screen -->
+    <string name="setting_general">Algemeen</string>
+    <string name="dark_theme_title">Nagmodus</string>
+    <string name="dark_theme_summary">Stel donker tema</string>
+    <string name="device_admin_title">Maak app-toestel eienaar</string>
+    <string name="device_admin_summary">Wortel benodig. Dit is om sommige van die beperkings op Android te omseil.</string>
+    <string name="hide_icon_title">Versteek/deaktiveer Launcher-ikoon</string>
+    <string name="hide_icon_summary">Skakel *</string>
+    <string name="delete_dep_title">Deïnstalleer App</string>
+    <string name="delete_dep_summary">Maak die program skoon en verwyder dit.</string>
+    <string name="settings_sec_title">Vooraf sekuriteit</string>
+    <string name="settings_sec_desc">Aktiveer skriplêer-enkripsie en skermslot.</string>
+    <string name="setting_device">Aanvalmodus-instellings</string>
+    <string name="configfs_title">Outo-konfigureer ConfigFS</string>
+    <string name="configfs_summary">Sal HID konfigureer op ConfigFS-ondersteunde toestelle. Kan USB-instelling breek.</string>
+    <string name="hid_choice_title">Aanpasbare HID</string>
+    <string name="hid_choice_summary">Skakel tussen Legacy HID en Aanpasbare HID</string>
+    <string name="hid_title">HID Taal</string>
+    <string name="hid_summary">Laai bykomende HID-tale af of ontwerp nuwe HID-uitlegte.</string>
+    <string name="settings_usb_title">USB Connect Begin</string>
+    <string name="settings_usb_desc">Run-knoppie sal aanval begin wanneer USB gekoppel is.</string>
+    <string name="settings_net_title">Netwerk Socket Connect Begin</string>
+    <string name="settings_net_desc">Run-knoppie sal aanval begin wanneer Network Socket gekoppel is.</string>
+    <string name="setting_about">Inligting</string>
+    <string name="setting_developer_title">Ontwikkelaar</string>
+    <string name="settings_version_title">Weergawe</string>
+    <string name="settings_arch_title">Argitektuur</string>
+    <string name="settings_lic_title">Lisensie</string>
+    <string name="settings_support">Ondersteuning</string>
+    <string name="settings_git_title">GitHub-kwessies</string>
+    <string name="settings_git_desc">Klik om kwessies of kenmerkversoek by te voeg.</string>
+    <string name="settings_locale_title">Lokalisering</string>
+    <string name="settings_locale_desc">Dra by tot programlokalisering.</string>
+    <string name="release">Verspreiding</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub vrystelling</string>
+    <string name="releaseGitHubNightly">GitHub Nag</string>
+    <string name="releaseTest">Ontfout vrystelling</string>
+    <string name="releaseOthers">Nie-ondersteunde vrystelling</string>
+    <string name="btn_cancel">Kanselleer</string>
+    <string name="btn_save">Stoor</string>
+    <string name="file_saved">gered</string>
+    <string name="title_open_file">Oop leêr</string>
+    <string name="title_delete_file">Vee lêer uit</string>
+    <string name="file_deleted">geskrap</string>
+    <string name="file_name">Lêernaam</string>
+    <string name="title_save_file">Stoor die lêer</string>
+    <string name="hid_version">Weergawe: %d</string>
+    <string-array name="modes">
+        <item>USB kabel</item>
+        <item>Netwerksok</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikaanse Engels</item>
+        <item>Turks</item>
+        <item>Sweeds</item>
+        <item>Sloweens</item>
+        <item>Russies</item>
+        <item>Portugees</item>
+        <item>Noors</item>
+        <item>Italiaans</item>
+        <item>Kroaties</item>
+        <item>Verenigde Koninkryk Engels</item>
+        <item>Frans</item>
+        <item>Fins</item>
+        <item>Spaans</item>
+        <item>Deens</item>
+        <item>Duits</item>
+        <item>Kanadese Frans</item>
+        <item>Brasiliaanse Portugees</item>
+        <item>Wit-Russies</item>
+        <item>Hongaars</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Outo</item>
+        <item>Dag</item>
+        <item>Nag</item>
+    </string-array>
 </resources>

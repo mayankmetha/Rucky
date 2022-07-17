@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">PWOCHÈ</string>
+    <string name="init_skip">SOTE</string>
+    <string name="init_agree">DAKÒ</string>
+    <string name="init_start">RACHE</string>
+    <string name="slideDesc1">Vire aparèy ou an nan yon Rubber Ducky!</string>
+    <string name="slideTitle2">USB kab</string>
+    <string name="slideDesc2">USB branche koòdone pou lanse atak!</string>
+    <string name="slideTitle3">Socket rezo</string>
+    <string name="slideDesc3">Entèfas priz ki baze sou Wi-Fi pou lanse atak atravè zouti ekstèn ki sipòte!</string>
+    <string name="slideTitle4">Limit responsabilite nou</string>
+    <string name="slideDesc4">Itilizatè aplikasyon an se sèl responsab pou domaj yo te koze. Pa gen okenn lòt antite ki ka responsab pou domaj yo fè lè l sèvi avèk aplikasyon sa a! Pran prekosyon lè w ap itilize aplikasyon an epi pa sèvi ak sa a pou fè lòt moun mal!</string>
+    <string name="slideTitle5">Règleman sou enfòmasyon prive</string>
+    <string name="slideDesc5">Pa gen okenn done nan nenpòt fòm kolekte, itilize ak vann! Gen kèk otorizasyon ki ta ka ogmante enkyetid sou enfòmasyon prive yo sèlman mande pou fonksyone nan sèten karakteristik nan app a epi yo pa kolekte done! Yo respekte vi prive ou!</string>
+    <string name="slideTitle6">Pèmisyon aplikasyon an</string>
+    <string name="slideDesc6">Tanpri bay aplikasyon an pèmisyon pou travay!</string>
     <!-- Update screen -->
+    <string name="update_new">Nouvo Mizajou ki disponib vèsyon:</string>
+    <string name="update_hash_error">Fichye siyati dezakòde! Pa ka Mizajou.</string>
+    <string name="update_activity">Mizajou Rucky</string>
+    <string name="update_version">Version</string>
+    <string name="update_version_nightly">Vèsyon sware</string>
+    <string name="update_changelog">Chanjman</string>
+    <string name="update_status">Mizajou Estati</string>
+    <string name="update_action">Telechaje ak Enstale Mizajou</string>
+    <string name="update_downloading">Telechaje Mizajou</string>
+    <string name="install_update">Aplike Mizajou</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Èske ou ta renmen kache oswa sòti aplikasyon an?</string>
+    <string name="btn_exit">Sòti</string>
+    <string name="btn_back">Kache</string>
+    <string name="unlock">Degaje aplikasyon an</string>
+    <string name="auth">Konfime otantifikasyon</string>
+    <string name="update">Mizajou</string>
+    <string name="setting">Anviwònman</string>
+    <string name="codeHint">Tape oswa chaje scripts kawoutchou isit la</string>
+    <string name="loadBtn">Chaj</string>
+    <string name="saveBtn">Sove</string>
+    <string name="delBtn">Efase</string>
+    <string name="runBtn">Kouri</string>
+    <string name="confBtn">Konfigirasyon</string>
+    <string name="btn_continue">Kontinye</string>
+    <string name="root_err">Aksè rasin obligatwa pou atak kab USB!</string>
+    <string name="kernel_err">"Kernel pa sipòte pou atak kab USB!"</string>
+    <string name="vm">Anviwònman vityèl pa sipòte!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Konekte</string>
+    <string name="config_status_usb_off">USB dekonekte</string>
+    <string name="config_status_net_on">Rezo Socket Konekte</string>
+    <string name="config_status_net_off">Socket Rezo Dekonekte</string>
+    <string name="socket_address">Antre IP Socket ak Adrès Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID konfigirasyon</string>
+    <string name="hid_download">Telechaje</string>
+    <string name="hid_update">Mizajou</string>
+    <string name="hid_edit">Edit</string>
+    <string name="hid_delete">Efase</string>
     <!-- Keylist screen -->
+    <string name="key_title">Non kle</string>
+    <string name="key_character">Karaktè kle</string>
+    <string name="key_code">Kòd kle</string>
+    <string name="key_ctrl">Ctrl kle</string>
+    <string name="key_alt">Alt kle</string>
+    <string name="key_shift">Kle Shift</string>
+    <string name="key_meta">Meta kle</string>
+    <string name="keycode">Kòd kle</string>
+    <string name="modcode">Kòd modifye</string>
+    <string name="key_details">Detay kle</string>
     <!-- Setting screen -->
+    <string name="setting_general">Jeneral</string>
+    <string name="dark_theme_title">Mòd lannwit</string>
+    <string name="dark_theme_summary">Mete tèm nwa</string>
+    <string name="device_admin_title">Fè pwopriyetè aparèy aplikasyon an</string>
+    <string name="device_admin_summary">Rasin obligatwa. Sa a se kontoune kèk nan restriksyon yo sou android.</string>
+    <string name="hide_icon_title">Kache /Enfim Icône lanseur</string>
+    <string name="hide_icon_summary">Rele *</string>
+    <string name="delete_dep_title">Désinstaller App</string>
+    <string name="delete_dep_summary">Netwaye epi dezenstale aplikasyon an.</string>
+    <string name="settings_sec_title">Sekirite avanse</string>
+    <string name="settings_sec_desc">Pèmèt chifreman fichye script ak fèmen ekran an.</string>
+    <string name="setting_device">Anviwònman mòd atak</string>
+    <string name="configfs_title">Auto Configure ConfigFS</string>
+    <string name="configfs_summary">Pral konfigirasyon HID sou aparèy ki sipòte ConfigFS. Ka kraze anviwònman USB.</string>
+    <string name="hid_choice_title">HID customizable</string>
+    <string name="hid_choice_summary">Chanje ant Legacy HID ak Customizable HID</string>
+    <string name="hid_title">Lang HID</string>
+    <string name="hid_summary">Telechaje lòt lang HID oswa konsepsyon nouvo layout HID.</string>
+    <string name="settings_usb_title">USB Konekte Lanse</string>
+    <string name="settings_usb_desc">Kouri bouton pral lanse atak lè USB konekte.</string>
+    <string name="settings_net_title">Rezo Socket Konekte Lanse</string>
+    <string name="settings_net_desc">Bouton Kouri pral lanse atak lè rezo Socket konekte.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Devlopè</string>
+    <string name="settings_version_title">Version</string>
+    <string name="settings_arch_title">Achitekti</string>
+    <string name="settings_lic_title">Lisans</string>
+    <string name="settings_support">Sipò</string>
+    <string name="settings_git_title">Pwoblèm GitHub</string>
+    <string name="settings_git_desc">Klike pou ajoute pwoblèm oswa demann karakteristik.</string>
+    <string name="settings_locale_title">Lokalizasyon</string>
+    <string name="settings_locale_desc">Kontribye nan lokalizasyon aplikasyon an.</string>
+    <string name="release">Distribisyon</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub chak swa</string>
+    <string name="releaseTest">Debug Liberasyon</string>
+    <string name="releaseOthers">Ki pa Sipòte Liberasyon</string>
+    <string name="btn_cancel">Anile</string>
+    <string name="btn_save">Sove</string>
+    <string name="file_saved">sove</string>
+    <string name="title_open_file">Louvri File</string>
+    <string name="title_delete_file">Efase File</string>
+    <string name="file_deleted">efase</string>
+    <string name="file_name">Non dosye</string>
+    <string name="title_save_file">Sove dosye</string>
+    <string name="hid_version">Vèsyon: %d</string>
+    <string-array name="modes">
+        <item>USB kab</item>
+        <item>Socket rezo</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Angle Ameriken</item>
+        <item>Tik</item>
+        <item>Swedish</item>
+        <item>Sloveni</item>
+        <item>Ris</item>
+        <item>Pòtigè</item>
+        <item>Nòvejyen</item>
+        <item>Italyen</item>
+        <item>kwoasyen</item>
+        <item>Wayòm Ini angle</item>
+        <item>franse</item>
+        <item>Finnish</item>
+        <item>Panyòl</item>
+        <item>Danwa</item>
+        <item>Alman</item>
+        <item>franse Kanadyen</item>
+        <item>Pòtigè brezilyen</item>
+        <item>Belarisyen</item>
+        <item>Ongwa</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Oto</item>
+        <item>Jounen</item>
+        <item>Lannwit</item>
+    </string-array>
 </resources>

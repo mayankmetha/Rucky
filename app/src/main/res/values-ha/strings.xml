@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">NA GABA</string>
+    <string name="init_skip">TSALLAKE</string>
+    <string name="init_agree">YARDA</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Juya na\'urar ku zuwa Ducky Rubber!</string>
+    <string name="slideTitle2">Kebul na USB</string>
+    <string name="slideDesc2">Kebul na USB don ƙaddamar da hari!</string>
+    <string name="slideTitle3">Network Socket</string>
+    <string name="slideDesc3">Hanyoyin haɗin Wi-Fi na tushen soket don ƙaddamar da hari ta kayan aikin waje masu goyan baya!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">Mai amfani da ƙa\'idar yana da alhakin lalacewa kawai. Babu wani mahaluki da zai iya ɗaukar alhakin lalacewar da aka yi ta amfani da wannan app! Yi taka tsantsan yayin amfani da app kuma kar a yi amfani da wannan don cutar da wasu!</string>
+    <string name="slideTitle5">takardar kebantawa</string>
+    <string name="slideDesc5">Ba a tattara bayanan kowane nau\'i, amfani da siyarwa! Wasu izini waɗanda zasu iya tayar da damuwa na sirri ana buƙatar kawai don aiki na wasu fasaloli a cikin ƙa\'idar kuma ba don tattara bayanai ba! Ana mutunta sirrin ku!</string>
+    <string name="slideTitle6">Izinin App</string>
+    <string name="slideDesc6">Da fatan za a ba app izinin da ake buƙata don yin aiki!</string>
     <!-- Update screen -->
+    <string name="update_new">Sabbin Sabuntawa Akwai:</string>
+    <string name="update_hash_error">Rashin Daidaituwar Sa hannun Fayil! Ba za a iya ɗaukaka ba.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Sigar</string>
+    <string name="update_version_nightly">Sigar Dare</string>
+    <string name="update_changelog">Canji</string>
+    <string name="update_status">Sabunta Matsayi</string>
+    <string name="update_action">Zazzagewa kuma Sanya Sabuntawa</string>
+    <string name="update_downloading">Ana saukewa</string>
+    <string name="install_update">Ana Neman Sabuntawa</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Kuna so a ɓoye ko fita daga app?</string>
+    <string name="btn_exit">Fita</string>
+    <string name="btn_back">Boye</string>
+    <string name="unlock">Buɗe App</string>
+    <string name="auth">Tabbatar da tabbaci</string>
+    <string name="update">Sabuntawa</string>
+    <string name="setting">Saituna</string>
+    <string name="codeHint">Buga ko loda rubutun ducky na roba anan</string>
+    <string name="loadBtn">Loda</string>
+    <string name="saveBtn">Ajiye</string>
+    <string name="delBtn">Share</string>
+    <string name="runBtn">Gudu</string>
+    <string name="confBtn">Saita</string>
+    <string name="btn_continue">Ci gaba</string>
+    <string name="root_err">Ana Bukatar Samun Tushen Don Harin Kebul Na USB!</string>
+    <string name="kernel_err">"Ba'a Tallafin Kernel Don Harin Kebul Na USB!"</string>
+    <string name="vm">Ba a tallafawa mahalli mara kyau!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">Haɗin USB</string>
+    <string name="config_status_usb_off">An cire haɗin USB</string>
+    <string name="config_status_net_on">Haɗa Socket Network</string>
+    <string name="config_status_net_off">An Kashe Socket Network</string>
+    <string name="socket_address">Shigar da Socket IP da Adireshin Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Tsarin HID</string>
+    <string name="hid_download">Zazzagewa</string>
+    <string name="hid_update">Sabuntawa</string>
+    <string name="hid_edit">Gyara</string>
+    <string name="hid_delete">Share</string>
     <!-- Keylist screen -->
+    <string name="key_title">Sunan Mabuɗin</string>
+    <string name="key_character">Mabuɗin Hali</string>
+    <string name="key_code">Lambar Maɓalli</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Lambar Maɓalli</string>
+    <string name="modcode">Lambar Gyara</string>
+    <string name="key_details">Mabuɗin Bayani</string>
     <!-- Setting screen -->
+    <string name="setting_general">Gabaɗaya</string>
+    <string name="dark_theme_title">Yanayin Dare</string>
+    <string name="dark_theme_summary">Saita jigon duhu</string>
+    <string name="device_admin_title">Yi mai na\'urar app</string>
+    <string name="device_admin_summary">Tushen da ake buƙata. Wannan shi ne don ketare wasu ƙuntatawa akan Android.</string>
+    <string name="hide_icon_title">Ɓoye/Kashe Icon Launcher</string>
+    <string name="hide_icon_summary">Kira *</string>
+    <string name="delete_dep_title">Cire App</string>
+    <string name="delete_dep_summary">Share kuma cire app.</string>
+    <string name="settings_sec_title">Tsaro na gaba</string>
+    <string name="settings_sec_desc">Kunna ɓoyayyen fayil ɗin rubutun da kulle allo.</string>
+    <string name="setting_device">Saitunan Yanayin Attack</string>
+    <string name="configfs_title">Saita ta atomatik ConfigFS</string>
+    <string name="configfs_summary">Za a saita HID akan na\'urori masu goyan bayan ConfigFS. Zai iya karya saitin USB.</string>
+    <string name="hid_choice_title">HID mai iya canzawa</string>
+    <string name="hid_choice_summary">Canja tsakanin Legacy HID da HID na Musamman</string>
+    <string name="hid_title">Harshen HID</string>
+    <string name="hid_summary">Zazzage ƙarin yarukan HID ko ƙirƙira sabbin shimfidu na HID.</string>
+    <string name="settings_usb_title">Kaddamar da Haɗin USB</string>
+    <string name="settings_usb_desc">Maɓallin Run zai ƙaddamar da hari lokacin da aka haɗa USB.</string>
+    <string name="settings_net_title">Ƙaddamar da Haɗin Socket Network</string>
+    <string name="settings_net_desc">Maɓallin Run zai ƙaddamar da hari lokacin da aka haɗa Socket Network.</string>
+    <string name="setting_about">Bayani</string>
+    <string name="setting_developer_title">Mai haɓakawa</string>
+    <string name="settings_version_title">Sigar</string>
+    <string name="settings_arch_title">Gine-gine</string>
+    <string name="settings_lic_title">Lasisi</string>
+    <string name="settings_support">Taimako</string>
+    <string name="settings_git_title">Abubuwan GitHub</string>
+    <string name="settings_git_desc">Danna don ƙara batutuwa ko buƙatar fasali.</string>
+    <string name="settings_locale_title">Matsakaici</string>
+    <string name="settings_locale_desc">Ba da gudummawa ga ƙa\'idar aiki.</string>
+    <string name="release">Rarrabawa</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Sakin GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Sakin gyara kuskure</string>
+    <string name="releaseOthers">Saki mara Tallafi</string>
+    <string name="btn_cancel">Soke</string>
+    <string name="btn_save">Ajiye</string>
+    <string name="file_saved">ceto</string>
+    <string name="title_open_file">Buɗe Fayil</string>
+    <string name="title_delete_file">Share Fayil</string>
+    <string name="file_deleted">share</string>
+    <string name="file_name">Sunan Fayil</string>
+    <string name="title_save_file">Ajiye Fayil</string>
+    <string name="hid_version">Sigar: %d</string>
+    <string-array name="modes">
+        <item>Kebul na USB</item>
+        <item>Network Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Turancin Amurka</item>
+        <item>Baturke</item>
+        <item>Yaren mutanen Sweden</item>
+        <item>Harshen Sloveniya</item>
+        <item>Rashanci</item>
+        <item>Fotigal</item>
+        <item>Yaren mutanen Norway</item>
+        <item>Italiyanci</item>
+        <item>Croatian</item>
+        <item>Ingila Ingilishi</item>
+        <item>Faransanci</item>
+        <item>Finnish</item>
+        <item>Mutanen Espanya</item>
+        <item>Danish</item>
+        <item>Jamusanci</item>
+        <item>Faransanci na Kanada</item>
+        <item>Portuguese Portuguese</item>
+        <item>Belarushiyanci</item>
+        <item>Harshen Hungary</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Mota</item>
+        <item>Rana</item>
+        <item>Dare</item>
+    </string-array>
 </resources>

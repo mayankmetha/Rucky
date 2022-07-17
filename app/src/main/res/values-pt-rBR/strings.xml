@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen -->
+    <!-- Init Screen -->
+    <string name="init_next">PRÓXIMO</string>
+    <string name="init_skip">IGNORAR</string>
+    <string name="init_agree">CONCORDA</string>
+    <string name="init_start">CASO</string>
+    <string name="slideDesc1">Vire seu dispositivo para um Chicote de Borracha!</string>
+    <string name="slideTitle2">Cabo USB</string>
+    <string name="slideDesc2">Interface com fios USB para lançar ataque!</string>
+    <string name="slideTitle3">Socket de Rede</string>
+    <string name="slideDesc3">Interfaces de soquete baseadas em Wi-Fi para lançar ataque através de ferramentas externas suportadas!</string>
+    <string name="slideTitle4">Renúncia</string>
+    <string name="slideDesc4">O usuário do aplicativo é o único responsável pelos danos causados. Nenhuma outra entidade pode ser responsabilizada pelos danos causados usando este aplicativo! Pratique cuidado ao usar o aplicativo e não use isso para causar danos aos outros!</string>
+    <string name="slideTitle5">Política de Privacidade</string>
+    <string name="slideDesc5">Nenhum dado de qualquer formulário é coletado, usado e vendido! Algumas permissões que podem gerar preocupações de privacidade só são solicitadas pelo funcionamento de certos recursos no app e não coletam dados! Sua privacidade é respeitada!</string>
+    <string name="slideTitle6">Permissão do aplicativo</string>
+    <string name="slideDesc6">Por favor, conceda ao aplicativo a permissão necessária para trabalhar!</string>
+    <!-- Update screen -->
+    <string name="update_new">Nova Atualização Disponível: </string>
+    <string name="update_hash_error">Arquivo de assinatura incompatível! Não é possível atualizar.</string>
+    <string name="update_activity">Atualização Rucky</string>
+    <string name="update_version">Versão</string>
+    <string name="update_version_nightly">Versão Noturna</string>
+    <string name="update_changelog">Mudanças</string>
+    <string name="update_status">Status de atualização</string>
+    <string name="update_action">Baixar e instalar atualização</string>
+    <string name="update_downloading">Baixando atualização</string>
+    <string name="install_update">Aplicando Atualização</string>
+    <!-- Editor screen -->
+    <string name="exit_dialog">Gostaria de ocultar ou sair do aplicativo?</string>
+    <string name="btn_exit">Sair</string>
+    <string name="btn_back">Esconder</string>
+    <string name="unlock">Desbloquear aplicativo</string>
+    <string name="auth">Confirmar autenticação</string>
+    <string name="update">Atualização</string>
+    <string name="setting">Confirgurações</string>
+    <string name="codeHint">Digite ou carregue scripts duplos de borracha aqui</string>
+    <string name="loadBtn">Carregar</string>
+    <string name="saveBtn">Guardar</string>
+    <string name="delBtn">excluir</string>
+    <string name="runBtn">Executar</string>
+    <string name="confBtn">Configuração</string>
+    <string name="btn_continue">Continuar</string>
+    <string name="root_err">Acesso root necessário para o ataque de cabo USB!</string>
+    <string name="kernel_err">"Kernel não suportado para o USB Cabo!"</string>
+    <string name="vm">Ambiente virtual não suportado!</string>
+    <!-- Config screen -->
+    <string name="config_activity">Modificações</string>
+    <string name="config_status_usb_on">USB conectado</string>
+    <string name="config_status_usb_off">USB desconectado</string>
+    <string name="config_status_net_on">Socket de Rede Conectado</string>
+    <string name="config_status_net_off">Socket de Rede Desconectado</string>
+    <string name="socket_address">Digite o IP do Socket e endereço da porta</string>
+    <!-- HID config screen -->
+    <string name="hid_activity">Configuração do HID</string>
+    <string name="hid_download">BAIXAR</string>
+    <string name="hid_update">Atualização</string>
+    <string name="hid_edit">Alterar</string>
+    <string name="hid_delete">excluir</string>
+    <!-- Keylist screen -->
+    <string name="key_title">Nome da Chave</string>
+    <string name="key_character">Caractere da chave</string>
+    <string name="key_code">Código Chave</string>
+    <string name="key_ctrl">Ctrl Tecla</string>
+    <string name="key_alt">Tecla Alt</string>
+    <string name="key_shift">Chave Shift</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Código Chave</string>
+    <string name="modcode">Modifier Code</string>
+    <string name="key_details">Detalhes da chave</string>
+    <!-- Setting screen -->
+    <string name="setting_general">Gerais</string>
+    <string name="dark_theme_title">Modo Noturno</string>
+    <string name="dark_theme_summary">Definir tema escuro</string>
+    <string name="device_admin_title">Tornar proprietário do dispositivo app</string>
+    <string name="device_admin_summary">Root necessário. Isto é para contornar algumas das restrições no Android.</string>
+    <string name="hide_icon_title">Esconder/Desabilitar ícone do Launcher</string>
+    <string name="hide_icon_summary">Discar *#*#78259#*#* para iniciar. No Android 10, o ícone será desativado, mas não ocultado.</string>
+    <string name="delete_dep_title">Desinstalar aplicativo</string>
+    <string name="delete_dep_summary">Limpe e desinstale o app.</string>
+    <string name="settings_sec_title">Segurança avançada</string>
+    <string name="settings_sec_desc">Habilitar criptografia de arquivo de script e bloqueio de tela.</string>
+    <string name="setting_device">Configurações do Modo Ataque</string>
+    <string name="configfs_title">Configurar automaticamente</string>
+    <string name="configfs_summary">Configurará o HID no dispositivo com suporte a ConfigFS. Pode quebrar a configuração USB.</string>
+    <string name="hid_choice_title">HID personalizável</string>
+    <string name="hid_choice_summary">Alternar entre HID Legado e HID Personalizável</string>
+    <string name="hid_title">Idioma HID</string>
+    <string name="hid_summary">Baixe idiomas adicionais de HID ou crie novos layouts de HID.</string>
+    <string name="settings_usb_title">Iniciação de conexão USB</string>
+    <string name="settings_usb_desc">Executar botão irá iniciar o ataque quando o USB estiver conectado.</string>
+    <string name="settings_net_title">Lançamento do Socket de Rede Connect</string>
+    <string name="settings_net_desc">Executar botão irá iniciar o ataque quando o Socket de Rede for conectado.</string>
+    <string name="setting_about">Informações</string>
+    <string name="setting_developer_title">Desenvolvedores</string>
+    <string name="settings_version_title">Versão</string>
+    <string name="settings_arch_title">Arquitetura</string>
+    <string name="settings_lic_title">Tipo:</string>
+    <string name="settings_support">SUPORTE</string>
+    <string name="settings_git_title">GitHub Issues</string>
+    <string name="settings_git_desc">Clique para adicionar issues ou solicitação de funcionalidade.</string>
+    <string name="settings_locale_title">Traduções</string>
+    <string name="settings_locale_desc">Contribuir para a localização do aplicativo.</string>
+    <string name="release">Distribuição</string>
+    <string name="releaseNetHunter">Loja de Aplicativos NetHunter</string>
+    <string name="releaseGitHub">Versão do GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Depurar Lançamento</string>
+    <string name="releaseOthers">Versão não suportada</string>
+    <string name="btn_cancel">cancelar</string>
+    <string name="btn_save">Guardar</string>
+    <string name="file_saved">guardado</string>
+    <string name="title_open_file">Abrir arquivo</string>
+    <string name="title_delete_file">Excluir Arquivo</string>
+    <string name="file_deleted">Excluído</string>
+    <string name="file_name">Nome do arquivo</string>
+    <string name="title_save_file">Salvar Arquivo</string>
+    <string name="hid_version">Versão: %d</string>
+    <string-array name="modes">
+        <item>Cabo USB</item>
+        <item>Socket de Rede</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>inglês americano</item>
+        <item>Turco</item>
+        <item>sueco</item>
+        <item>Slovenian</item>
+        <item>Russo</item>
+        <item>Português</item>
+        <item>norueguês</item>
+        <item>italiano</item>
+        <item>croata</item>
+        <item>inglês do Reino Unido</item>
+        <item>francês</item>
+        <item>Finlandês</item>
+        <item>espanhol</item>
+        <item>Dinamarquês</item>
+        <item>alemão</item>
+        <item>francês canadense</item>
+        <item>Português do Brasil</item>
+        <item>Bielorrusso</item>
+        <item>Húngaro</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Automático</item>
+        <item>dia</item>
+        <item>Noite</item>
+    </string-array>
+</resources>

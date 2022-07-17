@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">AG̃UI</string>
+    <string name="init_skip">JEPOPO</string>
+    <string name="init_agree">ÑEMONEĨ</string>
+    <string name="init_start">HACK rehegua</string>
+    <string name="slideDesc1">¡Embojere nde dispositivo peteĩ Pato de Goma-pe!</string>
+    <string name="slideTitle2">Cable USB rehegua</string>
+    <string name="slideDesc2">Interfaz cableada USB omoñepyrũ hag̃ua ataque!</string>
+    <string name="slideTitle3">Socket de Red rehegua</string>
+    <string name="slideDesc3">Umi interfaz socket rehegua Wi-Fi rehegua omoñepyrũ hag̃ua ataque tembipuru okapegua oipytyvõva rupive!</string>
+    <string name="slideTitle4">Ñe’ẽñemi</string>
+    <string name="slideDesc4">Pe app oiporúva añoite ha’e responsable umi mba’e vai ojejapóvare. ¡Ndaipóri ambue entidad ikatúva ojeguereko responsable umi perjuicio ojejapóva ojeporúvo ko app! ¡Eñembokatupyry eñangareko hag̃ua reipuru jave pe aplikasión ha ani reiporu kóva rejapo hag̃ua mbaʼeve ivaíva ótrope!</string>
+    <string name="slideTitle5">Política de Privacidad rehegua</string>
+    <string name="slideDesc5">No Datos de cualquier forma noñembyatýi, ojeporu ha oñevende! Oĩ permiso ikatúva omoheñói jepy’apy privacidad rehegua ojejeruréva omba’apo hag̃uánte ciertas características app-pe ha ndaha’éi ombyaty hag̃ua dato! ¡Oñemomba’e nde privacidad!</string>
+    <string name="slideTitle6">Permiso de App rehegua</string>
+    <string name="slideDesc6">¡Eme\'ẽ app pe permiso oñeikotevẽva omba\'apo haguã!</string>
     <!-- Update screen -->
+    <string name="update_new">Ñembopyahu pyahu ojeguerekóva Versión:</string>
+    <string name="update_hash_error">¡Firma de archivo ndojoajúi! Ndaikatúi Ombopyahu.</string>
+    <string name="update_activity">Rucky Ñembopyahu</string>
+    <string name="update_version">Je\'eháicha</string>
+    <string name="update_version_nightly">Versión Pyhare rehegua</string>
+    <string name="update_changelog">Ñemoambue registro</string>
+    <string name="update_status">Ñembopyahu Estado rehegua</string>
+    <string name="update_action">Emboguejy ha Emoĩ Ñembopyahu</string>
+    <string name="update_downloading">Ojegueru hag̃ua Ñembopyahu</string>
+    <string name="install_update">Ojeporúvo Actualización</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">¿Reñomisépa térã resẽse pe aplikasióngui?</string>
+    <string name="btn_exit">Ñesẽha</string>
+    <string name="btn_back">Mongañy</string>
+    <string name="unlock">Desbloqueo App rehegua</string>
+    <string name="auth">Omoañete jekuaauka</string>
+    <string name="update">Mbopyahu</string>
+    <string name="setting">Ñembohekorã</string>
+    <string name="codeHint">Ehai térã ekargá umi guión pato de goma ko’ápe</string>
+    <string name="loadBtn">Mba\'epohýi</string>
+    <string name="saveBtn">Pysyrõ</string>
+    <string name="delBtn">Mboje\'oha</string>
+    <string name="runBtn">Ñañi</string>
+    <string name="confBtn">Config rehegua</string>
+    <string name="btn_continue">Mbojoapy</string>
+    <string name="root_err">¡Oñeikotevẽ Acceso Root-pe g̃uarã Ataque Cable USB-pe g̃uarã!</string>
+    <string name="kernel_err">"¡Kernel Ndojeguerohorýi Ataque Cable USB-pe g̃uarã!"</string>
+    <string name="vm">¡Ndojeguerohorýi entorno virtual!</string>
     <!-- Config screen -->
+    <string name="config_activity">Umi mba’e ojejapóva</string>
+    <string name="config_status_usb_on">USB Oñembojoaju</string>
+    <string name="config_status_usb_off">USB Ojepe’ava’ekue</string>
+    <string name="config_status_net_on">Socket Red rehegua Oñembojoaju</string>
+    <string name="config_status_net_off">Socket Red rehegua Ojepe’a</string>
+    <string name="socket_address">Emoinge Socket IP ha Puerto Dirección</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID rehegua Config</string>
+    <string name="hid_download">Mboguejy</string>
+    <string name="hid_update">Mbopyahu</string>
+    <string name="hid_edit">Moambue</string>
+    <string name="hid_delete">Mboje\'oha</string>
     <!-- Keylist screen -->
+    <string name="key_title">Téra clave rehegua</string>
+    <string name="key_character">Personaje Clave rehegua</string>
+    <string name="key_code">Código Clave rehegua</string>
+    <string name="key_ctrl">Ctrl Teclado rehegua</string>
+    <string name="key_alt">Alt Tecla rehegua</string>
+    <string name="key_shift">Tecla de Cambio rehegua</string>
+    <string name="key_meta">Meta Clave rehegua</string>
+    <string name="keycode">Código Clave rehegua</string>
+    <string name="modcode">Código Modificador rehegua</string>
+    <string name="key_details">Detalles Clave rehegua</string>
     <!-- Setting screen -->
+    <string name="setting_general">Opavavépe</string>
+    <string name="dark_theme_title">Modo Pyhare rehegua</string>
+    <string name="dark_theme_summary">Oñemohenda tema iñypytûva</string>
+    <string name="device_admin_title">Ejapo app dispositivo jára</string>
+    <string name="device_admin_summary">Hapo Oñeikotevẽva. Péva ojeheja haguã algunas restricciones Android-pe.</string>
+    <string name="hide_icon_title">Oñomi/Embogue Icono de Lanzador</string>
+    <string name="hide_icon_summary">Embohéra * .</string>
+    <string name="delete_dep_title">Desinstalar App rehegua</string>
+    <string name="delete_dep_summary">Oñemopotî ha ojedesinstalar app.</string>
+    <string name="settings_sec_title">Seguridad Anticipada rehegua</string>
+    <string name="settings_sec_desc">Emboguata script vore cifrado ha pantalla ñemboty.</string>
+    <string name="setting_device">Modo de Ataque Ñemboheko</string>
+    <string name="configfs_title">Emohenda ijeheguiete ConfigFS</string>
+    <string name="configfs_summary">Omohendava’erã HID umi tembipuru ConfigFS oipytyvõvape. Ikatu omboty USB ñemboheko.</string>
+    <string name="hid_choice_title">HID personalizable rehegua</string>
+    <string name="hid_choice_summary">Embohasa HID Legado ha HID Personalizable apytépe</string>
+    <string name="hid_title">HID Ñe’ẽ</string>
+    <string name="hid_summary">Emboguejy HID ñe’ẽ ambuéva térã emohenda HID ñemohenda pyahu.</string>
+    <string name="settings_usb_title">USB Ñembojoaju Ñepyrũrã</string>
+    <string name="settings_usb_desc">Botón ejecutar omoñepyrũta ataque oñembojoaju jave USB.</string>
+    <string name="settings_net_title">Red Socket Connect Ñepyrũrã</string>
+    <string name="settings_net_desc">Botón ejecutar omoñepyrũta ataque oñembojoaju jave Socket de Red.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Ñemoheñóihára</string>
+    <string name="settings_version_title">Je\'eháicha</string>
+    <string name="settings_arch_title">Arquitectura</string>
+    <string name="settings_lic_title">Licencia rehegua</string>
+    <string name="settings_support">Pytyvõ</string>
+    <string name="settings_git_title">GitHub rehegua mba’ekuaarã</string>
+    <string name="settings_git_desc">Emboguejy emoĩ hag̃ua mba’e’apopy térã mba’ekuaarã jerure.</string>
+    <string name="settings_locale_title">Localización rehegua</string>
+    <string name="settings_locale_desc">Oipytyvõ app localización-pe.</string>
+    <string name="release">Mboja\'o</string>
+    <string name="releaseNetHunter">NetHunter Ñemuha Ñemuha</string>
+    <string name="releaseGitHub">GitHub Ñe’ẽmondo</string>
+    <string name="releaseGitHubNightly">GitHub Pyhare rehegua</string>
+    <string name="releaseTest">Depuración Ñemboguejy</string>
+    <string name="releaseOthers">Liberación No Soportada rehegua</string>
+    <string name="btn_cancel">Heja</string>
+    <string name="btn_save">Pysyrõ</string>
+    <string name="file_saved">ojesalva</string>
+    <string name="title_open_file">Eipe’a Archivo</string>
+    <string name="title_delete_file">Ombogue Archivo</string>
+    <string name="file_deleted">oñembogue</string>
+    <string name="file_name">Archivo Réra</string>
+    <string name="title_save_file">Ñongatu Archivo</string>
+    <string name="hid_version">Versión: %d rehegua</string>
+    <string-array name="modes">
+        <item>Cable USB rehegua</item>
+        <item>Socket de Red rehegua</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Inglés americano</item>
+        <item>Turco ñe’ẽ</item>
+        <item>Sueco ñe’ẽ</item>
+        <item>Esloveno ñe’ẽ</item>
+        <item>Ruso ñe’ẽ</item>
+        <item>Portugués</item>
+        <item>Noruega ñe’ẽ</item>
+        <item>Italia ñe’ẽ</item>
+        <item>Croata ñe’ẽ</item>
+        <item>Reino Unido Inglés</item>
+        <item>Francés-pe</item>
+        <item>Finlandés ñe’ẽ</item>
+        <item>karaiñe\'ẽ</item>
+        <item>Danés</item>
+        <item>Alemán ñe’ẽme</item>
+        <item>Francés canadiense</item>
+        <item>Portugués brasileño</item>
+        <item>Bielorruso-pegua</item>
+        <item>Húngaro ñe’ẽ</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto rehegua</item>
+        <item>Ára</item>
+        <item>Pyhare</item>
+    </string-array>
 </resources>

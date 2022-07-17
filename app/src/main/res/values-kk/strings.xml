@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">КЕЛЕСІ</string>
+    <string name="init_skip">ӨТКІЗУ</string>
+    <string name="init_agree">КЕЛІСІМ</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Құрылғыңызды Rubber Ducky-ге айналдырыңыз!</string>
+    <string name="slideTitle2">USB кабелі</string>
+    <string name="slideDesc2">Шабуыл жасау үшін USB сымды интерфейс!</string>
+    <string name="slideTitle3">Желілік розетка</string>
+    <string name="slideDesc3">Қолдау көрсетілетін сыртқы құралдар арқылы шабуылды бастау үшін Wi-Fi негізіндегі розетка интерфейстері!</string>
+    <string name="slideTitle4">Жауапкершіліктен бас тарту</string>
+    <string name="slideDesc4">Келтірілген зиян үшін қолданбаның пайдаланушысы ғана жауапты. Ешбір басқа ұйым осы қолданбаны пайдалану арқылы келтірілген зиян үшін жауап бермейді! Қолданбаны пайдалану кезінде сақ болыңыз және оны басқаларға зиян келтіру үшін пайдаланбаңыз!</string>
+    <string name="slideTitle5">Құпиялылық саясаты</string>
+    <string name="slideDesc5">Ешқандай пішіндегі деректер жиналмайды, пайдаланылмайды және сатылмайды! Құпиялылық мәселелерін тудыруы мүмкін кейбір рұқсаттар қолданбадағы белгілі бір мүмкіндіктердің жұмыс істеуі үшін ғана сұралады және деректерді жинауға жатпайды! Сіздің жеке өміріңіз құрметтеледі!</string>
+    <string name="slideTitle6">Қолданба рұқсаты</string>
+    <string name="slideDesc6">Қолданбаға жұмыс істеуге қажетті рұқсат беріңіз!</string>
     <!-- Update screen -->
+    <string name="update_new">Жаңа жаңартудың қолжетімді нұсқасы:</string>
+    <string name="update_hash_error">Файл қолтаңбасының сәйкессіздігі! Жаңарту мүмкін емес.</string>
+    <string name="update_activity">Rucky жаңарту</string>
+    <string name="update_version">Нұсқа</string>
+    <string name="update_version_nightly">Түнгі нұсқа</string>
+    <string name="update_changelog">Өзгеріс журналы</string>
+    <string name="update_status">Күйді жаңарту</string>
+    <string name="update_action">Жаңартуды жүктеп алыңыз және орнатыңыз</string>
+    <string name="update_downloading">Жаңарту жүктелуде</string>
+    <string name="install_update">Жаңартуды қолдану</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Қолданбаны жасырғыңыз немесе шыққыңыз келе ме?</string>
+    <string name="btn_exit">Шығу</string>
+    <string name="btn_back">Жасыру</string>
+    <string name="unlock">Қолданбаның құлпын ашу</string>
+    <string name="auth">Аутентификацияны растау</string>
+    <string name="update">Жаңарту</string>
+    <string name="setting">Параметрлер</string>
+    <string name="codeHint">Мұнда резеңке үйрек сценарийлерін теріңіз немесе жүктеңіз</string>
+    <string name="loadBtn">Жүктеу</string>
+    <string name="saveBtn">Сақтау</string>
+    <string name="delBtn">Жою</string>
+    <string name="runBtn">Жүгіру</string>
+    <string name="confBtn">Конфигурация</string>
+    <string name="btn_continue">Жалғастыру</string>
+    <string name="root_err">USB кабеліне шабуыл жасау үшін түбірлік қатынас қажет!</string>
+    <string name="kernel_err">"USB кабеліне шабуыл жасау үшін ядроға қолдау көрсетілмейді!"</string>
+    <string name="vm">Виртуалды ортаға қолдау көрсетілмейді!</string>
     <!-- Config screen -->
+    <string name="config_activity">Твектер</string>
+    <string name="config_status_usb_on">USB қосылған</string>
+    <string name="config_status_usb_off">USB ажыратылды</string>
+    <string name="config_status_net_on">Желілік розетка қосылған</string>
+    <string name="config_status_net_off">Желілік розетка ажыратылды</string>
+    <string name="socket_address">Розетка IP және порт мекенжайын енгізіңіз</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID конфигурациясы</string>
+    <string name="hid_download">Жүктеп алу</string>
+    <string name="hid_update">Жаңарту</string>
+    <string name="hid_edit">Өңдеу</string>
+    <string name="hid_delete">Жою</string>
     <!-- Keylist screen -->
+    <string name="key_title">Негізгі аты</string>
+    <string name="key_character">Негізгі таңба</string>
+    <string name="key_code">Негізгі код</string>
+    <string name="key_ctrl">Ctrl пернесі</string>
+    <string name="key_alt">Alt пернесі</string>
+    <string name="key_shift">Shift пернесі</string>
+    <string name="key_meta">Мета кілт</string>
+    <string name="keycode">Негізгі код</string>
+    <string name="modcode">Модификатор коды</string>
+    <string name="key_details">Негізгі мәліметтер</string>
     <!-- Setting screen -->
+    <string name="setting_general">Жалпы</string>
+    <string name="dark_theme_title">Түнгі режим</string>
+    <string name="dark_theme_summary">Қараңғы тақырыпты орнату</string>
+    <string name="device_admin_title">Қолданба құрылғысының иесі етіңіз</string>
+    <string name="device_admin_summary">Түбір қажет. Бұл Android жүйесіндегі кейбір шектеулерді айналып өту.</string>
+    <string name="hide_icon_title">Іске қосу белгішесін жасыру/өшіру</string>
+    <string name="hide_icon_summary">Теру *</string>
+    <string name="delete_dep_title">Қолданбаны жою</string>
+    <string name="delete_dep_summary">Қолданбаны тазалап, жойыңыз.</string>
+    <string name="settings_sec_title">Алдын ала қауіпсіздік</string>
+    <string name="settings_sec_desc">Сценарий файлын шифрлауды және экранды құлыптауды қосыңыз.</string>
+    <string name="setting_device">Шабуыл режимінің параметрлері</string>
+    <string name="configfs_title">ConfigFS автоматты конфигурациялау</string>
+    <string name="configfs_summary">ConfigFS қолдау көрсететін құрылғыларда HID конфигурациялайды. USB параметрін бұзуы мүмкін.</string>
+    <string name="hid_choice_title">Реттелетін HID</string>
+    <string name="hid_choice_summary">Бұрынғы HID және теңшелетін HID арасында ауысыңыз</string>
+    <string name="hid_title">HID тілі</string>
+    <string name="hid_summary">Қосымша HID тілдерін жүктеп алыңыз немесе жаңа HID макеттерін жасаңыз.</string>
+    <string name="settings_usb_title">USB қосылымын іске қосыңыз</string>
+    <string name="settings_usb_desc">Іске қосу түймесі USB қосылған кезде шабуылды бастайды.</string>
+    <string name="settings_net_title">Network Socket Connect іске қосу</string>
+    <string name="settings_net_desc">«Іске қосу» түймешігі желі ұясы қосылған кезде шабуылды бастайды.</string>
+    <string name="setting_about">Ақпарат</string>
+    <string name="setting_developer_title">Әзірлеуші</string>
+    <string name="settings_version_title">Нұсқа</string>
+    <string name="settings_arch_title">Архитектура</string>
+    <string name="settings_lic_title">Лицензия</string>
+    <string name="settings_support">Қолдау</string>
+    <string name="settings_git_title">GitHub мәселелері</string>
+    <string name="settings_git_desc">Мәселелерді немесе мүмкіндік сұрауын қосу үшін басыңыз.</string>
+    <string name="settings_locale_title">Локализация</string>
+    <string name="settings_locale_desc">Қолданбаны локализациялауға үлес қосыңыз.</string>
+    <string name="release">Тарату</string>
+    <string name="releaseNetHunter">NetHunter қолданбалар дүкені</string>
+    <string name="releaseGitHub">GitHub шығарылымы</string>
+    <string name="releaseGitHubNightly">GitHub түні</string>
+    <string name="releaseTest">Түзету шығарылымы</string>
+    <string name="releaseOthers">Қолдау көрсетілмейтін шығарылым</string>
+    <string name="btn_cancel">Болдырмау</string>
+    <string name="btn_save">Сақтау</string>
+    <string name="file_saved">сақталды</string>
+    <string name="title_open_file">Файлды ашу</string>
+    <string name="title_delete_file">Файлды жою</string>
+    <string name="file_deleted">жойылды</string>
+    <string name="file_name">Файл атауы</string>
+    <string name="title_save_file">Файлды сақтау</string>
+    <string name="hid_version">Нұсқа: %d</string>
+    <string-array name="modes">
+        <item>USB кабелі</item>
+        <item>Желілік розетка</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Американдық ағылшын</item>
+        <item>түрік</item>
+        <item>швед</item>
+        <item>словен</item>
+        <item>орыс</item>
+        <item>португал тілі</item>
+        <item>норвег</item>
+        <item>итальян</item>
+        <item>хорват</item>
+        <item>Ұлыбритания ағылшын</item>
+        <item>француз</item>
+        <item>фин</item>
+        <item>испан</item>
+        <item>дат</item>
+        <item>неміс</item>
+        <item>канадалық француз</item>
+        <item>Бразилиялық португал</item>
+        <item>белорус</item>
+        <item>венгр</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Автоматты</item>
+        <item>Күн</item>
+        <item>Түн</item>
+    </string-array>
 </resources>

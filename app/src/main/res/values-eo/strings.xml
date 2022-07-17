@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">SEKVA</string>
+    <string name="init_skip">SALTI</string>
+    <string name="init_agree">konsentas</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Turnu vian aparaton al Kaŭĉuka Anaso!</string>
+    <string name="slideTitle2">USB-Kablo</string>
+    <string name="slideDesc2">USB kablita interfaco por lanĉi atakon!</string>
+    <string name="slideTitle3">Reto Socket</string>
+    <string name="slideDesc3">Interfacoj bazitaj sur Wi-Fi por lanĉi atakon per subtenataj eksteraj iloj!</string>
+    <string name="slideTitle4">Malgarantio</string>
+    <string name="slideDesc4">Uzanto de la app estas la sola respondeca pri la damaĝoj kaŭzitaj. Neniu alia ento povas respondeci pri la damaĝoj faritaj per ĉi tiu programo! Estu singardemo kiam vi uzas la apon kaj ne uzu ĉi tion por kaŭzi damaĝon al aliaj!</string>
+    <string name="slideTitle5">Privateca Politiko</string>
+    <string name="slideDesc5">Neniuj Datumoj de ajna formo estas kolektitaj, uzataj kaj venditaj! Iuj permesoj, kiuj povus kaŭzi privatecon zorgojn, estas nur petitaj por la funkciado de iuj funkcioj en la programo kaj ne estas kolekti datumojn! Via privateco estas respektata!</string>
+    <string name="slideTitle6">Permeso de App</string>
+    <string name="slideDesc6">Bonvolu doni al app la bezonatan permeson labori!</string>
     <!-- Update screen -->
+    <string name="update_new">Nova Ĝisdatigo Disponebla Versio:</string>
+    <string name="update_hash_error">Dosiera Signature Miskongruo! Ne povas Ĝisdatigi.</string>
+    <string name="update_activity">Rucky Ĝisdatigo</string>
+    <string name="update_version">Versio</string>
+    <string name="update_version_nightly">Nokta Versio</string>
+    <string name="update_changelog">Ŝanĝprotokolo</string>
+    <string name="update_status">Ĝisdatigu Statuson</string>
+    <string name="update_action">Elŝutu kaj Instalu Ĝisdatigon</string>
+    <string name="update_downloading">Elŝutante Ĝisdatigon</string>
+    <string name="install_update">Aplikante Ĝisdatigon</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ĉu vi ŝatus kaŝi aŭ eliri la apon?</string>
+    <string name="btn_exit">Eliro</string>
+    <string name="btn_back">Kaŝi</string>
+    <string name="unlock">Malŝlosu Apon</string>
+    <string name="auth">Konfirmu aŭtentikigon</string>
+    <string name="update">Ĝisdatigo</string>
+    <string name="setting">Agordoj</string>
+    <string name="codeHint">Tajpu aŭ ŝarĝu kaŭĉukajn skriptojn ĉi tie</string>
+    <string name="loadBtn">Ŝarĝo</string>
+    <string name="saveBtn">Savi</string>
+    <string name="delBtn">Forigi</string>
+    <string name="runBtn">Kuri</string>
+    <string name="confBtn">Agordo</string>
+    <string name="btn_continue">Daŭrigu</string>
+    <string name="root_err">Radika Aliro Bezonata Por USBa Kablo-Atako!</string>
+    <string name="kernel_err">"Kerno Ne Subtenata Por USBa Kablo-Atako!"</string>
+    <string name="vm">Virtuala medio ne estas subtenata!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Konektita</string>
+    <string name="config_status_usb_off">USB Malkonektita</string>
+    <string name="config_status_net_on">Reto Socket Konektita</string>
+    <string name="config_status_net_off">Reto Socket Malkonektita</string>
+    <string name="socket_address">Enigu Socket IP kaj Havena Adreso</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID-agordo</string>
+    <string name="hid_download">Elŝutu</string>
+    <string name="hid_update">Ĝisdatigo</string>
+    <string name="hid_edit">Redakti</string>
+    <string name="hid_delete">Forigi</string>
     <!-- Keylist screen -->
+    <string name="key_title">Ŝlosila Nomo</string>
+    <string name="key_character">Ŝlosila Karaktero</string>
+    <string name="key_code">Ŝlosila Kodo</string>
+    <string name="key_ctrl">Ctrl-klavo</string>
+    <string name="key_alt">Alt-klavo</string>
+    <string name="key_shift">Majŝlosilo</string>
+    <string name="key_meta">Meta Ŝlosilo</string>
+    <string name="keycode">Ŝlosila Kodo</string>
+    <string name="modcode">Kodo de modifilo</string>
+    <string name="key_details">Ŝlosilaj Detaloj</string>
     <!-- Setting screen -->
+    <string name="setting_general">Generalo</string>
+    <string name="dark_theme_title">Nokta Reĝimo</string>
+    <string name="dark_theme_summary">Agordu malhelan temon</string>
+    <string name="device_admin_title">Faru app-aparaton posedanto</string>
+    <string name="device_admin_summary">Radiko Bezonata. Ĉi tio estas preterpasi iujn el la restriktoj en Android.</string>
+    <string name="hide_icon_title">Kaŝi/Malŝalti Lanĉilan Ikonon</string>
+    <string name="hide_icon_summary">Dial *</string>
+    <string name="delete_dep_title">Malinstali Apon</string>
+    <string name="delete_dep_summary">Purigu kaj malinstalu la apon.</string>
+    <string name="settings_sec_title">Antaŭa Sekureco</string>
+    <string name="settings_sec_desc">Ebligu ĉifradon de skriptodosieroj kaj ekranŝlosadon.</string>
+    <string name="setting_device">Agordoj de Ataka Reĝimo</string>
+    <string name="configfs_title">Aŭtomate Agordu ConfigFS</string>
+    <string name="configfs_summary">Agordos HID sur ConfigFS subtenataj aparatoj. Povas rompi USB-agordon.</string>
+    <string name="hid_choice_title">Agordigebla HID</string>
+    <string name="hid_choice_summary">Ŝanĝu inter Legacy HID kaj Agordigebla HID</string>
+    <string name="hid_title">HID Lingvo</string>
+    <string name="hid_summary">Elŝutu pliajn HID-lingvojn aŭ desegni novajn HID-aranĝojn.</string>
+    <string name="settings_usb_title">Lanĉo de USB Konekti</string>
+    <string name="settings_usb_desc">Run-butono lanĉos atakon kiam USB estas konektita.</string>
+    <string name="settings_net_title">Lanĉo de Network Socket Connect</string>
+    <string name="settings_net_desc">Ruli butonon lanĉos atakon kiam Network Socket estas konektita.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Ellaboranto</string>
+    <string name="settings_version_title">Versio</string>
+    <string name="settings_arch_title">Arkitekturo</string>
+    <string name="settings_lic_title">Permesilo</string>
+    <string name="settings_support">Subteno</string>
+    <string name="settings_git_title">Problemoj de GitHub</string>
+    <string name="settings_git_desc">Klaku por aldoni problemojn aŭ peton pri funkcio.</string>
+    <string name="settings_locale_title">Lokigo</string>
+    <string name="settings_locale_desc">Kontribuu al lokalizo de aplikaĵoj.</string>
+    <string name="release">Distribuo</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Eldono de GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nokte</string>
+    <string name="releaseTest">Sencimigi Liberigon</string>
+    <string name="releaseOthers">Ne Subtenata Liberigo</string>
+    <string name="btn_cancel">Nuligi</string>
+    <string name="btn_save">Savi</string>
+    <string name="file_saved">savita</string>
+    <string name="title_open_file">Malfermu Dosieron</string>
+    <string name="title_delete_file">Forigi Dosieron</string>
+    <string name="file_deleted">forigita</string>
+    <string name="file_name">Dosiernomo</string>
+    <string name="title_save_file">Konservu Dosieron</string>
+    <string name="hid_version">Versio: %d</string>
+    <string-array name="modes">
+        <item>USB-Kablo</item>
+        <item>Reto Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Usona angla</item>
+        <item>Turka</item>
+        <item>sveda</item>
+        <item>sloveno</item>
+        <item>rusa</item>
+        <item>portugala</item>
+        <item>norvega</item>
+        <item>itala</item>
+        <item>kroata</item>
+        <item>Unuiĝinta Reĝlando angla</item>
+        <item>franca</item>
+        <item>finna</item>
+        <item>hispana</item>
+        <item>dana</item>
+        <item>germana</item>
+        <item>Kanada franco</item>
+        <item>brazila portugala</item>
+        <item>Belarusian</item>
+        <item>hungara</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Aŭtomate</item>
+        <item>Tago</item>
+        <item>Nokto</item>
+    </string-array>
 </resources>

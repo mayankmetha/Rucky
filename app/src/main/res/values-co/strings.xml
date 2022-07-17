@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">NEXT</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">ACCORDU</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Trasfurmà u vostru dispositivu in un Rubber Ducky!</string>
+    <string name="slideTitle2">Cavu USB</string>
+    <string name="slideDesc2">Interfaccia cablata USB per lancià l\'attaccu!</string>
+    <string name="slideTitle3">Socket di rete</string>
+    <string name="slideDesc3">Interfacce di socket basate in Wi-Fi per lancià l\'attaccu via strumenti esterni supportati!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">L\'usu di l\'app hè solu rispunsevule per i danni causati. Nisuna altra entità pò esse ritenuta rispunsevule per i danni fatti cù sta app! Pruvate prudenza quandu utilizate l\'app è ùn aduprate micca questu per causà danni à l\'altri!</string>
+    <string name="slideTitle5">Pulitica di privacy</string>
+    <string name="slideDesc5">Nisuna Dati di alcuna forma hè recullata, usata è venduta! Certi permessi chì puderanu suscitarà preoccupazioni di privacy sò dumandati solu per u funziunamentu di certe funziunalità in l\'app è ùn sò micca per cullà dati! A vostra privacy hè rispettata!</string>
+    <string name="slideTitle6">Permissione App</string>
+    <string name="slideDesc6">Per piacè cuncede à l\'app u permessu necessariu per travaglià!</string>
     <!-- Update screen -->
+    <string name="update_new">Novu Actualizazione Versione Disponibile:</string>
+    <string name="update_hash_error">Firma di u schedariu Mismatch! Ùn si pò aghjurnà.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Versione</string>
+    <string name="update_version_nightly">Versione di notte</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Update Status</string>
+    <string name="update_action">Scaricate è installate l\'aghjurnamentu</string>
+    <string name="update_downloading">Scaricamentu di l\'aghjurnamentu</string>
+    <string name="install_update">Applicà l\'aghjurnamentu</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Vulete ammuccià o esce da l\'app?</string>
+    <string name="btn_exit">Esci</string>
+    <string name="btn_back">Nascondi</string>
+    <string name="unlock">Unlock App</string>
+    <string name="auth">Cunfirmà l\'autentificazione</string>
+    <string name="update">Actualizazione</string>
+    <string name="setting">Settings</string>
+    <string name="codeHint">Scrivite o caricate script ducky di gomma quì</string>
+    <string name="loadBtn">Carica</string>
+    <string name="saveBtn">Salvà</string>
+    <string name="delBtn">Sguassà</string>
+    <string name="runBtn">Corri</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Cuntinuà</string>
+    <string name="root_err">L\'accessu à a radica hè necessariu per l\'attaccu di u cable USB!</string>
+    <string name="kernel_err">"U kernel ùn hè micca supportatu per l'attaccu di u cable USB!"</string>
+    <string name="vm">L\'ambiente virtuale ùn hè micca supportatu!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">Cunnessu USB</string>
+    <string name="config_status_usb_off">USB Disconnected</string>
+    <string name="config_status_net_on">Socket di rete cunnessu</string>
+    <string name="config_status_net_off">Socket Network Disconnected</string>
+    <string name="socket_address">Inserite Socket IP è Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Scaricate</string>
+    <string name="hid_update">Actualizazione</string>
+    <string name="hid_edit">Edit</string>
+    <string name="hid_delete">Sguassà</string>
     <!-- Keylist screen -->
+    <string name="key_title">Nome chjave</string>
+    <string name="key_character">Carattere chjave</string>
+    <string name="key_code">Codice chjave</string>
+    <string name="key_ctrl">Chjave Ctrl</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift Key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Codice chjave</string>
+    <string name="modcode">Codice modificatore</string>
+    <string name="key_details">Dettagli chjave</string>
     <!-- Setting screen -->
+    <string name="setting_general">Generale</string>
+    <string name="dark_theme_title">Modu di notte</string>
+    <string name="dark_theme_summary">Pone u tema scuru</string>
+    <string name="device_admin_title">Fate u pruprietariu di l\'app</string>
+    <string name="device_admin_summary">Root Necessaria. Questu hè per scaccià alcune di e restrizioni in Android.</string>
+    <string name="hide_icon_title">Oculta /Disattivà l\'icona Launcher</string>
+    <string name="hide_icon_summary">Dial *</string>
+    <string name="delete_dep_title">Uninstall App</string>
+    <string name="delete_dep_summary">Pulisce è disinstalla l\'app.</string>
+    <string name="settings_sec_title">Sicurezza avanzata</string>
+    <string name="settings_sec_desc">Abilita a criptografia di u schedariu di script è u bloccu di u screnu.</string>
+    <string name="setting_device">Settings Mode Attack</string>
+    <string name="configfs_title">Configurazione automatica ConfigFS</string>
+    <string name="configfs_summary">Configurarà HID nantu à i dispositi supportati da ConfigFS. Pò rompe u paràmetru USB.</string>
+    <string name="hid_choice_title">HID persunalizabile</string>
+    <string name="hid_choice_summary">Cambia trà Legacy HID è Customizable HID</string>
+    <string name="hid_title">Lingua HID</string>
+    <string name="hid_summary">Scaricate lingue HID supplementari o cuncepite novi layout HID.</string>
+    <string name="settings_usb_title">USB Connect Launch</string>
+    <string name="settings_usb_desc">U buttone Run lanciarà l\'attaccu quandu u USB hè cunnessu.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">U buttone Run lanciarà attaccu quandu Network Socket hè cunnessu.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Sviluppatore</string>
+    <string name="settings_version_title">Versione</string>
+    <string name="settings_arch_title">Architettura</string>
+    <string name="settings_lic_title">Licenza</string>
+    <string name="settings_support">Supportu</string>
+    <string name="settings_git_title">Problemi di GitHub</string>
+    <string name="settings_git_desc">Cliccate per aghjunghje prublemi o dumanda di funziunalità.</string>
+    <string name="settings_locale_title">Localizazione</string>
+    <string name="settings_locale_desc">Cuntribuisce à a localizazione di l\'app.</string>
+    <string name="release">Distribuzione</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Versione di GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Liberazione senza supportu</string>
+    <string name="btn_cancel">Cancella</string>
+    <string name="btn_save">Salvà</string>
+    <string name="file_saved">salvatu</string>
+    <string name="title_open_file">Open File</string>
+    <string name="title_delete_file">Sguassà u File</string>
+    <string name="file_deleted">sguassatu</string>
+    <string name="file_name">File Name</string>
+    <string name="title_save_file">Salvà u File</string>
+    <string name="hid_version">Versione: %d</string>
+    <string-array name="modes">
+        <item>Cavu USB</item>
+        <item>Socket di rete</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Inglese Americanu</item>
+        <item>Turcu</item>
+        <item>Svedese</item>
+        <item>Sluvenu</item>
+        <item>Russu</item>
+        <item>Portughese</item>
+        <item>Novegese</item>
+        <item>Talianu</item>
+        <item>Cruatu</item>
+        <item>Regnu Unitu inglese</item>
+        <item>Francese</item>
+        <item>Finlandese</item>
+        <item>Spagnolu</item>
+        <item>Danese</item>
+        <item>Tedescu</item>
+        <item>francese canadese</item>
+        <item>Portugallu brasilianu</item>
+        <item>Bielorussu</item>
+        <item>Ungherese</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Ghjornu</item>
+        <item>Notte</item>
+    </string-array>
 </resources>

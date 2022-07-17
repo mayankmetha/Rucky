@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">OSOTE</string>
+    <string name="init_skip">MAKA</string>
+    <string name="init_agree">KWEERE</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Tụgharịa ngwaọrụ gị ka ọ bụrụ Rubber Ducky!</string>
+    <string name="slideTitle2">eriri USB</string>
+    <string name="slideDesc2">USB wired interface maka ịmalite ọgụ!</string>
+    <string name="slideTitle3">Netwọk Socket</string>
+    <string name="slideDesc3">Oghere oghere dabere na Wi-Fi maka ịmalite mwakpo site na ngwa mpụga akwadoro!</string>
+    <string name="slideTitle4">Nkwuputa</string>
+    <string name="slideDesc4">Ọ bụ naanị onye na-eji ngwa a na-ahụ maka mmebi ndị kpatara. Ọ nweghị ụlọ ọrụ ọzọ a ga-akwụ ụgwọ maka mmebi e mere site na iji ngwa a! Mụta ịkpachara anya mgbe ị na-eji ngwa ma ejikwala nke a merụọ ndị ọzọ nsogbu!</string>
+    <string name="slideTitle5">amụma nzuzo</string>
+    <string name="slideDesc5">Enweghị data ụdị ọ bụla anakọtara, ejiri ma rere! Ụfọdụ ikike nke nwere ike ibulite nchegbu nzuzo ka a na-arịọ naanị maka ịrụ ọrụ ụfọdụ n\'ime ngwa ma ọ bụghị ịnakọta data! A na-akwanyere nzuzo gị ugwu!</string>
+    <string name="slideTitle6">Ikikere ngwa</string>
+    <string name="slideDesc6">Biko nye ngwa ikike achọrọ ka ọ rụọ ọrụ!</string>
     <!-- Update screen -->
+    <string name="update_new">Ụdị mmelite ọhụrụ dị:</string>
+    <string name="update_hash_error">Esemokwu mbinye aka faịlụ! Enweghị ike imelite.</string>
+    <string name="update_activity">Mmelite rucky</string>
+    <string name="update_version">Ụdị</string>
+    <string name="update_version_nightly">Ụdị nke abalị</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Melite ọnọdụ</string>
+    <string name="update_action">Budata ma wụnye mmelite</string>
+    <string name="update_downloading">Nbudata mmelite</string>
+    <string name="install_update">Na-etinye mmelite</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Ọ ga-amasị gị ịzobe ma ọ bụ pụọ na ngwa ahụ?</string>
+    <string name="btn_exit">Ụzọ ọpụpụ</string>
+    <string name="btn_back">Zoo</string>
+    <string name="unlock">Mepee ngwa</string>
+    <string name="auth">Kwenye nyocha</string>
+    <string name="update">Mmelite</string>
+    <string name="setting">Ntọala</string>
+    <string name="codeHint">Pịnye ma ọ bụ buru scripty rọba ebe a</string>
+    <string name="loadBtn">Ibu ibu</string>
+    <string name="saveBtn">Chekwa</string>
+    <string name="delBtn">Hichapụ</string>
+    <string name="runBtn">Gbaa ọsọ</string>
+    <string name="confBtn">Nhazi</string>
+    <string name="btn_continue">Gaa n\'ihu</string>
+    <string name="root_err">Nweta mgbọrọgwụ achọrọ maka mwakpo eriri USB!</string>
+    <string name="kernel_err">"A naghị akwado kernel maka mwakpo eriri USB!"</string>
+    <string name="vm">Anaghị akwado gburugburu mebere!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">Jikọọ USB</string>
+    <string name="config_status_usb_off">USB kwụsịrị</string>
+    <string name="config_status_net_on">Ejikọrọ oghere netwọk</string>
+    <string name="config_status_net_off">Akwụsịla oghere netwọk</string>
+    <string name="socket_address">Tinye oghere IP na adreesị ọdụ ụgbọ mmiri</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Nhazi HID</string>
+    <string name="hid_download">Budata</string>
+    <string name="hid_update">Mmelite</string>
+    <string name="hid_edit">Dezie</string>
+    <string name="hid_delete">Hichapụ</string>
     <!-- Keylist screen -->
+    <string name="key_title">Aha igodo</string>
+    <string name="key_character">Akparamagwa isi</string>
+    <string name="key_code">Koodu igodo</string>
+    <string name="key_ctrl">Ctrl igodo</string>
+    <string name="key_alt">Alt igodo</string>
+    <string name="key_shift">Igodo Shift</string>
+    <string name="key_meta">Meta igodo</string>
+    <string name="keycode">Koodu igodo</string>
+    <string name="modcode">Koodu mgbanwe</string>
+    <string name="key_details">Nkọwa igodo</string>
     <!-- Setting screen -->
+    <string name="setting_general">Izugbe</string>
+    <string name="dark_theme_title">Ụdị abalị</string>
+    <string name="dark_theme_summary">Tọọ isiokwu gbara ọchịchịrị</string>
+    <string name="device_admin_title">Mee ngwa onye nwe ngwaọrụ</string>
+    <string name="device_admin_summary">Mgbọrọgwụ chọrọ. Nke a bụ ịgafe ụfọdụ mgbochi na gam akporo.</string>
+    <string name="hide_icon_title">Zoo/Gbanyụọ akara ngosi ihe mmalite</string>
+    <string name="hide_icon_summary">Kpọọ *</string>
+    <string name="delete_dep_title">Wepu ngwa</string>
+    <string name="delete_dep_summary">Hichapụ ma wepụ ngwa.</string>
+    <string name="settings_sec_title">Nchekwa Ọganihu</string>
+    <string name="settings_sec_desc">Kwado faịlụ ezoro ezo na mkpọchi ihuenyo.</string>
+    <string name="setting_device">Ntọala ọnọdụ ọgụ</string>
+    <string name="configfs_title">Hazie ConfigFS na-akpaghị aka</string>
+    <string name="configfs_summary">Ga-ahazi HID na ngwaọrụ ConfigFS akwadoro. Nwere ike imebi ntọala USB.</string>
+    <string name="hid_choice_title">HID nwere ike ịhazi ya</string>
+    <string name="hid_choice_summary">Gbanwee n\'etiti HID Legacy na HID nwere ike ịhazi ya</string>
+    <string name="hid_title">Asụsụ HID</string>
+    <string name="hid_summary">Budata asụsụ HID ndị ọzọ ma ọ bụ chepụta okirikiri nhọrọ ukwuu HID.</string>
+    <string name="settings_usb_title">Mwepụta njikọ USB</string>
+    <string name="settings_usb_desc">Gbaa bọtịnụ ga-ebuso ọgụ mgbe ejikọrọ USB.</string>
+    <string name="settings_net_title">Mwepụta Njikọ Socket Network</string>
+    <string name="settings_net_desc">Gbaa bọtịnụ ga-ebuso ọgụ mgbe ejikọrọ Socket Network.</string>
+    <string name="setting_about">Ozi</string>
+    <string name="setting_developer_title">Onye nrụpụta</string>
+    <string name="settings_version_title">Ụdị</string>
+    <string name="settings_arch_title">Nhazi</string>
+    <string name="settings_lic_title">Ikikere</string>
+    <string name="settings_support">Nkwado</string>
+    <string name="settings_git_title">Okwu GitHub</string>
+    <string name="settings_git_desc">Pịa ka ịgbakwunye okwu ma ọ bụ arịrịọ atụmatụ.</string>
+    <string name="settings_locale_title">Nhazi mpaghara</string>
+    <string name="settings_locale_desc">Nye aka na nhazi mpaghara ngwa.</string>
+    <string name="release">Nkesa</string>
+    <string name="releaseNetHunter">Ụlọ ahịa ngwa NetHunter</string>
+    <string name="releaseGitHub">Mwepụta GitHub</string>
+    <string name="releaseGitHubNightly">GitHub abalị</string>
+    <string name="releaseTest">Mwepụta mmezi</string>
+    <string name="releaseOthers">Mwepụta anaghị akwado</string>
+    <string name="btn_cancel">Kagbuo</string>
+    <string name="btn_save">Chekwa</string>
+    <string name="file_saved">echekwara</string>
+    <string name="title_open_file">Mepee faịlụ</string>
+    <string name="title_delete_file">Hichapụ faịlụ</string>
+    <string name="file_deleted">ehichapụ</string>
+    <string name="file_name">Aha faịlụ</string>
+    <string name="title_save_file">Chekwaa faịlụ</string>
+    <string name="hid_version">Ụdị: %d</string>
+    <string-array name="modes">
+        <item>eriri USB</item>
+        <item>Netwọk Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turkish</item>
+        <item>Swedish</item>
+        <item>Slovenian</item>
+        <item>Russian</item>
+        <item>Portuguese</item>
+        <item>Norwegian</item>
+        <item>Ịtali</item>
+        <item>Asụsụ Croatia</item>
+        <item>United Kingdom Bekee</item>
+        <item>French</item>
+        <item>Asụsụ Finnish</item>
+        <item>Spanish</item>
+        <item>Danish</item>
+        <item>German</item>
+        <item>French French</item>
+        <item>Portuguese Portuguese</item>
+        <item>Belarusian</item>
+        <item>Asụsụ Hungarian</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Akpaaka</item>
+        <item>Ụbọchị</item>
+        <item>Abali</item>
+    </string-array>
 </resources>

@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ESI KPLᴐE ƉO</string>
+    <string name="init_skip">DZO TO ETA</string>
+    <string name="init_agree">LƆ̃ ƉE EDZI</string>
+    <string name="init_start">HACK ƑE NUÐEÐEŊUTI</string>
+    <string name="slideDesc1">Trɔ wò mɔ̃a wòazu Rubber Ducky!</string>
+    <string name="slideTitle2">USB Kaƒomɔ̃</string>
+    <string name="slideDesc2">USB kaƒomɔ̃ ƒe ŋgɔdonya na amedzidzedze gɔmedzedze!</string>
+    <string name="slideTitle3">Netwɔƒe ƒe Socket</string>
+    <string name="slideDesc3">Wi-Fi si wotu ɖe socket interfaces dzi na amedzidzedze to gotagome dɔwɔnu siwo wodo alɔe dzi!</string>
+    <string name="slideTitle4">Adzɔgbeɖeɖe</string>
+    <string name="slideDesc4">Dɔdamɔnua zãla ɖeɖekoe atsɔ nusiwo dome gblẽ la ƒe agba. Womate ŋu atsɔ agba ɖe dɔwɔƒe bubu aɖeke dzi le nusiwo dome gblẽ le dɔwɔnu sia zazã me o! Miɖɔ ŋu ɖo ne èle dɔwɔnua zãm eye mègazã esia atsɔ agblẽ nu le ame bubuwo ŋu o!</string>
+    <string name="slideTitle5">Ame Ŋuti Nyatakakawo Ŋuti Ðoɖo</string>
+    <string name="slideDesc5">Womeƒoa Nyatakaka aɖeke nu ƒu, zãnɛ hedzrana o! Mɔɖeɖe aɖewo siwo ate ŋu ahe ameŋunyatakakawo dzitsitsi ɖe te la, ɖeko wobiaa mɔɖeɖe aɖewo siwo le dɔwɔnua me ƒe dɔwɔwɔ ta eye menye be woaƒo nyatakakawo nu ƒu o! Wodea bubu wò nyatakakawo ŋu!</string>
+    <string name="slideTitle6">App ƒe Mɔɖeɖe</string>
+    <string name="slideDesc6">Taflatse na mɔɖeɖe si hiã la app be wòawɔ dɔ!</string>
     <!-- Update screen -->
+    <string name="update_new">Yeye Yeye si Li Version:</string>
+    <string name="update_hash_error">Faɛl ƒe Asidede agbalẽ te ƒe Masɔmasɔ! Mate ŋu awɔ Update o.</string>
+    <string name="update_activity">Rucky ƒe Nyatakaka Yeye</string>
+    <string name="update_version">Nukpɔkpɔ</string>
+    <string name="update_version_nightly">Zã me Gbegɔmeɖeɖe</string>
+    <string name="update_changelog">Trɔtrɔ ƒe nuŋlɔɖi</string>
+    <string name="update_status">Trɔ Asi Le Nɔnɔme Ŋu</string>
+    <string name="update_action">Wɔ Update ƒe kɔpi eye nàdae ɖe wò kɔmpiuta dzi</string>
+    <string name="update_downloading">Update ƒe Kɔpiwɔwɔ</string>
+    <string name="install_update">Update ƒe Dɔwɔwɔ</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Àdi be yeaɣla dɔwɔnua alo ado le emea?</string>
+    <string name="btn_exit">Do</string>
+    <string name="btn_back">Be</string>
+    <string name="unlock">Ʋu App la ƒe Ʋuʋu</string>
+    <string name="auth">Ðo kpe kpeɖodzia dzi</string>
+    <string name="update">Doe ɖe ŋgᴐ</string>
+    <string name="setting">Ðoɖowo</string>
+    <string name="codeHint">Ŋlɔ rababa dadi ŋɔŋlɔdzesiwo alo nàda wo ɖe afisia</string>
+    <string name="loadBtn">De agba</string>
+    <string name="saveBtn">Dzrae ɖo</string>
+    <string name="delBtn">Ɖe ɖa</string>
+    <string name="runBtn">Ƒu du</string>
+    <string name="confBtn">Ðoɖowɔɖiwo</string>
+    <string name="btn_continue">Yi edzi</string>
+    <string name="root_err">Ke ƒe Mɔɖeɖe Hiã Na USB Ka Dzedze!</string>
+    <string name="kernel_err">"Kernel Medo Alɔe Na USB Ka Dzedze O!"</string>
+    <string name="vm">Womedoa alɔ virtual environment o!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweakwo wɔwɔ</string>
+    <string name="config_status_usb_on">USB Do Ƒome Kple Wo Nɔewo</string>
+    <string name="config_status_usb_off">USB ƒe kadodoa me sẽ</string>
+    <string name="config_status_net_on">Netwɔƒea ƒe Socket Do Ƒome Kple Wo Nɔewo</string>
+    <string name="config_status_net_off">Network Socket ƒe Kadodoa Metso</string>
+    <string name="socket_address">Ŋlɔ Socket IP kple Port Address ɖe eme</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID ƒe Ðoɖowɔɖi</string>
+    <string name="hid_download">Hee ɖa anyi</string>
+    <string name="hid_update">Doe ɖe ŋgᴐ</string>
+    <string name="hid_edit">Wɔ tɔtrɔ</string>
+    <string name="hid_delete">Ɖe ɖa</string>
     <!-- Keylist screen -->
+    <string name="key_title">Ŋkɔ Vevitɔ</string>
+    <string name="key_character">Ame Vevitɔ ƒe Nɔnɔme</string>
+    <string name="key_code">Kpeɖodzinya Vevitɔ</string>
+    <string name="key_ctrl">Ctrl ƒe Safui</string>
+    <string name="key_alt">Alt Safui</string>
+    <string name="key_shift">Shift ƒe Safui</string>
+    <string name="key_meta">Meta Safui</string>
+    <string name="keycode">Kpeɖodzinya Vevitɔ</string>
+    <string name="modcode">Trɔtrɔ ƒe Kɔda</string>
+    <string name="key_details">Nya Veviwo Ŋuti Nyatakakawo</string>
     <!-- Setting screen -->
+    <string name="setting_general">Gbadza</string>
+    <string name="dark_theme_title">Zã ƒe Nɔnɔme</string>
+    <string name="dark_theme_summary">Ðo tanya viviti me</string>
+    <string name="device_admin_title">Wɔ app dɔwɔnua ƒe aƒetɔ</string>
+    <string name="device_admin_summary">Ke si Wohiã. Esia nye be woato mɔxeɖenu aɖewo siwo le Android dzi la ŋu.</string>
+    <string name="hide_icon_title">Ɣla/Tsɔ Launcher ƒe Dzesi</string>
+    <string name="hide_icon_summary">Ƒo ka na * .</string>
+    <string name="delete_dep_title">Ðe App la ɖa le wò kɔmpiuta dzi</string>
+    <string name="delete_dep_summary">Klɔ dɔwɔnua ŋu eye nàɖee ɖa le wò kɔmpiuta dzi.</string>
+    <string name="settings_sec_title">Dedienɔnɔ Do Ŋgɔ</string>
+    <string name="settings_sec_desc">Na script file encryption kple screen lock nawɔ dɔ.</string>
+    <string name="setting_device">Amedzidzedze ƒe Nɔnɔme ƒe Ðoɖowo</string>
+    <string name="configfs_title">Auto Ðoɖowɔwɔ ɖe ConfigFS ŋu</string>
+    <string name="configfs_summary">Aɖo HID ɖe mɔ̃ siwo dzi ConfigFS do alɔe dzi. Ate ŋu agbã USB ƒe ɖoɖoa.</string>
+    <string name="hid_choice_title">HID si woate ŋu atrɔ asi le</string>
+    <string name="hid_choice_summary">Trɔ ɖe Legacy HID kple Customizable HID dome</string>
+    <string name="hid_title">HID Gbegbɔgblɔ</string>
+    <string name="hid_summary">Wɔ HID gbe bubuwo ƒe kɔpi alo nàwɔ HID ƒe ɖoɖo yeyewo.</string>
+    <string name="settings_usb_title">USB Kadodo ƒe Dzedze</string>
+    <string name="settings_usb_desc">Run button adze amedzidzedze gɔme ne USB do ka.</string>
+    <string name="settings_net_title">Network Socket Kadodo ƒe Dzedze</string>
+    <string name="settings_net_desc">Run button adze amedzidzedze gɔme ne Network Socket do ka.</string>
+    <string name="setting_about">Nyatakaka</string>
+    <string name="setting_developer_title">Ame si wɔe</string>
+    <string name="settings_version_title">Nukpɔkpɔ</string>
+    <string name="settings_arch_title">Xɔtata</string>
+    <string name="settings_lic_title">Mɔɖegbalẽ</string>
+    <string name="settings_support">De megbe</string>
+    <string name="settings_git_title">GitHub Nyawo</string>
+    <string name="settings_git_desc">Zi edzi be nàtsɔ nyawo alo akpa aɖewo ƒe biabiawo akpe ɖe eŋu.</string>
+    <string name="settings_locale_title">Teƒe si wole</string>
+    <string name="settings_locale_desc">Kpe asi ɖe app ƒe localisation ŋu.</string>
+    <string name="release">Nu mama</string>
+    <string name="releaseNetHunter">NetHunter ƒe Dɔwɔɖoɖowo ƒe Dɔwɔƒe</string>
+    <string name="releaseGitHub">GitHub ƒe Ðeɖekpɔkpɔ</string>
+    <string name="releaseGitHubNightly">GitHub Zã sia zã</string>
+    <string name="releaseTest">Debug ƒe Ðeɖekpɔkpɔ</string>
+    <string name="releaseOthers">Non Supported Asiɖeɖe le eŋu</string>
+    <string name="btn_cancel">Te fli ɖe eme</string>
+    <string name="btn_save">Dzrae ɖo</string>
+    <string name="file_saved">woɖee</string>
+    <string name="title_open_file">Ʋu Faɛl la</string>
+    <string name="title_delete_file">Tsɔ Faɛl la ɖa</string>
+    <string name="file_deleted">woɖee ɖa</string>
+    <string name="file_name">Faɛl ƒe Ŋkɔ</string>
+    <string name="title_save_file">Ðe Faɛl la Ðe Ðoɖo Nu</string>
+    <string name="hid_version">Eƒe tɔtrɔ: %d</string>
+    <string-array name="modes">
+        <item>USB Kaƒomɔ̃</item>
+        <item>Netwɔƒe ƒe Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikatɔwo ƒe Eŋlisigbe</item>
+        <item>Turkeygbe me tɔ</item>
+        <item>Swedengbe me nyawo</item>
+        <item>Sloveniagbe me nyawo</item>
+        <item>Russiagbe me tɔ</item>
+        <item>Portugalgbe me nyawo</item>
+        <item>Norwaygbe me tɔ</item>
+        <item>Italygbe me tɔ</item>
+        <item>Croatiagbe me tɔ</item>
+        <item>United Kingdom Eŋlisigbe</item>
+        <item>Fransegbe me nyawo</item>
+        <item>Finlandgbe me tɔ</item>
+        <item>Spaniagbe</item>
+        <item>Denmarkgbe me tɔ</item>
+        <item>Germanygbe me tɔ</item>
+        <item>Canadatɔwo ƒe Fransegbe</item>
+        <item>Braziltɔwo ƒe Portugalgbe</item>
+        <item>Belarustɔwo ƒe nyawo</item>
+        <item>Hungarygbe me tɔ</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Ŋkeke</item>
+        <item>Zã</item>
+    </string-array>
 </resources>

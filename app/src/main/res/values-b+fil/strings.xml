@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">SUSUNOD</string>
+    <string name="init_skip">LAKTAN</string>
+    <string name="init_agree">Sumasang-ayon</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Gawing Rubber Ducky ang iyong device!</string>
+    <string name="slideTitle2">Kable ng USB</string>
+    <string name="slideDesc2">USB wired interface para sa paglulunsad ng pag-atake!</string>
+    <string name="slideTitle3">Socket ng Network</string>
+    <string name="slideDesc3">Mga interface ng socket na nakabatay sa Wi-Fi para sa paglulunsad ng pag-atake sa pamamagitan ng mga sinusuportahang panlabas na tool!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">Ang user ng app ang tanging responsable para sa mga pinsalang idinulot. Walang ibang entity ang maaaring managot para sa mga pinsalang ginawa gamit ang app na ito! Magsanay ng pag-iingat kapag gumagamit ng app at huwag gamitin ito upang magdulot ng pinsala sa iba!</string>
+    <string name="slideTitle5">Patakaran sa Privacy</string>
+    <string name="slideDesc5">Walang Data ng anumang anyo ang nakolekta, ginagamit at ibinebenta! Ang ilang mga pahintulot na maaaring magdulot ng mga alalahanin sa privacy ay hinihiling lamang para sa paggana ng ilang partikular na feature sa app at hindi upang mangolekta ng data! Ang iyong privacy ay iginagalang!</string>
+    <string name="slideTitle6">Pahintulot sa App</string>
+    <string name="slideDesc6">Mangyaring bigyan ang app ng kinakailangang pahintulot upang gumana!</string>
     <!-- Update screen -->
+    <string name="update_new">Bagong Update Available na Bersyon:</string>
+    <string name="update_hash_error">Hindi Tugma ang Lagda ng File! Hindi Ma-update.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Bersyon</string>
+    <string name="update_version_nightly">Gabi-gabing Bersyon</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">I-update ang Katayuan</string>
+    <string name="update_action">I-download at I-install ang Update</string>
+    <string name="update_downloading">Nagda-download ng Update</string>
+    <string name="install_update">Paglalapat ng Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Gusto mo bang itago o lumabas sa app?</string>
+    <string name="btn_exit">Lumabas</string>
+    <string name="btn_back">Tago</string>
+    <string name="unlock">I-unlock ang App</string>
+    <string name="auth">Kumpirmahin ang pagpapatunay</string>
+    <string name="update">Update</string>
+    <string name="setting">Mga setting</string>
+    <string name="codeHint">Mag-type o mag-load ng mga script ng rubber ducky dito</string>
+    <string name="loadBtn">Magkarga</string>
+    <string name="saveBtn">I-save</string>
+    <string name="delBtn">Tanggalin</string>
+    <string name="runBtn">Takbo</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Magpatuloy</string>
+    <string name="root_err">Kinakailangan ang Root Access Para sa USB Cable Attack!</string>
+    <string name="kernel_err">"Hindi Sinusuportahan ang Kernel Para sa Pag-atake ng USB Cable!"</string>
+    <string name="vm">Ang virtual na kapaligiran ay hindi suportado!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">Nakakonekta sa USB</string>
+    <string name="config_status_usb_off">Nadiskonekta ang USB</string>
+    <string name="config_status_net_on">Nakakonekta ang Network Socket</string>
+    <string name="config_status_net_off">Nadiskonekta ang Socket ng Network</string>
+    <string name="socket_address">Ipasok ang Socket IP at Port Address</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">I-download</string>
+    <string name="hid_update">Update</string>
+    <string name="hid_edit">I-edit</string>
+    <string name="hid_delete">Tanggalin</string>
     <!-- Keylist screen -->
+    <string name="key_title">Pangalan ng Susing</string>
+    <string name="key_character">Pangunahing Tauhan</string>
+    <string name="key_code">Key Code</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Shift key</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Key Code</string>
+    <string name="modcode">Code ng Modifier</string>
+    <string name="key_details">Mga Pangunahing Detalye</string>
     <!-- Setting screen -->
+    <string name="setting_general">Heneral</string>
+    <string name="dark_theme_title">Night Mode</string>
+    <string name="dark_theme_summary">Itakda ang madilim na tema</string>
+    <string name="device_admin_title">Gawing may-ari ng app device</string>
+    <string name="device_admin_summary">Kinakailangan ang Root. Ito ay upang lampasan ang ilan sa mga paghihigpit sa Android.</string>
+    <string name="hide_icon_title">Itago/I-disable ang Icon ng Launcher</string>
+    <string name="hide_icon_summary">I-dial *</string>
+    <string name="delete_dep_title">I-uninstall ang App</string>
+    <string name="delete_dep_summary">Linisin at i-uninstall ang app.</string>
+    <string name="settings_sec_title">Paunang Seguridad</string>
+    <string name="settings_sec_desc">Paganahin ang pag-encrypt ng script file at lock ng screen.</string>
+    <string name="setting_device">Mga Setting ng Attack Mode</string>
+    <string name="configfs_title">Auto Configure ConfigFS</string>
+    <string name="configfs_summary">Iko-configure ang HID sa mga device na sinusuportahan ng ConfigFS. Maaaring masira ang setting ng USB.</string>
+    <string name="hid_choice_title">Nako-customize na HID</string>
+    <string name="hid_choice_summary">Lumipat sa pagitan ng Legacy HID at Nako-customize na HID</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">Mag-download ng mga karagdagang HID na wika o magdisenyo ng mga bagong HID layout.</string>
+    <string name="settings_usb_title">Paglunsad ng USB Connect</string>
+    <string name="settings_usb_desc">Ang Run button ay maglulunsad ng pag-atake kapag nakakonekta ang USB.</string>
+    <string name="settings_net_title">Paglunsad ng Network Socket Connect</string>
+    <string name="settings_net_desc">Ang Run button ay maglulunsad ng pag-atake kapag nakakonekta ang Network Socket.</string>
+    <string name="setting_about">Impormasyon</string>
+    <string name="setting_developer_title">Developer</string>
+    <string name="settings_version_title">Bersyon</string>
+    <string name="settings_arch_title">Arkitektura</string>
+    <string name="settings_lic_title">Lisensya</string>
+    <string name="settings_support">Suporta</string>
+    <string name="settings_git_title">Mga Isyu sa GitHub</string>
+    <string name="settings_git_desc">I-click upang magdagdag ng mga isyu o kahilingan sa feature.</string>
+    <string name="settings_locale_title">Lokalisasyon</string>
+    <string name="settings_locale_desc">Mag-ambag sa localization ng app.</string>
+    <string name="release">Pamamahagi</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Paglabas ng GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Gabi-gabi</string>
+    <string name="releaseTest">Paglabas ng Debug</string>
+    <string name="releaseOthers">Hindi Sinusuportahang Paglabas</string>
+    <string name="btn_cancel">Kanselahin</string>
+    <string name="btn_save">I-save</string>
+    <string name="file_saved">nailigtas</string>
+    <string name="title_open_file">Buksan ang file</string>
+    <string name="title_delete_file">Burahin ang file</string>
+    <string name="file_deleted">tinanggal</string>
+    <string name="file_name">Pangalan ng File</string>
+    <string name="title_save_file">I-save ang File</string>
+    <string name="hid_version">Bersyon: %d</string>
+    <string-array name="modes">
+        <item>Kable ng USB</item>
+        <item>Socket ng Network</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Amerikanong Ingles</item>
+        <item>Turkish</item>
+        <item>Swedish</item>
+        <item>Slovenian</item>
+        <item>Ruso</item>
+        <item>Portuges</item>
+        <item>Norwegian</item>
+        <item>Italyano</item>
+        <item>Croatian</item>
+        <item>Ingles ng United Kingdom</item>
+        <item>Pranses</item>
+        <item>Finnish</item>
+        <item>Espanyol</item>
+        <item>Danish</item>
+        <item>Aleman</item>
+        <item>Canadian French</item>
+        <item>Brazilian Portuguese</item>
+        <item>Belarusian</item>
+        <item>Hungarian</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Araw</item>
+        <item>Gabi</item>
+    </string-array>
 </resources>

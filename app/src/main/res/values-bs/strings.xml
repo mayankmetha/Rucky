@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">SLJEDEĆI</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">SLAŽEM SE</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Pretvorite svoj uređaj u Rubber Ducky!</string>
+    <string name="slideTitle2">USB kabel</string>
+    <string name="slideDesc2">USB žičani interfejs za pokretanje napada!</string>
+    <string name="slideTitle3">Mrežna utičnica</string>
+    <string name="slideDesc3">Wi-Fi sučelja utičnice za pokretanje napada putem podržanih eksternih alata!</string>
+    <string name="slideTitle4">Odricanje od odgovornosti</string>
+    <string name="slideDesc4">Korisnik aplikacije je isključivo odgovoran za nastalu štetu. Niti jedan drugi subjekt ne može biti odgovoran za štetu učinjenu korištenjem ove aplikacije! Budite oprezni kada koristite aplikaciju i nemojte je koristiti za nanošenje štete drugima!</string>
+    <string name="slideTitle5">Politika privatnosti</string>
+    <string name="slideDesc5">Podaci u bilo kojem obliku se ne prikupljaju, koriste i prodaju! Neka dopuštenja koja bi mogla izazvati zabrinutost za privatnost traže se samo za rad određenih funkcija u aplikaciji, a ne za prikupljanje podataka! Vaša privatnost se poštuje!</string>
+    <string name="slideTitle6">Dozvola aplikacije</string>
+    <string name="slideDesc6">Dajte aplikaciji potrebnu dozvolu za rad!</string>
     <!-- Update screen -->
+    <string name="update_new">Nova dostupna verzija ažuriranja:</string>
+    <string name="update_hash_error">Nepodudaranje potpisa datoteke! Nije moguće ažurirati.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Verzija</string>
+    <string name="update_version_nightly">Nightly Version</string>
+    <string name="update_changelog">Dnevnik promjena</string>
+    <string name="update_status">Ažuriraj status</string>
+    <string name="update_action">Preuzmite i instalirajte ažuriranje</string>
+    <string name="update_downloading">Preuzimanje ažuriranja</string>
+    <string name="install_update">Primjena ažuriranja</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Želite li sakriti ili izaći iz aplikacije?</string>
+    <string name="btn_exit">Izlaz</string>
+    <string name="btn_back">Sakrij se</string>
+    <string name="unlock">Otključaj aplikaciju</string>
+    <string name="auth">Potvrdite autentifikaciju</string>
+    <string name="update">Ažuriraj</string>
+    <string name="setting">Postavke</string>
+    <string name="codeHint">Otkucajte ili učitajte rubber ducky skripte ovdje</string>
+    <string name="loadBtn">Učitaj</string>
+    <string name="saveBtn">Sačuvaj</string>
+    <string name="delBtn">Izbriši</string>
+    <string name="runBtn">Trči</string>
+    <string name="confBtn">Config</string>
+    <string name="btn_continue">Nastavi</string>
+    <string name="root_err">Za napad USB kablom potreban je root pristup!</string>
+    <string name="kernel_err">"Kernel nije podržan za napad USB kablom!"</string>
+    <string name="vm">Virtuelno okruženje nije podržano!</string>
     <!-- Config screen -->
+    <string name="config_activity">Podešavanje</string>
+    <string name="config_status_usb_on">USB povezan</string>
+    <string name="config_status_usb_off">USB isključen</string>
+    <string name="config_status_net_on">Mrežna utičnica povezana</string>
+    <string name="config_status_net_off">Mrežna utičnica je isključena</string>
+    <string name="socket_address">Unesite IP utičnice i adresu porta</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Config</string>
+    <string name="hid_download">Skinuti</string>
+    <string name="hid_update">Ažuriraj</string>
+    <string name="hid_edit">Uredi</string>
+    <string name="hid_delete">Izbriši</string>
     <!-- Keylist screen -->
+    <string name="key_title">Naziv ključa</string>
+    <string name="key_character">Ključni karakter</string>
+    <string name="key_code">Ključni kod</string>
+    <string name="key_ctrl">Taster Ctrl</string>
+    <string name="key_alt">Alt taster</string>
+    <string name="key_shift">Taster Shift</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Ključni kod</string>
+    <string name="modcode">Modifikatorski kod</string>
+    <string name="key_details">Ključni detalji</string>
     <!-- Setting screen -->
+    <string name="setting_general">Generale</string>
+    <string name="dark_theme_title">Noćni način rada</string>
+    <string name="dark_theme_summary">Postavite tamnu temu</string>
+    <string name="device_admin_title">Učinite aplikaciju vlasnikom uređaja</string>
+    <string name="device_admin_summary">Root Required. Ovo radi zaobilaženja nekih ograničenja na Androidu.</string>
+    <string name="hide_icon_title">Sakrij/onemogući ikonu pokretača</string>
+    <string name="hide_icon_summary">Birajte *</string>
+    <string name="delete_dep_title">Deinstaliraj aplikaciju</string>
+    <string name="delete_dep_summary">Očistite i deinstalirajte aplikaciju.</string>
+    <string name="settings_sec_title">Advance Security</string>
+    <string name="settings_sec_desc">Omogućite šifriranje datoteke skripte i zaključavanje ekrana.</string>
+    <string name="setting_device">Postavke načina napada</string>
+    <string name="configfs_title">Auto Configure ConfigFS</string>
+    <string name="configfs_summary">Konfigurirat će HID na uređajima koji podržavaju ConfigFS. Može pokvariti USB postavku.</string>
+    <string name="hid_choice_title">Prilagodljiv HID</string>
+    <string name="hid_choice_summary">Prebacivanje između naslijeđenog HID-a i prilagodljivog HID-a</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">Preuzmite dodatne HID jezike ili dizajnirajte nove HID izglede.</string>
+    <string name="settings_usb_title">Pokreni USB Connect</string>
+    <string name="settings_usb_desc">Dugme Run će pokrenuti napad kada je USB povezan.</string>
+    <string name="settings_net_title">Pokreni mrežnu utičnicu Connect</string>
+    <string name="settings_net_desc">Dugme Run će pokrenuti napad kada je mrežna utičnica povezana.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Developer</string>
+    <string name="settings_version_title">Verzija</string>
+    <string name="settings_arch_title">Arhitektura</string>
+    <string name="settings_lic_title">Licenca</string>
+    <string name="settings_support">Podrška</string>
+    <string name="settings_git_title">GitHub Problemi</string>
+    <string name="settings_git_desc">Kliknite da dodate probleme ili zahtjev za funkciju.</string>
+    <string name="settings_locale_title">Lokalizacija</string>
+    <string name="settings_locale_desc">Doprinesite lokalizaciji aplikacije.</string>
+    <string name="release">Distribucija</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub izdanje</string>
+    <string name="releaseGitHubNightly">GitHub Nightly</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Non Supported Release</string>
+    <string name="btn_cancel">Otkaži</string>
+    <string name="btn_save">Sačuvaj</string>
+    <string name="file_saved">sacuvan</string>
+    <string name="title_open_file">Otvori datoteku</string>
+    <string name="title_delete_file">Izbriši datoteku</string>
+    <string name="file_deleted">obrisano</string>
+    <string name="file_name">Ime dokumenta</string>
+    <string name="title_save_file">Spremiti datoteku</string>
+    <string name="hid_version">Verzija: %d</string>
+    <string-array name="modes">
+        <item>USB kabel</item>
+        <item>Mrežna utičnica</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>američki engleski</item>
+        <item>turski</item>
+        <item>švedski</item>
+        <item>slovenački</item>
+        <item>ruski</item>
+        <item>portugalski</item>
+        <item>norveški</item>
+        <item>talijanski</item>
+        <item>hrvatski</item>
+        <item>Ujedinjeno Kraljevstvo English</item>
+        <item>francuski</item>
+        <item>Finski</item>
+        <item>španski</item>
+        <item>danski</item>
+        <item>njemački</item>
+        <item>kanadski francuski</item>
+        <item>Brazilski portugalski</item>
+        <item>bjeloruski</item>
+        <item>Mađarski</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>Dan</item>
+        <item>Noć</item>
+    </string-array>
 </resources>

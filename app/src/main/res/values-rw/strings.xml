@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">GIKURIKIRA</string>
+    <string name="init_skip">SKIP</string>
+    <string name="init_agree">BYEMEZO</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Hindura igikoresho cyawe kuri Rubber Ducky!</string>
+    <string name="slideTitle2">USB Cable</string>
+    <string name="slideDesc2">USB insinga ya USB yo kugaba igitero!</string>
+    <string name="slideTitle3">Umuyoboro</string>
+    <string name="slideDesc3">Wi-Fi ishingiye kuri sock ya interineti yo kugaba ibitero hakoreshejwe ibikoresho byo hanze!</string>
+    <string name="slideTitle4">Inshingano</string>
+    <string name="slideDesc4">Umukoresha wa porogaramu ashinzwe gusa ibyangiritse. Nta kindi kigo gishobora kuryozwa ibyangiritse byakozwe ukoresheje iyi porogaramu! Witoze kwitonda mugihe ukoresha porogaramu kandi ntukoreshe ibi kugirango ugirire nabi abandi!</string>
+    <string name="slideTitle5">Politiki Yibanga</string>
+    <string name="slideDesc5">Nta Data wuburyo ubwo aribwo bwose bwakusanyirijwe, bukoreshwa kandi bugurishwa! Impushya zimwe zishobora kubyutsa ubuzima bwite zirasabwa gusa gukora ibintu bimwe na bimwe muri porogaramu kandi ntabwo ari ugukusanya amakuru! Amabanga yawe arubahwa!</string>
+    <string name="slideTitle6">Uruhushya rwo gusaba</string>
+    <string name="slideDesc6">Nyamuneka tanga porogaramu uruhushya rusabwa rwo gukora!</string>
     <!-- Update screen -->
+    <string name="update_new">Ibishya bishya biboneka verisiyo:</string>
+    <string name="update_hash_error">Idosiye Umukono Udahuye! Ntushobora Kuvugurura.</string>
+    <string name="update_activity">Amahirwe agezweho</string>
+    <string name="update_version">Inyandiko</string>
+    <string name="update_version_nightly">Ijoro rya nijoro</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Kuvugurura Imiterere</string>
+    <string name="update_action">Kuramo kandi ushyireho ibishya</string>
+    <string name="update_downloading">Gukuramo ibishya</string>
+    <string name="install_update">Gushyira mu bikorwa</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Urashaka guhisha cyangwa gusohoka muri porogaramu?</string>
+    <string name="btn_exit">Sohoka</string>
+    <string name="btn_back">Hisha</string>
+    <string name="unlock">Fungura porogaramu</string>
+    <string name="auth">Emeza kwemeza</string>
+    <string name="update">Kuvugurura</string>
+    <string name="setting">Igenamiterere</string>
+    <string name="codeHint">Andika cyangwa ushireho rubber ducky inyandiko hano</string>
+    <string name="loadBtn">Umutwaro</string>
+    <string name="saveBtn">Bika</string>
+    <string name="delBtn">Siba</string>
+    <string name="runBtn">Iruka</string>
+    <string name="confBtn">Hindura</string>
+    <string name="btn_continue">Komeza</string>
+    <string name="root_err">Kwinjira mu mizi birakenewe kuri USB Cable Attack!</string>
+    <string name="kernel_err">"Intungamubiri ntishyigikiwe na USB Cable Attack!"</string>
+    <string name="vm">Ibidukikije byukuri ntibishyigikiwe!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Ihuza</string>
+    <string name="config_status_usb_off">USB Yahagaritswe</string>
+    <string name="config_status_net_on">Umuyoboro wa Sock uhujwe</string>
+    <string name="config_status_net_off">Umuyoboro wa Sock Waciwe</string>
+    <string name="socket_address">Injira Socket IP na Aderesi ya Port</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HISHA</string>
+    <string name="hid_download">Kuramo</string>
+    <string name="hid_update">Kuvugurura</string>
+    <string name="hid_edit">Hindura</string>
+    <string name="hid_delete">Siba</string>
     <!-- Keylist screen -->
+    <string name="key_title">Izina ryibanze</string>
+    <string name="key_character">Imiterere y\'ingenzi</string>
+    <string name="key_code">Kode y\'ingenzi</string>
+    <string name="key_ctrl">Ctrl Urufunguzo</string>
+    <string name="key_alt">Urufunguzo</string>
+    <string name="key_shift">Shift Urufunguzo</string>
+    <string name="key_meta">Urufunguzo rwa Meta</string>
+    <string name="keycode">Kode y\'ingenzi</string>
+    <string name="modcode">Kode yo guhindura</string>
+    <string name="key_details">Ibisobanuro by\'ingenzi</string>
     <!-- Setting screen -->
+    <string name="setting_general">Jenerali</string>
+    <string name="dark_theme_title">Uburyo bwijoro</string>
+    <string name="dark_theme_summary">Shiraho insanganyamatsiko yijimye</string>
+    <string name="device_admin_title">Kora nyiri ibikoresho bya porogaramu</string>
+    <string name="device_admin_summary">Imizi irakenewe. Ibi ni ukurenga bimwe mubibujijwe kuri Android.</string>
+    <string name="hide_icon_title">Hisha /Hagarika Agashusho</string>
+    <string name="hide_icon_summary">Hamagara *</string>
+    <string name="delete_dep_title">Kuramo porogaramu</string>
+    <string name="delete_dep_summary">Sukura kandi ukuremo porogaramu.</string>
+    <string name="settings_sec_title">Umutekano</string>
+    <string name="settings_sec_desc">Gushoboza inyandiko ya dosiye ibanga no gufunga ecran.</string>
+    <string name="setting_device">Igitero Mode Igenamiterere</string>
+    <string name="configfs_title">Imodoka Kugena Imiterere</string>
+    <string name="configfs_summary">Uzagena HID ku bikoresho bishyigikiwe na ConfigFS. Urashobora guhagarika igenamiterere rya USB.</string>
+    <string name="hid_choice_title">Guhisha</string>
+    <string name="hid_choice_summary">Hindura hagati yumurage HID na Customizable HID</string>
+    <string name="hid_title">HISHA Ururimi</string>
+    <string name="hid_summary">Kuramo izindi ndimi HID cyangwa ushushanye imiterere mishya ya HID.</string>
+    <string name="settings_usb_title">Gutangiza USB</string>
+    <string name="settings_usb_desc">Koresha buto izagaba igitero mugihe USB ihujwe.</string>
+    <string name="settings_net_title">Umuyoboro wa Sock Guhuza</string>
+    <string name="settings_net_desc">Koresha buto izagaba igitero mugihe Network Socket ihujwe.</string>
+    <string name="setting_about">Amakuru</string>
+    <string name="setting_developer_title">Iterambere</string>
+    <string name="settings_version_title">Inyandiko</string>
+    <string name="settings_arch_title">Ubwubatsi</string>
+    <string name="settings_lic_title">Uruhushya</string>
+    <string name="settings_support">Inkunga</string>
+    <string name="settings_git_title">Ibibazo bya GitHub</string>
+    <string name="settings_git_desc">Kanda kugirango wongere ibibazo cyangwa icyifuzo gisabwa.</string>
+    <string name="settings_locale_title">Kwimenyekanisha</string>
+    <string name="settings_locale_desc">Tanga umusanzu wa porogaramu.</string>
+    <string name="release">Ikwirakwizwa</string>
+    <string name="releaseNetHunter">Ububiko bwa NetHunter</string>
+    <string name="releaseGitHub">GitHub</string>
+    <string name="releaseGitHubNightly">GitHub Nijoro</string>
+    <string name="releaseTest">Kurekura</string>
+    <string name="releaseOthers">Kudashyigikirwa</string>
+    <string name="btn_cancel">Kureka</string>
+    <string name="btn_save">Bika</string>
+    <string name="file_saved">yakijijwe</string>
+    <string name="title_open_file">Fungura dosiye</string>
+    <string name="title_delete_file">Siba Idosiye</string>
+    <string name="file_deleted">Gusiba</string>
+    <string name="file_name">Izina rya dosiye</string>
+    <string name="title_save_file">Bika Idosiye</string>
+    <string name="hid_version">Inyandiko: %d</string>
+    <string-array name="modes">
+        <item>USB Cable</item>
+        <item>Umuyoboro</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>Icyongereza cyo muri Amerika</item>
+        <item>Turukiya</item>
+        <item>Igisuwede</item>
+        <item>Sloveniya</item>
+        <item>Ikirusiya</item>
+        <item>Igiporutugali</item>
+        <item>Noruveje</item>
+        <item>Umutaliyani</item>
+        <item>Igikorowasiya</item>
+        <item>Ubwongereza Icyongereza</item>
+        <item>Igifaransa</item>
+        <item>Igifinilande</item>
+        <item>Icyesipanyoli</item>
+        <item>Danemark</item>
+        <item>Ikidage</item>
+        <item>Igifaransa</item>
+        <item>Igiporutugali</item>
+        <item>Biyelorusiya</item>
+        <item>Hongiriya</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Imodoka</item>
+        <item>Umunsi</item>
+        <item>Ijoro</item>
+    </string-array>
 </resources>

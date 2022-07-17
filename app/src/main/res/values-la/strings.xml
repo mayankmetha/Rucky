@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">DEINDE</string>
+    <string name="init_skip">PRAETERVEHOR</string>
+    <string name="init_agree">CONVENIEO</string>
+    <string name="init_start">HACK</string>
+    <string name="slideDesc1">Verte fabrica ad Purgamentum Ducky!</string>
+    <string name="slideTitle2">USB cable</string>
+    <string name="slideDesc2">USB wired interface ad oppugnationem deducendam!</string>
+    <string name="slideTitle3">Network Socket</string>
+    <string name="slideDesc3">Wi-Fi substructio nervum interfaces ad oppugnationem deducendi per instrumenta externa sustentata!</string>
+    <string name="slideTitle4">Disclaimer</string>
+    <string name="slideDesc4">Usor apporum solus reus est damnorum causatorum. Nulla alia res tenetur teneri ad damna illata utens hoc app! Caute utere cum app utens et hoc non uteris ut aliis nocumentum afferat!</string>
+    <string name="slideTitle5">Privacy policy</string>
+    <string name="slideDesc5">Nulla data ullius speciei colligi, usus et venditus est! Aliquae permissiones, quae res secretas movere possunt, tantum rogantur ut certas notas in app elaborandas et notitias colligendas non sit! Secretum tuum colitur!</string>
+    <string name="slideTitle6">App permission</string>
+    <string name="slideDesc6">Quaeso, det app licentia requiritur ad opus!</string>
     <!-- Update screen -->
+    <string name="update_new">Nova Update Available Version:</string>
+    <string name="update_hash_error">Tabulae Subscriptio Mismatch! Update non potest.</string>
+    <string name="update_activity">Rucky Update</string>
+    <string name="update_version">Version</string>
+    <string name="update_version_nightly">Nocturne Version</string>
+    <string name="update_changelog">Changelog</string>
+    <string name="update_status">Status update</string>
+    <string name="update_action">Download ac Install Update</string>
+    <string name="update_downloading">Download Update</string>
+    <string name="install_update">Applicando Update</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Velisne celare vel exire app?</string>
+    <string name="btn_exit">Exitus</string>
+    <string name="btn_back">Celare</string>
+    <string name="unlock">Basem App</string>
+    <string name="auth">Adfirmare authenticas</string>
+    <string name="update">Renovatio</string>
+    <string name="setting">Occasus</string>
+    <string name="codeHint">Typus aut onus Flexilis cumminosam scriptor hic</string>
+    <string name="loadBtn">Load</string>
+    <string name="saveBtn">salvare</string>
+    <string name="delBtn">Delere</string>
+    <string name="runBtn">Curre</string>
+    <string name="confBtn">Mando</string>
+    <string name="btn_continue">continue</string>
+    <string name="root_err">Radix Access requisiti USB Attack!</string>
+    <string name="kernel_err">"Kernel not suffulta pro USB Cable Attack!"</string>
+    <string name="vm">Mauris lorem ipsum non suscipit!</string>
     <!-- Config screen -->
+    <string name="config_activity">Tweaks</string>
+    <string name="config_status_usb_on">USB Connected</string>
+    <string name="config_status_usb_off">USB Disconnected</string>
+    <string name="config_status_net_on">Network Socket Connected</string>
+    <string name="config_status_net_off">Network Pentium Disconnected</string>
+    <string name="socket_address">Intra Pentium IP et Portus Oratio</string>
     <!-- HID config screen -->
+    <string name="hid_activity">HID Mando</string>
+    <string name="hid_download">Download</string>
+    <string name="hid_update">Renovatio</string>
+    <string name="hid_edit">Edit</string>
+    <string name="hid_delete">Delere</string>
     <!-- Keylist screen -->
+    <string name="key_title">Clavis Nomen</string>
+    <string name="key_character">Key Character</string>
+    <string name="key_code">Clavis Code</string>
+    <string name="key_ctrl">Ctrl Key</string>
+    <string name="key_alt">Alt Key</string>
+    <string name="key_shift">Key Shift</string>
+    <string name="key_meta">Meta Key</string>
+    <string name="keycode">Clavis Code</string>
+    <string name="modcode">Modifier Code</string>
+    <string name="key_details">Clavis Details</string>
     <!-- Setting screen -->
+    <string name="setting_general">Generalis</string>
+    <string name="dark_theme_title">Nox Modus</string>
+    <string name="dark_theme_summary">Set tenebris theme</string>
+    <string name="device_admin_title">Fac dominus app fabrica</string>
+    <string name="device_admin_summary">Root required. Hoc est praeterire aliquas restrictiones in Android.</string>
+    <string name="hide_icon_title">Celare /inactivare Launcher Icon</string>
+    <string name="hide_icon_summary">Dial *</string>
+    <string name="delete_dep_title">Uninstall App</string>
+    <string name="delete_dep_summary">Tersus et uninstall app.</string>
+    <string name="settings_sec_title">Antecessum Securitatis</string>
+    <string name="settings_sec_desc">Admitte lima encryption et scrinium scriptorum tegumentum.</string>
+    <string name="setting_device">Impetum Modus Occasus</string>
+    <string name="configfs_title">Auto Configure ConfigFS</string>
+    <string name="configfs_summary">HID configurabit in configFS machinas fulta. Ut conteram USB occasum.</string>
+    <string name="hid_choice_title">Duis HID</string>
+    <string name="hid_choice_summary">Commutandum inter Legatum HID et Morbi HID</string>
+    <string name="hid_title">HID Language</string>
+    <string name="hid_summary">Additiones linguas HID vel novas HID rationes designare.</string>
+    <string name="settings_usb_title">USB Iungo Duc</string>
+    <string name="settings_usb_desc">Bulla decurre impetum faciet cum USB coniungitur.</string>
+    <string name="settings_net_title">Network Socket Connect Launch</string>
+    <string name="settings_net_desc">Bulla currendi impetum faciet cum Network Socket connexa.</string>
+    <string name="setting_about">Info</string>
+    <string name="setting_developer_title">Elit</string>
+    <string name="settings_version_title">Version</string>
+    <string name="settings_arch_title">Architecture</string>
+    <string name="settings_lic_title">Licentia</string>
+    <string name="settings_support">Support</string>
+    <string name="settings_git_title">Exitus GitHub</string>
+    <string name="settings_git_desc">Click addere quaestiones vel petitionem pluma.</string>
+    <string name="settings_locale_title">Localization</string>
+    <string name="settings_locale_desc">Conferre ad app localization.</string>
+    <string name="release">Distributio</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">GitHub Release</string>
+    <string name="releaseGitHubNightly">GitHub Nocturne</string>
+    <string name="releaseTest">Debug Release</string>
+    <string name="releaseOthers">Non Supported Release</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_save">salvare</string>
+    <string name="file_saved">salvus</string>
+    <string name="title_open_file">Aperi file</string>
+    <string name="title_delete_file">Delere File</string>
+    <string name="file_deleted">delevit</string>
+    <string name="file_name">File nomen</string>
+    <string name="title_save_file">Nisi lima</string>
+    <string name="hid_version">Version: %d</string>
+    <string-array name="modes">
+        <item>USB cable</item>
+        <item>Network Socket</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>American English</item>
+        <item>Turcicum</item>
+        <item>Swedish</item>
+        <item>Slovenian</item>
+        <item>Russian</item>
+        <item>Portuguese</item>
+        <item>Norvegica</item>
+        <item>Italian</item>
+        <item>Croatian</item>
+        <item>United Kingdom English</item>
+        <item>Gallica</item>
+        <item>Finnicum</item>
+        <item>hispanice</item>
+        <item>Danica</item>
+        <item>German</item>
+        <item>Canadian French</item>
+        <item>Brazilian Portuguese</item>
+        <item>Belarusian</item>
+        <item>Hungarica</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Auto</item>
+        <item>dies</item>
+        <item>nox</item>
+    </string-array>
 </resources>

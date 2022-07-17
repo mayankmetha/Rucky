@@ -2,10 +2,150 @@
 <resources>
     <!-- Splash screen -->
     <!-- Init Screen -->
+    <string name="init_next">ДАЛЕЙ</string>
+    <string name="init_skip">ПРАПУСЦІЦЬ</string>
+    <string name="init_agree">ЗГОДНЫ</string>
+    <string name="init_start">ХАК</string>
+    <string name="slideDesc1">Ператварыце сваю прыладу ў гумовую качачку!</string>
+    <string name="slideTitle2">Кабель USB</string>
+    <string name="slideDesc2">Правадной інтэрфейс USB для запуску атакі!</string>
+    <string name="slideTitle3">Сеткавы сокет</string>
+    <string name="slideDesc3">Інтэрфейсы сокетаў на аснове Wi-Fi для запуску атакі з дапамогай падтрымоўваных знешніх інструментаў!</string>
+    <string name="slideTitle4">Адмова ад адказнасці</string>
+    <string name="slideDesc4">Карыстальнік прыкладання нясе поўную адказнасць за прычыненую шкоду. Ні адна іншая арганізацыя не можа несці адказнасць за шкоду, нанесеную з дапамогай гэтага прыкладання! Будзьце асцярожныя пры выкарыстанні прыкладання і не выкарыстоўвайце яго, каб нанесці шкоду іншым!</string>
+    <string name="slideTitle5">Палітыка прыватнасці</string>
+    <string name="slideDesc5">Дадзеныя ў любой форме не збіраюцца, не выкарыстоўваюцца і не прадаюцца! Некаторыя дазволы, якія могуць выклікаць праблемы з прыватнасцю, запытваюцца толькі для працы пэўных функцый праграмы, а не для збору даных! Ваша прыватнасць паважаецца!</string>
+    <string name="slideTitle6">Дазвол праграмы</string>
+    <string name="slideDesc6">Дайце праграме неабходны дазвол на працу!</string>
     <!-- Update screen -->
+    <string name="update_new">Даступная новая версія абнаўлення:</string>
+    <string name="update_hash_error">Неадпаведнасць подпісу файла! Немагчыма абнавіць.</string>
+    <string name="update_activity">Абнаўленне Rucky</string>
+    <string name="update_version">Версія</string>
+    <string name="update_version_nightly">Начная версія</string>
+    <string name="update_changelog">Журнал змяненняў</string>
+    <string name="update_status">Статус абнаўлення</string>
+    <string name="update_action">Спампуйце і ўсталюйце абнаўленне</string>
+    <string name="update_downloading">Спампоўка абнаўлення</string>
+    <string name="install_update">Прымяняецца абнаўленне</string>
     <!-- Editor screen -->
+    <string name="exit_dialog">Вы хочаце схаваць праграму або выйсці з яе?</string>
+    <string name="btn_exit">Выхад</string>
+    <string name="btn_back">Схаваць</string>
+    <string name="unlock">Разблакіроўка прыкладання</string>
+    <string name="auth">Пацвердзіце аўтэнтыфікацыю</string>
+    <string name="update">Абнаўленне</string>
+    <string name="setting">Налады</string>
+    <string name="codeHint">Увядзіце або загрузіце тут гумовыя скрыпты</string>
+    <string name="loadBtn">Нагрузка</string>
+    <string name="saveBtn">Захаваць</string>
+    <string name="delBtn">Выдаліць</string>
+    <string name="runBtn">Бегчы</string>
+    <string name="confBtn">Канфігурацыя</string>
+    <string name="btn_continue">Працягнуць</string>
+    <string name="root_err">Для атакі на USB-кабель патрабуецца каранёвы доступ!</string>
+    <string name="kernel_err">"Ядро не падтрымліваецца для атакі на кабель USB!"</string>
+    <string name="vm">Віртуальнае асяроддзе не падтрымліваецца!</string>
     <!-- Config screen -->
+    <string name="config_activity">Твікі</string>
+    <string name="config_status_usb_on">USB падключаны</string>
+    <string name="config_status_usb_off">USB адключаны</string>
+    <string name="config_status_net_on">Сеткавы сокет падключаны</string>
+    <string name="config_status_net_off">Сеткавы сокет адключаны</string>
+    <string name="socket_address">Увядзіце IP-адрас сокета і адрас порта</string>
     <!-- HID config screen -->
+    <string name="hid_activity">Канфігурацыя HID</string>
+    <string name="hid_download">Спампаваць</string>
+    <string name="hid_update">Абнаўленне</string>
+    <string name="hid_edit">Рэдагаваць</string>
+    <string name="hid_delete">Выдаліць</string>
     <!-- Keylist screen -->
+    <string name="key_title">Назва ключа</string>
+    <string name="key_character">Ключавы персанаж</string>
+    <string name="key_code">Код ключа</string>
+    <string name="key_ctrl">Клавіша Ctrl</string>
+    <string name="key_alt">Клавіша Alt</string>
+    <string name="key_shift">Клавіша Shift</string>
+    <string name="key_meta">Мета ключ</string>
+    <string name="keycode">Код ключа</string>
+    <string name="modcode">Код мадыфікатара</string>
+    <string name="key_details">Ключавыя дэталі</string>
     <!-- Setting screen -->
+    <string name="setting_general">Генерал</string>
+    <string name="dark_theme_title">Начны рэжым</string>
+    <string name="dark_theme_summary">Усталяваць цёмную тэму</string>
+    <string name="device_admin_title">Зрабіць праграму ўладальнікам прылады</string>
+    <string name="device_admin_summary">Патрабуецца рут. Гэта робіцца для абыходу некаторых абмежаванняў на Android.</string>
+    <string name="hide_icon_title">Схаваць/адключыць значок праграмы запуску</string>
+    <string name="hide_icon_summary">Набярыце *</string>
+    <string name="delete_dep_title">Выдаліць праграму</string>
+    <string name="delete_dep_summary">Ачысціце і выдаліце ​​праграму.</string>
+    <string name="settings_sec_title">Папярэдняя бяспека</string>
+    <string name="settings_sec_desc">Уключыць шыфраванне файла сцэнарыя і блакіроўку экрана.</string>
+    <string name="setting_device">Налады рэжыму атакі</string>
+    <string name="configfs_title">Аўтаматычная налада ConfigFS</string>
+    <string name="configfs_summary">Наладзіць HID на прыладах, якія падтрымліваюцца ConfigFS. Можа парушыць настройку USB.</string>
+    <string name="hid_choice_title">Наладжвальны HID</string>
+    <string name="hid_choice_summary">Пераключэнне паміж Legacy HID і Customizable HID</string>
+    <string name="hid_title">Мова HID</string>
+    <string name="hid_summary">Спампуйце дадатковыя мовы HID або распрацуйце новыя макеты HID.</string>
+    <string name="settings_usb_title">Запуск USB Connect</string>
+    <string name="settings_usb_desc">Кнопка запуску запускае атаку пры падключэнні USB.</string>
+    <string name="settings_net_title">Запуск Network Socket Connect</string>
+    <string name="settings_net_desc">Кнопка \"Выканаць\" запусціць атаку, калі падключаны сеткавы сокет.</string>
+    <string name="setting_about">Інфармацыя</string>
+    <string name="setting_developer_title">Распрацоўшчык</string>
+    <string name="settings_version_title">Версія</string>
+    <string name="settings_arch_title">Архітэктура</string>
+    <string name="settings_lic_title">Ліцэнзія</string>
+    <string name="settings_support">Падтрымка</string>
+    <string name="settings_git_title">Праблемы GitHub</string>
+    <string name="settings_git_desc">Націсніце, каб дадаць праблемы або запыт функцыі.</string>
+    <string name="settings_locale_title">Лакалізацыя</string>
+    <string name="settings_locale_desc">Унесці свой уклад у лакалізацыю праграмы.</string>
+    <string name="release">Размеркаванне</string>
+    <string name="releaseNetHunter">NetHunter App Store</string>
+    <string name="releaseGitHub">Выпуск GitHub</string>
+    <string name="releaseGitHubNightly">Начны GitHub</string>
+    <string name="releaseTest">Выпуск адладкі</string>
+    <string name="releaseOthers">Выпуск, які не падтрымліваецца</string>
+    <string name="btn_cancel">Адмяніць</string>
+    <string name="btn_save">Захаваць</string>
+    <string name="file_saved">захаваны</string>
+    <string name="title_open_file">Адкрыць файл</string>
+    <string name="title_delete_file">Выдаліць файл</string>
+    <string name="file_deleted">выдалены</string>
+    <string name="file_name">Імя файла</string>
+    <string name="title_save_file">Захаваць файл</string>
+    <string name="hid_version">Версія: %d</string>
+    <string-array name="modes">
+        <item>Кабель USB</item>
+        <item>Сеткавы сокет</item>
+    </string-array>
+    <string-array name="hidLanguages">
+        <item>амерыканская англійская</item>
+        <item>турэцкая</item>
+        <item>шведская</item>
+        <item>Славенская</item>
+        <item>рускі</item>
+        <item>партугальская</item>
+        <item>нарвежская</item>
+        <item>італьянскі</item>
+        <item>харвацкая</item>
+        <item>англійская з Вялікабрытаніі</item>
+        <item>французскі</item>
+        <item>фінская</item>
+        <item>іспанскі</item>
+        <item>дацкая</item>
+        <item>нямецкі</item>
+        <item>Канадскі французскі</item>
+        <item>бразільская партугальская</item>
+        <item>беларускі</item>
+        <item>венгерскі</item>
+    </string-array>
+    <string-array name="dark_theme_list">
+        <item>Аўто</item>
+        <item>Дзень</item>
+        <item>Ноч</item>
+    </string-array>
 </resources>
