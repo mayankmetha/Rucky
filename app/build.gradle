@@ -109,7 +109,7 @@ dependencies {
     implementation 'androidx.core:core:1.8.0'
     implementation 'androidx.core:core-animation:1.0.0-beta01'
     implementation 'androidx.core:core-splashscreen:1.0.0-rc01'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation "androidx.preference:preference:1.2.0"
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.security:security-crypto:1.1.0-alpha03'
