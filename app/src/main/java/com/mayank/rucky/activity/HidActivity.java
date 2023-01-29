@@ -34,6 +34,7 @@ import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.HidAdapter;
 
+import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
 
 import java.io.BufferedOutputStream;
@@ -129,7 +130,7 @@ public class HidActivity extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
                     File file;
-                    String fileNameString = fileName.getText().toString().replaceAll("[\\\\/.]+","");
+                    String fileNameString = FileUtils.filename(String.valueOf(fileName.getText()));
                     if (fileNameString.isEmpty()) {
                         fileNameString = String.valueOf(new Date().getTime());
                     }
@@ -142,14 +143,6 @@ public class HidActivity extends AppCompatActivity {
                         }
                     }
                     file = new File(getExternalFilesDir("keymap"),fileNameString+".json");
-                    try {
-                        String canonicalPath = file.getCanonicalPath();
-                        if(!file.getPath().startsWith(canonicalPath)) {
-                            throw new Exception("File path error", new Throwable(canonicalPath));
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
 
                     FileOutputStream fOutputStream;
                     OutputStream outputStream;
