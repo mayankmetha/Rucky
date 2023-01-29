@@ -194,7 +194,12 @@ public class EditorActivity extends AppCompatActivity {
         nightly = false;
         try {
             if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.P) {
-                PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNING_CERTIFICATES);
+                PackageInfo info;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    info = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.PackageInfoFlags.of(PackageManager.	GET_SIGNING_CERTIFICATES));
+                } else {
+                    info = this.getPackageManager().getPackageInfo(this.getPackageName(), 0);
+                }
                 if (info.signingInfo.hasMultipleSigners()) {
                     for (Signature signature: info.signingInfo.getApkContentsSigners()) {
                         MessageDigest md = MessageDigest.getInstance("SHA256");
@@ -384,7 +389,12 @@ public class EditorActivity extends AppCompatActivity {
 
     private void getCurrentAppVersion() {
         try {
-            PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            PackageInfo pInfo;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                pInfo = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.PackageInfoFlags.of(PackageManager.GET_ATTRIBUTIONS));
+            } else {
+                pInfo = this.getPackageManager().getPackageInfo(this.getPackageName(), 0);
+            }
             currentVersion = Double.parseDouble(pInfo.versionName);
             currentNightly = PackageInfoCompat.getLongVersionCode(pInfo);
         } catch (PackageManager.NameNotFoundException e) {
@@ -431,7 +441,7 @@ public class EditorActivity extends AppCompatActivity {
                         minAndroidSDK = 0;
                         newNightly = currentNightly;
                     }
-                    if (Build.VERSION.SDK_INT != 0 && Build.VERSION.SDK_INT >= minAndroidSDK) queue.add(getUpdateSignature());
+                    if (Build.VERSION.SDK_INT >= minAndroidSDK) queue.add(getUpdateSignature());
                 }, error -> {
             minAndroidSDK = 0;
             newNightly = currentNightly;

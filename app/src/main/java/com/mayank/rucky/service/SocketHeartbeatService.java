@@ -4,6 +4,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.IBinder;
 
 import androidx.core.app.NotificationCompat;
@@ -18,7 +19,6 @@ import com.mayank.rucky.utils.Constants;
 import java.net.Socket;
 import java.util.Timer;
 import java.util.TimerTask;
-
 
 public class SocketHeartbeatService extends Service {
 
@@ -69,8 +69,12 @@ public class SocketHeartbeatService extends Service {
     @Override
     public void onDestroy() {
         unregisterReceiver(receiver);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            stopForeground(STOP_FOREGROUND_REMOVE);
+        } else {
+            stopForeground(true);
+        }
         stopSelf();
-        stopForeground(true);
         super.onDestroy();
     }
 

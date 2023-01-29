@@ -240,7 +240,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         double currentVersion = 0.0;
         long currentVersionCode = 0;
         try {
-            PackageInfo pInfo = this.requireActivity().getPackageManager().getPackageInfo(this.requireActivity().getPackageName(), 0);
+            PackageInfo pInfo;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                pInfo = this.requireActivity().getPackageManager().getPackageInfo(this.requireActivity().getPackageName(), PackageManager.PackageInfoFlags.of(PackageManager.GET_ATTRIBUTIONS));
+            } else {
+                pInfo = this.requireActivity().getPackageManager().getPackageInfo(this.requireActivity().getPackageName(), 0);
+            }
             currentVersionCode = PackageInfoCompat.getLongVersionCode(pInfo);
             currentVersion = Double.parseDouble(pInfo.versionName);
         } catch (PackageManager.NameNotFoundException e) {
