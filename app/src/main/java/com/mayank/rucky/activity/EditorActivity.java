@@ -52,6 +52,7 @@ import com.mayank.rucky.utils.HID;
 import com.mayank.rucky.utils.HID2;
 import com.mayank.rucky.utils.Networks;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -823,7 +824,7 @@ public class EditorActivity extends AppCompatActivity {
                     .setPositiveButton(getResources().getString(R.string.btn_save), (dialog, which) -> {
                         EditText scripts = findViewById(R.id.code);
                         File file;
-                        String fileNameString = fileName.getText().toString().replaceAll("[\\\\/.]+","");
+                        String fileNameString = FileUtils.filename(String.valueOf(fileName.getText()));
                         if (fileNameString.isEmpty()) {
                             fileNameString = String.valueOf(new Date().getTime());
                         }
