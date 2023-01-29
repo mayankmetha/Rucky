@@ -44,7 +44,7 @@ public class ConfigActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         config = new Config(this);
         switch (config.getDarkMode()) {
             case 1: AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); break;
@@ -60,10 +60,10 @@ public class ConfigActivity extends AppCompatActivity {
         ipButton.setFilterTouchesWhenObscured(true);
 
         ipButton.setText(config.getNetworkAddress());
-        SOCKET_ADDRESS = Pattern.compile("((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(25[0-5]|2[0-4]"
-                + "[0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]"
-                + "[0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}"
-                + "|[1-9][0-9]|[0-9])):([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])");
+        SOCKET_ADDRESS = Pattern.compile("((25[0-5]|2[0-4]\\d|[0-1]\\d{2}|[1-9]\\d|[1-9])\\.(25[0-5]|2[0-4]"
+                + "\\d|[0-1]\\d{2}|[1-9]\\d|[1-9]|0)\\.(25[0-5]|2[0-4]\\d|[0-1]"
+                + "\\d{2}|[1-9]\\d|[1-9]|0)\\.(25[0-5]|2[0-4]\\d|[0-1]\\d{2}"
+                + "|[1-9]\\d|\\d)):([1-9]\\d{0,3}|[1-5]\\d{4}|6[0-4]\\d{3}|65[0-4]\\d{2}|655[0-2]\\d|6553[0-5])");
 
         updateStatus();
         language();
