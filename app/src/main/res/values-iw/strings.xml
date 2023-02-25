@@ -83,8 +83,6 @@
     <string name="settings_sec_title">אבטחת מידע</string>
     <string name="settings_sec_desc">הפעלת הצפנת קובצי Script ומנעול מסך.</string>
     <string name="setting_device">הגדרות מצב התקפה</string>
-    <string name="configfs_title">קביעת תצורה אוטומטית של ConfigFS</string>
-    <string name="configfs_summary">קבעו את התצורה של HID על התקנים נתמכים של ConfigFS. יכול לשבור הגדרת USB.</string>
     <string name="hid_choice_title">HID ניתן להתאמה</string>
     <string name="hid_choice_summary">מעבר בין זיהוי הHID של Legacy ו-Customisable</string>
     <string name="hid_title">שפת HID</string>

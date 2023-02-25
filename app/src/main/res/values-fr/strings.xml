@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Sécurité Avancée</string>
     <string name="settings_sec_desc">Activer le chiffrement des fichiers de script et le verrouillage de l\'écran.</string>
     <string name="setting_device">Réglages du Mode Attaque</string>
-    <string name="configfs_title">Configurer automatiquement les configurations</string>
-    <string name="configfs_summary">Configurer HID sur les périphériques pris en charge par ConfigFS. Peut briser les paramètres USB.</string>
     <string name="hid_choice_title">ID HID personnalisable</string>
     <string name="hid_choice_summary">Basculer entre HID ancien et HID personnalisable</string>
     <string name="hid_title">Langue HID</string>

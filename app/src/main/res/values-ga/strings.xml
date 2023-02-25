@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Réamhshlándáil</string>
     <string name="settings_sec_desc">Cumasaigh criptiú comhaid scripte agus glas scáileáin.</string>
     <string name="setting_device">Socruithe Mód Ionsaí</string>
-    <string name="configfs_title">Cumraigh Cumraigh Uathoibríoch</string>
-    <string name="configfs_summary">Cumróidh sé HID ar ghléasanna tacaithe ag ConfigFS. D\'fhéadfadh socrú USB a bhriseadh.</string>
     <string name="hid_choice_title">HID saincheaptha</string>
     <string name="hid_choice_summary">Athraigh idir Legacy HID agus Customizable HID</string>
     <string name="hid_title">HID Teanga</string>

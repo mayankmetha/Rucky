@@ -83,8 +83,6 @@
     <string name="settings_sec_title">অগ্রগতির নিরাপত্তা</string>
     <string name="settings_sec_desc">স্ক্রিপ্ট ফাইল এনক্রিপশন এবং স্ক্রিন লক সক্রিয় করো.</string>
     <string name="setting_device">অ্যাটাক মোড সেটিংস</string>
-    <string name="configfs_title">স্বয়ংক্রিয় কনফিগারেশন</string>
-    <string name="configfs_summary">ConfigFS সমর্থিত ডিভাইসে HID কনফিগার করা হবে. ইউএসবি সেটিং ভেঙ্গে দিবে.</string>
     <string name="hid_choice_title">Customisable HID</string>
     <string name="hid_choice_summary">Legacy HID এবং Customisable HID মধ্যে পরিবর্তন</string>
     <string name="hid_title">HID Language</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Дэвшилтэт аюулгүй байдал</string>
     <string name="settings_sec_desc">Скрипт файлын шифрлэлт болон дэлгэцийн түгжээг идэвхжүүлнэ.</string>
     <string name="setting_device">Довтолгооны горимын тохиргоо</string>
-    <string name="configfs_title">ConfigFS-ийг автоматаар тохируулах</string>
-    <string name="configfs_summary">ConfigFS дэмждэг төхөөрөмжүүд дээр HID-г тохируулах болно. USB тохиргоог эвдэж болзошгүй.</string>
     <string name="hid_choice_title">Тохируулах боломжтой HID</string>
     <string name="hid_choice_summary">Хуучин HID болон Тохируулах боломжтой HID хооронд сэлгэх</string>
     <string name="hid_title">HID хэл</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Ettemakse</string>
     <string name="settings_sec_desc">Skriptifaili krüptimise ja ekraani lukustumise lubamine.</string>
     <string name="setting_device">Ründerežiimi seadistused</string>
-    <string name="configfs_title">Automaatne seadistamise seadistused</string>
-    <string name="configfs_summary">Seadista HID konfigureerimis-ja seadistusseadmetesse. Võib puruneda USB-seade.</string>
     <string name="hid_choice_title">Kohandatud HID</string>
     <string name="hid_choice_summary">Lüliti Legacy HID ja Hooldatava HID vahel</string>
     <string name="hid_title">HID-keel</string>

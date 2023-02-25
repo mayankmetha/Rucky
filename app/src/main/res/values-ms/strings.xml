@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Keselamatan Maju</string>
     <string name="settings_sec_desc">Benarkan penyulitan fail skrip dan kunci skrin.</string>
     <string name="setting_device">Tetapan Mod Serangan</string>
-    <string name="configfs_title">Konfigur Auto ConfigFS</string>
-    <string name="configfs_summary">Akan konfigur HID pada peranti disokong ConfigFS. Boleh memecahkan tetapan USB.</string>
     <string name="hid_choice_title">HID boleh suai</string>
     <string name="hid_choice_summary">Tukar diantara HID Legacy dan HeID Kasmisable</string>
     <string name="hid_title">Bahasa HID</string>

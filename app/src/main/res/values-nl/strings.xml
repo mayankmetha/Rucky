@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Verbetering van beveiliging</string>
     <string name="settings_sec_desc">Script-bestandsversleuteling en schermvergrendeling inschakelen.</string>
     <string name="setting_device">Aanvalmodus Instellingen</string>
-    <string name="configfs_title">Configureren automatisch</string>
-    <string name="configfs_summary">Zal HID op ondersteunde apparaten configureren. Dit kan de USB-instelling breken.</string>
     <string name="hid_choice_title">Aanpasbare HID</string>
     <string name="hid_choice_summary">Schakelen tussen Legacy HID en aanpasbare HID</string>
     <string name="hid_title">HID-taal</string>

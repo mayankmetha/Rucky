@@ -83,8 +83,6 @@
     <string name="settings_sec_title">高度なセキュリティ</string>
     <string name="settings_sec_desc">スクリプトファイルの暗号化と画面ロックを有効にします。</string>
     <string name="setting_device">攻撃モードの設定</string>
-    <string name="configfs_title">ConfigFS の自動設定</string>
-    <string name="configfs_summary">ConfigFS対応デバイスでHIDを設定します。USB設定が破損する可能性があります。</string>
     <string name="hid_choice_title">カスタマイズ可能な HID</string>
     <string name="hid_choice_summary">レガシー HID とカスタマイズ可能な HID の切り替え</string>
     <string name="hid_title">HID 言語</string>

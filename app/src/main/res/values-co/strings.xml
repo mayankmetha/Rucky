@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Sicurezza avanzata</string>
     <string name="settings_sec_desc">Abilita a criptografia di u schedariu di script è u bloccu di u screnu.</string>
     <string name="setting_device">Settings Mode Attack</string>
-    <string name="configfs_title">Configurazione automatica ConfigFS</string>
-    <string name="configfs_summary">Configurarà HID nantu à i dispositi supportati da ConfigFS. Pò rompe u paràmetru USB.</string>
     <string name="hid_choice_title">HID persunalizabile</string>
     <string name="hid_choice_summary">Cambia trà Legacy HID è Customizable HID</string>
     <string name="hid_title">Lingua HID</string>

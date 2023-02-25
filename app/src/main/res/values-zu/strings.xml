@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Ukuphepha Okuthuthukile</string>
     <string name="settings_sec_desc">Nika amandla ukubethela kwefayela lombhalo kanye nokukhiya isikrini.</string>
     <string name="setting_device">Izilungiselelo Zemodi Yokuhlasela</string>
-    <string name="configfs_title">Lungiselela Ngokuzenzakalelayo ConfigFS</string>
-    <string name="configfs_summary">Izolungiselela i-HID kumadivayisi asekelwe e-ConfigFS. Ingase yephule isilungiselelo se-USB.</string>
     <string name="hid_choice_title">I-HID eyenziwe ngokwezifiso</string>
     <string name="hid_choice_summary">Shintsha phakathi kwe-Legacy HID kanye ne-HID Engenziwa Ngokwezifiso</string>
     <string name="hid_title">Ulimi HID</string>

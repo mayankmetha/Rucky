@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Bobateli ya liboso</string>
     <string name="settings_sec_desc">Activer encryption ya fichier script na blocage ya écran.</string>
     <string name="setting_device">Paramètres ya Mode ya Attaque</string>
-    <string name="configfs_title">Auto Configère ya ConfigFS</string>
-    <string name="configfs_summary">Eko configurer HID na ba appareils oyo ConfigFS esungami. Ekoki kobuka paramètre ya USB.</string>
     <string name="hid_choice_title">HID oyo ekoki ko personnaliser</string>
     <string name="hid_choice_summary">Bobongola kati na HID ya kala mpe HID oyo ekoki kobongisama</string>
     <string name="hid_title">HID Monoko</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">የቅድሚያ ደህንነት</string>
     <string name="settings_sec_desc">የስክሪፕት ፋይል ምስጠራን እና የስክሪን መቆለፊያን አንቃ።</string>
     <string name="setting_device">የጥቃት ሁነታ ቅንብሮች</string>
-    <string name="configfs_title">ConfigFSን በራስ ሰር ያዋቅሩ</string>
-    <string name="configfs_summary">HID በ ConfigFS በሚደገፉ መሳሪያዎች ላይ ያዋቅራል። የዩኤስቢ ቅንብርን ሊሰብር ይችላል።</string>
     <string name="hid_choice_title">ሊበጅ የሚችል HID</string>
     <string name="hid_choice_summary">በLegacy HID እና ሊበጅ በሚችል HID መካከል ይቀያይሩ</string>
     <string name="hid_title">HID ቋንቋ</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">अग्रिम सुरक्षा</string>
     <string name="settings_sec_desc">स्क्रिप्ट फ़ाइल गोपन और स्क्रीन लॉक सक्षम करें.</string>
     <string name="setting_device">आक्रमण मोड विन्यास</string>
-    <string name="configfs_title">कॉन्फ़िग कॉन्फ़िगर करें</string>
-    <string name="configfs_summary">ConfigFS समर्थित उपकरणों पर HID कॉन्फ़िगर करेगा. USB सेटिंग को तोड़ सकता है.</string>
     <string name="hid_choice_title">अनुकूलन योग्य एचआईडी</string>
     <string name="hid_choice_summary">लीगेसी एचआईडी और अनुकूलन योग्य एचआईडी के बीच स्विच करें</string>
     <string name="hid_title">एचआईडी भाषा</string>

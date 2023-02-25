@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Qabaqcıl təhlükəsizlik</string>
     <string name="settings_sec_desc">Script fayl şifrələməsini və ekran kilidini fəallaşdırın.</string>
     <string name="setting_device">Hücum rejimi tənzimləmələri</string>
-    <string name="configfs_title">ConfigFS-i avtomatik konfiqurasiya et</string>
-    <string name="configfs_summary">ConfigFS dəstəkli cihazlarda HID-i konfiqurasiya edir. USB tənzimləməsini zədələyə bilər.</string>
     <string name="hid_choice_title">Özəlləşdirilə bilən HID</string>
     <string name="hid_choice_summary">Köhnə HID və Özəlləşdirilə bilən HID arasında keçid</string>
     <string name="hid_title">HID dili</string>

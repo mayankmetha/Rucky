@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Tšhireletšo ya Pele</string>
     <string name="settings_sec_desc">Kgontšha go šitiša faele ya sengwalwa le go notlela skrine.</string>
     <string name="setting_device">Dipeakanyo tša Mokgwa wa Tlhaselo</string>
-    <string name="configfs_title">Beakanya ka go itiriša ConfigFS</string>
-    <string name="configfs_summary">Tla hlophisa HID ka ConfigFS tšehetsoa disebediswa. E ka roba peakanyo ya USB.</string>
     <string name="hid_choice_title">HID yeo e ka fetošwago</string>
     <string name="hid_choice_summary">Fetola pakeng tsa Lefa HID le Customizable HID</string>
     <string name="hid_title">HID Polelo</string>

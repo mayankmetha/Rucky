@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Palekana mua</string>
     <string name="settings_sec_desc">E ho\'ā i ka hoʻopili ʻana i ka faila a me ka laka pale.</string>
     <string name="setting_device">Hoʻonohonoho ʻano hoʻouka kaua</string>
-    <string name="configfs_title">Hoʻonohonoho ʻokoʻa ʻo ConfigFS</string>
-    <string name="configfs_summary">E hoʻonohonoho iā HID ma nā polokalamu i kākoʻo ʻia e ConfigFS. Hiki ke haki i ka hoʻonohonoho USB.</string>
     <string name="hid_choice_title">HID hiki ke hana</string>
     <string name="hid_choice_summary">E hoʻololi ma waena o ka Legacy HID a me ka Customizable HID</string>
     <string name="hid_title">ʻŌlelo HID</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Bảo mật</string>
     <string name="settings_sec_desc">Bật mã hóa tập tin tập lệnh và khóa màn hình.</string>
     <string name="setting_device">Cài đặt chế độ</string>
-    <string name="configfs_title">Cấu hình tự động cấu hình</string>
-    <string name="configfs_summary">Sẽ cấu hình HID trên các thiết bị cấu hình hô ̃ trợ. Có thể bẻ gãy thiết lập USB.</string>
     <string name="hid_choice_title">HID tùy chỉnh</string>
     <string name="hid_choice_summary">Chuyển đổi giữa HID của Legacy HID và Customisable HID</string>
     <string name="hid_title">Ngôn ngư ̃ HID</string>

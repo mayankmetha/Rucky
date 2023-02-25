@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Securitate avansată</string>
     <string name="settings_sec_desc">Activează criptarea fișierului script și blocarea ecranului.</string>
     <string name="setting_device">Setări Mod Atac</string>
-    <string name="configfs_title">Configurare automată configurare</string>
-    <string name="configfs_summary">Va configura HID pe dispozitivele acceptate ConfigFS. Poate întrerupe setările USB.</string>
     <string name="hid_choice_title">HID personalizat</string>
     <string name="hid_choice_summary">Comutare între HID Legacy şi HID personalizat</string>
     <string name="hid_title">Limbă HID</string>

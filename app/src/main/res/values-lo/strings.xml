@@ -83,8 +83,6 @@
     <string name="settings_sec_title">ຄວາມປອດໄພລ່ວງໜ້າ</string>
     <string name="settings_sec_desc">ເປີດໃຊ້ການເຂົ້າລະຫັດໄຟລ໌ສະຄຣິບ ແລະການລັອກໜ້າຈໍ.</string>
     <string name="setting_device">ການຕັ້ງຄ່າໂຫມດການໂຈມຕີ</string>
-    <string name="configfs_title">ຕັ້ງຄ່າອັດຕະໂນມັດ ConfigFS</string>
-    <string name="configfs_summary">ຈະກຳນົດຄ່າ HID ໃນອຸປະກອນທີ່ຮອງຮັບ ConfigFS. ອາດຈະທໍາລາຍການຕັ້ງຄ່າ USB.</string>
     <string name="hid_choice_title">HID ທີ່ສາມາດປັບແຕ່ງໄດ້</string>
     <string name="hid_choice_summary">ສະຫຼັບລະຫວ່າງ Legacy HID ແລະ HID ທີ່ສາມາດປັບແຕ່ງໄດ້</string>
     <string name="hid_title">ພາສາ HID</string>

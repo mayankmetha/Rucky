@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Nchekwa Ọganihu</string>
     <string name="settings_sec_desc">Kwado faịlụ ezoro ezo na mkpọchi ihuenyo.</string>
     <string name="setting_device">Ntọala ọnọdụ ọgụ</string>
-    <string name="configfs_title">Hazie ConfigFS na-akpaghị aka</string>
-    <string name="configfs_summary">Ga-ahazi HID na ngwaọrụ ConfigFS akwadoro. Nwere ike imebi ntọala USB.</string>
     <string name="hid_choice_title">HID nwere ike ịhazi ya</string>
     <string name="hid_choice_summary">Gbanwee n\'etiti HID Legacy na HID nwere ike ịhazi ya</string>
     <string name="hid_title">Asụsụ HID</string>

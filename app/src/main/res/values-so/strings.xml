@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Amniga Hore</string>
     <string name="settings_sec_desc">Daar sirta faylka qoraalka iyo qufulka shaashadda.</string>
     <string name="setting_device">Dejinta Habka Weerarka</string>
-    <string name="configfs_title">Si otomaatig ah u habee ConfigFS</string>
-    <string name="configfs_summary">Waxay ku habeyn doontaa HID aaladaha ay taageerto ConfigFS. Waxa laga yaabaa inuu jabiyo dejinta USB</string>
     <string name="hid_choice_title">HID la beddeli karo</string>
     <string name="hid_choice_summary">U beddelo HID Legacy iyo HID la beddeli karo</string>
     <string name="hid_title">Luuqadda HID</string>

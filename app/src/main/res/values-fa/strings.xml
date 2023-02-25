@@ -83,8 +83,6 @@
     <string name="settings_sec_title">امنیت پیشرفته</string>
     <string name="settings_sec_desc">رمزگذاری فایل اسکریپت و قفل صفحه را فعال کنید.</string>
     <string name="setting_device">تنظیمات حالت حمله</string>
-    <string name="configfs_title">پیکربندی خودکار ConfigFS</string>
-    <string name="configfs_summary">HID را در دستگاه های پشتیبانی شده از ConfigFS پیکربندی می کند. ممکن است تنظیمات USB را خراب کند.</string>
     <string name="hid_choice_title">HID قابل تنظیم</string>
     <string name="hid_choice_summary">بین HID قدیمی و HID قابل تنظیم تغییر دهید</string>
     <string name="hid_title">زبان HID</string>

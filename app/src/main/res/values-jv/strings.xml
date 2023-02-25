@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Keamanan Maju</string>
     <string name="settings_sec_desc">Aktifake enkripsi file skrip lan kunci layar.</string>
     <string name="setting_device">Setelan Mode Serangan</string>
-    <string name="configfs_title">Konfigurasi Otomatis ConfigFS</string>
-    <string name="configfs_summary">Bakal ngatur HID ing piranti sing didhukung ConfigFS. Bisa ngrusak setelan USB.</string>
     <string name="hid_choice_title">HID sing bisa disesuaikan</string>
     <string name="hid_choice_summary">Ngalih ing antarane Warisan HID lan Customizable HID</string>
     <string name="hid_title">Basa HID</string>

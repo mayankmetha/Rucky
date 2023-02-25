@@ -83,8 +83,6 @@
     <string name="settings_sec_title">മുൻകൂർ സുരക്ഷ</string>
     <string name="settings_sec_desc">സ്ക്രിപ്റ്റ് ഫയൽ എൻക്രിപ്ഷനും സ്ക്രീൻ ലോക്കും പ്രവർത്തനക്ഷമമാക്കുക.</string>
     <string name="setting_device">ആക്രമണ മോഡ് ക്രമീകരണങ്ങൾ</string>
-    <string name="configfs_title">സ്വയമേവ കോൺഫിഗർ കോൺഫിഗർ ചെയ്യുക</string>
-    <string name="configfs_summary">ConfigFS പിന്തുണയ്ക്കുന്ന ഉപകരണങ്ങളിൽ HID കോൺഫിഗർ ചെയ്യും. USB ക്രമീകരണം തകർത്തേക്കാം.</string>
     <string name="hid_choice_title">ഇഷ്ടാനുസൃതമാക്കാവുന്ന HID</string>
     <string name="hid_choice_summary">ലെഗസി എച്ച്‌ഐഡിയും ഇഷ്‌ടാനുസൃതമാക്കാവുന്ന എച്ച്ഐഡിയും തമ്മിൽ മാറുക</string>
     <string name="hid_title">HID ഭാഷ</string>

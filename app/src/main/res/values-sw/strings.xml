@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Usalama wa mapema</string>
     <string name="settings_sec_desc">Washa usimbaji fiche wa faili ya hati na kufunga skrini.</string>
     <string name="setting_device">Mipangilio ya Hali ya Mashambulizi</string>
-    <string name="configfs_title">Sanidi ConfigFS Kiotomatiki</string>
-    <string name="configfs_summary">Itasanidi HID kwenye vifaa vinavyotumika vya ConfigFS. Inaweza kuvunja mpangilio wa USB.</string>
     <string name="hid_choice_title">HID inayoweza kubinafsishwa</string>
     <string name="hid_choice_summary">Badilisha kati ya HID ya Urithi na HID Inayoweza Kubinafsishwa</string>
     <string name="hid_title">Lugha iliyojificha</string>

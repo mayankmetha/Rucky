@@ -83,8 +83,6 @@
     <string name="settings_sec_title">ಮುಂಗಡ ಭದ್ರತೆ</string>
     <string name="settings_sec_desc">ಸ್ಕ್ರಿಪ್ಟ್ ಫೈಲ್ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಮತ್ತು ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
     <string name="setting_device">ಅಟ್ಯಾಕ್ ಮೋಡ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
-    <string name="configfs_title">ಸ್ವಯಂ ಕಾನ್ಫಿಗರ್ ಕಾನ್ಫಿಗರ್ ಎಫ್ಎಸ್</string>
-    <string name="configfs_summary">ConfigFS ಬೆಂಬಲಿತ ಸಾಧನಗಳಲ್ಲಿ HID ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುತ್ತದೆ. USB ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಮುರಿಯಬಹುದು.</string>
     <string name="hid_choice_title">ಗ್ರಾಹಕೀಯಗೊಳಿಸಬಹುದಾದ HID</string>
     <string name="hid_choice_summary">ಲೆಗಸಿ HID ಮತ್ತು ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದಾದ HID ನಡುವೆ ಬದಲಿಸಿ</string>
     <string name="hid_title">HID ಭಾಷೆ</string>

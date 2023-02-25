@@ -83,8 +83,6 @@
     <string name="settings_sec_title">એડવાન્સ સુરક્ષા</string>
     <string name="settings_sec_desc">સ્ક્રિપ્ટ ફાઇલ એન્ક્રિપ્શન અને સ્ક્રીન લૉક સક્ષમ કરો.</string>
     <string name="setting_device">એટેક મોડ સેટિંગ્સ</string>
-    <string name="configfs_title">સ્વતઃ રૂપરેખાંકિત રૂપરેખાંકન</string>
-    <string name="configfs_summary">ConfigFS સમર્થિત ઉપકરણો પર HID ગોઠવશે. યુએસબી સેટિંગ તૂટી શકે છે.</string>
     <string name="hid_choice_title">કસ્ટમાઇઝ HID</string>
     <string name="hid_choice_summary">લેગસી HID અને કસ્ટમાઇઝ HID વચ્ચે સ્વિચ કરો</string>
     <string name="hid_title">HID ભાષા</string>

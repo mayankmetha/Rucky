@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Advance Security</string>
     <string name="settings_sec_desc">Gonesa script file encryption uye kukiya skrini.</string>
     <string name="setting_device">Attack Mode Settings</string>
-    <string name="configfs_title">Gadzirisa otomatiki ConfigFS</string>
-    <string name="configfs_summary">Ichagadzirisa HID pane ConfigFS inotsigirwa zvishandiso. Inogona kutyora USB kuseta.</string>
     <string name="hid_choice_title">Customizable HID</string>
     <string name="hid_choice_summary">Chinja pakati pe Legacy HID neCustomizable HID</string>
     <string name="hid_title">HID Mutauro</string>

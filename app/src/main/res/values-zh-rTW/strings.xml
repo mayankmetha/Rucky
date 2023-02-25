@@ -83,8 +83,6 @@
     <string name="settings_sec_title">高階安全</string>
     <string name="settings_sec_desc">啟用 Script 檔加密和畫面鎖定。</string>
     <string name="setting_device">攻擊模式設定</string>
-    <string name="configfs_title">自動配置 ConfigFS</string>
-    <string name="configfs_summary">將在 ConfigFS 支援的裝置上配置 HID 。 可能中斷 USB 設定。</string>
     <string name="hid_choice_title">可自訂的 HID</string>
     <string name="hid_choice_summary">在舊式 HID 和可自訂 HID 之間切換</string>
     <string name="hid_title">HID 語言</string>

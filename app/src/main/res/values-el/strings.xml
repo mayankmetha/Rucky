@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Προκαταβολική Ασφάλεια</string>
     <string name="settings_sec_desc">Ενεργοποίηση κρυπτογράφησης αρχείων σεναρίου και κλειδώματος οθόνης.</string>
     <string name="setting_device">Ρυθμίσεις Λειτουργίας Επίθεσης</string>
-    <string name="configfs_title">Αυτόματη Ρύθμιση Παραμέτρων</string>
-    <string name="configfs_summary">Θα ρυθμίσετε το HID στις υποστηριζόμενες συσκευές ConfigFS. Μπορεί να σπάσει τη ρύθμιση USB.</string>
     <string name="hid_choice_title">Προσαρμόσιμο HID</string>
     <string name="hid_choice_summary">Εναλλαγή μεταξύ Legacy HID και προσαρμόσιμη HID</string>
     <string name="hid_title">Γλώσσα HID</string>

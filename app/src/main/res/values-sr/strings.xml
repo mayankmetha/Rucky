@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Унапређење безбедности</string>
     <string name="settings_sec_desc">Омогући шифровање и закључавање датотеке скрипте.</string>
     <string name="setting_device">Поставке за режим напада</string>
-    <string name="configfs_title">Аутоматско подешавање configFS</string>
-    <string name="configfs_summary">Ће конфигурисати HID на ConfigFS подржаним уређајима. Може да разбије УСБ подешавање.</string>
     <string name="hid_choice_title">Идентификатор прилагођеног HID-а</string>
     <string name="hid_choice_summary">Пребацивање између HID и Customisul HID</string>
     <string name="hid_title">HID језик</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Алдын ала қауіпсіздік</string>
     <string name="settings_sec_desc">Сценарий файлын шифрлауды және экранды құлыптауды қосыңыз.</string>
     <string name="setting_device">Шабуыл режимінің параметрлері</string>
-    <string name="configfs_title">ConfigFS автоматты конфигурациялау</string>
-    <string name="configfs_summary">ConfigFS қолдау көрсететін құрылғыларда HID конфигурациялайды. USB параметрін бұзуы мүмкін.</string>
     <string name="hid_choice_title">Реттелетін HID</string>
     <string name="hid_choice_summary">Бұрынғы HID және теңшелетін HID арасында ауысыңыз</string>
     <string name="hid_title">HID тілі</string>

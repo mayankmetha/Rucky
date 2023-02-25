@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Алдынгы куркынычсызлык</string>
     <string name="settings_sec_desc">Скрипт файлларын шифрлау һәм экран йозакны кушу.</string>
     <string name="setting_device">Attack Mode көйләүләренә</string>
-    <string name="configfs_title">ConfigFS-ны автоматик конфигурацияләү</string>
-    <string name="configfs_summary">ConfigFS ярдәмендә җайланмаларда HID конфигурациясе булачак. USB көйләнешен өзәргә мөмкин.</string>
     <string name="hid_choice_title">Көйләнә торган HID</string>
     <string name="hid_choice_summary">Мирас HID белән көйләнә торган HID арасында күчү</string>
     <string name="hid_title">Яшерен тел</string>

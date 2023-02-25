@@ -83,8 +83,6 @@
     <string name="settings_sec_title">การรักษาความปลอดภัยระดับสูง</string>
     <string name="settings_sec_desc">เปิดใช้งานการเข้ารหัสไฟล์สคริปต์และการล็อกหน้าจอ</string>
     <string name="setting_device">ค่าติดตั้งโหมดการโจมตี</string>
-    <string name="configfs_title">กำหนดค่าคอนฟิกแบบอัตโนมัติ</string>
-    <string name="configfs_summary">จะกำหนดค่า HID บนอุปกรณ์ที่สนับสนุน Config FS อาจตัดการตั้งค่า USB ได้</string>
     <string name="hid_choice_title">HID ที่กำหนดเองได้</string>
     <string name="hid_choice_summary">สลับระหว่าง Legacy HID และ HID ที่กำหนดเองได้</string>
     <string name="hid_title">ภาษา HID</string>

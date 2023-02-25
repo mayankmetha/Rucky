@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Ewlekariya Pêşveçûnê</string>
     <string name="settings_sec_desc">Şîfrekirina pelê skrîptê û girtina ekranê çalak bike.</string>
     <string name="setting_device">Mîhengên Moda Êrîşê</string>
-    <string name="configfs_title">Veavakirina ConfigFS bixweber</string>
-    <string name="configfs_summary">Dê HID-ê li ser cîhazên piştgirîkirî yên ConfigFS mîheng bike. Dibe ku mîhenga USB-ê bişkîne.</string>
     <string name="hid_choice_title">HID Customizable</string>
     <string name="hid_choice_summary">Di navbera Legacy HID û HID-a Xweserî de biguherînin</string>
     <string name="hid_title">Ziman HID</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Aurretik Segurtasuna</string>
     <string name="settings_sec_desc">Gaitu script-fitxategien enkriptatzea eta pantailaren blokeoa.</string>
     <string name="setting_device">Eraso moduaren ezarpenak</string>
-    <string name="configfs_title">Konfiguratu automatikoki ConfigFS</string>
-    <string name="configfs_summary">HID konfiguratuko du ConfigFS onartzen dituen gailuetan. Baliteke USB ezarpena hautsi.</string>
     <string name="hid_choice_title">HID pertsonalizagarria</string>
     <string name="hid_choice_summary">Aldatu Legacy HID eta pertsonalizagarria den HID artean</string>
     <string name="hid_title">HID hizkuntza</string>

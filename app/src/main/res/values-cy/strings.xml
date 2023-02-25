@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Diogelwch Ymlaen Llaw</string>
     <string name="settings_sec_desc">Galluogi amgryptio ffeil sgript a chlo sgrin.</string>
     <string name="setting_device">Gosodiadau Modd Ymosod</string>
-    <string name="configfs_title">Ffurfweddu Ffurfweddu Auto</string>
-    <string name="configfs_summary">Bydd yn ffurfweddu HID ar ddyfeisiau a gefnogir gan ConfigFS. Gall dorri gosodiad USB.</string>
     <string name="hid_choice_title">HID y gellir ei addasu</string>
     <string name="hid_choice_summary">Newid rhwng Legacy HID a HID Customizable</string>
     <string name="hid_title">HID Iaith</string>

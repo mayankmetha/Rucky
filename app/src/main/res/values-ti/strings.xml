@@ -83,8 +83,6 @@
     <string name="settings_sec_title">ኣድቫንስ ሴኩሪቲ</string>
     <string name="settings_sec_desc">ስክሪፕት ፋይል ኢንክሪፕሽንን ስክሪን ሎክን ኣንቅሕ።</string>
     <string name="setting_device">ቅጥዕታት ሞድ መጥቃዕቲ</string>
-    <string name="configfs_title">ኣውቶማቲክ ConfigFS ምውቃር</string>
-    <string name="configfs_summary">ኣብ ConfigFS ዝድገፉ መሳርሒታት HID ክውቅሮ እዩ። ንናይ USB ቅጥዒ ክሰብር ይኽእል።</string>
     <string name="hid_choice_title">ብዓይነት ዝዳሎ HID</string>
     <string name="hid_choice_summary">ኣብ መንጎ Legacy HIDን Customizable HIDን ምቕያር</string>
     <string name="hid_title">ቋንቋ HID</string>

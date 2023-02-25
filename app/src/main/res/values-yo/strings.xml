@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Advance Aabo</string>
     <string name="settings_sec_desc">Mu fifi ẹnọ kọ nkan faili iwe afọwọkọ ṣiṣẹ ati titiipa iboju.</string>
     <string name="setting_device">Awọn Eto Ipo ikọlu</string>
-    <string name="configfs_title">Tunto Aifọwọyi ConfigFS</string>
-    <string name="configfs_summary">Yoo tunto HID lori awọn ẹrọ atilẹyin ConfigFS. Le fọ eto USB.</string>
     <string name="hid_choice_title">HID asefara</string>
     <string name="hid_choice_summary">Yipada laarin Legacy HID ati asefara HID</string>
     <string name="hid_title">Èdè HID</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Haumarutanga whakamua</string>
     <string name="settings_sec_desc">Whakahohea te whakamunatanga konae tuhinga me te maukati mata.</string>
     <string name="setting_device">Tautuhinga Aratau Whakaeke</string>
-    <string name="configfs_title">Whirihora Aunoa ConfigFS</string>
-    <string name="configfs_summary">Ka whirihora HID i runga i nga taputapu tautoko a ConfigFS. Ka pakaru te tautuhinga USB.</string>
     <string name="hid_choice_title">HID Whakaritea</string>
     <string name="hid_choice_summary">Hurihia i waenga i te HID tuku iho me te HID Whakaritea</string>
     <string name="hid_title">Reo HID</string>

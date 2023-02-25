@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Амнияти пешакӣ</string>
     <string name="settings_sec_desc">Рамзгузории файли скрипт ва қулфи экранро фаъол созед.</string>
     <string name="setting_device">Танзимоти режими ҳамла</string>
-    <string name="configfs_title">Configure худкор ConfigFS</string>
-    <string name="configfs_summary">HID-ро дар дастгоҳҳои дастгирӣшудаи ConfigFS танзим мекунад. Метавонад танзимоти USB-ро вайрон кунад.</string>
     <string name="hid_choice_title">HID-и танзимшаванда</string>
     <string name="hid_choice_summary">Гузариш байни HID-и меросӣ ва HID фармоишӣ</string>
     <string name="hid_title">Забони HID</string>

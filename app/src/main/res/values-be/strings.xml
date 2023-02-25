@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Папярэдняя бяспека</string>
     <string name="settings_sec_desc">Уключыць шыфраванне файла сцэнарыя і блакіроўку экрана.</string>
     <string name="setting_device">Налады рэжыму атакі</string>
-    <string name="configfs_title">Аўтаматычная налада ConfigFS</string>
-    <string name="configfs_summary">Наладзіць HID на прыладах, якія падтрымліваюцца ConfigFS. Можа парушыць настройку USB.</string>
     <string name="hid_choice_title">Наладжвальны HID</string>
     <string name="hid_choice_summary">Пераключэнне паміж Legacy HID і Customizable HID</string>
     <string name="hid_title">Мова HID</string>

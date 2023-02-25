@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Förskott Säkerhet</string>
     <string name="settings_sec_desc">Aktivera kryptering av skriptfiler och skärmlås.</string>
     <string name="setting_device">Inställningar för Attackläge</string>
-    <string name="configfs_title">Automatisk konfigurering av konfigFS</string>
-    <string name="configfs_summary">Kommer att konfigurera HID på konfigFS enheter som stöds. Kan bryta USB-inställning.</string>
     <string name="hid_choice_title">Anpassningsbar HID</string>
     <string name="hid_choice_summary">Växla mellan Legacy HID och Customisable HID</string>
     <string name="hid_title">HID-språk</string>

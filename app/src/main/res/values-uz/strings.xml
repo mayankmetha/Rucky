@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Oldindan xavfsizlik</string>
     <string name="settings_sec_desc">Skript faylini shifrlash va ekran qulfini yoqing.</string>
     <string name="setting_device">Hujum rejimi sozlamalari</string>
-    <string name="configfs_title">ConfigFSni avtomatik sozlash</string>
-    <string name="configfs_summary">ConfigFS qo\'llab-quvvatlanadigan qurilmalarda HIDni sozlaydi. USB sozlamalarini buzishi mumkin.</string>
     <string name="hid_choice_title">Moslashtirilgan HID</string>
     <string name="hid_choice_summary">Eski HID va moslashtirilgan HID oʻrtasida almashing</string>
     <string name="hid_title">HID tili</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Advance Feiligens</string>
     <string name="settings_sec_desc">Skeakelje skripttriemfersifering en skermbeskoattelje yn.</string>
     <string name="setting_device">Ynstellings foar oanfalmodus</string>
-    <string name="configfs_title">Automatysk konfigurearje ConfigFS</string>
-    <string name="configfs_summary">Sil HID konfigurearje op ConfigFS-stipe apparaten. Kin USB-ynstelling brekke.</string>
     <string name="hid_choice_title">Oanpasbere HID</string>
     <string name="hid_choice_summary">Skeakelje tusken Legacy HID en Oanpasbere HID</string>
     <string name="hid_title">HID Taal</string>

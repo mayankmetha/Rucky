@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Алдын ала коопсуздук</string>
     <string name="settings_sec_desc">Скрипт файлын шифрлөө жана экран кулпусун иштетүү.</string>
     <string name="setting_device">Чабуул режиминин жөндөөлөрү</string>
-    <string name="configfs_title">ConfigFSди автоматтык түрдө конфигурациялоо</string>
-    <string name="configfs_summary">ConfigFS колдоого алынган түзмөктөрдө HID конфигурациялайт. USB жөндөөлөрүн бузушу мүмкүн.</string>
     <string name="hid_choice_title">Ыңгайлаштырылган HID</string>
     <string name="hid_choice_summary">Эски HID менен Настройкаланган HIDдин ортосунда которуштуруу</string>
     <string name="hid_title">HID тили</string>

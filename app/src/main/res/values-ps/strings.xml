@@ -83,8 +83,6 @@
     <string name="settings_sec_title">مخکی امنیت</string>
     <string name="settings_sec_desc">د سکریپټ فایل کوډ کول او د سکرین لاک فعال کړئ.</string>
     <string name="setting_device">د برید حالت ترتیبات</string>
-    <string name="configfs_title">د اتوماتیک تنظیم تنظیم کول</string>
-    <string name="configfs_summary">HID به د ConfigFS ملاتړ شوي وسیلو کې تنظیم کړي. کیدای شي د USB ترتیب مات کړي.</string>
     <string name="hid_choice_title">د اصلاح وړ HID</string>
     <string name="hid_choice_summary">د میراث HID او مطلوب HID ترمینځ تیر کړئ</string>
     <string name="hid_title">HID ژبه</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">ਅਗਾਊਂ ਸੁਰੱਖਿਆ</string>
     <string name="settings_sec_desc">ਸਕ੍ਰਿਪਟ ਫਾਈਲ ਐਨਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਸਕ੍ਰੀਨ ਲੌਕ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ।</string>
     <string name="setting_device">ਅਟੈਕ ਮੋਡ ਸੈਟਿੰਗਾਂ</string>
-    <string name="configfs_title">ਆਟੋ ਸੰਰਚਨਾ ConfigFS</string>
-    <string name="configfs_summary">ConfigFS ਸਮਰਥਿਤ ਡਿਵਾਈਸਾਂ \'ਤੇ HID ਨੂੰ ਕੌਂਫਿਗਰ ਕਰੇਗਾ। USB ਸੈਟਿੰਗ ਨੂੰ ਤੋੜ ਸਕਦਾ ਹੈ।</string>
     <string name="hid_choice_title">ਅਨੁਕੂਲਿਤ HID</string>
     <string name="hid_choice_summary">ਪੁਰਾਤਨ HID ਅਤੇ ਅਨੁਕੂਲਿਤ HID ਵਿਚਕਾਰ ਸਵਿਚ ਕਰੋ</string>
     <string name="hid_title">HID ਭਾਸ਼ਾ</string>

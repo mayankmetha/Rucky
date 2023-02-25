@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Nageenya Dursaa</string>
     <string name="settings_sec_desc">Icciitii faayilii iskiriiptii fi qulfii iskiriinii dandeessisi.</string>
     <string name="setting_device">Sajoo Haala Haleellaa</string>
-    <string name="configfs_title">Ofiin Qindeessi ConfigFS</string>
-    <string name="configfs_summary">Meeshaalee ConfigFS deeggaraman irratti HID ni qindeessa. Sajoo USB cabsuu danda\'a.</string>
     <string name="hid_choice_title">HID kan haala barbaadamuun jijjiiramuu danda\'u</string>
     <string name="hid_choice_summary">Legacy HID fi Customizable HID gidduutti jijjiiri</string>
     <string name="hid_title">Afaan HID</string>

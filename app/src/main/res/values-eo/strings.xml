@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Antaŭa Sekureco</string>
     <string name="settings_sec_desc">Ebligu ĉifradon de skriptodosieroj kaj ekranŝlosadon.</string>
     <string name="setting_device">Agordoj de Ataka Reĝimo</string>
-    <string name="configfs_title">Aŭtomate Agordu ConfigFS</string>
-    <string name="configfs_summary">Agordos HID sur ConfigFS subtenataj aparatoj. Povas rompi USB-agordon.</string>
     <string name="hid_choice_title">Agordigebla HID</string>
     <string name="hid_choice_summary">Ŝanĝu inter Legacy HID kaj Agordigebla HID</string>
     <string name="hid_title">HID Lingvo</string>

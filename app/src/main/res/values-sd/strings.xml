@@ -83,8 +83,6 @@
     <string name="settings_sec_title">اڳواٽ سيڪيورٽي</string>
     <string name="settings_sec_desc">اسڪرپٽ فائل انڪرپشن ۽ اسڪرين لاڪ کي فعال ڪريو.</string>
     <string name="setting_device">حملو موڊ سيٽنگون</string>
-    <string name="configfs_title">خودڪار ٺاھ جوڙ ConfigFS</string>
-    <string name="configfs_summary">ConfigFS سپورٽ ڊوائيسز تي HID ترتيب ڏيندو. USB سيٽنگ کي ٽوڙي سگھي ٿو.</string>
     <string name="hid_choice_title">حسب ضرورت HID</string>
     <string name="hid_choice_summary">تبديل ڪريو Legacy HID ۽ حسب ضرورت HID جي وچ ۾</string>
     <string name="hid_title">HID ٻولي</string>

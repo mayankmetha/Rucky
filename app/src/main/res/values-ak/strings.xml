@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Ahobammɔ a Edi Kan</string>
     <string name="settings_sec_desc">Ma script fael encryption ne screen lock no nyɛ adwuma.</string>
     <string name="setting_device">Attack Mode Nsiesiei ahorow</string>
-    <string name="configfs_title">Auto Nhyehyɛe ConfigFS</string>
-    <string name="configfs_summary">Ɛbɛhyehyɛ HID wɔ ConfigFS mfiri a wɔboa no so. Ebia abubu USB nhyehyɛe no.</string>
     <string name="hid_choice_title">HID a wotumi sesa no</string>
     <string name="hid_choice_summary">Sesa Legacy HID ne Customizable HID ntam</string>
     <string name="hid_title">HID Kasa a Wɔka</string>

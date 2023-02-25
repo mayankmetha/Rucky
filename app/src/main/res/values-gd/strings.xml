@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Tèarainteachd ro-làimh</string>
     <string name="settings_sec_desc">Dèan comas air crioptachadh faidhle sgriobt agus glasadh sgrion.</string>
     <string name="setting_device">Suidhichidhean modh ionnsaigh</string>
-    <string name="configfs_title">Dèan rèiteachadh fèin-ghluasadach air ConfigFS</string>
-    <string name="configfs_summary">Cumaidh e HID air innealan le taic ConfigFS. Dh’ fhaodadh suidheachadh USB a bhriseadh.</string>
     <string name="hid_choice_title">HID gnàthaichte</string>
     <string name="hid_choice_summary">Atharraich eadar Legacy HID agus Customizable HID</string>
     <string name="hid_title">Cànan HID</string>

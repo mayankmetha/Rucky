@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Dedienɔnɔ Do Ŋgɔ</string>
     <string name="settings_sec_desc">Na script file encryption kple screen lock nawɔ dɔ.</string>
     <string name="setting_device">Amedzidzedze ƒe Nɔnɔme ƒe Ðoɖowo</string>
-    <string name="configfs_title">Auto Ðoɖowɔwɔ ɖe ConfigFS ŋu</string>
-    <string name="configfs_summary">Aɖo HID ɖe mɔ̃ siwo dzi ConfigFS do alɔe dzi. Ate ŋu agbã USB ƒe ɖoɖoa.</string>
     <string name="hid_choice_title">HID si woate ŋu atrɔ asi le</string>
     <string name="hid_choice_summary">Trɔ ɖe Legacy HID kple Customizable HID dome</string>
     <string name="hid_title">HID Gbegbɔgblɔ</string>

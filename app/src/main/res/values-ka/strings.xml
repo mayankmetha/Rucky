@@ -83,8 +83,6 @@
     <string name="settings_sec_title">წინასწარი უსაფრთხოება</string>
     <string name="settings_sec_desc">ჩართეთ სკრიპტის ფაილის დაშიფვრა და ეკრანის დაბლოკვა.</string>
     <string name="setting_device">შეტევის რეჟიმის პარამეტრები</string>
-    <string name="configfs_title">ავტომატური კონფიგურაცია ConfigFS</string>
-    <string name="configfs_summary">დაკონფიგურირებს HID-ს ConfigFS მხარდაჭერილ მოწყობილობებზე. შეიძლება დაირღვეს USB პარამეტრი.</string>
     <string name="hid_choice_title">დააკონფიგურიროთ HID</string>
     <string name="hid_choice_summary">გადართეთ Legacy HID-სა და Customizable HID-ს შორის</string>
     <string name="hid_title">დამალული ენა</string>

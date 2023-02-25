@@ -83,8 +83,6 @@
     <string name="settings_sec_title">مستوى السرية المتقدم</string>
     <string name="settings_sec_desc">اتاحة تشفير ملف النص المنسق واقفال الشاشة.</string>
     <string name="setting_device">إعدادات وضع الهجوم</string>
-    <string name="configfs_title">تكوين التكوين التلقائي</string>
-    <string name="configfs_summary">سيتم تكوين عالي الكثافة على الأجهزة المدعومة من الإعدادات. قد يعطل إعداد USB.</string>
     <string name="hid_choice_title">HID قابل للتعديل</string>
     <string name="hid_choice_summary">التبديل بين HD Legacy HID و Customable HID</string>
     <string name="hid_title">HID اللغة</string>

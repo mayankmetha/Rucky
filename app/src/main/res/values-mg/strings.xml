@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Advance Security</string>
     <string name="settings_sec_desc">Alefaso ny fanafenana rakitra script sy ny hidin\'ny efijery.</string>
     <string name="setting_device">Fanafihana Mode Fanafihana</string>
-    <string name="configfs_title">Auto Configure ConfigFS</string>
-    <string name="configfs_summary">Hanamboatra HID amin\'ny fitaovana tohanan\'ny ConfigFS. Mety handrava ny fikandrana USB.</string>
     <string name="hid_choice_title">HID azo zahana</string>
     <string name="hid_choice_summary">Mifindra eo amin\'ny Legacy HID sy Customizable HID</string>
     <string name="hid_title">HID Language</string>

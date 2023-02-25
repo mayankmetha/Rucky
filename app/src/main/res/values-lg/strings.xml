@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Obukuumi obw\'omu maaso</string>
     <string name="settings_sec_desc">Ssobozesa okusiba fayiro ya script n\'okusiba screen.</string>
     <string name="setting_device">Enteekateeka za Mode y’Okulumba</string>
-    <string name="configfs_title">Auto Okutegeka ConfigFS</string>
-    <string name="configfs_summary">Ajja kutegeka HID ku byuma ebiwagirwa ConfigFS. Ayinza okumenya ensengeka ya USB.</string>
     <string name="hid_choice_title">HID esobola okukyusibwakyusibwa</string>
     <string name="hid_choice_summary">Kyusa wakati wa Legacy HID ne Customizable HID</string>
     <string name="hid_title">Olulimi lwa HID</string>

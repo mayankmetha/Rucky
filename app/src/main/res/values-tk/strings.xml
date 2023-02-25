@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Howpsuzlyk</string>
     <string name="settings_sec_desc">Skript faýl şifrlemesini we ekran gulpuny açyň.</string>
     <string name="setting_device">Hüjüm tertibi sazlamalary</string>
-    <string name="configfs_title">ConfigFS-i awtomatiki düzüň</string>
-    <string name="configfs_summary">ConfigFS goldaýan enjamlarda HID-i düzer. USB sazlamasyny bozup biler.</string>
     <string name="hid_choice_title">Düzülip bilinýän HID</string>
     <string name="hid_choice_summary">“Legacy HID” we “Customizable HID” arasynda geçiň</string>
     <string name="hid_title">Gizlin dil</string>

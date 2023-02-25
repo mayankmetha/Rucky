@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Seguridade Avanzada</string>
     <string name="settings_sec_desc">Activa o cifrado de ficheiros de script e o bloqueo da pantalla.</string>
     <string name="setting_device">Configuración do modo de ataque</string>
-    <string name="configfs_title">Configuración automática de ConfigFS</string>
-    <string name="configfs_summary">Configurará HID en dispositivos compatibles con ConfigFS. Pode romper a configuración USB.</string>
     <string name="hid_choice_title">HID personalizable</string>
     <string name="hid_choice_summary">Cambia entre Legacy HID e HID personalizable</string>
     <string name="hid_title">Linguaxe HID</string>

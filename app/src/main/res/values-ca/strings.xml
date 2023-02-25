@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Seguretat anticipada</string>
     <string name="settings_sec_desc">Activa el xifratge de fitxers d\'script i el bloqueig de pantalla.</string>
     <string name="setting_device">Configuració del mode d\'atac</string>
-    <string name="configfs_title">Configuració automàtica de ConfigFS</string>
-    <string name="configfs_summary">Configurarà HID als dispositius compatibles amb ConfigFS. Pot trencar la configuració USB.</string>
     <string name="hid_choice_title">HID personalitzable</string>
     <string name="hid_choice_summary">Canvia entre HID heretat i HID personalitzable</string>
     <string name="hid_title">Llenguatge HID</string>

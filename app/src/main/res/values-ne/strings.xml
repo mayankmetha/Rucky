@@ -83,8 +83,6 @@
     <string name="settings_sec_title">अग्रिम सुरक्षा</string>
     <string name="settings_sec_desc">स्क्रिप्ट फाइल इन्क्रिप्सन र स्क्रिन लक सक्षम गर्नुहोस्।</string>
     <string name="setting_device">आक्रमण मोड सेटिङहरू</string>
-    <string name="configfs_title">स्वत: कन्फिगर कन्फिगर एफएस</string>
-    <string name="configfs_summary">कन्फिगएफएस समर्थित यन्त्रहरूमा HID कन्फिगर गर्नेछ। USB सेटिङ तोड्न सक्छ।</string>
     <string name="hid_choice_title">अनुकूलन HID</string>
     <string name="hid_choice_summary">लिगेसी HID र अनुकूलन योग्य HID बीच स्विच गर्नुहोस्</string>
     <string name="hid_title">HID भाषा</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">అద్వైత భద్రత</string>
     <string name="settings_sec_desc">స్క్రిప్ట్ ఫైల్ ఎన్క్రిప్షన్ మరియు స్క్రీన్ లాక్ ను చేర్చు.</string>
     <string name="setting_device">అటాక్ మోడ్ అమరిక</string>
-    <string name="configfs_title">ఆటోను ఆకృతీకరించుముName</string>
-    <string name="configfs_summary">ConfigFS సమర్థిత పరికరాలపై HID కన్పిస్తుంది. USB అమరిక విచ్ఛిన్నం.</string>
     <string name="hid_choice_title">కస్టమబుల్ HID</string>
     <string name="hid_choice_summary">లెజెసీ HID మరియు కస్టమబుల్ HID ల మధ్య మారుతుంది</string>
     <string name="hid_title">HID భాష</string>

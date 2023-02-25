@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Sekirite avanse</string>
     <string name="settings_sec_desc">Pèmèt chifreman fichye script ak fèmen ekran an.</string>
     <string name="setting_device">Anviwònman mòd atak</string>
-    <string name="configfs_title">Auto Configure ConfigFS</string>
-    <string name="configfs_summary">Pral konfigirasyon HID sou aparèy ki sipòte ConfigFS. Ka kraze anviwònman USB.</string>
     <string name="hid_choice_title">HID customizable</string>
     <string name="hid_choice_summary">Chanje ant Legacy HID ak Customizable HID</string>
     <string name="hid_title">Lang HID</string>

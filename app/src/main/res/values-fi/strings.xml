@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Ennakkosuojaus</string>
     <string name="settings_sec_desc">Ota komentotiedoston salaus ja näytön lukitus käyttöön.</string>
     <string name="setting_device">Hyökkäystilan Asetukset</string>
-    <string name="configfs_title">Määritä Asetukset Automaattisesti</string>
-    <string name="configfs_summary">Määrittää HID ConfigFS tuetut laitteet. Voi rikkoa USB-asetus.</string>
     <string name="hid_choice_title">Mukautettu HID</string>
     <string name="hid_choice_summary">Vaihda välillä Legacy HID ja Customisable HID</string>
     <string name="hid_title">HID-kieli</string>

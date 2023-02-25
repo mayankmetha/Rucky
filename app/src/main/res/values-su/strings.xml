@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Kaamanan sateuacanna</string>
     <string name="settings_sec_desc">Aktipkeun énkripsi file skrip sareng konci layar.</string>
     <string name="setting_device">Setélan Mode Serangan</string>
-    <string name="configfs_title">Otomatis Konpigurasikeun ConfigFS</string>
-    <string name="configfs_summary">Bakal ngonpigurasikeun HID dina alat anu dirojong ku ConfigFS. Bisa megatkeun setélan USB.</string>
     <string name="hid_choice_title">HID customizable</string>
     <string name="hid_choice_summary">Pindah antara Legacy HID sareng Customizable HID</string>
     <string name="hid_title">Basa HID</string>

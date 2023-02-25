@@ -83,8 +83,6 @@
     <string name="settings_sec_title">ایڈوانس سیکورٹی</string>
     <string name="settings_sec_desc">Enable سکرپٹ فائل خفیہ کاری اور اسکرین لاک</string>
     <string name="setting_device">حملہ موڈ سیٹنگز</string>
-    <string name="configfs_title">آٹو کانفگر ConfigFS</string>
-    <string name="configfs_summary">کونکہ FS کی حمایت کرنے والے آلات کو ترتیب سے ترتیب دیں گے. مئی کو یو ایس بی ترتیب دے</string>
     <string name="hid_choice_title">کسٹمر کے بارے میں</string>
     <string name="hid_choice_summary">ورثہ ہیڈ اور کسٹمر کے درمیان سوئچ</string>
     <string name="hid_title">زمرہ: زبان</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">B. 预先安全</string>
     <string name="settings_sec_desc">启用脚本文件加密和屏幕锁定。</string>
     <string name="setting_device">攻击模式设置</string>
-    <string name="configfs_title">自动配置配置</string>
-    <string name="configfs_summary">将在 ConfigFS 支持的设备上配置HID。可能会断开 USB 设置。</string>
     <string name="hid_choice_title">可定制 HID</string>
     <string name="hid_choice_summary">旧 HID 与可定制 HID 之间的切换</string>
     <string name="hid_title">HID 语言</string>

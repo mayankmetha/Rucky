@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Sigurtà bil-quddiem</string>
     <string name="settings_sec_desc">Ippermetti l-kriptaġġ tal-fajl tal-iskript u l-illokkjar tal-iskrin.</string>
     <string name="setting_device">Settings tal-Modalità tal-Attakk</string>
-    <string name="configfs_title">Konfigurazzjoni Awtomatika tal-Konfigurazzjoni</string>
-    <string name="configfs_summary">Se tikkonfigura HID fuq apparati appoġġjati minn ConfigFS. Jista \'jkisser l-issettjar tal-USB.</string>
     <string name="hid_choice_title">HID customizable</string>
     <string name="hid_choice_summary">Aqleb bejn Legacy HID u HID Customizable</string>
     <string name="hid_title">Lingwa HID</string>

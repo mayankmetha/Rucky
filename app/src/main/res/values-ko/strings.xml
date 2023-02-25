@@ -83,8 +83,6 @@
     <string name="settings_sec_title">어드밴스 보안</string>
     <string name="settings_sec_desc">스크립트 파일 암호화 및 화면 잠금 사용</string>
     <string name="setting_device">공격 모드 설정</string>
-    <string name="configfs_title">ConfigFS 자동 구성하기</string>
-    <string name="configfs_summary">ConfigFS 지원 장치에 HID를 설정할 것이다. USB 설정을 해제한다.</string>
     <string name="hid_choice_title">커스터마이즈 가능한 HID</string>
     <string name="hid_choice_summary">레거시 HID와 커스터마이즈 가능한 HID간 전환</string>
     <string name="hid_title">HID 언어</string>

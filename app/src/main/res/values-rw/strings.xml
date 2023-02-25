@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Umutekano</string>
     <string name="settings_sec_desc">Gushoboza inyandiko ya dosiye ibanga no gufunga ecran.</string>
     <string name="setting_device">Igitero Mode Igenamiterere</string>
-    <string name="configfs_title">Imodoka Kugena Imiterere</string>
-    <string name="configfs_summary">Uzagena HID ku bikoresho bishyigikiwe na ConfigFS. Urashobora guhagarika igenamiterere rya USB.</string>
     <string name="hid_choice_title">Guhisha</string>
     <string name="hid_choice_summary">Hindura hagati yumurage HID na Customizable HID</string>
     <string name="hid_title">HISHA Ururimi</string>

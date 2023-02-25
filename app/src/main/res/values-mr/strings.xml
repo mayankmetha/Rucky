@@ -83,8 +83,6 @@
     <string name="settings_sec_title">आगाऊ सुरक्षा</string>
     <string name="settings_sec_desc">स्क्रिप्ट फाइल एन्क्रिप्शन आणि स्क्रीन लॉक सक्षम करा.</string>
     <string name="setting_device">हल्ला मोड सेटिंग्ज</string>
-    <string name="configfs_title">स्वयं कॉन्फिगर कॉन्फिगर</string>
-    <string name="configfs_summary">ConfigFS समर्थित उपकरणांवर HID कॉन्फिगर करेल. USB सेटिंग खंडित होऊ शकते.</string>
     <string name="hid_choice_title">सानुकूलित HID</string>
     <string name="hid_choice_summary">लेगसी HID आणि सानुकूलित HID दरम्यान स्विच करा</string>
     <string name="hid_title">HID भाषा</string>

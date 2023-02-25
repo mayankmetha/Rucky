@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Advance Security</string>
     <string name="settings_sec_desc">Միացնել սցենարի ֆայլի կոդավորումը և էկրանի կողպումը:</string>
     <string name="setting_device">Հարձակման ռեժիմի կարգավորումներ</string>
-    <string name="configfs_title">Ավտոմատ կարգավորել ConfigFS-ը</string>
-    <string name="configfs_summary">HID-ը կկազմաձևի ConfigFS աջակցվող սարքերում: Կարող է կոտրել USB կարգավորումը:</string>
     <string name="hid_choice_title">Կարգավորելի HID</string>
     <string name="hid_choice_summary">Անցում Legacy HID-ի և Customizable HID-ի միջև</string>
     <string name="hid_title">HID Լեզուն</string>

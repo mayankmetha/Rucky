@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Pokročilé zabezpečenie</string>
     <string name="settings_sec_desc">Povoliť šifrovanie súborov skriptu a uzamknutie obrazovky.</string>
     <string name="setting_device">Nastavenie režimu útoku</string>
-    <string name="configfs_title">Automatická konfigurácia ConfigFS</string>
-    <string name="configfs_summary">Nakonfiguruje HID na podporovaných zariadeniach ConfigFS. Môže pokaziť nastavenie USB.</string>
     <string name="hid_choice_title">Prispôsobiteľné HID</string>
     <string name="hid_choice_summary">Prepnúť medzi Legacy HID a Customisable HID</string>
     <string name="hid_title">Jazyk HID</string>

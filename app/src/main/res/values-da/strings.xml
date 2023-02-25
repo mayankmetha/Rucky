@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Forhåndssikkerhed</string>
     <string name="settings_sec_desc">Aktivér scriptfilkryptering og skærmlås i scriptfiler.</string>
     <string name="setting_device">Indstillinger For Angrebstilstand</string>
-    <string name="configfs_title">Automatisk Konfigurering Af Konfigurationsfs</string>
-    <string name="configfs_summary">Vil konfigurere HID på ConfigFS understøttede enheder. Kan ødelægge USB-indstillingen.</string>
     <string name="hid_choice_title">Tilpasset HID</string>
     <string name="hid_choice_summary">Skift mellem Legacy HID og Customisable HID</string>
     <string name="hid_title">HID-sprog</string>

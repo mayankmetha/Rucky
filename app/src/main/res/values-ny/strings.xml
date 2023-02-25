@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Advance Security</string>
     <string name="settings_sec_desc">Yambitsani kubisa kwa fayilo ya script ndi loko ya skrini.</string>
     <string name="setting_device">Zokonda pa Attack Mode</string>
-    <string name="configfs_title">Konzani Auto ConfigFS</string>
-    <string name="configfs_summary">Ikonza HID pazida zothandizidwa ndi ConfigFS. Ikhoza kusokoneza makonzedwe a USB.</string>
     <string name="hid_choice_title">Customizable HID</string>
     <string name="hid_choice_summary">Sinthani pakati pa Legacy HID ndi Customizable HID</string>
     <string name="hid_title">Chinenero chobisika</string>

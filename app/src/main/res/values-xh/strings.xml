@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Ukhuseleko oluPhambili</string>
     <string name="settings_sec_desc">Yenza uguqulelo oluntsonkothileyo lwefayile yeskripthi kunye nokutshixa isikrini.</string>
     <string name="setting_device">Imimiselo yeMowudi yoHlaselo</string>
-    <string name="configfs_title">Qwalasela i-ConfigFS ngokuzenzekela</string>
-    <string name="configfs_summary">Iza kuqwalasela i-HID kwizixhobo ezixhaswayo zeConfigFS. Inokwaphula useto lwe-USB.</string>
     <string name="hid_choice_title">Customizable HID</string>
     <string name="hid_choice_summary">Tshintsha phakathi kweLifa le-HID kunye ne-HID enokwenziwa ngokwezifiso</string>
     <string name="hid_title">Ulwimi olufihlakeleyo</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Fyrirfram öryggi</string>
     <string name="settings_sec_desc">Virkjaðu dulkóðun skriftuskráa og skjálás.</string>
     <string name="setting_device">Stillingar árásarhams</string>
-    <string name="configfs_title">Sjálfvirk stilla ConfigFS</string>
-    <string name="configfs_summary">Mun stilla HID á ConfigFS studdum tækjum. Getur rofið USB stillingu.</string>
     <string name="hid_choice_title">Sérhannaðar HID</string>
     <string name="hid_choice_summary">Skiptu á milli Legacy HID og Customizable HID</string>
     <string name="hid_title">HID tungumál</string>

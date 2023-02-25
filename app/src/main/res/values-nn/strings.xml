@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Sikkerhet avanser</string>
     <string name="settings_sec_desc">Aktiver kryptering av skriptfiler og skjermlås.</string>
     <string name="setting_device">Innstillinger for angrepsmodus</string>
-    <string name="configfs_title">Automatisk konfigurering av konfigurasjon</string>
-    <string name="configfs_summary">Vil konfigurere helse på ConfigFS støttede enheter. Kan knuse USB-innstillingen.</string>
     <string name="hid_choice_title">Tilpassbar HID</string>
     <string name="hid_choice_summary">Bytt mellom tidligere HID og Tilpassbar HID</string>
     <string name="hid_title">HID språk</string>

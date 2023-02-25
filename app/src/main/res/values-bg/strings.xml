@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Расширенная безопасность</string>
     <string name="settings_sec_desc">Включить шифрование файлов скрипта и блокировку экрана.</string>
     <string name="setting_device">Настройки на режим на атака</string>
-    <string name="configfs_title">Автоматично конфигуриране на configFS</string>
-    <string name="configfs_summary">Ще конфигурира HID на устройства, поддържани от ConfigFS. Може да счупи USB настройката.</string>
     <string name="hid_choice_title">Персонализируем HID</string>
     <string name="hid_choice_summary">Превключване между Legacy HID и Customisable HID</string>
     <string name="hid_title">HID език</string>

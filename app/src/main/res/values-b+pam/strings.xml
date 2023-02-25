@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Paunang Seguridad</string>
     <string name="settings_sec_desc">Paganahin ang pag-encrypt ng script file at lock ng screen.</string>
     <string name="setting_device">Mga Setting ng Attack Mode</string>
-    <string name="configfs_title">Auto Configure ConfigFS</string>
-    <string name="configfs_summary">Iko-configure ang HID sa mga device na sinusuportahan ng ConfigFS. Maaaring masira ang setting ng USB.</string>
     <string name="hid_choice_title">Nako-customize na HID</string>
     <string name="hid_choice_summary">Lumipat sa pagitan ng Legacy HID at Nako-customize na HID</string>
     <string name="hid_title">HID Language</string>

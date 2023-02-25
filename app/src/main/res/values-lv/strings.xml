@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Apsardze</string>
     <string name="settings_sec_desc">Ieslēgt skriptu failu šifrēšanu un ekrāna bloķēšanu.</string>
     <string name="setting_device">Uzbrukuma režīma iestatījumi</string>
-    <string name="configfs_title">Automātiski konfigurēt ConfigFS</string>
-    <string name="configfs_summary">Konfigurēs HID uz ConfigFS atbalstītajām ierīcēm. Var salauzt USB iestatījumu.</string>
     <string name="hid_choice_title">Pielāgojams HID</string>
     <string name="hid_choice_summary">Pārslēgties starp Legacy HID un Customizable HID</string>
     <string name="hid_title">HID valoda</string>

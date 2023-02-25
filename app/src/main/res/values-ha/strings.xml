@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Tsaro na gaba</string>
     <string name="settings_sec_desc">Kunna ɓoyayyen fayil ɗin rubutun da kulle allo.</string>
     <string name="setting_device">Saitunan Yanayin Attack</string>
-    <string name="configfs_title">Saita ta atomatik ConfigFS</string>
-    <string name="configfs_summary">Za a saita HID akan na\'urori masu goyan bayan ConfigFS. Zai iya karya saitin USB.</string>
     <string name="hid_choice_title">HID mai iya canzawa</string>
     <string name="hid_choice_summary">Canja tsakanin Legacy HID da HID na Musamman</string>
     <string name="hid_title">Harshen HID</string>

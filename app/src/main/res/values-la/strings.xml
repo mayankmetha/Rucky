@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Antecessum Securitatis</string>
     <string name="settings_sec_desc">Admitte lima encryption et scrinium scriptorum tegumentum.</string>
     <string name="setting_device">Impetum Modus Occasus</string>
-    <string name="configfs_title">Auto Configure ConfigFS</string>
-    <string name="configfs_summary">HID configurabit in configFS machinas fulta. Ut conteram USB occasum.</string>
     <string name="hid_choice_title">Duis HID</string>
     <string name="hid_choice_summary">Commutandum inter Legatum HID et Morbi HID</string>
     <string name="hid_title">HID Language</string>

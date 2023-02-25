@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Előzetes biztonság</string>
     <string name="settings_sec_desc">Engedélyezze a parancsfájl titkosítását és a képernyőzárolást.</string>
     <string name="setting_device">Támadási mód beállításai</string>
-    <string name="configfs_title">ConfigFS automatikus konfigurálása</string>
-    <string name="configfs_summary">HID beállítása a ConfigFS támogatott eszközökön. Talán feltöri az USB beállítást.</string>
     <string name="hid_choice_title">Személyre szabható HID</string>
     <string name="hid_choice_summary">Váltás Legacy HID és Customisable HID között</string>
     <string name="hid_title">HID nyelv</string>

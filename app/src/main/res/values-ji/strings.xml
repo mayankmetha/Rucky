@@ -83,8 +83,6 @@
     <string name="settings_sec_title">שטייַגן זיכערהייַט</string>
     <string name="settings_sec_desc">געבן סקריפּט טעקע ענקריפּשאַן און פאַרשטעלן שלאָס.</string>
     <string name="setting_device">אַטאַק מאָדע סעטטינגס</string>
-    <string name="configfs_title">אַוטאָ קאַנפיגיער קאָנפיגפס</string>
-    <string name="configfs_summary">וועט קאַנפיגיער HID אויף ConfigFS שטיצט דעוויסעס. קען ברעכן די וסב באַשטעטיקן.</string>
     <string name="hid_choice_title">קוסטאָמיזאַבלע HID</string>
     <string name="hid_choice_summary">באַשטימען צווישן Legacy HID און Customizable HID</string>
     <string name="hid_title">HID שפּראַך</string>

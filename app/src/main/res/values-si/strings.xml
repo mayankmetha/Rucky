@@ -83,8 +83,6 @@
     <string name="settings_sec_title">අත්තිකාරම් ආරක්ෂාව</string>
     <string name="settings_sec_desc">ස්ක්‍රිප්ට් ගොනු සංකේතනය සහ තිර අගුල සබල කරන්න.</string>
     <string name="setting_device">ප්රහාරක මාදිලියේ සැකසුම්</string>
-    <string name="configfs_title">configFS ස්වයංක්‍රීයව වින්‍යාස කරන්න</string>
-    <string name="configfs_summary">ConfigFS සහාය දක්වන උපාංග මත HID වින්‍යාස කරනු ඇත. USB සැකසුම බිඳ දැමිය හැක.</string>
     <string name="hid_choice_title">අභිරුචිකරණය කළ හැකි HID</string>
     <string name="hid_choice_summary">Legacy HID සහ Customisable HID අතර මාරු වන්න</string>
     <string name="hid_title">HID භාෂාව</string>

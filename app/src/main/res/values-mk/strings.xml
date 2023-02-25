@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Напредна безбедност</string>
     <string name="settings_sec_desc">Овозможете шифрирање на датотеки со скрипти и заклучување на екранот.</string>
     <string name="setting_device">Поставки за режим на напад</string>
-    <string name="configfs_title">Автоматско конфигурирање на ConfigFS</string>
-    <string name="configfs_summary">Ќе го конфигурира HID на уредите поддржани од ConfigFS. Може да ја прекине поставката за USB.</string>
     <string name="hid_choice_title">Прилагодлив HID</string>
     <string name="hid_choice_summary">Префрлете се помеѓу Legacy HID и Customizable HID</string>
     <string name="hid_title">HID Јазик</string>

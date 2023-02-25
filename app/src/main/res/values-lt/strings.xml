@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Išankstinis užstatas</string>
     <string name="settings_sec_desc">Įgalinti scenarijų failų šifravimas ir ekrano užraktas.</string>
     <string name="setting_device">Atakos režimo nustatymai</string>
-    <string name="configfs_title">&amp; Automatiškai Konfigūruoti</string>
-    <string name="configfs_summary">Sukonfigūruos HID apie FSS palaikų įrenginius. Gali nutraukti USB nustatymą.</string>
     <string name="hid_choice_title">Pritaikomas HID</string>
     <string name="hid_choice_summary">Persijungti tarp Legacy HID ir Custoropriese HID</string>
     <string name="hid_title">HID kalba</string>

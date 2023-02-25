@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Vnaprejšnje zavarovanje</string>
     <string name="settings_sec_desc">Omogoči šifriranje datoteke skripta in zaklepanje zaslona.</string>
     <string name="setting_device">Nastavitve načina napada</string>
-    <string name="configfs_title">Samodejna konfiguracija ConfigFS</string>
-    <string name="configfs_summary">Konfiguriranje HID-ja na podprtih napravah ConfigFS. Lahko prelomi USB nastavitev.</string>
     <string name="hid_choice_title">HID, ki ga je mogoče prilagoditi</string>
     <string name="hid_choice_summary">Preklopi med Legacy HID in prilagodljivo HID</string>
     <string name="hid_title">Jezik HID</string>

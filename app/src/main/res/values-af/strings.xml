@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Vooraf sekuriteit</string>
     <string name="settings_sec_desc">Aktiveer skriplêer-enkripsie en skermslot.</string>
     <string name="setting_device">Aanvalmodus-instellings</string>
-    <string name="configfs_title">Outo-konfigureer ConfigFS</string>
-    <string name="configfs_summary">Sal HID konfigureer op ConfigFS-ondersteunde toestelle. Kan USB-instelling breek.</string>
     <string name="hid_choice_title">Aanpasbare HID</string>
     <string name="hid_choice_summary">Skakel tussen Legacy HID en Aanpasbare HID</string>
     <string name="hid_title">HID Taal</string>

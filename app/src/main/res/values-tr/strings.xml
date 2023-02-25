@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Gelişmiş Güvenlik</string>
     <string name="settings_sec_desc">Komut dosyası şifreleme ve ekran kilidini etkinleştirin.</string>
     <string name="setting_device">Saldırı Modu Ayarları</string>
-    <string name="configfs_title">ConfigFS \' yi Otomatik Yapılandır</string>
-    <string name="configfs_summary">Desteklenen ConfigFS aygıtlarında HID yapılandırılacak. USB ayarını bozabilir.</string>
     <string name="hid_choice_title">Özelleştirilebilir HID</string>
     <string name="hid_choice_summary">Eski HID ve Customisable HID arasında geçiş</string>
     <string name="hid_title">HID Dili</string>

@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Seguridad Anticipada nisqa</string>
     <string name="settings_sec_desc">Script willañiqi chirmayta chaymanta pantalla wichq\'ayta atichiy.</string>
     <string name="setting_device">Ajustes de Modo de Ataque</string>
-    <string name="configfs_title">Kikinmanta ConfigFS nisqa ruway</string>
-    <string name="configfs_summary">HID ConfigFS yanapasqa dispositivokunapi ruwanqa. USB churayta pakinman.</string>
     <string name="hid_choice_title">HID personalizable</string>
     <string name="hid_choice_summary">Cambiar entre HID Legado y HID Personalizable</string>
     <string name="hid_title">HID Simi</string>

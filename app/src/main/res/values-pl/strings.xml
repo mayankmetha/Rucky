@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Zabezpieczenie zaliczkowe</string>
     <string name="settings_sec_desc">Włącz szyfrowanie plików skryptu i blokadę ekranu.</string>
     <string name="setting_device">Ustawienia trybu ataku</string>
-    <string name="configfs_title">Automatyczna konfiguracja konfiguracji</string>
-    <string name="configfs_summary">Skonfiguruje HID na obsługiwanych urządzeniach konfiguracyjnych. Może uszkodzić ustawienie USB.</string>
     <string name="hid_choice_title">Identyfikator HID użytkownika</string>
     <string name="hid_choice_summary">Przełączanie między wcześniejszym identyfikatorem HID i niestandardowym identyfikatorem HID</string>
     <string name="hid_title">Język HID</string>

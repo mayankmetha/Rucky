@@ -83,8 +83,6 @@
     <string name="settings_sec_title">பாதுகாப்பு</string>
     <string name="settings_sec_desc">ஸ்கிரிப்ட் கோப்பு மறையாக்கம் மற்றும் திரை பூட்டை செயல்படுத்து.</string>
     <string name="setting_device">அட்டை முறை அமைப்புகள்</string>
-    <string name="configfs_title">தானாகவே வடிவமைப்பு FS</string>
-    <string name="configfs_summary">ConfigFS ஆதரவு கருவிகளில் HID வடிவமைக்கவும். மே யுஎஸ்பி அமைக்கிறது.</string>
     <string name="hid_choice_title">தனிப்பயன் HID</string>
     <string name="hid_choice_summary">லெகசி HID மற்றும் தனிப்பயன் HID இடையே மாற்று</string>
     <string name="hid_title">HID மொழி</string>

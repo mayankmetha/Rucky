@@ -83,8 +83,6 @@
     <string name="settings_sec_title">Sigurimi i avancuar</string>
     <string name="settings_sec_desc">Aktivizo enkriptimin e skedarit të skriptit dhe kyçjen e ekranit.</string>
     <string name="setting_device">Cilësimet e modalitetit të sulmit</string>
-    <string name="configfs_title">Konfiguro automatikisht ConfigFS</string>
-    <string name="configfs_summary">Do të konfigurojë HID në pajisjet e mbështetura nga ConfigFS. Mund të prishë cilësimin USB.</string>
     <string name="hid_choice_title">HID i personalizueshëm</string>
     <string name="hid_choice_summary">Kalo midis HID të trashëguar dhe HID të personalizueshëm</string>
     <string name="hid_title">Gjuha e fshehtë</string>
