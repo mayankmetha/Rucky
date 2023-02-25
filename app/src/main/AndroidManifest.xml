@@ -27,6 +27,7 @@
         tools:ignore="AllowBackup"
         android:forceDarkAllowed="false"
         android:testOnly="true"
+        android:allowBackup="true"
         tools:targetApi="q">
 
         <service
