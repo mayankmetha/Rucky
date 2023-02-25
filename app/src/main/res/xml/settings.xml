@@ -49,13 +49,6 @@
         app:title="@string/setting_device">
 
         <SwitchPreference
-            app:key="configfs"
-            app:defaultValue="false"
-            app:icon="@drawable/ic_config_fs"
-            app:title="@string/configfs_title"
-            app:summary="@string/configfs_summary" />
-
-        <SwitchPreference
             app:key="hidSelect"
             app:defaultValue="false"
             app:icon="@drawable/ic_swap"

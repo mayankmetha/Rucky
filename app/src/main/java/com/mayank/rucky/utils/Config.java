@@ -178,13 +178,4 @@ public class Config extends Application {
     public void setStatusImageRes(int resId) {
         editor.putInt(Constants.PREF_UI_STATUS_IMG, resId).apply();
     }
-
-    //configfs preference
-    public boolean getConfigFSOption() {
-        return sharedPreferences.getBoolean(Constants.PREF_CONFIGFS, false);
-    }
-
-    public void setConfigFSOption(boolean status) {
-        editor.putBoolean(Constants.PREF_CONFIGFS, status).apply();
-    }
 }

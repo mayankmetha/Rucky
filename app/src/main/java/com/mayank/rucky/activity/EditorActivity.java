@@ -49,7 +49,7 @@ import com.mayank.rucky.service.SocketHeartbeatService;
 import com.mayank.rucky.utils.Config;
 import com.mayank.rucky.utils.Constants;
 import com.mayank.rucky.utils.HID;
-import com.mayank.rucky.utils.HID2;
+import com.mayank.rucky.utils.HID3;
 import com.mayank.rucky.utils.Networks;
 
 import org.apache.commons.io.FileUtils;
@@ -86,9 +86,6 @@ import java.util.Objects;
 import javax.net.ssl.HttpsURLConnection;
 
 public class EditorActivity extends AppCompatActivity {
-
-    private boolean root = false;
-    private boolean hidPresent = true;
 
     public static Config config;
     public NotificationCompat.Builder updateNotify;
@@ -135,7 +132,7 @@ public class EditorActivity extends AppCompatActivity {
         } catch (Exception ignored) {
         }
 
-        new Handler(Looper.getMainLooper()).postDelayed(() -> supportedFiles(true), 1000);
+        new Handler(Looper.getMainLooper()).postDelayed(this::getRoot, 1000);
 
         getReleaseSigningHash();
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
@@ -158,8 +155,6 @@ public class EditorActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(config.getConfigFSOption())
-            disableConfigFSHID();
         new MaterialAlertDialogBuilder(EditorActivity.this)
                 .setTitle(getResources().getString(R.string.exit_dialog))
                 .setCancelable(false)
@@ -508,7 +503,7 @@ public class EditorActivity extends AppCompatActivity {
 
     private void getRoot() {
         RootBeer rootBeer = new RootBeer(this);
-        root = rootBeer.isRooted() || rootBeer.isRootedWithoutBusyBoxCheck();
+        boolean root = rootBeer.isRooted() || rootBeer.isRootedWithoutBusyBoxCheck();
         String disStr;
         ArrayList<String> killList = new ArrayList<>();
         try {
@@ -537,241 +532,13 @@ public class EditorActivity extends AppCompatActivity {
             }
         } catch (Exception ignored) {
         }
-    }
-
-    private boolean checkKernel() {
-        boolean canKernelSupportConfigFS = false;
-        try {
-            dos.writeBytes("if [ \"$(printf '%s\\n%s\\n' \"3.19\" \"$(uname -r)\" | sort -V | head -n1)\" = \"3.19\" ]; then\n");
-            dos.writeBytes("    echo 0\n");
-            dos.writeBytes("fi\n");
-            dos.flush();
-            if (Integer.parseInt(dis.readLine()) == 0)
-                canKernelSupportConfigFS = true;
-        } catch (Exception ignored) {
+        if(!root) {
+            new MaterialAlertDialogBuilder(EditorActivity.this)
+                    .setTitle(getResources().getString(R.string.root_err))
+                    .setCancelable(false)
+                    .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                    .show();
         }
-        return canKernelSupportConfigFS;
-    }
-
-    private boolean checkConfigFS() {
-        boolean canSupportConfigFS = false;
-        try {
-            dos.writeBytes("if [ -d /config/usb_gadget -o -f /sys/devices/virtual/android_usb/android0/enable ]; then\n");
-            dos.writeBytes("    echo 0\n");
-            dos.writeBytes("fi\n");
-            dos.flush();
-            if (Integer.parseInt(dis.readLine()) == 0)
-                canSupportConfigFS = true;
-        } catch (Exception ignored) {
-        }
-        return canSupportConfigFS;
-    }
-
-    private int createConfigFSKeyboard() {
-        int status = 1;
-        try {
-            dos.writeBytes("if [ ! -d /config/usb_gadget/g1/functions/hid.0 ]; then\n");
-            dos.writeBytes("    if ! mkdir /config/usb_gadget/g1/functions/hid.0 > /dev/null 2>&1; then\n");
-            dos.writeBytes("        echo 1\n");
-            dos.writeBytes("    else\n");
-            dos.writeBytes("        echo \"1\" > /config/usb_gadget/g1/functions/hid.0/protocol\n");
-            dos.writeBytes("        echo \"1\" > /config/usb_gadget/g1/functions/hid.0/subclass\n");
-            dos.writeBytes("        echo \"8\" > /config/usb_gadget/g1/functions/hid.0/report_length\n");
-            dos.writeBytes("        echo -n -e '\\x05\\x01\\x09\\x06\\xa1\\x01\\x05\\x07\\x19\\xe0\\x29\\xe7\\x15\\x00\\x25\\x01\\x75\\x01\\x95\\x08\\x81\\x02\\x95\\x01\\x75\\x08\\x81\\x03\\x95\\x05\\x75\\x01\\x05\\x08\\x19\\x01\\x29\\x05\\x91\\x02\\x95\\x01\\x75\\x03\\x91\\x03\\x95\\x06\\x75\\x08\\x15\\x00\\x25\\x65\\x05\\x07\\x19\\x00\\x29\\x65\\x81\\x00\\xc0' > config/usb_gadget/g1/functions/hid.0/report_desc\n");
-            dos.writeBytes("        echo 0\n");
-            dos.writeBytes("    fi\n");
-            dos.writeBytes("else\n");
-            dos.writeBytes("    echo 0\n");
-            dos.writeBytes("fi\n");
-            dos.flush();
-            status = Integer.parseInt(dis.readLine());
-        } catch(Exception ignored) {
-        }
-        return status;
-    }
-
-    private int createConfigFSMouse() {
-        int status = 1;
-        try {
-            dos.writeBytes("if [ ! -d /config/usb_gadget/g1/functions/hid.1 ]; then\n");
-            dos.writeBytes("    if ! mkdir /config/usb_gadget/g1/functions/hid.1 > /dev/null 2>&1; then\n");
-            dos.writeBytes("        echo 1\n");
-            dos.writeBytes("    else\n");
-            dos.writeBytes("        echo \"1\" > /config/usb_gadget/g1/functions/hid.1/protocol\n");
-            dos.writeBytes("        echo \"2\" > /config/usb_gadget/g1/functions/hid.1/subclass\n");
-            dos.writeBytes("        echo \"4\" > /config/usb_gadget/g1/functions/hid.1/report_length\n");
-            dos.writeBytes("            echo -n -e '\\x05\\x01\\x09\\x02\\xa1\\x01\\x09\\x01\\xa1\\x00\\x05\\x09\\x19\\x01\\x29\\x05\\x15\\x00\\x25\\x01\\x95\\x05\\x75\\x01\\x81\\x02\\x95\\x01\\x75\\x03\\x81\\x01\\x05\\x01\\x09\\x30\\x09\\x31\\x09\\x38\\x15\\x81\\x25\\x7f\\x75\\x08\\x95\\x03\\x81\\x06\\xc0\\xc0' > config/usb_gadget/g1/functions/hid.1/report_desc\n");
-            dos.writeBytes("        echo 0\n");
-            dos.writeBytes("    fi\n");
-            dos.writeBytes("else\n");
-            dos.writeBytes("    echo 0\n");
-            dos.writeBytes("fi\n");
-            dos.flush();
-            status = Integer.parseInt(dis.readLine());
-        } catch(Exception ignored) {
-        }
-        return status;
-    }
-
-    private boolean enableConfigFSHID() {
-        ArrayList<String> f = new ArrayList<>();
-        try {
-            dos.writeBytes("getprop sys.usb.config\n");
-            dos.flush();
-            String usbConfig = dis.readLine();
-            dos.writeBytes("find /config/usb_gadget/g1/configs/b.1/ -type l | wc -l\n");
-            dos.flush();
-            int symlinkCount = Integer.parseInt(dis.readLine());
-            dos.writeBytes("readlink -f $(find /config/usb_gadget/g1/configs/b.1/ -type l)\n");
-            dos.flush();
-            boolean hid0 = false, hid1 = false;
-            for(int i = 0; i < symlinkCount; i++) {
-                String line = dis.readLine();
-                if(line.contains("hid.0")) hid0 = true;
-                if(line.contains("hid.1")) hid1 = true;
-                f.add(line);
-            }
-            if (!hid0 || !hid1) hidPresent = false;
-            if (!hid0) f.add("/config/usb_gadget/g1/functions/hid.0");
-            if (!hid1) f.add("/config/usb_gadget/g1/functions/hid.1");
-            dos.writeBytes("echo \"none\" > /config/usb_gadget/g1/UDC\n");
-            dos.writeBytes("stop adbd\n");
-            dos.writeBytes("setprop sys.usb.ffs.ready 0\n");
-            dos.writeBytes("rm $(find /config/usb_gadget/g1/configs/b.1 -type l) 2>/dev/null\n");
-            dos.flush();
-            if(!usbConfig.contains("hid")) {
-                hidPresent = false;
-                usbConfig += ",hid";
-                dos.writeBytes("setprop sys.usb.config " + usbConfig + "\n");
-                dos.flush();
-            }
-            for(int i = 0; i < f.size(); i++) {
-                dos.writeBytes("ln -s "+f.get(i)+" /config/usb_gadget/g1/configs/b.1/f"+i+"\n");
-            }
-            if(usbConfig.contains("adb")) {
-                dos.writeBytes("start adbd\n");
-                dos.writeBytes("setprop sys.usb.ffs.ready 1\n");
-            }
-            dos.writeBytes("echo $(getprop sys.usb.controller) > /config/usb_gadget/g1/UDC\n");
-            dos.writeBytes("sleep 1\n");
-            dos.writeBytes("echo 1\n");
-            dos.flush();
-            if(dis.readLine().contains("1"))
-                return (checkHIDFiles());
-        } catch(Exception ignored) {
-        }
-        return false;
-    }
-
-    private void disableConfigFSHID() {
-        if (!hidPresent) {
-            ArrayList<String> f = new ArrayList<>();
-            try {
-                dos.writeBytes("find /config/usb_gadget/g1/configs/b.1/ -type l | wc -l\n");
-                dos.flush();
-                int symlinkCount = Integer.parseInt(dis.readLine());
-                dos.writeBytes("readlink -f $(find /config/usb_gadget/g1/configs/b.1/ -type l)\n");
-                dos.flush();
-                for (int i = 0; i < symlinkCount; i++) f.add(dis.readLine());
-                dos.writeBytes("getprop sys.usb.config\n");
-                dos.flush();
-                String usbConfig = dis.readLine();
-                dos.writeBytes("echo \"none\" > /config/usb_gadget/g1/UDC\n");
-                dos.writeBytes("stop adbd\n");
-                dos.writeBytes("setprop sys.usb.ffs.ready 0\n");
-                dos.writeBytes("rm $(find /config/usb_gadget/g1/configs/b.1 -type l) 2>/dev/null\n");
-                dos.flush();
-                if (!usbConfig.contains("hid")) {
-                    hidPresent = false;
-                    usbConfig += ",hid";
-                    dos.writeBytes("setprop sys.usb.config " + usbConfig + "\n");
-                    dos.flush();
-                }
-                for (int i = 0; i < f.size(); i++) {
-                    String line = f.get(i);
-                    if (line.contains("hid.0") || line.contains("hid.1")) continue;
-                    dos.writeBytes("ln -s " + line + " /config/usb_gadget/g1/configs/b.1/f" + i + "\n");
-                }
-                if (usbConfig.contains("adb")) {
-                    dos.writeBytes("start adbd\n");
-                    dos.writeBytes("setprop sys.usb.ffs.ready 1\n");
-                }
-                if (usbConfig.contains("hid")) {
-                    usbConfig = usbConfig.replace("hid", "").replace(",,", ",");
-                    if (usbConfig.endsWith(","))
-                        usbConfig = usbConfig.substring(0, usbConfig.length() - 1);
-                    if (usbConfig.startsWith(","))
-                        usbConfig = usbConfig.substring(1);
-                    dos.writeBytes("setprop sys.usb.config " + usbConfig + "\n");
-                    dos.flush();
-                }
-                dos.writeBytes("echo $(getprop sys.usb.controller) > /config/usb_gadget/g1/UDC\n");
-                dos.writeBytes("sleep 1\n");
-                dos.writeBytes("echo 1\n");
-                dos.flush();
-            } catch (Exception ignored) {
-            }
-        }
-    }
-
-    private boolean checkHIDFiles() {
-        String pathDev = "/dev";
-        File file1 = new File(pathDev,"hidg0");
-        File file2 = new File(pathDev,"hidg1");
-        if(!file1.exists() && !file2.exists()) {
-            return false;
-        } else {
-            try {
-                dos.writeBytes("chmod 666 /dev/hidg0\n");
-                dos.writeBytes("chmod 666 /dev/hidg1\n");
-                dos.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean supportedFiles(boolean quiet) {
-        boolean canExe = false;
-        getRoot();
-        if (root) {
-            if(checkHIDFiles())
-                canExe = true;
-            else if(config.getConfigFSOption()) {
-                if(checkKernel() && checkConfigFS()) {
-                    if(createConfigFSKeyboard() == 0 && createConfigFSMouse() == 0) {
-                        canExe = enableConfigFSHID();
-                    } else {
-                        if(!quiet) {
-                            new MaterialAlertDialogBuilder(EditorActivity.this)
-                                    .setTitle(getResources().getString(R.string.kernel_err))
-                                    .setCancelable(false)
-                                    .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
-                                    .show();
-                        }
-                    }
-                }
-            } else {
-                if(!quiet) {
-                    new MaterialAlertDialogBuilder(EditorActivity.this)
-                            .setTitle(getResources().getString(R.string.kernel_err))
-                            .setCancelable(false)
-                            .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
-                            .show();
-                }
-            }
-        } else {
-            if(!quiet) {
-                new MaterialAlertDialogBuilder(EditorActivity.this)
-                        .setTitle(getResources().getString(R.string.root_err))
-                        .setCancelable(false)
-                        .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
-                        .show();
-            }
-        }
-        return canExe;
     }
 
     private void ide() {
@@ -927,8 +694,6 @@ public class EditorActivity extends AppCompatActivity {
     void launchAttack(int mode, int language, String scripts) {
         // usb mode
         if(mode == 0) {
-            if(!supportedFiles(false))
-                return;
             if(config.getUSB() && !config.getUSBStatus()) {
                 if(config.getHIDCustomise())
                     fetchCommands(jsonRead(new File(this.getExternalFilesDir("keymap"),config.getHIDFileSelected())),scripts);
@@ -943,6 +708,36 @@ public class EditorActivity extends AppCompatActivity {
                     for(int i = 0; i < cmds.size(); i++) {
                         dos.writeBytes(cmds.get(i));
                         dos.flush();
+                    }
+                    dos.writeBytes("cat /data/local/tmp/rucky.error\n");
+                    dos.flush();
+                    String disStr = dis.readLine();
+                    if (disStr.contains("kernel=2")) {
+                        dos.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
+                        dos.flush();
+                        new MaterialAlertDialogBuilder(EditorActivity.this)
+                                .setTitle(getResources().getString(R.string.kernel_err))
+                                .setCancelable(false)
+                                .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                                .show();
+                    }
+                    if (disStr.contains("kernel=1")) {
+                        dos.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
+                        dos.flush();
+                        new MaterialAlertDialogBuilder(EditorActivity.this)
+                                .setTitle(getResources().getString(R.string.kernel_err))
+                                .setCancelable(false)
+                                .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                                .show();
+                    }
+                    if (disStr.contains("kernel=0")) {
+                        dos.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
+                        dos.flush();
+                        new MaterialAlertDialogBuilder(EditorActivity.this)
+                                .setTitle(getResources().getString(R.string.root_err))
+                                .setCancelable(false)
+                                .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                                .show();
                     }
                     cmds.clear();
                 } catch (Exception e) {
@@ -992,7 +787,7 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     void fetchCommands(String jsonStr, String scripts) {
-        HID2 exeScript = new HID2(jsonStr);
+        HID3 exeScript = new HID3(jsonStr);
         exeScript.parse(scripts);
         cmds.clear();
         cmds.addAll(exeScript.getCmd());

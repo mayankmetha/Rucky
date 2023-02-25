@@ -56,6 +56,7 @@
 
     <!-- Config screen -->
     <string name="config_activity">Tweaks</string>
+    <string name="config_activity_language_exception">Error</string>
     <string name="config_status_usb_on">USB Connected</string>
     <string name="config_status_usb_off">USB Disconnected</string>
     <string name="config_status_net_on">Network Socket Connected</string>
@@ -99,8 +100,6 @@
     <string name="settings_sec_desc">Enable script file encryption and screen lock.</string>
 
     <string name="setting_device">Attack Mode Settings</string>
-    <string name="configfs_title">Auto Configure ConfigFS</string>
-    <string name="configfs_summary">Will configure HID on ConfigFS supported devices. May break USB setting.</string>
     <string name="hid_choice_title">Customisable HID</string>
     <string name="hid_choice_summary">Switch between Legacy HID and Customisable HID</string>
     <string name="hid_title">HID Language</string>

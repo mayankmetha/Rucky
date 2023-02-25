@@ -45,7 +45,7 @@ public class Constants {
     public static final String PREF_SETTING_ADMIN = "admin";
     public static final String PREF_SETTING_ICON = "icon";
     public static final String PREF_SETTING_ADV_SECURITY = "advSecurity";
-    public static final String PREF_CONFIGFS = "configfsUSB";
+
     public static final String PREF_DEV_USB = "usbConnectionState";
     public static final String PREF_DEV_NET = "usbConnectionState";
     public static final String PREF_DEV_USB_CONNECTION = "usbConnectionStatus";
@@ -60,7 +60,6 @@ public class Constants {
     public static final String PREF_KEY_LAUNCHER_ICON = "icon";
     public static final String PREF_KEY_SECURITY = "sec";
     public static final String PREF_KEY_CLEANUP = "uninstall";
-    public static final String PREF_KEY_CONFIGFS = "configfs";
     public static final String PREF_KEY_HID_CUSTOMISE = "hidSelect";
     public static final String PREF_KEY_HID = "hid";
     public static final String PREF_KEY_USB = "usb";
