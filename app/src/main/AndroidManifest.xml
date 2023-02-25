@@ -27,8 +27,10 @@
         tools:ignore="AllowBackup"
         android:forceDarkAllowed="false"
         android:testOnly="true"
-        android:allowBackup="true"
-        tools:targetApi="q">
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        tools:targetApi="s"
+        android:dataExtractionRules="@xml/data_extraction_rules">
 
         <service
             android:name=".service.SocketHeartbeatService"
