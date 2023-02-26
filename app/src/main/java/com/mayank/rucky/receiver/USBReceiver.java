@@ -24,8 +24,6 @@ import java.util.Objects;
 
 public class USBReceiver extends BroadcastReceiver {
 
-    Process p;
-    private static DataOutputStream dos;
     Config config;
 
     @Override
@@ -50,10 +48,36 @@ public class USBReceiver extends BroadcastReceiver {
         }
         if(config.getUSBStatus() && getRoot() && !EditorActivity.cmds.isEmpty()) {
             try {
-                for (int i = 0; i < EditorActivity.cmds.size(); i++) {
-                    dos.writeBytes(EditorActivity.cmds.get(i));
-                    dos.flush();
+                Process p1 = Runtime.getRuntime().exec("su");
+                Process p2 = Runtime.getRuntime().exec("su");
+                DataOutputStream p1o = new DataOutputStream(p1.getOutputStream());
+                BufferedReader p1i = new BufferedReader(new InputStreamReader(p1.getInputStream()));
+                DataOutputStream p2o = new DataOutputStream(p2.getOutputStream());
+                BufferedReader p2i = new BufferedReader(new InputStreamReader(p2.getInputStream()));
+                for(int i = 0; i < EditorActivity.cmds.size(); i++) {
+                    p1o.writeBytes(EditorActivity.cmds.get(i));
+                    p1o.flush();
+                    p2o.writeBytes("cat /data/local/tmp/rucky.error\n");
+                    p2o.flush();
+                    String disStr = p2i.readLine();
+                    if (disStr.contains("kernel=2")) {
+                        p2o.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
+                        p2o.flush();
+                        break;
+                    }
+                    if (disStr.contains("kernel=1")) {
+                        p2o.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
+                        p2o.flush();
+                        break;
+                    }
                 }
+                p1o.close();
+                p2o.close();
+                p1.destroy();
+                p1i.close();
+                p2i.close();
+                p2.destroy();
+                EditorActivity.cmds.clear();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -110,17 +134,18 @@ public class USBReceiver extends BroadcastReceiver {
 
     private boolean getRoot() {
         try {
-            p = Runtime.getRuntime().exec("su");
-            dos = new DataOutputStream(p.getOutputStream());
+            Process p = Runtime.getRuntime().exec("su");
+            DataOutputStream dos = new DataOutputStream(p.getOutputStream());
             BufferedReader dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            if(dos != null) {
-                dos.writeBytes("id\n");
-                dos.flush();
-                String rootCheck = dis.readLine();
-                if(rootCheck.contains("uid=0")) {
-                    return true;
-                }
+            dos.writeBytes("id\n");
+            dos.flush();
+            String rootCheck = dis.readLine();
+            if(rootCheck.contains("uid=0")) {
+                return true;
             }
+            dis.close();
+            dos.close();
+            p.destroy();
         } catch (IOException e) {
             e.printStackTrace();
         }

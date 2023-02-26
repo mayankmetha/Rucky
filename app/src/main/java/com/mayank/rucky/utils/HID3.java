@@ -664,6 +664,8 @@ public class HID3 {
                     enableAttackMode();
                 } else if (lines[a].contains("OFF")) {
                     disableAttackMode();
+                } else if (lines[a].contains("STORAGE") && !lines[a].contains("HID")) {
+                    disableAttackMode();
                 }
                 continue;
             }

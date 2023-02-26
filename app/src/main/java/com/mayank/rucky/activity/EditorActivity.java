@@ -90,9 +90,8 @@ public class EditorActivity extends AppCompatActivity {
     public static Config config;
     public NotificationCompat.Builder updateNotify;
     private static MasterKey keyAlias;
-    Process p;
-    private static DataOutputStream dos;
-    private static BufferedReader dis;
+    Process p1;
+    Process p2;
     public static ArrayList<String> cmds;
     public static NotificationManager serviceNotificationManager;
     public static NotificationManager updateNotificationManager;
@@ -507,28 +506,29 @@ public class EditorActivity extends AppCompatActivity {
         String disStr;
         ArrayList<String> killList = new ArrayList<>();
         try {
-            Process ps = Runtime.getRuntime().exec("ps -u $(whoami)");
-            BufferedReader psDis = new BufferedReader(new InputStreamReader(ps.getInputStream()));
+            p2 = Runtime.getRuntime().exec("ps -u $(whoami)");
+            BufferedReader psDis = new BufferedReader(new InputStreamReader(p2.getInputStream()));
             while((disStr = psDis.readLine()) != null) {
                 disStr = disStr.replaceAll(" +"," ");
                 if (disStr.endsWith("su"))
                     killList.add(disStr.split(" ")[1]);
             }
-            p = Runtime.getRuntime().exec("su");
-            dos = new DataOutputStream(p.getOutputStream());
-            dis = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            if (dos != null) {
-                dos.writeBytes("id\n");
-                dos.flush();
-                disStr = dis.readLine();
-                if (disStr.contains("uid=0")) {
-                    root = true;
-                }
+            p2.destroy();
+            p1 = Runtime.getRuntime().exec("su");
+            DataOutputStream dos = new DataOutputStream(p1.getOutputStream());
+            BufferedReader dis = new BufferedReader(new InputStreamReader(p1.getInputStream()));
+            dos.writeBytes("id\n");
+            dos.flush();
+            disStr = dis.readLine();
+            if (disStr.contains("uid=0")) {
+                root = true;
             }
+            dis.close();
             for (int i=0; i< killList.size(); i++) {
-                assert dos != null;
                 dos.writeBytes("kill -9 "+killList.get(0)+"\n");
                 dos.flush();
+                dos.close();
+                p1.destroy();
             }
         } catch (Exception ignored) {
         }
@@ -705,31 +705,45 @@ public class EditorActivity extends AppCompatActivity {
                         fetchCommands(jsonRead(new File(this.getExternalFilesDir("keymap"),config.getHIDFileSelected())),scripts);
                     else
                         fetchCommands(language, scripts);
+                    p1 = Runtime.getRuntime().exec("su");
+                    p2 = Runtime.getRuntime().exec("su");
+                    DataOutputStream p1o = new DataOutputStream(p1.getOutputStream());
+                    BufferedReader p1i = new BufferedReader(new InputStreamReader(p1.getInputStream()));
+                    DataOutputStream p2o = new DataOutputStream(p2.getOutputStream());
+                    BufferedReader p2i = new BufferedReader(new InputStreamReader(p2.getInputStream()));
                     for(int i = 0; i < cmds.size(); i++) {
-                        dos.writeBytes(cmds.get(i));
-                        dos.flush();
+                        p1o.writeBytes(cmds.get(i));
+                        p1o.flush();
+                        p2o.writeBytes("cat /data/local/tmp/rucky.error\n");
+                        p2o.flush();
+                        String disStr = p2i.readLine();
+                        if (disStr.contains("kernel=2")) {
+                            p2o.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
+                            p2o.flush();
+                            new MaterialAlertDialogBuilder(EditorActivity.this)
+                                    .setTitle(getResources().getString(R.string.kernel_err))
+                                    .setCancelable(false)
+                                    .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                                    .show();
+                            break;
+                        }
+                        if (disStr.contains("kernel=1")) {
+                            p2o.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
+                            p2o.flush();
+                            new MaterialAlertDialogBuilder(EditorActivity.this)
+                                    .setTitle(getResources().getString(R.string.kernel_err))
+                                    .setCancelable(false)
+                                    .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
+                                    .show();
+                            break;
+                        }
                     }
-                    dos.writeBytes("cat /data/local/tmp/rucky.error\n");
-                    dos.flush();
-                    String disStr = dis.readLine();
-                    if (disStr.contains("kernel=2")) {
-                        dos.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
-                        dos.flush();
-                        new MaterialAlertDialogBuilder(EditorActivity.this)
-                                .setTitle(getResources().getString(R.string.kernel_err))
-                                .setCancelable(false)
-                                .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
-                                .show();
-                    }
-                    if (disStr.contains("kernel=1")) {
-                        dos.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
-                        dos.flush();
-                        new MaterialAlertDialogBuilder(EditorActivity.this)
-                                .setTitle(getResources().getString(R.string.kernel_err))
-                                .setCancelable(false)
-                                .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
-                                .show();
-                    }
+                    p1o.close();
+                    p2o.close();
+                    p1.destroy();
+                    p1i.close();
+                    p2i.close();
+                    p2.destroy();
                     cmds.clear();
                 } catch (Exception e) {
                     e.printStackTrace();
