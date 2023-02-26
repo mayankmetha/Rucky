@@ -469,24 +469,12 @@ public class HID3 {
         shell.add("            ln -s /config/usb_gadget/hid/functions/hid.mouse /config/usb_gadget/hid/configs/c.1/hid.mouse\n");
         shell.add("        fi\n");
         shell.add("    else\n");
-        shell.add("        if [ -f /dev/hidg0 ]; then\n");
-        shell.add("            chmod 0777 /dev/hidg0;chmod 0777 /dev/hidg1\n");
-        shell.add("        else\n");
-        shell.add("            echo \"kernel=2\" > /data/local/tmp/rucky.error\n");
-        shell.add("        fi\n");
+        shell.add("        echo \"kernel=2\" > /data/local/tmp/rucky.error\n");
         shell.add("    fi\n");
         shell.add("else\n");
-        shell.add("    if [ -f /dev/hidg0 ]; then\n");
-        shell.add("        chmod 0777 /dev/hidg0;chmod 0777 /dev/hidg1\n");
-        shell.add("    else\n");
-        shell.add("        echo \"kernel=1\" > /data/local/tmp/rucky.error\n");
-        shell.add("    fi\n");
+        shell.add("    echo \"kernel=1\" > /data/local/tmp/rucky.error\n");
         shell.add("fi\n");
-        shell.add("if [ -f /dev/hidg0 ]; then\n");
-        shell.add("    chmod 0777 /dev/hidg0;chmod 0777 /dev/hidg1\n");
-        shell.add("else\n");
-        shell.add("    echo \"kernel=0\" > /data/local/tmp/rucky.error\n");
-        shell.add("fi\n");
+        shell.add("chmod 0777 /dev/hidg0;chmod 0777 /dev/hidg1\n");
     }
 
     private void enableAttackMode() {

@@ -730,15 +730,6 @@ public class EditorActivity extends AppCompatActivity {
                                 .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
                                 .show();
                     }
-                    if (disStr.contains("kernel=0")) {
-                        dos.writeBytes("echo 0 > /data/local/tmp/rucky.error\n");
-                        dos.flush();
-                        new MaterialAlertDialogBuilder(EditorActivity.this)
-                                .setTitle(getResources().getString(R.string.root_err))
-                                .setCancelable(false)
-                                .setPositiveButton(getResources().getString(R.string.btn_continue), ((dialog, which) -> dialog.cancel()))
-                                .show();
-                    }
                     cmds.clear();
                 } catch (Exception e) {
                     e.printStackTrace();
