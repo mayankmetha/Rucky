@@ -41,7 +41,7 @@
 # Readme
 An android app to perform USB HID Attacks (Rubber Duck) in multiple ways:
 - <b><i>Wired Mode:</i></b> Needs a custom kernel with usb hid feature or a kernel with configfs to be enabled for this mode to be used.
-- <b><i>Wireless:</i></b> Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
+- <b><i>Wireless [Deprecated]:</i></b> Provides a socket server to extend this USB HID with external tools/hardwares like raspberry pi, socket services, nc, and much more.
 
 ---
 
