@@ -110,11 +110,12 @@
         <activity-alias
             android:name=".Main"
             android:enabled="true"
-            android:exported="true"
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher"
             android:launchMode="singleTask"
-            android:targetActivity=".activity.WelcomeActivity">
+            android:targetActivity=".activity.WelcomeActivity"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -124,28 +125,36 @@
 
         <activity
             android:name=".activity.InitActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.EditorActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"/>
         <activity
             android:name=".activity.UpdateActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"/>
         <activity
             android:name=".activity.SettingsActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"/>
         <activity
             android:name=".activity.BrowserActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"/>
         <activity
             android:name=".activity.ConfigActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"/>
         <activity
             android:name=".activity.HidActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"/>
         <activity
             android:name=".activity.KeylistActivity"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true"/>
 
     </application>
 
